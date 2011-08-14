@@ -112,6 +112,16 @@ $(function(){
     setContent: function() {
       var content = this.model.get('content');
       this.$('.site-content').text(content);
+      var colors = ['red', 'orange', 'green', 'grey']
+      var tagVals =
+        { 'BY': 2
+        , 'PRIV': 0
+        , 'CEN': 3
+        , 'OPP': 1
+        }
+      for(var tagName in tagVals) {
+        this.$('.'+tagName).css({background: colors[tagVals[tagName]]})
+      }
       this.input = this.$('.site-input');
       this.input.bind('blur', _.bind(this.close, this));
       this.input.val(content);
