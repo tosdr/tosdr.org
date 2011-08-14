@@ -6,6 +6,37 @@
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
 
+  var tagHints =
+       { 'BY': ['we own data you submit', 'you own your own data']
+       , 'PRIV': ['a', 'b']
+       , 'DEL': ['a', 'b']
+       , 'END': ['a', 'b']
+       , 'CEN': ['a', 'b']
+       , 'GUV': ['a', 'b']
+       , 'OPP': ['a', 'b']
+       , 'DL': ['a', 'b']
+       , 'EQ': ['a', 'b']
+       , 'ANON':['a', 'b']
+       }
+  window.Tag = Backbone.Model.extend({
+    initialize: function() {
+      if(!this.get("val")) {
+        this.set({val: 3, name: '?'})
+      }
+    },
+    changeTag: function() {
+      var tagVal = this.get("val")
+      tagVal++
+      if(tagVal > tagHints[this.get("name")].length) {
+        tagVal= 0
+      }
+      this.save({val: tagVal})
+    }
+  })
+  window.TagList = Backbone.Collection.extend({
+    model: Tag 
+  })
+
   // Site Model
   // ----------
 
@@ -15,6 +46,18 @@ $(function(){
     // Default attributes for the site.
     defaults: {
       content: "empty site...",
+      tagVals: 
+       { 'BY': 2
+       , 'PRIV': 0
+       , 'DEL': 3
+       , 'END': 3
+       , 'CEN': 3
+       , 'GUV': 3
+       , 'OPP': 1
+       , 'DL': 2
+       , 'EQ': 3
+       , 'ANON': 3
+       },
       done: false
     },
 
@@ -23,13 +66,21 @@ $(function(){
       if (!this.get("content")) {
         this.set({"content": this.defaults.content});
       }
+      var tagVals = this.get("tagVals")
+      if (!tagVals) {
+        tagVals= this.default.tagVals;
+        this.set({"tagVals": tagVals});
+      }
+      this.tagList = new TagList();
+      for(tagName in tagVals) {
+        this.tagList.add(new Tag({name: tagName, val:tagVals[tagName]}))
+      }
     },
 
     // Toggle the `done` state of this site item.
     toggle: function() {
       this.save({done: !this.get("done")});
     }
-
   });
 
   // Site Collection
@@ -75,6 +126,26 @@ $(function(){
   // Site Item View
   // --------------
 
+  window.TagView = Backbone.View.extend({
+    tagName: 'span',
+    events: {
+      'click'          : 'changeTag'
+    },
+    initialize: function() {
+      this.model.bind('change', this.render, this);
+    },
+    render: function() {
+      $(this.el).html(this.model.get('name'))
+      var colors = ['red', 'orange', 'green', 'grey']
+      $(this.el).css({background: colors[this.model.get('val')]})
+      $(this.el).addClass('site-icon')
+      return this;
+    },
+    changeTag: function() {
+      this.model.changeTag($(this.el).text());
+    }
+  })
+
   // The DOM element for a site item...
   window.SiteView = Backbone.View.extend({
 
@@ -112,19 +183,13 @@ $(function(){
     setContent: function() {
       var content = this.model.get('content');
       this.$('.site-content').text(content);
-      var colors = ['red', 'orange', 'green', 'grey']
-      var tagVals =
-        { 'BY': 2
-        , 'PRIV': 0
-        , 'CEN': 3
-        , 'OPP': 1
-        }
-      for(var tagName in tagVals) {
-        this.$('.'+tagName).css({background: colors[tagVals[tagName]]})
-      }
       this.input = this.$('.site-input');
       this.input.bind('blur', _.bind(this.close, this));
       this.input.val(content);
+      this.model.tagList.each(function(tag) {
+        var view = new TagView({model: tag}).render().el
+        this.$("#tags-list").append(view);
+      })
     },
 
     // Toggle the `"done"` state of the model.
