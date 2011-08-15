@@ -82,7 +82,7 @@ $(function(){
            , text:
              { red:    'This is the only instance of this service. Either the source code is secret, or you\'re not allowed to run your own instance of it'
              , orange: 'The software behind this service is FOSS. Be aware though, that each node forms a restrictive island of user interaction'
-             , green:  'This service is distributed; using a another instance will not give you significant loss of interaction with other users'
+             , green:  'This service is distributed; using a a different instance will not give you significant loss of interaction with other users'
              }
            }
        }
