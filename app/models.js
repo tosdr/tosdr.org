@@ -22,22 +22,19 @@ $(function(){
   window.Site = Backbone.Model.extend({
     defaults:
       { content: "empty site..."
-      , tagVals: {} 
+      //, tagListId: {} 
       , done: false
       },
     initialize: function() {
       if (!this.get("content")) {
         this.set({"content": this.defaults.content});
       }
-      var tagVals = this.get("tagVals")
-      if (!tagVals) {
-        tagVals= this.default.tagVals;
-        this.set({"tagVals": tagVals});
-      }
-      this.tagList = new TagList();
-      for(tagName in window.criteria) {
-        var val = tagVals[tagName] || 0
-        this.tagList.add(new Tag({name: tagName, val:val}))
+      var tagListId = this.get("tagListId")
+      if (!tagListId) {
+        this.tagList = new TagList()
+        for(var tagName in window.criteria) {
+          this.tagList.add(new Tag({name: tagName, val:0}))
+        }:
       }
     },
 
