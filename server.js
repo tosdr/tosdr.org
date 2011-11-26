@@ -8,9 +8,9 @@ function serve(req, res) {
   var uri = url.parse(req.url).pathname
     .replace(new RegExp('/$', 'g'), '/index.html');
   var host = req.headers.host;
-  if(host.substring(0, 4) == 'www.') {
-    res.writeHead(302, {'Location': 'http://'+host.substring(4)});
-    res.write('302 Location: http://'+host.substring(4)+'\n');
+  if(config.redirect && config.redirect[host]) {
+    res.writeHead(302, {'Location': 'http://'+config.redirect[host]});
+    res.write('302 Location: http://'+config.redirect[host]+'\n');
     res.end();
     return;
   }
