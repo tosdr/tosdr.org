@@ -21,7 +21,7 @@
           document.getElementById('from').value,
           document.getElementById('to').value,
           function(text) {
-            document.getElementById('result').innerHTML = '"'+text.replace('<', '&lt;')+'"';
+            document.getElementById('result').innerHTML = '<code>"'+text.replace(/</g, '&lt;')+'"</code>';
             document.getElementById('json').innerHTML = 
               '  {\n'+
               '    "site": "'+document.getElementById('site').value+'",\n'+
