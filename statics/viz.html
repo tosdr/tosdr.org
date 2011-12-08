@@ -25,31 +25,74 @@
         }
         xhr.send();
       }
+      function getWeights(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/weights.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
+      function getRates(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/rates.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
       function go() {
         getList(function(list) {
           var i, j, thisSite, thisCrit;
           var sites = {};
           var crits = {};
           for(i = 0; i < list.length; i++) {
-            sites[list[i].site]=true;
+            sites[list[i].site]=0;
             crits[list[i].crit]=true;
+            
           }
-          var str = '<table><tr><td>site:</td>';
+          var str = '<table><tr><td>site:</td><td>rating:</td><td>points:</td>';
           for(thisCrit in crits) {
             str += '<td>'+thisCrit+'</td>';
           }
           str += '</tr>';
           for(thisSite in sites) {
-            str += '<tr><td>'+thisSite+'</td>';
+            str += '<tr><td>'+thisSite+'</td><td id="rating_'+thisSite+'"></td><td id="points_'+thisSite+'"></td>';
             for(thisCrit in crits) {
               str += '<td bgcolor="grey" id="cell_'+thisSite+'_'+thisCrit+'" onclick="getQuotes(\''+thisSite+'\', \''+thisCrit+'\');"></td>';
             }
             str += '</tr>';
           }
           document.getElementById('viz').innerHTML = str;
-          for(i = 0; i < list.length; i++) {
-            document.getElementById('cell_'+list[i].site+'_'+list[i].crit).setAttribute('bgcolor', list[i].read);
-          }
+          getWeights(function(weights) {
+            for(i = 0; i < list.length; i++) {
+              document.getElementById('cell_'+list[i].site+'_'+list[i].crit).setAttribute('bgcolor', list[i].read);
+              document.getElementById('cell_'+list[i].site+'_'+list[i].crit).innerHTML = weights[list[i].crit][list[i].read]; 
+            }
+            for(thisSite in sites) {
+              for(thisCrit in crits) {
+                sites[thisSite] += parseInt(document.getElementById('cell_'+thisSite+'_'+thisCrit).innerHTML);
+              }
+              document.getElementById('points_'+thisSite).innerHTML = sites[thisSite];
+            }
+            getRates(function(rates) {
+              var thisRate;
+              for(thisSite in sites) {
+                for(thisRate in rates) {
+                  if(sites[thisSite] >= rates[thisRate]) {
+                    document.getElementById('rating_'+thisSite).innerHTML = thisRate;
+                    break;
+                  }
+                }
+              }
+            });
+          });
         });
       }
       function getQuotes(site, crit) {
@@ -69,6 +112,7 @@
     </script>
   </head>
   <body onload="go();">
+    <h2>WARNING: the data on this page is only test data, no real data yet.</h2>
     <div id="viz">
     (result)
     </div>
