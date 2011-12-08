@@ -1,0 +1,76 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <script>
+      function getList(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/points.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
+
+      function getQuote(site, date, text, from, to, cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/scrapes/'+site+'/'+date+'/'+text+'/', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(text.substring(from, to));
+          }
+        }
+        xhr.send();
+      }
+      function go() {
+        getList(function(list) {
+          var i, j, thisSite, thisCrit;
+          var sites = {};
+          var crits = {};
+          for(i = 0; i < list.length; i++) {
+            sites[list[i].site]=true;
+            crits[list[i].crit]=true;
+          }
+          var str = '<table><tr><td>site:</td>';
+          for(thisCrit in crits) {
+            str += '<td>'+thisCrit+'</td>';
+          }
+          str += '</tr>';
+          for(thisSite in sites) {
+            str += '<tr><td>'+thisSite+'</td>';
+            for(thisCrit in crits) {
+              str += '<td bgcolor="grey" id="cell_'+thisSite+'_'+thisCrit+'" onclick="getQuotes(\''+thisSite+'\', \''+thisCrit+'\');"></td>';
+            }
+            str += '</tr>';
+          }
+          document.getElementById('viz').innerHTML = str;
+          for(i = 0; i < list.length; i++) {
+            document.getElementById('cell_'+list[i].site+'_'+list[i].crit).setAttribute('bgcolor', list[i].read);
+          }
+        });
+      }
+      function getQuotes(site, crit) {
+        getList(function(list) {
+          var i, j;
+          for(i = 0; i< list.length; i++) {
+            if((list[i].site == site) && (list[i].crit == crit)) {
+              for(j = 0; j < list[i].quotes.length; j++) {
+                getQuote(site, list[i].date, list[i].quotes[j].text, list[i].quotes[j].from, list[i].quotes[j].to, function(text) {
+                  alert(text);
+                });
+              }
+            }
+          }
+        });
+      }
+    </script>
+  </head>
+  <body onload="go();">
+    <div id="viz">
+    (result)
+    </div>
+  </body>
+</html>
