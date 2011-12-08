@@ -1,0 +1,59 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <script>
+      function getQuote(site, date, text, from, to, cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/scrapes/'+site+'/'+date+'/'+text+'/', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(text.substring(from, to));
+          }
+        }
+        xhr.send();
+      }
+      function go() {
+        getQuote(
+          document.getElementById('site').value,
+          document.getElementById('date').value,
+          document.getElementById('text').value,
+          document.getElementById('from').value,
+          document.getElementById('to').value,
+          function(text) {
+            document.getElementById('result').innerHTML = '"'+text.replace('<', '&lt;')+'"';
+            document.getElementById('json').innerHTML = 
+              '  {\n'+
+              '    "site": "'+document.getElementById('site').value+'",\n'+
+              '    "crit": "'+document.getElementById('crit').value+'",\n'+
+              '    "read": "'+document.getElementById('read').value+'",\n'+
+              '    "date": "'+document.getElementById('date').value+'",\n'+
+              '    "quotes": [\n'+
+              '      {\n'+
+              '        "text": "'+document.getElementById('text').value+'",\n'+
+              '        "from": "'+document.getElementById('from').value+'",\n'+
+              '        "to": "'+document.getElementById('to').value+'"\n'+
+              '      }\n'+
+              '    ]\n'+
+              '  },\n';
+          });
+      }
+    </script>
+  </head>
+  <body onload="go();">
+    <input type="text" value="facebook.com" id="site" onkeyup="go();">
+    <input type="text" value="2011-12-08" id="date" onkeyup="go();">
+    <input type="text" value="BY" id="crit" onkeyup="go();">
+    <input type="text" value="green" id="read" onkeyup="go();">
+    <input type="text" value="terms" id="text" onkeyup="go();">
+    <input type="text" value="6936" id="from" onkeyup="go();">
+    <input type="text" value="6999" id="to" onkeyup="go();">
+    <input onclick="go();" type="submit">
+    <pre id="result">
+    (result)
+    </pre>
+    <pre id="json">
+    (json)
+    </pre>
+  </body>
+</html>
