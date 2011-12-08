@@ -1,7 +1,9 @@
 exports.config = {
-  backends: { statics: 80 },
+  port: 80,
   redirect: {
-    "tos-dr.nodejitsu.com": "tos-dr.info"
+    'www.tos-dr.info': 'http://tos-dr.info/'
   },
-  domainsDir: 'statics/'
+  host: {
+    'tos-dr.info': 'statics/'
+  }
 };
