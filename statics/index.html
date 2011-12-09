@@ -1,102 +1,209 @@
-<html>
-<body>
-<div style="align:center">
-	<h1>ToS;DR</h1>
-	<h2>("Terms-of-Service; Didn't Read" - under construction)</h2>
-</div>
-<h2>A crowd-reading hub for Terms-of-Service of websites.</h2>
-This website is a hub where people can share their opinion on the terms of service of websites. We discuss a changing list of topics. The points indicate how important each item is. You can vote them up or down if you feel some topic is over- or under-represented. You can also propose new topics on the <a href="newTopics.html">new topics</a> discussion page. Currently there are 11:
-<ul>
-<li><strong>BY</strong>: Attribution. Like the 'BY' in CC licenses
-	<ul>
-	<li style="background-color:pink">We own data you submit (0 points)</li>
-         <li style="background-color:lightgreen">You own your own data (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>PRIV</strong>: PRIVacy. Whether you keep sole control over the data you own
-	<ul>
-	<li style="background-color:pink">You have to license your data to us (0 points)</li>
-        <li style="background-color:lightgreen">We will not get a license beyond what is necessary for running the service (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>DEL</strong>: About data retention vs. DELetion
-	<ul>
-	<li style="background-color:pink">We might keep a copy of your data, even if you don\'t want us to (0 points)</li>
-	<li style="background-color:lightgreen">We will delete both your primary data and your secondary data quickly after you close your account (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>END</strong>: What happens when we END your service
-	<ul>
-	<li style="background-color:pink">We do not provide an appeal procedure in case we end our service to you (0 points)</li>
-	<li style="background-color:lightorange">We may suspend your account at any time, but will allow you to appeal before an independent court or panel (50 points)</li>
-	<li style="background-color:lightgreen">We will not end or suspend your account, unless required to do so by law (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>CEN</strong>: What happens when we CENsor your data
-	<ul>
-	<li style="background-color:pink">We do not provide an appeal procedure in case we censor your data on our service (0 points)</li>
-	<li style="background-color:lightorange">We may censor your primary data at any time, but will allow you to appeal before an independent court or panel (50 points)</li>
-	<li style="background-color:lightgreen">We will not censor your primary data except when required to do so by law (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>GOV</strong>: What happens when the GOVernment (law enforcement) wants to see your data
-	<ul>
-	<li style="background-color:pink"> (0 points)</li>
-	<li style="background-color:lightgreen">We will try to help you get a chance to defend yourself when law enforcement requests access to your data (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>OPP</strong>: You down with Other People's Purposes? Or should we stick to using your data to serve only your purposes?
-	<ul>
-	<li style="background-color:pink"> (0 points)</li>
-	<li style="background-color:lightorange">We may use aggregated data for the purposes of people other than yourself, but then you will not be identifiable (50 points)</li>
-	<li style="background-color:lightgreen">We will not use your primary nor your secondary data for serving any purposes other than yours (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>DL</strong>: Data Liberation
-	<ul>
-	<li style="background-color:pink"></li>
-	<li style="background-color:lightorange">You can export your primary data at any time, but to a format that even we ourselves don\'t support for import (0 points)</li>
-	<li style="background-color:lightgreen">You can import and export your primary data at any time (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>EQ</strong>: EQuality
-	<ul>
-	<li style="background-color:pink">Whether this service is available to you may depend on your location, race, gender, nationality, residence, political views, religion, sexual orientation, or criminal record (0 points)</li>
-	<li style="background-color:lightorange">We are actively and demonstrably working to make this service available to more human beings, regardless of their location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record (50 points)</li>
-	<li style="background-color:lightgreen">We are colour blind to your location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>ANON</strong>: Using disposable pseudonyms for each session (ANONymity), or one multi-session pseudonym (nickname)
-	<ul>
-	<li style="background-color:pink">You have to give us your real identity, uniquely linking your account to you as a physical person (0 points)</li>
-	<li style="background-color:lightorange">We allow you to use nicknames towards other users, as long as you do tell us your real identity (50 points)</li>
-	<li style="background-color:lightgreen">We allow you to use a pseudonym, whether used during multiple sessions, or only once (90 points)</li>
-        </ul>
-</li>
-<br>
-<li><strong>DIST</strong>: Whether you can install your own node of this service, and interact with people on other DISTributed nodes like the current one 
-	<ul>
-	<li style="background-color:pink">This is the only instance of this service. Either the source code is secret, or you\'re not allowed to run your own instance of it (0 points)</li>
-	<li style="background-color:lightorange">The software behind this service is FOSS. Be aware though, that each node forms a restrictive island of user interaction (50 points)</li>
-	<li style="background-color:lightgreen">This service is distributed; using a a different instance will not give you significant loss of interaction with other users (90 points)</li>
-        </ul>
-</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Terms of Service; Didn&apos;t Read</title>
+		<meta name="description" content="Nobody wants to read the long Terms of Service many websites have. But it is important to understand what they say &ndash; these ratings make it easier.">
+		<meta name="author" content="Unhosted">
 
-<h2>The table</h2>
-For each of the topics mentioned above, and for each major website, there is a wiki page on which you can discuss your interpretation with others. Whenever there is a concensus, this is displayed in the <a href="points.html">table</a>. It's also available in cross-origin <a href="table.json">JSON</a>, for use in web apps and plugins.
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<h2>Classification</h2>
-Whenever there is concensus on all points about a website, a classification between "ToS;DR|A" (good) and "ToS;DR|G" (bad) is issued. This is based on the points mentioned above, such that the best known website (currently: ... with ... points) is the start of class A, and the worst known website (currently ... with ... points) is the end of class G.
-</body>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!--<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
+	</head>
+
+	<body>
+
+		<div class="topbar">
+			<div class="fill">
+				<div class="container">
+					<a class="brand" href="#">ToS;DR</a>
+					<ul class="nav">
+						<li><a href="#classification">Classification</a></li>
+						<li><a href="#categories">Categories</a></li>
+						<li><a href="#ratings">Ratings</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
+				<h1>Terms of Service; Didn&apos;t Read</h1>
+				<p>Nobody wants to read the long Terms of Service many websites have.<br />But it is important to understand what they say &ndash; these ratings make it easier.</p>
+				<p>
+					<a href="#ratings" class="btn primary large">See the ratings</a>
+					<a href="http://github.com/unhosted/ToS-DR" class="btn large"><img src="img/github.png" /> Get the code</a>
+					<a href="http://webchat.freenode.net/?channels=unhosted" class="btn large"><img src="img/irccloud.png" /> Join the conversation</a>
+				</p>
+			</div>
+
+			<section id="classification">
+				<div class="page-header"><h1>Classification <small>how services are rated</small></h1></div>
+				<p>Each service is rated according to the categories below as either <span class="label success">good</span>, <span class="label warning">mediocre</span> or <span class="label important">bad</span> depending on their terms of service and privacy policies. These individual ratings are then added up to judge the service as a whole.</p>
+				<span class="label success"></span><p>if 80% good or more</p>
+				<span class="label warning"></span><p>if 50% good or more</p>
+				<span class="label important"></span><p>if below 50% good</p>
+			</section>
+
+			<section id="categories">
+				<div class="page-header"><h1>Categories <small>12 for now, let us know if they make sense or can be simplified</small></h1></div>
+
+				<div class="row">
+					<div class="span8">
+						<h2>Attribution</h2>
+						<span class="label success"></span><p>You own what you publish.</p>
+						<span class="label important"></span><p>You grant rights for redistributing your published data.</p>
+					</div>
+					<div class="span8">
+						<h2>Privacy</h2><!-- TODO: can this be merged with Attribution? -->
+						<span class="label success"></span><p>They will not get a license beyond what is necessary for running the service.</p>
+						<span class="label important"></span><p>You have to license your data to them.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span8">
+						<h2>You end the service</h2>
+						<span class="label success"></span><p>Both your primary and secondary data will be removed after you close your account.</p>
+						<span class="label warning"></span><p>Your data will be kept for a short time for the purpose of restoring your account at a later time.</p>
+						<span class="label important"></span><p>A copy of your data will be kept even if you don&apos;t want it.</p>
+					</div>
+					<div class="span8">
+						<h2>They end the service</h2>
+						<span class="label success"></span><p>Your account will not be suspended, unless required to do so by law.</p>
+						<span class="label warning"></span><p>Your account might be suspended at any time, but there is an appeal procedure.</p>
+						<span class="label important"></span><p>There is no appeal procedure in case the service is ended.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span8">
+						<h2>Third parties</h2>
+						<span class="label success"></span><p>Neither your primary nor your secondary data will be given to third parties.</p>
+						<span class="label warning"></span><p>Aggregated data might be used for use by third parties, but then you will not be identifiable.</p>
+						<span class="label important"></span><p>Your personal data will be given to third parties.</p>
+					</div>
+					<div class="span8">
+						<h2>Law enforcement</h2>
+						<span class="label success"></span><p>You will get a chance to defend yourself when law enforcement requests access to your data.</p>
+						<span class="label warning"></span><p>Your data will only be given away in case of a subpoena.</p>
+						<span class="label important"></span><p>Your data might be given to law enforcement upon request.</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span8">
+						<h2>Censorship</h2>
+						<span class="label success"></span><p>Your published data will not be censored, unless required to do so by law.</p>
+						<span class="label warning"></span><p>Your published data might be censored at any time, but there is an appeal procedure.</p>
+						<span class="label important"></span><p>There is no appeal procedure in case your data is censored.</p>
+					</div>
+					<div class="span8">
+						<h2>Location of court of law</h2>
+						<span class="label success"></span><p>The court of law of the service is located in a country which respects human rights &amp; digital rights.</p>
+						<span class="label warning"></span><p>The court of law of the service is located in a country which is behind on digital rights.</p>
+						<span class="label important"></span><p>The court of law of the service is located in a country which is known for censoring and oppression.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span8">
+						<h2>Equality</h2>
+						<span class="label success"></span><p>The service is blind to your location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
+						<span class="label warning"></span><p>They are actively and demonstrably working to make this service available to more human beings, regardless of their location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
+						<span class="label important"></span><p>Whether this service is available to you may depend on your location, race, gender, nationality, residence, political views, religion, sexual orientation, or criminal record.</p>
+					</div>
+					<div class="span8">
+						<h2>Anonymity</h2>
+						<span class="label success"></span><p>You can use a pseudonym and don&apos;t have to give out your personal info.</p>
+						<span class="label warning"></span><p>It is allowed to use nicknames towards other users, as long as you give your real identity to the service.</p>
+						<span class="label important"></span><p>You have to give out your real identity, uniquely linking your account to you as a physical person.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span8">
+						<h2>Data liberation</h2>
+						<span class="label success"></span><p>You can export and import all your data to open formats usable with other services.</p>
+						<span class="label warning"></span><p>You can export your primary data, but only to a format that even they don&apos;t support for import.</p>
+						<span class="label important"></span><p>You can not export your data.</p>
+					</div>
+					<div class="span8">
+						<h2>Distribution</h2>
+						<span class="label success"></span><p>This service is distributed; using a a different instance will not give you significant loss of interaction with other users.</p>
+						<span class="label warning"></span><p>The software behind this service is freely licensed. Be aware though, that each node forms a restrictive island of user interaction.</p>
+						<span class="label important"></span><p>This is the only instance of this service. Either the source code is secret, or you&apos;re not allowed to run your own instance of it.</p>
+					</div>
+				</div>
+
+			</section>
+
+			<section id="ratings"><!-- TODO: merge viz.html in here -->
+				<div class="page-header"><h1>Ratings <small>these are only example values for now!</small></h1></div>
+				<table><thead>
+					<tr>
+						<th>Site</th>
+						<th>Rating</th>
+						<th>BY</th>
+						<th>PRIV</th>
+						<th>DEL</th>
+						<th>END</th>
+						<th>CEN</th>
+						<th>GOV</th>
+						<th>OPP</th>
+						<th>DL</th>
+						<th>EQ</th>
+						<th>ANON</th>
+						<th>DIST</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><img src="http://static.ak.fbcdn.net/rsrc.php/yi/r/q9U99v3_saj.ico" /> facebook.com</td>
+						<td id="rating_facebook.com"><span id="points_facebook.com" class="label important">36%</span></td>
+						<td id="cell_facebook.com_BY" onclick="getQuotes('facebook.com', 'BY');"><span class="label success"></span></td>
+						<td id="cell_facebook.com_PRIV" onclick="getQuotes('facebook.com', 'PRIV');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_DEL" onclick="getQuotes('facebook.com', 'DEL');"><span class="label success"></span></td>
+						<td id="cell_facebook.com_END" onclick="getQuotes('facebook.com', 'END');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_CEN" onclick="getQuotes('facebook.com', 'CEN');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_GOV" onclick="getQuotes('facebook.com', 'GOV');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_OPP" onclick="getQuotes('facebook.com', 'OPP');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_DL" onclick="getQuotes('facebook.com', 'DL');"><span class="label success"></span></td>
+						<td id="cell_facebook.com_EQ" onclick="getQuotes('facebook.com', 'EQ');"><span class="label success"></span></td>
+						<td id="cell_facebook.com_ANON" onclick="getQuotes('facebook.com', 'ANON');"><span class="label important"></span></td>
+						<td id="cell_facebook.com_DIST" onclick="getQuotes('facebook.com', 'DIST');"><span class="label important"></span></td>
+					</tr>
+					<tr>
+						<td><img src="http://dropbox.com/static/images/favicon.ico" /> dropbox.com</td>
+						<td id="rating_dropbox.com"><span id="points_dropbox.com" class="label warning">64%</span></td>
+						<td id="cell_dropbox.com_BY" onclick="getQuotes('dropbox.com', 'BY');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_PRIV" onclick="getQuotes('dropbox.com', 'PRIV');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_DEL" onclick="getQuotes('dropbox.com', 'DEL');"><span class="label important"></span></td>
+						<td id="cell_dropbox.com_END" onclick="getQuotes('dropbox.com', 'END');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_CEN" onclick="getQuotes('dropbox.com', 'CEN');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_GOV" onclick="getQuotes('dropbox.com', 'GOV');"><span class="label important"></span></td>
+						<td id="cell_dropbox.com_OPP" onclick="getQuotes('dropbox.com', 'OPP');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_DL" onclick="getQuotes('dropbox.com', 'DL');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_EQ" onclick="getQuotes('dropbox.com', 'EQ');"><span class="label important"></span></td>
+						<td id="cell_dropbox.com_ANON" onclick="getQuotes('dropbox.com', 'ANON');"><span class="label success"></span></td>
+						<td id="cell_dropbox.com_DIST" onclick="getQuotes('dropbox.com', 'DIST');"><span class="label important"></span></td>
+						</tr>
+					</tbody></table>
+			</section>
+
+			<footer>
+				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
+			</footer>
+
+		</div> <!-- /container -->
+
+	</body>
 </html>
-
