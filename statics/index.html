@@ -74,13 +74,13 @@
             crits[list[i].crit]=true;
             
           }
-          var str = '<table><tr><td>site:</td><td>rating:</td><td>points:</td>';
+          var str = '<table><tr><td>site:</td><td>points:</td>';
           for(thisCrit in crits) {
             str += '<td>'+thisCrit+'</td>';
           }
           str += '</tr>';
           for(thisSite in sites) {
-            str += '<tr><td>'+thisSite+'</td><td id="rating_'+thisSite+'"></td><td id="points_'+thisSite+'"></td>';
+            str += '<tr><td>'+thisSite+'</td><td id="points_'+thisSite+'"></td>';
             for(thisCrit in crits) {
               str += '<td bgcolor="grey" id="cell_'+thisSite+'_'+thisCrit+'" onclick="getQuotes(\''+thisSite+'\', \''+thisCrit+'\');"></td>';
             }
@@ -324,6 +324,7 @@
 					</tbody></table>-->
 			</section>
       <div id="viz"></div>
+      <div id="det" style="display:none;"></div>
 
 			<footer>
 				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
