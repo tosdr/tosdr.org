@@ -100,14 +100,25 @@
           var i, j;
           for(i = 0; i< list.length; i++) {
             if((list[i].site == site) && (list[i].crit == crit)) {
+              document.getElementById('det').innerHTML = '<h2>Discussion page for '+site+' / '+crit+'</h2>';
               for(j = 0; j < list[i].quotes.length; j++) {
                 getQuote(site, list[i].date, list[i].quotes[j].text, list[i].quotes[j].from, list[i].quotes[j].to, function(text) {
-                  alert(text);
+                  document.getElementById('det').innerHTML = document.getElementById('det').innerHTML
+                    //+ '<br>Quote char '+list[i].quotes[j].from
+                    //+ ' to '+list[i].quotes[j].to
+                    //+ ': <a href="/scrapes/'+site+'/'+list[i].date+'/'+list[i].text+'/index.html">"'+text+'"</a>';
+                    +'<br>'+text+'<br><input type="submit" value="back" onclick="goBack();">';
+                  document.getElementById('det').style.display='block';
+                  document.getElementById('viz').style.display='none';
                 });
               }
             }
           }
         });
+      }
+      function goBack() {
+        document.getElementById('viz').style.display='block';
+        document.getElementById('det').style.display='none';
       }
     </script>
   </head>
@@ -115,6 +126,9 @@
     <h2>WARNING: the data on this page is only test data, no real data yet.</h2>
     <div id="viz">
     (result)
+    </div>
+    <div id="det" style="display:none;">
+    (details)
     </div>
   </body>
 </html>
