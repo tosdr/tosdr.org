@@ -18,9 +18,129 @@
 
 		<script src="js/jquery-1.7.1.min.js"></script>
 		
+    <script>
+      function getList(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/points.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
+
+      function getQuote(site, date, text, from, to, cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/scrapes/'+site+'/'+date+'/'+text+'/', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(text.substring(from, to));
+          }
+        }
+        xhr.send();
+      }
+      function getWeights(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/weights.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
+      function getRates(cb) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/rates.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            var text = xhr.responseText;
+            cb(JSON.parse(text));
+          }
+        }
+        xhr.send();
+      }
+      function go() {
+        getList(function(list) {
+          var i, j, thisSite, thisCrit;
+          var sites = {};
+          var crits = {};
+          for(i = 0; i < list.length; i++) {
+            sites[list[i].site]=0;
+            crits[list[i].crit]=true;
+            
+          }
+          var str = '<table><tr><td>site:</td><td>rating:</td><td>points:</td>';
+          for(thisCrit in crits) {
+            str += '<td>'+thisCrit+'</td>';
+          }
+          str += '</tr>';
+          for(thisSite in sites) {
+            str += '<tr><td>'+thisSite+'</td><td id="rating_'+thisSite+'"></td><td id="points_'+thisSite+'"></td>';
+            for(thisCrit in crits) {
+              str += '<td bgcolor="grey" id="cell_'+thisSite+'_'+thisCrit+'" onclick="getQuotes(\''+thisSite+'\', \''+thisCrit+'\');"></td>';
+            }
+            str += '</tr>';
+          }
+          document.getElementById('viz').innerHTML = str;
+          getWeights(function(weights) {
+            for(i = 0; i < list.length; i++) {
+              document.getElementById('cell_'+list[i].site+'_'+list[i].crit).setAttribute('bgcolor', list[i].read);
+              document.getElementById('cell_'+list[i].site+'_'+list[i].crit).innerHTML = weights[list[i].crit][list[i].read]; 
+            }
+            for(thisSite in sites) {
+              for(thisCrit in crits) {
+                sites[thisSite] += parseInt(document.getElementById('cell_'+thisSite+'_'+thisCrit).innerHTML);
+              }
+              document.getElementById('points_'+thisSite).innerHTML = sites[thisSite];
+            }
+            getRates(function(rates) {
+              var thisRate;
+              for(thisSite in sites) {
+                for(thisRate in rates) {
+                  if(sites[thisSite] >= rates[thisRate]) {
+                    document.getElementById('rating_'+thisSite).innerHTML = thisRate;
+                    break;
+                  }
+                }
+              }
+            });
+          });
+        });
+      }
+      function getQuotes(site, crit) {
+        getList(function(list) {
+          var i, j;
+          for(i = 0; i< list.length; i++) {
+            if((list[i].site == site) && (list[i].crit == crit)) {
+              document.getElementById('det').innerHTML = '<h2>Discussion page for '+site+' / '+crit+'</h2>';
+              for(j = 0; j < list[i].quotes.length; j++) {
+                getQuote(site, list[i].date, list[i].quotes[j].text, list[i].quotes[j].from, list[i].quotes[j].to, function(text) {
+                  document.getElementById('det').innerHTML = document.getElementById('det').innerHTML
+                    //+ '<br>Quote char '+list[i].quotes[j].from
+                    //+ ' to '+list[i].quotes[j].to
+                    //+ ': <a href="/scrapes/'+site+'/'+list[i].date+'/'+list[i].text+'/index.html">"'+text+'"</a>';
+                    +'<br>'+text+'<br><input type="submit" value="back" onclick="goBack();">';
+                  document.getElementById('det').style.display='block';
+                  document.getElementById('viz').style.display='none';
+                });
+              }
+            }
+          }
+        });
+      }
+      function goBack() {
+        document.getElementById('viz').style.display='block';
+        document.getElementById('det').style.display='none';
+      }
+    </script>
 	</head>
 
-	<body>
+	<body onload="go();">
 
 		<div class="topbar">
 			<div class="fill">
@@ -138,7 +258,7 @@
 
 			<section id="ratings"><!-- TODO: merge viz.html in here -->
 				<div class="page-header"><h1>Ratings (example values!) <small>seriously, this part is only an example!</small></h1></div>
-				<table><thead>
+				<!--<table><thead>
 					<tr>
 						<th>Site</th>
 						<th>Rating</th>
@@ -201,8 +321,9 @@
 						<td id="cell_joindiaspora.com_DL" onclick="getQuotes('joindiaspora.com', 'DL');"><span class="label warning" title="mediocre"></span></td>
 						<td id="cell_joindiaspora.com_DIST" onclick="getQuotes('joindiaspora.com', 'DIST');"><span class="label success" title="good"></span></td>
 						</tr>
-					</tbody></table>
+					</tbody></table>-->
 			</section>
+      <div id="viz"></div>
 
 			<footer>
 				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
