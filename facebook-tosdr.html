@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Terms of Service; Didn&apos;t Read</title>
+		<title>Facebook - Terms of Service; Didn&apos;t Read</title>
 		<meta name="description" content="Nobody wants to read the long Terms of Service many websites have. But it is important to understand what they say &ndash; these ratings make it easier.">
 		<meta name="author" content="Unhosted">
 
@@ -142,8 +142,8 @@
 
 	<body onload="go();">
 
-		<div class="topbar">
-			<div class="fill">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
 				<div class="container">
 					<a class="brand" href="#">ToS;DR</a>
 					<ul class="nav">
@@ -162,8 +162,8 @@
 			<div class="hero-unit">
 				<h1>Terms of Service; Didn&apos;t Read</h1>
 				<p class="pull-left" style="margin:1em 1em 1em 0;">
-					<!--<a href="#ratings" class="btn primary large">See the ratings</a>-->
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn large"><img src="img/googlegroups.png" /> Join the group</a>
+					<!--<a href="#ratings" class="btn btn-primary btn-large">See the ratings</a>-->
+					<a href="https://groups.google.com/d/forum/tosdr" class="btn btn-large"><img src="img/googlegroups.png" /> Join the group</a>
 					<br />
 					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
 				</p>
@@ -176,13 +176,13 @@
 			<section id="classification">
 				<div class="page-header"><h2>Classification <small>how services are rated</small></h2></div>
 				<p>
-					Each service is rated according to <a href="#categories">categories</a> below and gets a label <span class="label success">A</span>, <span class="label" style="background:#79B752">B</span>, <span class="label warning">C</span>, <span class="label" style="background:#D66F2C">D</span>, or <span class="label important">E</span> depending on their terms of service and privacy policies. These individual ratings are then added up to judge the service as a whole.
+					Each service is rated according to <a href="#categories">categories</a> below and gets a point <span class="badge badge-success"><i class="icon-thumbs-up icon-white">+</i></span>, <span class="badge badge-warning"><i class="icon-thumbs-down icon-white">-</i></span>, <span class="badge badge-important"><i class="icon-minus-sign icon-white">×</i></span>, <span class="badge"><i class="icon-hand-right icon-white">→</i></span> depending on their terms of service and privacy policies. These individual ratings are then added up to judge the service as a whole.
 				</p>
-				<p><span class="label success">Class A</span>&nbsp; The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p>
-				<p><span class="label" style="background:#79B752">Class B</span>&nbsp; The terms of services are fair towards the user.</p>
-				<p><span class="label warning">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
-				<p><span class="label" style="background:#D66F2C">Class D</span>&nbsp; The terms of service are very uneven or there are some important issues that need your attention.</p>
-				<p><span class="label important">Class E</span>&nbsp; We strongly discourage you from signing up to this service. The terms of service raise serious concerns.</p>
+				<p><span class="label A">Class A</span>&nbsp; The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p>
+				<p><span class="label B">Class B</span>&nbsp; The terms of services are fair towards the user but they  could be improved.</p>
+				<p><span class="label C">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
+				<p><span class="label D">Class D</span>&nbsp; The terms of service are very uneven or there are some important issues that need your attention.</p>
+				<p><span class="label E">Class E</span>&nbsp; We strongly discourage you from signing up to this service. The terms of service raise serious concerns.</p>
 
 			</section>
 
@@ -190,34 +190,41 @@
 			<section id="sevices">
 				<div class="page-header"><h2>What's in a ToS <small>We have rated and compared the terms of these services</small></h2></div>
 				<form class="well form-search" id="filter-services">
-					<input class="input-medium search-query" id="appendedInputButtons" size="16" type="text">
-					<button class="btn" type="submit">Search</button>
-					<button class="btn" type="button">Options</button>
+					<div class="control-group">
+						<div class="controls">
+							<div class="input-append">
+							<input type="text" size="16" class="input-medium search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>
+							</div>
+						</div>
+					</div>
 					<div class="options">
 						<label for="optionsCheckboxList" class="control-label">Options</label>
 						<div>
-							<label>
+							<label class="checkbox">
 								<input type="checkbox" value="option1" name="optionsCheckboxList1" checked >
 								Free Software / Open Source
 							</label>
-							<label>
+							<label class="checkbox">
 								<input type="checkbox" value="option2" name="optionsCheckboxList2" checked >
 								Exportable Data
 							</label>
-							<p class="help-block"><strong>Note:</strong> We would appreciate feedback on your experience using this form. <a href="#getinvolved">Contact us here</a>. Thank you!</p>
+							<label class="show-only-label">
+								<br />Show only
+								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>
+							</label>
 						</div>
 					</div>
 				</form>
 
 				<div id="services-list" class="row">
-					<div id="facebook" class="span8 service-nutshell">
+					<div id="facebook" class="span6 service-nutshell">
 					<!--{-->
 						<!--"id": "facebook",-->
 						<h3><a href="facebook-tosdr.html#facebook-tosdr">Facebook</a> <small>www.facebook.com</small></h3>
 						<!--"service": "Facebook",-->
 						<!--"url": "https://www.facebook.com",-->
 						<div class="tosdr-rating">
-							<p><span class="label warning">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
+							<p><span class="label C">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
 						</div>
 						<!--"rated": false,-->
 						<!--"tos": {-->
@@ -242,23 +249,46 @@
 							<!--},-->
 						<!--"last-diff": "http://www.tosback.org/diff.php?vid=1740",-->
 						<!--"date": "2011-07-07",-->
-						<strong>Specific data points</strong>
-						<ul>
-							<li><a href="#nmmjwmPNrPU">UI oversharing</a></li>
-						</ul>
+						<h4>Specific issues</h4>
+								<ul class="tosdr-points">
+									<li>
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">
+										  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">+</i></span>
+										Ownership</a><!--link out icon-->
+										<p>
+											The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.
+										</p>
+									</li>
+									<li>
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">
+										  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span>
+										Third-Parties</a><!--link out icon-->
+										<p>
+											The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense</strong>.
+										</p>
+									</li>
+									<li>
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/VTlWfubfib4">
+										  <span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span>
+										Changes to the ToS</a>
+										<p>
+											Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.
+										</p>
+									</li>
+								</ul>
 						<!--"discussion": {-->
 							<!--"nmmjwmPNrPU"-->
 							<!--}-->
 					<!--}-->
 					</div>
-					<div id="flattr" class="span8 service-nutshell">
+					<div id="flattr" class="span6 service-nutshell">
 					<!--{-->
 					<!--"id": "flattr",-->
 						<h3><a href="#flattr-tosdr">Flattr</a> <small>www.flattr.com</small></h3>
 						<!--"service": "Flattr",-->
 						<!--"url": "https://www.flattr.com",-->
 						<div class="tosdr-rating">
-							<p><span class="label" style="background:#79B752">Class B</span>&nbsp; The terms of services are fair towards the user.</p>
+							<p><span class="label B">Class B</span>&nbsp; The terms of services are fair towards the user.</p>
 						</div>
 						<!--"rated": false,-->
 						<!--"tos": {-->
@@ -278,7 +308,8 @@
 					<!--}-->
 					</div>
 				</div>
-
+				
+				
 				<div id="tosdr-popup" style="display:block" class="modal hide fade in" role="dialog">
 					<div id="facebook-tosdr" class="tosdr-infos">
 						<div class="modal-header">
@@ -290,88 +321,102 @@
 							<!--"service": "Facebook",-->
 							<!--"url": "https://www.facebook.com",-->
 							<div class="tosdr-rating">
-								<p><label class="label warning" style="margin-right:1.5em;">Class C&nbsp;</label> The terms of service are okay but some issues need your consideration.</p>
+								<label class="label">No class yet</label><p>We haven't sufficiently reviewed the terms yet. Please contribute to our group.</p>
 							</div>
 							<!--"rated": false,-->
-							<h4>Specific issues</h4>
-								<ul>
+							<section>
+								<h4>Specific issues</h4>
+								<ul class="tosdr-points">
 									<li>
-										<span class="label warning">C</span>
-										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">Ownership</a><!--link out icon-->
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">
+										  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">+</i></span>
+										Ownership</a><!--link out icon-->
 										<p>
 											The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.
 										</p>
 									</li>
 									<li>
-										<span class="label" style="background:#D66F2C">D</span>
-										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">Third-Parties</a><!--link out icon-->
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck">
+										  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span>
+										Third-Parties</a><!--link out icon-->
 										<p>
 											The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense</strong>.
 										</p>
 									</li>
 									<li>
-										<span class="label success">A</span>
-										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/VTlWfubfib4">Changes to the ToS</a>
+										<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/VTlWfubfib4">
+										  <span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span>
+										Changes to the ToS</a>
 										<p>
-											Facebook has a recent practice to sollicit your feedback before making changes to their terms.
+											Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.
 										</p>
 									</li>
 								</ul>
-							<h4>Terms of Service</h4>
-							<p>
-								Thanks to ToSBACK we can provide you the archives and emphasize
-								the evolution of the different Terms over time.
-							</p>
-							<ul>
-								<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>
-
-							<!--"tos": {-->
-								<!--"terms": "http://www.facebook.com/legal/terms",-->
-								<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>
-								<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>
-								<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>
-								<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>
-								<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>
-								<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>
-								<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>
-								<!--},-->
-							</ul>
-							<h4>Related</h4>
-							<ul>
-								<li>Diaspora* Pods<ul>
-									<li>
-									  <img src="https://d3mbmfe8268ud7.cloudfront.net/assets/apple-touch-icon-bee3df649a606688ad4873df1702faad.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />
-									  <a href="">Diaspora*</a>
-									</li>
-									<li>
-									  <img src="https://c790230.ssl.cf2.rackcdn.com/apple-touch-icon.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />
-									  <a href="#">Diasporg</a>
-									</li>
+							</section>
+							
+							<section>
+								<h4>EFF: with the government, who has your back?</h4>
+								<ul class="eff-hasyourback">
+									<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Tell users about data demands</li>
+									<li><span class="badge"><i class="icon-adjust"></i></span> Be transparent about government requests</li>
+									<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Fight for user privacy in the courts</li>
+									<li><span class="badge badge-success"><i class="icon-ok"></i></span> Fight for user privacy in US Congress</li>
 								</ul>
-							</ul>
-							<!--"related": {-->
-								<!--"diaspora",-->
-								<!--},-->
-							<h4>EFF: with the government, who has your back?</h4>
-							<ul>
-								<li>Tell users about data demands</li>
-								<li>Be transparent about government requests</li>
-								<li>Fight for user privacy in the courts</li>
-								<li>Fight for user privacy in Congress</li>
-							</ul>
-							<!--"eff_hasyourback": {-->
-								<!--"tell-you": 0,-->
-								<!--"transparent": 0.5,-->
-								<!--"in-court": 0,-->
-								<!--"in-Congress": 1-->
-								<!--},-->
-							<!--"last-diff": "http://www.tosback.org/diff.php?vid=1740",-->
-							<!--"date": "2011-07-07",-->
+							</section>
+							
+<!--							<section>-->
+<!--								<h4>Terms of Service</h4>-->
+<!--								<p>-->
+<!--									Thanks to ToSBACK we can provide you the archives and emphasize-->
+<!--									the evolution of the different Terms over time.-->
+<!--								</p>-->
+<!--								<ul>-->
+<!--									<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>-->
 
-							<!--"discussion": {-->
-								<!--"nmmjwmPNrPU"-->
-								<!--}-->
-					<!--}--></div>
+<!--								<!--"tos": {-->-->
+<!--									<!--"terms": "http://www.facebook.com/legal/terms",-->-->
+<!--									<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>-->
+<!--									<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>-->
+<!--									<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>-->
+<!--									<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>-->
+<!--									<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>-->
+<!--									<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>-->
+<!--									<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>-->
+<!--									<!--},-->-->
+<!--								</ul>-->
+<!--							</section>-->
+							
+							<section>
+								<h4>Related</h4>
+								<ul>
+									<li>Diaspora* Pods<ul>
+										<li>
+										  <img src="https://d3mbmfe8268ud7.cloudfront.net/assets/apple-touch-icon-bee3df649a606688ad4873df1702faad.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />
+										  <a href="">Diaspora*</a>
+										</li>
+										<li>
+										  <img src="https://c790230.ssl.cf2.rackcdn.com/apple-touch-icon.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />
+										  <a href="#">Diasporg</a>
+										</li>
+									</ul>
+								</ul>
+								<!--"related": {-->
+									<!--"diaspora",-->
+									<!--},-->
+								<!--"eff_hasyourback": {-->
+									<!--"tell-you": 0,-->
+									<!--"transparent": 0.5,-->
+									<!--"in-court": 0,-->
+									<!--"in-Congress": 1-->
+									<!--},-->
+								<!--"last-diff": "http://www.tosback.org/diff.php?vid=1740",-->
+								<!--"date": "2011-07-07",-->
+
+								<!--"discussion": {-->
+									<!--"nmmjwmPNrPU"-->
+									<!--}-->
+								</section>
+						<!--}--></div>
 						<div class="modal-footer">
 							<a data-dismiss="modal" class="btn" href="#">Close</a>
 							<a class="btn btn-primary" href="#">Feedback</a>
@@ -381,97 +426,111 @@
 			</section>
 
 
+
 			<section id="getinvolved">
 				<div class="page-header"><h2>Get involved <small>Analysis for terms, APIs, discussions</small></h2></div>
 				<p>
 					We are currently in the analysis phase. If you are interested in this project and have some information related to specific terms of services that you want to share with us; please get in touch: <a href="mailto:tosdr@googlegroups.com?subject=[new issue]">tosdr@googlegroups.com</a>.
 				</p>
 				<p class="pull-left">
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn large"><img src="img/googlegroups.png" /> Join the group</a>
+					<a href="https://groups.google.com/d/forum/tosdr" class="btn btn-large"><img src="img/googlegroups.png" /> Join the group</a>
 					<br />
 					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
 				</p>
 				<p>
-					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn large"><img src="img/irccloud.png" /> Discussion</a>
-					<a href="http://github.com/unhosted/ToS-DR" class="btn large"><img src="img/github.png" /> Code</a>
+					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn btn-large"><img src="img/irccloud.png" /> Discussion</a>
+					<a href="http://github.com/unhosted/ToS-DR" class="btn btn-large"><img src="img/github.png" /> Code</a>
 				</p>
+<!--				<iframe id="forum_embed"-->
+<!--					src="javascript:void(0)"-->
+<!--					scrolling="no"-->
+<!--					frameborder="0"-->
+<!--					style="width:100%;"-->
+<!--					height="300">-->
+<!--				</iframe>-->
+<!--				<script type="text/javascript">-->
+<!--					document.getElementById('forum_embed').src =-->
+<!--					'https://groups.google.com/forum/embed/?place=forum/tosdr'-->
+<!--					+ '&showsearch=true&showpopout=true&showtabs=false'-->
+<!--					+ '&parenturl=' + encodeURIComponent(window.location.href);-->
+<!--				</script> -->
 			</section>
 
 			<section id="categories">
 				<div class="page-header"><h2>Categories <small>10 for now, let us know if they make sense or can be simplified</small></h2></div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="span6">
 						<h3>Ownership</h3>
-						<span class="label success" title="good"></span><p>You license us to use your data only for the purpose of offering this service.</p>
-						<span class="label warning" title="mediocre"></span><p>We get a license to reuse and resell your data, but will still attribute ownership to you.</p>
-						<span class="label important" title="bad"></span><p>We become the owners of your data.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You license us to use your data only for the purpose of offering this service.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>We get a license to reuse and resell your data, but will still attribute ownership to you.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>We become the owners of your data.</p>
 					</div>
-					<div class="span8">
+					<div class="span6">
 						<h3>Location of court of law</h3>
-						<span class="label success" title="good"></span><p>The court of law of the service is located in a country which respects human rights &amp; digital rights.</p>
-						<span class="label warning" title="mediocre"></span><p>The court of law of the service is located in a country which is behind on digital rights.</p>
-						<span class="label important" title="bad"></span><p>The court of law of the service is located in a country which is known for censoring and oppression.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>The court of law of the service is located in a country which respects human rights &amp; digital rights.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>The court of law of the service is located in a country which is behind on digital rights.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>The court of law of the service is located in a country which is known for censoring and oppression.</p>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="span6">
 						<h3>You end the service</h3>
-						<span class="label success" title="good"></span><p>Both your primary and secondary data will be removed after you close your account.</p>
-						<span class="label warning" title="mediocre"></span><p>Your data will be kept for a short time for the purpose of restoring your account at a later time.</p>
-						<span class="label important" title="bad"></span><p>A copy of your data will be kept even if you don&apos;t want it.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>Both your primary and secondary data will be removed after you close your account.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>Your data will be kept for a short time for the purpose of restoring your account at a later time.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>A copy of your data will be kept even if you don&apos;t want it.</p>
 					</div>
-					<div class="span8">
+					<div class="span6">
 						<h3>They end the service</h3>
-						<span class="label success" title="good"></span><p>Your account will not be suspended or censored, unless required to do so by law.</p>
-						<span class="label warning" title="mediocre"></span><p>Your account might be suspended or censored at any time, but there is an appeal procedure.</p>
-						<span class="label important" title="bad"></span><p>There is no appeal procedure in case the service is ended or censored.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>Your account will not be suspended or censored, unless required to do so by law.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>Your account might be suspended or censored at any time, but there is an appeal procedure.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>There is no appeal procedure in case the service is ended or censored.</p>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="span6">
 						<h3>Third parties</h3>
-						<span class="label success" title="good"></span><p>Neither your primary nor your secondary data will be given to third parties.</p>
-						<span class="label warning" title="mediocre"></span><p>Aggregated data might be used for use by third parties, but then you will not be identifiable.</p>
-						<span class="label important" title="bad"></span><p>Your personal data will be given to third parties.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>Neither your primary nor your secondary data will be given to third parties.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>Aggregated data might be used for use by third parties, but then you will not be identifiable.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>Your personal data will be given to third parties.</p>
 					</div>
-					<div class="span8">
+					<div class="span6">
 						<h3>Law enforcement</h3>
-						<span class="label success" title="good"></span><p>You will get a chance to defend yourself when law enforcement requests access to your data.</p>
-						<span class="label warning" title="mediocre"></span><p>Your data will only be given away in case of a subpoena.</p>
-						<span class="label important" title="bad"></span><p>Your data might be given to law enforcement upon request.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You will get a chance to defend yourself when law enforcement requests access to your data.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>Your data will only be given away in case of a subpoena.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>Your data might be given to law enforcement upon request.</p>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="span6">
 						<h3>Equality</h3>
-						<span class="label success" title="good"></span><p>The service is blind to your location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
-						<span class="label warning" title="mediocre"></span><p>They are actively and demonstrably working to make this service available to more human beings, regardless of their location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
-						<span class="label important" title="bad"></span><p>Whether this service is available to you may depend on your location, race, gender, nationality, residence, political views, religion, sexual orientation, or criminal record.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>The service is blind to your location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>They are actively and demonstrably working to make this service available to more human beings, regardless of their location, race, gender, nationality, residence, political views, religion, sexual orientation, and criminal record.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>Whether this service is available to you may depend on your location, race, gender, nationality, residence, political views, religion, sexual orientation, or criminal record.</p>
 					</div>
-					<div class="span8">
+					<div class="span6">
 						<h3>Anonymity</h3>
-						<span class="label success" title="good"></span><p>You can use a pseudonym and don&apos;t have to give out your personal info.</p>
-						<span class="label warning" title="mediocre"></span><p>It is allowed to use nicknames towards other users, as long as you give your real identity to the service.</p>
-						<span class="label important" title="bad"></span><p>You have to give out your real identity, uniquely linking your account to you as a physical person.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You can use a pseudonym and don&apos;t have to give out your personal info.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>It is allowed to use nicknames towards other users, as long as you give your real identity to the service.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>You have to give out your real identity, uniquely linking your account to you as a physical person.</p>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="span6">
 						<h3>Data liberation</h3>
-						<span class="label success" title="good"></span><p>You can export and import all your data to open formats usable with other services.</p>
-						<span class="label warning" title="mediocre"></span><p>You can export your primary data, but only to a format that even they don&apos;t support for import.</p>
-						<span class="label important" title="bad"></span><p>You can not export your data.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You can export and import all your data to open formats usable with other services.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>You can export your primary data, but only to a format that even they don&apos;t support for import.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>You can not export your data.</p>
 					</div>
-					<div class="span8">
+					<div class="span6">
 						<h3>Distribution</h3>
-						<span class="label success" title="good"></span><p>This service is distributed; using a a different instance will not give you significant loss of interaction with other users.</p>
-						<span class="label warning" title="mediocre"></span><p>The software behind this service is freely licensed. Be aware though, that each node forms a restrictive island of user interaction.</p>
-						<span class="label important" title="bad"></span><p>This is the only instance of this service. Either the source code is secret, or you&apos;re not allowed to run your own instance of it.</p>
+						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>This service is distributed; using a a different instance will not give you significant loss of interaction with other users.</p>
+						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>The software behind this service is freely licensed. Be aware though, that each node forms a restrictive island of user interaction.</p>
+						<span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span><p>This is the only instance of this service. Either the source code is secret, or you&apos;re not allowed to run your own instance of it.</p>
 					</div>
 				</div>
 
@@ -501,46 +560,46 @@
 					<tr>
 						<td><img src="http://static.ak.fbcdn.net/rsrc.php/yi/r/q9U99v3_saj.ico" /> facebook.com</td>
 						<td id="rating_facebook.com"><span id="points_facebook.com" class="label important" title="bad">36%</span></td>
-						<td id="cell_facebook.com_BY" onclick="getQuotes('facebook.com', 'BY');"><span class="label success" title="good"></span></td>
-						<td id="cell_facebook.com_DEL" onclick="getQuotes('facebook.com', 'DEL');"><span class="label success" title="good"></span></td>
-						<td id="cell_facebook.com_END" onclick="getQuotes('facebook.com', 'END');"><span class="label important" title="bad"></span></td>
-						<td id="cell_facebook.com_OPP" onclick="getQuotes('facebook.com', 'OPP');"><span class="label important" title="bad"></span></td>
-						<td id="cell_facebook.com_GOV" onclick="getQuotes('facebook.com', 'GOV');"><span class="label important" title="bad"></span></td>
-						<td id="cell_facebook.com_LOC" onclick="getQuotes('facebook.com', 'LOC');"><span class="label warning" title="mediocre"></span></td>
-						<td id="cell_facebook.com_EQ" onclick="getQuotes('facebook.com', 'EQ');"><span class="label success" title="good"></span></td>
-						<td id="cell_facebook.com_ANON" onclick="getQuotes('facebook.com', 'ANON');"><span class="label important" title="bad"></span></td>
-						<td id="cell_facebook.com_DL" onclick="getQuotes('facebook.com', 'DL');"><span class="label success" title="good"></span></td>
-						<td id="cell_facebook.com_DIST" onclick="getQuotes('facebook.com', 'DIST');"><span class="label important" title="bad"></span></td>
+						<td id="cell_facebook.com_BY" onclick="getQuotes('facebook.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_facebook.com_DEL" onclick="getQuotes('facebook.com', 'DEL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_facebook.com_END" onclick="getQuotes('facebook.com', 'END');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_facebook.com_OPP" onclick="getQuotes('facebook.com', 'OPP');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_facebook.com_GOV" onclick="getQuotes('facebook.com', 'GOV');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_facebook.com_LOC" onclick="getQuotes('facebook.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
+						<td id="cell_facebook.com_EQ" onclick="getQuotes('facebook.com', 'EQ');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_facebook.com_ANON" onclick="getQuotes('facebook.com', 'ANON');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_facebook.com_DL" onclick="getQuotes('facebook.com', 'DL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_facebook.com_DIST" onclick="getQuotes('facebook.com', 'DIST');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
 					</tr>
 
 					<tr>
 						<td><img src="http://dropbox.com/static/images/favicon.ico" /> dropbox.com</td>
 						<td id="rating_dropbox.com"><span id="points_dropbox.com" class="label warning" title="mediocre">64%</span></td>
-						<td id="cell_dropbox.com_BY" onclick="getQuotes('dropbox.com', 'BY');"><span class="label success" title="good"></span></td>
-						<td id="cell_dropbox.com_DEL" onclick="getQuotes('dropbox.com', 'DEL');"><span class="label important" title="bad"></span></td>
-						<td id="cell_dropbox.com_END" onclick="getQuotes('dropbox.com', 'END');"><span class="label success" title="good"></span></td>
-						<td id="cell_dropbox.com_OPP" onclick="getQuotes('dropbox.com', 'OPP');"><span class="label success" title="good"></span></td>
-						<td id="cell_dropbox.com_GOV" onclick="getQuotes('dropbox.com', 'GOV');"><span class="label important" title="bad"></span></td>
-						<td id="cell_dropbox.com_LOC" onclick="getQuotes('dropbox.com', 'LOC');"><span class="label warning" title="mediocre"></span></td>
-						<td id="cell_dropbox.com_EQ" onclick="getQuotes('dropbox.com', 'EQ');"><span class="label important" title="bad"></span></td>
-						<td id="cell_dropbox.com_ANON" onclick="getQuotes('dropbox.com', 'ANON');"><span class="label success" title="good"></span></td>
-						<td id="cell_dropbox.com_DL" onclick="getQuotes('dropbox.com', 'DL');"><span class="label success" title="good"></span></td>
-						<td id="cell_dropbox.com_DIST" onclick="getQuotes('dropbox.com', 'DIST');"><span class="label important" title="bad"></span></td>
+						<td id="cell_dropbox.com_BY" onclick="getQuotes('dropbox.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_dropbox.com_DEL" onclick="getQuotes('dropbox.com', 'DEL');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_dropbox.com_END" onclick="getQuotes('dropbox.com', 'END');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_dropbox.com_OPP" onclick="getQuotes('dropbox.com', 'OPP');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_dropbox.com_GOV" onclick="getQuotes('dropbox.com', 'GOV');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_dropbox.com_LOC" onclick="getQuotes('dropbox.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
+						<td id="cell_dropbox.com_EQ" onclick="getQuotes('dropbox.com', 'EQ');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
+						<td id="cell_dropbox.com_ANON" onclick="getQuotes('dropbox.com', 'ANON');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_dropbox.com_DL" onclick="getQuotes('dropbox.com', 'DL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_dropbox.com_DIST" onclick="getQuotes('dropbox.com', 'DIST');"><span class="badge badge-important" title="bad"><i class="icon-minus-sign icon-white">×</i></span></td>
 						</tr>
 
 					<tr>
 						<td><img src="http://joindiaspora.com/favicon.png" /> joindiaspora.com</td>
 						<td id="rating_joindiaspora.com"><span id="points_joindiaspora.com" class="label success" title="good">95%</span></td>
-						<td id="cell_joindiaspora.com_BY" onclick="getQuotes('joindiaspora.com', 'BY');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_DEL" onclick="getQuotes('joindiaspora.com', 'DEL');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_END" onclick="getQuotes('joindiaspora.com', 'END');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_OPP" onclick="getQuotes('joindiaspora.com', 'OPP');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_GOV" onclick="getQuotes('joindiaspora.com', 'GOV');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_LOC" onclick="getQuotes('joindiaspora.com', 'LOC');"><span class="label warning" title="mediocre"></span></td>
-						<td id="cell_joindiaspora.com_EQ" onclick="getQuotes('joindiaspora.com', 'EQ');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_ANON" onclick="getQuotes('joindiaspora.com', 'ANON');"><span class="label success" title="good"></span></td>
-						<td id="cell_joindiaspora.com_DL" onclick="getQuotes('joindiaspora.com', 'DL');"><span class="label warning" title="mediocre"></span></td>
-						<td id="cell_joindiaspora.com_DIST" onclick="getQuotes('joindiaspora.com', 'DIST');"><span class="label success" title="good"></span></td>
+						<td id="cell_joindiaspora.com_BY" onclick="getQuotes('joindiaspora.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_DEL" onclick="getQuotes('joindiaspora.com', 'DEL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_END" onclick="getQuotes('joindiaspora.com', 'END');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_OPP" onclick="getQuotes('joindiaspora.com', 'OPP');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_GOV" onclick="getQuotes('joindiaspora.com', 'GOV');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_LOC" onclick="getQuotes('joindiaspora.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
+						<td id="cell_joindiaspora.com_EQ" onclick="getQuotes('joindiaspora.com', 'EQ');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_ANON" onclick="getQuotes('joindiaspora.com', 'ANON');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
+						<td id="cell_joindiaspora.com_DL" onclick="getQuotes('joindiaspora.com', 'DL');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
+						<td id="cell_joindiaspora.com_DIST" onclick="getQuotes('joindiaspora.com', 'DIST');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
 						</tr>
 					</tbody></table>-->
 			<!--/section-->
@@ -549,6 +608,9 @@
 
 			<footer>
 				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
+				<p id="legalinfo">Information from the ToS; DR project, this website, or the ToSDR Google Groups <strong>do not constitute legal advice</strong>. We only express our opinion and analysis with no guarantee. Please refer to a qualified attorney for legal advice.</p>
+				
+				<p id="credits">Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. </p>
 			</footer>
 
 		</div> <!-- /container -->
