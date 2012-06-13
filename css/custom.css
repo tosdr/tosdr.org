@@ -1,9 +1,6 @@
 body { padding-top:60px; }
-section { margin-bottom:5em; } #tosdr-popup section {margin-bottom:2em;}
+section { margin-bottom:5em; } .tosdr-infos section {margin-bottom:1.5em;}
 .hero-unit { position:relative; width:100%; padding:2em; left:-2em; }
-
-
-
 
 .A {background-color: #46A546;}
 .badge.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
@@ -26,15 +23,27 @@ section { margin-bottom:5em; } #tosdr-popup section {margin-bottom:2em;}
 .show-only-label a.inactive {color:#999; }
 .show-only-label .A > a.inactive, .show-only-label .B > a.inactive, .show-only-label .C > a.inactive, .show-only-label .D > a.inactive, .show-only-label .E > a.inactive {background-color:#CCC; }
 
+#services-list .row, #services-list .row-fluid {margin-bottom:2.5em;}
+
 #categories .badge {float:left;margin-right:.5em;}
 #categories .row { margin-bottom:1em; }
 
 .modal-header img {margin:-.3em .6em 0 0; }
 
-ul.tosdr-points li {display:inline;margin-right:1em;}
+ul.tosdr-points li {display:inline;margin-right:1em;color: #666;}
 
-#tosdr-popup ul.tosdr-points , #tosdr-popup ul.eff-hasyourback {
+ul.tosdr-points , ul.eff-hasyourback {
 list-style-type:none;
 margin-left:0;
+margin-bottom:1.5em;
 }
-#tosdr-popup ul.eff-hasyourback li {min-height:1.5em;}
+.tosdr-infos ul.eff-hasyourback li {min-height:1.5em;}
+
+.tosdr-points a:hover {text-decoration: none;}
+.tosdr-points a:hover.source:after {
+content:"See the source";
+color: #666;
+margin-left: 1em;
+font-style:italic;
+}
+.modal-backdrop {background-color: #FFF;}

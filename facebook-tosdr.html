@@ -17,6 +17,8 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
 
 		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap-modal.js"></script>
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
 
     <script>
       function getList(cb) {
@@ -137,6 +139,8 @@
         document.getElementById('viz').style.display='block';
         document.getElementById('det').style.display='none';
       }
+
+      
     </script>
 	</head>
 
@@ -220,7 +224,7 @@
 					<div id="facebook" class="span6 service-nutshell">
 					<!--{-->
 						<!--"id": "facebook",-->
-						<h3><a href="facebook-tosdr.html#facebook-tosdr">Facebook</a> <small>www.facebook.com</small></h3>
+						<h3><a data-toggle="modal" href="#facebook-tosdr">Facebook</a> <small>www.facebook.com</small></h3>
 						<!--"service": "Facebook",-->
 						<!--"url": "https://www.facebook.com",-->
 						<div class="tosdr-rating">
@@ -310,8 +314,8 @@
 				</div>
 				
 				
-				<div id="tosdr-popup" style="display:block" class="modal hide fade in" role="dialog">
-					<div id="facebook-tosdr" class="tosdr-infos">
+				<div class="modal hide" role="dialog" id="facebook-tosdr" >
+					<div class="tosdr-infos">
 						<div class="modal-header">
 							<button data-dismiss="modal" class="close" type="button">×</button>
 							<img src="http://libreprojects.net/logos/alternatives/facebook.png" alt="logo" class="pull-left" height="36" />
@@ -364,27 +368,27 @@
 								</ul>
 							</section>
 							
-<!--							<section>-->
-<!--								<h4>Terms of Service</h4>-->
-<!--								<p>-->
-<!--									Thanks to ToSBACK we can provide you the archives and emphasize-->
-<!--									the evolution of the different Terms over time.-->
-<!--								</p>-->
-<!--								<ul>-->
-<!--									<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>-->
+							<section>
+								<h4>Terms of Service</h4>
+								<p>
+									Thanks to ToSBACK we can provide you the archives and emphasize
+									the evolution of the different Terms over time.
+								</p>
+								<ul>
+									<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>
 
-<!--								<!--"tos": {-->-->
-<!--									<!--"terms": "http://www.facebook.com/legal/terms",-->-->
-<!--									<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>-->
-<!--									<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>-->
-<!--									<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>-->
-<!--									<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>-->
-<!--									<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>-->
-<!--									<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>-->
-<!--									<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>-->
-<!--									<!--},-->-->
-<!--								</ul>-->
-<!--							</section>-->
+								<!--"tos": {-->
+									<!--"terms": "http://www.facebook.com/legal/terms",-->
+									<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>
+									<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>
+									<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>
+									<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>
+									<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>
+									<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>
+									<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>
+									<!--},-->
+								</ul>
+							</section>
 							
 							<section>
 								<h4>Related</h4>
@@ -419,7 +423,7 @@
 						<!--}--></div>
 						<div class="modal-footer">
 							<a data-dismiss="modal" class="btn" href="#">Close</a>
-							<a class="btn btn-primary" href="#">Feedback</a>
+							<a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdrtos">Feedback</a>
 						</div>
 					</div>
 				</div>
