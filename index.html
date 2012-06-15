@@ -25,19 +25,32 @@
         xhr.onreadystatechange = function() {
           if(xhr.readyState == 4) {
             if(xhr.status == 200) {
-              var obj, badge, icon;
+              var obj, badge, icon,sign;
               try {
                 obj = JSON.parse(xhr.responseText);
                 if(obj.point == 'good') {
                   badge = 'success';
                   icon = 'thumbs-up';
-                } else {//TODO: add other possible values of obj.point
-                  badge = 'success';
-                  icon = 'thumbs-up';
+                  sign = '+';
+                } else {
+                  badge = 'undefined';
+                  icon = 'question-sign';
                 }
+//if(obj.point == 'mediocre') {
+//  badge = 'warning';
+//  icon = 'thumbs-down';
+//}
+//if(obj.point == 'alert') {
+//  badge = 'danger';
+//  icon = 'thumbs-up';
+//}
+//if(obj.point == 'not bad') {
+//  badge = 'neutral';
+//  icon = 'hand-right';
+//}
                 document.getElementById('point-'+dataPoint).innerHTML =
                   '<span class="badge badge-'+badge+'" title="'+obj.point+'">'
-                  +'<i class="icon-'+icon+' icon-white">+</i></span>'+obj.name+'</li>';
+                  +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               } catch(e) {
                 alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
               }
