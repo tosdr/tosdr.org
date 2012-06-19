@@ -29,27 +29,24 @@
               try {
                 obj = JSON.parse(xhr.responseText);
                 if(obj.point == 'good') {
-                  badge = 'success';
+                  badge = 'badge-success';
                   icon = 'thumbs-up';
                   sign = '+';
+                } else if(obj.point == 'mediocre') {
+                  badge = 'badge-warning';
+                  icon = 'thumbs-down';
+                } else if(obj.point == 'alert') {
+                  badge = 'badge-danger';
+                  icon = 'thumbs-up';
+                } else if(obj.point == 'not bad') {
+                  badge = 'badge-neutral';
+                  icon = 'hand-right';
                 } else {
-                  badge = 'undefined';
+                  badge = '';
                   icon = 'question-sign';
                 }
-//if(obj.point == 'mediocre') {
-//  badge = 'warning';
-//  icon = 'thumbs-down';
-//}
-//if(obj.point == 'alert') {
-//  badge = 'danger';
-//  icon = 'thumbs-up';
-//}
-//if(obj.point == 'not bad') {
-//  badge = 'neutral';
-//  icon = 'hand-right';
-//}
                 document.getElementById('point-'+dataPoint).innerHTML =
-                  '<span class="badge badge-'+badge+'" title="'+obj.point+'">'
+                  '<span class="badge '+badge+'" title="'+obj.point+'">'
                   +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               } catch(e) {
                 alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
@@ -69,8 +66,18 @@
               try {
                 obj = JSON.parse(xhr.responseText);
                 var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
-                var rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
-                  +'&nbsp; The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p></div>';
+                var rating;
+                var ratingText = {
+                  "none": "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
+                  "A": "The terms of service pay specific care towards the user and the operator of the service follows the best practices."
+                };
+                if(obj.rated) {
+                  rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
+                    +'&nbsp; '+ratingText[obj.rated]+'</p></div>';
+                } else {
+                  rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
+                    +'&nbsp; '+ratingText['none']+'</p></div>';
+                }
                 var issues = '<strong>Specific issues</strong><ul class="tosdr-points">'
                 for(var i=0; i<obj.discussion.length; i++) {
                   issues += '<li id="point-'+obj.discussion[i]+'"></li>';
@@ -91,6 +98,7 @@
       }
       function go() {
         renderDetails('ddg');
+        renderDetails('flattr');
       }
     </script>
   </head>
@@ -229,33 +237,6 @@
 					</div>
 					<div class="row-fluid">
 						<div id="flattr" class="span6 service-nutshell">
-						<!--{-->
-						<!--"id": "flattr",-->
-							<h3><a data-toggle="modal" href="#flattr-tosdr">Flattr</a> <small>www.flattr.com</small></h3>
-							<!--"service": "Flattr",-->
-							<!--"url": "https://www.flattr.com",-->
-							<div class="tosdr-rating">
-								<p><a data-toggle="modal" href="#flattr-tosdr"><span class="label">No Class Yet</span></a>&nbsp; We haven't sufficiently reviewed the terms yet. Please contribute to our group.</p>
-							</div>
-							<!--"rated": false,-->
-							<!--"tos": {-->
-								<!--"terms": "https://flattr.com/terms",-->
-								<!--"privacy": "https://flattr.com/privacy"-->
-								<!--},-->
-							<!--"related": {-->
-								<!--"paypal"-->
-								<!--},-->
-							<strong>Specific issues</strong>
-								<ul class="tosdr-points">
-										<li>
-											<span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span> Age limit of 18
-										</li>
-								</ul>
-							<!--"discussion": {-->
-								<!--"_ZNQ9J07ntI"-->
-								<!--}-->
-						<!--}-->
-							<a data-toggle="modal" href="#flattr-tosdr" class="btn">Read the ToS;DR</a>
 						</div>
 					</div>
 				</div>
