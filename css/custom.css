@@ -1,6 +1,11 @@
-body { padding-top:60px; }
 section { margin-bottom:5em; } .tosdr-infos section {margin-bottom:1.5em;}
-.hero-unit { position:relative; width:100%; padding:2em; left:-2em; }
+.hero-unit { margin-top:20px;padding-left:-2em;}
+.join-tosdr {margin: 2em 1em 2em 0;}
+
+@media (max-width: 500px) {
+.join-tosdr.pull-left {float:none;}
+.hero-unit h1 {font-size:2em;}
+}
 
 .A {background-color: #46A546;}
 .badge.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
@@ -23,7 +28,7 @@ section { margin-bottom:5em; } .tosdr-infos section {margin-bottom:1.5em;}
 .show-only-label a.inactive {color:#999; }
 .show-only-label .A > a.inactive, .show-only-label .B > a.inactive, .show-only-label .C > a.inactive, .show-only-label .D > a.inactive, .show-only-label .E > a.inactive {background-color:#CCC; }
 
-#services-list .row, #services-list .row-fluid {margin-bottom:2.5em;}
+#services-list .row .span6, #services-list .row-fluid .span6 {margin-bottom:2.5em;}
 
 #categories .badge {float:left;margin-right:.5em;}
 #categories .row { margin-bottom:1em; }
@@ -47,3 +52,8 @@ margin-left: 1em;
 font-style:italic;
 }
 .modal-backdrop {background-color: #FFF;}
+
+#bottom {
+border-top: 1px solid #CCC;
+padding-top:2em;
+}
