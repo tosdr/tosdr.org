@@ -35,15 +35,19 @@
                 } else if(obj.point == 'mediocre') {
                   badge = 'badge-warning';
                   icon = 'thumbs-down';
+                  sign = '-';
                 } else if(obj.point == 'alert') {
                   badge = 'badge-danger';
                   icon = 'thumbs-up';
+                  sign = '×';
                 } else if(obj.point == 'not bad') {
                   badge = 'badge-neutral';
                   icon = 'hand-right';
+                  sign = '→';
                 } else {
                   badge = '';
                   icon = 'question-sign';
+                  sign = '?';
                 }
                 document.getElementById('point-'+dataPoint).innerHTML =
                   '<span class="badge '+badge+'" title="'+obj.point+'">'
