@@ -111,18 +111,26 @@
       }
     </script>
   </head>
-	<body onload="go();">
+	<body onload="go();"  data-spy="scroll" >
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 					<a class="brand" href="#">ToS;DR</a>
-					<ul class="nav">
-						<li><a href="#classification">Classification</a></li>
-						<li><a href="#services">Rated Services</a></li>
-						<li><a href="#getinvolved">Get Involved</a></li>
-						<li><a href="#categories">Categories</a></li>
-					</ul>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class=""><a href="#classification">Classification</a></li>
+							<li class=""><a href="#services">Rated Services</a></li>
+							<li class=""><a href="#getinvolved">Get Involved</a></li>
+							<li class=""><a href="#categories">Categories</a></li>
+						</ul>
+					</div>
+					<div id="remotestorage-connect"></div>
 				</div>
 			</div>
 		</div>
@@ -164,7 +172,7 @@
 <!--					<div class="control-group">-->
 <!--						<div class="controls">-->
 <!--							<div class="input-append">-->
-<!--							<input type="text" size="16" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>-->
+<!--							<input type="text" size="16"  data-provide="typeahead" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>-->
 <!--							</div>-->
 <!--						</div>-->
 <!--					</div>-->
@@ -633,10 +641,12 @@
 		<script src="js/bootstrap-twipsy.js"></script>
 		<script src="bootstrap/js/bootstrap-modal.js"></script>
 		<script src="bootstrap/js/bootstrap-transition.js"></script>
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
+		<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
 		<script>
 			$(function() { $('a[title!=""]').twipsy({live:true})});
 			$(function() { $('abbr[title!=""]').twipsy({live:true})});
 		</script>
-
 	</body>
 </html>
