@@ -70,7 +70,7 @@
               var obj;
               try {
                 obj = JSON.parse(xhr.responseText);
-                var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
+                var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
                 var rating;
                 var ratingText = {
                   "none": "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -198,7 +198,7 @@
 
 				<div id="services-list">
 					<div class="row-fluid">
-						<div id="ddg" class="span6 service-nutshell"></div>
+						<div id="ddg" class="span6 service-nutshell">Loading</div>
 						<div id="delicious" class="span6 service-nutshell"></div>
 					</div>
 					<div class="row-fluid">
@@ -409,7 +409,7 @@
 			<div id="ddg-tosdr" class="modal hide tosdr-infos" role="dialog">
 				<div class="modal-header">
 					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/ddg.png" alt="logo" class="pull-left" height="36" />
+					<img src="logo/ddg.png" alt="logo" class="pull-left favlogo" height="36" />
 					<h3>DuckDuckGo <small>www.duckduckgo.com</small></h3>
 				</div>
 				<div class="modal-body">
@@ -437,7 +437,7 @@
 			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
 				<div class="modal-header">
 					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logos/facebook.png" alt="logo" class="pull-left" height="36" />
+					<img src="logos/facebook.png" alt="logo" class="pull-left favlogo" height="36" />
 					<h3>Facebook <small>www.facebook.com</small></h3>
 				</div>
 				<div class="modal-body">
@@ -535,7 +535,7 @@
 			<div id="flattr-tosdr" class="modal hide tosdr-infos" role="dialog">
 				<div class="modal-header">
 					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/flattr.png" alt="logo" class="pull-left" height="36" />
+					<img src="logo/flattr.png" alt="logo" class="pull-left favlogo" height="36" />
 					<h3>Flattr <small>www.flattr.com</small></h3>
 				</div>
 				<div class="modal-body">
@@ -586,7 +586,7 @@
 			<div id="twitter-tosdr" class="modal hide tosdr-infos" role="dialog">
 				<div class="modal-header">
 					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/twitter.png" alt="logo" class="pull-left" height="36" />
+					<img src="logo/twitter.png" alt="logo" class="pull-left favlogo" height="36" />
 					<h3>Twitter <small>www.twitter.com</small></h3>
 				</div>
 				<div class="modal-body">
