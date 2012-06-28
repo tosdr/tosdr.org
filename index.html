@@ -413,26 +413,18 @@
 			<!--here come the popups-->
 			<div id="ddg-tosdr" class="modal hide tosdr-infos" role="dialog">
 			</div>
+			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
+			</div>
 		  <script>
-        function renderPopup(name) {
-          var longName = 'DuckDuckGo', domain='www.duckduckgo.com';
+        function renderPopup(name, longName, domain, verdict, points) {
           var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
 					  +'<img src="logo/'+name+'.png" alt="logo" class="pull-left favlogo" height="36" />'
 					  +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
           var classText = {
+						0: 'We haven\'t sufficiently reviewed the terms yet. Please contribute to our group.',
             A: 'The terms of service pay specific care towards the user and the operator of the service follows the best practices.'
-          }, verdict='A', classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">Class '+verdict+'</label><p>'+classText[verdict]+'</p></div>';
-
-          var points = {
-            'g4RWiArs104': {
-              badge: 'success',
-              title: 'good',
-              icon: 'thumbs-up',
-              iconColor: 'white',
-              text: 'No tracking',
-						  longText: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
-            }
-          };
+          }, classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
+          +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+classText[verdict]+'</p></div>';
           var pointsHtml = '';
           for(var i in points) {
             pointsHtml += '<li><a href="https://groups.google.com/forum/#!topic/tosdr/'+i+'" class="source"><span class="badge badge-'+points[i].badge
@@ -444,61 +436,54 @@
           var bodyHtml = '<div class="modal-body">'+classHtml+'<section><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
           document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
         }
-        renderPopup('ddg');
+        renderPopup('ddg', 'DuckDuckGo', 'www.duckduckgo.com', 'A', {
+          'g4RWiArs104': {
+            badge: 'success',
+            title: 'good',
+            icon: 'thumbs-up',
+            iconColor: 'white',
+            text: 'No tracking',
+            longText: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
+          }
+        });
+        renderPopup('facebook', 'Facebook', 'www.facebook.com', 0, {
+				  'kizrN7qb1Ck': {
+            badge: 'warning',
+            title: 'mediocre',
+            icon: 'thumbs-down',
+            iconColor: 'white',
+            text: 'Ownership',
+            longText: 'The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.'
+          },
+          'kizrN7qb1Ck2': {
+            badge: 'warning',
+            title: 'mediocre',
+            icon: 'thumbs-down',
+            iconColor: 'white',
+            text: 'Third-Parties',
+            longText: 'The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense'
+          },
+          'VTlWfubfib4': {
+            badge: 'warning',
+            title: 'mediocre',
+            icon: 'thumbs-down',
+            iconColor: 'white',
+            text: 'Changes to the ToS',
+            longText: 'Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.'
+          }
+        });
       </script>
 			
-			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
-				<div class="modal-header">
-					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logos/facebook.png" alt="logo" class="pull-left favlogo" height="36" />
-					<h3>Facebook <small>www.facebook.com</small></h3>
-				</div>
-				<div class="modal-body">
-					<!--"service": "Facebook",-->
-					<!--"url": "https://www.facebook.com",-->
-					<div class="tosdr-rating">
-						<label class="label">No class yet</label><p>We haven't sufficiently reviewed the terms yet. Please contribute to our group.</p>
-					</div>
-					<!--"rated": false,-->
-					<section>
-						<h4>Specific issues</h4>
-						<ul class="tosdr-points">
-							<li>
-								<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck" class="source">
-								  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">+</i></span>
-								Ownership</a><!--link out icon-->
-								<p>
-									The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.
-								</p>
-							</li>
-							<li>
-								<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck" class="source">
-								  <span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span>
-								Third-Parties</a><!--link out icon-->
-								<p>
-									The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense</strong>.
-								</p>
-							</li>
-							<li>
-								<a href="https://groups.google.com/forum/?fromgroups#!topic/tosdr/VTlWfubfib4" class="source">
-								  <span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span>
-								Changes to the ToS</a>
-								<p>
-									Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.
-								</p>
-							</li>
-						</ul>
-					</section>
 					
-					<section>
-						<h4>EFF: with the government, who has your back?</h4>
-						<ul class="eff-hasyourback">
-							<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Tell users about data demands</li>
-							<li><span class="badge"><i class="icon-adjust"></i></span> Be transparent about government requests</li>
-							<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Fight for user privacy in the courts</li>
-							<li><span class="badge badge-success"><i class="icon-ok"></i></span> Fight for user privacy in US Congress</li>
-						</ul>
-					</section>
+<!--					<section>-->
+	<!--					<h4>EFF: with the government, who has your back?</h4>-->
+	<!--					<ul class="eff-hasyourback">-->
+	<!--						<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Tell users about data demands</li>-->
+	<!--						<li><span class="badge"><i class="icon-adjust"></i></span> Be transparent about government requests</li>-->
+	<!--						<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Fight for user privacy in the courts</li>-->
+	<!--						<li><span class="badge badge-success"><i class="icon-ok"></i></span> Fight for user privacy in US Congress</li>-->
+	<!--					</ul>-->
+	<!--				</section>-->
 					
 <!--					<section>-->
 <!--						<h4>Terms of Service</h4>-->
