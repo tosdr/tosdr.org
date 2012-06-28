@@ -16,7 +16,7 @@ section { margin-bottom:5em; } .tosdr-infos section {margin-bottom:1.5em;}
 .D, .badge-warning, .badge-mediocre {background-color: #D66F2C;}
 .badge.D {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
 .E, .badge-alert {background-color: #C43C35;}
-.badge.E {-webkit-border-radius:0em; -moz-border-radius:0em; border-radius:0em; }
+.badge.E, .badge-important {-webkit-border-radius:0em; -moz-border-radius:0em; border-radius:0em; }
 
 .tosdr-rating label {float:left; width:25%;margin-right: 1.5em;padding:.5em 1em;text-align:right;text-transform: uppercase;}
 
@@ -44,9 +44,19 @@ list-style-type:none;
 margin-left:0;
 margin-bottom:1.5em;
 }
+
+@media (max-width: 600px) {.tosdr-infos {top:0;left:0;margin:0 auto;} }
+@media (max-height: 500px) {.tosdr-infos {top:0;margin-top:0;width:600px;} }
+
+.tosdr-infos { 
+max-width:100%;
+max-height:100%;
+}
+button.close {padding:2px 6px 6px;}
+
 .tosdr-infos ul.eff-hasyourback li {min-height:1.5em;}
 
-.tosdr-infos .specificissues {clear:both;}
+
 
 .tosdr-points a:hover {text-decoration: none;}
 .tosdr-points a:hover.source:after {
@@ -55,6 +65,8 @@ color: #666;
 margin-left: 1em;
 font-style:italic;
 }
+
+
 .modal-backdrop {background-color: #FFF;}
 
 #bottom {
