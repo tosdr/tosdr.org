@@ -29,77 +29,109 @@
               var obj, badge, icon,sign;
               try {
                 obj = JSON.parse(xhr.responseText);
-                if(obj.point == 'good') {
-                  badge = 'badge-success';
-                  icon = 'thumbs-up';
-                  sign = '+';
-                } else if(obj.point == 'mediocre') {
-                  badge = 'badge-warning';
-                  icon = 'thumbs-down';
-                  sign = '-';
-                } else if(obj.point == 'alert') {
-                  badge = 'badge-important';
-                  icon = 'minus-sign';
-                  sign = '×';
-                } else if(obj.point == 'not bad') {
-                  badge = 'badge-neutral';
-                  icon = 'hand-right';
-                  sign = '→';
-                } else {
-                  badge = '';
-                  icon = 'question-sign';
-                  sign = '?';
-                }
-                document.getElementById('point-'+dataPoint).innerHTML =
-                  '<span class="badge '+badge+'" title="'+obj.point+'">'
-                  +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               } catch(e) {
                 alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
+                return;
               }
+              if(obj.point == 'good') {
+                badge = 'badge-success';
+                icon = 'thumbs-up';
+                sign = '+';
+              } else if(obj.point == 'mediocre') {
+                badge = 'badge-warning';
+                icon = 'thumbs-down';
+                sign = '-';
+              } else if(obj.point == 'alert') {
+                badge = 'badge-important';
+                icon = 'minus-sign';
+                sign = '×';
+              } else if(obj.point == 'not bad') {
+                badge = 'badge-neutral';
+                icon = 'hand-right';
+                sign = '→';
+              } else {
+                badge = '';
+                icon = 'question-sign';
+                sign = '?';
+              }
+              document.getElementById('point-'+dataPoint).innerHTML =
+                '<span class="badge '+badge+'" title="'+obj.point+'">'
+                +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
+              document.getElementById('popup-point-'+dataPoint).innerHTML =
+                '<a href="'+obj.discussion+'" class="source"><span class="badge badge-'+badge
+                +'" title="'+obj.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+'</a><p>'
+                +obj.tldr+'</p></li>';
             }
           }
         };
         xhr.send();
       }
-      function renderDetails(name) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'services/'+name+'.json', true);
-        xhr.onreadystatechange = function() {
-          if(xhr.readyState == 4) {
-            if(xhr.status == 200) {
-              var obj;
-              try {
-                obj = JSON.parse(xhr.responseText);
-                var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
-                var rating;
-                var ratingText = {
-                  "none": "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
-                  "A": "The terms of service pay specific care towards the user and the operator of the service follows the best practices."
-                };
-                if(obj.rated) {
-                  rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
-                    +'&nbsp; '+ratingText[obj.rated]+'</p></div>';
-                } else {
-                  rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
-                    +'&nbsp; '+ratingText['none']+'</p></div>';
+      var serviceObjects = {};
+      function getServiceObject(name, cb) {
+        if(serviceObjects[name]) {
+          cb(serviceObjects[name]);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'services/'+name+'.json', true);
+          xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+              if(xhr.status == 200) {
+                try {
+                  var obj = JSON.parse(xhr.responseText);
+                  serviceObjects[name]=obj;
+                  cb(obj);
+                } catch(e) {
+                  alert('Could not load data for '+name+', sorry! Refreshing the page might sometimes help.');
                 }
-                var issues = '<strong>Specific issues</strong><ul class="tosdr-points">'
-                for(var i=0; i<obj.discussion.length; i++) {
-                  issues += '<li id="point-'+obj.discussion[i]+'"></li>';
-                }
-                issues += '</ul>';
-                document.getElementById(name).innerHTML=header+rating+issues+
-                  '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn">Read the ToS;DR</a>';
-                for(var i=0; i<obj.discussion.length; i++) {
-                  renderDataPoint(obj.discussion[i]);
-                }
-              } catch(e) {
-                alert('Could not load data for '+name+', sorry! Refreshing the page might sometimes help.');
               }
             }
+          };
+          xhr.send();
+        }
+      }
+      function renderDetails(name) {
+        getServiceObject(name, function(obj) {
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
+          var rating;
+          var ratingText = {
+            0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
+            "none": "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
+            "A": "The terms of service pay specific care towards the user and the operator of the service follows the best practices."
+          };
+          if(obj.rated) {
+            rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
+              +'&nbsp; '+ratingText[obj.rated]+'</p></div>';
+          } else {
+            rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
+              +'&nbsp; '+ratingText['none']+'</p></div>';
           }
-        };
-        xhr.send();
+          var issues = '<strong>Specific issues</strong><ul class="tosdr-points">'
+          for(var i=0; i<obj.discussion.length; i++) {
+            issues += '<li id="point-'+obj.discussion[i]+'"></li>';
+          }
+          issues += '</ul>';
+          document.getElementById(name).innerHTML=header+rating+issues+
+            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn">Read the ToS;DR</a>';
+          renderPopup(name, obj.service, obj.url, obj.rated, ratingText[obj.rated], obj.discussion);
+          for(var i=0; i<obj.discussion.length; i++) {
+            renderDataPoint(obj.discussion[i]);
+          }
+        });
+      }
+      function renderPopup(name, longName, domain, verdict, ratingText, points){
+        var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
+          +'<img src="logo/'+name+'.png" alt="logo" class="pull-left favlogo" height="36" />'
+          +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
+        var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
+        +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
+        var pointsHtml = '';
+        for(var i=0; i<points.length; i++) {
+          pointsHtml += '<li id="popup-point-'+points[i]+'"></li>';
+        }
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>'
+          +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
+        var bodyHtml = '<div class="modal-body">'+classHtml+'<section><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
+        document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
       function go() {
         renderDetails('ddg');
@@ -415,225 +447,9 @@
 			</div>
 			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
 			</div>
-		  <script>
-        function renderPopup(name, longName, domain, verdict, points) {
-          var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
-					  +'<img src="logo/'+name+'.png" alt="logo" class="pull-left favlogo" height="36" />'
-					  +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
-          var classText = {
-						0: 'We haven\'t sufficiently reviewed the terms yet. Please contribute to our group.',
-            A: 'The terms of service pay specific care towards the user and the operator of the service follows the best practices.'
-          }, classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
-          +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+classText[verdict]+'</p></div>';
-          var pointsHtml = '';
-          for(var i=0; i<points.length; i++) {
-            pointsHtml += '<li><a href="'+points[i].discussion+'" class="source"><span class="badge badge-'+points[i].badge
-              +'" title="'+points[i].point+'"><i class="icon-'+points[i].icon+' icon-'+points[i].iconColor+'">+</i></span> '+points[i].name+'</a><p>'
-							+points[i].tldr+'</p></li>';
-          }
-          var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>'
-            +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
-          var bodyHtml = '<div class="modal-body">'+classHtml+'<section><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
-          document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
-        }
-        renderPopup('ddg', 'DuckDuckGo', 'www.duckduckgo.com', 'A', [
-          { id: 'g4RWiArs104',
-            discussion: 'https://groups.google.com/forum/#!topic/tosdr/g4RWiArs104',
-            badge: 'success',
-            point: 'good',
-            icon: 'thumbs-up',
-            iconColor: 'white',
-            name: 'No tracking',
-            tldr: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
-          }
-        ]);
-        renderPopup('facebook', 'Facebook', 'www.facebook.com', 0, [
-				  { id: 'kizrN7qb1Ck',
-            discussion: 'https://groups.google.com/forum/#!topic/tosdr/kizrN7qb1Ck',
-            badge: 'warning',
-            point: 'mediocre',
-            icon: 'thumbs-down',
-            iconColor: 'white',
-            name: 'Ownership',
-            tldr: 'The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.'
-          },
-          { id: 'kizrN7qb1Ck2',
-            discussion: 'https://groups.google.com/forum/#!topic/tosdr/kizrN7qb1Ck',
-            badge: 'warning',
-            point: 'mediocre',
-            icon: 'thumbs-down',
-            iconColor: 'white',
-            name: 'Third-Parties',
-            tldr: 'The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense'
-          },
-          { id: 'VTlWfubfib4',
-            discussion: 'https://groups.google.com/forum/#!topic/tosdr/VTlWfubfib4',
-            badge: 'warning',
-            point: 'mediocre',
-            icon: 'thumbs-down',
-            iconColor: 'white',
-            name: 'Changes to the ToS',
-            tldr: 'Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.'
-          }
-        ]);
-      </script>
-			
-					
-<!--					<section>-->
-	<!--					<h4>EFF: with the government, who has your back?</h4>-->
-	<!--					<ul class="eff-hasyourback">-->
-	<!--						<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Tell users about data demands</li>-->
-	<!--						<li><span class="badge"><i class="icon-adjust"></i></span> Be transparent about government requests</li>-->
-	<!--						<li><span class="badge badge-warning"><i class="icon-remove"></i></span> Fight for user privacy in the courts</li>-->
-	<!--						<li><span class="badge badge-success"><i class="icon-ok"></i></span> Fight for user privacy in US Congress</li>-->
-	<!--					</ul>-->
-	<!--				</section>-->
-					
-<!--					<section>-->
-<!--						<h4>Terms of Service</h4>-->
-<!--						<p>-->
-<!--							Thanks to ToSBACK we can provide you the archives and emphasize-->
-<!--							the evolution of the different Terms over time.-->
-<!--						</p>-->
-<!--						<ul>-->
-<!--							<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>-->
-
-<!--						<!--"tos": {-->
-<!--							<!--"terms": "http://www.facebook.com/legal/terms",-->
-<!--							<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>-->
-<!--							<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>-->
-<!--							<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>-->
-<!--							<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>-->
-<!--							<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>-->
-<!--							<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>-->
-<!--							<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>-->
-<!--							<!--},-->
-<!--						</ul>-->
-<!--					</section>-->
-					
-<!--					<section>-->
-<!--						<h4>Related</h4>-->
-<!--						<ul>-->
-<!--							<li>Diaspora* Pods<ul>-->
-<!--								<li>-->
-<!--								  <img src="https://d3mbmfe8268ud7.cloudfront.net/assets/apple-touch-icon-bee3df649a606688ad4873df1702faad.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />-->
-<!--								  <a href="">Diaspora*</a>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--								  <img src="https://c790230.ssl.cf2.rackcdn.com/apple-touch-icon.png" alt="logo" height="24" style="box-shadow: 0 0 .2em rgba(0,0,0,0.3);background:rgba(0,0,0,0.2);" />-->
-<!--								  <a href="#">Diasporg</a>-->
-<!--								</li>-->
-<!--							</ul>-->
-<!--						</ul>-->
-<!--						</section>-->
-				<!--}--></div>
-				<div class="modal-footer">
-					<a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>
-					<a data-dismiss="modal" class="btn" href="#">Close</a>
-				</div>
-			</div>
-			
-			
 			<div id="flattr-tosdr" class="modal hide tosdr-infos" role="dialog">
-				<div class="modal-header">
-					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/flattr.png" alt="logo" class="pull-left favlogo" height="36" />
-					<h3>Flattr <small>www.flattr.com</small></h3>
-				</div>
-				<div class="modal-body">
-					<div class="tosdr-rating">
-						<label class="label">No class yet</label><p>We haven't sufficiently reviewed the terms yet. Please contribute to our group.</p>
-					</div>
-					<section>
-						<h4>Specific issues</h4>
-						<ul class="tosdr-points">
-							<li>
-								<a href="https://groups.google.com/d/msg/tosdr/_ZNQ9J07ntI/aPGR2C_AkskJ" class="source"><span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span> Age limit of 18</a>
-								<p>
-									Flattr is available only to individuals who are at least 18 years old.
-								</p>
-							</li>
-						</ul>
-					</section>
-					
-					
-<!--					<section>-->
-<!--						<h4>Terms of Service</h4>-->
-<!--						<p>-->
-<!--							Thanks to ToSBACK we can provide you the archives and emphasize-->
-<!--							the evolution of the different Terms over time.-->
-<!--						</p>-->
-<!--						<ul>-->
-<!--							<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>-->
-
-<!--						<!--"tos": {-->
-<!--							<!--"terms": "http://www.facebook.com/legal/terms",-->
-<!--							<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>-->
-<!--							<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>-->
-<!--							<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>-->
-<!--							<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>-->
-<!--							<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>-->
-<!--							<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>-->
-<!--							<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>-->
-<!--							<!--},-->
-<!--						</ul>-->
-<!--					</section>-->
-				<!--}--></div>
-				<div class="modal-footer">
-					<a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>
-					<a data-dismiss="modal" class="btn" href="#">Close</a>
-				</div>
 			</div>
-			
 			<div id="twitter-tosdr" class="modal hide tosdr-infos" role="dialog">
-				<div class="modal-header">
-					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/twitter.png" alt="logo" class="pull-left favlogo" height="36" />
-					<h3>Twitter <small>www.twitter.com</small></h3>
-				</div>
-				<div class="modal-body">
-					<div class="tosdr-rating">
-						<label class="label">No class yet</label><p>We haven't sufficiently reviewed the terms yet. Please contribute to our group.</p>
-					</div>
-					<section>
-						<h4>Specific issues</h4>
-						<ul class="tosdr-points">
-							<li>
-								<a href="https://groups.google.com/d/msg/tosdr/_ZNQ9J07ntI/aPGR2C_AkskJ" class="source"><span class="badge" title="not bad"><i class="icon-hand-right icon-white">→</i></span> Age limit of 18</a>
-								<p>
-									Flattr is available only to individuals who are at least 18 years old.
-								</p>
-							</li>
-						</ul>
-					</section>
-					
-					
-<!--					<section>-->
-<!--						<h4>Terms of Service</h4>-->
-<!--						<p>-->
-<!--							Thanks to ToSBACK we can provide you the archives and emphasize-->
-<!--							the evolution of the different Terms over time.-->
-<!--						</p>-->
-<!--						<ul>-->
-<!--							<li>terms: <a href="#">http://www.facebook.com/legal/terms</a></li>-->
-
-<!--						<!--"tos": {-->
-<!--							<!--"terms": "http://www.facebook.com/legal/terms",-->
-<!--							<li>privacy: <a href="#">http://www.facebook.com/about/privacy/</a></li>-->
-<!--							<li>your-info: <a href="#">http://www.facebook.com/about/privacy/your-info</a></li>-->
-<!--							<li>share: <a href="#">http://www.facebook.com/about/privacy/your-info-on-fb</a></li>-->
-<!--							<li>other: <a href="#">http://www.facebook.com/about/privacy/your-info-on-other</a></li>-->
-<!--							<li>advertising: <a href="#">http://www.facebook.com/about/privacy/advertising</a></li>-->
-<!--							<li>minors: <a href="#">http://www.facebook.com/about/privacy/minors</a></li>-->
-<!--							<li>misc: <a href="#">http://www.facebook.com/about/privacy/other</a></li>-->
-<!--							<!--},-->
-<!--						</ul>-->
-<!--					</section>-->
-				<!--}--></div>
-				<div class="modal-footer">
-					<a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>
-					<a data-dismiss="modal" class="btn" href="#">Close</a>
-				</div>
 			</div>
 			
 			
