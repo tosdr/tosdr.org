@@ -411,34 +411,41 @@
 			
 			
 			<!--here come the popups-->
-			
 			<div id="ddg-tosdr" class="modal hide tosdr-infos" role="dialog">
-				<div class="modal-header">
-					<button data-dismiss="modal" class="close" type="button">×</button>
-					<img src="logo/ddg.png" alt="logo" class="pull-left favlogo" height="36" />
-					<h3>DuckDuckGo <small>www.duckduckgo.com</small></h3>
-				</div>
-				<div class="modal-body">
-					<div class="tosdr-rating">
-						<label class="label A">Class A</label><p>The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p>
-					</div>
-					<section>
-						<h4>Specific issues</h4>
-						<ul class="tosdr-points">
-							<li>
-								<a href="https://groups.google.com/forum/#!topic/tosdr/g4RWiArs104" class="source"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span> No tracking</a>
-								<p>
-									DuckDuckGo doesn't save your searches and doesn't send your searches to other sites. No personal information is saved either.
-								</p>
-							</li>
-						</ul>
-					</section>
-				<!--}--></div>
-				<div class="modal-footer">
-					<a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>
-					<a data-dismiss="modal" class="btn" href="#">Close</a>
-				</div>
 			</div>
+		  <script>
+        function renderPopup(name) {
+          var longName = 'DuckDuckGo', domain='www.duckduckgo.com';
+          var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
+					  +'<img src="logo/'+name+'.png" alt="logo" class="pull-left favlogo" height="36" />'
+					  +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
+          var classText = {
+            A: 'The terms of service pay specific care towards the user and the operator of the service follows the best practices.'
+          }, verdict='A', classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">Class '+verdict+'</label><p>'+classText[verdict]+'</p></div>';
+
+          var points = {
+            'g4RWiArs104': {
+              badge: 'success',
+              title: 'good',
+              icon: 'thumbs-up',
+              iconColor: 'white',
+              text: 'No tracking',
+						  longText: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
+            }
+          };
+          var pointsHtml = '';
+          for(var i in points) {
+            pointsHtml += '<li><a href="https://groups.google.com/forum/#!topic/tosdr/'+i+'" class="source"><span class="badge badge-'+points[i].badge
+              +'" title="'+points[i].title+'"><i class="icon-'+points[i].icon+' icon-'+points[i].iconColor+'">+</i></span> '+points[i].text+'</a><p>'
+							+points[i].longText+'</p></li>';
+          }
+          var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>'
+            +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
+          var bodyHtml = '<div class="modal-body">'+classHtml+'<section><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
+          document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
+        }
+        renderPopup('ddg');
+      </script>
 			
 			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
 				<div class="modal-header">
