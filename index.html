@@ -426,52 +426,56 @@
           }, classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
           +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+classText[verdict]+'</p></div>';
           var pointsHtml = '';
-          for(var i in points) {
-            pointsHtml += '<li><a href="https://groups.google.com/forum/#!topic/tosdr/'+i+'" class="source"><span class="badge badge-'+points[i].badge
-              +'" title="'+points[i].title+'"><i class="icon-'+points[i].icon+' icon-'+points[i].iconColor+'">+</i></span> '+points[i].text+'</a><p>'
-							+points[i].longText+'</p></li>';
+          for(var i=0; i<points.length; i++) {
+            pointsHtml += '<li><a href="'+points[i].discussion+'" class="source"><span class="badge badge-'+points[i].badge
+              +'" title="'+points[i].point+'"><i class="icon-'+points[i].icon+' icon-'+points[i].iconColor+'">+</i></span> '+points[i].name+'</a><p>'
+							+points[i].tldr+'</p></li>';
           }
           var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>'
             +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
           var bodyHtml = '<div class="modal-body">'+classHtml+'<section><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
           document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
         }
-        renderPopup('ddg', 'DuckDuckGo', 'www.duckduckgo.com', 'A', {
-          'g4RWiArs104': {
+        renderPopup('ddg', 'DuckDuckGo', 'www.duckduckgo.com', 'A', [
+          { id: 'g4RWiArs104',
+            discussion: 'https://groups.google.com/forum/#!topic/tosdr/g4RWiArs104',
             badge: 'success',
-            title: 'good',
+            point: 'good',
             icon: 'thumbs-up',
             iconColor: 'white',
-            text: 'No tracking',
-            longText: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
+            name: 'No tracking',
+            tldr: 'DuckDuckGo doesn\'t save your searches and doesn\'t send your searches to other sites. No personal information is saved either.'
           }
-        });
-        renderPopup('facebook', 'Facebook', 'www.facebook.com', 0, {
-				  'kizrN7qb1Ck': {
+        ]);
+        renderPopup('facebook', 'Facebook', 'www.facebook.com', 0, [
+				  { id: 'kizrN7qb1Ck',
+            discussion: 'https://groups.google.com/forum/#!topic/tosdr/kizrN7qb1Ck',
             badge: 'warning',
-            title: 'mediocre',
+            point: 'mediocre',
             icon: 'thumbs-down',
             iconColor: 'white',
-            text: 'Ownership',
-            longText: 'The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.'
+            name: 'Ownership',
+            tldr: 'The copyright license that you grant to Facebok goes <strong>beyond the requirements</strong> for operating the service. Also, the copyright license <strong>does not end when you stop using the service</strong> unless your content has been deleted by everyone else.'
           },
-          'kizrN7qb1Ck2': {
+          { id: 'kizrN7qb1Ck2',
+            discussion: 'https://groups.google.com/forum/#!topic/tosdr/kizrN7qb1Ck',
             badge: 'warning',
-            title: 'mediocre',
+            point: 'mediocre',
             icon: 'thumbs-down',
             iconColor: 'white',
-            text: 'Third-Parties',
-            longText: 'The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense'
+            name: 'Third-Parties',
+            tldr: 'The scope of the copyright license granted to Facebook includes the rights to <strong>transfer and sublicense'
           },
-          'VTlWfubfib4': {
+          { id: 'VTlWfubfib4',
+            discussion: 'https://groups.google.com/forum/#!topic/tosdr/VTlWfubfib4',
             badge: 'warning',
-            title: 'mediocre',
+            point: 'mediocre',
             icon: 'thumbs-down',
             iconColor: 'white',
-            text: 'Changes to the ToS',
-            longText: 'Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.'
+            name: 'Changes to the ToS',
+            tldr: 'Facebook has a recent practice to sollicit your feedback before making changes to their terms. However, the results are <strong>not binding</strong> unless 30% of the active users voted.'
           }
-        });
+        ]);
       </script>
 			
 					
