@@ -103,19 +103,19 @@
             "E": "We strongly discourage you from signing up to this service. The terms of service raise serious concerns."
           };
           if(obj.rated) {
-            rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
+            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
               +'&nbsp; '+ratingText[obj.rated]+'</p></div>';
           } else {
-            rating = '<div class="'+name+'-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
+            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
               +'&nbsp; '+ratingText['false']+'</p></div>';
           }
-          var issues = '<strong>Specific issues</strong><ul class="tosdr-points">'
+          var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
           for(var i=0; i<obj.discussion.length; i++) {
             issues += '<li id="point-'+obj.discussion[i]+'"></li>';
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
-            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a>';
+            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
           renderPopup(name, obj.service, obj.url, obj.rated, ratingText[obj.rated], obj.discussion);
           for(var i=0; i<obj.discussion.length; i++) {
             renderDataPoint(obj.discussion[i]);
