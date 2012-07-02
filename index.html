@@ -163,9 +163,9 @@
 					<a class="brand" href="#">ToS;DR</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class=""><a href="#classification">Classification</a></li>
 							<li class=""><a href="#services">Rated Services</a></li>
 							<li class=""><a href="#getinvolved">Get Involved</a></li>
+							<li class=""><a href="#classification">Classification</a></li>
 							<li class=""><a href="#categories">Categories</a></li>
 						</ul>
 					</div>
@@ -175,38 +175,25 @@
 		</div>
 
 		<div class="container" id="tosdr-content" role="main">
-
-			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
-				<h1>Terms of Service; Didn&apos;t Read</h1>
-				<p class="pull-left join-tosdr">
-					<!--<a href="#ratings" class="btn btn-primary btn-large">See the ratings</a>-->
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn btn-large"><img src="img/googlegroups.png" /> Join the group</a>
-					<br />
-					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
-				</p>
-				<p>
-					Nobody wants to read the long Terms of Service many websites have. But it is important to understand what they say &ndash; these labels make it easier.<br />
-					We're currently gathering knowledge and discussing how to rate terms of services. Contact us if you have information or comment about a service's terms of use: <a href="mailto:tosdr@googlegroups.com?subject=[new issue]">tosdr@googlegroups.com</a>
-				</p>
-			</div>
+				<section>
+					<div class="page-header"><h1>Terms of Service; Didn&apos;t Read</div>
+					
+					<p>
+						Nobody wants to read the long Terms of Service many websites have. But it is important to understand what they say. We analyse and compare them to create labels.</p>
+				</section>
 
-			<section id="classification">
-				<div class="page-header"><h2>Classification <small>how services are rated</small></h2></div>
-				<p>
-					Each service is rated according to <a href="#categories">categories</a> and gets points: <span class="badge badge-success"><i class="icon-thumbs-up icon-white">+</i></span>, <span class="badge badge-warning"><i class="icon-thumbs-down icon-white">-</i></span>, <span class="badge badge-important"><i class="icon-remove icon-white">×</i></span>, <span class="badge"><i class="icon-hand-right icon-white">→</i></span> depending on the quality of their terms for the user. These individual ratings are then added up to judge the service as a whole:
-				</p>
-				<p><span class="label A">Class A</span>&nbsp; The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p>
-				<p><span class="label B">Class B</span>&nbsp; The terms of services are fair towards the user but they  could be improved.</p>
-				<p><span class="label C">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
-				<p><span class="label D">Class D</span>&nbsp; The terms of service are very uneven or there are some important issues that need your attention.</p>
-				<p><span class="label E">Class E</span>&nbsp; We strongly discourage you from signing up to this service. The terms of service raise serious concerns.</p>
-
-			</section>
+				<section id="rating-points">
+					<h2>making the fine prints easy to understand</h2>
+					<p>
+						Each clause is rated according to <a href="#categories">categories</a> and gets a score: <span class="badge badge-success"><i class="icon-thumbs-up icon-white">+</i> Good</span>, <span class="badge badge-warning"><i class="icon-thumbs-down icon-white">-</i> Mediocre</span>, <span class="badge badge-important"><i class="icon-remove icon-white">×</i> Alert</span>, <span class="badge"><i class="icon-hand-right icon-white">→</i> Informative</span>; depending on their quality compared to other services. Then, each point adds up to assign <a href="#classification">a classification</a> for the each service. <span class="label A">Class A</span> are the best services: they treat users fairly and respect your rights.
+					</p>
+				</section>
+			</div><!--hero-unit-->
 
 
 			<section id="services">
-				<div class="page-header"><h2>What's in the `Terms of Service' <small>We have rated and compared the terms of these services</small></h2></div>
+				<div class="page-header"><h2>What do you agree to? <small>Search and compare Terms of Service and Privacy Policies</small></h2></div>
 				<form class="well form-search" id="filter-services">
 					<div class="control-group">
 						<div class="controls">
@@ -265,7 +252,7 @@
 			<section id="getinvolved">
 				<div class="page-header"><h2>Get involved <small>Analysis for terms, APIs, discussions</small></h2></div>
 				<p>
-					We are currently in the analysis phase. If you are interested in this project and have some information related to specific terms of services that you want to share with us; please get in touch: <a href="mailto:tosdr@googlegroups.com?subject=[new issue]">tosdr@googlegroups.com</a>.
+					We are currently gathering knowledge and discussing how to rate terms of services. Contact us if you have information to share related to specific terms or if you have a comment: <a href="mailto:tosdr@googlegroups.com?subject=[new issue]">tosdr@googlegroups.com</a>.
 				</p>
 				<p class="pull-left">
 					<a href="https://groups.google.com/d/forum/tosdr" class="btn btn-large"><img src="img/googlegroups.png" /> Join the group</a>
@@ -276,19 +263,25 @@
 					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn btn-large"><img src="img/irccloud.png" /> Discussion</a>
 					<a href="http://github.com/unhosted/ToS-DR" class="btn btn-large"><img src="img/github.png" /> Code</a>
 				</p>
-<!--				<iframe id="forum_embed"-->
-<!--					src="javascript:void(0)"-->
-<!--					scrolling="no"-->
-<!--					frameborder="0"-->
-<!--					style="width:100%;"-->
-<!--					height="300">-->
-<!--				</iframe>-->
-<!--				<script type="text/javascript">-->
-<!--					document.getElementById('forum_embed').src =-->
-<!--					'https://groups.google.com/forum/embed/?place=forum/tosdr'-->
-<!--					+ '&showsearch=true&showpopout=true&showtabs=false'-->
-<!--					+ '&parenturl=' + encodeURIComponent(window.location.href);-->
-<!--				</script> -->
+				
+				
+				<h3 style="clear:left">Roadmap</h3>
+				<ul>
+					<li>Mid-July: Finishing analysis of major terms: social networks, search engines, photo sharing, blogs.</li>
+					<li>End-July: Implementation of comparisons by category or specific topic; Improvement of score and rating systems.</li>
+					<li>Mid-August: API, crowd-sourcing and integration with Tosback2, add ability to subscribe.</li>
+					<li>End-August: Presentation of ToS;DR at Campus Party, Berlin</li> 
+					<li>September: Discussing the future of the project.</li>
+				</ul>
+			</section>
+			
+			<section id="classification">
+				<div class="page-header"><h2>Classification <small>how services are rated</small></h2></div>
+				<p><span class="label A">Class A</span>&nbsp; The terms of service pay specific care towards the user and the operator of the service follows the best practices.</p>
+				<p><span class="label B">Class B</span>&nbsp; The terms of services are fair towards the user but they  could be improved.</p>
+				<p><span class="label C">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
+				<p><span class="label D">Class D</span>&nbsp; The terms of service are very uneven or there are some important issues that need your attention.</p>
+				<p><span class="label E">Class E</span>&nbsp; We strongly discourage you from signing up to this service. The terms of service raise serious concerns.</p>
 			</section>
 
 			<section id="categories">
@@ -371,74 +364,6 @@
 
 			</section>
 
-			<!--section id="ratings"--><!-- TODO: merge viz.html in here -->
-				<!--div class="page-header"><h2>Ratings (example values!) <small>seriously, this part is only an example!</small></h2></div-->
-				<!--<table><thead>
-					<tr>
-						<th>Site</th>
-						<th>Rating</th>
-						<th><abbr title="Attribution">Attr.</abbr></th>
-						<th><abbr title="Privacy">Priv.</a></th>
-						<th><abbr title="You end the service">You&nbsp;end</abbr></th>
-						<th><abbr title="They end the service">They&nbsp;end</abbr></th>
-						<th><abbr title="Third parties">3rd&nbsp;P.</abbr></th>
-						<th><abbr title="Law enforcement">Law</abbr></th>
-						<th><abbr title="Censorship">Cens.</abbr></th>
-						<th><abbr title="Location of court of law">Loc.</abbr></th>
-						<th><abbr title="Equality">Eq.</abbr></th>
-						<th><abbr title="Anonymity">Anon.</abbr></th>
-						<th><abbr title="Data liberation">Data</abbr></th>
-						<th><abbr title="Distribution">Dist.</abbr></th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td><img src="http://static.ak.fbcdn.net/rsrc.php/yi/r/q9U99v3_saj.ico" /> facebook.com</td>
-						<td id="rating_facebook.com"><span id="points_facebook.com" class="label important" title="alert">36%</span></td>
-						<td id="cell_facebook.com_BY" onclick="getQuotes('facebook.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_facebook.com_DEL" onclick="getQuotes('facebook.com', 'DEL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_facebook.com_END" onclick="getQuotes('facebook.com', 'END');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_facebook.com_OPP" onclick="getQuotes('facebook.com', 'OPP');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_facebook.com_GOV" onclick="getQuotes('facebook.com', 'GOV');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_facebook.com_LOC" onclick="getQuotes('facebook.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
-						<td id="cell_facebook.com_EQ" onclick="getQuotes('facebook.com', 'EQ');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_facebook.com_ANON" onclick="getQuotes('facebook.com', 'ANON');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_facebook.com_DL" onclick="getQuotes('facebook.com', 'DL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_facebook.com_DIST" onclick="getQuotes('facebook.com', 'DIST');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-					</tr>
-
-					<tr>
-						<td><img src="http://dropbox.com/static/images/favicon.ico" /> dropbox.com</td>
-						<td id="rating_dropbox.com"><span id="points_dropbox.com" class="label warning" title="mediocre">64%</span></td>
-						<td id="cell_dropbox.com_BY" onclick="getQuotes('dropbox.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_dropbox.com_DEL" onclick="getQuotes('dropbox.com', 'DEL');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_dropbox.com_END" onclick="getQuotes('dropbox.com', 'END');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_dropbox.com_OPP" onclick="getQuotes('dropbox.com', 'OPP');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_dropbox.com_GOV" onclick="getQuotes('dropbox.com', 'GOV');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_dropbox.com_LOC" onclick="getQuotes('dropbox.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
-						<td id="cell_dropbox.com_EQ" onclick="getQuotes('dropbox.com', 'EQ');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						<td id="cell_dropbox.com_ANON" onclick="getQuotes('dropbox.com', 'ANON');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_dropbox.com_DL" onclick="getQuotes('dropbox.com', 'DL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_dropbox.com_DIST" onclick="getQuotes('dropbox.com', 'DIST');"><span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span></td>
-						</tr>
-
-					<tr>
-						<td><img src="http://joindiaspora.com/favicon.png" /> joindiaspora.com</td>
-						<td id="rating_joindiaspora.com"><span id="points_joindiaspora.com" class="label success" title="good">95%</span></td>
-						<td id="cell_joindiaspora.com_BY" onclick="getQuotes('joindiaspora.com', 'BY');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_DEL" onclick="getQuotes('joindiaspora.com', 'DEL');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_END" onclick="getQuotes('joindiaspora.com', 'END');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_OPP" onclick="getQuotes('joindiaspora.com', 'OPP');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_GOV" onclick="getQuotes('joindiaspora.com', 'GOV');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_LOC" onclick="getQuotes('joindiaspora.com', 'LOC');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
-						<td id="cell_joindiaspora.com_EQ" onclick="getQuotes('joindiaspora.com', 'EQ');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_ANON" onclick="getQuotes('joindiaspora.com', 'ANON');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						<td id="cell_joindiaspora.com_DL" onclick="getQuotes('joindiaspora.com', 'DL');"><span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span></td>
-						<td id="cell_joindiaspora.com_DIST" onclick="getQuotes('joindiaspora.com', 'DIST');"><span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span></td>
-						</tr>
-					</tbody></table>-->
-			<!--/section-->
-
 
 			<footer id="bottom">
 				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
@@ -477,9 +402,10 @@
 		</div> <!-- /container -->
 
 		<script src="js/bootstrap-twipsy.js"></script>
+		<script src="bootstrap/js/bootstrap-carousel.js"></script>
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bootstrap/js/bootstrap-modal.js"></script>
 		<script src="bootstrap/js/bootstrap-transition.js"></script>
-		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
 		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
 		<script>
