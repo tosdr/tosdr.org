@@ -110,15 +110,15 @@
               +'&nbsp; '+ratingText['false']+'</p></div>';
           }
           var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
-          for(var i=0; i<obj.discussion.length; i++) {
-            issues += '<li id="point-'+obj.discussion[i]+'"></li>';
+          for(var i=0; i<obj.clause.length; i++) {
+            issues += '<li id="point-'+obj.clause[i]+'"></li>';
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
             '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
-          renderPopup(name, obj.service, obj.url, obj.rated, ratingText[obj.rated], obj.discussion);
-          for(var i=0; i<obj.discussion.length; i++) {
-            renderDataPoint(obj.discussion[i]);
+          renderPopup(name, obj.service, obj.url, obj.rated, ratingText[obj.rated], obj.clause);
+          for(var i=0; i<obj.clause.length; i++) {
+            renderDataPoint(obj.clause[i]);
           }
         });
       }
@@ -149,7 +149,7 @@
         renderDetails('twitter');
       }
     </script>
-  </head>
+	</head>
 	<body onload="go();"  data-spy="scroll" id="index-html">
 
 		<div class="navbar navbar-fixed-top">
