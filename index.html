@@ -58,9 +58,9 @@
                 '<span class="badge '+badge+'" title="'+obj.point+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               document.getElementById('popup-point-'+dataPoint).innerHTML =
-                '<a href="'+obj.discussion+'" class="source"><span class="badge '+badge
+                '<div class="'+obj.point+'"><a href="'+obj.discussion+'" class="source"><span class="badge '+badge
                 +'" title="'+obj.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+'</a><p>'
-                +obj.tldr+'</p></li>';
+                +obj.tldr+'</p></div></li>';
             }
           }
         };
@@ -130,7 +130,7 @@
         +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
         var pointsHtml = '';
         for(var i=0; i<points.length; i++) {
-          pointsHtml += '<li id="popup-point-'+points[i]+'"></li>';
+          pointsHtml += '<li id="popup-point-'+points[i]+'" class="point"></li>';
         }
         var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a>'
           +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
@@ -374,10 +374,11 @@
 
 
 			<footer id="bottom">
-				<p><strong>Terms of Service; Didn&apos;t Read</strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
-				<p id="legalinfo">Information from the ToS; DR project, this website, or the ToSDR Google Groups <strong>do not constitute legal advice</strong>. We only express our opinion and analysis with no guarantee. Please refer to a qualified attorney for legal advice. Disclaimer: a list of donors and supporters of Unhosted <a href="http://unhosted.org/#thanks">is published</a>.</p>
+				<p id="credits"><strong><a href="http://tos-dr.info">Terms of Service; Didn&apos;t Read</a></strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>.</p>
+				<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee. Please refer to a qualified attorney for legal advice. Disclaimer: a list of donors and supporters of Unhosted <a href="http://unhosted.org/#thanks">is published</a>.</p>
 				
-				<p id="credits">Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. </p>
+				<p id="licensing"><a href="https://5apps.com/apps/4fd06274c439346fd700005e">Our apps</a> are Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). The <code>.json</code> data inside the <a href="https://github.com/unhosted/ToS-DR/tree/master/services"><code>services/</code></a> and <a href="https://github.com/unhosted/ToS-DR/tree/master/points"><code>points/</code></a> directories are licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. </p>
+				
 			</footer>
 			
 			
