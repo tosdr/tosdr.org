@@ -33,19 +33,19 @@
                 alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
                 return;
               }
-              if(obj.point == 'good') {
+              if(obj.tosdr.point == 'good') {
                 badge = 'badge-success';
                 icon = 'thumbs-up';
                 sign = '+';
-              } else if(obj.point == 'mediocre') {
+              } else if(obj.tosdr.point == 'mediocre') {
                 badge = 'badge-warning';
                 icon = 'thumbs-down';
                 sign = '-';
-              } else if(obj.point == 'alert') {
+              } else if(obj.tosdr.point == 'alert') {
                 badge = 'badge-important';
                 icon = 'remove';
                 sign = '×';
-              } else if(obj.point == 'not bad') {
+              } else if(obj.tosdr.point == 'not bad') {
                 badge = 'badge-neutral';
                 icon = 'hand-right';
                 sign = '→';
@@ -55,12 +55,12 @@
                 sign = '?';
               }
               document.getElementById('point-'+dataPoint).innerHTML =
-                '<span class="badge '+badge+'" title="'+obj.point+'">'
+                '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               document.getElementById('popup-point-'+dataPoint).innerHTML =
-                '<div class="'+obj.point+'"><a href="'+obj.discussion+'" class="source"><span class="badge '+badge
-                +'" title="'+obj.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+'</a><p>'
-                +obj.tldr+'</p></div></li>';
+                '<div class="'+obj.tosdr.point+'"><a href="'+obj.discussion+'" class="source"><span class="badge '+badge
+                +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+'</a><p>'
+                +obj.tosdr.tldr+'</p></div></li>';
             }
           }
         };
@@ -91,7 +91,7 @@
       }
       function renderDetails(name) {
         getServiceObject(name, function(obj) {
-          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.service+'</a> <small>'+obj.url+'</small></h3>';
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -102,11 +102,11 @@
             "D": "The terms of service are very uneven or there are some important issues that need your attention.",
             "E": "We strongly discourage you from signing up to this service. The terms of service raise serious concerns."
           };
-          if(obj.rated) {
-            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">Class '+obj.rated+'</span></a>'
-              +'&nbsp; '+ratingText[obj.rated]+'</p></div>';
+          if(obj.tosdr.rated) {
+            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a>'
+              +'&nbsp; '+ratingText[obj.tosdr.rated]+'</p></div>';
           } else {
-            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.rated+'">No Class Yet</span></a>'
+            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a>'
               +'&nbsp; '+ratingText['false']+'</p></div>';
           }
           var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
@@ -116,7 +116,7 @@
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
             '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
-          renderPopup(name, obj.service, obj.url, obj.rated, ratingText[obj.rated], obj.clause);
+          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], obj.clause);
           for(var i=0; i<obj.clause.length; i++) {
             renderDataPoint(obj.clause[i]);
           }
@@ -146,6 +146,7 @@
         renderDetails('identi-ca');
         renderDetails('instagram');
         renderDetails('seenthis');
+        renderDetails('twitpic');
         renderDetails('twitter');
       }
     </script>
@@ -241,6 +242,7 @@
 						<div id="seenthis" class="span6 service-nutshell"></div>
 					</div>
 					<div class="row-fluid">
+						<div id="twitpic" class="span6 service-nutshell"></div>
 						<div id="twitter" class="span6 service-nutshell"></div>
 					</div>
 				</div>
@@ -398,6 +400,8 @@
 			<div id="instagram-tosdr" class="modal hide tosdr-infos" role="dialog">
 			</div>
 			<div id="seenthis-tosdr" class="modal hide tosdr-infos" role="dialog">
+			</div>
+			<div id="twitpic-tosdr" class="modal hide tosdr-infos" role="dialog">
 			</div>
 			<div id="twitter-tosdr" class="modal hide tosdr-infos" role="dialog">
 			</div>
