@@ -132,7 +132,7 @@
         for(var i=0; i<points.length; i++) {
           pointsHtml += '<li id="popup-point-'+points[i]+'" class="point"></li>';
         }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><!--a class="btn" href="#">Full Data</a-->'
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'
           +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
@@ -195,34 +195,34 @@
 
 			<section id="services">
 				<div class="page-header"><h2>What do you agree to? <small>Search and compare Terms of Service and Privacy Policies</small></h2></div>
-<!--				<form class="well form-search" id="filter-services">-->
-<!--					<div class="control-group">-->
-<!--						<div class="controls">-->
-<!--							<div class="input-append">-->
-<!--<!--							The input below should make use of the typeahead plugin from boostrap/Jquery see http://twitter.github.com/bootstrap/javascript.html#typeahead . So for instance, the user should automatically get suggestion for Fa… "Facebook" -->-->
-<!--							<input type="text" size="16"  data-provide="typeahead" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--					<div class="options">-->
-<!--						<label for="optionsCheckboxList" class="control-label">Options</label>-->
-<!--						<div>-->
-<!--<!--						For now these options for free software and exportable data shoulf be left out-->-->
-<!--							<label class="checkbox">-->
-<!--								<input type="checkbox" value="option1" name="optionsCheckboxList1" unchecked >-->
-<!--								Based on Free Software-->
-<!--							</label>-->
-<!--							<label class="checkbox">-->
-<!--								<input type="checkbox" value="option2" name="optionsCheckboxList2" unchecked >-->
-<!--								Exportable Data-->
-<!--							</label>-->
-<!--							<label class="show-only-label">-->
-<!--								<br />Show only-->
-<!--								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>-->
-<!--							</label>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</form>-->
+				<form class="well form-search" id="filter-services">
+					<div class="control-group">
+						<div class="controls">
+							<div class="input-append">
+<!--							The input below should make use of the typeahead plugin from boostrap/Jquery see http://twitter.github.com/bootstrap/javascript.html#typeahead . So for instance, the user should automatically get suggestion for Fa… "Facebook" -->
+							<input type="text" size="16"  data-provide="typeahead" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>
+							</div>
+						</div>
+					</div>
+					<div class="options">
+						<label for="optionsCheckboxList" class="control-label">Options</label>
+						<div>
+<!--						For now these options for free software and exportable data shoulf be left out-->
+							<label class="checkbox">
+								<input type="checkbox" value="option1" name="optionsCheckboxList1" unchecked >
+								Based on Free Software
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="option2" name="optionsCheckboxList2" unchecked >
+								Exportable Data
+							</label>
+							<label class="show-only-label">
+								<br />Show only
+								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>
+							</label>
+						</div>
+					</div>
+				</form>
 
 				<div id="services-list">
 					<div class="row-fluid">
@@ -290,7 +290,7 @@
 				<div class="page-header"><h2>Categories and examples <small>8 for now, let us know if they make sense or can be simplified</small></h2></div>
 				<div class="row">
 					<div class="span6" id="ownership">
-						<h3>Ownership</h3>
+						<h3><a href="ownership.html">Ownership</a></h3>
 						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You license us to use your data only for the purpose of operating this service.</p>
 						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>We get a license beyond the requirements to operate the service, so your data may be used for purposes you do not intend. We will still attribute ownership to you.</p>
 						<span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span><p>We become the owners of your data.</p>
