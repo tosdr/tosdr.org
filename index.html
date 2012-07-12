@@ -132,7 +132,7 @@
         for(var i=0; i<points.length; i++) {
           pointsHtml += '<li id="popup-point-'+points[i]+'" class="point"></li>';
         }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'<!--fixme I'm thinking of creating individual pages for each services where users could get more metadata, or report something, compare with another service. Anyway I think in the future we might need it because the popups are nice for presentation but if we also want people to engage and contribute, we need something that looks less read-only and more inclusive. Maybe we should just leave this out for now -->
           +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
