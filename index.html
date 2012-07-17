@@ -147,6 +147,7 @@
             if(xhr.status==200) {
               try {
                 var services = JSON.parse(xhr.responseText);
+                console.log(services);
                 var last;
                 for(var i in services) {
                   if(last) {
