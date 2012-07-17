@@ -138,16 +138,22 @@
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
       function go() {
-        renderDetails('ddg');
-        renderDetails('delicious');
-        renderDetails('facebook');
-        renderDetails('flattr');
-        renderDetails('gravatar');
-        renderDetails('identi-ca');
-        renderDetails('instagram');
-        renderDetails('seenthis');
-        renderDetails('twitpic');
-        renderDetails('twitter');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'index/services.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState==4) {
+            if(xhr.status==200) {
+              try {
+                var services = JSON.parse(xhr.responseText);
+                for(var i in services) {
+                  renderDetails(i);
+                }
+              } catch(e) {
+              }
+            }
+          }
+        };
+        xhr.send();
       }
       <!--fixme this shuold be automatic-->
     </script>
