@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Terms of Topic; Didn&apos;t Read</title>
+		<meta name="description" content="Nobody wants to read the long Terms of Topic many websites have. But it is important to understand what they say &ndash; these ratings make it easier.">
+		<meta name="author" content="Unhosted">
+
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!--<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
+
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+    <script>
+      function renderDataPoint(topic, dataPoint) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'points/'+dataPoint+'.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            if(xhr.status == 200) {
+              var obj, badge, icon,sign;
+              try {
+                obj = JSON.parse(xhr.responseText);
+              } catch(e) {
+                alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
+                return;
+              }
+              if(obj.tosdr.point == 'good') {
+                badge = 'badge-success';
+                icon = 'thumbs-up';
+                sign = '+';
+              } else if(obj.tosdr.point == 'mediocre') {
+                badge = 'badge-warning';
+                icon = 'thumbs-down';
+                sign = '-';
+              } else if(obj.tosdr.point == 'alert') {
+                badge = 'badge-important';
+                icon = 'remove';
+                sign = '×';
+              } else if(obj.tosdr.point == 'not bad') {
+                badge = 'badge-neutral';
+                icon = 'hand-right';
+                sign = '→';
+              } else {
+                badge = '';
+                icon = 'question-sign';
+                sign = '?';
+              }
+              document.getElementById('point-'+topic+'-'+dataPoint).innerHTML =
+                '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
+                +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
+              document.getElementById('popup-point-'+dataPoint).innerHTML =
+                '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
+                +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <small><a href="'+obj.discussion+'" class="discussion">discuss this</a></small></h5><p>'
+                +obj.tosdr.tldr+'</p></div></li>';
+            }
+          }
+        };
+        xhr.send();
+      }
+      var topicObjects = {};
+      function getTopicObject(name, cb) {
+        if(topicObjects[name]) {
+          cb(topicObjects[name]);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'topics/'+name+'.json', true);
+          xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+              if(xhr.status == 200) {
+                var obj;
+                try {
+                  obj = JSON.parse(xhr.responseText);
+                  topicObjects[name]=obj;
+                } catch(e) {
+                  console.log(xhr.responseText);
+                  console.log(JSON.parse(xhr.responseText));
+                  alert('Could not load data for '+name+', sorry! Refreshing the page might sometimes help.');
+                }
+                if(obj) {
+                  cb(obj);
+                }
+              }
+            }
+          };
+          xhr.send();
+        }
+      }
+      function renderDetails(name, points) {
+        console.log('renderDetails '+name);
+        console.log(points);
+        getTopicObject(name, function(obj) {
+          var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
+          var rating;
+          var ratingText = {
+            0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
+            "false": "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
+            "A": "The terms of topic pay specific care towards the user and the operator of the topic follows the best practices.",
+            "B": "The terms of topics are fair towards the user but they could be improved.",
+            "C": "The terms of topic are okay but some issues need your consideration.",
+            "D": "The terms of topic are very uneven or there are some important issues that need your attention.",
+            "E": "We strongly discourage you from signing up to this topic. The terms of topic raise serious concerns."
+          };
+          if(!obj.tosdr) {
+            obj.tosdr = {rated: false};
+          }
+          if(obj.tosdr.rated) {
+            rating = '<div id="'+name+'-rating" class="topic-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a>'
+              +'&nbsp; '+ratingText[obj.tosdr.rated]+'</p></div>';
+          } else {
+            rating = '<div id="'+name+'-rating" class="topic-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a>'
+              +'&nbsp; '+ratingText['false']+'</p></div>';
+          }
+          var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
+          for(var i=0; i<points.length; i++) {
+            issues += '<li id="point-'+name+'-'+points[i]+'"></li>';
+          }
+          issues += '</ul>';
+          document.getElementById(name).innerHTML=header+rating+issues+
+            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
+          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
+          for(var i=0; i<points.length; i++) {
+            renderDataPoint(name, points[i]);
+          }
+        });
+      }
+      function renderPopup(name, longName, domain, verdict, ratingText, points){
+        var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
+          +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
+        var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
+        +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
+        var pointsHtml = '';
+        for(var i=0; i<points.length; i++) {
+          pointsHtml += '<li id="popup-point-'+points[i]+'" class="point"></li>';
+        }
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'<!--fixme I'm thinking of creating individual pages for each topics where users could get more metadata, or report something, compare with another topic. Anyway I think in the future we might need it because the popups are nice for presentation but if we also want people to engage and contribute, we need something that looks less read-only and more inclusive. Maybe we should just leave this out for now -->
+          +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
+        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
+        document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
+      }
+      function go() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'index/topics.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState==4) {
+            if(xhr.status==200) {
+              try {
+                var topics = JSON.parse(xhr.responseText);
+                console.log(topics);
+                var last;
+                for(var i in topics) {
+                  if(last) {
+					          document.getElementById('topics-list').innerHTML += '<div class="row-fluid">'
+                      +'<div id="'+last+'" class="span6 topic-nutshell"></div>'
+					         	  +'<div id="'+i+'" class="span6 topic-nutshell"></div>'
+					            +'</div>';
+                    renderDetails(last, topics[i]);
+                    renderDetails(i, topics[i]);
+                    last=undefined;
+                  } else {
+                    last = i;
+                  }
+			            document.getElementById('popups').innerHTML +=
+                    '<div id="'+i+'-tosdr" class="modal hide tosdr-infos" role="dialog"> </div>';
+                }
+                if(last) {
+                  document.getElementById('topics-list').innerHTML += '<div class="row-fluid">'
+                    +'<div id="'+last+'" class="span6 topic-nutshell"></div>'
+                    +'</div>';
+                  renderDetails(last, topics[i]);
+                }
+              } catch(e) {
+              }
+            }
+          }
+        };
+        xhr.send();
+      }
+      <!--fixme this shuold be automatic-->
+    </script>
+	</head>
+	<body onload="go();" id="index-html" data-spy="scroll" >
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#">ToS;DR</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class=""><a href="#topics">Rated Topics</a></li>
+							<li class=""><a href="#getinvolved">Get Involved</a></li>
+							<li class=""><a href="#classification">Classification</a></li>
+							<li class=""><a href="#categories">Categories</a></li>
+						</ul>
+					</div>
+					<div id="remotestorage-connect"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hero-unit container">
+		  <h2>Topics</h2>
+    </div><!--hero-unit-->
+
+		<div  class="container" id="tosdr-content" role="main">
+
+			<section id="topics">
+
+				<div id="topics-list">
+				</div>
+				
+			</section>
+
+			
+			<!--here come the popups-->
+			<div id="popups"></div>
+			
+			
+			<!--"tos": {-->
+							<!--"terms": "https://flattr.com/terms",-->
+							<!--"privacy": "https://flattr.com/privacy"-->
+							<!--},-->
+
+		</div> <!-- /container -->
+
+		<script src="js/bootstrap-twipsy.js"></script>
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
+		<script src="bootstrap/js/bootstrap-modal.js"></script>
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
+		<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+		<script>
+			$(function() { $('a[title!=""]').twipsy({live:true})});
+			$(function() { $('abbr[title!=""]').twipsy({live:true})});
+		</script>
+	</body>
+</html>
