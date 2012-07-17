@@ -90,6 +90,8 @@
         }
       }
       function renderDetails(name, points) {
+        console.log('renderDetails '+name);
+        console.log(points);
         getServiceObject(name, function(obj) {
           var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
           var rating;
@@ -116,7 +118,7 @@
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
             '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
-          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], obj.clause);
+          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
           }
@@ -145,8 +147,27 @@
             if(xhr.status==200) {
               try {
                 var services = JSON.parse(xhr.responseText);
+                var last;
                 for(var i in services) {
-                  renderDetails(i, services[i]);
+                  if(last) {
+					          document.getElementById('services-list').innerHTML += '<div class="row-fluid">'
+                      +'<div id="'+last+'" class="span6 service-nutshell"></div>'
+					         	  +'<div id="'+i+'" class="span6 service-nutshell"></div>'
+					            +'</div>';
+                    renderDetails(last, services[i]);
+                    renderDetails(i, services[i]);
+                    last=undefined;
+                  } else {
+                    last = i;
+                  }
+			            document.getElementById('popups').innerHTML +=
+                    '<div id="'+i+'-tosdr" class="modal hide tosdr-infos" role="dialog"> </div>';
+                }
+                if(last) {
+                  document.getElementById('services-list').innerHTML += '<div class="row-fluid">'
+                    +'<div id="'+last+'" class="span6 service-nutshell"></div>'
+                    +'</div>';
+                  renderDetails(last, services[i]);
                 }
               } catch(e) {
               }
@@ -236,26 +257,6 @@
 				</form>
 
 				<div id="services-list">
-					<div class="row-fluid">
-						<div id="ddg" class="span6 service-nutshell"></div>
-						<div id="delicious" class="span6 service-nutshell"></div>
-					</div>
-					<div class="row-fluid">
-						<div id="facebook" class="span6 service-nutshell"></div>
-						<div id="flattr" class="span6 service-nutshell"></div>
-					</div>
-					<div class="row-fluid">
-						<div id="gravatar" class="span6 service-nutshell"></div>
-						<div id="identi-ca" class="span6 service-nutshell"></div>
-					</div>
-					<div class="row-fluid">
-						<div id="instagram" class="span6 service-nutshell"></div>
-						<div id="seenthis" class="span6 service-nutshell"></div>
-					</div>
-					<div class="row-fluid">
-						<div id="twitpic" class="span6 service-nutshell"></div>
-						<div id="twitter" class="span6 service-nutshell"></div>
-					</div>
 				</div>
 				
 			</section>
@@ -397,26 +398,7 @@
 			
 			
 			<!--here come the popups-->
-			<div id="ddg-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="delicious-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="facebook-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="flattr-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="gravatar-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="identi-ca-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="instagram-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="seenthis-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="twitpic-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
-			<div id="twitter-tosdr" class="modal hide tosdr-infos" role="dialog">
-			</div>
+			<div id="popups"></div>
 			
 			
 			<!--"tos": {-->
