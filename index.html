@@ -20,7 +20,7 @@
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
     <script>
-      function renderDataPoint(dataPoint) {
+      function renderDataPoint(service, dataPoint) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'points/'+dataPoint+'.json', true);
         xhr.onreadystatechange = function() {
@@ -54,7 +54,7 @@
                 icon = 'question-sign';
                 sign = '?';
               }
-              document.getElementById('point-'+dataPoint).innerHTML =
+              document.getElementById('point-'+service+'-'+dataPoint).innerHTML =
                 '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               document.getElementById('popup-point-'+dataPoint).innerHTML =
@@ -89,7 +89,7 @@
           xhr.send();
         }
       }
-      function renderDetails(name) {
+      function renderDetails(name, points) {
         getServiceObject(name, function(obj) {
           var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
           var rating;
@@ -110,15 +110,15 @@
               +'&nbsp; '+ratingText['false']+'</p></div>';
           }
           var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
-          for(var i=0; i<obj.clause.length; i++) {
-            issues += '<li id="point-'+obj.clause[i]+'"></li>';
+          for(var i=0; i<points.length; i++) {
+            issues += '<li id="point-'+name+'-'+points[i]+'"></li>';
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
             '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], obj.clause);
-          for(var i=0; i<obj.clause.length; i++) {
-            renderDataPoint(obj.clause[i]);
+          for(var i=0; i<points.length; i++) {
+            renderDataPoint(name, points[i]);
           }
         });
       }
@@ -146,7 +146,7 @@
               try {
                 var services = JSON.parse(xhr.responseText);
                 for(var i in services) {
-                  renderDetails(i);
+                  renderDetails(i, services[i]);
                 }
               } catch(e) {
               }
