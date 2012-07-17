@@ -1,12 +1,58 @@
 var fs = require('fs');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
+  console.log(service);
+  fs.writeFile('index/services.json', JSON.stringify(service), function(err) {
+    if(err) {
+      console.log('error writing index/services.json');
+    } else {
+      console.log('successfully wrote index/services.json');
+    }
+  });
+  console.log(topic);
+  fs.writeFile('index/topics.json', JSON.stringify(topic), function(err) {
+    if(err) {
+      console.log('error writing index/topics.json');
+    } else {
+      console.log('successfully wrote index/topics.json');
+    }
+  });
 }
-function parsePointFile(path) {
+function addToServices(services, point) {
+  console.log('adding point "'+point+'" to services:');
+  console.log(services);
+  for(var i=0; i<services.length; i++) {
+    if(!service[services[i]]) {
+      service[services[i]] = [];
+    }
+    service[services[i]].push(point);
+  }
+}
+function addToTopics(topics, point) {
+  console.log('adding point "'+point+'" to topics:');
+  console.log(topics);
+  for(var i=0; i<topics.length; i++) {
+    if(!topic[topics[i]]) {
+      topic[topics[i]] = [];
+    }
+    topic[topics[i]].push(point);
+  }
+}
+function parsePointFile(id) {
   pending++;
-  fs.readFile(path, function(err, data) {
-    console.log(path);
-    console.log(JSON.parse(data.toString()));
+  fs.readFile('points/'+id+'.json', function(err, data) {
+    console.log(id);
+    var obj = JSON.parse(data.toString());
+    if(typeof(obj.service)=='string') {
+      addToServices([obj.service], id);
+    } else  if(typeof(obj.service)=='object') {
+      addToServices(obj.service, id);
+    }
+    if(typeof(obj.topic)=='string') {
+      addToTopics([obj.topic], id);
+    } else  if(typeof(obj.topic)=='object') {
+      addToTopics(obj.topic, id);
+    }
     pending--;
     if(pending==0) {
       writeOut();
@@ -18,7 +64,9 @@ fs.readdir('points/', function(err, files) {
     console.log(err);
   } else {
     for(var i=0; i<files.length; i++) {
-      parsePointFile('points/'+files[i]);
+      if(files[i].substring(files[i].length-5) == '.json') {
+        parsePointFile(files[i].substring(0, files[i].length-5));
+      }
     }
   }
 });
