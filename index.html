@@ -76,12 +76,17 @@
           xhr.onreadystatechange = function() {
             if(xhr.readyState == 4) {
               if(xhr.status == 200) {
+                var obj;
                 try {
-                  var obj = JSON.parse(xhr.responseText);
+                  obj = JSON.parse(xhr.responseText);
                   serviceObjects[name]=obj;
-                  cb(obj);
                 } catch(e) {
+                  console.log(xhr.responseText);
+                  console.log(JSON.parse(xhr.responseText));
                   alert('Could not load data for '+name+', sorry! Refreshing the page might sometimes help.');
+                }
+                if(obj) {
+                  cb(obj);
                 }
               }
             }
@@ -104,6 +109,9 @@
             "D": "The terms of service are very uneven or there are some important issues that need your attention.",
             "E": "We strongly discourage you from signing up to this service. The terms of service raise serious concerns."
           };
+          if(!obj.tosdr) {
+            obj.tosdr = {rated: false};
+          }
           if(obj.tosdr.rated) {
             rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a>'
               +'&nbsp; '+ratingText[obj.tosdr.rated]+'</p></div>';
