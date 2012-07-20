@@ -9,6 +9,8 @@ The app consists of a set of:
 raised by terms of service, privacy policies, etc. 
 + JavaScript code to present information to users and contributors
 
+Your contributions are welcome. Please submit them as pull requests. 
+
 ## Data points 
 
 You can find them in the points/ directory. That's where we formalise the data
@@ -42,4 +44,11 @@ Here's an exemple for a point.
 
 ## Topics
 
+Topics are used to classify points. They are used like "tags" so you can attach
+multiple topics to a data point. For instance, a clause in Terms of service can
+be about a copyright license but also about third-parties. Topics can also have
+parents. For example the topic 'copyright-scope' is a subtopic of 'ownership'.
+
 ## Services 
+
+
