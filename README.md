@@ -11,6 +11,12 @@ raised by terms of service, privacy policies, etc.
 
 ## Data points 
 
+You can find them in the points/ directory. That's where we formalise the data
+after discussion on the mailing-list. Each files describes a particular point raised by
+one or terms of service that we think deserves to be taken into account to
+influence the class of services having these terms.
+
+A template for a point. Not all information is required. [FIXME which is required?]
 ```js
 {
   "id": "template",
