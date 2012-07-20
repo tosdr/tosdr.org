@@ -46,8 +46,10 @@ Here's an exemple for a point.
 
 Topics are used to classify points. They are used like "tags" so you can attach
 multiple topics to a data point. For instance, a clause in Terms of service can
-be about a copyright license but also about third-parties. Topics can also have
-parents. For example the topic 'copyright-scope' is a subtopic of 'ownership'.
+be about a copyright license but also about third-parties (typically when the
+copyright license includes to grant rights to transfer and sub-license). Topics
+can also have parents. For example the topic 'copyright-scope' is a subtopic of
+'ownership'.
 
 ## Services 
 
