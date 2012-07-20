@@ -16,7 +16,7 @@ after discussion on the mailing-list. Each files describes a particular point ra
 one or terms of service that we think deserves to be taken into account to
 influence the class of services having these terms.
 
-Here's an exemple for a point on http://unhosted.org. [FIXME which is required?]
+Here's an exemple for a point.
 
 	{
 	  "id": "template", (required)
