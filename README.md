@@ -11,24 +11,26 @@ raised by terms of service, privacy policies, etc.
 
 ## Data points 
 
-	{
-	  "id": "template",
-	  "name": "This is a template json file",
-	  "service": "list-in-services-directory",
-	  "tosdr": {
-	  	"category": "track",
-	  	"point": [ "mediocre", "good", "alert", "not bad" ],
-	  	"score": "0", 
-	  	"tldr": ""
-	  },
-	  "discussion": "https://groups.google.com/d/topic/tosdr/template/discussion",
-	  "source": {
-	  	"faq": "",
-	  	"terms": "https://www.facebook.com/full_data_use_policy#inforeceived"
-	  },
-	  "meta": {
-	  	"license-for-this-file":"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, .USA",
-	  	"author": "ToS;DR by Unhosted",
-	  	"contributors": [ "Hugo Roy <hugo@unhosted.org>" ]
-	  }
-	}
+```js
+{
+  "id": "template",
+  "name": "This is a template json file",
+  "service": "list-in-services-directory",
+  "tosdr": {
+  	"category": "track",
+  	"point": [ "mediocre", "good", "alert", "not bad" ],
+  	"score": "0", 
+  	"tldr": ""
+  },
+  "discussion": "https://groups.google.com/d/topic/tosdr/template/discussion",
+  "source": {
+  	"faq": "",
+  	"terms": "https://www.facebook.com/full_data_use_policy#inforeceived"
+  },
+  "meta": {
+  	"license-for-this-file":"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, .USA",
+  	"author": "ToS;DR by Unhosted",
+  	"contributors": [ "Hugo Roy <hugo@unhosted.org>" ]
+  }
+}
+```
