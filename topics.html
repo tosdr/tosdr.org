@@ -57,7 +57,7 @@
               document.getElementById('point-'+topic+'-'+dataPoint).innerHTML =
                 '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
-              document.getElementById('popup-point-'+dataPoint).innerHTML =
+              document.getElementById('popup-point-'+topic+'-'+dataPoint).innerHTML =
                 '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
                 +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <small><a href="'+obj.discussion+'" class="discussion">discuss this</a></small></h5><p>'
                 +obj.tosdr.tldr+'</p></div></li>';
@@ -98,7 +98,8 @@
         console.log('renderDetails '+name);
         console.log(points);
         getTopicObject(name, function(obj) {
-          var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
+          var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.parent+'</small></h3>';
+          // [FIXME] instead of the URL maybe it would be nice to show the parent tag, for instance copyright-scope's parent is Ownership.
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -109,6 +110,7 @@
             "D": "The terms of topic are very uneven or there are some important issues that need your attention.",
             "E": "We strongly discourage you from signing up to this topic. The terms of topic raise serious concerns."
           };
+          // [FIXME] We don't need ratings for topics. But it would be useful if instead of the class we could display the description.
           if(!obj.tosdr) {
             obj.tosdr = {rated: false};
           }
@@ -132,6 +134,7 @@
           }
         });
       }
+      // [FIXME] I don't think we should have popups for the topic pages etc. This really only makes sense for the services overview IMO. Instead, please see how I display the points in the /ownership.html example page.
       function renderPopup(name, longName, domain, verdict, ratingText, points){
         var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
           +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
@@ -139,9 +142,9 @@
         +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
         var pointsHtml = '';
         for(var i=0; i<points.length; i++) {
-          pointsHtml += '<li id="popup-point-'+points[i]+'" class="point"></li>';
+          pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
         }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'<!--fixme I'm thinking of creating individual pages for each topics where users could get more metadata, or report something, compare with another topic. Anyway I think in the future we might need it because the popups are nice for presentation but if we also want people to engage and contribute, we need something that looks less read-only and more inclusive. Maybe we should just leave this out for now -->
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'
           +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
@@ -211,9 +214,9 @@
 			</div>
 		</div>
 		
-		<div class="hero-unit container">
-		  <h2>Topics</h2>
-    </div><!--hero-unit-->
+<!--		<div class="hero-unit container">-->
+<!--		  <h2>Topics</h2>-->
+<!--    </div><!--hero-unit-->-->
 
 		<div  class="container" id="tosdr-content" role="main">
 
