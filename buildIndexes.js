@@ -53,6 +53,13 @@ function parsePointFile(id) {
     } else  if(typeof(obj.topic)=='object') {
       addToTopics(obj.topic, id);
     }
+    if(typeof(obj.tosdr)=='object') {
+      if(typeof(obj.tosdr.topic)=='string') {
+        addToTopics([obj.tosdr.topic], id);
+      } else  if(typeof(obj.tosdr.topic)=='object') {
+        addToTopics(obj.tosdr.topic, id);
+      }
+    }
     pending--;
     if(pending==0) {
       writeOut();
