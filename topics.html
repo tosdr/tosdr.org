@@ -57,6 +57,7 @@
               document.getElementById('point-'+topic+'-'+dataPoint).innerHTML =
                 '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
+                // FIXME ↑↑ instead of showing the icon, maybe we should show the score
               document.getElementById('popup-point-'+topic+'-'+dataPoint).innerHTML =
                 '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
                 +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <small><a href="'+obj.discussion+'" class="discussion">discuss this</a></small></h5><p>'
