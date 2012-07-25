@@ -98,7 +98,7 @@
         console.log('renderDetails '+name);
         console.log(points);
         getServiceObject(name, function(obj) {
-          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.url+'</small></h3>';
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small class="service-url"><i class="icon icon-globe"></i> '+obj.url+'</small></h3>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -134,8 +134,8 @@
       }
       function renderPopup(name, longName, domain, verdict, ratingText, points){
         var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
-          +'<img src="logo/'+name+'.png" alt="logo" class="pull-left favlogo" height="36" />'
-          +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
+          +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" />'
+          +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> '+domain+'</small></h3></div> ';
         var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
         +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
         var pointsHtml = '';
@@ -188,7 +188,7 @@
       <!--fixme this shuold be automatic-->
     </script>
 	</head>
-	<body onload="go();" id="index-html" data-spy="scroll" >
+	<body onload="go();" id="index-html" >
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -236,34 +236,34 @@
 			<section id="services">
 				<div class="page-header"><h2>What do you agree to? <small>Search and compare Terms of Service and Privacy Policies</small></h2></div>
 
-				<form class="well form-search" id="filter-services">
-					<div class="control-group">
-						<div class="controls">
-							<div class="input-append">
-<!--							The input below should make use of the typeahead plugin from boostrap/Jquery see http://twitter.github.com/bootstrap/javascript.html#typeahead . So for instance, the user should automatically get suggestion for Fa… "Facebook" -->
-							<input type="text" size="16"  data-provide="typeahead" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>
-							</div>
-						</div>
-					</div>
-					<div class="options">
-						<label for="optionsCheckboxList" class="control-label">Options</label>
-						<div>
-<!--						For now these options for free software and exportable data shoulf be left out-->
-							<label class="checkbox">
-								<input type="checkbox" value="option1" name="optionsCheckboxList1" unchecked >
-								Based on Free Software
-							</label>
-							<label class="checkbox">
-								<input type="checkbox" value="option2" name="optionsCheckboxList2" unchecked >
-								Exportable Data
-							</label>
-							<label class="show-only-label">
-								<br />Show only
-								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>
-							</label>
-						</div>
-					</div>
-				</form>
+<!--				<form class="well form-search" id="filter-services">-->
+<!--					<div class="control-group">-->
+<!--						<div class="controls">-->
+<!--							<div class="input-append">-->
+<!--<!--							The input below should make use of the typeahead plugin from boostrap/Jquery see http://twitter.github.com/bootstrap/javascript.html#typeahead . So for instance, the user should automatically get suggestion for Fa… "Facebook" -->
+<!--							<input type="text" size="16"  data-provide="typeahead" class="input-long search-query" id="appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button><button type="button" class="btn">Options</button>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="options">-->
+<!--						<label for="optionsCheckboxList" class="control-label">Options</label>-->
+<!--						<div>-->
+<!--<!--						For now these options for free software and exportable data shoulf be left out-->
+<!--							<label class="checkbox">-->
+<!--								<input type="checkbox" value="option1" name="optionsCheckboxList1" unchecked >-->
+<!--								Based on Free Software-->
+<!--							</label>-->
+<!--							<label class="checkbox">-->
+<!--								<input type="checkbox" value="option2" name="optionsCheckboxList2" unchecked >-->
+<!--								Exportable Data-->
+<!--							</label>-->
+<!--							<label class="show-only-label">-->
+<!--								<br />Show only-->
+<!--								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>-->
+<!--							</label>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</form>-->
 
 				<div id="services-list">
 				</div>
@@ -311,7 +311,7 @@
 				<div class="page-header"><h2>Categories and examples <small>8 for now, let us know if they make sense or can be simplified</small></h2></div>
 				<div class="row">
 					<div class="span6" id="ownership">
-						<h3><a href="ownership.html">Ownership</a></h3>
+						<h3>Ownership</h3>
 						<span class="badge badge-success" title="good"><i class="icon-thumbs-up icon-white">+</i></span><p>You license us to use your data only for the purpose of operating this service.</p>
 						<span class="badge badge-warning" title="mediocre"><i class="icon-thumbs-down icon-white">-</i></span><p>We get a license beyond the requirements to operate the service, so your data may be used for purposes you do not intend. We will still attribute ownership to you.</p>
 						<span class="badge badge-important" title="alert"><i class="icon-remove icon-white">×</i></span><p>We become the owners of your data.</p>
@@ -421,7 +421,6 @@
 		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bootstrap/js/bootstrap-modal.js"></script>
 		<script src="bootstrap/js/bootstrap-transition.js"></script>
-		<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
 		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
 		<script>
 			$(function() { $('a[title!=""]').twipsy({live:true})});
