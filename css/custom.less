@@ -22,6 +22,7 @@ section { margin-bottom:10em; }
 .badge.D {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
 .E, .badge-alert {background-color: #C43C35;background-image: @BackgroundGranul;}
 .badge.E, .badge-important {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
+.label.false {background-color: #ccc; }
 
 .label.A, .label.B, .label.C .label.D, .label.E, .label.false  {vertical-align:middle;}
 
@@ -64,7 +65,7 @@ button.close {padding:2px 6px 6px;}
 	text-transform: uppercase;
 }
 
-section.specificissues {margin-bottom:.5em;}
+section.specificissues {margin:.5em 0;}
 
 .tosdr-points h5 small {
 margin:0 .5em;
@@ -184,13 +185,16 @@ padding:0 1em;
 
 
 /*Index page*/
-.hero-unit section {margin-bottom: 1em;}
+.hero-unit {padding: 60px 0;}
+.hero-unit h1 {font-weight:400;text-align:center;}
+.hero-unit section {margin-bottom: 1em; padding: 0 30px;}
 .join-tosdr {margin-right: 1em;}
 
 @media (max-width: 600px) {
 .join-tosdr.pull-left {float:none;}
-.hero-unit {margin:0;}
 .hero-unit h1 {font-size:2em;}
+.hero-unit {padding: 20px;}
+.hero-unit section {padding: 0px;}
 }
 
 #our-labels p {
