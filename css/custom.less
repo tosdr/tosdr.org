@@ -1,0 +1,220 @@
+@import "less/variables.less";
+
+/*General tweak of boostrap*/
+
+section { margin-bottom:10em; } 
+#tosdr-content {margin-top:50px;}
+#bottom {
+	border-top: 1px solid #CCC;
+	padding-top:2em;
+}
+
+
+/*Service class ratings*/
+
+.A {background-color: #46A546; background-image: @BackgroundGranul;}
+.badge.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
+.B, .badge-success, .badge-good {background-color: #79B752; background-image: @BackgroundGranul;}
+.badge.B {-webkit-border-radius:0.75em; -moz-border-radius:0.75em; border-radius:0.75em; }
+.C {background-color: #F89406;background-image: @BackgroundGranul;}
+.badge.C {-webkit-border-radius:0.5em; -moz-border-radius:0.5em; border-radius:0.5em; }
+.D, .badge-warning, .badge-mediocre {background-color: #D66F2C; background-image: @BackgroundGranul;}
+.badge.D {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
+.E, .badge-alert {background-color: #C43C35;background-image: @BackgroundGranul;}
+.badge.E, .badge-important {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
+
+.label.A, .label.B, .label.C .label.D, .label.E, .label.false  {vertical-align:middle;}
+
+.badge i {
+	color:transparent;
+	font-size:.001em;
+}
+
+/*misc*/
+img.favlogo {margin:-.3em 5px 0 0; }
+
+/*Service Display*/
+
+.service-url .icon {
+  opacity:0.35;
+  margin:.2em 0 0 .3em;
+}
+
+/*Service popup*/
+
+@media (max-width: 600px) {.tosdr-infos {top:0;left:0;margin:0 auto;} }
+@media (max-height: 500px) {.tosdr-infos {top:0;margin-top:0;width:600px;} }
+
+.tosdr-infos { 
+max-width:100%;
+max-height:100%;
+}
+
+button.close {padding:2px 6px 6px;}
+.modal-backdrop {background: #FFF @BackgroundGranul;}
+.modal-footer a.btn-primary {position:absolute;left:1em;}
+.modal-header, .modal-footer {background-image: @BackgroundGranul;}
+
+.tosdr-rating label {
+	float:left; 
+	width:25%;
+	margin-right: 1.5em;
+	padding:.5em 1em;
+	text-align:right;
+	text-transform: uppercase;
+}
+
+section.specificissues {margin-bottom:.5em;}
+
+.tosdr-points h5 small {
+margin:0 .5em;
+opacity:0.5;
+float:right;
+}
+.tosdr-points h5:hover small {
+margin-left: 1em;
+opacity:1;
+}
+
+.tosdr-points li.point .alert {
+    border-radius: 4px 4px 4px 4px;
+    padding:.5em 1em 0;
+    margin-top:1em;
+    background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+}
+
+.tosdr-points li.point .alert h5 small {
+margin-right:-0.5em;
+}
+
+
+
+.tosdr-infos ul.eff-hasyourback li {min-height:1.5em;}
+
+
+
+ul.tosdr-points li {display:block;line-height:1.5em;color: #666;}
+/*ul.tosdr-points li span.badge {margin-left:1.5em;}*/
+/*ul.tosdr-points li:first-child span.badge {margin-left:0;}*/
+
+
+
+ul.tosdr-points , ul.eff-hasyourback {
+list-style-type:none;
+margin-left:0;
+margin-bottom:1.5em;
+}
+
+
+/*ToS comparisons etc*/
+
+.tosdr-points .collapse {
+padding-bottom: .2em;
+margin-bottom: 1.2em;
+}
+
+a.tldr .icon-chevron-down.icon-collapser {
+vertical-align:middle;
+opacity:0.5;
+}
+
+
+@media (min-width: 700px) {
+li:nth-child(odd).span6 {
+float:left;width:45%;
+clear:both;
+}
+li:nth-child(even).span6 {
+float:right;width:45%;
+}
+}
+
+
+p.tldr .see-source.btn:last-child {
+border-radius: 0 4px 4px 0;
+margin-right: 2px;
+}
+p.tldr .see-source.btn:first-child {
+border-radius: 4px 0 0 4px;
+margin-left: 2px;
+}
+
+p.tldr .see-source.btn {
+border-radius: 0;
+margin: 1px -2px;
+border-left:0;
+}
+
+
+/*Index Search*/
+#filter-services .control-label {font-weight:700;}
+.show-only-label {
+	display:block;
+	width:100%;
+	line-height:1em;
+}
+.show-only-label a {color:#FFF; }
+.show-only-label a.inactive {color:#999; }
+.show-only-label .A > a.inactive, .show-only-label .B > a.inactive, .show-only-label .C > a.inactive, .show-only-label .D > a.inactive, .show-only-label .E > a.inactive {
+	background-color:#CCC; 
+}
+
+/* Services listing*/
+#services-list .row .span6, #services-list .row-fluid .span6 {margin-bottom:2em;}
+
+.service-nutshell h3 {
+	padding: .3em .5em .2em;
+}
+
+.service-nutshell .service-rating {
+/*padding:1em 1em 0;*/
+display: inline;
+margin-left: .6em;
+}
+
+.service-nutshell section.specificissues {
+padding:0 1em;
+}
+
+
+/*Categories listing*/
+#categories .badge {float:left;margin-right:.5em;}
+#categories .row { margin-bottom:1em; }
+
+
+/*Index page*/
+.hero-unit section {margin-bottom: 1em;}
+.join-tosdr {margin-right: 1em;}
+
+@media (max-width: 600px) {
+.join-tosdr.pull-left {float:none;}
+.hero-unit {margin:0;}
+.hero-unit h1 {font-size:2em;}
+}
+
+#our-labels p {
+font-size: 1em;
+line-height: 1.1em;
+}
+
+#index-html .hero-unit { 
+background: rgba(255,240,190,0.2) @BackgroundGranul;
+
+}
+
+/*Category page*/
+.category p.description {
+font-size:1.2em;
+}
+
+
+/* General Design */
+
+body {
+
+}
+
+#menu-options .navbar-inner {
+background: rgba(53,53,53,0.85) @BackgroundGranul;
+}

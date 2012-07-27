@@ -98,7 +98,7 @@
         console.log('renderDetails '+name);
         console.log(points);
         getServiceObject(name, function(obj) {
-          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small class="service-url"><i class="icon icon-globe"></i> '+obj.url+'</small></h3>';
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -113,11 +113,9 @@
             obj.tosdr = {rated: false};
           }
           if(obj.tosdr.rated) {
-            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a>'
-              +'&nbsp; '+ratingText[obj.tosdr.rated]+'</p></div>';
+            rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
           } else {
-            rating = '<div id="'+name+'-rating" class="service-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a>'
-              +'&nbsp; '+ratingText['false']+'</p></div>';
+            rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
           }
           var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
           for(var i=0; i<points.length; i++) {
@@ -135,15 +133,14 @@
       function renderPopup(name, longName, domain, verdict, ratingText, points){
         var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
           +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" />'
-          +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> '+domain+'</small></h3></div> ';
+          +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div> ';
         var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
         +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
         var pointsHtml = '';
         for(var i=0; i<points.length; i++) {
           pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
         }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a></div>';
-        // TODO: I'm thinking of creating individual pages for each services where users could get more metadata, or report something, compare with another service. Anyway I think in the future we might need it because the popups are nice for presentation but if we also want people to engage and contribute, we need something that looks less read-only and more inclusive. Maybe we should just leave this out for now.
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
@@ -190,7 +187,7 @@
 	</head>
 	<body onload="go();" id="index-html" >
 
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
