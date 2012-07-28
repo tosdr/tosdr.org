@@ -50,7 +50,7 @@
                 +obj.tosdr.score+'</span>&nbsp;'
                 +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
                 +'<img height="24" alt="'+obj.service+'" title="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
-                +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
+                +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn discuss-this" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
             }
           }
         };
@@ -110,14 +110,18 @@
           }
           var description = '';
           if(obj.description) {
-          	description = '<div id="'+name+'-description" class="topic-description"><p class="description">'+obj.description+'</p></div>';
+          	description = '<div id="'+name+'-description" class="topic-description"><p class="description">'+obj.description;
+          }
+          var parent = '</p></div>';
+          if(obj.parent) {
+          	parent = '&nbsp;<small>(Category: <a href="'+obj.parent+'">'+obj.parent+'</a>)</small></p></div>';
           }
           var issues = '<section class="specificissues"><ul class="tosdr-points row">'
           for(var i=0; i<points.length; i++) {
             issues += '<li id="point-'+name+'-'+points[i]+'" class="span6"></li>';
           }
           issues += '</ul>';
-          document.getElementById(name).innerHTML=header+description+issues+
+          document.getElementById(name).innerHTML=header+description+parent+issues+
             '</section>';
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
@@ -197,6 +201,24 @@
 				<div class="page-header"><h1>Topics</h1></div>
 				<p class="description">This is an overview of all points organised by topics.</p>
 				<p>Jump To: <span id="jump-to"></span></p>
+				
+				<h2>How to read this page</h2>
+				<p>
+					Each point gets assigned one or more topics so that we can sort them out and compare
+					them more easily. Some topics can also be related to each other, for instance
+					<a href="#copyright-scope">copyright</a> is a subset of <a href="#ownership">ownership</a>.
+				</p>
+				<p>
+					Each points gets a status (the colour of the badge) and a score (the white figure). The higher
+					the score, the more important the point is. 
+				</p>
+				<p>
+					Within each topic, you should be able to compare the scores easily. However keep in mind that:
+				</p>
+				<ul>
+					<li>Scores from one topic are usually very irrelevant to scores of another topic</li>
+					<li>The same clause can have different scores because services can be very different</li>
+				</ul>
 			</div>
 		</div>
 
