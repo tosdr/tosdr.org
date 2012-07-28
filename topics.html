@@ -135,6 +135,14 @@
                 console.log(topics);
                 var last;
                 for(var i in topics) {
+                  document.getElementById('jump-to').innerHTML += '<a href="#'+i+'">'+i+'</a>; ';
+                }
+                  if(last) {
+                    document.getElementById('jump-to').innerHTML += '<a href="#'+last+'">'+last+'</a>. ';
+                  } else {
+                    last = i;
+                  }
+                for(var i in topics) {
                   if(last) {
 					          document.getElementById('topics-list').innerHTML += '<section id="'+last+'" class="topic"></section>'
 					         	  +'<section id="'+i+'" class="topic"></section>'
@@ -188,6 +196,7 @@
 			<div class="container">
 				<div class="page-header"><h1>Topics</h1></div>
 				<p class="description">This is an overview of all points organised by topics.</p>
+				<p>Jump To: <span id="jump-to"></span></p>
 			</div>
 		</div>
 
