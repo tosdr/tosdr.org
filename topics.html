@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Terms of Topic; Didn&apos;t Read</title>
+		<title>Topics - Terms of Topic; Didn&apos;t Read</title>
 		<meta name="description" content="Nobody wants to read the long Terms of Topic many websites have. But it is important to understand what they say &ndash; these ratings make it easier.">
 		<meta name="author" content="Unhosted">
 
@@ -49,7 +49,7 @@
               document.getElementById('point-'+topic+'-'+dataPoint).innerHTML = '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
                 +obj.tosdr.score+'</span>&nbsp;'
                 +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
-                +'<img height="24" alt="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
+                +'<img height="24" alt="'+obj.service+'" title="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
                 +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
             }
           }
@@ -184,7 +184,7 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class=""><a href="index.html#services">Rated Services</a></li>
-							<li class=""><a href="#topics">Rated Topics</a></li>
+							<li class=""><a href="#topics">Ratings by Topic</a></li>
 						</ul>
 					</div>
 					<div id="remotestorage-connect"></div>
