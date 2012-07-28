@@ -26,42 +26,31 @@
         xhr.onreadystatechange = function() {
           if(xhr.readyState == 4) {
             if(xhr.status == 200) {
-              var obj, badge, icon,sign;
+              var obj, badge, icon, sign, service, score, tldr, discussion, terms, privacy, source;
               try {
                 obj = JSON.parse(xhr.responseText);
               } catch(e) {
                 alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
                 return;
               }
+              
               if(obj.tosdr.point == 'good') {
                 badge = 'badge-success';
-                icon = 'thumbs-up';
-                sign = '+';
               } else if(obj.tosdr.point == 'mediocre') {
                 badge = 'badge-warning';
-                icon = 'thumbs-down';
-                sign = '-';
               } else if(obj.tosdr.point == 'alert') {
                 badge = 'badge-important';
-                icon = 'remove';
-                sign = '×';
               } else if(obj.tosdr.point == 'not bad') {
                 badge = 'badge-neutral';
-                icon = 'hand-right';
-                sign = '→';
               } else {
                 badge = '';
-                icon = 'question-sign';
-                sign = '?';
               }
-              document.getElementById('point-'+topic+'-'+dataPoint).innerHTML =
-                '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
-                +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
-                // FIXME ↑↑ instead of showing the icon, maybe we should show the score
-              document.getElementById('popup-point-'+topic+'-'+dataPoint).innerHTML =
-                '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
-                +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <small><a href="'+obj.discussion+'" class="discussion">discuss this</a></small></h5><p>'
-                +obj.tosdr.tldr+'</p></div></li>';
+              
+              document.getElementById('point-'+topic+'-'+dataPoint).innerHTML = '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
+                +obj.tosdr.score+'</span>&nbsp;'
+                +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
+                +'<img height="24" alt="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
+                +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
             }
           }
         };
@@ -99,8 +88,7 @@
         console.log('renderDetails '+name);
         console.log(points);
         getTopicObject(name, function(obj) {
-          var header = '<h3><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a> <small>'+obj.parent+'</small></h3>';
-          // [FIXME] instead of the URL maybe it would be nice to show the parent tag, for instance copyright-scope's parent is Ownership.
+          var header = '<div class="page-header"><h2>'+obj.name+' <small>'+obj.subtitle+'</small></h2></div>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -116,39 +104,25 @@
             obj.tosdr = {rated: false};
           }
           if(obj.tosdr.rated) {
-            rating = '<div id="'+name+'-rating" class="topic-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a>'
-              +'&nbsp; '+ratingText[obj.tosdr.rated]+'</p></div>';
+            rating = '';
           } else {
-            rating = '<div id="'+name+'-rating" class="topic-rating"><p><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a>'
-              +'&nbsp; '+ratingText['false']+'</p></div>';
+            rating = '';
           }
-          var issues = '<section class="specificissues"><strong>Specific issues</strong><ul class="tosdr-points">'
+          var description = '';
+          if(obj.description) {
+          	description = '<div id="'+name+'-description" class="topic-description"><p class="description">'+obj.description+'</p></div>';
+          }
+          var issues = '<section class="specificissues"><ul class="tosdr-points row">'
           for(var i=0; i<points.length; i++) {
-            issues += '<li id="point-'+name+'-'+points[i]+'"></li>';
+            issues += '<li id="point-'+name+'-'+points[i]+'" class="span6"></li>';
           }
           issues += '</ul>';
-          document.getElementById(name).innerHTML=header+rating+issues+
-            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
-          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
+          document.getElementById(name).innerHTML=header+description+issues+
+            '</section>';
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
           }
         });
-      }
-      // [FIXME] I don't think we should have popups for the topic pages etc. This really only makes sense for the services overview IMO. Instead, please see how I display the points in the /ownership.html example page.
-      function renderPopup(name, longName, domain, verdict, ratingText, points){
-        var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
-          +'<h3>'+longName+' <small>'+domain+'</small></h3></div> ';
-        var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
-        +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
-        var pointsHtml = '';
-        for(var i=0; i<points.length; i++) {
-          pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
-        }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" href="#">Full Data</a>'
-          +'<a data-dismiss="modal" class="btn" href="#">Close</a></div>';
-        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"><h4>Specific issues</h4> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
-        document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
       function go() {
         var xhr = new XMLHttpRequest();
@@ -162,10 +136,9 @@
                 var last;
                 for(var i in topics) {
                   if(last) {
-					          document.getElementById('topics-list').innerHTML += '<div class="row-fluid">'
-                      +'<div id="'+last+'" class="span6 topic-nutshell"></div>'
-					         	  +'<div id="'+i+'" class="span6 topic-nutshell"></div>'
-					            +'</div>';
+					          document.getElementById('topics-list').innerHTML += '<section id="'+last+'" class="topic"></section>'
+					         	  +'<section id="'+i+'" class="topic"></section>'
+					            +'</section>';
                     renderDetails(last, topics[last]);
                     renderDetails(i, topics[i]);
                     last=undefined;
@@ -176,9 +149,7 @@
                     '<div id="'+i+'-tosdr" class="modal hide tosdr-infos" role="dialog"> </div>';
                 }
                 if(last) {
-                  document.getElementById('topics-list').innerHTML += '<div class="row-fluid">'
-                    +'<div id="'+last+'" class="span6 topic-nutshell"></div>'
-                    +'</div>';
+                  document.getElementById('topics-list').innerHTML += '<section id="'+last+'" class="topic"></section>';
                   renderDetails(last, topics[i]);
                 }
               } catch(e) {
@@ -191,7 +162,7 @@
       <!--fixme this shuold be automatic-->
     </script>
 	</head>
-	<body onload="go();" id="index-html" data-spy="scroll" >
+	<body onload="go();" id="topics-html" data-spy="scroll" >
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -201,13 +172,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="#">ToS;DR</a>
+					<a class="brand" href="index.html">ToS;DR</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
+							<li class=""><a href="index.html#services">Rated Services</a></li>
 							<li class=""><a href="#topics">Rated Topics</a></li>
-							<li class=""><a href="#getinvolved">Get Involved</a></li>
-							<li class=""><a href="#classification">Classification</a></li>
-							<li class=""><a href="#categories">Categories</a></li>
 						</ul>
 					</div>
 					<div id="remotestorage-connect"></div>
