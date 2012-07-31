@@ -26,7 +26,7 @@
         xhr.onreadystatechange = function() {
           if(xhr.readyState == 4) {
             if(xhr.status == 200) {
-              var obj, badge, icon,sign;
+              var obj, badge, icon, sign, score;
               try {
                 obj = JSON.parse(xhr.responseText);
               } catch(e) {
@@ -55,7 +55,7 @@
                 sign = '?';
               }
               document.getElementById('point-'+service+'-'+dataPoint).innerHTML =
-                '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
+                '<span class="badge '+badge+'" title="'+obj.tosdr.score+'">'
                 +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
               document.getElementById('popup-point-'+service+'-'+dataPoint).innerHTML =
                 '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
@@ -132,7 +132,7 @@
       }
       function renderPopup(name, longName, domain, verdict, ratingText, points){
         var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
-          +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" />'
+          +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" >'
           +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div> ';
         var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
         +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';

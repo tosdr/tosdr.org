@@ -40,13 +40,14 @@
                 badge = 'badge-warning';
               } else if(obj.tosdr.point == 'alert') {
                 badge = 'badge-important';
+                obj.tosdr.score += 100;
               } else if(obj.tosdr.point == 'not bad') {
                 badge = 'badge-neutral';
               } else {
                 badge = '';
               }
               
-              document.getElementById('point-'+topic+'-'+dataPoint).innerHTML = '<span class="badge '+badge+'" title="'+obj.tosdr.point+'">'
+              document.getElementById('point-'+topic+'-'+dataPoint).innerHTML = '<span class="badge '+badge+'">'
                 +obj.tosdr.score+'</span>&nbsp;'
                 +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
                 +'<img height="24" alt="'+obj.service+'" title="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
