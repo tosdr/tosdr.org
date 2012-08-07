@@ -98,7 +98,7 @@
         console.log('renderDetails '+name);
         console.log(points);
         getServiceObject(name, function(obj) {
-          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt="" height="24"><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a>';
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt=""><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -198,8 +198,9 @@
 					<a class="brand" href="#">ToS;DR</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class=""><a href="#services">Rated Services</a></li>
 							<li class=""><a href="#getinvolved">Get Involved</a></li>
+							<li class=""><a href="#services">Rated Services</a></li>
+							<li class=""><a href="#wtfru">About</a></li>
 							<li class=""><a href="#classification">Classification</a></li>
 <!--							<li class=""><a href="#categories">Categories</a></li>-->
 						</ul>
@@ -223,15 +224,36 @@
 		</div><!--hero-unit-->
 
 		<div  class="container" id="tosdr-content" role="main">
-
-			<div class="alert fade in">
-				<button type="button" class="close" data-dismiss="alert">×</button>
-				<h4 class="alert-heading">Early preview!</h4> 
+			
+			
+			<section id="getinvolved">
+				<div class="page-header"><h2>Get involved <small>Analysis for terms, APIs, discussions</small></h2></div>
 				<p>ToS;DR is a young project started in June 2012. We are currently reviewing terms of service and discussing how to rate them. The data is subject to important changes. This is your opportunity to help us fix the “biggest lie on the Web”: join us if you have information to share related to specific terms or if you have a comment: <a href="tosdr@googlegroups.com">tosdr@googlegroups.com</a>. </p>
+				
 				<p>
-					<a href="#getinvolved" class="btn">Get involved</a>
+					ToS;DR aims at creating a transparent and peer-reviewed process to rate and analyse Terms of Service and Privacy Policies in order to create a rating from Class A to Class E. We need more legal expertise, please join the working-group. We also need people to contribute source code. Everything is JavaScript and JSON. The data is freely available (CC-BY-SA) and ready to be used for other tools, like browser extensions.
 				</p>
-			</div>
+				
+				<p class="pull-left">
+					<a href="https://groups.google.com/d/forum/tosdr" class="btn"><img src="img/googlegroups.png" /> Join the working group</a>&nbsp;
+					<br />
+					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
+				</p>
+				<p>
+					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn"><img src="img/irccloud.png" /> IRC Chat</a>
+					<a href="http://github.com/unhosted/ToS-DR" class="btn"><img src="img/github.png" /> Source Code and Issues</a>
+				</p>
+				
+				<h3 style="clear:left">Roadmap</h3>
+				<ul>
+					<li>Mid-July: Finishing analysis of major terms: <a href="#facebook">social</a> <a href="#twitter">net</a><a href="#seenthis">works</a>, <a href="#ddg">search</a> <a href="#google">engines</a>, <a href="#twitpic">pho</a><a href="#500px">to</a> <a href="#soundcloud">sharing</a>, blogs. (Done: 90%)</li>
+					<li>End-July: Implementation of comparisons by category or <a href="topics.html">specific topic</a>; Improvement of score and rating systems. (Done: 100%)</li>
+					<li>Mid-August: API, crowd-sourcing and integration with Tosback2, add ability to subscribe. (Done:10%)</li>
+					<li>End-August: <a href="http://www.campus-party.eu/2012/security.html#Keyun">Presentation of ToS;DR at Campus Party, Berlin</a></li> 
+					<li>September: Discussing the future of the project.</li>
+				</ul>
+			</section>
+			
 
 			<section id="services">
 
@@ -281,32 +303,6 @@
 
 
 
-			<section id="getinvolved">
-				<div class="page-header"><h2>Get involved <small>Analysis for terms, APIs, discussions</small></h2></div>
-				<p>
-					ToS;DR aims at creating a transparent and peer-reviewed legal process to rate and analyse Terms of Service and Privacy Policies in order to create a short and easy to understand classification. We need more legal participation, please join the working-group. We also need people to contribute source code. Everything is JavaScript and JSON. The data is freely available (CC-BY-SA) and ready to be used for other tools, like browser extensions.
-				</p>
-				
-				<p class="pull-left">
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn"><img src="img/googlegroups.png" /> Join the working group</a>&nbsp;
-					<br />
-					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
-				</p>
-				<p>
-					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn"><img src="img/irccloud.png" /> IRC Chat</a>
-					<a href="http://github.com/unhosted/ToS-DR" class="btn"><img src="img/github.png" /> Source Code and Issues</a>
-				</p>
-				
-				<h3 style="clear:left">Roadmap</h3>
-				<ul>
-					<li>Mid-July: Finishing analysis of major terms: <a href="#facebook">social</a> <a href="#twitter">net</a><a href="#seenthis">works</a>, <a href="#ddg">search</a> <a href="#google">engines</a>, <a href="#twitpic">pho</a><a href="#500px">to</a> <a href="#soundcloud">sharing</a>, blogs. (Done: 90%)</li>
-					<li>End-July: Implementation of comparisons by category or <a href="topics.html">specific topic</a>; Improvement of score and rating systems. (Done: 100%)</li>
-					<li>Mid-August: API, crowd-sourcing and integration with Tosback2, add ability to subscribe. (Done:10%)</li>
-					<li>End-August: <a href="http://www.campus-party.eu/2012/security.html#Keyun">Presentation of ToS;DR at Campus Party, Berlin</a></li> 
-					<li>September: Discussing the future of the project.</li>
-				</ul>
-			</section>
-			
 			
 			<section id="wthru">
 				<div class="page-header"><h2>About <small>this Unhosted project</small></h2></div>
