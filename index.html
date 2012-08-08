@@ -123,7 +123,7 @@
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues+
-            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Read the details</a></section>';
+            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Expand</a></section>';
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
@@ -141,7 +141,7 @@
           pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
         }
         var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
-        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section></div>';
+        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section><section><h4>Read the Terms</h4><ul class="tosback2"><li>and here a list of what\'s in a service tosback2 {} data if available. See github or soundcloud for example</li></ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
       function go() {
@@ -182,7 +182,6 @@
         };
         xhr.send();
       }
-      <!--fixme this shuold be automatic-->
     </script>
 	</head>
 	<body onload="go();" id="index-html" >
@@ -243,12 +242,12 @@
 				</p>
 				
 				<p class="pull-left">
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn"><img src="img/googlegroups.png" /> Join the working group</a>&nbsp;
+					<a href="https://groups.google.com/d/forum/tosdr" class="btn"><img src="img/icons/group.png" style="width:20px; opacity:0.6;" />&nbsp; Join the working group</a>&nbsp;
 					<br />
 					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
 				</p>
 				<p>
-					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn"><img src="img/irccloud.png" /> IRC Chat</a>
+					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn"><img src="img/icons/conversation.png" style="width:20px; opacity:0.6;" />&nbsp; Chat #tosdr on IRC</a>
 					<a href="http://github.com/unhosted/ToS-DR" class="btn"><img src="img/github.png" /> Source Code and Issues</a>
 				</p>
 				
@@ -320,7 +319,7 @@
 			<section id="wthru">
 				<div class="page-header"><h2>About <small>this Unhosted project</small></h2></div>
 				<p>
-					The rough idea behind ToS;DR emerged during the <a href="http://events.ccc.de/camp/2011/">2011 Chaos Communication Camp</a> near Berlin, with people from <a href="http://unhosted.org">Unhosted</a> a movement to create web apps that give users control over their valuable user data and privacy. Since June 2012, <a href="http://hugoroy.eu/index.en.html">Hugo Roy</a> (<a href="http://twitter.com/hugoroyd">@hugoroyd</a>) has taken the lead for the project, and started the legal analysis. Ultimately, all the work is transparent and the discussions happen in public.  Our work is funded by non-profits organisations and individual <a href="https://flattr.com/thing/30986ac83c20a4b5c652c33a9dcdbd97">donations</a> and gets released as <a href="http://fsfe.org/about/basics/freesoftware.html">free software</a> and open data.</a>
+					The rough idea behind ToS;DR emerged during the <a href="http://events.ccc.de/camp/2011/">2011 Chaos Communication Camp</a> near Berlin, with people from <a href="http://unhosted.org">Unhosted</a> a movement to create web apps that give users control over their valuable user data and privacy. Since June 2012, <a href="http://hugoroy.eu/index.en.html">Hugo Roy</a> (<a href="http://twitter.com/hugoroyd">@hugoroyd</a>) has taken the lead for the project, and started the legal analysis. Ultimately, all the work is transparent and the discussions happen in public.  Our work is funded by non-profits organisations and individual <a href="https://flattr.com/thing/821090/ToSDR">donations</a> and gets released as <a href="http://fsfe.org/about/basics/freesoftware.html">free software</a> and open data.</a>
 				</p>
 				
 				<div class="row-fluid">
