@@ -141,7 +141,7 @@
           pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
         }
         var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
-        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section><section><h4>Read the Terms</h4><ul class="tosback2"><li>and here a list of what\'s in a service tosback2 {} data if available. See github or soundcloud for example</li></ul></section></div>';
+        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section><section><h4>Read the Terms</h4><ul class="tosback2"><li><a href="https://github.com/site/terms">Terms of Service</a></li><li><a href="https://help.github.com/privacy-policy">Privacy Policy</a></li><li><a href="https://help.github.com/security/">Security</a></li></ul></section></div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
       }
       function go() {
