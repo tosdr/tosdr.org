@@ -28,7 +28,24 @@ section:first-child {padding-top:0;}
 }
 
 /*misc*/
-img.favlogo {margin:-.3em 5px 0 0;}
+img.favlogo {margin:-.3em 5px 0 0;max-height:24px;}
+
+.ajax-loading {
+position: absolute;
+width: 200px;
+margin: 8em -100px;
+left: 50%;
+text-align: center;
+z-index: -50;
+}
+
+.ajax-loading span {
+color:#AAA;
+font-weight:bold;
+display:block;
+margin-top:8em;
+}
+
 
 /* Points */
 
@@ -50,6 +67,8 @@ ul.tosdr-points.row { margin-top:1.4em;}
 max-width:100%;
 max-height:100%;
 }
+
+.tosdr-infos img.favlogo {max-height:36px;}
 
 button.close {padding:2px 6px 6px;}
 .modal-backdrop {background: #FFF @BackgroundGranul;}
@@ -146,23 +165,6 @@ border-left:0;
 /*Index Search*/
 
 #index-html #services-list { min-height:1000px; }
-#services-list .favlogo, #topics-list .favlogo {max-height:24px;}
-
-#services-list .ajax-loading {
-position: absolute;
-width: 200px;
-margin: 8em -100px;
-left: 50%;
-text-align: center;
-z-index: -50;
-}
-
-#services-list .ajax-loading span {
-color:#AAA;
-font-weight:bold;
-display:block;
-margin-top:8em;
-}
 
 #services-list .row-fluid {
 background:#FFFFFF;
@@ -246,6 +248,19 @@ font-size:1.2em;
 
 p.tldr a.discuss-this {display:block;}
 
+
+/* Get involved page */
+
+.our-example {
+	background-color: #EEE;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin:2em 0;
+	padding: 2em;
+}
+
+#service-example {background:#FFF;}
 
 /* General Design */
 

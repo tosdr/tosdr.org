@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Get Involved - Terms of Topic; Didn&apos;t Read</title>
+		<meta name="description" content="Nobody wants to read the long Terms of Topic many websites have. But it is important to understand what they say &ndash; these ratings make it easier.">
+		<meta name="author" content="Unhosted">
+
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!--<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
+
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+    <script>
+      function renderDataPoint(service, dataPoint) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'points/'+dataPoint+'.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState == 4) {
+            if(xhr.status == 200) {
+              var obj, badge, icon, sign, score;
+              try {
+                obj = JSON.parse(xhr.responseText);
+              } catch(e) {
+                alert('Could not load data for data point '+dataPoint+', sorry! Refreshing the page might sometimes help.');
+                return;
+              }
+              if(obj.tosdr.point == 'good') {
+                badge = 'badge-success';
+                icon = 'thumbs-up';
+                sign = '+';
+              } else if(obj.tosdr.point == 'mediocre') {
+                badge = 'badge-warning';
+                icon = 'thumbs-down';
+                sign = '-';
+              } else if(obj.tosdr.point == 'alert') {
+                badge = 'badge-important';
+                icon = 'remove';
+                sign = '×';
+              } else if(obj.tosdr.point == 'not bad') {
+                badge = 'badge-neutral';
+                icon = 'hand-right';
+                sign = '→';
+              } else {
+                badge = '';
+                icon = 'question-sign';
+                sign = '?';
+              }
+              document.getElementById('point-'+service+'-'+dataPoint).innerHTML =
+                '<span class="badge '+badge+'" title="'+obj.tosdr.score+'">'
+                +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
+              document.getElementById('popup-point-'+service+'-'+dataPoint).innerHTML =
+                '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
+                +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> <a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a></h5><p>'
+                +obj.tosdr.tldr+'</p></div></li>'; 
+            }
+          }
+        };
+        xhr.send();
+      }
+      var serviceObjects = {};
+      function getServiceObject(name, cb) {
+        if(serviceObjects[name]) {
+          cb(serviceObjects[name]);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'services/'+name+'.json', true);
+          xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+              if(xhr.status == 200) {
+                var obj;
+                try {
+                  obj = JSON.parse(xhr.responseText);
+                  serviceObjects[name]=obj;
+                } catch(e) {
+                  console.log(xhr.responseText);
+                  console.log(JSON.parse(xhr.responseText));
+                  alert('Could not load data for '+name+', sorry! Refreshing the page might sometimes help.');
+                }
+                if(obj) {
+                  cb(obj);
+                }
+              }
+            }
+          };
+          xhr.send();
+        }
+      }
+      function renderDetails(name, points) {
+        console.log('renderDetails '+name);
+        console.log(points);
+        getServiceObject(name, function(obj) {
+          var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt=""><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a>';
+          var rating;
+          var ratingText = {
+            0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group: <a href=\"https:\/\/groups.google.com/d/forum/tosdr\">tosdr@googlegroups.com</a>.",
+            "false": "We haven't sufficiently reviewed the terms yet. Please contribute to our group: <a href=\"https:\/\/groups.google.com/d/forum/tosdr\">tosdr@googlegroups.com</a>.",
+            "A": "The terms of service treat you fairly, respect your rights and follows the best practices.",
+            "B": "The terms of services are fair towards the user but they could be improved.",
+            "C": "The terms of service are okay but some issues need your consideration.",
+            "D": "The terms of service are very uneven or there are some important issues that need your attention.",
+            "E": "The terms of service raise very serious concerns."
+          };
+          if(!obj.tosdr) {
+            obj.tosdr = {rated: false};
+          }
+          if(obj.tosdr.rated) {
+            rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
+          } else {
+            rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
+          }
+          var issues = '<section class="specificissues"><ul class="tosdr-points">'
+          for(var i=0; i<points.length; i++) {
+            issues += '<li id="point-'+name+'-'+points[i]+'"></li>';
+          }
+          issues += '</ul>';
+          document.getElementById(name).innerHTML=header+rating+issues+
+            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Expand</a></section>';
+          renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
+          for(var i=0; i<points.length; i++) {
+            renderDataPoint(name, points[i]);
+          }
+        });
+      }
+      function renderPopup(name, longName, domain, verdict, ratingText, points){
+        var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
+          +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" >'
+          +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div> ';
+        var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
+        +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
+        var pointsHtml = '';
+        for(var i=0; i<points.length; i++) {
+          pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
+        }
+        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
+        var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section><section><h4>Read the Terms</h4><ul class="tosback2"><li><a href="https://github.com/site/terms">Terms of Service</a></li><li><a href="https://help.github.com/privacy-policy">Privacy Policy</a></li><li><a href="https://help.github.com/security/">Security</a></li></ul></section></div>';
+        document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
+      }
+      function go() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'index/services-example.json', true);
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState==4) {
+            if(xhr.status==200) {
+              try {
+                var services = JSON.parse(xhr.responseText);
+                console.log(services);
+                var last;
+                for(var i in services) {
+                  if(last) {
+					          document.getElementById('service-example').innerHTML += '<div class="row-fluid">'
+                      +'<div id="'+last+'" class="service-nutshell"></div>'
+					         	  +'<div id="'+i+'" class="service-nutshell"></div>'
+					            +'</div>';
+                    renderDetails(last, services[last]);
+                    renderDetails(i, services[i]);
+                    last=undefined;
+                  } else {
+                    last = i;
+                  }
+			            document.getElementById('popups').innerHTML +=
+                    '<div id="'+i+'-tosdr" class="modal hide tosdr-infos" role="dialog"> </div>';
+                }
+                if(last) {
+                  document.getElementById('service-example').innerHTML += '<div class="row-fluid">'
+                    +'<div id="'+last+'" class="service-nutshell"></div>'
+                    +'</div>';
+                  renderDetails(last, services[i]);
+                }
+              } catch(e) {
+              }
+            }
+          }
+        };
+        xhr.send();
+      }
+    </script>
+	</head>
+	<body onload="go();" id="get-involved-html" data-spy="scroll" >
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html">ToS;DR</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class=""><a href="index.html#services">Rated Services</a></li>
+							<li class=""><a href="#get-involved">Getting involved</a></li>
+						</ul>
+					</div>
+					<div id="remotestorage-connect"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero-unit">
+			<div class="container">
+				<div class="page-header"><h1>Get involved</h1></div>
+				<p>This is a transparent and peer-reviewed project. We need you to get involved so that ToS;DR can take off! We're only at the very early stage of the process, so this is your opportunity to help: we want your feedback!</p>
+				<ul>
+					<li>If you want to contribute your analysis or comment on specific terms and points, then <strong>this guide is for you!</strong></li>
+					<li>If you're a JavaScript developer, you can help with code on <a href="http://github.com/Unhosted/ToS-DR">GitHub</a>, why not have a look at the <a href="http://github.com/Unhosted/ToS-DR/issues">current issues</a>.</li>
+					<li>If you've got legal expertise or knowledge about copyright, privacy and terms, you can share your thoughts and subscribe to our public working group: <a href="https://groups.google.com/d/forum/tosdr">tosdr@googlegroups.com</a>.
+					We use a Google group because they're easy to set up and have a good web interface. But you can also join by email to <a href="mailto:tosdr+subscribe@googlegroups.com">tosdr+subscribe@googlegroups.com</a> using your favourite email client.</li>
+				
+					<li>If you have any questions you can also contact us via IRC (the <a href="http://webchat.freenode.net/?channels=#tosdr">#tosdr irc channel on freenode</a>), or <a href="http://twitter.com/tosdr">twitter</a>, or contact Hugo or Michiel from the <a href="index.html#wthru">about section</a>.</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div  class="container" id="tosdr-content" role="main">
+			
+			<section id="get-involved">
+				<h1 class="page-header">How to contribute</h1>
+				<p>So, if you are curious about a service's Terms or if you have information related to one service, we welcome your contributions. In this guide, we will use GitHub as an example. We hope they don't mind! We are not affiliated with them (although, we use their service).</p>
+				<p>So how do we get:</p>
+				
+				<div class="row-fluid">
+					<div class="span4">
+						<p>From this…</p>
+						<img height="400" src="img/example-tos-screen.png" style="box-shadow: 0 0 .5em #000;" alt="a screen shot" />
+					</div>
+			
+					<div id="service-example" class="span8">
+						<p>to this?</p>
+						
+						<div class="ajax-loading">
+							<img src="img/ajax-loader.gif" alt="" />
+							<span>You need to enable JavaScript.</span>
+						</div>
+					</div>
+				</div>
+				
+				<h2 class="page-header">1. Locate the Terms of Service and Privacy Policy</h2>
+				<p>
+					This might seem obvious to you, but sometimes it is not really made easy to find where the terms are.
+					You can usually find them at the bottom of pages, typically as links like "Terms" and "Privacy". For anything you do, <strong>it is important that we are always able to redirect to the source</strong>. ToS;DR is never a substitute for really reading the terms and finding out for yourself.
+				</p>
+				
+				<h3>Help us track changes to terms</h3>
+				<p>
+					We also want to be able to make an archive of the terms of service, so that we are able to track changes over time, and notify users who subscribe when something important is going on. The best thing to help with that is to contribute to Tosback. You can see a list of the current list of archived terms at <a href="https://github.com/pde/tosback2">https://github.com/pde/tosback2</a> in the <a href="https://github.com/pde/tosback2/tree/master/rules">rules/ directory</a>, if you see some are missing, or incorrect, please <a href="mailto:tosback2@eff.org">email to tosback2@eff.org</a>.
+				</p>
+				
+				<h3>Were the terms accessible?</h3>
+				<p>When you have found the terms, it is already important to assess the situation. We value services which make a priority of making their rules easily accessible to their users. If the terms are easy to read, if they have a summary before and if they have helpers and pointers to guide the users, this is definitely a positive aspect worth to be mentioned. On the contrary, if you think the user experience was obnoxious, it also deserves to be mentioned as a negative point.</p>
+				
+				<p><a href="http://wikimediafoundation.org/wiki/Terms_of_use" target="_blank" class="btn">Wikipedia's Terms of Use: very easy to read</a> <a href="topics.html#readability" class="btn">Other examples on readability</a></p>
+				
+				<div class="our-example">
+					<p>In our example with GitHub, each page has this at the bottom:</p>
+					<blockquote>
+						<a href="https://github.com/site/terms">Terms of Service</a>&nbsp; 
+						<a href="https://github.com/site/privacy">Privacy</a>&nbsp; 
+						<a href="https://github.com/security">Security</a>&nbsp; 
+						<br />© 2012 <span title="0.07474s from fe13.rs.github.com">GitHub</span> Inc. All rights reserved.</p>
+					</blockquote>
+					<p>
+						GitHub's Terms are already archived by Tosback. You can see the "rules" at <a href="https://github.com/pde/tosback2/blob/master/rules/github.com.xml">https://github.com/pde/tosback2/blob/master/rules/github.com.xml</a>. If you don't feel at ease writing XML documents, just <a href="mailto:tosback2@eff.org">email to tosback2@eff.org</a>
+					</p>
+				
+				</div>
+				
+				<p><strong>Bonus:</strong> sometimes, you can have a look at the HTML source code of the terms of service pages, and you can see that each section has an "id" which you can use to point directly to a specific section! For example, SoundCloud does it: <a href="http://soundcloud.com/terms-of-use#acceptance">http://soundcloud.com/terms-of-use#acceptance</a>. As you can see, the index and the summaries are quite practical. We consider this good practice.  </p>
+				
+				<h2 class="page-header">2. Read the terms. Make annotations and comments.</h2>
+				<p>Unfortunately, we have not developed tools to help you read through terms. Automated analysis is a difficult task, and while there are some projects working on this, such as <a href="http://commonterms.net">CommonTerms.net</a> to make that task easier, maybe a good old annotation tool can help.</p>
+				<p>Reading a whole legal document can be cumbersome. You don't necessarily have to read the whole contract, you might also focus on specific aspects. For instance, you can report about <a href="topics.html#copyright-scope">how broad the copyright license is</a>, or <a href="topics.html#cookies">check out how the service uses cookies</a>. You can always <strong>look for inspiration about existing points <a href="topics.html">ordered by topics</a></strong>.</p>
+				<p>It would be helpful if you can publish what you do. Allowing people to engage and review your analysis is very important. You can also start to use a public document to help you review and make annotations. Some people use Google Docs. We also have a Co-Ment platform at <a href="https://tosdr.co-ment.com">tosdr.co-ment.com</a>.
+				</p>
+				<p class="our-example">For GitHub, see <a href="https://tosdr.co-ment.com/text/wP4wQXB5Lev/view/">https://tosdr.co-ment.com/text/wP4wQXB5Lev/view/</a>. You can make annotations and comments, and engage in discussions.</p>
+				<p>It is also a good idea to search forums, blogs and news about a particular service. You might find stories, complaints and comments about things you've  highlighted, or things you've missed.</p>
+				
+				<h2 class="page-header">3. Report "data points" to the working group</h2>
+				<p>Now that you've got some ideas or arguments to make, we need to be able to discuss them and formulate them into data.</p>
+				<p>Send an email or subscribe to <a href="https://groups.google.com/d/forum/tosdr">tosdr@googlegroups.com</a> with information about the topic or the subject of the point, it also helps to says if you think it's a good or a bad point, then give the source, ideally also give a quote from the source. Then give your opinion and wait for others to reply!</p>
+					<div class="our-example">
+						<p>For example, you were reading GitHub and at some point you read "We claim no intellectual property rights". You saw on <a href="topics.html#copyright-scope">our topics page</a> that there is a topic called "copyright-scope". So you made an <a href="https://tosdr.co-ment.com/text/wP4wQXB5Lev/view/?comment_id_key=gIGhlNxIwqx">annotation on co-ment</a>. Now, you'd like to report to the group what you found out. First, make a quick search on the group to see if the service GitHub or if the specific point has not been raised already. If it has, please avoid duplicates and contribute to the original thread instead. Then, send an email — something like this: </p>
+						<dl>
+							<dt>Subject: </dt>
+							<dd>(good point) GitHub doesn't ask for a copyright license</dd>
+							
+							<dt>Email:</dt>
+							<dd>Hello everyone, <br />
+							GitHub Terms of service at <a href="https://help.github.com/articles/github-terms-of-service">https://help.github.com/articles/github-terms-of-service</a> reads:
+							<blockquote>We claim no intellectual property rights over the material you 
+							provide to the Service. Your profile and materials uploaded 
+							remain yours. However, by setting your pages to be viewed 
+							publicly, you agree to allow others to view your Content. By 
+							setting your repositories to be viewed publicly, you agree to 
+							allow others to view and fork your repositories.</blockquote>
+							I think it is a good thing that users don't grant any of their copyright to GitHub.
+						</dl>
+					</div>
+					
+					<p>You're done! Now, we will have a public discussion on the mailing-list about the point, and discuss, compare with other services, and then at last, we will probably write the point in a JSON file, published under the Creative Commons CC-BY-SA 3.0 license.</p>
+					<div class="our-example">
+						<p>In our example about GitHub's copyright scope, here's what the JSON file looks like:</p>
+						<iframe src="https://github.com/unhosted/ToS-DR/blob/master/points/lOG7XeUi-3E.json#files" style="width:100%;height:500px;" />
+					</div>
+			</section>
+
+			
+			<!--here come the popups-->
+			<div id="popups"></div>
+			
+			
+			<!--"tos": {-->
+							<!--"terms": "https://flattr.com/terms",-->
+							<!--"privacy": "https://flattr.com/privacy"-->
+							<!--},-->
+
+		</div> <!-- /container -->
+
+		<script src="js/bootstrap-twipsy.js"></script>
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
+		<script src="bootstrap/js/bootstrap-modal.js"></script>
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
+		<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+		<script>
+			$(function() { $('a[title!=""]').twipsy({live:true})});
+			$(function() { $('abbr[title!=""]').twipsy({live:true})});
+		</script>
+	</body>
+</html>
