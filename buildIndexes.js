@@ -23,7 +23,7 @@ function addToServices(services, point) {
   //console.log(services);
   for(var i=0; i<services.length; i++) {
     if(!service[services[i]]) {
-      service[services[i]] = {points: []};
+      service[services[i]] = {points: [], links: {}};
     }
     service[services[i]].points.push(point);
   }
@@ -78,8 +78,10 @@ function parseServiceFile(id) {
     var obj = JSON.parse(data.toString());
     if(typeof(obj.tosback2)=='object') {
       for(var i in obj.tosback2) { 
-        service[id][i]=obj.tosback2[i].url;
-        console.log(id+' '+i+': '+obj.tosback2[i].url);
+        if(obj.tosback2[i].url) {
+          service[id].links[i]=obj.tosback2[i];
+          console.log(id+' '+i+': '+obj.tosback2[i]);
+        }
       }
     }
     pending--;
