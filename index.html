@@ -132,6 +132,14 @@
           }
         });
       }
+      function isEmpty(map) {
+        for(var key in map) {
+          if (map.hasOwnProperty(key)) {
+            return false;
+          }
+        }
+        return true;
+      }
       function renderPopup(name, longName, domain, verdict, ratingText, points, links){
         var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
           +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" >'
@@ -144,14 +152,14 @@
         }
         var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section>';
-        if(links) {
+        if(isEmpty(links)) {
+          //bodyHtnml += '<section><a href="/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
+        } else {
           bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">';
           for(var i in links) {
             bodyHtml += '<li><a href="'+links[i].url+'">'+(links[i].name ? links[i].name : i)+'</a></li>';
           }
           bodyHtml+='</ul></section>';
-        } else {
-          bodyHtnml += '<section><a href="/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
         }
         bodyHtml+='</div>';
         document.getElementById(name+'-tosdr').innerHTML = headerHtml+bodyHtml+footerHtml;
@@ -232,7 +240,7 @@
 				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
 				We aim to fix that.</h2>
 				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">class A</span> to very bad <span class="label E">class E</span></p>
-			</section>
+			</Pection>
 
 		</div><!--hero-unit-->
 
