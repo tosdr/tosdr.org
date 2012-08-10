@@ -196,7 +196,7 @@
                   document.getElementById('services-list').innerHTML += '<div class="row-fluid">'
                     +'<div id="'+last+'" class="span6 service-nutshell"></div>'
                     +'</div>';
-                  renderDetails(last, services[i]);
+                  renderDetails(last, services[i].points, services[i].links);
                 }
               } catch(e) {
               }
