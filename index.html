@@ -21,11 +21,6 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
     <script>
       function renderDataPoint(service, dataPoint) {
-        
-       // if(service=='steam') {
-
-         // console.log('steam');
-        //}
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'points/'+dataPoint+'.json', true);
         xhr.onreadystatechange = function() {
@@ -128,12 +123,15 @@
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues
-            +'<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
+            +'<a data-toggle="modal" id="button-'+name+'-tosdr" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
             +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Read full ToS</a>':'')
             +'</section>';
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points, toslinks);
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
+          }
+          if(location.hash == '#'+name) {
+            document.getElementById('button-'+name+'-tosdr').click();
           }
         });
       }
@@ -198,7 +196,7 @@
                   document.getElementById('services-list').innerHTML += '<div class="row-fluid">'
                     +'<div id="'+last+'" class="span6 service-nutshell"></div>'
                     +'</div>';
-                  renderDetails(last, services[i]);
+                  renderDetails(last, services[i].points, services[i].links);
                 }
               } catch(e) {
               }
