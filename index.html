@@ -94,7 +94,7 @@
           xhr.send();
         }
       }
-      function renderDetails(name, points) {
+      function renderDetails(name, points, toslink) {
         console.log('renderDetails '+name);
         console.log(points);
         getServiceObject(name, function(obj) {
@@ -122,8 +122,9 @@
             issues += '<li id="point-'+name+'-'+points[i]+'"></li>';
           }
           issues += '</ul>';
-          document.getElementById(name).innerHTML=header+rating+issues+
-            '<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Expand</a></section>';
+          document.getElementById(name).innerHTML=header+rating+issues
+            +'<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon icon-eye-open"></i> Expand</a></section>'
+            +(toslink ? '<a href="'+toslink+'" class="btn"><i class="icon icon-eye-open"></i> Read full ToS</a></section>':'');
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points);
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
@@ -160,8 +161,8 @@
                       +'<div id="'+last+'" class="span6 service-nutshell"></div>'
 					         	  +'<div id="'+i+'" class="span6 service-nutshell"></div>'
 					            +'</div>';
-                    renderDetails(last, services[last]);
-                    renderDetails(i, services[i]);
+                    renderDetails(last, services[last].points, services[last].terms);
+                    renderDetails(i, services[i].points, services[i].terms);
                     last=undefined;
                   } else {
                     last = i;
