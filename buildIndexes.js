@@ -2,11 +2,11 @@ var fs = require('fs');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
   //console.log(service);
-  fs.writeFile('index/services.json', JSON.stringify(service), function(err) {
+  fs.writeFile('index/services2.json', JSON.stringify(service), function(err) {
     if(err) {
-      console.log('error writing index/services.json');
+      console.log('error writing index/services2.json');
     } else {
-      console.log('successfully wrote index/services.json');
+      console.log('successfully wrote index/services2.json');
     }
   });
   console.log(topic);
