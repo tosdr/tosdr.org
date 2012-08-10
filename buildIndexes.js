@@ -76,10 +76,10 @@ function parseServiceFile(id) {
   fs.readFile('services/'+id+'.json', function(err, data) {
     console.log(id);
     var obj = JSON.parse(data.toString());
-    if(typeof(obj.tos)=='object') {
-      for(var i in obj.tos) {
-        service[id][i]=obj.tos[i];
-        console.log(id+' '+i+': '+obj.tos[i]);
+    if(typeof(obj.tosback2)=='object') {
+      for(var i in obj.tosback2) { 
+        service[id][i]=obj.tosback2[i].url;
+        console.log(id+' '+i+': '+obj.tosback2[i].url);
       }
     }
     pending--;
