@@ -1,7 +1,7 @@
 var fs = require('fs');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
-  console.log(service);
+  //console.log(service);
   fs.writeFile('index/services.json', JSON.stringify(service), function(err) {
     if(err) {
       console.log('error writing index/services.json');
@@ -19,18 +19,18 @@ function writeOut() {
   });
 }
 function addToServices(services, point) {
-  console.log('adding point "'+point+'" to services:');
-  console.log(services);
+  //console.log('adding point "'+point+'" to services:');
+  //console.log(services);
   for(var i=0; i<services.length; i++) {
     if(!service[services[i]]) {
-      service[services[i]] = [];
+      service[services[i]] = {points: []};
     }
-    service[services[i]].push(point);
+    service[services[i]].points.push(point);
   }
 }
 function addToTopics(topics, point) {
-  console.log('adding point "'+point+'" to topics:');
-  console.log(topics);
+  //console.log('adding point "'+point+'" to topics:');
+  //console.log(topics);
   for(var i=0; i<topics.length; i++) {
     if(!topic[topics[i]]) {
       topic[topics[i]] = [];
@@ -62,9 +62,31 @@ function parsePointFile(id) {
     }
     pending--;
     if(pending==0) {
-      writeOut();
+      console.log('SERVICES');
+      console.log(service);
+      for(var i in service) {
+        parseServiceFile(i);
+      }
     }
   });
+}
+function parseServiceFile(id) {
+  console.log('SERVICE '+id);
+  pending++;
+  fs.readFile('services/'+id+'.json', function(err, data) {
+    console.log(id);
+    var obj = JSON.parse(data.toString());
+    if(typeof(obj.tosback2)=='object') {
+      for(var i in obj.tosback2) { 
+        service[id][i]=obj.tosback2[i].url;
+        console.log(id+' '+i+': '+obj.tosback2[i].url);
+      }
+    }
+    pending--;
+    if(pending==0) {
+      writeOut();
+    }
+   });
 }
 fs.readdir('points/', function(err, files) {
   if(err) {
