@@ -21,11 +21,6 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
     <script>
       function renderDataPoint(service, dataPoint) {
-        
-        if(service!=='steam') {
-          return;
-         // console.log('steam');
-        }
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'points/'+dataPoint+'.json', true);
         xhr.onreadystatechange = function() {
@@ -185,6 +180,12 @@
                       +'<div id="'+last+'" class="span6 service-nutshell"></div>'
 					         	  +'<div id="'+i+'" class="span6 service-nutshell"></div>'
 					            +'</div>';
+          if(!services[last].links) {
+            console.log('no toslinks');
+          }
+          if(!services[i].links) {
+            console.log('no toslinks');
+          }
                     renderDetails(last, services[last].points, services[last].links);
                     renderDetails(i, services[i].points, services[i].links);
                     last=undefined;
