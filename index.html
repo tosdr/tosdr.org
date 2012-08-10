@@ -124,7 +124,7 @@
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues
             +'<a data-toggle="modal" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
-            +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms+'" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Read full ToS</a>':'')
+            +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Read full ToS</a>':'')
             +'</section>';
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points, toslinks);
           for(var i=0; i<points.length; i++) {
