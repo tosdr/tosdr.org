@@ -153,7 +153,7 @@
         for(var i=0; i<points.length; i++) {
           pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point"></li>';
         }
-        var footerHtml = '<div class="modal-footer"><a class="btn btn-primary" href="https://groups.google.com/forum/#!newtopic/tosdr">Feedback</a><a class="btn" data-dismiss="modal" href="#">Close</a></div>';
+        var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#'+name+'" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for '+longName+'</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section>';
         if(isEmpty(links)) {
           bodyHtml += '<section><a href="/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
