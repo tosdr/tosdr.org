@@ -249,6 +249,14 @@ box-shadow:0 0 .2em #555;
 }
 #wthru h3 small { display:block; }
 
+// Fix the anchors with the fixed header"
+.container > section:before {
+  display: block;
+  content: "";
+  height: 40px;
+  margin: -40px 0 0;
+}
+
 /*Category page*/
 .category p.description, .topic p.description {
 font-size:1.2em;
