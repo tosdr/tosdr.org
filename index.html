@@ -124,7 +124,7 @@
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+rating+issues
             +'<a data-toggle="modal" id="button-'+name+'-tosdr" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
-            +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Read full ToS</a>':'')
+            +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>':'')
             +'</section>';
           renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points, toslinks);
           for(var i=0; i<points.length; i++) {
@@ -156,7 +156,7 @@
         var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#'+name+'" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for '+longName+'</a></div>';
         var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section>';
         if(isEmpty(links)) {
-          bodyHtml += '<section><a href="/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
+          bodyHtml += '<section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>';
         } else {
           bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">';
           for(var i in links) {
