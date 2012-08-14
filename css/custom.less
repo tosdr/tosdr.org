@@ -3,29 +3,28 @@
 /*General tweak of boostrap*/
 
 section { margin-bottom:4em; padding-top:2em; } 
-section:first-child {padding-top:0;}
 .page-header { padding:0; margin:@baseLineHeight 0 @baseLineHeight/3; border-bottom:none; }
 h2,h3 {font-weight:600;}
 
 /*Service class ratings*/
-
 .A {background-color: #46A546; background-image: @BackgroundGranul;}
-.badge.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
-.B, .badge-success, .badge-good {background-color: #79B752; background-image: @BackgroundGranul;}
-.badge.B {-webkit-border-radius:0.75em; -moz-border-radius:0.75em; border-radius:0.75em; }
+.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
+.B, .badge-success, .badge-good {background-color: #79B752; background-image: @BackgroundGranul; -webkit-border-radius:.75em; -moz-border-radius:.75em; border-radius:.75em; }
 .C {background-color: #F89406;background-image: @BackgroundGranul;}
-.badge.C {-webkit-border-radius:0.5em; -moz-border-radius:0.5em; border-radius:0.5em; }
-.D, .badge-warning, .badge-mediocre {background-color: #D66F2C; background-image: @BackgroundGranul;}
-.badge.D {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
-.E, .badge-alert {background-color: #C43C35;background-image: @BackgroundGranul;}
-.badge.E, .badge-important {-webkit-border-radius:0.25em; -moz-border-radius:0.25em; border-radius:0.25em; }
-.label.false {background-color: #ccc; }
+.C, .badge-neutral {-webkit-border-radius:.5em; -moz-border-radius:.5em; border-radius:.5em; }
+.D, .badge-warning, .badge-mediocre {background-color:#D66F2C; background-image: @BackgroundGranul; -webkit-border-radius:.25em; -moz-border-radius:.25em; border-radius:.25em; }
+.E, .badge-alert, .badge-important {background-color: #C43C35;background-image: @BackgroundGranul; -webkit-border-radius:.1em; -moz-border-radius:.1em; border-radius:.1em; }
+.label.false {background-color:#999; }
 
 .label.A, .label.B, .label.C .label.D, .label.E, .label.false  {vertical-align:middle;}
+.badge { padding:1px 2px; }
+.label { padding:2px 4px; }
+
 
 .badge i {
 	color:transparent;
 	font-size:.001em;
+	vertical-align:text-bottom;
 }
 
 /*misc*/
@@ -242,12 +241,12 @@ text-align: center;
 }
 
 #wthru .span1 img {
-margin:1em 0 0 1em;
-border-radius: 140px 140px 140px 140px;
+margin:.5em 0 0 1.5em;
+border-radius:50%;
 height:48px;
-border:1px solid #FFF;
-box-shadow: 0 0 0.2em #000;
+box-shadow:0 0 .2em #555;
 }
+#wthru h3 small { display:block; }
 
 /*Category page*/
 .category p.description, .topic p.description {
@@ -281,9 +280,19 @@ body {
 	padding-top:2em;
 }
 
+.navbar-inner .follow-us {
+	line-height: 19px;
+	padding: 9px 10px 0 0;
+}
+
+
 #menu-options .navbar-inner {
+color:#ddd;
 background: rgba(53,53,53,0.85) @BackgroundGranul;
 }
+.navbar .brand, .navbar .nav > li > a { color:#ddd; }
+.follow-us a{color:#5df;}
+.follow-us a:hover{color:#aef;}
 
 .hero-unit {padding: 60px 0 20px; }
 .hero-unit section {margin-bottom: 1em; padding: 0 30px;}
