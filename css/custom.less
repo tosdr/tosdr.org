@@ -32,7 +32,7 @@ img.favlogo {margin:-.3em 5px 0 0;max-height:24px;}
 
 .ajax-loading {
 position: absolute;
-width: 200px;
+width: 300px;
 margin: 8em -100px;
 left: 50%;
 text-align: center;
@@ -236,8 +236,12 @@ line-height: 1.1em;
 }
 
 #index-html .hero-unit { 
-background: rgba(255,240,190,0.2) @BackgroundGranul;
+background: #F4F4F4;
 text-align: center;
+}
+
+#index-html .hero-unit h1 img {
+margin: -1.5em 0;
 }
 
 #wthru .span1 img {
@@ -247,6 +251,20 @@ height:48px;
 box-shadow:0 0 .2em #555;
 }
 #wthru h3 small { display:block; }
+
+#index-html #alerts-etc {
+position:absolute;
+top:45px;
+}
+
+@media (max-width: 600px) {#index-html #alerts-etc {
+position:relative;
+} }
+
+#index-html #browser-extension {
+box-shadow: 0 0 0.2em rgb(251, 238, 213);
+width:300px;
+}
 
 /*Category page*/
 .category p.description, .topic p.description {

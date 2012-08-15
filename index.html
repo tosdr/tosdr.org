@@ -236,7 +236,7 @@
 		
 		<div class="hero-unit">
 			<section class="container">
-				<div class="page-header"><h1>Terms of Service; Didn&apos;t&nbsp;Read</div>
+				<div class="page-header"><h1><img src="img/tosdr.png" alt="Terms of Service; Didn&apos;t&nbsp;Read" /></div>
 
 				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
 				We aim to fix that.</h2>
@@ -278,8 +278,8 @@
 					<div class="ajax-loading">
 						<img src="img/ajax-loader.gif" alt="" />
 						<span>You need to enable JavaScript.<br />
-						It is also possible that you have a unsupported browser,
-						in this case, please describe the bug by email to
+						It is also possible that you use a browser which is not supported yet.
+						In such case, please describe the bug by email to
 						<a href="mailto:hugo@unhosted.org">hugo@unhosted.org</a>. Thanks</span>
 					</div>
 				</div>
@@ -381,11 +381,12 @@
 			<!--here come the popups-->
 			<div id="popups"></div>
 			
-			
-			<!--"tos": {-->
-							<!--"terms": "https://flattr.com/terms",-->
-							<!--"privacy": "https://flattr.com/privacy"-->
-							<!--},-->
+			<!--alerts etc-->
+			<div class="container" id="alerts-etc">
+				<div id="browser-extension" class="pull-right alert fade in"><button type="button" class="close" data-dismiss="alert">×</button>
+					We have a prototyped browser extension for Chrome. <a href="https://github.com/unhosted/ToS-DR/issues/11#issuecomment-7665593">Try it out!</a>
+				</div>
+			</div>
 
 		</div> <!-- /container -->
 
@@ -394,6 +395,7 @@
 		<script src="bootstrap/js/bootstrap-modal.js"></script>
 		<script src="bootstrap/js/bootstrap-transition.js"></script>
 		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+		<script src="bootstrap/js/bootstrap-alert.js"></script>
 		<script>
 			$(function() { $('a[title!=""]').twipsy({live:true})});
 			$(function() { $('abbr[title!=""]').twipsy({live:true})});
