@@ -180,7 +180,7 @@ function go() {
       +'</div>'
       +'</div>';
   }
-  fs.writeFileSync('index.html',
+  fs.writeFileSync('index-gen.html',
     fs.readFileSync('index-prefix.html').toString()
     +servicesList+popups
     +fs.readFileSync('index-suffix.html').toString()
