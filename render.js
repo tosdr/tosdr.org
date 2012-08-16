@@ -139,12 +139,12 @@ function renderPopup(name, obj, points, links) {
   return headerHtml+bodyHtml+footerHtml;
 }
 function go() {
-  var text = fs.readFileSync('index/services2.json').toString();
+  var text = fs.readFileSync('index/services.json').toString();
   var servicesList = '', popups = '';
   try {
     var services = JSON.parse(text);
   } catch(e) {
-    console.log('services2.json file not readable');
+    console.log('services.json file not readable');
   }
   console.log(services);
   var last, lastObj;
@@ -180,7 +180,7 @@ function go() {
       +'</div>'
       +'</div>';
   }
-  fs.writeFileSync('index-gen.html',
+  fs.writeFileSync('index.html',
     fs.readFileSync('index-prefix.html').toString()
     +servicesList+popups
     +fs.readFileSync('index-suffix.html').toString()
