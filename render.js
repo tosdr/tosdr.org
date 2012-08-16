@@ -90,12 +90,11 @@ function renderDetails(name, points, toslinks, obj) {
       +renderDataPoint(name, points[i], false)
       +'</li>';
   }
-  issues += '</ul>';
-  return header+rating+issues
+  issues += '</ul>'
     +'<a data-toggle="modal" id="button-'+name+'-tosdr" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
     +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn btn-mini" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>':'')
     +'</section>';
-
+  return header+rating+issues;
 }
 function isEmpty(map) {
   for(var key in map) {
@@ -153,12 +152,12 @@ function go() {
     var obj = getServiceObject(i);
     if(last) {
       servicesList += '<div class="row-fluid">'
-        +'<div id="'+last+'" class="span6 service-nutshell">'
-        +renderDetails(last, services[last].points, services[last].links, lastObj);
-        +'</div>'
-        +'<div id="'+i+'" class="span6 service-nutshell">'
-        +renderDetails(i, services[i].points, services[i].links, obj);
-        +'</div>'
+          +'<div id="'+last+'" class="span6 service-nutshell">'
+            +renderDetails(last, services[last].points, services[last].links, lastObj)
+          +'</div>'
+          +'<div id="'+i+'" class="span6 service-nutshell">'
+            +renderDetails(i, services[i].points, services[i].links, obj)
+          +'</div>'
         +'</div>';
       last=undefined;
     } else {
