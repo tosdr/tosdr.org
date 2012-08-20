@@ -102,7 +102,7 @@ function renderDetails(name, points, toslinks, obj) {
   var issues = '<section class="specificissues"><ul class="tosdr-points">';
   for(var i=0; i<renderables.length; i++) {
     issues += '<li id="point-'+name+'-'+renderables[i].id+'">'
-      +renderables[i].score+' '+renderables[i].text
+      +renderables[i].text
       +'</li>';
   }
   issues += '</ul>'
@@ -133,10 +133,18 @@ function renderPopup(name, obj, points, links) {
     +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div> ';
   var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
     +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
+  var renderables=[];
+  for(var i in points) {
+    renderables.push(renderDataPoint(name, points[i], true));
+  }
+  renderables.sort(function(a, b) {
+    return (b.score - a.score);
+  });
   var pointsHtml = '';
-  for(var i=0; i<points.length; i++) {
-    pointsHtml += '<li id="popup-point-'+name+'-'+points[i]+'" class="point">'
-      +renderDataPoint(name, points[i], true)
+  for(var i=0; i<renderables.length; i++) {
+    pointsHtml += '<li id="popup-point-'+name+'-'+renderables[i].id+'" class="point">'
+      //+renderables[i].score+' '
+      +renderables[i].text
       +'</li>';
   }
   var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#'+name+'" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for '+longName+'</a></div>';
@@ -190,14 +198,18 @@ function go() {
   }
   if(last) {
     servicesList += '<div class="row-fluid">'
-      +'<div id="'+last+'" class="span6 service-nutshell">'
-      +renderDetails(last, services[i].points, services[i].links, lastObj);
-      +'</div>'
+        +'<div id="'+last+'" class="span6 service-nutshell">'
+          +renderDetails(last, services[i].points, services[i].links, lastObj)
+        +'</div>'
       +'</div>';
   }
   fs.writeFileSync('index-gen.html',
     fs.readFileSync('index-prefix.html').toString()
-    +servicesList+popups
+	  +'<div id="services-list">'
+    +servicesList
+	  +'</div> <div id="popups">'
+    +popups
+    +'</div>'
     +fs.readFileSync('index-suffix.html').toString()
   );
 }
