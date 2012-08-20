@@ -33,12 +33,20 @@ function renderDataPoint(service, dataPoint, forPopup) {
     sign = '?';
   }
   if(forPopup) {
-    return '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
-      +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> <!--a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a--></h5><p>'
-      +obj.tosdr.tldr+'</p></div>'; 
+    return {
+        id: dataPoint,
+        score: obj.tosdr.score,
+        text: '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
+          +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> <!--a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a--></h5><p>'
+          +obj.tosdr.tldr+'</p></div>'
+      }; 
   } else {
-    return '<span class="badge '+badge+'" title="'+obj.tosdr.score+'">'
-      +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name;
+    return {
+        id: dataPoint,
+        score: obj.tosdr.score,
+        text: '<span class="badge '+badge+'" title="'+obj.tosdr.score+'">'
+          +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name
+      };
   }
 }
 function getServiceObject(name) {
@@ -84,10 +92,17 @@ function renderDetails(name, points, toslinks, obj) {
   } else {
     rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
   }
-  var issues = '<section class="specificissues"><ul class="tosdr-points">'
-  for(var i=0; i<points.length; i++) {
-    issues += '<li id="point-'+name+'-'+points[i]+'">'
-      +renderDataPoint(name, points[i], false)
+  var renderables=[];
+  for(var i in points) {
+    renderables.push(renderDataPoint(name, points[i], false));
+  }
+  renderables.sort(function(a, b) {
+    return (b.score - a.score);
+  });
+  var issues = '<section class="specificissues"><ul class="tosdr-points">';
+  for(var i=0; i<renderables.length; i++) {
+    issues += '<li id="point-'+name+'-'+renderables[i].id+'">'
+      +renderables[i].score+' '+renderables[i].text
       +'</li>';
   }
   issues += '</ul>'
