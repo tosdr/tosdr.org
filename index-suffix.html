@@ -1,7 +1,4 @@
-				</div>
-				
-			</section>
-
+      </section>
 
 			<section id="classification">
 				
@@ -96,9 +93,6 @@
 			</footer>
 			
 			
-			<!--here come the popups-->
-			<div id="popups"></div>
-			
 			<!--alerts etc-->
 			<div class="container" id="alerts-etc">
 				<div id="browser-extension" class="pull-right alert fade in"><button type="button" class="close" data-dismiss="alert">×</button>
@@ -119,11 +113,11 @@
 			$(function() { $('abbr[title!=""]').twipsy({live:true})});
 		</script>
 		<script>
-      if(location.hash.length>1 && document.getElementById('button-'+location.hash.substring(1)+'-tosdr')) {
-        window.setTimeout(function() {
-          document.getElementById('button-'+location.hash.substring(1)+'-tosdr').click();
-        }, 1000);//TODO: find out how to properly detect when bootstrap is ready to receive the click
-      }
+      $(window).load(function(){
+        if(location.hash.length>1 && $('#'+location.hash.substring(1)+'-tosdr')) {
+          $('#'+location.hash.substring(1)+'-tosdr').modal();
+        }
+      });
 		</script>
 	</body>
 </html>
