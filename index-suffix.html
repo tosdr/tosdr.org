@@ -118,5 +118,12 @@
 			$(function() { $('a[title!=""]').twipsy({live:true})});
 			$(function() { $('abbr[title!=""]').twipsy({live:true})});
 		</script>
+		<script>
+      if(location.hash.length>1 && document.getElementById('button-'+location.hash.substring(1)+'-tosdr')) {
+        window.setTimeout(function() {
+          document.getElementById('button-'+location.hash.substring(1)+'-tosdr').click();
+        }, 1000);//TODO: find out how to properly detect when bootstrap is ready to receive the click
+      }
+		</script>
 	</body>
 </html>

@@ -35,10 +35,10 @@ function renderDataPoint(service, dataPoint, forPopup) {
   if(forPopup) {
     return '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
       +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> <!--a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a--></h5><p>'
-      +obj.tosdr.tldr+'</p></div></li>'; 
+      +obj.tosdr.tldr+'</p></div>'; 
   } else {
     return '<span class="badge '+badge+'" title="'+obj.tosdr.score+'">'
-      +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name+'</li>';
+      +'<i class="icon-'+icon+' icon-white">'+sign+'</i></span>&nbsp;'+obj.name;
   }
 }
 function getServiceObject(name) {
