@@ -203,7 +203,7 @@ function go() {
         +'</div>'
       +'</div>';
   }
-  fs.writeFileSync('index-gen.html',
+  fs.writeFileSync('index.html',
     fs.readFileSync('index-prefix.html').toString()
 	  +'<div id="services-list">'
     +servicesList
