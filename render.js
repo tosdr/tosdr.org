@@ -109,7 +109,20 @@ function renderDetails(name, points, toslinks, obj) {
     +'<a data-toggle="modal" id="button-'+name+'-tosdr" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
     +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn btn-mini" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>':'')
     +'</section>';
-  return header+rating+issues;
+  var search = [name];
+  if(obj.keywords) {
+    for(var j=0; j<obj.keywords.length; j++) {
+      search.push(obj.keywords[j]);
+    }
+  }
+  if(obj.related) {
+    for(var j=0; j<obj.related.length; j++) {
+      search.push(obj.related[j]);
+    }
+  }
+  return '<div data-search="'+search.join(',')+'" id="'+name+'" class="span6 service-nutshell">'
+          +header+rating+issues
+          +'</div>';
 }
 function isEmpty(map) {
   for(var key in map) {
@@ -175,12 +188,8 @@ function go() {
     var obj = getServiceObject(i);
     if(last) {
       servicesList += '<div class="row-fluid">'
-          +'<div id="'+last+'" class="span6 service-nutshell">'
             +renderDetails(last, services[last].points, services[last].links, lastObj)
-          +'</div>'
-          +'<div id="'+i+'" class="span6 service-nutshell">'
             +renderDetails(i, services[i].points, services[i].links, obj)
-          +'</div>'
         +'</div>';
       last=undefined;
     } else {
@@ -198,9 +207,7 @@ function go() {
   }
   if(last) {
     servicesList += '<div class="row-fluid">'
-        +'<div id="'+last+'" class="span6 service-nutshell">'
           +renderDetails(last, services[i].points, services[i].links, lastObj)
-        +'</div>'
       +'</div>';
   }
   fs.writeFileSync('index.html',
