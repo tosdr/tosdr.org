@@ -101,7 +101,6 @@
 			</div>
 
 		</div> <!-- /container -->
-
 <!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
 		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bootstrap/js/bootstrap-modal.js"></script>
@@ -118,6 +117,17 @@
           $('#'+location.hash.substring(1)+'-tosdr').modal();
         }
       });
+      document.getElementById('searchBox').onkeyup = function() {
+        var serviceDivs = document.getElementsByClassName('service-nutshell');
+        var searchTerm = document.getElementById('searchBox').value;
+        for(var i=0; i<serviceDivs.length; i++) {
+          if(serviceDivs[i].id.substring(0, searchTerm.length) == searchTerm) {
+            serviceDivs[i].style.display='block';
+          } else {
+            serviceDivs[i].style.display='none';
+          }
+        }
+      };
 		</script>
 	</body>
 </html>
