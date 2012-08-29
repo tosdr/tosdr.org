@@ -121,7 +121,21 @@
         var serviceDivs = document.getElementsByClassName('service-nutshell');
         var searchTerm = document.getElementById('searchBox').value;
         for(var i=0; i<serviceDivs.length; i++) {
-          if(serviceDivs[i].id.substring(0, searchTerm.length) == searchTerm) {
+          var terms = [];
+          for(var j=0; j<serviceDivs[i].attributes.length; j++) {
+            if(serviceDivs[i].attributes[j].name=='data-search') {
+              terms = serviceDivs[i].attributes[j].value.split(',');
+              break;
+            }
+          }
+          var match = false;
+          for(var j=0; j<terms.length; j++ ) {
+            if(terms[j].substring(0, searchTerm.length) == searchTerm) {
+              match=true;
+              break;
+            }
+          }
+          if(match) {
             serviceDivs[i].style.display='block';
           } else {
             serviceDivs[i].style.display='none';
