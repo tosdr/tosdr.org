@@ -51,7 +51,7 @@
               document.getElementById('point-'+topic+'-'+dataPoint).innerHTML = '<span class="badge '+badge+'">'
                 +obj.tosdr.score+'</span>&nbsp;'
                 +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
-                +'<img height="24" alt="" title="'+obj.service+'" class="favlogo" src="logo/'+obj.service+'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
+                +'<img height="24" alt="" title="'+obj.service+'" class="favlogo" src="logo/'+ (obj.service + "").split(",")[0] +'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
                 +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn discuss-this" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
             }
           }
