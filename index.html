@@ -23,18 +23,6 @@
 	</head>
 	<body id="index-html" >
 
-		
-		
-		<div class="hero-unit">
-			<section class="container">
-				<div class="page-header"><h1><img src="img/tosdr-logo.png" alt="Terms of Service; Didn&apos;t&nbsp;Read" /></div>
-
-				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
-				We&nbsp;aim to&nbsp;fix&nbsp;that.</h2>
-				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span></p>
-			</section>
-		</div><!--hero-unit-->
-		
 		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
 				<div class="container">
@@ -52,13 +40,25 @@
 							<li class=""><a href="#wthru">About</a></li>
 <!--							<li class=""><a href="#categories">Categories</a></li>-->
 						</ul>
-<!--						<p class="pull-right follow-us">Follow us on Twitter <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; Donate <a href="http://flattr.com/thing/821090/ToSDR" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></p>-->
+						<p class="pull-right follow-us">
+							Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; 
+							<a href="http://flattr.com/thing/821090/ToSDR" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+						</p>
 					</div>
-					
-					<div id="remotestorage-connect"></div>
 				</div>
 			</div>
 		</div>
+		
+		<div class="hero-unit">
+			<section class="container">
+				<div class="page-header"><h1><img src="img/tosdr-logo.png" alt="Terms of Service; Didn&apos;t&nbsp;Read" /></div>
+
+				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
+				We&nbsp;aim to&nbsp;fix&nbsp;that.</h2>
+				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span></p>
+			</section>
+		</div><!--hero-unit-->
+		
 
 		<div  class="container" id="tosdr-content" role="main">
 			
@@ -98,39 +98,9 @@
 				<h2 class="page-header">Rated Services <small><a href="#classification">What does it mean?</a></small></h2>
 				
 				<div id="searchDiv" style="display:none">
-					<form class="well form-search" id="filter-services">
-						<div class="control-group">
-							<div class="controls row-fluid">
-								<div class="input-append span4">
-									<input id="searchBox" type="text" size="16" data-provide="typeahead" data-items="4" data-source="" class="input-long search-query appendedInputButtons" placehloder="Which service?" class="span2"><button type="button" class="btn">Search</button>
-								</div>
-								<div class="examples span8">
-									<small style="color:#999">e.g. Facebook, twitter.com, social network, search</small>
-								</div>
-<!--								<div class="results">-->
-<!--									<p>-->
-<!--									We have found these services.-->
-<!--									<a href="#">Not what you were looking for?</a>-->
-<!--									</p>-->
-<!--								</div>-->
-							</div>
-					
-							<!-- For now these options for free software and exportable data shoulf be left out -->
-							<!--div class="options">
-							<label for="optionsCheckboxList" class="control-label">Options</label>
-								<label class="checkbox">
-								<input type="checkbox" value="option1" name="optionsCheckboxList1" unchecked >
-								Based on Free Software
-								</label>
-								<label class="checkbox">
-								<input type="checkbox" value="option2" name="optionsCheckboxList2" unchecked >
-								Exportable Data
-								</label>
-								<label class="show-only-label">
-								<br />Show only
-								<span class="label A"><a href="#" class="active">Class A</a></span> <span class="label B"><a href="#" class="active">Class B</a></span> <span class="label C"><a href="#" class="active">Class C</a></span> <span class="label D"><a href="#" class="active">Class D</a></span> <span class="label E"><a href="#" class="active">Class E</a></span>
-								</label>
-							</div-->
+					<form id="filter-services">
+						<div class="input-prepend">
+							<span class="add-on">Search:</span><input class="input-xlarge" id="searchBox" size="16" type="text" placeholder="e.g. Facebook, twitter.com, search engine">
 						</div>
 					</form>
 				</div>
