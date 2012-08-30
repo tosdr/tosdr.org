@@ -90,7 +90,7 @@
         console.log('renderDetails '+name);
         console.log(points);
         getTopicObject(name, function(obj) {
-          document.getElementById('jump-to').innerHTML += '<a href="#'+name+'">'+obj.name+'</a>; ';
+          document.getElementById('jump-to').innerHTML += '<div class="span3"><a href="#'+name+'">'+obj.name+'</a></div> ';
           var header = '<div class="page-header"><h2>'+obj.name+' <small>'+(obj.subtitle||"")+'</small></h2></div>';
           var rating;
           var ratingText = {
@@ -203,7 +203,7 @@
 			<div class="container">
 				<div class="page-header"><h1>Topics</h1></div>
 				<p class="description">This is an overview of all points organised by topics.</p>
-				<p>Jump To: <span id="jump-to"></span></p>
+				<div id="jump-to" class="row"></div>
 				
 				<h2>How to read this page</h2>
 				<p>
