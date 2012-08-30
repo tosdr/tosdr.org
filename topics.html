@@ -52,7 +52,7 @@
                 +obj.tosdr.score+'</span>&nbsp;'
                 +'<a class="tldr" data-toggle="collapse" data-target="#collapse-point-'+topic+'-'+dataPoint+'" href="#'+topic+'-'+dataPoint+'">'
                 +'<img height="24" alt="" title="'+obj.service+'" class="favlogo" src="logo/'+ (obj.service + "").split(",")[0] +'.png">'+obj.name+'&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
-                +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+'<a class="btn discuss-this" href="'+obj.discussion+'"><i class="icon icon-envelope"></i> Discuss</a></p></li>';
+                +'<p class="collapse tldr" id="collapse-point-'+topic+'-'+dataPoint+'">'+obj.tosdr.tldr+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a></p></li>';
             }
           }
         };
@@ -120,7 +120,7 @@
           }
           var issues = '<section class="specificissues"><ul class="tosdr-points row">'
           for(var i=0; i<points.length; i++) {
-            issues += '<li id="point-'+name+'-'+points[i]+'" class="span6"></li>';
+            issues += '<li id="point-'+name+'-'+points[i]+'" class="span6 point"></li>';
           }
           issues += '</ul>';
           document.getElementById(name).innerHTML=header+description+parent+issues+
@@ -186,7 +186,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="index.html">ToS;DR</a>
+					<a class="brand" href="#"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't Read</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class=""><a href="index.html#services">Rated Services</a></li>
