@@ -15,3 +15,15 @@ We welcome other people to copy this project for other specific purposes (like a
  3. change the name and the logo, and have a look at the license (AGPL for HTML/JS/CSS and CC BY SA for JSON) 
  
 We use bootstrap. http://github.com/twitter/bootstrap/
+
+To build:
+
+    node buildIndexes.js
+    node render.js
+
+We develop on the gh-pages branch.
+If you push the gh-pages branch to github, then http://unhosted.github.com/ToS-DR/ will update. That's our staging server. To deploy to live, merge gh-pages to master, and
+
+    git push 5apps master
+
+to deploy to http://tos-dr.info
