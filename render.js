@@ -120,6 +120,21 @@ function renderDetails(name, points, toslinks, obj) {
       search.push(obj.related[j]);
     }
   }
+  if(obj.name) {
+    for(var j=0; j<obj.name.length; j++) {
+      search.push(obj.name[j]);
+    }
+  }
+  if(obj.url) {
+    for(var j=0; j<obj.url.length; j++) {
+      search.push(obj.url[j]);
+    }
+  }
+  if(obj.parent) {
+    for(var j=0; j<obj.parent.length; j++) {
+      search.push(obj.parent[j]);
+    }
+  }
   return '<div data-search="'+search.join(',')+'" id="'+name+'" class="span6 service-nutshell">'
           +header+rating+issues
           +'</div>';
@@ -187,7 +202,7 @@ function go() {
   for(var i in services) {
     var obj = getServiceObject(i);
     if(last) {
-      servicesList += '<div class="row-fluid">'
+      servicesList += '<div class="row">'
             +renderDetails(last, services[last].points, services[last].links, lastObj)
             +renderDetails(i, services[i].points, services[i].links, obj)
         +'</div>';
