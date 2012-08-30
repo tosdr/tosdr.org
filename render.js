@@ -202,10 +202,8 @@ function go() {
   for(var i in services) {
     var obj = getServiceObject(i);
     if(last) {
-      servicesList += '<div class="row">'
-            +renderDetails(last, services[last].points, services[last].links, lastObj)
-            +renderDetails(i, services[i].points, services[i].links, obj)
-        +'</div>';
+      servicesList += renderDetails(last, services[last].points, services[last].links, lastObj)
+            +renderDetails(i, services[i].points, services[i].links, obj);
       last=undefined;
     } else {
       last = i;
@@ -227,7 +225,7 @@ function go() {
   }
   fs.writeFileSync('index.html',
     fs.readFileSync('index-prefix.html').toString()
-	  +'<div id="services-list">'
+	  +'<div id="services-list" class="row">'
     +servicesList
 	  +'</div> <div id="popups">'
     +popups
