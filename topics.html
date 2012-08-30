@@ -90,7 +90,8 @@
         console.log('renderDetails '+name);
         console.log(points);
         getTopicObject(name, function(obj) {
-          var header = '<div class="page-header"><h2>'+obj.name+' <small>'+obj.subtitle+'</small></h2></div>';
+          document.getElementById('jump-to').innerHTML += '<a href="#'+name+'">'+obj.name+'</a>; ';
+          var header = '<div class="page-header"><h2>'+obj.name+' <small>'+(obj.subtitle||"")+'</small></h2></div>';
           var rating;
           var ratingText = {
             0: "We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
@@ -141,10 +142,10 @@
                 console.log(topics);
                 var last;
                 for(var i in topics) {
-                  document.getElementById('jump-to').innerHTML += '<a href="#'+i+'">'+i+'</a>; ';
+                  // document.getElementById('jump-to').innerHTML += '<a href="#'+i+'">'+i+'</a>; ';
                 }
                   if(last) {
-                    document.getElementById('jump-to').innerHTML += '<a href="#'+last+'">'+last+'</a>. ';
+                    // document.getElementById('jump-to').innerHTML += '<a href="#'+last+'">'+last+'</a>. ';
                   } else {
                     last = i;
                   }
