@@ -21,6 +21,10 @@
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
     <script>
+    	globalTopicsDictionary = {} ;
+	function nameFromId(id){
+		return globalTopicsDictionary[id] || id || "" ;
+	}
       function renderDataPoint(topic, dataPoint) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'points/'+dataPoint+'.json', true);
@@ -90,7 +94,8 @@
         console.log('renderDetails '+name);
         console.log(points);
         getTopicObject(name, function(obj) {
-          document.getElementById('jump-to').innerHTML += '<div class="span3"><a href="#'+name+'">'+obj.name+'</a></div> ';
+          if (obj.id && obj.id) globalTopicsDictionary[obj.id] = obj.name ;
+          document.getElementById('jump-to').innerHTML += '<div class="span3' + ((obj.type === "category")?' categoryLink':'') + '"><a href="#'+name+'">'+obj.name+'</a></div> ';
           var header = '<div class="page-header"><h2>'+obj.name+' <small>'+(obj.subtitle||"")+'</small></h2></div>';
           var rating;
           var ratingText = {
@@ -117,7 +122,7 @@
           }
           var parent = '</p></div>';
           if(obj.parent) {
-          	parent = '&nbsp;<small>(Category: <a href="#'+obj.parent+'">'+obj.parent+'</a>)</small></p></div>';
+          	parent = '&nbsp;<small>(Category: <a href="#'+obj.parent+'" class="skipToCategory">'+obj.parent+'</a>)</small></p></div>';
           }
           var issues = '<section class="specificissues"><ul class="tosdr-points row">'
           for(var i=0; i<points.length; i++) {
@@ -129,6 +134,7 @@
           for(var i=0; i<points.length; i++) {
             renderDataPoint(name, points[i]);
           }
+          $('.skipToCategory').each(function(){$(this).text(nameFromId($(this).text()))}) ;
         });
       }
       function go() {
@@ -246,7 +252,6 @@
 							<!--},-->
 
 		</div> <!-- /container -->
-
 		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 <!--		<script src="bootstrap/js/bootstrap-modal.js"></script>-->
 		<script src="bootstrap/js/bootstrap-transition.js"></script>
