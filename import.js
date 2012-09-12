@@ -10,7 +10,7 @@ for(var i=0; i<entries.length;i++) {
     } else  if(headerwords[2]=='[Bad]') {
       point = 'mediocre';
     } else {
-      point = 'informative';
+      point = 'not bad';
     }
     if(headerwords.length>=4) {
       fs.writeFileSync('points/'+headerwords[0]+'.json', JSON.stringify({
