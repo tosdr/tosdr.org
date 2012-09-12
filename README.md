@@ -11,7 +11,7 @@ And 'node buildIndexes.js' will create index files in index/
 
 We welcome other people to copy this project for other specific purposes (like a ToS;DR specific for API terms) or for country-specific (translation and national law issues). Just:
  1. open a public mailing list for people to contribute and start translating,
- 2. fork the code from www.github.com/unhosted/tos-dr and translate, or adapt, etc.
+ 2. fork the code from www.github.com/didnotread/didnotread.org and translate, or adapt, etc.
  3. change the name and the logo, and have a look at the license (AGPL for HTML/JS/CSS and CC BY SA for JSON) 
  
 We use bootstrap. http://github.com/twitter/bootstrap/
