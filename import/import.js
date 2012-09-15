@@ -13,7 +13,7 @@ for(var i=0; i<linkentries.length;i++) {
       fs.writeFileSync('../points/'+hash+'.json', JSON.stringify({
         id: hash,
         tosdr: {
-          topic: subject
+          tldr: subject
         }
       }));
     }
