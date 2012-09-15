@@ -1,5 +1,19 @@
 var fs = require('fs');
 
+var linkentries = fs.readFileSync('import-links.txt').toString().split('\n');
+for(var i=0; i<linkentries.length;i++) {
+  var parts = linkentries[i].split(' ');
+  var subject = parts.slice(1).join(' ');
+  if(parts[0].length) {
+    try {
+      var existing = fs.readFileSync('../points/'+parts[0]);
+      console.log(parts[0].substring('#!topic/tosdr/'.length),subject,existing);
+    } catch(e) {
+      console.log(parts[0].substring('#!topic/tosdr/'.length),subject,e);
+    }
+  }
+}
+die();
 var entries = fs.readFileSync('import.txt').toString().split('\n\n');
 for(var i=0; i<entries.length;i++) {
   var lines=entries[i].split('\n');
