@@ -15,7 +15,7 @@ for(var i=0; i<linkentries.length;i++) {
         tosdr: {
           tldr: subject
         }
-      }));
+      }).split(',').join(',\n'));
     }
   }
 }
