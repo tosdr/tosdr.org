@@ -13,7 +13,7 @@ for(var i=0; i<entries.length;i++) {
       point = 'not bad';
     }
     if(headerwords.length>=4) {
-      fs.writeFileSync('points/'+headerwords[0]+'.json', JSON.stringify({
+      fs.writeFileSync('../points/'+headerwords[0]+'.json', JSON.stringify({
         id: headerwords[0],
         name: headerwords.slice(3).join(' '),
         service: headerwords[1],
