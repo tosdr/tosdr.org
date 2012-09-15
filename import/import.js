@@ -13,28 +13,27 @@ for(var i=0; i<linkentries.length;i++) {
     }
   }
 }
-die();
 var entries = fs.readFileSync('import.txt').toString().split('\n\n');
 for(var i=0; i<entries.length;i++) {
   var lines=entries[i].split('\n');
   if(lines.length>=2) {
     var headerwords=lines[0].split(' ');
-    if(headerwords[2]=='[Good]') {
-      point = 'good';
-    } else  if(headerwords[2]=='[Bad]') {
-      point = 'mediocre';
-    } else {
-      point = 'not bad';
-    }
-    if(headerwords.length>=4) {
+    if(headerwords.length>=6) {
+      if(headerwords[4]=='[Good]') {
+        point = 'good';
+      } else  if(headerwords[4]=='[Bad]') {
+        point = 'mediocre';
+      } else {
+        point = 'not bad';
+      }
       fs.writeFileSync('../points/'+headerwords[0]+'.json', JSON.stringify({
         id: headerwords[0],
-        name: headerwords.slice(3).join(' '),
+        name: headerwords.slice(5).join(' '),
         service: headerwords[1],
         tosdr: {
-  	      topic: 'uncategorized',
+          topic: headerwords[2],
   	      point: point,
-  	      score: 50, 
+  	      score: headerwords[3], 
           tldr: lines.slice(1).join('\n')
         },
         discussion: 'https://groups.google.com/d/topic/tosdr/'+headerwords[0]+'/discussion',
