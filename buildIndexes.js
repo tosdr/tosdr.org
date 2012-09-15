@@ -2,7 +2,7 @@ var fs = require('fs');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
   //console.log(service);
-  fs.writeFile('index/services.json', JSON.stringify(service), function(err) {
+  fs.writeFile('index/services.json', JSON.stringify(service).split(',').join(',\n'), function(err) {
     if(err) {
       console.log('error writing index/services.json');
     } else {
@@ -10,7 +10,7 @@ function writeOut() {
     }
   });
   console.log(topic);
-  fs.writeFile('index/topics.json', JSON.stringify(topic), function(err) {
+  fs.writeFile('index/topics.json', JSON.stringify(topic).split(',').join(',\n'), function(err) {
     if(err) {
       console.log('error writing index/topics.json');
     } else {
