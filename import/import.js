@@ -5,11 +5,17 @@ for(var i=0; i<linkentries.length;i++) {
   var parts = linkentries[i].split(' ');
   var subject = parts.slice(1).join(' ');
   if(parts[0].length) {
+    var hash=parts[0].substring('#!topic/tosdr/'.length);
     try {
-      var existing = fs.readFileSync('../points/'+parts[0]);
-      console.log(parts[0].substring('#!topic/tosdr/'.length),subject,existing);
+      var existing = fs.readFileSync('../points/'+hash+'.json');
+      console.log(hash,subject,existing);
     } catch(e) {
-      console.log(parts[0].substring('#!topic/tosdr/'.length),subject,e);
+      fs.writeFileSync('../points/'+hash+'.json', JSON.stringify({
+        id: hash,
+        tosdr: {
+          topic: subject
+        }
+      }));
     }
   }
 }

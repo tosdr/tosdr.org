@@ -39,36 +39,25 @@ function addToTopics(topics, point) {
   }
 }
 function parsePointFile(id) {
-  pending++;
-  fs.readFile('points/'+id+'.json', function(err, data) {
-    console.log(id);
-    var obj = JSON.parse(data.toString());
-    if(typeof(obj.service)=='string') {
-      addToServices([obj.service], id);
-    } else  if(typeof(obj.service)=='object') {
-      addToServices(obj.service, id);
+  var data = fs.readFileSync('points/'+id+'.json');
+  var obj = JSON.parse(data.toString());
+  if(typeof(obj.service)=='string') {
+    addToServices([obj.service], id);
+  } else  if(typeof(obj.service)=='object') {
+    addToServices(obj.service, id);
+  }
+  if(typeof(obj.topic)=='string') {
+    addToTopics([obj.topic], id);
+  } else  if(typeof(obj.topic)=='object') {
+    addToTopics(obj.topic, id);
+  }
+  if(typeof(obj.tosdr)=='object') {
+    if(typeof(obj.tosdr.topic)=='string') {
+      addToTopics([obj.tosdr.topic], id);
+    } else  if(typeof(obj.tosdr.topic)=='object') {
+      addToTopics(obj.tosdr.topic, id);
     }
-    if(typeof(obj.topic)=='string') {
-      addToTopics([obj.topic], id);
-    } else  if(typeof(obj.topic)=='object') {
-      addToTopics(obj.topic, id);
-    }
-    if(typeof(obj.tosdr)=='object') {
-      if(typeof(obj.tosdr.topic)=='string') {
-        addToTopics([obj.tosdr.topic], id);
-      } else  if(typeof(obj.tosdr.topic)=='object') {
-        addToTopics(obj.tosdr.topic, id);
-      }
-    }
-    pending--;
-    if(pending==0) {
-      console.log('SERVICES');
-      console.log(service);
-      for(var i in service) {
-        parseServiceFile(i);
-      }
-    }
-  });
+  }
 }
 function parseServiceFile(id) {
   console.log('SERVICE '+id);
@@ -98,6 +87,11 @@ fs.readdir('points/', function(err, files) {
       if(files[i].substring(files[i].length-5) == '.json') {
         parsePointFile(files[i].substring(0, files[i].length-5));
       }
+    }
+    console.log('SERVICES');
+    console.log(service);
+    for(var i in service) {
+      parseServiceFile(i);
     }
   }
 });
