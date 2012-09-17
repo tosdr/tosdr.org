@@ -37,7 +37,7 @@ function renderDataPoint(service, dataPoint, forPopup) {
         id: dataPoint,
         score: obj.tosdr.score,
         text: '<div class="'+obj.tosdr.point+'"><h5><span class="badge '+badge
-          +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> <!--a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a--></h5><p>'
+          +'" title="'+obj.tosdr.point+'"><i class="icon-'+icon+' icon-white">'+sign+'</i></span> '+obj.name+' <a href="'+obj.discussion+'" target="_blank" class="label context">Discussion</a> '+(obj.source?'<!--a href="'+obj.source.terms+'" class="label context" target="_blank">Terms</a-->':'')+'</h5><p>'
           +obj.tosdr.tldr+'</p></div>'
       }; 
   } else {
