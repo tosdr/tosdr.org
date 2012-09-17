@@ -261,7 +261,7 @@ https://www.rapidshare.com/#!rsag_ppolicy
       });
       document.getElementById('searchBox').onkeyup = function() {
         var serviceDivs = document.getElementsByClassName('service-nutshell');
-        var searchTerm = document.getElementById('searchBox').value;
+        var searchTerm = document.getElementById('searchBox').value.toLowerCase();
         for(var i=0; i<serviceDivs.length; i++) {
           var terms = [];
           for(var j=0; j<serviceDivs[i].attributes.length; j++) {
