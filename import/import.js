@@ -20,6 +20,7 @@ for(var i=0; i<linkentries.length;i++) {
   }
 }
 var entries = fs.readFileSync('import.txt').toString().split('\n\n');
+var counter = {};
 for(var i=0; i<entries.length;i++) {
   var lines=entries[i].split('\n');
   if(lines.length>=2) {
@@ -32,7 +33,15 @@ for(var i=0; i<entries.length;i++) {
       } else {
         point = 'not bad';
       }
-      fs.writeFileSync('../points/'+headerwords[0]+'.json', JSON.stringify({
+      var filesuffix;
+      if(typeof(counter[headerwords[0]])=='number') {
+        counter[headerwords[0]]++;
+        filesuffix = '-'+counter[headerwords[0]]+'.json';
+      } else {
+        counter[headerwords[0]]=0;
+        filesuffix = '.json';
+      }
+      fs.writeFileSync('../points/'+headerwords[0]+filesuffix, JSON.stringify({
         id: headerwords[0],
         name: headerwords.slice(5).join(' '),
         service: headerwords[1],
