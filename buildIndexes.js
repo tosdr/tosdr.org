@@ -64,6 +64,7 @@ function parseServiceFile(id) {
   pending++;
   fs.readFile('services/'+id+'.json', function(err, data) {
     console.log(id);
+    console.log(data.toString());
     var obj = JSON.parse(data.toString());
     if(typeof(obj.tosback2)=='object') {
       for(var i in obj.tosback2) { 
