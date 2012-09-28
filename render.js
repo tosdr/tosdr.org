@@ -201,7 +201,7 @@ function go() {
   var last, lastObj;
   for(var i in services) {
     var obj = getServiceObject(i);
-    if(obj.alexa >= 1000000) {
+    if(obj.alexa >= 10000) {
       continue;
     }
     if(last) {
