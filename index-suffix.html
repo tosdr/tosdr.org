@@ -138,7 +138,7 @@
         }
       });
       document.getElementById('searchBox').onkeyup = function() {
-        var serviceDivs = document.getElementsByClassName('service-nutshell');
+        var serviceDivs = document.getElementsById('services-list').childNodes;
         var searchTerm = document.getElementById('searchBox').value.toLowerCase();
         for(var i=0; i<serviceDivs.length; i++) {
           var terms = [];
@@ -157,9 +157,16 @@
           }
           if(match) {
             serviceDivs[i].style.display='block';
+            if(serviceDivs[i].id.substring(0, searchTerm.length)==searchTerm) {
+              tophit=i;
+            }
           } else {
             serviceDivs[i].style.display='none';
           }
+        }
+        if(tophit) {
+          document.getElementById('services-list').removeChild(serviceDivs[tophit]);
+          document.getElementById('services-list').insertBefore(serviceDivs[tophit], serviceDivs[0]);//
         }
       };
       document.getElementById('searchDiv').style.display="block";

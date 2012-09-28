@@ -121,19 +121,13 @@ function renderDetails(name, points, toslinks, obj) {
     }
   }
   if(obj.name) {
-    for(var j=0; j<obj.name.length; j++) {
-      search.push(obj.name[j]);
-    }
+    search.push(obj.name);
   }
   if(obj.url) {
-    for(var j=0; j<obj.url.length; j++) {
-      search.push(obj.url[j]);
-    }
+    search.push(obj.url);
   }
   if(obj.parent) {
-    for(var j=0; j<obj.parent.length; j++) {
-      search.push(obj.parent[j]);
-    }
+    search.push(obj.parent);
   }
   return '<div data-search="'+search.join(',')+'" id="'+name+'" class="span6 service-nutshell">'
           +header+rating+issues
