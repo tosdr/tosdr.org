@@ -138,8 +138,9 @@
         }
       });
       document.getElementById('searchBox').onkeyup = function() {
-        var serviceDivs = document.getElementsById('services-list').childNodes;
+        var serviceDivs = document.getElementById('services-list').childNodes;
         var searchTerm = document.getElementById('searchBox').value.toLowerCase();
+        var tophit;
         for(var i=0; i<serviceDivs.length; i++) {
           var terms = [];
           for(var j=0; j<serviceDivs[i].attributes.length; j++) {
@@ -164,9 +165,9 @@
             serviceDivs[i].style.display='none';
           }
         }
-        if(tophit) {
-          document.getElementById('services-list').removeChild(serviceDivs[tophit]);
-          document.getElementById('services-list').insertBefore(serviceDivs[tophit], serviceDivs[0]);//
+        if(typeof(tophit) != 'undefined') {
+          var elt = document.getElementById('services-list').removeChild(serviceDivs[tophit]);
+          document.getElementById('services-list').insertBefore(elt, serviceDivs[0]);//
         }
       };
       document.getElementById('searchDiv').style.display="block";
