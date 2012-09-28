@@ -158,9 +158,9 @@ function renderPopup(name, obj, points, links) {
     ratingText = getRatingText(obj.tosdr.rated);
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
     +'<img src="logo/'+name+'.png" alt="" class="pull-left favlogo" height="36" >'
-    +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div> ';
+    +'<h3>'+longName+' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://'+domain+'" target="_blank">'+domain+'</a></small></h3></div>\n';
   var classHtml = '<div class="tosdr-rating"><label class="label '+verdict+'">'
-    +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>';
+    +(verdict?'Class '+verdict:'No Class Yet')+'</label><p>'+ratingText+'</p></div>\n';
   var renderables=[];
   for(var i in points) {
     renderables.push(renderDataPoint(name, points[i], true));
@@ -173,18 +173,18 @@ function renderPopup(name, obj, points, links) {
     pointsHtml += '<li id="popup-point-'+name+'-'+renderables[i].id+'" class="point">'
       //+renderables[i].score+' '
       +renderables[i].text
-      +'</li>';
+      +'</li>\n';
   }
-  var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#'+name+'" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for '+longName+'</a></div>';
-  var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section>';
+  var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#'+name+'" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for '+longName+'</a></div>\n';
+  var bodyHtml = '<div class="modal-body">'+classHtml+'<section class="specificissues"> <ul class="tosdr-points">'+pointsHtml+'</ul></section>\n';
   if(isEmpty(links)) {
-    bodyHtml += '<section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>';
+    bodyHtml += '<section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>\n';
   } else {
-    bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">';
+    bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">\n';
     for(var i in links) {
-      bodyHtml += '<li><a href="'+links[i].url+'">'+(links[i].name ? links[i].name : i)+'</a></li>';
+      bodyHtml += '<li><a href="'+links[i].url+'">'+(links[i].name ? links[i].name : i)+'</a></li>\n';
     }
-    bodyHtml+='</ul></section>';
+    bodyHtml+='</ul></section>\n';
   }
   bodyHtml+='</div>';
   return headerHtml+bodyHtml+footerHtml;
@@ -201,6 +201,9 @@ function go() {
   var last, lastObj;
   for(var i in services) {
     var obj = getServiceObject(i);
+    if(obj.alexa >= 1000000) {
+      continue;
+    }
     if(last) {
       servicesList += renderDetails(last, services[last].points, services[last].links, lastObj)
             +renderDetails(i, services[i].points, services[i].links, obj);
