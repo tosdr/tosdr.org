@@ -73,6 +73,7 @@ function parseServiceFile(id) {
       for(var i in obj.tosback2) { 
         if(obj.tosback2[i].url) {
           service[id].links[i]=obj.tosback2[i];
+          service[id].alexa=obj.alexa;
           console.log(id+' '+i+': '+obj.tosback2[i]);
         }
       }
