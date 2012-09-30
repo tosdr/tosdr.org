@@ -25,11 +25,13 @@ for(var i=0; i<entries.length;i++) {
   var lines=entries[i].split('\n');
   if(lines.length>=2) {
     var headerwords=lines[0].split(' ');
-    if(headerwords.length>=6) {
-      if(headerwords[4]=='[Good]') {
+    if(headerwords.length>=5) {
+      if(headerwords[3]>20) {
         point = 'good';
-      } else  if(headerwords[4]=='[Bad]') {
+      } else  if(headerwords[3]< -20) {
         point = 'mediocre';
+      } else  if(headerwords[3]< -60) {
+        point = 'bad';
       } else {
         point = 'not bad';
       }
@@ -43,7 +45,7 @@ for(var i=0; i<entries.length;i++) {
       }
       fs.writeFileSync('../points/'+headerwords[0]+filesuffix, JSON.stringify({
         id: headerwords[0],
-        name: headerwords.slice(5).join(' '),
+        name: headerwords.slice(4).join(' '),
         service: headerwords[1],
         tosdr: {
           topic: headerwords[2],
