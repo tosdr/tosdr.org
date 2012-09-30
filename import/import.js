@@ -26,9 +26,9 @@ for(var i=0; i<entries.length;i++) {
   if(lines.length>=2) {
     var headerwords=lines[0].split(' ');
     if(headerwords.length>=5 && headerwords[2] != 'disputed') {
-      if(headerwords[3]>20) {
+      if(headerwords[3]>10) {
         point = 'good';
-      } else  if(headerwords[3]< -20) {
+      } else  if(headerwords[3]< -10) {
         point = 'mediocre';
       } else  if(headerwords[3]< -60) {
         point = 'bad';
