@@ -197,7 +197,14 @@ function go() {
   for(var i in services) {
     serviceNames.push(i);
   }
+  console.log(serviceNames);
   serviceNames.sort(function(a, b) {
+    if(typeof(services[a].alexa) == 'undefined') {
+      services[a].alexa = 1000000;
+    }
+    if(typeof(services[b].alexa) == 'undefined') {
+      services[b].alexa = 1000000;
+    }
     return services[a].alexa - services[b].alexa;
   });
   for(var i =0; i<serviceNames.length; i++) {
@@ -208,7 +215,7 @@ function go() {
     //}
     if(last) {
       servicesList += renderDetails(last, services[last].points, services[last].links, lastObj)
-            +renderDetails(i, services[serviceName].points, services[serviceName].links, obj);
+            +renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
       last=undefined;
     } else {
       last = serviceName;
