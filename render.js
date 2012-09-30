@@ -97,7 +97,7 @@ function renderDetails(name, points, toslinks, obj) {
     renderables.push(renderDataPoint(name, points[i], false));
   }
   renderables.sort(function(a, b) {
-    return (b.score - a.score);
+    return (Math.abs(b.score) - Math.abs(a.score));
   });
   var issues = '<section class="specificissues"><ul class="tosdr-points">';
   for(var i=0; i<renderables.length; i++) {
