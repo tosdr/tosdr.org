@@ -160,7 +160,7 @@ function renderPopup(name, obj, points, links) {
     renderables.push(renderDataPoint(name, points[i], true));
   }
   renderables.sort(function(a, b) {
-    return (b.score - a.score);
+    return (Math.abs(b.score) - Math.abs(a.score));
   });
   var pointsHtml = '';
   for(var i=0; i<renderables.length; i++) {
@@ -193,22 +193,30 @@ function go() {
   }
   console.log(services);
   var last, lastObj;
+  var serviceNames = [];
   for(var i in services) {
-    var obj = getServiceObject(i);
-    if(obj.alexa >= 100000) {
-      continue;
-    }
+    serviceNames.push(i);
+  }
+  serviceNames.sort(function(a, b) {
+    return services[a].alexa - services[b].alexa;
+  });
+  for(var i =0; i<serviceNames.length; i++) {
+    var serviceName = serviceNames[i];
+    var obj = getServiceObject(serviceName);
+    //if(obj.alexa >= 1000000) {
+    //  continue;
+    //}
     if(last) {
       servicesList += renderDetails(last, services[last].points, services[last].links, lastObj)
-            +renderDetails(i, services[i].points, services[i].links, obj);
+            +renderDetails(i, services[serviceName].points, services[serviceName].links, obj);
       last=undefined;
     } else {
-      last = i;
+      last = serviceName;
       lastObj = obj;
     }
     popups +=
-      '<div id="'+i+'-tosdr" class="modal hide tosdr-infos" role="dialog">'
-      +renderPopup(i, obj, services[i].points, services[i].links)
+      '<div id="'+serviceName+'-tosdr" class="modal hide tosdr-infos" role="dialog">'
+      +renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links)
       +'</div>';
     //renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points, toslinks);
     //for(var i=0; i<points.length; i++) {
@@ -217,7 +225,7 @@ function go() {
   }
   if(last) {
     servicesList += '<div class="row-fluid">'
-          +renderDetails(last, services[i].points, services[i].links, lastObj)
+          +renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
       +'</div>';
   }
   fs.writeFileSync('index.html',
