@@ -69,6 +69,29 @@ To which document does it apply? Is it from the terms, the privacy policy, the F
 
 This is meta information, mostly copyright information for now. Please write your name and email there if you create a point. Contributors should credit the people who participated on the mailing-list about the elaboration of the discussion from which the point comes.
 
+# disputed
+
+When a point is no longer making consensus and being disputed, add a disputed field. It means it should be resolved in the discussion on the mailing-list.
+
+# Other
+
+These two apply when you are making modifications to a point. If you are *creating* a point and that you are adding these, then there might be a problem and maybe the discussion has not shown what is the valuable issue that should be brought up.
+
+## irrelevant points
+
+When a point was created but then is judged irrelevant, add 
+	"irrelevant": true,
+	"reason": "the point is irrelevant because…"
+	
+Some reasons why a point can be irrelevant:
+ * it has nothing to do with terms, at all (for instance: whether the service has a nice design interface, whether it uses free software as a backend, whether they provide HTTPS, etc.)
+ * it has been superseded by a duplicated point, for instance this happens when we create standardised points applying to multiple services
+ * it no longer applies, for instance when a service has changed their terms.
+ 
+## additional points
+
+Additional points are points which are somewhat related to the terms, but they're almost irrelevant. They don't influence the class and they are not displayed.
+
 # template
 
 	{
