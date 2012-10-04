@@ -1,4 +1,4 @@
-[this file is deprecated, please read /topics/README.md instead]
+
 
 
 leave             Right to leave the service // To avoid lock-in and stay in control // Once you subscribe to the service, will you have the right to leave it and remove your data?
