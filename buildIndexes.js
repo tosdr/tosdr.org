@@ -41,7 +41,7 @@ function addToTopics(topics, point) {
 function parsePointFile(id) {
   var data = fs.readFileSync('points/'+id+'.json');
   var obj = JSON.parse(data.toString());
-  if(obj.disputed || obj.additional) {
+  if(obj.disputed || obj.irrelevant || obj.additional) {
     return;
   }
   if(typeof(obj.service)=='string') {
