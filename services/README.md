@@ -8,16 +8,13 @@
 	  	"sitename": "",
 	  	"terms": {
 	  		"name": "",
-	  		"url": "",
-	  		"last-archive": {
-	  			"uri": "",
-	  			"time": ""
-	  		}
+	  		"url": ""
 	  	}
 	  },
 	  "tosdr": {"rated": false},
 	  "related": [""],
 	  "keywords": "",
 	  "freesoftware": true,
-	  "dataexport": true
+	  "dataexport": true,
+	  "federated": true
 	}
