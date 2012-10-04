@@ -85,7 +85,8 @@ Can you control your privacy?
 
 #data-export 
 Data portability  
-Can you get your data back?
+Can you get your data back?  
+It must be in the terms, otherwise it's not a point because it's only a feature that they can remove any time they want.
 
 #suspension
 Suspension and Censorship  
