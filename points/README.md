@@ -29,6 +29,8 @@ or
 	
 The name is very important, as it is the first thing in the summary the user will see. Please use a capital letter to begin with. Don't make half-formed sentences like "will send you a notice 14 days in advance" but prefer "Service-X will send you a notice 14 days in advance" or even better, for usual topics: "Changes will be notified 14 days in advance". One thing that makes good names also is to start with "Services-X do something" or "You/Your… etc." That way it's easy for the user to identify who's got to do what.
 
+Also, don't use abbreviations or acronyms unless everybody understands them. For instance, don't say "personal info" but "personal information" and don't use "ToS", you can just write "terms".
+
 # service
 
 This is the list of services to which the point apply. You have to use the service's id. For this, look in the services/ directory for the service's file. If you do not find it, then maybe you need to create it. Follow the instructions in services/README.md for this.
