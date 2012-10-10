@@ -13,8 +13,12 @@
 	  },
 	  "tosdr": {"rated": false},
 	  "related": [""],
-	  "keywords": "",
+	  "parent": "",
+	  "keywords": [""],
 	  "freesoftware": true,
+	  "license": "",
 	  "dataexport": true,
 	  "federated": true
 	}
+	
+The license should follow the Debian/SPDX standards of notation, see  http://dep.debian.net/deps/dep5/#license-specification
