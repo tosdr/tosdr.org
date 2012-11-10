@@ -21,7 +21,7 @@
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
 	</head>
-	<body id="index-html" >
+	<body id="index-html" data-spy="scroll">
 
 		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
@@ -35,10 +35,10 @@
 					<a class="brand" href="#"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class=""><a href="#services">Rated Services</a></li>
-							<li class=""><a href="#classification">Classification</a></li>
-							<li class=""><a href="#workinprogress">Progress</a></li>
-							<li class=""><a href="#wthru">About</a></li>
+							<li class=""><a href="#services">Ratings</a></li>
+<!--							<li class=""><a href="#classification">Classification</a></li>-->
+<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
+							<li class=""><a href="about.html">About</a></li>
 <!--							<li class=""><a href="#categories">Categories</a></li>-->
 						</ul>
 <!--						<p class="pull-right">-->
@@ -59,57 +59,35 @@
 
 				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
 				We&nbsp;aim to&nbsp;fix&nbsp;that.</h2>
-				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span></p>
 			</section>
 		</div><!--hero-unit-->
-		
 
 		<div  class="container" id="tosdr-content" role="main">
 		
-		<div class="row"><div class="span9">
-			<section id="funding">
-				<h2 class="page-header">Thank you! <small>We have reached our goal!</small></h2>
+			<section>
+				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span>.
+				<a class="btn" href="about.html">Learn more…</a></p>
 				
-				<p><big>
-				  “Terms of Service; Didn't Read” has been running since June. We got a lot of attention, and everybody loved the idea! We have benefited from the help of many individuals who, like you, believe the <em>status quo</em> of the biggest lie on the web should be fixed. Now, <strong>we need <em>your</em> help</strong> to continue the work.
-				</big></p>
-				<p>
-				  <a href="http://igg.me/p/223726?a=1216333" class="btn btn-success btn-large disabled">Funding campaign is over</a>
-				  <a href="http://flattr.com/thing/821090/ToSDR" target="_blank" title="Flattr this" class="btn btn-success btn-large">Donate with Flattr</a>
-				</p>
-				<p>
-				  We need about 10,000 euros to actually get this off the ground. With that we can pay part-time and full-time expert curators, who will double-check all discussion outcomes and make sure the reviews and ratings reliably reflect the consensus in the open discussions.</p>
-				  <p>We have some really cool perks for you if you donate! Ranging from a thank you note on our website, an exclusive "crowd angel" T-shirt, to us visiting you for a discussion conference. But most importantly, you will know that you stood up against those unreadable service terms, and helped to raise awareness about people's rights online!
-				</p>
+				<p>Terms of service are often <strong>too long to read</strong>, but it's important to understand what's in them. Your rights online depend on them. Get informed about your rights: install the browser extension for <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg">Chrome</a>, <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/">Opera</a> or <a href="http://safariextension.tos-dr.info/">Safari</a>.</p>
 			</section>
 			
-			<section id="inthenews"">
-				<a href="http://moneyland.time.com/2012/08/10/new-site-grades-those-pesky-terms-of-service-agreements-you-never-read/"><img src="img/time.png" alt="Time" /></a>
-				<a href="http://gigaom.com/2012/08/14/i-agree-why-terms-of-service-report-cards-are-a-good-idea/"><img src="img/gigaom.gif" alt="GigaOM" /></a>
-				<a href="http://www.theverge.com/2012/8/14/3241572/tos-dr-terms-of-service"><img src="img/verge.png" alt="The Verge" /></a>
-				<a href="http://www.lemonde.fr/technologies/article/2012/08/14/un-site-veut-mettre-fin-au-mensonge-des-conditions-d-utilisation-sur-internet_1745942_651865.html"><img src="img/lemondefr.png" alt="Le Monde" /></a>
-				<a href="http://www.zeit.de/digital/internet/2012-08/terms-of-service-did-not-read"><img src="img/zeit.png" alt="Die Zeit" /></a>
-				
-			</section>
-			</div>
-			<div class="span3">
-			<iframe src="http://www.indiegogo.com/project/223726/widget/1216333" width="224px" height="429px" frameborder="0" scrolling="no"></iframe>
-			</div>
-		</div>
-			
-			<section id="services" style="clear:both">
-				<h2 class="page-header">Rated Terms of Service <small><a href="#classification">Learn more about the ratings</a></small></h2>
+			<section id="services">
+				<h2 class="page-header">Ratings</h2>
 
-				<div id="filter-services" class="well row">				
-					<div id="searchDiv" style="display:none" class="span9">
-						<form class="form-search">
-							<div class="input-prepend">
-								<a href="#services" class="btn">Search</a>
-								<input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. facebook, twitter, search…"><span class="help-inline">This a very early prototype, <a href="https://github.com/didnotread/didnotread.org/issues/30">improve the code</a></span>
-							</div>
-						</form>
+				<div class="row">
+					<div id="filter-services" class="span9">				
+						<div id="searchDiv" style="display:none">
+							<form class="form-search">
+								<div class="input-prepend">
+									<a href="#services" class="btn">Search</a>
+									<input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. facebook, twitter, search…">
+									<a data-original-title="Help us improve it! Thanks :-)" href="https://github.com/didnotread/didnotread.org/issues/30" rel="tooltip" data-placement="right">?</a>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div id="filter-by" class="span2">
+			
+					<div id="filter-by" class="span3">
 						<ul class="nav nav-pills">
 							<li class="active"><a href="#services">Services</a></li>
 							<li><a href="topics.html#topics">Topics</a></li>

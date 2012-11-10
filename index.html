@@ -21,7 +21,7 @@
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
 	</head>
-	<body id="index-html" >
+	<body id="index-html" data-spy="scroll">
 
 		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
@@ -35,10 +35,10 @@
 					<a class="brand" href="#"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class=""><a href="#services">Rated Services</a></li>
-							<li class=""><a href="#classification">Classification</a></li>
-							<li class=""><a href="#workinprogress">Progress</a></li>
-							<li class=""><a href="#wthru">About</a></li>
+							<li class=""><a href="#services">Ratings</a></li>
+<!--							<li class=""><a href="#classification">Classification</a></li>-->
+<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
+							<li class=""><a href="about.html">About</a></li>
 <!--							<li class=""><a href="#categories">Categories</a></li>-->
 						</ul>
 <!--						<p class="pull-right">-->
@@ -59,57 +59,35 @@
 
 				<h2>“<em>I have read and agree to the Terms</em>” is the biggest lie on the web.&nbsp;
 				We&nbsp;aim to&nbsp;fix&nbsp;that.</h2>
-				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span></p>
 			</section>
 		</div><!--hero-unit-->
-		
 
 		<div  class="container" id="tosdr-content" role="main">
 		
-		<div class="row"><div class="span9">
-			<section id="funding">
-				<h2 class="page-header">Thank you! <small>We have reached our goal!</small></h2>
+			<section>
+				<p>We are a user rights initiative to rate and label website terms & privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span class="label E">Class E</span>.
+				<a class="btn" href="about.html">Learn more…</a></p>
 				
-				<p><big>
-				  “Terms of Service; Didn't Read” has been running since June. We got a lot of attention, and everybody loved the idea! We have benefited from the help of many individuals who, like you, believe the <em>status quo</em> of the biggest lie on the web should be fixed. Now, <strong>we need <em>your</em> help</strong> to continue the work.
-				</big></p>
-				<p>
-				  <a href="http://igg.me/p/223726?a=1216333" class="btn btn-success btn-large disabled">Funding campaign is over</a>
-				  <a href="http://flattr.com/thing/821090/ToSDR" target="_blank" title="Flattr this" class="btn btn-success btn-large">Donate with Flattr</a>
-				</p>
-				<p>
-				  We need about 10,000 euros to actually get this off the ground. With that we can pay part-time and full-time expert curators, who will double-check all discussion outcomes and make sure the reviews and ratings reliably reflect the consensus in the open discussions.</p>
-				  <p>We have some really cool perks for you if you donate! Ranging from a thank you note on our website, an exclusive "crowd angel" T-shirt, to us visiting you for a discussion conference. But most importantly, you will know that you stood up against those unreadable service terms, and helped to raise awareness about people's rights online!
-				</p>
+				<p>Terms of service are often <strong>too long to read</strong>, but it's important to understand what's in them. Your rights online depend on them. Get informed about your rights: install the browser extension for <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg">Chrome</a>, <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/">Opera</a> or <a href="http://safariextension.tos-dr.info/">Safari</a>.</p>
 			</section>
 			
-			<section id="inthenews"">
-				<a href="http://moneyland.time.com/2012/08/10/new-site-grades-those-pesky-terms-of-service-agreements-you-never-read/"><img src="img/time.png" alt="Time" /></a>
-				<a href="http://gigaom.com/2012/08/14/i-agree-why-terms-of-service-report-cards-are-a-good-idea/"><img src="img/gigaom.gif" alt="GigaOM" /></a>
-				<a href="http://www.theverge.com/2012/8/14/3241572/tos-dr-terms-of-service"><img src="img/verge.png" alt="The Verge" /></a>
-				<a href="http://www.lemonde.fr/technologies/article/2012/08/14/un-site-veut-mettre-fin-au-mensonge-des-conditions-d-utilisation-sur-internet_1745942_651865.html"><img src="img/lemondefr.png" alt="Le Monde" /></a>
-				<a href="http://www.zeit.de/digital/internet/2012-08/terms-of-service-did-not-read"><img src="img/zeit.png" alt="Die Zeit" /></a>
-				
-			</section>
-			</div>
-			<div class="span3">
-			<iframe src="http://www.indiegogo.com/project/223726/widget/1216333" width="224px" height="429px" frameborder="0" scrolling="no"></iframe>
-			</div>
-		</div>
-			
-			<section id="services" style="clear:both">
-				<h2 class="page-header">Rated Terms of Service <small><a href="#classification">Learn more about the ratings</a></small></h2>
+			<section id="services">
+				<h2 class="page-header">Ratings</h2>
 
-				<div id="filter-services" class="well row">				
-					<div id="searchDiv" style="display:none" class="span9">
-						<form class="form-search">
-							<div class="input-prepend">
-								<a href="#services" class="btn">Search</a>
-								<input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. facebook, twitter, search…"><span class="help-inline">This a very early prototype, <a href="https://github.com/didnotread/didnotread.org/issues/30">improve the code</a></span>
-							</div>
-						</form>
+				<div class="row">
+					<div id="filter-services" class="span9">				
+						<div id="searchDiv" style="display:none">
+							<form class="form-search">
+								<div class="input-prepend">
+									<a href="#services" class="btn">Search</a>
+									<input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. facebook, twitter, search…">
+									<a data-original-title="Help us improve it! Thanks :-)" href="https://github.com/didnotread/didnotread.org/issues/30" rel="tooltip" data-placement="right">?</a>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div id="filter-by" class="span2">
+			
+					<div id="filter-by" class="span3">
 						<ul class="nav nav-pills">
 							<li class="active"><a href="#services">Services</a></li>
 							<li><a href="topics.html#topics">Topics</a></li>
@@ -781,114 +759,47 @@ https://www.rapidshare.com/#!rsag_ppolicy
 </ul></section>
 <section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>
 </div><div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#instagram" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for Instagram</a></div>
-</div></div>      </section>
-
-			<section id="classification">
-				
-				<div class="page-header"><h2>Classification <small>Making the fine print easy to understand</small></h2></div>
-        			
-        			<p>
-        				Terms of service are reviewed by contributors and divided into small points that we can discuss, <a href="topics.html">compare</a> and ultimately assign a score with a badge: <br /><span class="badge badge-success"><i class="icon-thumbs-up icon-white">+</i> Good</span>, <span class="badge badge-warning"><i class="icon-thumbs-down icon-white">-</i> Mediocre</span>, <span class="badge badge-important"><i class="icon-remove icon-white">×</i> Alert</span>, or <span class="badge"><i class="icon-arrow-right icon-white">→</i> Informative</span>.
-        			</p>
-        			
-        			<p>
-        				Once a service has enough badges to assess the fairness of their terms for users, a class is assigned automatically by pondering the average scores.
-        			</p>
-				<p>
-					<span class="label A" style="vertical-align:middle">Class A</span> are the best terms of services: they treat you fairly, respect your rights and will not abuse your data.
-				</p>
-				<p><span class="label B">Class B</span>&nbsp; The terms of services are fair towards the user but they  could be improved.</p>
-				<p><span class="label C">Class C</span>&nbsp; The terms of service are okay but some issues need your consideration.</p>
-				<p><span class="label D">Class D</span>&nbsp; The terms of service are very uneven or there are some important issues that need your attention.</p>
-				<p><span class="label E">Class E</span>&nbsp; The terms of service raise very serious concerns.</p>
-				<p><span class="label false">No Class Yet</span>&nbsp; We haven't sufficiently reviewed the terms yet.
-			</section>
-			
-			
-			<section id="workinprogress">
-				<div class="page-header"><h2>Work in Progress <a href="get-involved.html" class="btn btn-primary">Get involved! »</a></h2></div>
-				<p>
-					ToS;DR is a young project started in June 2012.  The data is subject to important changes. This is your opportunity to help us fix the “biggest lie on the web”: join us if you have information to contribute related to specific terms or if you have a comment!
-				</p>
-				
-				<p>
-					ToS;DR aims at creating a transparent and peer-reviewed process to rate and analyse Terms of Service and Privacy Policies in order to create a rating from Class A to Class E. We need more <strong>legal expertise</strong>, please also join the working-group. We also need people to contribute source code. Everything is <strong>JavaScript</strong> and JSON. The data is freely available (CC-BY-SA) and ready to be used for other tools, like browser extensions.
-				</p>
-				
-				<p class="pull-left">
-					<a href="https://groups.google.com/d/forum/tosdr" class="btn"><img src="img/icons/group.png" style="width:20px; opacity:0.6;" />&nbsp; Join the working group</a>&nbsp;
-					<br />
-					<small>No Google account? <a href="mailto:tosdr+subscribe@googlegroups.com">Join by email</a></small>
-				</p>
-				<p>
-					<a href="http://webchat.freenode.net/?channels=#tosdr" class="btn"><img src="img/icons/conversation.png" style="width:20px; opacity:0.6;" />&nbsp; Chat #tosdr on IRC</a>
-					<a href="http://github.com/didnotread/didnotread.org" class="btn"><img src="img/github.png" /> Source Code and Issues</a>
-				</p>
-				
-				
-				
-				<h3 style="clear:both">Roadmap</h3>
-				<ul>
-					<li>Mid-July: Finishing analysis of major terms: <a href="#facebook">social</a> <a href="#twitter">net</a><a href="#seenthis">works</a>, <a href="#duckduckgo">search</a> <a href="#google">engines</a>, <a href="#twitpic">pho</a><a href="#500px">to</a> <a href="#soundcloud">sharing</a>, blogs. (Done: 90%)</li>
-					<li>End-July: Implementation of comparisons by category or <a href="topics.html">specific topic</a>; Improvement of score and rating systems. (Done: 100%)</li>
-					<li>Mid-August: <a href="api.html">API</a>, crowd-sourcing and integration with Tosback2, add ability to subscribe. (Done:50%)</li>
-					<li>End-August: <a href="http://www.campus-party.eu/2012/security.html#Keyun">Presentation of ToS;DR at Campus Party, Berlin</a></li> 
-					<li>September: Crowd funding campaign to make the project sustainable.</li>
-				</ul>
-				
-			</section>
+</div></div>			</section>
 
 			
-			<section id="wthru">
-				<div class="page-header"><h2>About <small>this Unhosted project</small></h2></div>
-				<p>
-					The rough idea behind ToS;DR emerged during the <a href="http://events.ccc.de/camp/2011/wiki/ToS;DR">2011 Chaos Communication Camp</a> near Berlin, with people from <a href="http://unhosted.org">Unhosted</a> a movement to create web apps that give users control over their valuable user data and privacy. Since June 2012, <a href="http://hugoroy.eu/index.en.html">Hugo Roy</a> (<a href="http://twitter.com/hugoroyd">@hugoroyd</a>) has taken the lead for the project, and started the legal analysis. Ultimately, all the work is transparent and the discussions happen in public.  Our work is funded by non-profits organisations and individual <a href="https://flattr.com/thing/821090/ToSDR">donations</a> and gets released as <a href="http://fsfe.org/about/basics/freesoftware.html">free software</a> and open data.</a>
-				</p>
-				<p><strong>What does “ToS;DR” mean?</strong> the name is inspired by internet acronym TL;DR which stands for "Too Long; Didn't Read" and is often used on blogs and emails when a block of text is just really long and that people are too lazy to read the whole stuff. It was intended more as a code name than as a real name. But it seems that people like it (do you?)</p>
-				
-				<div class="row-fluid">
-					<div class="span1">
-						<img src="img/hugo.png" alt="" />
-					</div>
-					<div class="span3">
-						<h3><a href="http://hugoroy.eu/index.en.html">Hugo Roy</a> Project Lead <small><a href="http://twitter.com/hugoroyd">@hugoroyd</a></small></h3>
-						<p>
-							 Hugo is a Free Software hacktivist at <a href="http://fsfe.org">Free Software Foundation Europe</a> and a law student at <em>Sciences Po</em> university. He is currently living between Berlin and Paris, where he is often referred to as a Zappa Freak. 
-						</p>
-					</div>
-					
-					
-					<div class="span1">
-						<img src="img/michiel.jpg" alt="" />
-					</div>
-					
-					<div class="span3">
-						<h3><a href="http://michielbdejong.com/">Michiel de Jong</a> <small><a href="http://twitter.com/michielbdejong">@michielbdejong</a></small></h3>
 
-						<p>
-              Michiel de Jong is an independent freedom hacker, travelling the world while programming for the revolution from his laptop. Apart from ToS;DR he is also involved in <a href="http://2012.unhosted.org">The Unhosted Unconference</a> and he is a co-author of <a href="http://www.w3.org/community/unhosted/wiki/RemoteStorage">the remoteStorage protocol</a>.
-						</p>
-					</div>
+		</div> <!-- /container -->
 
-
-					<div class="span1">
-						<img src="img/jan.jpg" alt="" />
-					</div>
-
-					<div class="span3">
-						<h3><a href="http://jancborchardt.net">Jan-Christoph Borchardt</a> <small><a href="http://twitter.com/jancborchardt">@jancborchardt</a></small></h3>
-
-						<p>
-							Jan-Christoph Borchardt is a free culture interaction designer, advisor & educator. He curates <a href="http://libreprojects.net">open source web projects</a>, designs <a href="http://unhosted.org">unhosted web apps</a> & <a href="http://ownCloud.org">ownCloud</a> and <a href="http://jancborchardt.net/usability-in-free-software">teaches better usability</a>.
-						</p>
-					</div>
-				</div>
-			</section>
+		<footer id="bottom">
+			<div class="container">
+				<nav id="sitemap">
+					<ul class="row">
+						<li class="span3"><a href="index.html">Home</a>
+							<ul>
+								<li><a href="index.html#services">Rated Services</a></li>
+								<li><a href="topics.html#topics">Rated Topics</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="about.html">About</a>
+							<ul>
+								<li><a href="about.html#contact">Contact us</a></li>
+								<li><a href="about.html#classification">Classification</a></li>
+								<li><a href="legal.html">Legal</a></li>
+								<li><a href="about.html#blog">Blog</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="contribute.html">Contribute</a>
+							<ul>
+								<li><a href="contribute.html#join">Join us</a></li>
+								<li><a href="get-involved.html">Get involved</a></li>
+								<li><a href="code.html">Source code</a></li>
+							</ul>
+						</li>
+						<li class="span3">Spread
+							<ul>
+								<li><a href="http://twitter.com/tosdr">Follow us on twitter</a></li>
+								<li><a href="http://flattr.com/thing/821090/ToSDR">Donate on Flattr</a></li>
+								<li><a href="http://github.com/didnotread/">Fork us on GitHub</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			
-			
-
-
-			<footer id="bottom">
 				<p id="credits"><strong><a href="http://tos-dr.info">Terms of Service; Didn&apos;t Read</a></strong> is a project by <a href="http://unhosted.org">Unhosted</a>, inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://github.com/pde/tosback2">TOSBack</a>. Also related: <a href="http://www.opennotice.org/">OpenNotice</a>.</p>
 				
 				<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms to which you are bound.</strong> Disclosure: a list of donors and supporters of Unhosted <a href="http://unhosted.org/#thanks">is published</a>. DuckDuckGo has donated to the Unhosted project, before they knew about ToS;DR. <a href="legal.html">All legal information and Imprint</a>.</p>
@@ -897,17 +808,9 @@ https://www.rapidshare.com/#!rsag_ppolicy
 				<p id="licensing"><a href="http://tos-dr.info">ToS;DR</a> is Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). Offer for <a href="https://github.com/didnotread/didnotread.org/zipball/master">Source (zip)</a>. The <code>.json</code> data inside the <a href="https://github.com/didnotread/didnotread.org/tree/master/services"><code>services/</code></a> and <a href="https://github.com/didnotread/didnotread.org/tree/master/points"><code>points/</code></a> directories are  also licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. Thumbs Up and Thumbs Down icons modified by Jan.</p>
 				
 				<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a href="https://5apps.com/apps/4fd06274c439346fd700005e"><img src="img/unhostedby5apps.png" alt="5apps" /></a>
-			</footer>
-			
-			
-			<!--alerts etc-->
-			<div class="container" id="alerts-etc">
-				<div id="browser-extension" class="pull-right alert fade in"><button type="button" class="close" data-dismiss="alert">×</button>
-					We have a browser extension for <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg">Chrome</a>, <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/">Opera</a> and <a href="http://safariextension.tos-dr.info/">Safari</a>. Try them out!
-				</div>
 			</div>
+		</footer>
 
-		</div> <!-- /container -->
 <!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
 		<script src="bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bootstrap/js/bootstrap-modal.js"></script>

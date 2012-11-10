@@ -3,7 +3,7 @@
 /*General tweak of boostrap*/
 
 section { margin-bottom:4em; padding-top:2em; } 
-.page-header { padding:0; margin:@baseLineHeight 0 @baseLineHeight/3; border-bottom:none; }
+/*.page-header { padding:0; margin:@baseLineHeight 0 @baseLineHeight/3; border-bottom:none; }*/
 h2,h3 {font-weight:600;}
 .center {text-align:center;}
 
@@ -199,6 +199,7 @@ background:#FFFFFF;
 #filter-services .results {min-height:30px;}
 
 
+
 /* Services listing*/
 #services-list {margin-bottom:2em;}
 #services-list .service-nutshell {padding-top:2.5em;}
@@ -219,6 +220,12 @@ margin-left: .6em;
 padding:0 1em;
 }
 
+
+/*Topics Listing*/
+
+#topics-list {
+clear:both;
+}
 
 /*Categories listing*/
 #categories .badge {float:left;margin-right:.5em;}
@@ -313,24 +320,52 @@ body {
 
 }
 
+/*footer*/
 #bottom {
-	border-top: 1px solid #CCC;
-	padding-top:2em;
+	margin-top:5em;
+	border-top: 1px solid @grayLight;
+	padding:3em 0;
+	background: @grayLighter;
 }
+
+#bottom #sitemap {
+	background: darken(@grayLighter, 5%);
+	padding: 2em;
+	margin: 0em -2em 2em -2em;
+	border-radius: 1em;
+	color: @gray;
+}
+
+#bottom #sitemap ul {
+	list-style:none;
+	font-weight:bold;
+}
+
+#bottom #sitemap ul li ul {
+	list-style-type:disc;
+	font-weight: 400;
+}
+
+/*.navbar-inner {*/
+/*color:#ddd;*/
+/*text-shadow: rgb(0,0,0) 0px 1px 0px;*/
+/*background: rgba(53,53,53,0.85) @BackgroundGranul;*/
+/*}*/
+/*.navbar .brand, .navbar .nav > li > a { color:#ddd; text-shadow: rgb(0,0,0) 0px 1px 0px;}*/
+/*.navbar li.active { background: rgb(66,66,66) @BackgroundGranul;}*/
+/*.navbar li.active a	 { background: rgb(66,66,66) @BackgroundGranul;}*/
+/*.navbar .nav > li > a:hover { color:#ddd;}*/
+
+/*.navbar-inner .btn-navbar {background: rgb(66,66,66)}*/
 
 .navbar-inner .follow-us {
-	line-height: 19px;
-	padding: 9px 10px 0 0;
+	line-height: 20px;
+	padding: 10px 10px 0 0;
 }
 
-
-#menu-options .navbar-inner {
-color:#ddd;
-background: rgba(53,53,53,0.85) @BackgroundGranul;
-}
-.navbar .brand, .navbar .nav > li > a { color:#ddd; }
 .follow-us a{color:#5df;}
 .follow-us a:hover{color:#aef;}
+
 
 .hero-unit {padding: 60px 0 20px; }
 .hero-unit section {margin-bottom: 1em; padding: 0 30px;}
