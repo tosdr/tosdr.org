@@ -82,15 +82,15 @@ function renderDetails(name, points, toslinks, obj) {
   console.log(points);
   console.log(toslinks);
   console.log(obj);
-  var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt=""><a data-toggle="modal" href="#'+name+'-tosdr">'+obj.name+'</a>';
+  var header = '<h3><img src="logo/'+name+'.png" class="favlogo" alt=""><a data-toggle="modal" href="#'+name+'">'+obj.name+'</a>';
   var rating;
   if(!obj.tosdr) {
     obj.tosdr = {rated: false};
   }
   if(obj.tosdr.rated) {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
   } else {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'-tosdr"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
   }
   var renderables=[];
   for(var i in points) {
@@ -106,7 +106,7 @@ function renderDetails(name, points, toslinks, obj) {
       +'</li>';
   }
   issues += '</ul>'
-    +'<a data-toggle="modal" id="button-'+name+'-tosdr" href="#'+name+'-tosdr" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
+    +'<a data-toggle="modal" id="button-'+name+'" href="#'+name+'" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
     +(toslinks.terms ? '&nbsp;<a href="'+toslinks.terms.url+'" class="btn btn-mini" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>':'')
     +'</section>';
   var search = [name];
@@ -129,7 +129,7 @@ function renderDetails(name, points, toslinks, obj) {
   if(obj.parent) {
     search.push(obj.parent);
   }
-  return '<div data-search="'+search.join(',')+'" id="'+name+'" class="span6 service-nutshell">'
+  return '<div data-search="'+search.join(',')+'" id="'+name+'-tosdr" class="span6 service-nutshell">'
           +header+rating+issues
           +'</div>';
 }
@@ -222,7 +222,7 @@ function go() {
       lastObj = obj;
     }
     popups +=
-      '<div id="'+serviceName+'-tosdr" class="modal hide tosdr-infos" role="dialog">'
+      '<div id="'+serviceName+'" class="modal hide tosdr-infos" role="dialog">'
       +renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links)
       +'</div>';
     //renderPopup(name, obj.name, obj.url, obj.tosdr.rated, ratingText[obj.tosdr.rated], points, toslinks);
