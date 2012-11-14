@@ -59,25 +59,29 @@
 					<input type="text" placeholder="facebook.com">
 					<button class="btn btn-inline" type="button">Add one</button>
 					
-					<label id="id">Identifier<span class="required">*</span></label>
-					<input type="text" placeholder="facebook">
+<!--					Removed -- it should be automatically generated from the first url or something…-->
+<!--					<label id="id">Identifier<span class="required">*</span></label>-->
+<!--					<input type="text" placeholder="facebook">-->
 					
-					<label id="keywords">Keywords</label>
-					<input type="text" placeholder="social network"><span class="help-inline">please use commas to separate keywords</span>
+					<label id="tags">Tags</label>
+					<input type="text" placeholder="social network">
 					
-					<label id="related">Related services</label>
-					<input type="text" placeholder="diaspora">
+					<label id="related">Similar services</label>
+					<input type="text" placeholder="Diaspora">
 					<button class="btn btn-inline" type="button">Add one</button>
 					
+<!--					It's confusing because not clear what it is for hte user. Maybe grey it out and activate it only when a checkbox is activated. -->
 					<label id="parent">Parent service/software</label>
 					<input type="text" placeholder="">
 					
 					<legend>Where are the terms?</legend>
 					<label id="tosback3">
-						<input type="text" placeholder="Terms of Service"> <input type="text" class="input-xxlarge" placeholder="http://www.facebook.com/legal/terms"> <a href="#">Archived version</a>
+						<input type="text" placeholder="Terms of Service"> <input type="text" class="input-xxlarge" placeholder="http://www.facebook.com/legal/terms"> <a href="#">Archived version</a> 	
+<!--						The archive link is confusing-->
 					</label>
 					<label>
-						<input type="text" placeholder="Data Use Policy"> <input type="text" class="input-xxlarge placeholder="http://www.facebook.com/legal/full-data-use"> <a href="#">Archived version</a>
+<!--					Need to add a way to remove a field -->
+						<input type="text" placeholder="Privacy Policy"> <input type="text" class="input-xxlarge placeholder="http://www.facebook.com/legal/full-data-use"> <a href="#">Archived version</a>
 					</label>
 					<button class="btn" type="button">Add another agreement document</button>
 
