@@ -282,9 +282,7 @@ margin:5px 3%;
 
 #wthru .span1 img {
 margin:.5em 0 0 1.5em;
-border-radius:50%;
 height:48px;
-box-shadow:0 0 .2em #555;
 }
 #wthru h3 small { display:block; }
 
@@ -328,6 +326,11 @@ li.point span.badge { padding: 1px 9px; }
 
 body {
 
+}
+
+img.avatar {
+	border-radius:50%;
+	box-shadow:0 0 .2em #555;
 }
 
 /*footer*/
@@ -392,6 +395,31 @@ margin-top:2em;
 
 /*Blog*/
 
+.blog footer.meta {
+	border-top: 1px solid @grayLighter;
+	margin-top: 3em;
+	padding-top: 2em;
+	text-align: center;
+}
+
+.blog footer.meta time, .blog footer.meta .authors {
+	display:block;
+	padding: .2em 0;
+}
+
+.blog footer.meta .author {
+	margin:0 .5em;
+}
+
+.blog footer.meta .author img {
+	height:2em;
+	margin-right:.5em;
+}
+
+.blog footer.meta .tags {
+	display: none;
+}
+
 /*Blog index.html*/
 
 .blog.archive {
@@ -411,6 +439,10 @@ display:inline-block;
 width:120px;
 }
 
+.blog.archive ul#blog-index .authors {
+	font-style: italic;
+}
+
 /*Blog article*/
 
 .blog.article {
@@ -421,3 +453,5 @@ width:120px;
 	padding-top:6em;
 	max-width:600px;
 }
+
+
