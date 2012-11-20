@@ -23,7 +23,7 @@
 		
 		<script src="../js/topics.js"></script>
 	</head>
-	<body id="ymh8uR_j51A-html" class="point" data-spy="scroll">
+	<body id="ymh8uR_j51A-html" class="point-html" data-spy="scroll">
 
 		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
@@ -56,7 +56,54 @@
 
 		<div  class="container" id="tosdr-content" role="main">
 
+			<section id="ymh8uR_j51A">
+				<div class="pull-right">
+					<a href="#" class="btn">Edit</a>
+				</div>
+				
+				<h1 id="name" class="page-header"><img alt="" title="github" class="pull-left favlogo" src="../logo/github.png"> Your personal information is used for limited purposes </h1>
+				
+
+				
+				<div id="connected">
+					<span class="pull-left">
+						Applies to:
+					</span>
+					<ul id="services">
+						<li><a href="../service/github.html">GitHub</a></li>
+					</ul>
+				
+				</div>
+				<div id="tosdr">
+					<span class="pull-left">
+						Deals with:
+					</span>
+					<ul id="topics">
+						<li><a href="../topics.html#personal-data">Personal Data</a></li>
+					</ul>
+									
+					<a href="https://groups.google.com/d/topic/tosdr/ymh8uR_j51A/discussion" target="_blank" class="label context">Discuss this</a>
+				
+					<a href="https://help.github.com/privacy-policy" target="_blank" class="label context">Source</a>
+					
+					
+				
+					<p id="tldr"><span id="point" class="badge badge-success"><span id="score">50</span></span> “The information we collect is used to improve the content of our Web pages and the quality of our service, and is not shared with or sold to other organizations for commercial purposes, except to provide products or services you’ve requested, when we have your permission, […] GitHub uses collected information for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.”</p>
 			
+				</div>
+			 </section>
+			 <section id="meta">
+			 	<p id="keywords">
+			 	<span class="pull-left">
+					Keywords:
+				</span>
+				<span>None</span></p>
+				 <p id="license-for-this-file">This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, .USA</p>
+			  	<p id="credits">&copy; <span id="author">ToS;DR by Unhosted</span>. Contributions by: <span id="contributors">Hugo Roy «hugo@unhosted.org»</span></p>
+			  	<p id="api">
+			  		<a href="../points/ymh8uR_j51A.json">JSON</a>
+			  	</p>
+			 </section>
 
 		</div> <!-- /container -->
 		<footer id="bottom">
@@ -113,46 +160,5 @@
 		<script src="../bootstrap/js/bootstrap-transition.js"></script>
 <!--		<script src="../bootstrap/js/bootstrap-typeahead.js"></script>-->
 <!--		<script src="../bootstrap/js/bootstrap-alert.js"></script>-->
-		<script>
-      $(window).load(function(){
-        if(location.hash.length>1 && $('#'+location.hash.substring(1)+'-tosdr')) {
-          $('#'+location.hash.substring(1)+'-tosdr').modal();
-        }
-      });
-      document.getElementById('searchBox').onkeyup = function() {
-        var serviceDivs = document.getElementsByClassName('service-nutshell');
-        var searchTerm = document.getElementById('searchBox').value.toLowerCase();
-        var tophit;
-        for(var i=0; i<serviceDivs.length; i++) {
-          var terms = [];
-          for(var j=0; j<serviceDivs[i].attributes.length; j++) {
-            if(serviceDivs[i].attributes[j].name=='data-search') {
-              terms = serviceDivs[i].attributes[j].value.split(',');
-              break;
-            }
-          }
-          var match = false;
-          for(var j=0; j<terms.length; j++ ) {
-            if(terms[j].substring(0, searchTerm.length) == searchTerm) {
-              match=true;
-              break;
-            }
-          }
-          if(match) {
-            serviceDivs[i].style.display='block';
-            if(serviceDivs[i].id.substring(0, searchTerm.length)==searchTerm) {
-              tophit=i;
-            }
-          } else {
-            serviceDivs[i].style.display='none';
-          }
-        }
-        //if(typeof(tophit) != 'undefined') {
-        //  var elt = document.getElementById('services-list').removeChild(serviceDivs[tophit]);
-        //  document.getElementById('services-list').insertBefore(elt, serviceDivs[0]);//
-        //}
-      };
-      document.getElementById('searchDiv').style.display="block";
-		</script>
 	</body>
 </html>
