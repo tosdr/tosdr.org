@@ -88,9 +88,9 @@ function renderDetails(name, points, toslinks, obj) {
     obj.tosdr = {rated: false};
   }
   if(obj.tosdr.rated) {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
   } else {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
   }
   var renderables=[];
   for(var i in points) {
