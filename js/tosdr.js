@@ -1,8 +1,3 @@
-//      $(window).load(function(){
-//        if(location.hash.length>1 && $('#'+location.hash.substring(1)+'-tosdr')) {
-//          $('#'+location.hash.substring(1)+'-tosdr').modal();
-//        }
-//      });
 document.getElementById('searchBox').onkeyup = function () {
   var serviceDivs = document.getElementsByClassName('service-nutshell');
   var searchTerm = document.getElementById('searchBox').value.toLowerCase();
@@ -37,3 +32,20 @@ document.getElementById('searchBox').onkeyup = function () {
   //}
 };
 document.getElementById('searchDiv').style.display = "block";
+
+$(function () {
+  $('.modal').on('hidden', function () {
+    window.history.pushState(null, null, "#");
+  });
+
+  $('.modal').on('shown', function () {
+    var popuUpId = $(this).attr('id');
+    window.history.pushState(null, null, "#" + popuUpId);
+  });
+
+  if (location.hash.length > 1) {
+    $('#' + location.hash.substring(1)).modal();
+  }
+
+});
+
