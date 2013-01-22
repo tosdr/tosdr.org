@@ -88,9 +88,9 @@ function renderDetails(name, points, toslinks, obj) {
     obj.tosdr = {rated: false};
   }
   if(obj.tosdr.rated) {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label '+obj.tosdr.rated+'">Class '+obj.tosdr.rated+'</span></a></div></h3>';
   } else {
-    rating = '<div id="'+name+'-rating" class="service-rating"><a data-toggle="modal" href="#'+name+'"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
+    rating = '<div id="'+name+'-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label '+obj.tosdr.rated+'">No Class Yet</span></a></div></h3>';
   }
   var renderables=[];
   for(var i in points) {
@@ -131,7 +131,7 @@ function renderDetails(name, points, toslinks, obj) {
   }
   return '<div data-search="'+search.join(',')+'" id="'+name+'-tosdr" class="span6 service-nutshell">'
           +header+rating+issues
-          +'</div>';
+          +'</div>\n';
 }
 function isEmpty(map) {
   for(var key in map) {
@@ -233,15 +233,15 @@ function go() {
   if(last) {
     servicesList += '<div class="row-fluid">'
           +renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
-      +'</div>';
+      +'</div>\n';
   }
   fs.writeFileSync('index.html',
     fs.readFileSync('index-prefix.html').toString()
-	  +'<div id="services-list" class="row">'
+	  +'<div id="services-list" class="row">\n'
     +servicesList
-	  +'</div> <div id="popups">'
+	  +'</div>\n<div id="popups">\n'
     +popups
-    +'</div>'
+    +'</div>\n'
     +fs.readFileSync('index-suffix.html').toString()
   );
 }
