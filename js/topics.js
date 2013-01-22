@@ -101,7 +101,7 @@ function renderDetails(name, points) {
     if (obj.parent) {
       parent = '&nbsp;<small>(Category: <a href="#' + obj.parent + '" class="skipToCategory">' + obj.parent + '</a>)</small></p></div>';
     }
-    var issues = '<section class="specificissues"><ul class="tosdr-points row">'
+    var issues = '<section class="specificissues"><ul class="tosdr-points row">';
     for (var i = 0; i < points.length; i++) {
       issues += '<li id="point-' + name + '-' + points[i] + '" class="span6 point"></li>';
     }
