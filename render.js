@@ -131,7 +131,7 @@ function renderDetails(name, points, toslinks, obj) {
   }
   return '<div data-search="'+search.join(',')+'" id="'+name+'-tosdr" class="span6 service-nutshell">'
           +header+rating+issues
-          +'</div>';
+          +'</div>\n';
 }
 function isEmpty(map) {
   for(var key in map) {
@@ -233,15 +233,15 @@ function go() {
   if(last) {
     servicesList += '<div class="row-fluid">'
           +renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
-      +'</div>';
+      +'</div>\n';
   }
   fs.writeFileSync('index.html',
     fs.readFileSync('index-prefix.html').toString()
-	  +'<div id="services-list" class="row">'
+	  +'<div id="services-list" class="row">\n'
     +servicesList
-	  +'</div> <div id="popups">'
+	  +'</div>\n<div id="popups">\n'
     +popups
-    +'</div>'
+    +'</div>\n'
     +fs.readFileSync('index-suffix.html').toString()
   );
 }
