@@ -34,17 +34,39 @@ document.getElementById('searchBox').onkeyup = function () {
 document.getElementById('searchDiv').style.display = "block";
 
 $(function () {
-  $('.modal').on('hidden', function () {
-    window.history.pushState(null, null, "#");
-  });
 
-  $('.modal').on('shown', function () {
-    var popuUpId = $(this).attr('id');
-    window.history.pushState(null, null, "#" + popuUpId);
+  function showModal(serviceName) {
+    var popUpContent = popupsContent[serviceName];
+    if (popUpContent) {
+      // found a corresponding popup
+      var completePopupContent = '<div id="modal_' + serviceName + '" class="modal hide tosdr-infos" role="dialog">' + popUpContent + '</div>';
+      $('body').append(completePopupContent);
+      $('#modal_' + serviceName).modal({
+        keyboard:true
+      }).modal('show');
+
+      // when we close the popup we remove it from the DOM
+      $('.modal').on('hidden', function (toto) {
+        window.history.pushState(null, null, "#");
+        $('#modal_' + serviceName).remove();
+      });
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  $('.modal-link').click(function (event) {
+    // get the service name from the link
+    var serviceName = $(this).attr('data-service-name');
+    if (showModal(serviceName)) {
+      window.history.pushState(null, null, "#" + serviceName);
+    }
+    return false;
   });
 
   if (location.hash.length > 1) {
-    $('#' + location.hash.substring(1)).modal();
+    showModal(location.hash.substring(1));
   }
 
 });
