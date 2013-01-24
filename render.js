@@ -130,7 +130,7 @@ function renderDetails(name, points, toslinks, obj) {
   if (obj.parent) {
     search.push(obj.parent);
   }
-  return '<div data-search="' + search.join(',') + '" id="' + name + '-tosdr" class="span6 service-nutshell">'
+  return '\t<div data-search="' + search.join(',') + '" id="' + name + '-tosdr" class="span6 service-nutshell">'
     + header + rating + issues
     + '</div>\n';
 }
@@ -206,14 +206,22 @@ function go() {
     }
     return services[a].alexa - services[b].alexa;
   });
+  var twitterService = null;
   for (var i = 0; i < serviceNames.length; i++) {
     var serviceName = serviceNames[i];
+
     var obj = getServiceObject(serviceName);
     //if(obj.alexa >= 1000000) {
     //  continue;
     //}
+
+    if(serviceName == 'twitter') {
+      twitterService = renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+    }
+
     if (last) {
-      servicesList += renderDetails(last, services[last].points, services[last].links, lastObj)
+      servicesList +=
+        renderDetails(last, services[last].points, services[last].links, lastObj)
         + renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
       last = undefined;
     } else {
@@ -223,16 +231,20 @@ function go() {
     popups[serviceName] = renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links);
   }
   if (last) {
-    servicesList += '<div class="row-fluid">'
+    servicesList += '\t<div class="row-fluid">\n\t'
       + renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
-      + '</div>\n';
+      + '\t</div>\n';
   }
   fs.writeFileSync('index.html',
-    fs.readFileSync('index-prefix.html').toString()
-      + '<div id="services-list" class="row">\n'
-      + servicesList
-      + fs.readFileSync('index-suffix.html').toString()
+    fs.readFileSync('index-template.html').
+      toString().
+      replace('<!-- ##services-content## -->', '<div id="services-list" class="row">\n' + servicesList + '</div>\n')
   );
   fs.writeFileSync('js/services.js', "var popupsContent = " + JSON.stringify(popups) + ";");
+  fs.writeFileSync('get-involved.html',
+    fs.readFileSync('get-involved-template.html').
+      toString().
+      replace('<!-- ##github-service-content## -->', '<div id="services-list" class="row">\n' + twitterService + '</div>\n')
+  );
 }
 go();
