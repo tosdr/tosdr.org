@@ -215,20 +215,10 @@ background:#FFFFFF;
 
 
 /* Services listing*/
-#services-list {
-  column-count: 2;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-gap: 40px;
-  margin-bottom:2em;
-}
-.service-nutshell {
-  float: none;
-  display: inline-block;
-  width: 100%;
-  padding-top: 50px;
-  max-width: 500px;
-}
+#services-list {margin-bottom:2em;}
+#services-list .service-nutshell {padding-top:2.5em;}
+#services-list .service-nutshell:nth-child(even) {clear:right;}
+#services-list .service-nutshell:nth-child(odd) {clear:left;}
 
 .service-nutshell h3 {
 	padding: .3em .5em .2em;
