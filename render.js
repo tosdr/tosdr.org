@@ -1,3 +1,6 @@
+//this nodejs script will read the data points from the points/ directory, and 
+//generate the index.html and get-involved.html files from that.
+
 var elements = {};
 var fs = require('fs');
 function renderDataPoint(service, dataPoint, forPopup) {
@@ -11,6 +14,7 @@ function renderDataPoint(service, dataPoint, forPopup) {
     die();
     return;
   }
+  //this is choosing the css class for the icon that will be shown to the left of the data point:
   if (obj.tosdr.point == 'good') {
     badge = 'badge-success';
     icon = 'thumbs-up';
@@ -32,6 +36,7 @@ function renderDataPoint(service, dataPoint, forPopup) {
     icon = 'question-sign';
     sign = '?';
   }
+  //return the html for this data point, for inclusion in the popup or in the main page:
   if (forPopup) {
     return {
       id:dataPoint,
@@ -50,6 +55,8 @@ function renderDataPoint(service, dataPoint, forPopup) {
   }
 }
 function getServiceObject(name) {
+  //each service (website) has its own generic description data, that is stored in the services/ directory
+  //of this repo. this function loads in such a file:
   var text = fs.readFileSync('services/' + name + '.json').toString();
   var obj;
   try {
@@ -83,6 +90,7 @@ function renderDetails(name, points, toslinks, obj) {
   console.log(points);
   console.log(toslinks);
   console.log(obj);
+  //this renders one service (for instance 'Facebook' or 'Google') on our main index.html page:
   var header = '<h3><img src="logo/' + name + '.png" class="favlogo"><a class="modal-link" data-service-name="' + name + '" href="#">' + obj.name + '</a>';
   var rating;
   if (!obj.tosdr) {
@@ -93,6 +101,7 @@ function renderDetails(name, points, toslinks, obj) {
   } else {
     rating = '<div id="' + name + '-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label ' + obj.tosdr.rated + '">No Class Yet</span></a></div></h3>';
   }
+  //we collect the data points into an array first, so that we can sort them by score (the score is the impact/importance of a data point):
   var renderables = [];
   for (var i in points) {
     renderables.push(renderDataPoint(name, points[i], false));
@@ -100,16 +109,19 @@ function renderDetails(name, points, toslinks, obj) {
   renderables.sort(function (a, b) {
     return (Math.abs(b.score) - Math.abs(a.score));
   });
+  //construct the issues list from the sorted data points:
   var issues = '<section class="specificissues"><ul class="tosdr-points">';
   for (var i = 0; i < renderables.length; i++) {
     issues += '<li id="point-' + name + '-' + renderables[i].id + '">'
       + renderables[i].text
       + '</li>';
   }
+  //add link to 'read the full terms' at the bottom:
   issues += '</ul>'
     + '<a class="modal-link" data-service-name="' + name + '" href="#" class="btn"><i class="icon  icon-th-list"></i> Expand</a>'
     + (toslinks.terms ? '&nbsp;<a href="' + toslinks.terms.url + '" class="btn btn-mini" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>' : '')
     + '</section>';
+  //add some search terms to the data-search field. this is quite crude, but it works:
   var search = [name];
   if (obj.keywords) {
     for (var j = 0; j < obj.keywords.length; j++) {
@@ -143,6 +155,8 @@ function isEmpty(map) {
   return true;
 }
 function renderPopup(name, obj, points, links) {
+  //the popup is actually a popin, it is what you see when you click 'expand' for one of the services on index.html.
+  //this is how we generate the html for them:
   console.log('Rendering popup for ' + name);
   console.log(obj);
   console.log(points);
@@ -157,6 +171,7 @@ function renderPopup(name, obj, points, links) {
   var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">'
     + (verdict ? 'Class ' + verdict : 'No Class Yet') + '</label><p>' + ratingText + '</p></div>\n';
   var renderables = [];
+  //sort the data points by importance:
   for (var i in points) {
     renderables.push(renderDataPoint(name, points[i], true));
   }
@@ -185,6 +200,7 @@ function go() {
   var text = fs.readFileSync('index/services.json').toString();
   var popups = {};
   var servicesList = '';
+  //get a list of services we will want to display on index.html:
   try {
     var services = JSON.parse(text);
   } catch (e) {
@@ -197,6 +213,7 @@ function go() {
     serviceNames.push(i);
   }
   console.log(serviceNames);
+  //sort services by their Alexa rank ('big' websites first, 'small' ones at the bottom)
   serviceNames.sort(function (a, b) {
     if (typeof(services[a].alexa) == 'undefined') {
       services[a].alexa = 1000000;
@@ -206,6 +223,7 @@ function go() {
     }
     return services[a].alexa - services[b].alexa;
   });
+  //twitter is used as an example on /get-involved.html, so we store its html in a variable to render it there:
   var twitterService = null;
   for (var i = 0; i < serviceNames.length; i++) {
     var serviceName = serviceNames[i];
