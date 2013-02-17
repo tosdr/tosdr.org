@@ -285,6 +285,7 @@ Les membres du Bureau:
  - Président (*Project Lead*): Hugo Roy
  - Vice-président: Michiel B. de Jong
  - Trésorier: Jan-Christoph Borchardt
- - Secrétaire: Ian McGowan
+ - Secrétaire: ?
+ - Ian McGowan
  - James Stout
  - Julien Kirch
