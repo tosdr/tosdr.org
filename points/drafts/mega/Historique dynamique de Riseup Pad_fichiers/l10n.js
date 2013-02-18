@@ -1,0 +1,1 @@
+(function(a){var b=a.cookie.match(/language=((\w{2,3})(-w+)?)/);b&&(b=b[1]),html10n.bind("indexed",function(){html10n.localize([b,navigator.language,navigator.userLanguage,"en"])}),html10n.bind("localized",function(){a.documentElement.lang=html10n.getLanguage(),a.documentElement.dir=html10n.getDirection()})})(document)
