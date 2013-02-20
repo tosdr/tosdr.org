@@ -22,7 +22,8 @@ To build:
     node render.js
 
 We develop on the gh-pages branch.
-If you push the gh-pages branch to github, then http://didnotread.github.com/didnotread.org/ will update. That's our staging server (sorry for the misnomer, will probably switch this to http://tosdr.github.com/tosdr.org/ once we switch the domain name from tos-dr.info to tosdr.org). To deploy to live, merge gh-pages to master, and
+
+If you push the gh-pages branch to github, then http://didnotread.github.com/didnotread.org/ will update. That's our staging server. To deploy to live, merge gh-pages to master, and
 
     git push 5apps master
 
