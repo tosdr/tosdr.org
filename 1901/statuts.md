@@ -267,7 +267,7 @@ Les membres fondateurs:
  - Michiel B. de Jong
  - Hugo Roy
 
-Les membres du Bureau:
+Les membres du Bureau, provisoirement jusque l'Assemblée Générale:
 
  - Président: Hugo Roy
  - Vice-président: Jan-Christoph Borchardt
