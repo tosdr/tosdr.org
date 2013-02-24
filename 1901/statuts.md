@@ -45,7 +45,7 @@ adhérents. Un membre est une personne physique.
 
 Sont membres adhérents ceux qui versent la cotisation normale
 telle que fixée par le Bureau. À cette cotisation est ajouté un
-droit d'entrée défini par le règlement intérieur (*Community Rules*).
+droit d'entrée défini par le règlement intérieur.
 
 <!--Sont contributeurs actifs les personnes physiques inscrites sur la
 liste de courrier électronique tosdr@googlegroups.com ayant envoyé
@@ -240,7 +240,8 @@ permettent.
 ## Règlement intérieur
 
 Un règlement intérieur est établi par le Bureau qui le fait
-approuver par l'Assemblée Générale.
+approuver par l'Assemblée Générale. Le règlement intérieur peut
+être en anglais ou en français.
 
 Ce règlement éventuel est destiné à fixer les divers points non
 prévus par les Statuts, notamment ceux qui ont trait à
