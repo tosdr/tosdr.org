@@ -1,4 +1,4 @@
-# Statuts de l'association «*Terms of Service; Didin't Read*»
+# Statuts de l'association *«Terms of Service; Didin't Read»*
 
 ## Titre de l'Association
 
