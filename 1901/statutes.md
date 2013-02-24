@@ -1,5 +1,8 @@
 # Summary of the “Terms of Service; Didn't Read” Association Statutes
 
+These statutes have no legal value. They are only a rough summary
+and translation of the French statutes.
+
  - Title
    
     The association is under French law: July 1st, 1901. The name
@@ -93,3 +96,85 @@
             payment (wires, chèques, etc.)
 
  - General Assemblies
+
+    They include Bureau members and all members who paid the
+    yearly fee at least 60 days before the GA.
+
+    Members can be represented by another member.
+
+    15 days at least before the date of the GA, members gets the
+    invitation by email. The email gives the agenda.
+
+    The GA is chaired by the Président.
+
+    The GA can be held in electronic forms.
+
+ - Ordinary GA
+
+    At least once a year. 
+
+    The Président gives a review of activities.
+
+    The Trésorier gives the financial review.
+
+    Then we proceed to elect Bureau members. The Président elected
+    choses amongs them a Trésorier and a Vice-Président.
+
+    Then we follow the agenda.
+
+    Ordinary GAs can happen any time when the Président or the
+    majority of Bureau members want.
+
+    Decsions are taken by absolute majority of expressed suffrages
+    by present or represented members.
+
+    Members can be ask in writing to be représented by a member of
+    their family or another member of the assocation, or vote
+    online.
+
+ - Extraordinary GA
+
+    About modifications of Statues or dissolution of the
+    Association. 
+
+    Only valid if 2/3 of active members are present or
+    represented. If more than half are not here, and there is
+    urgency: we vote online (absolute majority).
+
+    Decisions are taken by a 2/3 majority of expressed suffrages
+    by present or represented members.
+
+    If the 2/3 of present active memebrs is not reached (quorum)
+    then it is only an Ordinary GA and could not deal with
+    Statutes modification etc.
+
+ - Community Rules
+
+    Written by the Bureau, approved by the GA. In English or in
+    French.
+
+    It organises everything else that's not in the Statutes.
+
+ - Dissolution 
+
+    In case of dissolution decided by an Extraordinary GA, one or
+    more *liquidateurs* are nominated.
+
+    The *actif* is transfered by the GA to other organisations
+    with similar goals or any other social or culturally oriented
+    establishment it sees fits.
+
+Founding members
+
+ - Jan-Christoph Borchardt
+ - Michiel B. de Jong
+ - Hugo Roy
+
+Temporary Bureau members until the 1st GA
+
+ - Président: Hugo Roy
+ - Vice-président: Jan-Christoph Borchardt
+ - Trésorier: Michiel B. de Jong
+ - Ian McGowan
+ - James Stout
+ - Julien Kirch
