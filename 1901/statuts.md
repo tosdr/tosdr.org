@@ -1,4 +1,4 @@
-# Statuts de l'association *«Terms of Service; Didin't Read»*
+# Statuts de l'association *«Terms of Service; Didn't Read»*
 
 ## Titre de l'Association
 
@@ -45,7 +45,7 @@ adhérents. Un membre est une personne physique.
 
 Sont membres adhérents ceux qui versent la cotisation normale
 telle que fixée par le Bureau. À cette cotisation est ajouté un
-droit d'entrée défini par le règlement intérieur.
+droit d'entrée défini par le règlement intérieur (*Community Rules*).
 
 <!--Sont contributeurs actifs les personnes physiques inscrites sur la
 liste de courrier électronique tosdr@googlegroups.com ayant envoyé
