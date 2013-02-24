@@ -118,11 +118,11 @@ membres du Bureau présents ou représentés.
 Il établit le budget de l'Association et fixe le montant des
 cotisations.
 
-### Composition
-
 Le Bureau assure le bon fonctionnement de l'association sous le
 contrôle de l'Assemblée Générale Ordinaire dont il prépare les
 réunions.
+
+### Composition
 
 Le Président représente l'Association dans tous les actes de la
 vie civile et il conclut tout accord sous réserve des
