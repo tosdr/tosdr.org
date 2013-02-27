@@ -1,7 +1,7 @@
-This is the source code for www.tos-dr.info. You should
+This is the source code for www.tosdr.org. You should
 find more information about the project itself on the website.
 
-API: http://www.tos-dr.info/api.html 
+API: http://www.tosdr.org/api.html 
 
 The index.html page is static and rendered with index-prefix and index-suffix.html by running 'node render.js'
 
@@ -27,4 +27,4 @@ If you push the gh-pages branch to github, then http://tosdr.github.com/tosdr.or
 
     git push 5apps master
 
-to deploy to http://tos-dr.info (will soon switch this to http://tosdr.org). If you want access to the 5apps account, ask Hugo or Michiel, they can add you.
+to deploy to http://tosdr.org. If you want access to the 5apps account, ask Hugo or Michiel, they can add you.

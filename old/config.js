@@ -1,9 +1,9 @@
 exports.config = {
   port: 80,
   redirect: {
-    'www.tos-dr.info': 'http://tos-dr.info/'
+    'www.tosdr.org': 'http://tosdr.org/'
   },
   host: {
-    'tos-dr.info': 'statics/'
+    'tosdr.org': 'statics/'
   }
 };
