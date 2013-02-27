@@ -34,7 +34,7 @@ points, i.e. two or more services have essentially the same
 clause, we create a new point with a meaningful id. For instance,
 see the point about services making changes to their terms without
 delay and without notice:
-https://github.com/didnotread/didnotread.org/blob/master/points/any-time-without-notice.json.
+https://github.com/tosdr/tosdr.org/blob/master/points/any-time-without-notice.json.
 In that case, don't forget to avoid duplication between the new
 unified point and the former service-specific points (see below,
 about "irrelevant" points).
