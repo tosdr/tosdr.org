@@ -50,7 +50,7 @@
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
   
-# Finish: 11022.46 + 4600.74  = 15421.20 EUR
+# Finish: 11022.46 + 4398.74  = 15421.20 EUR
 
 * kept safe by Hugo: 11622.46 - 600 = 11022.46 EUR
 * kept safe by Michiel: 6524.52 - 800 - 150 - 9.50 - 1131.90 - 34.38 =  4398.74 EUR
