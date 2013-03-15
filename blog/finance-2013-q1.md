@@ -8,11 +8,12 @@
 
 # Money out
 
-* compensation Hugo: 600
+* compensation Hugo: 800
 
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 8 Dec - Fri 4 Jan)
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 5 Jan - Fri 1 Feb)
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Feb - Fri 1 Mar)
+    * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Mar - Fri 29 Mar)
 
 
 * compensation Jimm: 800
@@ -50,8 +51,8 @@
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
   
-# Finish: 11022.46 + 4395.98  = 15418.44 EUR
+# Finish: 10822.46 + 4395.98  = 15218.44 EUR
 
-* kept safe by Hugo: 11622.46 - 600 = 11022.46 EUR
+* kept safe by Hugo: 11622.46 - 800 = 10822.46 EUR
 * kept safe by Michiel: 6524.52 - 800 - 150 - 9.50 - 1134.66 - 34.38 =  4395.98 EUR
 
