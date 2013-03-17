@@ -8,11 +8,12 @@
 
 # Money out
 
-* compensation Hugo: 600
+* compensation Hugo: 800
 
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 8 Dec - Fri 4 Jan)
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 5 Jan - Fri 1 Feb)
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Feb - Fri 1 Mar)
+    * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Mar - Fri 29 Mar)
 
 
 * compensation Jimm: 800
@@ -34,7 +35,7 @@
     * (M) fee: 9.50
 
 
-* perks: 247.18 + 29.60 + 156 + 300 + 18 + 4 + 355 + 19.12 + 3 = 1131.90
+* perks: 247.18 + 29.60 + 156 + 300 + 18 + 4 + 355 + 19.12 + 5.76 = 1134.66
     * (M) StickerMule: 247.18 EUR
     * (M) Vietnamese import tax for stickers: 800 kDong =(rate: 0.037) 29.60 EUR
     * (M) T-shirts: 120x5.20 = 624 Ringgit =(rate: 0.25) 156 EUR
@@ -43,15 +44,15 @@
     * (M) 105 small envelopes: 16 Ringgit =(rate: 0.25) 4 EUR
     * (M) stamps from Kuala Lumpur: 1420 Ringgit =(rate: 0.25) 355 EUR
     * (M) stamps from Kota Kinabalu: 76.50 Ringgit =(rate: 0.25) 19.12 EUR
-    * (M) stamps from Shanghai: expected about 25 Yuan =(rate: 0.12) 3 EUR
+    * (M) stamps from Shanghai: 48 RMB =(rate: 0.12) 5.76 EUR
 
   
 * TOSBack crawler hosting: 17.19 + 17.19 = 34.38
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
   
-# Finish: 11022.46 + 4398.74  = 15421.20 EUR
+# Finish: 10822.46 + 4395.98  = 15218.44 EUR
 
-* kept safe by Hugo: 11622.46 - 600 = 11022.46 EUR
-* kept safe by Michiel: 6524.52 - 800 - 150 - 9.50 - 1131.90 - 34.38 =  4398.74 EUR
+* kept safe by Hugo: 11622.46 - 800 = 10822.46 EUR
+* kept safe by Michiel: 6524.52 - 800 - 150 - 9.50 - 1134.66 - 34.38 =  4395.98 EUR
 
