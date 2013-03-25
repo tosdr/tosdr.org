@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <title>experimental! form for submitting data points</title>
+  </head>
+  <body>
+    (check the console)
+  </body>
+  <script>
+    var githubClient = {
+      id: '3365a610f873704cff3a',
+      secret: 'e9b3c5161bf15a2518046e95d64efc880afcfc58',
+      proxy1: 'https://cors.5apps.com/?uri=https://github.com',
+      proxy2: 'https://cors.5apps.com/?uri=https://api.github.com'
+    };
+    function post(path, payload, cb) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', githubClient.proxy1+path, true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.setRequestHeader('Content-Length', payload.length);
+      xhr.onload = function () {
+        console.log(xhr.status);
+        console.log(xhr.responseText);
+      }
+      xhr.send(payload);
+    }
+    function extractParam(key) {
+      var pairs = location.search.substring(1).split('&');
+      for(var i=0; i<pairs.length; i++) {
+        var kv = pairs[i].split('=');
+        if(decodeURIComponent(kv[0])==key) {
+          return decodeURIComponent(kv[1]);
+        }
+      }
+    }
+    function codeToToken() {
+      var code = extractParam('code');
+      if(code) {
+        post('/login/oauth/access_token',
+          'client_id='+githubClient.id+'&client_secret='+githubClient.secret
+          +'&code='+code, function(){
+        });
+      }
+    }
+    codeToToken();
+  </script>
+</html>
