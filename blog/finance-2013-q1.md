@@ -52,11 +52,11 @@
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
 
-* domain
-    * transfer tosdr.org to gandi (25/03/2013): 11.41 EUR
+* domain: 11.41
+    * (H) transfer tosdr.org to gandi (25/03/2013): 11.41 EUR
   
-# Finish: 10822.46 + 4244.48  = 15066.94 EUR
+# Finish: 10811.05 + 4244.48  = 15055.53 EUR
 
-* kept safe by Hugo: 11622.46 - 800 = 10822.46 EUR
+* kept safe by Hugo: 11622.46 - 800 -11.41 = 10811.05 EUR
 * kept safe by Michiel: 6524.52 - 800 - 300 - 11 - 1134.66 - 34.38 =  4244.48 EUR
 
