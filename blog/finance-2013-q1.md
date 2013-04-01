@@ -51,6 +51,9 @@
 * TOSBack crawler hosting: 17.19 + 17.19 = 34.38
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
+
+* domain
+    * transfer tosdr.org to gandi (25/03/2013): 11.41 EUR
   
 # Finish: 10822.46 + 4244.48  = 15066.94 EUR
 
