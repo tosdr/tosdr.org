@@ -14,7 +14,6 @@
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Feb - Fri 1 Mar)
     * (H) project management, 4 weeks * 5 hours * 10 euros: 200 (Sat 2 Mar - Fri 29 Mar)
 
-
 * compensation Jimm: 800
     * (M) 30 hours (up to 90) * 10 euros: 300 (28 Jan)
     * (M) 10 hours (up to 100) * 10 euros: 100 (1 Feb)
@@ -60,8 +59,12 @@
     * (H) monthly subscription for March: 5 USD = 3.97 EUR
     * (H) monthly subscription for April: 5 USD = 3.97 EUR
 
+* conference costs: 171.03
+    * (H) Flight to Gotenburg for FSCONS: 139.03 EUR
+    * (H) Shuttle Paris-Beauvais Airport: 32 EUR
+
 # Finish: 10811.05 + 4244.48  = 15055.53 EUR
 
-* kept safe by Hugo: 11622.46 - 800 -11.41 - 27.69 = 10783.36 EUR
+* kept safe by Hugo: 11622.46 - 800 -11.41 - 27.69 - 171.03 = 10612.33 EUR
 * kept safe by Michiel: 6524.52 - 800 - 300 - 11 - 1134.66 - 34.38 =  4244.48 EUR
 
