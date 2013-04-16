@@ -63,7 +63,7 @@
     * (H) Flight to Gotenburg for FSCONS: 139.03 EUR
     * (H) Shuttle Paris-Beauvais Airport: 32 EUR
 
-# Finish: 10783.36 + 4244.48  = 15027.84 EUR
+# Finish: 10612.33 + 4244.48  = 14856.81 EUR
 
 * kept safe by Hugo: 11622.46 - 800 -11.41 - 27.69 - 171.03 = 10612.33 EUR
 * kept safe by Michiel: 6524.52 - 800 - 300 - 11 - 1134.66 - 34.38 =  4244.48 EUR
