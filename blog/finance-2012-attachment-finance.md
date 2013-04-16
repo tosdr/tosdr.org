@@ -57,18 +57,18 @@ MONEY OUT: 1900+600+250+8.5+49.27+34.57+84+276.89=3203.23
     * (M) tosback server: 21.66 USD = 17.07 (1 Dec)
     * (M) tosback server: 22.21 USD = 17.50 (1 Nov)
  * office space: 84
-    * (M) co-up.de Hugo: 20 (June)
-    * (M) co-up.de Hugo: 44 (July)
-    * (M) co-up.de Hugo: 20 (August)
+    * (H) co-up.de Hugo: 20 (June)
+    * (H) co-up.de Hugo: 44 (July)
+    * (H) co-up.de Hugo: 20 (August)
  * Hugo attending Unhost'12: 276.89
-    * (M) flight: 183.59
+    * (H) flight: 183.59
     * (M) stay: 93.30
 
-MONEY HAVE: 11622.46+6524.52 = 18146.98
+MONEY HAVE: 11354.87 + 6792.11 = 18146.98
 =======================
 
- * kept safe by Hugo: 13564.37 - 1500 - 200 - 200 - 15 - 26.91 = 11622.46
+ * kept safe by Hugo: 13564.37 - 1500 - 200 - 200 - 15 - 26.91 - 20 - 44 - 20 - 183.59 = 11354.87
  * kept safe by Michiel: 7785.84 - 100 - 200 - 100 - 100 - 100 - 150 - 100 - 8.50
-  - 1.71 - 5.65 - 17.07 - 17.50 - 20 - 44 - 20 - 183.59 - 93.30 = 6524.52
+  - 1.71 - 5.65 - 17.07 - 17.50 - 93.30 = 6792.11
 
 Sanity check: 21350.21 (IN) - 3203.23 (OUT) = 18146.98 (HAVE)
