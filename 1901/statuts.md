@@ -1,4 +1,5 @@
-# Association «Terms of Service; Didn't Read». Statuts
+Statuts de l'association *«Terms of Service; Didn't Read»*
+==========================================================
 
 ## Titre de l'Association
 
@@ -6,7 +7,7 @@ Il est fondé entre les adhérents aux présents statuts une
 Association régie par la loi du premier juillet 1901 et le décret
 du 16 août 1901, ayant pour titre:
 
-Terms of Service; Didn't Read
+> *Terms of Service; Didn't Read*
 
 ## But de l'Association
 
@@ -21,10 +22,10 @@ d'utilisateurs prennent le temps de lire et comprendre.
 L'Association a pour objet la gestion des financements et la
 gestion des droits d'auteur, droits de marque et autres droits
 relatifs au projet «Terms of Service; Didn't Read»
-(www.tos-dr.info). Les droits d'auteur et autres droits relatifs
-au projet, à l'exclusion des droits de marque, sont donnés en
-licence libre approuvée par l'association allemande «Free Software
-Foundation Europe e.V.»
+(www.tosdr.org). Les droits d'auteur et autres droits relatifs au
+projet, à l'exclusion des droits de marque, sont donnés en licence
+libre approuvée par la «Free Software Foundation Europe» lorsque
+cela est possible.
 
 ## Siège social
 
@@ -40,20 +41,17 @@ décision de l'Assemblée Générale.
 
 ## Membres de l'association
 
-L'association se compose de membres fondateurs, de membres
-adhérents et de contributeurs.
-
-Sont membres fondateurs ceux qui ont lancé le projet «Terms of
-Service; Didn't Read» pendant la période août 2011 - août 2012.
+L'association se compose de membres fondateurs et de membres
+adhérents. Un membre est une personne physique.
 
 Sont membres adhérents ceux qui versent la cotisation normale
 telle que fixée par le Bureau. À cette cotisation est ajouté un
 droit d'entrée défini par le règlement intérieur.
 
-Sont contributeurs les personnes physiques inscrites sur la liste
-de courrier électronique tosdr@googlegroups.com ayant envoyé un
-message sur ladite liste pendant les six mois précédant une
-Assemblée Générale.
+<!--Sont contributeurs actifs les personnes physiques inscrites sur la
+liste de courrier électronique tosdr@googlegroups.com ayant envoyé
+au moins un message sur ladite liste pendant les six mois
+précédant une Assemblée Générale.-->
 
 ## Admission
 
@@ -66,8 +64,7 @@ ses réunions, sur les demandes d'admission présentées.
 La qualité de membre se perd par:
 
  - la démission;
- - le décès de la personne physique ou la dissolution de la
-   personne morale;
+ - le décès de la personne physique;
  - la radiation prononcée par le Bureau pour non-paiement de la
    cotisation ou pour motif grave, l'intéressé ayant été invité
    par courrier électronique à se présenter devant le Bureau pour
@@ -77,10 +74,10 @@ La qualité de membre se perd par:
 
 Elles comprennent:
 
+ - les dons;
  - le montant des cotisations;
  - les sommes perçues en contrepartie des prestations fournies par
    l'Association;
- - les dons;
  - les subventions de l'État, des régions, des départements et des
    communes, ou de tout autre organisme public;
  - toutes les autres ressources autorisées par les textes
@@ -91,15 +88,15 @@ Elles comprennent:
 L'Association est dirigée par un Bureau d'au moins deux membres
 élus pour une année par l'Assemblée Générale.
 
-Les membres sont ré-éligibles.
+Les membres sont ré-rééligibles.
 
-En cas de vacances, le Bureau pourvoir provisoirement au
+En cas de vacances, le Bureau pourvoit provisoirement au
 remplacement des membres.
 
-Il est procédé à leur remplacement définit par l'Assemblée
+Il est procédé à leur remplacement définitif par l'Assemblée
 Générale suivante.
 
-## Le Bureau, réunions
+### Réunions
 
 Le Bureau se réunit une fois au moins tous les six mois, sur
 convocation du Président ou à la demande du quart de ses membres.
@@ -110,7 +107,7 @@ présents ou représentés.
 
 En cas de partage, la voix du Président est prépondérante.
 
-## Le Bureau, attributions
+### Attributions
 
 Le Bureau établit l'ordre du jour des Assemblées Générales et
 assure l'exécution des décisions de ces Assemblées. Il autorise
@@ -122,13 +119,13 @@ membres du Bureau présents ou représentés.
 Il établit le budget de l'Association et fixe le montant des
 cotisations.
 
-## Le Bureau, composition
-
 Le Bureau assure le bon fonctionnement de l'association sous le
 contrôle de l'Assemblée Générale Ordinaire dont il prépare les
 réunions.
 
-Le Président (*Project Lead*) représente l'Association dans tous les actes de la
+### Composition
+
+Le Président représente l'Association dans tous les actes de la
 vie civile et il conclut tout accord sous réserve des
 autorisations qu'il doit obtenir du Bureau. Il a qualité pour
 présenter toute réclamation auprès de toutes administrations,
@@ -144,20 +141,13 @@ Le Président peut accorder des délégations partielles de ses
 pouvoirs sous réserve, lorsqu'il s’agit de délégations d’une
 certaine durée ou permanentes, d’en informer le Vice-Président.
 
-Le Secrétaire est chargé en particulier de rédiger les
-procès-verbaux des réunions du Bureau et de l'Assemblée Générale
-et de tenir le registre prévu par la loi. En cas d'empêchement il
-est remplacé par le Président ou par un membre du Bureau désigné
-par le Président.
-
 Le Trésorier est chargé de tenir ou de faire tenir sous son
 contrôle la comptabilité de l'Association. Il perçoit les
 recettes; il effectue tout paiement sous réserve de l'autorisation
 du Président dans les cas éventuellement prévus par le Bureau.
 
-En cas d’empêchement le Trésorier est remplacé par le
-Trésorier-adjoint, s’il y a lieu, ou par le Président, ou par un
-autre membre du Bureau désigné par le Président.
+En cas d’empêchement le Trésorier est remplacé par le Président,
+ou par un autre membre du Bureau désigné par le Président.
 
 Vis-à-vis des organismes bancaires ou postaux, le Président, le
 Trésorier ou tout autre membre du Bureau désigné par le Président
@@ -172,15 +162,12 @@ L'Assemblée Générale Ordinaire  ou Extraordinaire comprend :
 - les membres du Bureau;
 - tous les membres de l'Association, quel que soit le titre auquel
   ils sont affiliés, sous réserve qu'ils aient acquitté leur
-  cotisation de l'année en cours et qu'ils soient membres de
-  l'association depuis plus de six mois.
+  cotisation de l'année en cours depuis au moins soixante jours.
 
-Les membres peuvent se faire représenter par leur conjoint ou par
-un autre membre.
+Les membres peuvent se faire représenter par un autre membre.
 
 Quinze jours au moins avant la date fixée par le Bureau, les
-membres de l'Association sont convoqués par les soins du
-Secrétaire
+membres de l'Association sont convoqués par courriel.
 
 L'ordre du jour est indiqué sur les convocations.
 
@@ -202,7 +189,7 @@ l'exercice écoulé.
 
 Il est ensuite procédé à l'élection des membres du Bureau et de
 son Président, celui-ci désignant parmi les membres du Bureau un
-Trésorier, un Secrétaire et un Vice-Président.
+Trésorier et un Vice-Président.
 
 Il est ensuite procédé à l'examen des autres questions figurant à
 l'ordre du jour.
@@ -254,7 +241,8 @@ permettent.
 ## Règlement intérieur
 
 Un règlement intérieur est établi par le Bureau qui le fait
-approuver par l'Assemblée Générale.
+approuver par l'Assemblée Générale. Le règlement intérieur peut
+être en anglais ou en français.
 
 Ce règlement éventuel est destiné à fixer les divers points non
 prévus par les Statuts, notamment ceux qui ont trait à
@@ -280,12 +268,11 @@ Les membres fondateurs:
  - Michiel B. de Jong
  - Hugo Roy
 
-Les membres du Bureau:
+Les membres du Bureau, provisoirement jusque l'Assemblée Générale:
 
- - Président (*Project Lead*): Hugo Roy
- - Vice-président: Michiel B. de Jong
- - Trésorier: Jan-Christoph Borchardt
- - Secrétaire: ?
+ - Président: Hugo Roy
+ - Vice-président: Jan-Christoph Borchardt
+ - Trésorier: Michiel B. de Jong
  - Ian McGowan
  - James Stout
  - Julien Kirch
