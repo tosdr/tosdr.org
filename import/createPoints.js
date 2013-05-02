@@ -8,15 +8,17 @@ for(var i=0; i<points.length; i++) {
   } else {
     parts[2] = parts[1].substring('http://groups.google.com/d/topic/tosdr/'.length, parts[1].length-('?fromgroups#'.length));
     parts[1] = 'https'+parts[1].substring('http'.length, parts[1].length-('?fromgroups#'.length))+'/discussion';
-    fs.exists('../points/'+parts[2]+'.json', function(exists) {
-      if(!exists) {
-        fs.writeFileSync('../points/'+parts[2]+'.json', JSON.stringify({
-          id: parts[2],
-          title: parts[0],
-          discussion: parts[1]
-        });
-      }
-    });
+    fs.exists('../points/'+parts[2]+'.json', (function(theseParts) {
+      return function(exists) {
+        if(!exists) {
+          fs.writeFileSync('../points/'+theseParts[2]+'.json', JSON.stringify({
+            id: theseParts[2],
+            title: theseParts[0],
+            discussion: theseParts[1]
+          }));
+        }
+      };
+     })(parts));
   }
   points[i] = {
     title: parts[0],
