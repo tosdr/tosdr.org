@@ -4,7 +4,7 @@
 var elements = {};
 var fs = require('fs');
 function renderDataPoint(service, dataPoint, forPopup) {
-  var text = fs.readFileSync('points/' + dataPoint + '.json').toString();
+  var text = fs.readFileSync('points/' + dataPoint + '.json').toString().split('\xA0').join('');
   var obj, badge, icon, sign, score;
   try {
     obj = JSON.parse(text);
