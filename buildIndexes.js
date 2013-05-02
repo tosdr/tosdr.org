@@ -60,8 +60,14 @@ function parsePointFile(id) {
   //have a look at the files in the points/ directory of this
   //repo to get a better feeling for what this function does
 
-  var data = fs.readFileSync('points/'+id+'.json');
-  var obj = JSON.parse(data.toString());
+  var data = fs.readFileSync('points/'+id+'.json').toString().split('\xa0').join('');
+  var obj;
+  try {
+    obj = JSON.parse(data);
+  } catch(e) {
+    console.log(e, id, data, fs.readFileSync('points/'+id+'.json'));
+    exit();
+  }
   if(obj.disputed || obj.irrelevant || obj.additional) {
     return;
   }
