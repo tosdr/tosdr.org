@@ -1,5 +1,15 @@
 var fs = require('fs'),
-  points = {};
+  points = {},
+  autoDetectServices = [
+    'WhatsApp',
+    'JAGEX',
+    'IFTTT',
+    'Twitter',
+    'Cloudant',
+    'Grammarly',
+    'weebly',
+    'Mint.com'
+  ];
 
 function addFile(filename) {
   try {
@@ -33,7 +43,17 @@ fs.readdir('points/', function(err, files) {
           die();
         }
       }
+      if(!points[files[i]].irrelevant && !points[files[i]].service) {
+        console.log(points[files[i]].id, points[files[i]].title);
+        for(var j=0; j<autoDetectServices.length; j++) {
+          if(points[files[i]].title.indexOf(autoDetectServices[j])!=-1) {
+            points[files[i]].service=autoDetectServices[j];
+            savePoint(files[i]);
+            break;
+          }
+        }
+      }
     }
   }
-  console.log(points);
+  //console.log(points);
 });
