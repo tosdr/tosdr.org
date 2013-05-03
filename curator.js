@@ -15,21 +15,23 @@ function savePoint(filename) {
 
 fs.readdir('points/', function(err, files) {
   for(var i=0; i<files.length; i++) {
-    addFile(files[i]);
-    if(!points[files[i]].id) {
-      console.log(files[i], 'no id');
-      //die();
-    }
-    if(!points[files[i]].title) {
-      console.log(files[i], 'no title', points[files[i]]);
-      if(points[files[i]].name) {
-        points[files[i]].title = points[files[i]].name;
-        savePoint(files[i]);
-      } else if(points[files[i]].tosdr && points[files[i]].tosdr.tldr) {
-        points[files[i]].title = points[files[i]].tosdr.tldr;
-        savePoint(files[i]);
-      } else {
-        die();
+    if(files[i]!='README.md') {
+      addFile(files[i]);
+      if(!points[files[i]].id) {
+        console.log(files[i], 'no id');
+        //die();
+      }
+      if(!points[files[i]].title) {
+        console.log(files[i], 'no title', points[files[i]]);
+        if(points[files[i]].name) {
+          points[files[i]].title = points[files[i]].name;
+          savePoint(files[i]);
+        } else if(points[files[i]].tosdr && points[files[i]].tosdr.tldr) {
+          points[files[i]].title = points[files[i]].tosdr.tldr;
+          savePoint(files[i]);
+        } else {
+          die();
+        }
       }
     }
   }
