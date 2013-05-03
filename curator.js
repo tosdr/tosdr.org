@@ -1,4 +1,5 @@
 var fs = require('fs'),
+  http = require('http'),
   points = {},
   autoDetectServices = [
     'Quake Live',
@@ -139,37 +140,53 @@ function savePoint(filename) {
   fs.writeFileSync('points/'+filename, JSON.stringify(points[filename]));
 }
 
-fs.readdir('points/', function(err, files) {
-  for(var i=0; i<files.length; i++) {
-    if(files[i]!='README.md') {
-      addFile(files[i]);
-      if(!points[files[i]].id) {
-        console.log(files[i], 'no id');
-        //die();
-      }
-      if(!points[files[i]].title) {
-        console.log(files[i], 'no title', points[files[i]]);
-        if(points[files[i]].name) {
-          points[files[i]].title = points[files[i]].name;
-          savePoint(files[i]);
-        } else if(points[files[i]].tosdr && points[files[i]].tosdr.tldr) {
-          points[files[i]].title = points[files[i]].tosdr.tldr;
-          savePoint(files[i]);
-        } else {
-          die();
-        }
-      }
-      if(!points[files[i]].irrelevant && !points[files[i]].service) {
-        console.log(points[files[i]].id, points[files[i]].title);
-        for(var j=0; j<autoDetectServices.length; j++) {
-          if(points[files[i]].title.indexOf(autoDetectServices[j])!=-1) {
-            points[files[i]].service=autoDetectServices[j];
-            savePoint(files[i]);
-            break;
-          }
-        }
-      }
-    }
-  }
-  //console.log(points);
+function displayPoint(res, filename, reason, data) {
+  res.write(filename);
+  console.log(filename);
+}
+
+function displayPoints(res) {
+	files = fs.readdirSync('points/');
+	for(var i=0; i<files.length; i++) {
+		if(files[i]!='README.md') {
+			addFile(files[i]);
+			if(!points[files[i]].id) {
+				displayPoint(res, files[i], 'no id', points[files[i]]);
+				//die();
+			}
+			if(!points[files[i]].title) {
+				displayPoint(res, files[i], 'no title', points[files[i]]);
+				if(points[files[i]].name) {
+					points[files[i]].title = points[files[i]].name;
+					savePoint(files[i]);
+				} else if(points[files[i]].tosdr && points[files[i]].tosdr.tldr) {
+					points[files[i]].title = points[files[i]].tosdr.tldr;
+					savePoint(files[i]);
+				} else {
+					die();
+				}
+			}
+			if(!points[files[i]].irrelevant && !points[files[i]].service) {
+				displayPoint(res, files[i], 'no service', points[files[i]]);
+				for(var j=0; j<autoDetectServices.length; j++) {
+					if(points[files[i]].title.indexOf(autoDetectServices[j])!=-1) {
+						points[files[i]].service=autoDetectServices[j];
+						savePoint(files[i]);
+						break;
+					}
+				}
+			}
+		}
+	}
+	//console.log(points);
+}
+
+//...
+var server = http.createServer(function(req, res) {
+  res.writeHead(200, {});
+  res.write('hi');
+  displayPoints(res);
+  res.end('bye');
 });
+server.listen(21337);
+console.log('see http://localhost:21337/');
