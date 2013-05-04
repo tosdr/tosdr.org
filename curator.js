@@ -146,7 +146,8 @@ function displayPoint(res, filename, reason, data) {
 }
 
 function displayPoints(res) {
-	files = fs.readdirSync('points/');
+	var before;
+  files = fs.readdirSync('points/');
 	for(var i=0; i<files.length; i++) {
 		if(files[i]!='README.md') {
 			addFile(files[i]);
@@ -181,7 +182,7 @@ function displayPoints(res) {
         points[files[i]].service = service.toLowerCase();
         savePoint(files[i]);
       }
-      var before;
+      before=undefined;
       try {
         before = JSON.parse(fs.readFileSync('points-before/'+files[i]));
       } catch(e) {}
