@@ -1,21 +1,24 @@
 {
-  "id": "wikipedia",
-  "type":"service","name": "Wikipedia",
-  "url": "wikipedia.org",
-  "tosdr": {"rated": false},
-  "tosback2": {
-  	"terms": {
-      "name": "Terms of use",
-      "url": "https://wikimediafoundation.org/wiki/Terms_of_use"
+    "alexa": 6,
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "tos": {
+        "privacy": "https://wikimediafoundation.org/wiki/Privacy_policy",
+        "terms": "https://wikimediafoundation.org/wiki/Terms_of_use"
     },
-  	"privacy": {
-      "name": "Privacy policy",
-      "url": "https://wikimediafoundation.org/wiki/Privacy_policy"
-  	}
-  },
-  "alexa": 6,
-  "tos": {
-  	"terms": "https://wikimediafoundation.org/wiki/Terms_of_use",
-  	"privacy": "https://wikimediafoundation.org/wiki/Privacy_policy"
-  	}
+    "tosback2": {
+        "privacy": {
+            "name": "Privacy policy",
+            "url": "https://wikimediafoundation.org/wiki/Privacy_policy"
+        },
+        "terms": {
+            "name": "Terms of use",
+            "url": "https://wikimediafoundation.org/wiki/Terms_of_use"
+        }
+    },
+    "tosdr": {
+        "rated": false
+    },
+    "type": "service",
+    "url": "wikipedia.org"
 }
