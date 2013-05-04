@@ -18,8 +18,7 @@ We use bootstrap. http://github.com/twitter/bootstrap/
 
 To build:
 
-    node buildIndexes.js
-    node render.js
+    sh build.sh
 
 We develop on the gh-pages branch.
 
