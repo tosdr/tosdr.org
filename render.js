@@ -14,6 +14,9 @@ function renderDataPoint(service, dataPoint, forPopup) {
     die();
     return;
   }
+  if(!obj.tosdr) {
+    obj.tosdr = {};
+  }
   //this is choosing the css class for the icon that will be shown to the left of the data point:
   if (obj.tosdr.point == 'good') {
     badge = 'badge-success';
@@ -161,6 +164,9 @@ function renderPopup(name, obj, points, links) {
   console.log(obj);
   console.log(points);
   console.log(links);
+  if(!obj.tosdr) {
+    obj.tosdr = {};
+  }
   var longName = obj.name,
     domain = obj.url,
     verdict = obj.tosdr.rated,
