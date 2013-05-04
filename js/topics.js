@@ -12,7 +12,7 @@ function renderDataPoint(topic, dataPoint) {
         try {
           obj = JSON.parse(xhr.responseText);
         } catch (e) {
-          alert('Could not load data for data point ' + dataPoint + ', sorry! Refreshing the page might sometimes help.');
+          console.log('Could not load data for data point ' + dataPoint + ', sorry! Refreshing the page might sometimes help.');
           return;
         }
 
@@ -56,7 +56,7 @@ function getTopicObject(name, cb) {
           } catch (e) {
             console.log(xhr.responseText);
             console.log(JSON.parse(xhr.responseText));
-            alert('Could not load data for ' + name + ', sorry! Refreshing the page might sometimes help.');
+            console.log('Could not load data for ' + name + ', sorry! Refreshing the page might sometimes help.');
           }
           if (obj) {
             cb(obj);
