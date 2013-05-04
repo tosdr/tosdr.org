@@ -25,11 +25,11 @@ function renderDataPoint(service, dataPoint, forPopup) {
     sign = '-';
   } else if (obj.tosdr.point == 'alert') {
     badge = 'badge-important';
-    icon = 'fire';
+    icon = 'remove';
     sign = '×';
   } else if (obj.tosdr.point == 'not bad') {
     badge = 'badge-neutral';
-    icon = 'info-sign';
+    icon = 'asterisk';
     sign = '⋅';
   } else {
     badge = '';
