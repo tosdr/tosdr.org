@@ -168,16 +168,25 @@ function displayPoints(res) {
 			}
 			if(!points[files[i]].irrelevant && !points[files[i]].service) {
 				displayPoint(res, files[i], 'no service', points[files[i]]);
-				for(var j=0; j<autoDetectServices.length; j++) {
-					if(points[files[i]].title.indexOf(autoDetectServices[j])!=-1) {
-						points[files[i]].service=autoDetectServices[j];
-						savePoint(files[i]);
-						break;
-					}
-				}
+				var before = {};
+        try {
+          before = JSON.parse(fs.readFileSync('points-before/'+files[i]));
+        } catch(e) {}
+        if(before.service) {
+          points[files[i]].service = before.service;
+          savePoint(files[i]);
+        } else {
+          for(var j=0; j<autoDetectServices.length; j++) {
+	  				if(points[files[i]].title.indexOf(autoDetectServices[j])!=-1) {
+		  				points[files[i]].service=autoDetectServices[j];
+			  			savePoint(files[i]);
+				  		break;
+					  }
+				  }
+        }
 			}
       var service = points[files[i]].service;
-      if(service && service != service.toLowerCase()) {
+      if(typeof(service)=='string' /* it can also be an array of strings */ && service != service.toLowerCase()) {
         points[files[i]].service = service.toLowerCase();
         savePoint(files[i]);
       }
