@@ -68,7 +68,7 @@ function parsePointFile(id) {
     console.log(e, id, data, fs.readFileSync('points/'+id+'.json'));
     exit();
   }
-  if(obj.disputed || obj.irrelevant || obj.additional) {
+  if(obj.disputed || obj.irrelevant || obj.additional || !obj.tosdr ) {
     return;
   }
   if(typeof(obj.service)=='string') {
