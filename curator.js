@@ -176,6 +176,11 @@ function displayPoints(res) {
 					}
 				}
 			}
+      var service = points[files[i]].service;
+      if(service && service != service.toLowerCase) {
+        points[files[i]].service = service.toLowerCase();
+        savePoint(files[i]);
+      }
 		}
 	}
 	//console.log(points);
