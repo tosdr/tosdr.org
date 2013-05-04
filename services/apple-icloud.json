@@ -1,19 +1,24 @@
 {
-  "id": "apple-icloud",
-  "type":"service",
-  "name": "Apple iCloud",
-  "url": "icloud.com",
-  "tosdr": {"rated": false},
-  "tosback2": {
-      "sitename": "apple.com",
-      "terms": {
-          "name": "iCloud Terms of Service",
-          "url": "http://www.apple.com/legal/icloud/en/terms.html"
-      },
-      "privacy": {
-          "name": "Privacy Policy",
-          "url": "http://www.apple.com/privacy/"
-      }
+    "id": "apple-icloud",
+    "name": "Apple iCloud",
+    "related": [
+        "dropbox",
+        "apple"
+    ],
+    "tosback2": {
+        "privacy": {
+            "name": "Privacy Policy",
+            "url": "http://www.apple.com/privacy/"
+        },
+        "sitename": "apple.com",
+        "terms": {
+            "name": "iCloud Terms of Service",
+            "url": "http://www.apple.com/legal/icloud/en/terms.html"
+        }
     },
-  "related": ["dropbox","apple"]
+    "tosdr": {
+        "rated": false
+    },
+    "type": "service",
+    "url": "icloud.com"
 }
