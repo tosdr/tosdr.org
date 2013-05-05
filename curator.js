@@ -188,13 +188,13 @@ function displayPoints(res) {
       } catch(e) {}
       if(before) {
         for(var j in before) {
-          if(!points[files[i]][j]) {
+          if(points[files[i]][j] != before[j]) {
             points[files[i]][j] = before[j];
             savePoint(files[i]);
           }
         }
         for(var j in before.tosdr) {
-          if(!points[files[i]].tosdr[j]) {
+          if(points[files[i]].tosdr[j] != before.tosdr[j]) {
             points[files[i]].tosdr[j] = before.tosdr[j];
             savePoint(files[i]);
           }
