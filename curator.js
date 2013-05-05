@@ -32,6 +32,7 @@ function displayForm(res, filename) {
   displayField(res, point, 'title');
   displayField(res, point, 'service');
   displayField(res, point, 'irrelevant');
+  displayField(res, {filename: filename}, 'filename');
   res.write('<input type="submit"></form>');
   res.write('JSON: <textarea>'+fs.readFileSync('points/'+filename)+'</textarea>');
 }
@@ -50,7 +51,26 @@ function displayPoints(res) {
   }
 	//console.log(points);
 }
-
+function processPost(req) {
+  var str='';
+  req.on('data', function(chunk) {
+    str += chunk;
+  });
+  req.on('end', function() {
+    var pairs = str.split('&');
+    var incoming = {};
+    for(var i=0; i<pairs.length; i++) {
+      var parts = pairs[i].split('=');
+      incoming[parts[0]]=parts[1];
+    }
+    for(var i in incoming) {
+      if(i!='filename') {
+        points[incoming.filename][i]=incoming[i];
+      }
+    }
+    savePoint(incoming.filename);
+  });
+}
 //...
 files = fs.readdirSync('points/');
 for(var i=0; i<files.length; i++) {
@@ -63,6 +83,7 @@ var server = http.createServer(function(req, res) {
   res.write('<html><ul>');
   var point = req.url.substring(2);
   if(point.length) {
+    processPost(req);
     displayForm(res, point);
   } else {
     displayPoints(res);
