@@ -65,9 +65,24 @@ ul.tosdr-points.row { margin-top:1.4em;}
 
 /*Service Display*/
 
-.service-url .icon {
-  opacity:0.35;
-  margin:.2em 0 0 .3em;
+.service-url {
+	position: relative;
+	left: 10px;
+	font-size: .5em;
+}
+.service-url input {
+	vertical-align: baseline;
+	margin-left: 4px;
+	width: 150px;
+	font-size: .9em;
+	height: 1.3em;
+}
+input[readonly] { /* show normal text cursor for share link field */
+	cursor: initial;
+}
+.modal-header .close { /* always keep close button above share input field */
+	position: relative;
+	z-index: 10;
 }
 
 /*Service popup*/
