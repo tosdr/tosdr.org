@@ -29,6 +29,7 @@ function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
   displayField(res, {filename: filename}, 'filename', true);
+  displayField(res, point, 'topic');
   displayField(res, point, 'service');
   res.write('<input type="submit" value="set service" name="set"><br>');
   
