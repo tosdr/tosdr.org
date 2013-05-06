@@ -19,19 +19,23 @@ function displayPoint(res, filename, reason, data) {
   console.log(filename);
 }
 
-function displayField(res, point, field) {
+function displayField(res, point, field, hidden) {
   if(typeof(point[field])=='string') {
     point[field]=point[field].split('"').join('&quot;');
   }
-  res.write(field+': <input value="'+point[field]+'" name="'+field+'"/> <br>');
+  res.write((hidden?'<input hidden ':field+': <input ')+'value="'+point[field]+'" name="'+field+'"/>');
 }
 function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
+  displayField(res, {filename: filename}, 'filename', true);
   displayField(res, point, 'service');
-  displayField(res, {filename: filename}, 'filename');
-  res.write('<input type="submit"></form>');
-  res.write('<iframe src="'+point.discussion+'" />');
+  res.write('<input type="submit" value="set service" name="set"><br>');
+  
+  displayField(res, point, 'reason');
+  res.write('<input type="submit" value="inadmissible" name="irrelevant"></form>');
+  
+  res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
 }
 
 function displayPoints(res) {
@@ -58,7 +62,11 @@ function processPost(req) {
     str += chunk;
   });
   req.on('end', function() {
+    if(!str.length) {
+      return;
+    }
     var pairs = str.split('&');
+    console.log(pairs);
     var incoming = {};
     for(var i=0; i<pairs.length; i++) {
       var parts = pairs[i].split('=');
