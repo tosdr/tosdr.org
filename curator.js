@@ -28,13 +28,10 @@ function displayField(res, point, field) {
 function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
-  displayField(res, point, 'id');
-  displayField(res, point, 'title');
   displayField(res, point, 'service');
-  displayField(res, point, 'irrelevant');
   displayField(res, {filename: filename}, 'filename');
   res.write('<input type="submit"></form>');
-  res.write('JSON: <textarea>'+fs.readFileSync('points/'+filename)+'</textarea>');
+  res.write('<iframe src="'+point.discussion+'" />');
 }
 
 function displayPoints(res) {
@@ -47,6 +44,10 @@ function displayPoints(res) {
     }
     if(!points[i].irrelevant && !points[i].service) {
       displayPoint(res, i, 'no service', points[i]);
+    }
+    if(!points[i].discussion) {
+      points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
+      savePoint(i);
     }
   }
 	//console.log(points);
