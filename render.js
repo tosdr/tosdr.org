@@ -173,7 +173,9 @@ function renderPopup(name, obj, points, links) {
     ratingText = getRatingText(obj.tosdr.rated);
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
     + '<img src="logo/' + name + '.png" alt="" class="pull-left favlogo" height="36" >'
-    + '<h3>' + longName + ' <small class="service-url"><i class="icon icon-globe"></i> <a href="http://' + domain + '" target="_blank">' + domain + '</a></small></h3></div>\n';
+    + '<h3>' + longName
+    + '<small class="service-url">Share review <input type="text" value="http://tosdr.org/#' + name + '" readonly /></small>'
+    + '</h3></div>\n';
   var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">'
     + (verdict ? 'Class ' + verdict : 'No Class Yet') + '</label><p>' + ratingText + '</p></div>\n';
   var renderables = [];
@@ -188,7 +190,6 @@ function renderPopup(name, obj, points, links) {
   for (var i = 0; i < renderables.length; i++) {
     pointsHtml += '<li id="popup-point-' + name + '-' + renderables[i].id + '" class="point">' + renderables[i].text + '</li>\n';
   }
-  var footerHtml = '<div class="modal-footer"><a class="btn" data-dismiss="modal" href="#">Close</a><a href="#' + name + '" rel="bookmark"><i class="icon icon-share"></i> Link to ToS;DR for ' + longName + '</a></div>\n';
   var bodyHtml = '<div class="modal-body">' + classHtml + '<section class="specificissues"> <ul class="tosdr-points">' + pointsHtml + '</ul></section>\n';
   if (isEmpty(links)) {
     bodyHtml += '<section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>\n';
@@ -200,7 +201,7 @@ function renderPopup(name, obj, points, links) {
     bodyHtml += '</ul></section>\n';
   }
   bodyHtml += '</div>';
-  return headerHtml + bodyHtml + footerHtml;
+  return headerHtml + bodyHtml;
 }
 function go() {
   var text = fs.readFileSync('index/services.json').toString();
