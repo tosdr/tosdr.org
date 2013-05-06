@@ -174,7 +174,7 @@ function renderPopup(name, obj, points, links) {
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
     + '<img src="logo/' + name + '.png" alt="" class="pull-left favlogo" height="36" >'
     + '<h3>' + longName
-    + '<small class="service-url">Share review <input type="text" value="http://tosdr.org/#' + name + '" readonly /></small>'
+    + '<small class="service-url">Share review <input class="share-link" type="text" value="http://tosdr.org/#' + name + '" readonly /></small>'
     + '</h3></div>\n';
   var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">'
     + (verdict ? 'Class ' + verdict : 'No Class Yet') + '</label><p>' + ratingText + '</p></div>\n';
