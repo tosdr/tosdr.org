@@ -36,6 +36,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <script src="http://tosdr.org/js/jquery-1.7.1.min.js"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+    <script>
+      function dismiss(filename) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/', true);
+        xhr.onload = function() {
+          if(this.status==200) {
+            alert('If this was submitted as a data point, then reply to the thread, explaining why you dismissed it.');
+          }
+        };
+        xhr.send('filename='+filename+'&irrelevant=dismissed+by+the+curator');
+      }
+    </script>
   </head>
   <body id="backlog-html" data-spy="scroll">
 
@@ -67,9 +79,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
                     <h1 class="page-header">Backlog</h1>
 
-                    <div>
+<!--                    <div>
                         <p>Show the backlog of points with missing:<p>
                         <input type="checkbox"> service <input type="checkbox"> topic <input type="checkbox"> tos;dr
                     </div>
-      
+-->      
       <ul id="backlog">

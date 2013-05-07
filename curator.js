@@ -15,8 +15,9 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li> <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> <a href="'
-    +data.discussion+'">'+data.title+'</a> <a href="?'+filename+'" class="btn btn-small">Make a point</a> <a onclick="dismiss(\''+filename+'\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
+  res.write('<li> <!-- <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> -->'
+    +'<a href="?'+filename+'" class="btn btn-small">Make a point</a>  <a target="_blank" href="'
+    +data.discussion+'">'+data.title+'</a> <a onclick="dismiss(\''+filename+'\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
   console.log(filename);
 }
 
@@ -90,15 +91,17 @@ for(var i=0; i<files.length; i++) {
   }
 }
 var server = http.createServer(function(req, res) {
-  res.writeHead(200, {});
-  res.write('<html><ul>');
   var point = req.url.substring(2);
   processPost(req);
-  if(point.length) {
+  if(point.length && req.url.substring(0,2)=='/?') {
     console.log('displaying form for '+point);
+    res.writeHead(200, {});
     displayForm(res, point);
-  } else {
+  } else if(req.url=='/') {
+    res.writeHead(200, {});
     displayPoints(res);
+  } else {
+    res.writeHead(404, {});
   }
   res.end('</ul></html>');
 });
