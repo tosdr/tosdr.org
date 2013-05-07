@@ -153,14 +153,25 @@ When a point was created but then is judged irrelevant, add
 	
 Some reasons why a point can be irrelevant:
 
- * it has nothing to do with terms, at all (for instance: whether
- * the service has a nice design interface, whether it uses free
- * software as a backend, whether they provide HTTPS, etc.) it has
- * been superseded by a duplicated point, for instance this
- * happens when we create standardised points applying to multiple
- * services it no longer applies, for instance when a service has
- * changed their terms.
- 
+ * it has nothing to do with terms, at all, for instance:
+   * whether the service has a nice design interface,
+   * whether it uses free software as a backend,
+   * whether they provide HTTPS,
+   * etc.
+ * it has been superseded by a duplicated point, for instance
+   * when we create standardised points applying to multiple
+     services it no longer applies,
+   * when a service has changed their terms.
+ * it is a standard boilerplate point which isn't relevant, for
+   instance:
+   * age limit of 13 for a service where you publish info about
+     yourself
+   * age limit of 18 for a service that lets you spend money
+   * you are not allowed to upload illegal material
+   * you must provide your real identity to us (but not on your
+     user profile that is visible to other users)
+   * (please add more example cases as they come up)
+
 ## additional points
 
 Additional points are points which are somewhat related to the
