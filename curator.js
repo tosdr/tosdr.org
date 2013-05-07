@@ -15,13 +15,13 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li><a href="?'+filename+'">create point</a> '+reason+' <a href="'+data.discussion+'" target="blank">'+data.title+'</a>'
-    +'<form method="POST"><input hidden name="filename" value="'+filename+'" />'
-    +'<input name="irrelevant" type="submit" value="inadmissible"/></form></li>');
+  res.write('<li> <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> <a href="'
+    +data.discussion+'">'+data.title+'</a> <a href="?'+filename+'" class="btn btn-small">Make a point</a> <a onclick="dismiss(\''+filename+'\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
   console.log(filename);
 }
 
 function displayField(res, point, field, hidden) {
+  console.log(point, field, hidden);
   if(typeof(point[field])=='string') {
     point[field]=point[field].split('"').join('&quot;');
   }
@@ -39,6 +39,7 @@ function displayForm(res, filename) {
 }
 
 function displayPoints(res) {
+  res.write(fs.readFileSync('curator-prefix.html'));
   for(var i in points) {
     if(!points[i].discussion) {
       points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
@@ -46,14 +47,15 @@ function displayPoints(res) {
     }
     if(!points[i].id) {
       displayPoint(res, i, 'no id', points[i]);
-    }
-    if(!points[i].title) {
+    } else if(!points[i].title) {
       displayPoint(res, i, 'no title', points[i]);
-    }
-    if(!points[i].irrelevant && !points[i].service) {
+    } else if(!points[i].irrelevant && !points[i].service) {
       displayPoint(res, i, 'no service', points[i]);
+    } else if(!points[i].irrelevant && !points[i].topic) {
+      displayPoint(res, i, 'no topic', points[i]);
     }
   }
+  res.write(fs.readFileSync('curator-postfix.html'));
 	//console.log(points);
 }
 function processPost(req) {
@@ -93,6 +95,7 @@ var server = http.createServer(function(req, res) {
   var point = req.url.substring(2);
   processPost(req);
   if(point.length) {
+    console.log('displaying form for '+point);
     displayForm(res, point);
   } else {
     displayPoints(res);
