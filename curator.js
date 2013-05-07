@@ -15,7 +15,7 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li><a href="?'+filename+'">'+filename+'</a> '+reason+' <a href="'+data.discussion+'" target="blank">'+data.title+'</a>'
+  res.write('<li><a href="?'+filename+'">'+create point+'</a> '+reason+' <a href="'+data.discussion+'" target="blank">'+data.title+'</a>'
     +'<form method="POST"><input hidden name="filename" value="'+filename+'" />'
     +'<input name="irrelevant" type="submit" value="inadmissible"/></form></li>');
   console.log(filename);
@@ -34,9 +34,6 @@ function displayForm(res, filename) {
   displayField(res, point, 'topic');
   displayField(res, point, 'service');
   res.write('<input type="submit" value="set service" name="set"><br>');
-  
-  displayField(res, point, 'reason');
-  res.write('<input type="submit" value="inadmissible" name="irrelevant"></form>');
   
   res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
 }
