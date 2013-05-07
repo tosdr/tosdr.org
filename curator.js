@@ -15,7 +15,7 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li><a href="?'+filename+'">'+create point+'</a> '+reason+' <a href="'+data.discussion+'" target="blank">'+data.title+'</a>'
+  res.write('<li><a href="?'+filename+'">create point</a> '+reason+' <a href="'+data.discussion+'" target="blank">'+data.title+'</a>'
     +'<form method="POST"><input hidden name="filename" value="'+filename+'" />'
     +'<input name="irrelevant" type="submit" value="inadmissible"/></form></li>');
   console.log(filename);
