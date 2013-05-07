@@ -15,7 +15,9 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li><a href="?'+filename+'">'+filename+'</a> '+reason+JSON.stringify(data)+'</li>');
+  res.write('<li><a href="?'+filename+'">'+filename+'</a> <a href="'+data.discussion+'">'+reason+'</a>'
+    +'<form method="POST"><input hidden name="filename" value="'+filename+'" />'
+    +'<input name="irrelevant" type="submit" /></form></li>');
   console.log(filename);
 }
 
@@ -41,6 +43,10 @@ function displayForm(res, filename) {
 
 function displayPoints(res) {
   for(var i in points) {
+    if(!points[i].discussion) {
+      points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
+      savePoint(i);
+    }
     if(!points[i].id) {
       displayPoint(res, i, 'no id', points[i]);
     }
@@ -49,10 +55,6 @@ function displayPoints(res) {
     }
     if(!points[i].irrelevant && !points[i].service) {
       displayPoint(res, i, 'no service', points[i]);
-    }
-    if(!points[i].discussion) {
-      points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
-      savePoint(i);
     }
   }
 	//console.log(points);
@@ -92,8 +94,8 @@ var server = http.createServer(function(req, res) {
   res.writeHead(200, {});
   res.write('<html><ul>');
   var point = req.url.substring(2);
+  processPost(req);
   if(point.length) {
-    processPost(req);
     displayForm(res, point);
   } else {
     displayPoints(res);
