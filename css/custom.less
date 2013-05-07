@@ -87,7 +87,22 @@ input[readonly] { /* show normal text cursor for share link field */
 
 /*Service popup*/
 
-@media (max-width: 600px)  {.tosdr-infos {position:fixed;margin:0;} }
+
+.modal {
+	width: 720px;
+	margin-left: -360px;
+}
+.modal-body {
+	max-heigth: 700px;
+}
+
+@media (max-width: 600px)  {
+	.tosdr-infos {
+		position: fixed;
+		margin: 0;
+		width: initial;
+	}
+}
 @media (max-height: 500px) and  (orientation:landscape) {.tosdr-infos {top:0;margin:0 0 0 -50%;} }
 
 .tosdr-infos { 
