@@ -32,9 +32,9 @@ function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
   displayField(res, {filename: filename}, 'filename', true);
-  //displayField(res, point, 'topic');
+  displayField(res, point, 'topic');
   displayField(res, point, 'service');
-  res.write('<input type="submit" value="set service" name="set"><br>');
+  res.write('<input type="submit" value="set service and topic" name="set"><br>');
   
   res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
 }
@@ -56,8 +56,8 @@ function displayPoints(res) {
       displayPoint(res, i, 'no title', points[i]);
     } else if(!points[i].irrelevant && !points[i].service) {
       displayPoint(res, i, 'no service', points[i]);
-    //} else if(!points[i].irrelevant && !points[i].topic) {
-    //  displayPoint(res, i, 'no topic', points[i]);
+    } else if(!points[i].irrelevant && !points[i].topic) {
+      displayPoint(res, i, 'no topic', points[i]);
     }
   }
   res.write(fs.readFileSync('curator-postfix.html'));
