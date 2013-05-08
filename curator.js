@@ -41,6 +41,7 @@ function displayForm(res, filename) {
 }
 
 function displayPoints(res) {
+  loadPoints();
   res.write(fs.readFileSync('curator-prefix.html'));
   for(var i in points) {
     if(!points[i].topic && points[i].tosdr && points[i].tosdr.topic) {
@@ -88,13 +89,17 @@ function processPost(req) {
     savePoint(incoming.filename);
   });
 }
-//...
-files = fs.readdirSync('points/');
-for(var i=0; i<files.length; i++) {
-	if(files[i]!='README.md') {
-		addFile(files[i]);
+function loadPoints() {
+  points={};
+  files = fs.readdirSync('points/');
+  for(var i=0; i<files.length; i++) {
+  	if(files[i]!='README.md') {
+  		addFile(files[i]);
+    }
   }
 }
+//...
+loadPoints();
 var server = http.createServer(function(req, res) {
   var point = req.url.substring(2);
   processPost(req);
