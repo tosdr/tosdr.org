@@ -42,6 +42,10 @@ function displayForm(res, filename) {
 function displayPoints(res) {
   res.write(fs.readFileSync('curator-prefix.html'));
   for(var i in points) {
+    if(!points[i].topic && points[i].tosdr && points[i].tosdr.topic) {
+      points[i].topic=points[i].tosdr.topic;
+      savePoint(i);
+    }
     if(!points[i].discussion) {
       points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
       savePoint(i);
