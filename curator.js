@@ -36,6 +36,7 @@ function displayForm(res, filename) {
   displayField(res, point, 'service');
   res.write('<input type="submit" value="set service and topic" name="set"><br>');
   
+  res.write('<a href="/">index</a>');
   res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
 }
 
