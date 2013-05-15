@@ -53,7 +53,9 @@ function addToTopics(topics, point) {
     if(!topic[topics[i]]) {
       topic[topics[i]] = [];
     }
-    topic[topics[i]].push(point);
+    if(topic[topics[i]].indexOf(point) == -1) {
+      topic[topics[i]].push(point);
+    }
   }
 }
 function parsePointFile(id) {
