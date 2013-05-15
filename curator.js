@@ -15,6 +15,7 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
+<<<<<<< HEAD
   res.write('<li><a href="?'+filename+'">'+filename+'</a> '+reason+JSON.stringify(data)+'</li>');
   console.log(filename);
 }
@@ -24,10 +25,25 @@ function displayField(res, point, field) {
     point[field]=point[field].split('"').join('&quot;');
   }
   res.write(field+': <input value="'+point[field]+'" name="'+field+'"/> <br>');
+=======
+  res.write('<li> <!-- <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> -->'
+    +'<a href="?'+filename+'" class="btn btn-small">Make a point</a>  <a target="_blank" href="'
+    +data.discussion+'">'+data.title+'</a> <a onclick="dismiss(\''+filename+'\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
+  console.log(filename);
+}
+
+function displayField(res, point, field, hidden) {
+  console.log(point, field, hidden);
+  if(typeof(point[field])=='string') {
+    point[field]=point[field].split('"').join('&quot;');
+  }
+  res.write((hidden?'<input hidden ':field+': <input ')+'value="'+point[field]+'" name="'+field+'"/>');
+>>>>>>> master
 }
 function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
+<<<<<<< HEAD
   displayField(res, point, 'id');
   displayField(res, point, 'title');
   displayField(res, point, 'service');
@@ -49,6 +65,40 @@ function displayPoints(res) {
       displayPoint(res, i, 'no service', points[i]);
     }
   }
+=======
+  displayField(res, {filename: filename}, 'filename', true);
+  displayField(res, point, 'topic');
+  displayField(res, point, 'service');
+  res.write('<input type="submit" value="set service and topic" name="set"><br>');
+  
+  res.write('<a href="/">index</a>');
+  res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
+}
+
+function displayPoints(res) {
+  loadPoints();
+  res.write(fs.readFileSync('curator-prefix.html'));
+  for(var i in points) {
+    if(!points[i].topic && points[i].tosdr && points[i].tosdr.topic) {
+      points[i].topic=points[i].tosdr.topic;
+      savePoint(i);
+    }
+    if(!points[i].discussion) {
+      points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
+      savePoint(i);
+    }
+    if(!points[i].id) {
+      displayPoint(res, i, 'no id', points[i]);
+    } else if(!points[i].title) {
+      displayPoint(res, i, 'no title', points[i]);
+    } else if(!points[i].irrelevant && !points[i].service) {
+      displayPoint(res, i, 'no service', points[i]);
+    } else if(!points[i].irrelevant && !points[i].topic) {
+      displayPoint(res, i, 'no topic', points[i]);
+    }
+  }
+  res.write(fs.readFileSync('curator-postfix.html'));
+>>>>>>> master
 	//console.log(points);
 }
 function processPost(req) {
@@ -57,7 +107,15 @@ function processPost(req) {
     str += chunk;
   });
   req.on('end', function() {
+<<<<<<< HEAD
     var pairs = str.split('&');
+=======
+    if(!str.length) {
+      return;
+    }
+    var pairs = str.split('&');
+    console.log(pairs);
+>>>>>>> master
     var incoming = {};
     for(var i=0; i<pairs.length; i++) {
       var parts = pairs[i].split('=');
@@ -71,6 +129,7 @@ function processPost(req) {
     savePoint(incoming.filename);
   });
 }
+<<<<<<< HEAD
 //...
 files = fs.readdirSync('points/');
 for(var i=0; i<files.length; i++) {
@@ -87,6 +146,31 @@ var server = http.createServer(function(req, res) {
     displayForm(res, point);
   } else {
     displayPoints(res);
+=======
+function loadPoints() {
+  points={};
+  files = fs.readdirSync('points/');
+  for(var i=0; i<files.length; i++) {
+  	if(files[i]!='README.md') {
+  		addFile(files[i]);
+    }
+  }
+}
+//...
+loadPoints();
+var server = http.createServer(function(req, res) {
+  var point = req.url.substring(2);
+  processPost(req);
+  if(point.length && req.url.substring(0,2)=='/?') {
+    console.log('displaying form for '+point);
+    res.writeHead(200, {});
+    displayForm(res, point);
+  } else if(req.url=='/') {
+    res.writeHead(200, {});
+    displayPoints(res);
+  } else {
+    res.writeHead(404, {});
+>>>>>>> master
   }
   res.end('</ul></html>');
 });

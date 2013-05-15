@@ -1,0 +1,87 @@
+<!--
+Copyright 2013 buro@tosdr.org
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Backlog - Terms of Service; Didn&apos;t Read</title>
+    <meta name="description" content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of websites.">
+    <meta name="author" content="Terms of Service; Didn't Read">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    
+    <link href="http://tosdr.org/css/bootstrap.css" rel="stylesheet">
+    <link href="http://tosdr.org/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://tosdr.org/css/custom.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://tosdr.org/img/tosdr-icon-16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://tosdr.org/img/tosdr-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://tosdr.org/img/tosdr-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://tosdr.org/img/tosdr-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="http://tosdr.org/img/tosdr-icon-57.png">
+
+    <script src="http://tosdr.org/js/jquery-1.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+    <script>
+      function dismiss(filename) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/', true);
+        xhr.onload = function() {
+          if(this.status==200) {
+            alert('If this was submitted as a data point, then reply to the thread, explaining why you dismissed it.');
+          }
+        };
+        xhr.send('filename='+filename+'&irrelevant=dismissed+by+the+curator');
+      }
+    </script>
+  </head>
+  <body id="backlog-html" data-spy="scroll">
+
+    <div class="navbar navbar-fixed-top" id="menu-options">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://tosdr.org/index.html"><img src="http://tosdr.org/img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class=""><a href="http://tosdr.org/index.html#services">Ratings</a></li>
+              <li class=""><a href="http://tosdr.org/about.html">About</a></li>
+            </ul>
+            <p class="pull-right follow-us">
+              Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; 
+              Donate: <a href="http://flattr.com/thing/821090/ToSDR" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div  class="container" id="tosdr-content" role="main">
+    
+                    <h1 class="page-header">Backlog</h1>
+
+<!--                    <div>
+                        <p>Show the backlog of points with missing:<p>
+                        <input type="checkbox"> service <input type="checkbox"> topic <input type="checkbox"> tos;dr
+                    </div>
+-->      
+      <ul id="backlog">

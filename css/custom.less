@@ -524,13 +524,19 @@ ul#backlog {
 	margin-left:0;
 }
 
-ul#backlog .arrow-upvote {
-	position:absolute;
-	margin-top:-0.5em;
-	vertical-align:top;
+ul#backlog .arrow-upvote img {
+    vertical-align:top;
+    margin-top:0.3em;
 }
-ul#backlog .arrow-downvote {
-	vertical-align:bottom;
+
+ul#backlog li {
+    min-height:2.2em;
+    line-height: 2em;
+    padding: 0 0.7em;
+}
+
+ul#backlog li:nth-child(odd) {
+    background-color:@grayLighter;
 }
 
 /*thank you page */
