@@ -14,7 +14,12 @@ The json files in the /points directory are information related to
 terms of service, privacy policies and other agreements binding
 users and services online. Each point should be linked to a
 discussion on the public mailing-list.
- 
+
+# format
+
+We run `python -mjson.tool` on all JSON files, which means they
+have 4 spaces indentation, and the fields appear alphabetically.
+
 # id
 
 "id" are unique identifiers that we use to refer to specific data
