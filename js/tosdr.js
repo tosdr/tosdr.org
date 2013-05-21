@@ -66,6 +66,12 @@ $(function () {
     return false;
   });
 
+  // automatically select whole share link when input is clicked
+  $(document).on('click', '.modal .share-link', function() {
+    $(this).focus();
+    $(this).select();
+  });
+
   if (location.hash.length > 1) {
     showModal(location.hash.substring(1));
   }

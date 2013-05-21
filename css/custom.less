@@ -65,14 +65,45 @@ ul.tosdr-points.row { margin-top:1.4em;}
 
 /*Service Display*/
 
-.service-url .icon {
-  opacity:0.35;
-  margin:.2em 0 0 .3em;
+.service-url {
+	position: relative;
+	left: 10px;
+	font-size: .5em;
+}
+.service-url input {
+	vertical-align: baseline;
+	margin-left: 4px;
+	width: 150px;
+	font-size: .9em;
+	height: 1.3em;
+}
+input[readonly] { /* show normal text cursor for share link field */
+	cursor: initial;
+}
+.modal-header .close { /* always keep close button above share input field */
+	position: relative;
+	z-index: 10;
 }
 
 /*Service popup*/
 
-@media (max-width: 600px)  {.tosdr-infos {position:fixed;margin:0;} }
+
+.modal {
+	width: 720px;
+	margin-left: -360px;
+}
+.modal-body {
+	max-heigth: 700px;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px)  {
+	.tosdr-infos {
+		position: fixed;
+		margin: 0;
+		width: initial;
+	}
+}
 @media (max-height: 500px) and  (orientation:landscape) {.tosdr-infos {top:0;margin:0 0 0 -50%;} }
 
 .tosdr-infos { 
@@ -376,6 +407,11 @@ img.avatar {
 /*.navbar .nav > li > a:hover { color:#ddd;}*/
 
 /*.navbar-inner .btn-navbar {background: rgb(66,66,66)}*/
+
+.navbar-fixed-top .navbar-inner {
+	background: rgba(255, 255, 255, .8);
+	border: none;
+}
 
 .navbar-inner .follow-us {
 	line-height: 20px;
