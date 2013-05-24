@@ -1,12 +1,11 @@
 @import "./bootstrap/less/variables.less";
-
+@import "fonts.less";
 /*General tweak of boostrap*/
 
-section { margin-bottom:4em; padding-top:2em; } 
+section { margin-bottom:2em; padding-top:2em; } 
 /*.page-header { padding:0; margin:@baseLineHeight 0 @baseLineHeight/3; border-bottom:none; }*/
-h2,h3 {font-weight:600;}
+h2,h3 {font-weight:500;}
 .center {text-align:center;}
-
 form .btn-inline {
 margin-top:-0.6em;
 }
@@ -394,7 +393,6 @@ img.avatar {
 /*footer*/
 #bottom {
 	margin:5em 0 0 0;
-	border-top: 1px solid @grayLight;
 	padding:3em 0;
 	background: @grayLighter @BackgroundGranul;
 }
@@ -426,8 +424,14 @@ img.avatar {
 /*.navbar li.active { background: rgb(66,66,66) @BackgroundGranul;}*/
 /*.navbar li.active a	 { background: rgb(66,66,66) @BackgroundGranul;}*/
 /*.navbar .nav > li > a:hover { color:#ddd;}*/
-
 /*.navbar-inner .btn-navbar {background: rgb(66,66,66)}*/
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-color: transparent;
+    border-bottom: 3px solid @green;
+}
+
+.navbar .brand {font-weight:300;}
 
 .navbar-fixed-top .navbar-inner {
 	background: rgba(255, 255, 255, .8);
@@ -437,15 +441,16 @@ img.avatar {
 .navbar-inner .follow-us {
 	line-height: 20px;
 	padding: 10px 10px 0 0;
+        font-weight:300;
 }
 
 .follow-us a{color:#5df;}
 .follow-us a:hover{color:#aef;}
 
 
-.hero-unit {padding: 60px 0 20px; }
+.hero-unit {padding: 60px 0 20px; font-weight:400; }
 .hero-unit section {margin-bottom: 1em; padding: 0 30px;}
-.hero-unit h2 { padding:1em 0; font-weight:600; }
+.hero-unit h2 { padding:1em 0; font-weight:500; }
 
 
 
