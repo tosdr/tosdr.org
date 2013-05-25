@@ -22,15 +22,15 @@ function renderDataPoint(service, dataPoint, forPopup) {
     badge = 'badge-success';
     icon = 'thumbs-up';
     sign = '+';
-  } else if (obj.tosdr.point == 'mediocre') {
+  } else if (obj.tosdr.point == 'bad') {
     badge = 'badge-warning';
     icon = 'thumbs-down';
     sign = '-';
-  } else if (obj.tosdr.point == 'alert') {
+  } else if (obj.tosdr.point == 'blocker') {
     badge = 'badge-important';
     icon = 'remove';
     sign = '×';
-  } else if (obj.tosdr.point == 'not bad') {
+  } else if (obj.tosdr.point == 'neutral') {
     badge = 'badge-neutral';
     icon = 'asterisk';
     sign = '⋅';
