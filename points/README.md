@@ -192,7 +192,7 @@ class and they are not displayed.
         "service": "list-in-services-directory", 
         "tosdr": {
             "topic": "track", 
-            "point": choose between: "mediocre", "good", "alert", "not bad", 
+            "point": choose between: "bad", "good", "blocker", "neutral", 
             "score": 0, 
             "tldr": "" 
         },
