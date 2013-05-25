@@ -119,10 +119,11 @@ function renderDetails(name, points, toslinks, obj) {
       + renderables[i].text
       + '</li>';
   }
-  //add link to 'read the full terms' at the bottom:
+  //add link to have more details at the bottom:
   issues += '</ul>'
-    + '<a class="modal-link" data-service-name="' + name + '" href="#"><i class="icon  icon-th-list"></i> Expand</a>'
-    + (toslinks.terms ? '<br /><a href="' + toslinks.terms.url + '" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>' : '')
+    + '<a class="modal-link" data-service-name="' + name + '" href="#"><i class="icon  icon-th-list"></i> More details</a>'
+    // add link to read the full terms (removed)
+    //    + (toslinks.terms ? '<br /><a href="' + toslinks.terms.url + '" target="_blank"><i class="icon  icon-list-alt"></i> Read the full terms</a>' : '')
     + '</section>';
   //add some search terms to the data-search field. this is quite crude, but it works:
   var search = [name];
