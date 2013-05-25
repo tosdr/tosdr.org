@@ -18,12 +18,12 @@ function renderDataPoint(topic, dataPoint) {
 
         if (obj.tosdr.point == 'good') {
           badge = 'badge-success';
-        } else if (obj.tosdr.point == 'mediocre') {
+        } else if (obj.tosdr.point == 'bad') {
           badge = 'badge-warning';
-        } else if (obj.tosdr.point == 'alert') {
+        } else if (obj.tosdr.point == 'blocker') {
           badge = 'badge-important';
           obj.tosdr.score += 100;
-        } else if (obj.tosdr.point == 'not bad') {
+        } else if (obj.tosdr.point == 'neutral') {
           badge = 'badge-neutral';
         } else {
           badge = '';
