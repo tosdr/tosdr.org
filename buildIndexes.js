@@ -112,7 +112,7 @@ function parseServiceFile(id) {
           //console.log(id+' '+i+': '+obj.fulltos[i]);
         //}
       //}
-    }
+    //}
     pending--;
     // "last person to leave switch off the lights please",
     // or in this case, save everything to disk:
