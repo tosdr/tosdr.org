@@ -140,13 +140,13 @@ function renderDetails(name, points, toslinks, obj) {
   if (obj.name) {
     search.push(obj.name);
   }
-//  if (obj.url) { 
-//    search.push(obj.url);
-//  }
+  //if (obj.url) { 
+  //  search.push(obj.url);
+  //}
   if (obj.parent) {
     search.push(obj.parent);
   }
-  return '\t<div data-search="' + search.join(',') + '" id="' + name + '-tosdr" class="span6 service-nutshell">'
+  return '\t<div data-search="' + search.join(',') + ' " id="' + name + '-tosdr" class="span6 service-nutshell">'
     + header + rating + issues
     + '</div>\n';
 }
