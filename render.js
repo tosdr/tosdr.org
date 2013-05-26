@@ -140,9 +140,9 @@ function renderDetails(name, points, toslinks, obj) {
   if (obj.name) {
     search.push(obj.name);
   }
-  if (obj.urls) {
-    search.push(obj.urls);
-  }
+//  if (obj.url) { 
+//    search.push(obj.url);
+//  }
   if (obj.parent) {
     search.push(obj.parent);
   }
