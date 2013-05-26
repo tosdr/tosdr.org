@@ -104,14 +104,14 @@ function parseServiceFile(id) {
     console.log(id);
     console.log(data.toString());
     var obj = JSON.parse(data.toString());
-    if(typeof(obj.fulltos)=='object') {
-      for(var i in obj.fulltos) { 
-        if(obj.fulltos[i].url) {
-          service[id].toslinks[i]=obj.fulltos[i];
-          service[id].alexa=obj.alexa;
-          console.log(id+' '+i+': '+obj.fulltos[i]);
-        }
-      }
+    //if(typeof(obj.fulltos)=='object') {
+      //for(var i in obj.fulltos) { 
+        //if(obj.fulltos[i].url) {
+          //service[id].toslinks[i]=obj.fulltos[i];
+          //service[id].alexa=obj.alexa;
+          //console.log(id+' '+i+': '+obj.fulltos[i]);
+        //}
+      //}
     }
     pending--;
     // "last person to leave switch off the lights please",
