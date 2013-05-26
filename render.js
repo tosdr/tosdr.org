@@ -140,8 +140,8 @@ function renderDetails(name, points, toslinks, obj) {
   if (obj.name) {
     search.push(obj.name);
   }
-  if (obj.url) {
-    search.push(obj.url);
+  if (obj.urls) {
+    search.push(obj.urls);
   }
   if (obj.parent) {
     search.push(obj.parent);
@@ -169,7 +169,7 @@ function renderPopup(name, obj, points, links) {
     obj.tosdr = {};
   }
   var longName = obj.name,
-    domain = obj.url,
+//    domain = obj.url,
     verdict = obj.tosdr.rated,
     ratingText = getRatingText(obj.tosdr.rated);
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
