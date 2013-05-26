@@ -193,9 +193,9 @@ function renderPopup(name, obj, points, links) {
   }
   var bodyHtml = '<div class="modal-body">' + classHtml + '<section class="specificissues"> <ul class="tosdr-points">' + pointsHtml + '</ul></section>\n';
   if (isEmpty(links)) {
-    bodyHtml += '<section><a href="/get-involved.html" class="btn">Help us find the Terms »</a></section>\n';
+    bodyHtml += '<section><a href="/get-involved.html#tosback" class="btn">Help us find the Terms »</a></section>\n';
   } else {
-    bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">\n';
+    bodyHtml += '<section><h4>Read the full terms</h4><ul class="tos-long">\n';
     for (var i in links) {
       bodyHtml += '<li><a href="' + links[i].url + '">' + (links[i].name ? links[i].name : i) + '</a></li>\n';
     }
