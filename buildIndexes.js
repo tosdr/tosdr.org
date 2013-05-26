@@ -104,12 +104,12 @@ function parseServiceFile(id) {
     console.log(id);
     console.log(data.toString());
     var obj = JSON.parse(data.toString());
-    if(typeof(obj.full-tos)=='object') {
-      for(var i in obj.full-tos) { 
-        if(obj.full-tos[i].url) {
-          service[id].links[i]=obj.full-tos[i];
+    if(typeof(obj.fulltos)=='object') {
+      for(var i in obj.fulltos) { 
+        if(obj.fulltos[i].url) {
+          service[id].links[i]=obj.fulltos[i];
           service[id].alexa=obj.alexa;
-          console.log(id+' '+i+': '+obj.full-tos[i]);
+          console.log(id+' '+i+': '+obj.fulltos[i]);
         }
       }
     }
