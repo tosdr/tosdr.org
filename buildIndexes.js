@@ -29,9 +29,9 @@ function addToServices(services, point) {
   for(var i=0; i<services.length; i++) {
     if(!service[services[i]]) {
       //points will be a list of data points about this service.
-      //links will be a list of links to the various terms and
+      //toslinks will be a list of links to the various terms and
       //policy documents published by this service:
-      service[services[i]] = {points: [], links: {}};
+      service[services[i]] = {points: [], toslinks: {}};
     }
     service[services[i]].points.push(point);
   }
@@ -107,7 +107,7 @@ function parseServiceFile(id) {
     if(typeof(obj.fulltos)=='object') {
       for(var i in obj.fulltos) { 
         if(obj.fulltos[i].url) {
-          service[id].links[i]=obj.fulltos[i];
+          service[id].toslinks[i]=obj.fulltos[i];
           service[id].alexa=obj.alexa;
           console.log(id+' '+i+': '+obj.fulltos[i]);
         }

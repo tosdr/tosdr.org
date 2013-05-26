@@ -158,13 +158,13 @@ function isEmpty(map) {
   }
   return true;
 }
-function renderPopup(name, obj, points, links) {
+function renderPopup(name, obj, points, toslinks) {
   //the popup is actually a popin, it is what you see when you click 'expand' for one of the services on index.html.
   //this is how we generate the html for them:
   console.log('Rendering popup for ' + name);
   console.log(obj);
   console.log(points);
-  console.log(links);
+  console.log(toslinks);
   if(!obj.tosdr) {
     obj.tosdr = {};
   }
@@ -192,12 +192,12 @@ function renderPopup(name, obj, points, links) {
     pointsHtml += '<li id="popup-point-' + name + '-' + renderables[i].id + '" class="point">' + renderables[i].text + '</li>\n';
   }
   var bodyHtml = '<div class="modal-body">' + classHtml + '<section class="specificissues"> <ul class="tosdr-points">' + pointsHtml + '</ul></section>\n';
-  if (isEmpty(links)) {
+  if (isEmpty(toslinks)) {
     bodyHtml += '<section><a href="/get-involved.html#tosback" class="btn">Help us find the Terms »</a></section>\n';
   } else {
     bodyHtml += '<section><h4>Read the full terms</h4><ul class="tos-long">\n';
-    for (var i in links) {
-      bodyHtml += '<li><a href="' + links[i].url + '">' + (links[i].name ? links[i].name : i) + '</a></li>\n';
+    for (var i in toslinks) {
+      bodyHtml += '<li><a href="' + toslinks[i].url + '">' + (toslinks[i].name ? toslinks[i].name : i) + '</a></li>\n';
     }
     bodyHtml += '</ul></section>\n';
   }
@@ -242,23 +242,23 @@ function go() {
     //}
 
     if(serviceName == 'twitter') {
-      twitterService = renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+      twitterService = renderDetails(serviceName, services[serviceName].points, services[serviceName].toslinks, obj);
     }
 
     if (last) {
       servicesList +=
-        renderDetails(last, services[last].points, services[last].links, lastObj)
-        + renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+        renderDetails(last, services[last].points, services[last].toslinks, lastObj)
+        + renderDetails(serviceName, services[serviceName].points, services[serviceName].toslinks, obj);
       last = undefined;
     } else {
       last = serviceName;
       lastObj = obj;
     }
-    popups[serviceName] = renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links);
+    popups[serviceName] = renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].toslinks);
   }
   if (last) {
     servicesList += '\t<div class="row-fluid">\n\t'
-      + renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
+      + renderDetails(last, services[serviceName].points, services[serviceName].toslinks, lastObj)
       + '\t</div>\n';
   }
   fs.writeFileSync('index.html',
