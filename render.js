@@ -169,7 +169,7 @@ function renderPopup(name, obj, points, toslinks) {
     obj.tosdr = {};
   }
   var longName = obj.name,
-//    domain = obj.url,
+    //domain = obj.urls,
     verdict = obj.tosdr.rated,
     ratingText = getRatingText(obj.tosdr.rated);
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>'
