@@ -75,10 +75,10 @@ function parsePointFile(id) {
                   || typeof(obj.tosdr.tldr)=='undefined' ) {
     return;
   }
-  if(typeof(obj.service)=='string') {
-    addToServices([obj.service], id);
-  } else  if(typeof(obj.service)=='object') {
-    addToServices(obj.service, id);
+  if((typeof(obj.services)=='string') && (obj.services!='undefined')) {
+    addToServices([obj.services], id);
+  } else  if(typeof(obj.services)=='object') {
+    addToServices(obj.services, id);
   }
   if(typeof(obj.topic)=='string') {
     addToTopics([obj.topic], id);
@@ -104,22 +104,23 @@ function parseServiceFile(id) {
     console.log(id);
     console.log(data.toString());
     var obj = JSON.parse(data.toString());
-    //if(typeof(obj.fulltos)=='object') {
-      //for(var i in obj.fulltos) { 
-        //if(obj.fulltos[i].url) {
-          //service[id].toslinks[i]=obj.fulltos[i];
-          //service[id].alexa=obj.alexa;
-          //console.log(id+' '+i+': '+obj.fulltos[i]);
-        //}
-      //}
-    //}
+    if(typeof(obj.fulltos)=='object') {
+      for(var i in obj.fulltos) { 
+        console.log('considering '+i+' for '+id);
+        if(obj.fulltos[i].url) {
+          service[id].toslinks[i]=obj.fulltos[i];
+          service[id].alexa=obj.alexa;
+          console.log(id+' '+i+': '+obj.fulltos[i]);
+        }
+      }
+    }
     pending--;
     // "last person to leave switch off the lights please",
     // or in this case, save everything to disk:
     if(pending==0) {
       writeOut();
     }
-   });
+  });
 }
 //read all the points, and trigger the service files to be read
 //whenever mentioned.
