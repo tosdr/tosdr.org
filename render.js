@@ -212,7 +212,7 @@ function go() {
   try {
     var services = JSON.parse(text);
   } catch (e) {
-    console.log('services.json file not readable');
+    console.log('services.json file not readable', e);
   }
   console.log(services);
   var last, lastObj;
@@ -231,6 +231,21 @@ function go() {
     }
     return services[a].alexa - services[b].alexa;
   });
+  //now sort services by whether or not they have a class (ones that do first, 'no class yet' ones at the bottom)
+  console.log('by Alexa', serviceNames);
+  var serviceNamesRated = [],
+    serviceNamesNotRated = [];
+  for(var i=0; i<serviceNames.length; i++) {
+    if(typeof(services[serviceNames[i]].class)=='string') {
+      console.log(serviceNames[i], 'yes');
+      serviceNamesRated.push(serviceNames[i]);
+    } else {
+      console.log(serviceNames[i], 'no');
+      serviceNamesNotRated.push(serviceNames[i]);
+    }
+  }
+  serviceNames = serviceNamesRated.concat(serviceNamesNotRated);
+  console.log('by rated', serviceNames);
   //twitter is used as an example on /get-involved.html, so we store its html in a variable to render it there:
   var twitterService = null;
   for (var i = 0; i < serviceNames.length; i++) {
