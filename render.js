@@ -112,6 +112,8 @@ function renderDetails(name, points, toslinks, obj) {
   renderables.sort(function (a, b) {
     return (Math.abs(b.score) - Math.abs(a.score));
   });
+  renderables = renderables.slice(0, 5);
+
   //construct the issues list from the sorted data points:
   var issues = '<section class="specificissues"><ul class="tosdr-points">';
   for (var i = 0; i < renderables.length; i++) {
