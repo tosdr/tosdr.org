@@ -109,6 +109,7 @@ function parseServiceFile(id) {
         if(obj.tosback2[i].url) {
           service[id].links[i]=obj.tosback2[i];
           service[id].alexa=obj.alexa;
+          service[id].class=(obj.tosdr?obj.tosdr.rated:false);
           console.log(id+' '+i+': '+obj.tosback2[i]);
         }
       }
