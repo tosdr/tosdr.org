@@ -1,3 +1,7 @@
+Read:
+https://github.com/tosdr/tosdr.org/wiki/Specification:-topics
+
+
 # leave 
 Right to leave the service  
 To avoid lock-in and stay in control  
