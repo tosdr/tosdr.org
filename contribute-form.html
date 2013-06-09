@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Submit a contribution - Terms of Service; Didn&apos;t Read</title>
+		<meta name="description" content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of websites.">
+		<meta name="author" content="Terms of Service; Didn't Read">
+
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/tosdr-icon-16.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/tosdr-icon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/tosdr-icon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/tosdr-icon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="img/tosdr-icon-57.png">
+
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+	</head>
+	<body id="contribute-form-html" class="tosdr-form" data-spy="scroll">
+
+		<div class="navbar navbar-fixed-top" id="menu-options">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class=""><a href="index.html#services">Ratings</a></li>
+							<li class=""><a href="about.html">About</a></li>
+						</ul>
+						<p class="pull-right follow-us">
+							Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; 
+							Donate: <a href="http://flattr.com/thing/821090/ToSDR" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div  class="container" id="tosdr-content" role="main">
+		
+			<form>
+				<fieldset>
+                                    <legend>Submit a contribution</legend>
+                                    <div class="alert fade in">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        <p>We will guide you step by step for your contribution to ToS;DR! If you've got any issue with this, please do not hesitate to <a href="about.html#contact">contact us</a>. Thank you!</p>
+                                    </div>
+
+                                    <label id="services">To which service(s) does your point apply to?</label>
+                                    <input type="text" placeholder="facebook">
+                                    <input type="text" placeholder="twitter">
+                                    <button class="btn btn-inline" type="button">Add one</button>
+                                    <!--You need to suggest with aucompletion services which have a file in services/ -->
+
+                                    <!-- this form below appears by default but should disappear when a service is clicked, and should only reappear when 'Add One' is pressed above -->
+                                    <h3 class="page-header">List of services currently in our database</h3>
+                                    
+                                    <div id="searchDiv"><!-- style="display:none"-->
+                                        <form class="form-search">
+                                            <div class="input-prepend">
+                                                <a href="#services" class="btn">Search</a>
+                                                <input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. facebook, twitter, search…">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="services-index" class="row">
+                                        <div data-search="twitter,identi-ca,seenthis,twitter " id="twitter-tosdr" class="span4 service-nutshell"><h4><img src="logo/twitter.png" class="favlogo"><a class="modal-link" data-service-name="twitter" href="#">twitter</a><div id="twitter-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label false">No Class Yet</span></a></div></h4>
+                                            <a href="#" class="btn">Add this</a>
+                                        </div>
+                                        <div data-search="facebook " id="facebook-tosdr" class="span4 service-nutshell"><h4><img src="logo/facebook.png" class="favlogo"><a class="modal-link" data-service-name="facebook" href="#">facebook</a><div id="facebook-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label false">No Class Yet</span></a></div></h4>
+                                            <a href="#" class="btn">Add this</a>
+                                        </div>
+                                        <div data-search="google " id="google-tosdr" class="span4 service-nutshell"><h4><img src="logo/google.png" class="favlogo"><a class="modal-link" data-service-name="google" href="#">google</a><div id="google-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label false">No Class Yet</span></a></div></h4>
+                                            <a href="#" class="btn">Add this</a>
+                                        </div>
+                                        <div data-search="yahoo " id="yahoo-tosdr" class="span4 service-nutshell"><h4><img src="logo/yahoo.png" class="favlogo"><a class="modal-link" data-service-name="yahoo" href="#">yahoo</a><div id="yahoo-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label false">No Class Yet</span></a></div></h4>
+                                            <a href="#" class="btn">Add this</a>
+                                        </div>
+                                        <!-- when there are no results, you should still display this: -->
+                                        <div style="clear:left">
+                                            <p>
+                                            You haven't found the service in our database? Then please expand it: <a href="service-form.html" class="btn" target="_blank">Add a service</a>
+                                        </div>
+                                    </div>
+                                    <legend>Contributor information</legend>
+                                    <label id="contributors">Name and email</label>
+                                    <input type="text" placeholder="Name <you@example.com>">
+					
+				</fieldset>
+				<div class="form-actions">
+					<label class="checkbox">
+						<input type="checkbox" value="">
+						<p>I have read and agree to the <a href="legal.html#terms-contribution">Terms of contribution</a> to license my contributions under free and open licenses: Creative Commons BY-SA and GNU AGPL.</p>
+					</label>
+					<button type="submit" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn">Cancel</button>
+				</div>
+			</form>
+
+		</div> <!-- /container -->
+
+
+		
+		
+<!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
+<!--		<script src="bootstrap/js/bootstrap-modal.js"></script>-->
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
+		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+<!--		<script src="bootstrap/js/bootstrap-tooltip.js"></script>-->
+<!--		<script src="bootstrap/js/bootstrap-popover.js"></script>-->
+		<script src="bootstrap/js/bootstrap-alert.js"></script>
+	</body>
+</html>
+
+
