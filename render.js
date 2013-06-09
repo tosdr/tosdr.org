@@ -197,7 +197,7 @@ function renderPopup(name, obj, points, toslinks) {
   } else {
     bodyHtml += '<section><h4>Read the full terms</h4><ul class="tos-long">\n';
     for (var i in toslinks) {
-      bodyHtml += '<li><a href="' + toslinks[i].url + '">' + (toslinks[i].name ? toslinks[i].name : i) + '</a></li>\n';
+      bodyHtml += '<li><a href="' + toslinks[i].url + '" target="_blank">' + (toslinks[i].name ? toslinks[i].name : i) + '</a></li>\n';
     }
     bodyHtml += '</ul></section>\n';
   }
