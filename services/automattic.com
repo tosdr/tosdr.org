@@ -1,15 +1,15 @@
 {
     "alexa": 14625, 
-    "id": "automattic", 
-    "related": "wordpress-com",
-    "name": "Automatic", 
     "fulltos": {
         "privacy": {
-          "name": "Privacy Policy",
-          "url": "http://automattic.com/privacy/"
+            "name": "Privacy Policy", 
+            "url": "http://automattic.com/privacy/"
         }, 
         "tosback2": "automattic.com"
     }, 
+    "id": "automattic", 
+    "name": "Automatic", 
+    "related": "wordpress-com", 
     "tosdr": {
         "rated": false
     }, 
