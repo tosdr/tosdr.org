@@ -112,6 +112,8 @@ function renderDetails(name, points, toslinks, obj) {
   renderables.sort(function (a, b) {
     return (Math.abs(b.score) - Math.abs(a.score));
   });
+  renderables = renderables.slice(0, 5);
+
   //construct the issues list from the sorted data points:
   var issues = '<section class="specificissues"><ul class="tosdr-points">';
   for (var i = 0; i < renderables.length; i++) {
@@ -140,13 +142,13 @@ function renderDetails(name, points, toslinks, obj) {
   if (obj.name) {
     search.push(obj.name);
   }
-  //if (obj.url) { 
-  //  search.push(obj.url);
-  //}
+  if (obj.url) {
+    search.push(obj.url);
+  }
   if (obj.parent) {
     search.push(obj.parent);
   }
-  return '\t<div data-search="' + search.join(',') + ' " id="' + name + '-tosdr" class="span6 service-nutshell">'
+  return '\t<div data-search="' + search.join(',') + '" id="' + name + '-tosdr" class="span6 service-nutshell">'
     + header + rating + issues
     + '</div>\n';
 }
@@ -212,7 +214,7 @@ function go() {
   try {
     var services = JSON.parse(text);
   } catch (e) {
-    console.log('services.json file not readable');
+    console.log('services.json file not readable', e);
   }
   console.log(services);
   var last, lastObj;
@@ -231,6 +233,21 @@ function go() {
     }
     return services[a].alexa - services[b].alexa;
   });
+  //now sort services by whether or not they have a class (ones that do first, 'no class yet' ones at the bottom)
+  console.log('by Alexa', serviceNames);
+  var serviceNamesRated = [],
+    serviceNamesNotRated = [];
+  for(var i=0; i<serviceNames.length; i++) {
+    if(typeof(services[serviceNames[i]].class)=='string') {
+      console.log(serviceNames[i], 'yes');
+      serviceNamesRated.push(serviceNames[i]);
+    } else {
+      console.log(serviceNames[i], 'no');
+      serviceNamesNotRated.push(serviceNames[i]);
+    }
+  }
+  serviceNames = serviceNamesRated.concat(serviceNamesNotRated);
+  console.log('by rated', serviceNames);
   //twitter is used as an example on /get-involved.html, so we store its html in a variable to render it there:
   var twitterService = null;
   for (var i = 0; i < serviceNames.length; i++) {

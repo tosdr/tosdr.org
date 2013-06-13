@@ -7,7 +7,7 @@ var fs = require('fs');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
   //console.log(service);
-  fs.writeFile('index/services.json', JSON.stringify(service).split(',').join(',\n'), function(err) {
+  fs.writeFile('index/services.json', JSON.stringify(service), function(err) {
     if(err) {
       console.log('error writing index/services.json');
     } else {
@@ -15,7 +15,7 @@ function writeOut() {
     }
   });
   console.log(topic);
-  fs.writeFile('index/topics.json', JSON.stringify(topic).split(',').join(',\n'), function(err) {
+  fs.writeFile('index/topics.json', JSON.stringify(topic), function(err) {
     if(err) {
       console.log('error writing index/topics.json');
     } else {
@@ -106,10 +106,10 @@ function parseServiceFile(id) {
     var obj = JSON.parse(data.toString());
     if(typeof(obj.fulltos)=='object') {
       for(var i in obj.fulltos) { 
-        console.log('considering '+i+' for '+id);
         if(obj.fulltos[i].url) {
           service[id].toslinks[i]=obj.fulltos[i];
           service[id].alexa=obj.alexa;
+          service[id].class=(obj.tosdr?obj.tosdr.rated:false);
           console.log(id+' '+i+': '+obj.fulltos[i]);
         }
       }
