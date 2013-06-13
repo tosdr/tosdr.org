@@ -32,7 +32,7 @@ function renderDataPoint(topic, dataPoint) {
         document.getElementById('point-' + topic + '-' + dataPoint).innerHTML = '<span class="badge ' + badge + '">'
           + obj.tosdr.score + '</span>&nbsp;'
           + '<a class="tldr" data-toggle="collapse" data-target="#collapse-point-' + topic + '-' + dataPoint + '" href="#' + topic + '-' + dataPoint + '">'
-          + '<img height="24" alt="" title="' + obj.service + '" class="favlogo" src="logo/' + (obj.service + "").split(",")[0] + '.png">' + obj.name + '&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
+          + '<img height="24" alt="" title="' + obj.service + '" class="favlogo" src="logo/' + (obj.service + "").split(",")[0] + '.png">' + obj.title + '&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
           + '<p class="collapse tldr" id="collapse-point-' + topic + '-' + dataPoint + '">' + obj.tosdr.tldr + ' <a href="' + obj.discussion + '" target="_blank" class="label context">Discussion</a></p></li>';
       }
     }
@@ -71,9 +71,9 @@ function renderDetails(name, points) {
   console.log('renderDetails ' + name);
   console.log(points);
   getTopicObject(name, function (obj) {
-    if (obj.id && obj.id) globalTopicsDictionary[obj.id] = obj.name;
-    document.getElementById('jump-to').innerHTML += '<div class="span3' + ((obj.type === "category") ? ' categoryLink' : '') + '"><a href="#' + name + '">' + obj.name + '</a></div> ';
-    var header = '<div class="page-header"><h3>' + obj.name + ' <small>' + (obj.subtitle || "") + '</small></h3></div>';
+    if (obj.id && obj.id) globalTopicsDictionary[obj.id] = obj.title;
+    document.getElementById('jump-to').innerHTML += '<div class="span3' + ((obj.type === "category") ? ' categoryLink' : '') + '"><a href="#' + name + '">' + obj.title + '</a></div> ';
+    var header = '<div class="page-header"><h3>' + obj.title + ' <small>' + (obj.subtitle || "") + '</small></h3></div>';
     var rating;
     var ratingText = {
       0:"We haven't sufficiently reviewed the terms yet. Please contribute to our group.",
