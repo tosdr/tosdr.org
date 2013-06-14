@@ -43,9 +43,10 @@
     * (M) stamps from Shanghai: 48 RMB =(rate: 0.12) 5.76 EUR
 
   
-* TOSBack crawler hosting: 17.19 + 17.19 = 34.38
+* TOSBack crawler hosting: 17.19 + 17.19 +17.19 = 51.57
     * (M) 1 Jan rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Feb rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
+    * (M) 1 Mar rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
 
 * domain: 11.41
     * (H) transfer tosdr.org to gandi (25/03/2013): 11.41 EUR
@@ -63,8 +64,8 @@
     * (H) Flight to Gotenburg for FSCONS: 139.03 EUR
     * (H) Shuttle Paris-Beauvais Airport: 32 EUR
 
-# Finish: 10612.33 + 4244.48  = 14856.81 EUR
+# Finish: 10612.33 + 4227.29  = 14839.62 EUR
 
 * kept safe by Hugo: 11622.46 - 800 -11.41 - 27.69 - 171.03 = 10612.33 EUR
-* kept safe by Michiel: 6524.52 - 800 - 300 - 11 - 1134.66 - 34.38 =  4244.48 EUR
+* kept safe by Michiel: 6524.52 - 800 - 300 - 11 - 1134.66 - 51.57 =  4227.29 EUR
 
