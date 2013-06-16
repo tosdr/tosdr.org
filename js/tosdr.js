@@ -17,6 +17,9 @@ $(function () {
         if (terms[j].substring(0, searchTerm.length) == searchTerm) {
           match = true;
           break;
+        } else if(terms[j].substring(0, searchTerm.length) == searchTerm.replace(" ", "-")) {
+          match = true;
+          break;
         }
       }
       if (match) {
