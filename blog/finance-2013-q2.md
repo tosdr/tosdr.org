@@ -17,10 +17,11 @@
     * (H) full-time May: 500
     * (H) full-time June: 500
 
-* compensation Jimm: 300
+* compensation Jimm: 600
     * (M) 10 hours (up to 150) * 10 euros: 100 (6 May)
     * (M) 10 hours (up to 160) * 10 euros: 100 (3 Jun)
     * (M) 10 hours (up to 170) * 10 euros: 100 (18 Jun)
+    * (M) 30 hours (up to 200) * 10 euros: 100 (25 Jun)
 
 * compensation Ian: 600
     * (M) curating ML threads to data points, 15 hours (up to 60) * 10 euros: 150 (26 Apr)
@@ -28,16 +29,16 @@
     * (M) curating ML threads to data points, 15 hours (up to 90) * 10 euros: 150 (4 Jun)
     * (M) curating ML threads to data points, 15 hours (up to 105) * 10 euros: 150 (17 Jun)
 
-* paypal: 9
-    * (M) fee: 9
+* paypal: 12
+    * (M) fee: 12
 
 * TOSBack crawler hosting: 17.19 + 17.19 + 17.19 = 51.57
     * (M) 1 Apr rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 May rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Jun rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
 
-# Finish: 8362.33 + 3266.72  = 11629.05 EUR
+# Finish: 8362.33 + 2963.72  = 11326.05 EUR
 
 * kept safe by Hugo: 10612.33 - 1250 - 1000 = 8362.33 EUR
-* kept safe by Michiel: 4227.29 - 300 - 600 - 9 - 51.57 =  3266.72 EUR
+* kept safe by Michiel: 4227.29 - 600 - 600 - 12 - 51.57 =  2963.72 EUR
 
