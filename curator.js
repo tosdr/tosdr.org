@@ -1,49 +1,41 @@
-var fs = require('fs'),
-  http = require('http'),
-  points = {};
+var http = require('http');
+var fs = require('fs');
+var points = {};
 
-function addFile(filename) {
-  try {
-    points[filename] = JSON.parse(fs.readFileSync('points/'+filename));
-  } catch(e) {
-    console.log(e, filename);
-  }
-}
-
-function savePoint(filename) {
-  fs.writeFileSync('points/'+filename, JSON.stringify(points[filename]));
-}
-
-function displayPoint(res, filename, reason, data) {
-<<<<<<< HEAD
-  res.write('<li><a href="?'+filename+'">'+filename+'</a> '+reason+JSON.stringify(data)+'</li>');
-  console.log(filename);
-}
 
 function displayField(res, point, field) {
   if(typeof(point[field])=='string') {
     point[field]=point[field].split('"').join('&quot;');
   }
   res.write(field+': <input value="'+point[field]+'" name="'+field+'"/> <br>');
-=======
-  res.write('<li> <!-- <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> -->'
-    +'<a href="?'+filename+'" class="btn btn-small">Make a point</a>  <a target="_blank" href="'
-    +data.discussion+'">'+data.title+'</a> <a onclick="dismiss(\''+filename+'\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
+} 
+function displayPoint(res, filename, reason, data) {
+  res.write('<li> <a href="?'+filename+'">'+filename+'</a> | ' +
+            reason +' | '+
+            '<a href="'+data.discussion+'"> discussion </a>'+
+            '<br/><pre>'+JSON.stringify(data,null,2)+'</pre></li>');
   console.log(filename);
 }
+function displayPoints(res) {
 
-function displayField(res, point, field, hidden) {
-  console.log(point, field, hidden);
-  if(typeof(point[field])=='string') {
-    point[field]=point[field].split('"').join('&quot;');
+  for(var i in points){
+    var point = points[i]
+    if(!point.id) {
+      displayPoint(res, i, 'no id', points[i]);
+    }
+    if(!point.title) {
+      displayPoint(res, i, 'no title', points[i]);
+    }
+    if(!point.irrelevant && !points[i].service) {
+      displayPoint(res, i, 'no service', points[i]);
+    }
   }
-  res.write((hidden?'<input hidden ':field+': <input ')+'value="'+point[field]+'" name="'+field+'"/>');
->>>>>>> master
 }
+
+
 function displayForm(res, filename) {
   var point = points[filename];
   res.write('<form method="POST">');
-<<<<<<< HEAD
   displayField(res, point, 'id');
   displayField(res, point, 'title');
   displayField(res, point, 'service');
@@ -53,126 +45,74 @@ function displayForm(res, filename) {
   res.write('JSON: <textarea>'+fs.readFileSync('points/'+filename)+'</textarea>');
 }
 
-function displayPoints(res) {
-  for(var i in points) {
-    if(!points[i].id) {
-      displayPoint(res, i, 'no id', points[i]);
-    }
-    if(!points[i].title) {
-      displayPoint(res, i, 'no title', points[i]);
-    }
-    if(!points[i].irrelevant && !points[i].service) {
-      displayPoint(res, i, 'no service', points[i]);
-    }
+function addFile(filename) {
+  try {
+    points[filename] = JSON.parse(fs.readFileSync('points/'+filename));
+  } catch(e) {
+    console.log(e, filename);
   }
-=======
-  displayField(res, {filename: filename}, 'filename', true);
-  displayField(res, point, 'topic');
-  displayField(res, point, 'service');
-  res.write('<input type="submit" value="set service and topic" name="set"><br>');
-  
-  res.write('<a href="/">index</a>');
-  res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
+}
+function savePoint(filename) {
+  fs.writeFileSync('points/'+filename, JSON.stringify(points[filename]));
 }
 
-function displayPoints(res) {
-  loadPoints();
-  res.write(fs.readFileSync('curator-prefix.html'));
-  for(var i in points) {
-    if(!points[i].topic && points[i].tosdr && points[i].tosdr.topic) {
-      points[i].topic=points[i].tosdr.topic;
-      savePoint(i);
-    }
-    if(!points[i].discussion) {
-      points[i].discussion='https://groups.google.com/forum/#!topic/tosdr/'+points[i].id;
-      savePoint(i);
-    }
-    if(!points[i].id) {
-      displayPoint(res, i, 'no id', points[i]);
-    } else if(!points[i].title) {
-      displayPoint(res, i, 'no title', points[i]);
-    } else if(!points[i].irrelevant && !points[i].service) {
-      displayPoint(res, i, 'no service', points[i]);
-    } else if(!points[i].irrelevant && !points[i].topic) {
-      displayPoint(res, i, 'no topic', points[i]);
+function loadPoints() {
+  points={};
+  files = fs.readdirSync('points/');
+  for(var i=0; i<files.length; i++) {
+    if(files[i]!='README.md') {
+      addFile(files[i]);
     }
   }
-  res.write(fs.readFileSync('curator-postfix.html'));
->>>>>>> master
-	//console.log(points);
 }
+
 function processPost(req) {
   var str='';
   req.on('data', function(chunk) {
     str += chunk;
   });
-  req.on('end', function() {
-<<<<<<< HEAD
-    var pairs = str.split('&');
-=======
-    if(!str.length) {
-      return;
-    }
-    var pairs = str.split('&');
-    console.log(pairs);
->>>>>>> master
-    var incoming = {};
-    for(var i=0; i<pairs.length; i++) {
-      var parts = pairs[i].split('=');
-      incoming[parts[0]]=parts[1];
-    }
-    for(var i in incoming) {
-      if(i!='filename') {
-        points[incoming.filename][i]=incoming[i];
+  req.on('end', function(){
+    console.log(str);
+    var data = {};
+    str.split('&').forEach(function(pair){
+      var parts = pair.split('=');
+      data[parts[0]] = parts[1]
+    })
+    if(data.filename){
+      console.log('updating ',data.filename,data)
+      for(var k in data){
+        if(k!='filename'){
+          points[data.filename][k]=data[k];
+        }
       }
+      savePoint(data.filename);
     }
-    savePoint(incoming.filename);
-  });
+  })
 }
-<<<<<<< HEAD
-//...
-files = fs.readdirSync('points/');
-for(var i=0; i<files.length; i++) {
-	if(files[i]!='README.md') {
-		addFile(files[i]);
-  }
-}
-var server = http.createServer(function(req, res) {
-  res.writeHead(200, {});
-  res.write('<html><ul>');
-  var point = req.url.substring(2);
-  if(point.length) {
-    processPost(req);
-    displayForm(res, point);
-  } else {
-    displayPoints(res);
-=======
-function loadPoints() {
-  points={};
-  files = fs.readdirSync('points/');
-  for(var i=0; i<files.length; i++) {
-  	if(files[i]!='README.md') {
-  		addFile(files[i]);
-    }
-  }
-}
-//...
+
+
 loadPoints();
+
 var server = http.createServer(function(req, res) {
-  var point = req.url.substring(2);
   processPost(req);
-  if(point.length && req.url.substring(0,2)=='/?') {
-    console.log('displaying form for '+point);
+  if(req.url.substring(0,2)=='/?') {
+    var point = req.url.substring(2);
+    
+    console.log('displaying form for ',point);
     res.writeHead(200, {});
+    res.write(fs.readFileSync('curator-prefix.html'));
     displayForm(res, point);
-  } else if(req.url=='/') {
+    res.write(fs.readFileSync('curator-postfix.html'));
+  } else if (req.url == '/') {
     res.writeHead(200, {});
+
+    res.write(fs.readFileSync('curator-prefix.html'));
     displayPoints(res);
+    res.write(fs.readFileSync('curator-postfix.html'));
   } else {
     res.writeHead(404, {});
->>>>>>> master
   }
-  res.end('</ul></html>');
+  
 });
 server.listen(21337);
 console.log('see http://localhost:21337/');
