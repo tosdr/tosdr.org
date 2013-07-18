@@ -1,14 +1,59 @@
 var http = require('http');
 var fs = require('fs');
+var Mustache = require('mustache')
+var fileServer = require('node-static');
 var points = {};
+var topics = {};
+var templates = {};
 
 
-function displayField(res, point, field) {
-  if(typeof(point[field])=='string') {
-    point[field]=point[field].split('"').join('&quot;');
+function loadTemplates(){
+  var path = 'templates/'
+  var files = fs.readdirSync(path)
+  for(var i=0; i < files.length ; i++){
+    var filename = files[i];
+    if( filename.match(/\.html$/) ) {
+      templates[filename] = Mustache.compile( fs.readFileSync(path+filename).toString() );
+    }
   }
-  res.write(field+': <input value="'+point[field]+'" name="'+field+'"/> <br>');
-} 
+  return templates;
+}
+
+function loadIndex(name){
+  try {
+    return JSON.parse(fs.readFileSync('index/'+name+'.json'));
+  } catch(e) {
+    console.log('Error loadIndex : '+name, e)
+  }
+}
+
+function loadTopics(){
+  var path = 'topics/';
+  var index = loadIndex('topics');
+  var files = fs.readdirSync(path);
+  for(var i = 0; i < files.length ; i++){
+    var filename = files[i];
+    if(filename.match(/\.json$/))
+       try {
+         var obj = JSON.parse(fs.readFileSync(path+filename));
+         obj.points = index[obj.id]; //MAYBE resolve them here into the actual points
+         topics[obj.id] = obj;
+       } catch(e) {
+         console.log(e, filename);
+       }
+  }
+}
+
+function loadPoints() {
+  points={};
+  var files = fs.readdirSync('points/');
+  for(var i=0; i<files.length; i++) {
+    if(files[i]!='README.md') {
+      addFile(files[i]);
+    }
+  }
+}
+
 function displayPoint(res, filename, reason, data) {
   res.write('<li> <a href="?'+filename+'">'+filename+'</a> | ' +
             reason +' | '+
@@ -35,14 +80,12 @@ function displayPoints(res) {
 
 function displayForm(res, filename) {
   var point = points[filename];
-  res.write('<form method="POST">');
-  displayField(res, point, 'id');
-  displayField(res, point, 'title');
-  displayField(res, point, 'service');
-  displayField(res, point, 'irrelevant');
-  displayField(res, {filename: filename}, 'filename');
-  res.write('<input type="submit"></form>');
-  res.write('JSON: <textarea>'+fs.readFileSync('points/'+filename)+'</textarea>');
+  res.write(templates['points_form.html'](
+    {
+      point:point, 
+      json:JSON.stringify(point,undefined, 2) 
+    }
+  ));
 }
 
 function addFile(filename) {
@@ -54,16 +97,6 @@ function addFile(filename) {
 }
 function savePoint(filename) {
   fs.writeFileSync('points/'+filename, JSON.stringify(points[filename]));
-}
-
-function loadPoints() {
-  points={};
-  files = fs.readdirSync('points/');
-  for(var i=0; i<files.length; i++) {
-    if(files[i]!='README.md') {
-      addFile(files[i]);
-    }
-  }
 }
 
 function processPost(req) {
@@ -90,8 +123,73 @@ function processPost(req) {
   })
 }
 
+function badge(obj){
+  var badge
+  if (obj.tosdr.point == 'good') {
+    badge = 'badge-success';
+  } else if (obj.tosdr.point == 'bad') {
+    badge = 'badge-warning';
+  } else if (obj.tosdr.point == 'blocker') {
+    badge = 'badge-important';
+    obj.tosdr.score += 100;
+  } else if (obj.tosdr.point == 'neutral') {
+    badge = 'badge-neutral';
+  } else {
+    badge = '';
+  }
+  return badge;
+}
+
+function displayTopic(res, topic_id){
+  var topic = topics[topic_id];
+  console.log(topic)
+  function  render_points(){
+    //console.log(arguments)
+    var ret = "";
+    topic.points.forEach(function(point_id){
+      var point = points[point_id+'.json'];
+      if(typeof point === 'undefined')
+        return;
+      console.log("point : ",point);
+      var data = {
+        topic : topic_id,
+        badge : badge(point),
+        score : point.tosdr.score,
+        discussion : point.discussion,
+        id : point.id,
+        name: point.name,
+        service : point.service,
+        tldr : point.tosdr.tldr
+      };
+    
+      ret += templates['topic_point.html'](data);
+    });
+    return ret;
+  };
+  
+  var data = {
+    topic : topic,
+    points : render_points()
+  }
+
+  res.write( templates['topics_view.html'](data) );
+}
+function displayPointOverview(res, point_id){
+  displayForm(res, point_id);
+  console.log(points[point_id])
+  var point = points[point_id];
+  if( typeof(point.tosdr) != 'undefined' 
+     && typeof(point.tosdr.topic) != 'undefined')
+    point.tosdr.topic.forEach( function(topic) {
+      displayTopic(res, topic);
+    } )
+}
 
 loadPoints();
+loadTopics();
+loadTemplates();
+
+var staticServer = new fileServer.Server('.')
 
 var server = http.createServer(function(req, res) {
   processPost(req);
@@ -101,7 +199,7 @@ var server = http.createServer(function(req, res) {
     console.log('displaying form for ',point);
     res.writeHead(200, {});
     res.write(fs.readFileSync('curator-prefix.html'));
-    displayForm(res, point);
+    displayPointOverview(res, point);
     res.write(fs.readFileSync('curator-postfix.html'));
   } else if (req.url == '/') {
     res.writeHead(200, {});
@@ -110,9 +208,9 @@ var server = http.createServer(function(req, res) {
     displayPoints(res);
     res.write(fs.readFileSync('curator-postfix.html'));
   } else {
-    res.writeHead(404, {});
+    staticServer.serve(req, res);
   }
-  
+  res.end()
 });
 server.listen(21337);
 console.log('see http://localhost:21337/');
