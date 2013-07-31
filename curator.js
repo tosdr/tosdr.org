@@ -2,70 +2,9 @@ var http = require('http');
 var fs = require('fs');
 var Mustache = require('mustache')
 var fileServer = require('node-static');
-var points = {};
-var topics = {};
-var cases = {}
-var templates = {};
+var db = require('./database.js');
+var S = require('string');
 
-
-function loadTemplates(){
-  var path = 'templates/'
-  var files = fs.readdirSync(path)
-  for(var i=0; i < files.length ; i++){
-    var filename = files[i];
-    if( filename.match(/\.html$/) ) {
-      templates[filename] = Mustache.compile( fs.readFileSync(path+filename).toString() );
-    }
-  }
-  return templates;
-}
-
-function loadIndex(name){
-  try {
-    return JSON.parse(fs.readFileSync('index/'+name+'.json'));
-  } catch(e) {
-    console.log('Error loadIndex : '+name, e)
-  }
-}
-function loadTopics(){
-  var path = 'topics/';
-  var index = loadIndex('topics');
-  var files = fs.readdirSync(path);
-  for(var i = 0; i < files.length ; i++){
-    var filename = files[i];
-    
-    if(filename.match(/\.json$/))
-      try {
-         var obj = JSON.parse(fs.readFileSync(path+filename));
-         obj.points = index[obj.id]; //MAYBE resolve them here into the actual points
-         obj.cases = [];
-         topics[obj.id] = obj;
-       } catch(e) {
-         console.log(e, filename);
-       }
-  }
-}
-
-function loadCases(){
-  cases = {};
-  var files = fs.readdirSync('cases/');
-  for(var i=0; i < files.length; i++){
-    if( files[i].match(/\.json$/) ){
-      var data = addFile('cases/'+files[i], cases);
-      console.log(data, files[i]);
-      topics[data.topic].cases.push(data)
-    }
-  }
-};
-function loadPoints() {
-  points={};
-  var files = fs.readdirSync('points/');
-  for(var i=0; i<files.length; i++) {
-    if(files[i]!='README.md') {
-      addFile('points/'+files[i], points);
-    }
-  }
-}
 
 function displayPoint(res, filename, reason, data) {
   res.write('<li> <a href="?'+filename+'">'+filename+'</a> | ' +
@@ -76,47 +15,35 @@ function displayPoint(res, filename, reason, data) {
 }
 function displayPoints(res) {
 
-  for(var i in points){
-    var point = points[i]
+  for(var i in db.points){
+    var point = db.points[i]
     if(!point.id) {
-      displayPoint(res, i, 'no id', points[i]);
+      displayPoint(res, i, 'no id', point);
     }
     if(!point.title) {
-      displayPoint(res, i, 'no title', points[i]);
+      displayPoint(res, i, 'no title', point);
     }
     if(!point.irrelevant && !points[i].service) {
-      displayPoint(res, i, 'no service', points[i]);
+      displayPoint(res, i, 'no service', point);
     }
   }
 }
 
-
-function displayForm(res, filename) {
-  var point = points[filename];
-  res.write(templates['points_form.html'](
+function displayForm(res, point_id) {
+  var point = db.points[point_id];
+  res.write(db.templates['points_form.html'](
     {
       point:point, 
-      json:JSON.stringify(point,undefined, 2) 
+      json:JSON.stringify(point, undefined, 2) 
     }
   ));
 }
 
-function addFile(path, storage) {
-  try {
-    var obj = JSON.parse(fs.readFileSync(path));
-    return storage[obj.id] = obj;
-  } catch(e) {
-    console.log(e, path);
-  }
-  
-  
+function savePoint(point_id) {
+  fs.writeFileSync('points/'+point_id+'.json', JSON.stringify(db.points[point_id]));
 }
-
-function savePoint(filename) {
-  fs.writeFileSync('points/'+filename, JSON.stringify(points[filename]));
-}
-function saveCase(filename){
-  fs.writeFileSync( 'cases/'+filename, JSON.stringify(cases[filename]) );
+function saveCase(case_id){
+  fs.writeFileSync( 'cases/'+case_id+'.json', JSON.stringify(db.cases[case_id]) );
 }
 
 
@@ -141,14 +68,18 @@ function processPost(req) {
         }
       }
       savePoint(data.filename);
-    } else if( req.url.match(/^\/topic/) && data.topic){
+    } else if( req.url.match(/^\/case/) && data.topic){
+      for(var t in data){
+        data[t] = data[t].replace(/\+/g,' ');
+      }
+      data.id = S(data.name).camelize().s
       console.log('\n\n\n\n\n');
       console.log(data);
       console.log(str);
       console.log('\n\n\n\n\n');
-      cases[data.name+'.json'] = data;
-      topics[data.topic].cases.push(data);
-      saveCase(data.name+'.json')
+      db.cases[data.id] = data;
+      db.topics[data.topic].cases.push(data);
+      saveCase(data.id)
     }
   })
 }
@@ -170,7 +101,7 @@ function badge(point){
 }
 
 function displayTopic(res, topic_id){
-  var topic = topics[topic_id];
+  var topic = db.topics[topic_id];
   console.log(topic)
   function  render_cases(){
     //console.log(arguments)
@@ -187,10 +118,11 @@ function displayTopic(res, topic_id){
         badge : badge(aCase.point),
         score : aCase.score,
         name : aCase.name,
+        id: aCase.id,
         description: aCase.description,
       };
     
-      ret += templates['topic_case.html'](data);
+      ret += db.templates['topic_case.html'](data);
     });
     return ret;
   };
@@ -200,18 +132,16 @@ function displayTopic(res, topic_id){
     points : render_cases()
   }
 
-  res.write( templates['topics_view.html'](data) );
+  res.write( db.templates['topics_view.html'](data) );
 }
 
 
 
 function bak_displayTopic(res, topic_id){
-  var topic = topics[topic_id];
+  var topic = db.topics[topic_id];
   console.log(topic)
   function  render_points(){
-    //console.log(arguments)
     var ret = "";
-    console.log(topics)
     topic.points.forEach(function(point_id){
       var point = points[point_id+'.json'];
       if(typeof point === 'undefined')
@@ -228,7 +158,7 @@ function bak_displayTopic(res, topic_id){
         tldr : point.tosdr.tldr
       };
     
-      ret += templates['topic_point.html'](data);
+      ret += db.templates['topic_point.html'](data);
     });
     return ret;
   };
@@ -238,12 +168,12 @@ function bak_displayTopic(res, topic_id){
     points : render_points()
   }
 
-  res.write( templates['topics_view.html'](data) );
+  res.write( db.templates['topics_view.html'](data) );
 }
 function displayPointOverview(res, point_id){
   displayForm(res, point_id);
-  console.log(points[point_id])
-  var point = points[point_id];
+  console.log(db.points[point_id])
+  var point = db.points[point_id];
   if( typeof(point.tosdr) != 'undefined' 
      && typeof(point.tosdr.topic) != 'undefined') {
     if(typeof point.tosdr.topic == 'string') {
@@ -258,10 +188,6 @@ function displayPointOverview(res, point_id){
   }
 }
 
-loadPoints();
-loadTopics();
-loadCases();
-loadTemplates();
 
 var staticServer = new fileServer.Server('.')
 
@@ -295,6 +221,6 @@ var server = http.createServer(function(req, res) {
   }
   res.end()
 });
-console.log(topics);
+
 server.listen(21337);
 console.log('see http://localhost:21337/');
