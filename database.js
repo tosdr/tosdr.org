@@ -51,6 +51,21 @@ function loadTopics(){
        }
   }
 }
+function badge(point){
+  var badge
+  if (point == 'good') {
+    badge = 'badge-success';
+  } else if (point == 'bad') {
+    badge = 'badge-warning';
+  } else if (point == 'blocker') {
+    badge = 'badge-important';
+  } else if (point == 'neutral') {
+    badge = 'badge-neutral';
+  } else {
+    badge = '';
+  }
+  return badge;
+}
 
 function loadCases(){
   cases = {};
@@ -58,6 +73,7 @@ function loadCases(){
   for(var i=0; i < files.length; i++){
     if( files[i].match(/\.json$/) ){
       var data = addFile('cases/'+files[i], cases);
+      data.badge = badge(data.point);
       topics[data.topic].cases.push(data)
     }
   }

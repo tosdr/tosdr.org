@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Topics - Terms of Service; Didn&apos;t Read</title>
+		<meta name="description" content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of websites.">
+		<meta name="author" content="Terms of Service; Didn't Read">
+
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/tosdr-icon-16.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/tosdr-icon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/tosdr-icon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/tosdr-icon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="img/tosdr-icon-57.png">
+
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+		
+		<script src="js/topics.js"></script>
+	</head>
+	<body id="topics-html" data-spy="scroll">
+
+		<div class="navbar navbar-fixed-top" id="menu-options">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="index.html#services">Ratings</a></li>
+<!--							<li class=""><a href="#classification">Classification</a></li>-->
+<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
+							<li class=""><a href="about.html">About</a></li>
+<!--							<li class=""><a href="#categories">Categories</a></li>-->
+						</ul>
+<!--						<p class="pull-right">-->
+<!--							<a href="#funding" class="btn btn-success btn-mini" style="position:absolute;">Donate</a>-->
+<!--						</p>-->
+						<p class="pull-right follow-us">
+							Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; 
+							Donate: <a href="http://flattr.com/thing/821090/ToSDR" target="_blank"><img src="/img/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hero-unit">
+			<section class="container">
+				<h1 class="page-header">Topics</h1>
+		
+		
+				<p>
+					Terms of service are divided into small points. Each point gets assigned one or several topics.
+					That way, we can compare points that relate to the same topic and adjust the scores.
+					Some topics can also be related to each other, for instance
+					<a href="#copyright-scope">copyright</a> is a subset of <a href="#ownership">ownership</a>.
+				</p>
+				<p>
+					Each points gets a score (the white figure on the badge). The higher
+					the score, the more important the point is (and the more it influences the rating of the service).
+				</p>
+				<p>
+					Within each topic, you should be able to compare the scores and discuss them. However keep in mind that the same clause can have different scores depending on the context of the services it applies to.</p>
+			</section>
+		</div><!--hero-unit-->
+
+		<div  class="container" id="tosdr-content" role="main">
+
+			<section id="topics">
+				<h2 class="page-header">Ratings</h2>
+
+				<div class="row">			
+					<div id="filter-by" class="span3">
+						<ul class="nav nav-pills">
+							<li><a href="index.html#services">Services</a></li>
+							<li class="active"><a href="#topics">Topics</a></li>
+						</ul>
+					</div>
+					
+					<div id="filter-topics" class="span9">				
+<!--						<div id="searchDiv" style="display:none">-->
+<!--							<form class="form-search">-->
+<!--								<div class="input-prepend">-->
+<!--									<a href="#topics" class="btn">Search</a>-->
+<!--									<input class="input-xlarge search-query" id="searchBox" size="16" type="text" placeholder="e.g. copyright, changes, waiver…">-->
+<!--								</div>-->
+<!--							</form>-->
+<!--						</div>-->
+					</div>
+				</div>
+
+				<div id="topics-list">
+                                  {{#topics}}
+                                  <section id="{{id}}" class="topic">
+                                    <div class="page-header">
+                                      <h3> {{name}} 
+                                        <small>{{subtitle}}</small>
+                                      </h3> 
+                                    </div>
+                                    <div class="topic-description">
+                                      <p class="description">
+                                        {{{description}}}
+                                      </p>
+                                    </div>
+                                    <section class="specificissues">
+                                      <ul class="tosdr-points-row">
+                                        {{#cases}}
+                                        <li class="span6 point">
+                                          <span class="badge {{badge}}">{{score}}</span>&nbsp;
+                                          <a class="tldr" data-toggle="collapse" data-target="#collapse-point-{{topic}}-{{id}}" href="#{{topic}}-{{id}}">
+                                            {{name}}&nbsp;&nbsp;&nbsp;
+                                            <i class="icon icon-chevron-down icon-collapser"></i>
+                                          </a>
+                                          <p class="collapse tldr" id="collapse-point-{{topic}}-{{id}}">
+                                            {{{description}}}
+    
+                                          </p>
+                                          
+                                        </li>
+                                        {{/cases}}
+                                      </ul>
+                                    </section>
+                                  </section>
+                                  {{/topics}}
+				</div>
+				
+			</section>
+
+			
+			<!--here come the popups-->
+			<div id="popups">
+                          {{#topics}}
+                          <div id="{{ id }}-tosdr" class="modal hide tosdr-infos" role="dialog"> </div>
+                          {{/topics}}
+                        </div>
+			
+			
+			<!--"tos": {-->
+							<!--"terms": "https://flattr.com/terms",-->
+							<!--"privacy": "https://flattr.com/privacy"-->
+							<!--},-->
+
+			<h2 class="page-header">Index of topics</h2>
+			<div id="jump-to" class="row">
+                          {{#topics}}
+                          <div class="span3{{#is_category}} categoryLink{{/is_category}}"> 
+                            <a href="#{{ id }}"> {{ name }} </a>
+                          </div>
+                          {{/topics}}
+
+                        </div>
+
+		</div> <!-- /container -->
+		<footer id="bottom">
+			<div class="container">
+				<nav id="sitemap">
+					<ul class="row">
+						<li class="span3"><a href="index.html">Home</a>
+							<ul>
+								<li><a href="index.html#services">Rated Services</a></li>
+								<li><a href="topics.html#topics">Rated Topics</a></li><li><a href="downloads.html">Download browser extensions</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="about.html">About</a>
+							<ul>
+								<li><a href="about.html#contact">Contact us</a></li>
+								<li><a href="classification.html">Classification</a></li>
+								<li><a href="legal.html">Legal</a></li>
+								<li><a href="blog/index.html">Blog</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="contribute.html">Contribute</a>
+							<ul>
+								<li><a href="contribute.html#donate">Donate</a></li><li><a href="contribute.html#join">Join us</a></li>
+								<li><a href="get-involved.html">Get involved</a></li>
+								<li><a href="api.html">API</a></li>
+							</ul>
+						</li>
+						<li class="span3">Spread
+							<ul>
+								<li><a href="http://twitter.com/tosdr">Follow us on twitter</a></li>
+								<li><a href="https://plus.google.com/b/117929815628330307285/117929815628330307285/about">Add on Google+</a></li><li><a href="https://www.facebook.com/TermsOfServiceDidntRead">Like us on Facebook</a></li>
+								<li><a href="http://github.com/tosdr/">Fork us on Github</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			
+				<p id="credits"><strong><a href="http://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a project inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://www.tosback.org">TOSBack</a>. Also related: <a href="http://www.opennotice.org/">OpenNotice</a>.</p>
+				
+				<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms to which you are bound.</strong> Disclosure: a list of donors and supporters <a href="thanks.html">is published</a>. <a href="legal.html">All legal information and Imprint</a>.</p>
+		
+				
+				<p id="licensing"><a href="http://tosdr.org">ToS;DR</a> is Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). Offer for <a href="https://github.com/tosdr/tosdr.org/zipball/master">Source (zip)</a>. The <code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"><code>services/</code></a> and <a href="https://github.com/tosdr/tosdr.org/tree/master/points"><code>points/</code></a> directories are  also licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. Thumbs Up and Thumbs Down icons modified by Jan.</p>
+				
+				<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a href="https://5apps.com/apps/512cb93cbc73cb2f84000002"><img src="img/unhostedby5apps.png" alt="5apps" /></a>
+			</div>
+		</footer>
+
+		
+		
+<!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
+		<script src="bootstrap/js/bootstrap-collapse.js"></script>
+		<script src="bootstrap/js/bootstrap-modal.js"></script>
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
+<!--		<script src="bootstrap/js/bootstrap-typeahead.js"></script>-->
+<!--		<script src="bootstrap/js/bootstrap-alert.js"></script>-->
+		<script>
+      $(window).load(function(){
+        if(location.hash.length>1 && $('#'+location.hash.substring(1)+'-tosdr')) {
+          $('#'+location.hash.substring(1)+'-tosdr').modal();
+        }
+      });
+      document.getElementById('searchBox').onkeyup = function() {
+        var serviceDivs = document.getElementsByClassName('service-nutshell');
+        var searchTerm = document.getElementById('searchBox').value.toLowerCase();
+        var tophit;
+        for(var i=0; i<serviceDivs.length; i++) {
+          var terms = [];
+          for(var j=0; j<serviceDivs[i].attributes.length; j++) {
+            if(serviceDivs[i].attributes[j].name=='data-search') {
+              terms = serviceDivs[i].attributes[j].value.split(',');
+              break;
+            }
+          }
+          var match = false;
+          for(var j=0; j<terms.length; j++ ) {
+            if(terms[j].substring(0, searchTerm.length) == searchTerm) {
+              match=true;
+              break;
+            }
+          }
+          if(match) {
+            serviceDivs[i].style.display='block';
+            if(serviceDivs[i].id.substring(0, searchTerm.length)==searchTerm) {
+              tophit=i;
+            }
+          } else {
+            serviceDivs[i].style.display='none';
+          }
+        }
+        //if(typeof(tophit) != 'undefined') {
+        //  var elt = document.getElementById('services-list').removeChild(serviceDivs[tophit]);
+        //  document.getElementById('services-list').insertBefore(elt, serviceDivs[0]);//
+        //}
+      };
+      document.getElementById('searchDiv').style.display="block";
+		</script>
+	</body>
+</html>
