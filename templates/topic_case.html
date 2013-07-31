@@ -1,11 +1,16 @@
 
 <li class="span6 point">
-  <span class="badge {{badge}}">{{score}}</span>&nbsp;
-  <a class="tldr" data-toggle="collapse" data-target="#collapse-point-{{topic}}-{{name}}" href="#{{topic}}-{{name}}">
+  <span class="badge {{badge}}" onclick="
+     var form = document.getElementById('point-form');
+     if(!form)
+       return;
+     form['tosdr.case'].value = '{{id}}'
+     ">{{score}}</span>&nbsp;
+  <a class="tldr" data-toggle="collapse" data-target="#collapse-point-{{topic}}-{{id}}" href="#{{topic}}-{{id}}">
     {{name}}&nbsp;&nbsp;&nbsp;
     <i class="icon icon-chevron-down icon-collapser"></i>
   </a>
-  <p class="collapse tldr" id="collapse-point-{{topic}}-{{name}}">
+  <p class="collapse tldr" id="collapse-point-{{topic}}-{{id}}">
     {{{description}}}
     
   </p>

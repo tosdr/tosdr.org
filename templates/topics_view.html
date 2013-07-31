@@ -13,28 +13,28 @@
   <section class="specificissues">
     <ul class="tosdr-points-row">
       {{{points}}}
+      <li class="point">
+        <button onclick="this.parentElement.getElementsByClassName('new-case-form')[0].classList.toggle('hidden');">
+          New Case
+        </button>
+        <form method="POST" class="new-case-form hidden" action="/case/">
+          <input type="hidden" value="{{topic.id}}" name="topic">
+          <label> Name <input name="name"> </label>
+          <label> Description <textarea name="description"> </textarea></label>
+          <label> Score <input name="score"> </label>
+          <label> Point <select name="point">
+              <option value = "good"> Good </option>
+              <option value = "bad"> Bad </option>
+              <option value = "blocker"> Blocker </option>
+              <option value = "neutral"> Neutral </option>
+            </select>
+          </label>
+          <input type="submit">
+        </form>
+      </li>
     </ul>
   </section>
-  <section>
-    <button onclick="this.parentElement.getElementsByClassName('new-case-form')[0].classList.toggle('hidden');">
-        New Case
-      </button>
-    <form method="POST" class="new-case-form hidden" action="/topics/">
-      <input type="hidden" value="{{topic.id}}" name="topic">
-      <label> Name <input name="name"> </label>
-      <label> Description <textarea name="description"> </textarea></label>
-      <label> Score <input name="score"> </label>
-      <label> Point <select name="point">
-          <option value = "good"> Good </option>
-          <option value = "bad"> Bad </option>
-          <option value = "blocker"> Blocker </option>
-          <option value = "neutral"> Neutral </option>
-        </select>
-      </label>
-      <input type="submit">
-    </form>
-
-  </section>
+  
 </section>
 
 <hr/>

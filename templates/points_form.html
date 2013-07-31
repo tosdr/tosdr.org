@@ -1,12 +1,25 @@
 
 <div>
-<form method="POST" style="float:left">
-  <label style="text-align:right"> ID <input value="{{point.id}}" name="id"> </label>
-  <label style="text-align:right"> title <input value="{{point.title}}" name="title"> </label>
-  <label style="text-align:right"> service<input value="{{point.service}}" name="service"> </label>
-  <label style="text-align:right"> irrelevant<input value="{{point.irrelevant}}" name="irrelevant"></label>
-  <!-- <label style="text-align:right"> filename<input value="{{point.id}}.json" name="filename"></label> -->
-  <label style="text-align:right"> score <input value="{{point.tosdr.score}} name="tosdr.score">"
+<form id="point-form" method="POST" style="float:left">
+  <label style="text-align:right"> ID 
+    <input value="{{point.id}}" name="id"> 
+  </label>
+  <label style="text-align:right"> title 
+    <input value="{{point.title}}" name="title"> 
+  </label>
+  <label style="text-align:right"> service
+    <input value="{{point.service}}" name="service"> 
+  </label>
+  <label style="text-align:right"> irrelevant
+    <input value="{{point.irrelevant}}" name="irrelevant">
+  </label>
+  <!-- <label style="text-align:right"> filename<input value="{{point.id}}.json" name="filename"></label>
+  <label style="text-align:right"> score 
+    <input value="{{point.tosdr.score}}" name="tosdr.score">
+  </label> -->
+  <label style="text-align:right"> case
+    <input value="{{point.tosdr.case}}" name="tosdr.case">
+  </label>
   <input type="submit">
 </form>
 <pre>
