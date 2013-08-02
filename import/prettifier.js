@@ -1,14 +1,21 @@
 var fs = require('fs');
 
-function sortObject(obj)
+function sortObject(obj, strict)
 {
-  if(typeof obj !== 'object')
-    return obj;
-  var tObj = {};
-  Object.keys(obj).sort().forEach( function(key) {
-    tObj[key] = sortObject(obj[key])
-  } )
-  return tObj;
+  if(obj instanceof Array) {
+    var ary;
+    if(strict) ary =  obj.sort();
+    else ary = obj
+    return ary
+  }
+  if(typeof obj === 'object') {
+    var tObj = {};
+    Object.keys(obj).sort().forEach( function(key) {
+      tObj[key] = sortObject(obj[key])
+    } )
+    return tObj;
+  }
+  return obj;
 }
 
 function process(path){
@@ -22,7 +29,7 @@ function process(path){
         try {
           console.log('starting '+path+'/'+files[i]); 
           var item = JSON.parse(fs.readFileSync('../'+path+'/'+files[i]));
-          fs.writeFileSync(path+'/'+files[i], JSON.stringify(sortObject(item),undefined, 2));
+          fs.writeFileSync(path+'/'+files[i], JSON.stringify(sortObject(item, true),undefined, 2));
         } catch(e) {
           console.error("SOMETHING IS WRONG with ",path+files[i],e)
         }        
