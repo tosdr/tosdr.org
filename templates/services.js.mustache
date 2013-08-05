@@ -1,4 +1,4 @@
-{{#services}}
+{{!#services}}
   <div class="modal-header">
     <button data-dismiss="modal" class="close" type="button">×</button>
     <img src="logo/{{id}}.png" alt="" class="pull-left favlogo" height="36" >
@@ -13,8 +13,8 @@
   <div class="modal-body">
     <div class="tosdr-rating">
       <label class="label {{tosdr.rated}}">
-        {{#tosdr.rated}}Class {{tosdr.rated}}{{/tosdr.rated}
-        {{^tosdr.rated}} No Class Yet{{/tosdr.rated}}
+        {{#tosdr.rated}} Class {{tosdr.rated}} {{/tosdr.rated}}
+        {{^tosdr.rated}} No Class Yet {{/tosdr.rated}}
       </label>
       <p>{{ratingText}}</p>
     </div>
@@ -22,13 +22,13 @@
       <ul class="tosdr-points">
         {{#points}}
           <li id="popup-point-{{service}}-{{id}}" class="point">
-            <div class="{{tosdr.case.point}}">
+            <div class="{{tosdr.point}}">
               <h5>
-                <span class-"badge badge-{{badge}}" title="{{tosdr.case.point}}">
+                <span class="badge badge-{{badge}}" title="{{tosdr.point}}">
                   <i class="icon-{{icon}} icon-white">{{sign}}</i>
                 </span>
                 {{name}} 
-                <a href="discussion" target="_blank" class="label context">
+                <a href="{{discussion}}" target="_blank" class="label context">
                   Discussion
                 </a>
               </h5>
@@ -40,19 +40,16 @@
         {{/points}}
       </ul>
       <section>
-        {{^^links}}
+        {{!#links}}
           <h4>Read the Terms</h4>
           <ul class="tosback2"> 
             {{#links}}
               <li>
-                <a href="{{url}}">
-                  {{#name}}{{name}}{{/name}}
-                  {{^name}}{{#}}{{/name}}
-                </a>
+                <a href="{{url}}"> {{name}} </a>
               </li>
             {{/links}}
           </ul>
-        {{/links}}
+        {{!/links}}
         {{^links}}
           <a href="/get-involved.html" class="btn">
             Help us find the Terms »
@@ -61,4 +58,4 @@
       </section>
     </section>
   </div>
-{{/services}}
+{{!/services}}
