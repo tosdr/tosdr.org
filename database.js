@@ -1,6 +1,7 @@
 var Mustache = require('mustache')
 var fs = require('fs');
 
+var services = {}
 var points = {};
 var topics = {};
 var cases = {}
@@ -20,7 +21,11 @@ function loadTemplates(){
   for(var i=0; i < files.length ; i++){
     var filename = files[i];
     if( filename.match(/\.html$/) ) {
-      templates[filename] = Mustache.compile( fs.readFileSync(path+filename).toString() );
+      try{
+        templates[filename] = Mustache.compile( fs.readFileSync(path+filename).toString() );
+      } catch(e) {
+        console.log(filename, " : Error loading template!", e)
+      }
     }
   }
   return templates;
@@ -33,6 +38,7 @@ function loadIndex(name){
     console.log('Error loadIndex : '+name, e)
   }
 }
+
 function loadTopics(){
   var path = 'topics/';
   var index = loadIndex('topics');
@@ -51,6 +57,31 @@ function loadTopics(){
        }
   }
 }
+function loadServices(){
+  var path = 'services/';
+  var index = loadIndex('services');
+  var files = fs.readdirSync(path);
+  for(var i = 0; i < files.length ; i++){
+    var filename = files[i];
+    
+    if(filename.match(/\.json$/))
+      try {
+         var obj = JSON.parse(fs.readFileSync(path+filename));
+        try { 
+          obj.points = index[obj.id].points.map(function(point_id){
+            return points[point_id];
+          })
+        } catch(e){
+          console.log("no points found for " , filename, index[obj.id], e)
+        }
+         services[obj.id] = obj;
+       } catch(e) {
+         console.log(e, filename);
+       }
+  }
+}
+
+
 function badge(point){
   var badge
   if (point == 'good') {
@@ -89,10 +120,12 @@ function loadPoints() {
 }
 loadPoints();
 loadTopics();
+loadServices();
 loadCases();
 loadTemplates();
 
 module.exports = {
+  services : services,
   points : points,
   topics : topics,
   cases : cases,
