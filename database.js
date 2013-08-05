@@ -20,9 +20,10 @@ function loadTemplates(){
   var files = fs.readdirSync(path)
   for(var i=0; i < files.length ; i++){
     var filename = files[i];
-    if( filename.match(/\.html$/) ) {
+    var m;
+    if( m = filename.match(/(.*)\.mustache$/) ) {
       try{
-        templates[filename] = Mustache.compile( fs.readFileSync(path+filename).toString() );
+        templates[m[1]] = Mustache.compile( fs.readFileSync(path+filename).toString() );
       } catch(e) {
         console.log(filename, " : Error loading template!", e)
       }
@@ -74,7 +75,8 @@ function loadServices(){
         } catch(e){
           console.log("no points found for " , filename, index[obj.id], e)
         }
-         services[obj.id] = obj;
+        obj.links = index[obj.id].links;
+        services[obj.id] = obj;
        } catch(e) {
          console.log(e, filename);
        }
@@ -82,20 +84,35 @@ function loadServices(){
 }
 
 
-function badge(point){
-  var badge
-  if (point == 'good') {
-    badge = 'badge-success';
-  } else if (point == 'bad') {
-    badge = 'badge-warning';
-  } else if (point == 'blocker') {
-    badge = 'badge-important';
-  } else if (point == 'neutral') {
-    badge = 'badge-neutral';
-  } else {
-    badge = '';
+function extend_point(obj){
+  var badge, icon, sign;
+  if(obj.tosdr) {
+    if (obj.tosdr.point == 'good') {
+      badge = 'success';
+      icon = 'thumbs-up';
+      sign = '+';
+    } else if (obj.tosdr.point == 'bad') {
+      badge = 'warning';
+      icon = 'thumbs-down';
+      sign = '-';
+    } else if (obj.tosdr.point == 'blocker') {
+      badge = 'important';
+      icon = 'remove';
+      sign = '×';
+    } else if (obj.tosdr.point == 'neutral') {
+      badge = 'neutral';
+      icon = 'asterisk';
+      sign = '⋅';
+    } else {
+      badge = '';
+      icon = 'question-sign';
+      sign = '?';
+    }
+    obj.badge = badge;
+    obj.sign = sign;
+    obj.icon = icon;
   }
-  return badge;
+  return obj;
 }
 
 function loadCases(){
@@ -104,7 +121,7 @@ function loadCases(){
   for(var i=0; i < files.length; i++){
     if( files[i].match(/\.json$/) ){
       var data = addFile('cases/'+files[i], cases);
-      data.badge = badge(data.point);
+      extend_point(data);
       topics[data.topic].cases.push(data)
     }
   }
@@ -113,8 +130,9 @@ function loadPoints() {
   points={};
   var files = fs.readdirSync('points/');
   for(var i=0; i<files.length; i++) {
-    if(files[i]!='README.md') {
-      addFile('points/'+files[i], points);
+    if(files[i].match(/\.json$/)) {
+      var data = addFile('points/'+files[i], points);
+      extend_point(data);
     }
   }
 }
