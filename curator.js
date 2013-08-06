@@ -23,9 +23,15 @@ function displayPoints(res) {
     if(!point.title) {
       displayPoint(res, i, 'no title', point);
     }
-    if(!point.irrelevant && !points[i].service) {
+    if(!point.irrelevant && !point.service) {
       displayPoint(res, i, 'no service', point);
     }
+    if(point.tosdr) 
+      if(!point.tosdr.case) {
+        displayPoint(res, i, 'no case', point);
+      } else if(point.tosdr.score != cases[point.tosdr.case].score) {
+        displayPoint(res, i, 'inconsistent score', point);
+      }
   }
 }
 
@@ -84,21 +90,6 @@ function processPost(req) {
   })
 }
 
-function badge(point){
-  var badge
-  if (point == 'good') {
-    badge = 'badge-success';
-  } else if (point == 'bad') {
-    badge = 'badge-warning';
-  } else if (point == 'blocker') {
-    badge = 'badge-important';
-  } else if (point == 'neutral') {
-    badge = 'badge-neutral';
-  } else {
-    badge = '';
-  }
-  return badge;
-}
 
 function displayTopic(res, topic_id){
   var topic = db.topics[topic_id];
@@ -106,6 +97,10 @@ function displayTopic(res, topic_id){
   function  render_cases(){
     //console.log(arguments)
     var ret = "";
+    if(!topic){
+      console.error("Topic not found : ",topic_id);
+      return ""
+    }
     topic.cases.forEach(function(aCase){
       //var aCase = cases[case_id];
       if(typeof aCase === 'undefined'){
@@ -149,7 +144,7 @@ function bak_displayTopic(res, topic_id){
       console.log("point : ",point);
       var data = {
         topic : topic_id,
-        badge : badge(point.tosdr.point),
+        badge : point.badge,
         score : point.tosdr.score,
         discussion : point.discussion,
         id : point.id,
