@@ -42,7 +42,7 @@ services = services.sort(function(a,b){
     b.alexa = 1000000;
   return a.alexa - b.alexa;
 });
-fs.writeFileSync('./index-test.html', 
+fs.writeFileSync('./index.html', 
                  db.templates['index.html']({services:services}) )
 
 
@@ -52,4 +52,4 @@ services.forEach(function(s){
   popups[s.id] = db.templates['services.js'](s)
 })
 
-fs.writeFileSync('./services-test.js', "var popupsContent = "+JSON.stringify(popups));
+fs.writeFileSync('./services.js', "var popupsContent = "+JSON.stringify(popups));
