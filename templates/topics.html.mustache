@@ -128,6 +128,26 @@
                                         </li>
                                         {{/cases}}
                                       </ul>
+                                      <ul class="tosdr-points-row">
+                                        {{#points}}
+                                        <li id="popup-point-{{service}}-{{id}}" class="point">
+                                          <div class="{{tosdr.point}}">
+                                            <h5>
+                                              <span class="badge badge-{{badge}}" title="{{tosdr.point}}">
+                                                <i class="icon-{{icon}} icon-white">{{sign}}</i>
+                                              </span>
+                                              {{name}} 
+                                              <a href="{{discussion}}" target="_blank" class="label context">
+                                                Discussion
+                                              </a>
+                                            </h5>
+                                            <p>
+                                              {{{tosdr.tldr}}}
+                                            </p>
+                                          </div>
+                                        </li>
+                                        {{/points}}
+                                      </ul>
                                     </section>
                                   </section>
                                   {{/topics}}
