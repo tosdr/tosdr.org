@@ -50,15 +50,19 @@ function loadTopics(){
     if(filename.match(/\.json$/))
       try {
          var obj = JSON.parse(fs.readFileSync(path+filename));
-         obj.points = index[obj.id].map(function(point_id){
-           if(!points[point_id])
-             console.log("!!! Point "+point_id+" of Topic "+obj.id+"not found");
-           return points[point_id];
+        if(index[obj.id]){
+          obj.points = index[obj.id].map(function(point_id){
+            if(!points[point_id])
+              console.log("!!! Point "+point_id+" of Topic "+obj.id+"not found");
+            return points[point_id];
           }).filter(function(t){return t});
+        } else {
+          obj.points = [];
+        }
          obj.cases = [];
          topics[obj.id] = obj;
        } catch(e) {
-         console.log(e, filename);
+         console.log("Topic can't be loaded : ",e, filename);
        }
   }
 }
@@ -138,7 +142,8 @@ function loadPoints() {
   for(var i=0; i<files.length; i++) {
     if(files[i].match(/\.json$/)) {
       var data = addFile('points/'+files[i], points);
-      extend_point(data);
+      if(data)
+        extend_point(data);
     }
   }
 }
