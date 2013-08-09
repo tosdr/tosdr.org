@@ -8,7 +8,7 @@ for(var t in db.topics){
   topic.is_category = topic.type === 'category'
   topics.push(topic);
 }
-fs.writeFileSync('./topics-test.html',
+fs.writeFileSync('./topics.html',
 db.templates['topics.html']({topics:topics}));
 
 //index.html

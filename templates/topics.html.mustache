@@ -112,10 +112,10 @@
                                       </p>
                                     </div>
                                     <section class="specificissues">
-                                      <ul class="tosdr-points-row">
+                                      <ul class="tosdr-points row">
                                         {{#cases}}
                                         <li class="span6 point">
-                                          <span class="badge {{badge}}">{{score}}</span>&nbsp;
+                                          <span class="badge badge-{{badge}}">{{score}}</span>&nbsp;
                                           <a class="tldr" data-toggle="collapse" data-target="#collapse-point-{{topic}}-{{id}}" href="#{{topic}}-{{id}}">
                                             {{name}}&nbsp;&nbsp;&nbsp;
                                             <i class="icon icon-chevron-down icon-collapser"></i>
@@ -127,24 +127,21 @@
                                           
                                         </li>
                                         {{/cases}}
-                                      </ul>
-                                      <ul class="tosdr-points-row">
                                         {{#points}}
-                                        <li id="popup-point-{{service}}-{{id}}" class="point">
-                                          <div class="{{tosdr.point}}">
-                                            <h5>
-                                              <span class="badge badge-{{badge}}" title="{{tosdr.point}}">
-                                                <i class="icon-{{icon}} icon-white">{{sign}}</i>
-                                              </span>
-                                              {{name}} 
-                                              <a href="{{discussion}}" target="_blank" class="label context">
-                                                Discussion
-                                              </a>
-                                            </h5>
-                                            <p>
-                                              {{{tosdr.tldr}}}
-                                            </p>
-                                          </div>
+                            
+                                        <li class="span6 point">
+                                          <span class="badge badge-{{badge}}">{{tosdr.score}}</span>&nbsp;
+                                          <a class="tldr" data-toggle="collapse" data-target="#collapse-point-{{tosdr.topic}}-{{id}}" href="#{{tosdr.topic}}-{{id}}">
+                                            <img height="24" alt="" title="{{service}}" class="favlogo" src="logo/{{service}}.png">
+                                            {{name}}&nbsp;&nbsp;&nbsp;
+                                            <i class="icon icon-chevron-down icon-collapser"></i>
+                                          </a>
+                                          <p class="collapse tldr" id="collapse-point-{{tosdr.topic}}-{{id}}">
+                                            {{{tosdr.tldr}}}
+                                            <a href="{{discussion}}" target="_blank" class="label context">
+                                              Discussion
+                                            </a>
+                                          </p>
                                         </li>
                                         {{/points}}
                                       </ul>
