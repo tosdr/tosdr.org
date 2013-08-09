@@ -50,7 +50,11 @@ function loadTopics(){
     if(filename.match(/\.json$/))
       try {
          var obj = JSON.parse(fs.readFileSync(path+filename));
-         obj.points = index[obj.id]; //MAYBE resolve them here into the actual points
+         obj.points = index[obj.id].map(function(point_id){
+           if(!points[point_id])
+             console.log("!!! Point "+point_id+" of Topic "+obj.id+"not found");
+           return points[point_id];
+          }).filter(function(t){return t});
          obj.cases = [];
          topics[obj.id] = obj;
        } catch(e) {
@@ -85,7 +89,9 @@ function loadServices(){
 
 
 function extend_point(obj){
-  var badge, icon, sign;
+  var badge = "";
+  var icon = "";
+  var sign = "";
   if(obj.tosdr) {
     if (obj.tosdr.point == 'good') {
       badge = 'success';
