@@ -31,6 +31,11 @@
     * (M) curating ML threads to data points, 15 hours (up to 105) * 10 euros: 150 (17 Jun)
     * (M) curating ML threads to data points, 15 hours (up to 120) * 10 euros: 150 (10 Jul)
 
+* compensation Adrian: 300
+    * (M) improving the build script,          10 hours (up to 10) * 10 euros: 100 (31 Jul)
+    * (M) porting html templating to Mustache, 10 hours (up to 20) * 10 euros: 100 (31 Jul)
+    * (M) preparing for topic cases,           10 hours (up to 30) * 10 euros: 100 (31 Jul)
+
 * paypal: 14.50
     * (M) fee: 14.50
 
@@ -39,8 +44,8 @@
     * (M) 1 May rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
     * (M) 1 Jun rackspace invoice: 22.32 USD =(rate: 0.77) 17.19 EUR
 
-# Finish: 9362.33 + 1711.22  = 11037.55 EUR
+# Finish: 9362.33 + 1411.22  = 10773.55 EUR
 
 * kept safe by Hugo: 10612.33 - 1250 = 9362.33 EUR
-* kept safe by Michiel: 4227.29 - 1000 - 700 - 750 - 14.50 - 51.57 =  1711.22 EUR
+* kept safe by Michiel: 4227.29 - 1000 - 700 - 750 - 300 - 14.50 - 51.57 =  1411.22 EUR
 
