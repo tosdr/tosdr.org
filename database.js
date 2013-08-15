@@ -7,14 +7,7 @@ var topics = {};
 var cases = {}
 var templates = {};
 
-function addFile(path, storage) {
-  try {
-    var obj = JSON.parse(fs.readFileSync(path));
-    return storage[obj.id] = obj;
-  } catch(e) {
-    console.log(e, path);
-  } 
-}
+
 function loadTemplates(){
   var path = 'templates/'
   var files = fs.readdirSync(path)
@@ -31,7 +24,66 @@ function loadTemplates(){
   }
   return templates;
 }
+function isString(str){
+  if(str instanceof String || typeof str === 'string')
+    return true;
+  else
+    return false;
+}
 
+function  getFile(path)
+{
+  try {
+    var obj = JSON.parse(fs.readFileSync(path));
+    return obj;
+  } catch(e){
+    console.log("Receving File "+path+" didn't Work : ",e)
+  }
+}
+
+function saveTopic(item){
+  var indexes = ['cases', 'points']
+  if(isString(item))
+    item = topics[item];
+  if(!item)
+    return;
+  var obj = {};
+  for(var k in item){
+    if(indexes.indexOf(k) < 0)
+      obj[k] = item[k];
+  }
+  fs.writeFileSync('topics/'+item.id+'.json', JSON.stringify(obj);
+}
+
+function loadTopics(){
+  var path = 'topics/';
+  var index = getFile('index/topics.json');
+  var files = fs.readdirSync(path);
+  for(var i = 0; i < files.length ; i++){
+    var filename = files[i];
+    
+    if(filename.match(/\.json$/))
+      try {
+        var obj = getFile(filename);
+        obj.points = [];
+        obj.cases = [];
+        topics[obj.id] = obj;
+      } catch(e) {
+        console.log("Topic can't be loaded : ",e, filename);
+      }
+  }
+}
+
+
+
+function addFile(path, storage) {
+  try {
+    var obj = JSON.parse(fs.readFileSync(path));
+    return storage[obj.id] = obj;
+  } catch(e) {
+    console.log(e, path);
+  } 
+}
 function loadIndex(name){
   try {
     return JSON.parse(fs.readFileSync('index/'+name+'.json'));
@@ -40,32 +92,6 @@ function loadIndex(name){
   }
 }
 
-function loadTopics(){
-  var path = 'topics/';
-  var index = loadIndex('topics');
-  var files = fs.readdirSync(path);
-  for(var i = 0; i < files.length ; i++){
-    var filename = files[i];
-    
-    if(filename.match(/\.json$/))
-      try {
-         var obj = JSON.parse(fs.readFileSync(path+filename));
-        if(index[obj.id]){
-          obj.points = index[obj.id].map(function(point_id){
-            if(!points[point_id])
-              console.log("!!! Point "+point_id+" of Topic "+obj.id+"not found");
-            return points[point_id];
-          }).filter(function(t){return t});
-        } else {
-          obj.points = [];
-        }
-         obj.cases = [];
-         topics[obj.id] = obj;
-       } catch(e) {
-         console.log("Topic can't be loaded : ",e, filename);
-       }
-  }
-}
 function loadServices(){
   var path = 'services/';
   var index = loadIndex('services');
