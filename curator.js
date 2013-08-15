@@ -110,7 +110,7 @@ function displayTopic(res, topic_id){
       console.log("case : ",aCase);
       var data = {
         topic : topic_id,
-        badge : badge(aCase.point),
+        badge : aCase.badge,
         score : aCase.score,
         name : aCase.name,
         id: aCase.id,
