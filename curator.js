@@ -6,33 +6,96 @@ var db = require('./database.js');
 var S = require('string');
 
 
-function displayPoint(res, filename, reason, data) {
-  res.write('<li> <a href="?'+filename+'">'+filename+'</a> | ' +
-            reason +' | '+
-            '<a href="'+data.discussion+'"> discussion </a>'+
-            '<br/><pre>'+JSON.stringify(data,null,2)+'</pre></li>');
-  console.log(filename);
-}
 function displayPoints(res) {
+  var data = {};
+  data.points = [];
+  data.reasons = [
+    { name: 'noid',
+      description: 'no id',
+      test: function(point) { return !point.id } 
+    },
+    {name:'notopic',
+     description:'no or flaud topic',
+     test: flaud_topic
+    },
+    {name:'notitle', 
+     description:'no title',
+     test: function(point) { return !point.title }
+    },
+    {name:'noservice', 
+     description:'no service',
+     test: function(point) { return !point.service }
+    },
+    {name:'noscore', 
+     description:"no score",
+     test: noscore
+    },
+    {name:'nocase', 
+     description:"no case", 
+     test: nocase
+    }, 
+    {name:'uncase',
+     description:'non existing case',
+     test: uncase
+    },
+    {name:'wrongscore',
+     description:'point and case not consistent',
+     test: function(point){
+       if(nocase(point) || noscore(point) || uncase(point) ) //doesn't have a case or score can't be inconsistent
+         return false;
+       console.log(point);
+       return (point.tosdr.score != db.cases[point.tosdr.case].score);
+     }
+    }
+  ];
+  function uncase(point){
+    if(nocase(point))
+      return false;
+    return point.tosdr && !db.cases[point.tosdr.case];
+  }
+  function noscore(point){
+   return (!point.tosdr || !point.tosdr.score);
+  }
+  function nocase(point){ 
+   return (!point.tosdr || !point.tosdr.case);
+  }
+  function flaud_topic(point){
+    var topic;
+    if(point.tosdr && point.tosdr.topic)
+      topic = point.tosdr.topic
+    else
+      topic = point.topic
+    //no topic
+    if(!topic)
+      return true;
+    //topic is array and an element is not in list
+    if(typeof topic == 'object'){
+      return (topic.filter(function(topic){
+        return !db.topics[topic]
+      }).length > 0 );
+    }
+    //topic not in list
+    else {
+      return !db.topics[topic];
+    }
 
+  }
+  function prepare(point,reason){
+    var obj = {}
+    for(var k in point)
+      obj[k] = point[k];
+    obj.json = JSON.stringify(point, null, 2);
+    obj.reason = reason;
+    return obj;
+  }
   for(var i in db.points){
     var point = db.points[i]
-    if(!point.id) {
-      displayPoint(res, i, 'no id', point);
-    }
-    if(!point.title) {
-      displayPoint(res, i, 'no title', point);
-    }
-    if(!point.irrelevant && !point.service) {
-      displayPoint(res, i, 'no service', point);
-    }
-    if(point.tosdr) 
-      if(!point.tosdr.case) {
-        displayPoint(res, i, 'no case', point);
-      } else if(point.tosdr.score != cases[point.tosdr.case].score) {
-        displayPoint(res, i, 'inconsistent score', point);
-      }
+    data.reasons.forEach(function(reason){
+      if(reason.test(point))
+        data.points.push( prepare(point, reason.name) );
+    })
   }
+  res.write(db.templates['points'](data));
 }
 
 function displayForm(res, point_id) {
@@ -45,50 +108,65 @@ function displayForm(res, point_id) {
   ));
 }
 
-function savePoint(point_id) {
-  fs.writeFileSync('points/'+point_id+'.json', JSON.stringify(db.points[point_id]));
-}
-function saveCase(case_id){
-  fs.writeFileSync( 'cases/'+case_id+'.json', JSON.stringify(db.cases[case_id]) );
-}
-
-
 function processPost(req) {
   var str='';
   req.on('data', function(chunk) {
     str += chunk;
   });
   req.on('end', function(){
-    //console.log(str);
+    console.log(str);
     var data = {};
     str.split('&').forEach(function(pair){
       var parts = pair.split('=');
-      data[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+      data[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]).replace(/\+/g,' ');
     })
+    console.log('processed post data into : ', data);
     
-    if(data.filename){
-      console.log('updating ',data.filename,data)
+
+    function save(data, storage){
+      if(!data.id)
+        return;
+      console.log('updating ',data.id,data)
       for(var k in data){
-        if(k!='filename'){
-          points[data.filename][k]=data[k];
+        if(k!='id' && data[k]){
+          var ks
+          if((ks = k.split('.')).length > 1){
+            //console.log('eneterd nested object', k)
+            var cur = storage[data.id]
+            for(var i = 0 ; i < ks.length; i++){
+              //console.log('current = ', cur);
+              if(typeof cur[ks[i]] === 'undefined'){
+                //console.log('creating new stage ', ks[i])
+                cur[ks[i]] = {};
+              }
+              else if(typeof cur[ks[i]] !== 'object' && i != ks.length-1){
+                console.log("I am not shure how to save that "+ k + '=>' + data[k], storage[data[id]])
+                return;
+              }
+              if( i == ks.length-1){
+                //console.log('there we are', ks[i]);
+                cur[ks[i]] = data[k]; 
+              } else {
+                cur = cur[ks[i]];
+              }
+            }
+          } else
+            storage[data.id][k]=data[k];
         }
       }
-      savePoint(data.filename);
-    } else if( req.url.match(/^\/case/) && data.topic){
-      for(var t in data){
-        data[t] = data[t].replace(/\+/g,' ');
-      }
-      data.id = S(data.name).camelize().s
-      console.log('\n\n\n\n\n');
-      console.log(data);
-      console.log(str);
-      console.log('\n\n\n\n\n');
-      db.cases[data.id] = data;
-      db.topics[data.topic].cases.push(data);
-      saveCase(data.id)
+      storage.save(data.id);
     }
-  })
+    //FIXME update seervices and topics somewhere
+    if( req.url.match(/^\/case\//) && data.topic) {
+      data.id = S(data.name).camelize().s
+      save(data, db.cases);
+    } else if( req.url.match(/^\/point\//) && data.id) {
+      save(data, db.points);
+    }
+             
+  });
 }
+
 
 
 function displayTopic(res, topic_id){
@@ -130,41 +208,6 @@ function displayTopic(res, topic_id){
   res.write( db.templates['topics_view.html'](data) );
 }
 
-
-
-function bak_displayTopic(res, topic_id){
-  var topic = db.topics[topic_id];
-  console.log(topic)
-  function  render_points(){
-    var ret = "";
-    topic.points.forEach(function(point_id){
-      var point = points[point_id+'.json'];
-      if(typeof point === 'undefined')
-        return;
-      console.log("point : ",point);
-      var data = {
-        topic : topic_id,
-        badge : point.badge,
-        score : point.tosdr.score,
-        discussion : point.discussion,
-        id : point.id,
-        name: point.name,
-        service : point.service,
-        tldr : point.tosdr.tldr
-      };
-    
-      ret += db.templates['topic_point.html'](data);
-    });
-    return ret;
-  };
-  
-  var data = {
-    topic : topic,
-    points : render_points()
-  }
-
-  res.write( db.templates['topics_view.html'](data) );
-}
 function displayPointOverview(res, point_id){
   displayForm(res, point_id);
   console.log(db.points[point_id])
@@ -197,9 +240,8 @@ var server = http.createServer(function(req, res) {
     displayTopic(res, match[1]);
 
     res.write(fs.readFileSync('curator-postfix.html'));
-  } else if(req.url.substring(0,2)=='/?') {
-    var point = req.url.substring(2);
-    
+  } else if(match = req.url.match(/^\/point\/(.*)/)) {
+    var point = match[1];
     console.log('displaying form for ',point);
     res.writeHead(200, {});
     res.write(fs.readFileSync('curator-prefix.html'));
