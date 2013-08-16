@@ -7,6 +7,36 @@ var topics = {};
 var cases = {}
 var templates = {};
 
+function sortObject(obj, strict)
+{
+  if(obj instanceof Array) {
+    var ary;
+    if(strict) ary =  obj.sort();
+    else ary = obj
+    return ary
+  }
+  if(typeof obj === 'object') {
+    var tObj = {};
+    Object.keys(obj).sort().forEach( function(key) {
+      tObj[key] = sortObject(obj[key])
+    } )
+    return tObj;
+  }
+  return obj;
+}
+function save(item, indexes, storage, folder){
+  if(isString(item))
+    item = storage[item];
+  if(!item)
+    return;
+  var obj = {};
+  for(var k in item){
+    if(indexes.indexOf(k) < 0)
+      obj[k] = item[k];
+  }
+  fs.writeFileSync(folder+item.id+'.json', JSON.stringify(sortObject(obj, true),undefined, 2));
+  return obj
+}
 
 function loadTemplates(){
   var path = 'templates/'
@@ -43,28 +73,19 @@ function  getFile(path)
 
 function saveTopic(item){
   var indexes = ['cases', 'points']
-  if(isString(item))
-    item = topics[item];
-  if(!item)
-    return;
-  var obj = {};
-  for(var k in item){
-    if(indexes.indexOf(k) < 0)
-      obj[k] = item[k];
-  }
-  fs.writeFileSync('topics/'+item.id+'.json', JSON.stringify(obj);
+  return save(item, indexes, topics, 'topics/')
 }
 
 function loadTopics(){
   var path = 'topics/';
-  var index = getFile('index/topics.json');
+//  var index = getFile('index/topics.json');
   var files = fs.readdirSync(path);
   for(var i = 0; i < files.length ; i++){
     var filename = files[i];
     
     if(filename.match(/\.json$/))
       try {
-        var obj = getFile(filename);
+        var obj = getFile(path+filename);
         obj.points = [];
         obj.cases = [];
         topics[obj.id] = obj;
@@ -74,22 +95,18 @@ function loadTopics(){
   }
 }
 
-
-
-function addFile(path, storage) {
-  try {
-    var obj = JSON.parse(fs.readFileSync(path));
-    return storage[obj.id] = obj;
-  } catch(e) {
-    console.log(e, path);
-  } 
-}
 function loadIndex(name){
   try {
     return JSON.parse(fs.readFileSync('index/'+name+'.json'));
   } catch(e) {
     console.log('Error loadIndex : '+name, e)
   }
+}
+
+
+function saveService(item){
+  var indexes = ['points']
+  return save(item, indexes, sevices, 'services/')
 }
 
 function loadServices(){
@@ -101,19 +118,21 @@ function loadServices(){
     
     if(filename.match(/\.json$/))
       try {
-         var obj = JSON.parse(fs.readFileSync(path+filename));
-        try { 
-          obj.points = index[obj.id].points.map(function(point_id){
-            return points[point_id];
-          })
-        } catch(e){
-          console.log("no points found for " , filename, index[obj.id], e)
-        }
-        obj.links = index[obj.id].links;
+        var obj = JSON.parse(fs.readFileSync(path+filename));
+        if(index[obj.id])
+          try { 
+            obj.points = index[obj.id].points.map(function(point_id){
+              return points[point_id];
+            })
+            obj.links = index[obj.id].links;
+          } catch(e){
+            console.log("no points found for " , filename, index[obj.id], e)
+          }
+        
         services[obj.id] = obj;
-       } catch(e) {
-         console.log(e, filename);
-       }
+      } catch(e) {
+        console.log("error in loading topic ",e, filename);
+      }
   }
 }
 
@@ -151,34 +170,81 @@ function extend_point(obj){
   return obj;
 }
 
+
+function saveCase(item){
+  var indexes = ['badge', 'sign','icon']
+  return save(item, indexes, cases, 'cases/')
+}
+
 function loadCases(){
   cases = {};
   var files = fs.readdirSync('cases/');
   for(var i=0; i < files.length; i++){
     if( files[i].match(/\.json$/) ){
-      var data = addFile('cases/'+files[i], cases);
+      var data = getFile('cases/'+files[i]);
       extend_point(data);
-      topics[data.topic].cases.push(data)
+      cases[data.id] = data;
+      topics[data.topic].cases.push(data);
     }
   }
 };
+
+
+function savePoint(item){
+  var indexes = ['badge', 'sign','icon']
+  return save(item, indexes, points, 'points/')
+}
+
 function loadPoints() {
+  var extend_topic = function(topic){
+    topics[topic].points.push(data);
+  }
   points={};
   var files = fs.readdirSync('points/');
   for(var i=0; i<files.length; i++) {
     if(files[i].match(/\.json$/)) {
-      var data = addFile('points/'+files[i], points);
-      if(data)
-        extend_point(data);
+      var data = getFile('points/'+files[i]);
+      if(data.irrelevant)
+        continue;
+      extend_point(data);
+      points[data.id] = data;
+
+      try{
+        var topic = ""
+        if(data.tosdr && data.tosdr.topic)
+          topic = data.tosdr.topic
+        else
+          topic = data.topic
+        var blacklist = ['multiple', 'refunds', 'undefined', 'payment']
+        if(blacklist.indexOf(topic) < 0)
+          if(typeof topic === 'object'){
+            topic.forEach(extend_topic);
+          } else {
+            extend_topic(topic);
+          }
+        
+      } catch(e) {
+        console.log("error wrong topics in "+data.id, data)
+      }
+      
+      // try{
+      //   services[data.service].points.push(data);
+      // } catch(e) {
+      //   console.log("error wrong service in "+data.id, data)
+      // }
     }
   }
 }
-loadPoints();
+
 loadTopics();
 loadServices();
 loadCases();
+loadPoints();
 loadTemplates();
-
+services.save = saveService;
+points.save = savePoint;
+topics.save = saveTopic;
+cases.save = saveCase;
 module.exports = {
   services : services,
   points : points,

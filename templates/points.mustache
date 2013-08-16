@@ -1,0 +1,29 @@
+
+<script>
+  function show_bunch(reason){
+    console.log('switching to ', reason);
+    var list = document.getElementsByClassName('point');
+    for(var i = 0; i < list.length; i++){
+      var el  = list[i];
+      if( el.classList.contains('reason-'+reason) || reason == 'all' )
+        el.style.display = 'block';
+      else
+        el.style.display = 'none';
+    }
+  }
+</script>
+
+<select onchange="show_bunch(event.srcElement.value)">
+  <option selected value="all"> All </option>
+  {{#reasons}}
+  <option value="{{name}}">{{description}}</option>
+  {{/reasons}}
+</select>
+{{#points}}
+<li class="point reason-{{reason}}"> 
+  <a href="point/{{id}}"> {{id}} </a> | 
+  <a href="{{discussion}}"> discussion </a>
+  <br>
+  <pre> {{{json}}} </pre>
+</li>
+{{/points}}

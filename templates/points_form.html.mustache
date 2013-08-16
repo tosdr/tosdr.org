@@ -10,13 +10,17 @@
   <label style="text-align:right"> service
     <input value="{{point.service}}" name="service"> 
   </label>
+    <label style="text-align:right"> topic
+    <input value="{{point.tosdr.topic}}" name="tosdr.topic"> 
+  </label>
+
   <label style="text-align:right"> irrelevant
     <input value="{{point.irrelevant}}" name="irrelevant">
   </label>
-  <!-- <label style="text-align:right"> filename<input value="{{point.id}}.json" name="filename"></label>
+  <input type="hidden" value="{{point.id}}" name="id">
   <label style="text-align:right"> score 
     <input value="{{point.tosdr.score}}" name="tosdr.score">
-  </label> -->
+  </label>
   <label style="text-align:right"> case
     <input value="{{point.tosdr.case}}" name="tosdr.case">
   </label>
