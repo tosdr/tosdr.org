@@ -124,6 +124,15 @@ function processPost(req) {
     
 
     function save(data, storage){
+      var assign = function(parent, key, data){
+        try {
+          var obj = JSON.parse(data)
+          parent[key] = obj
+        } catch(e) {
+          // if(e instanceof SyntaxError)
+          parent[key] = data; 
+        }
+      }
       if(!data.id)
         return;
       console.log('updating ',data.id,data)
@@ -145,23 +154,24 @@ function processPost(req) {
               }
               if( i == ks.length-1){
                 //console.log('there we are', ks[i]);
-                cur[ks[i]] = data[k]; 
+                assign(cur, ks[i], data[k])
               } else {
                 cur = cur[ks[i]];
               }
             }
           } else
-            storage[data.id][k]=data[k];
+            assign(storage[data.id],k, data[k]);
         }
       }
-      storage.save(data.id);
     }
     //FIXME update seervices and topics somewhere
     if( req.url.match(/^\/case\//) && data.topic) {
       data.id = S(data.name).camelize().s
       save(data, db.cases);
+      db.saveCase(data.id);
     } else if( req.url.match(/^\/point\//) && data.id) {
       save(data, db.points);
+      db.savePoint(data.id);
     }
              
   });

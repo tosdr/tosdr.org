@@ -3,13 +3,19 @@
   function show_bunch(reason){
     console.log('switching to ', reason);
     var list = document.getElementsByClassName('point');
-    for(var i = 0; i < list.length; i++){
+    var len = list.length;
+    var c = 0;
+    for(var i = 0; i < len; i++){
       var el  = list[i];
-      if( el.classList.contains('reason-'+reason) || reason == 'all' )
+      if( el.classList.contains('reason-'+reason) || reason == 'all' ){
         el.style.display = 'block';
+        c++;
+      }         
       else
         el.style.display = 'none';
     }
+    console.log(len);
+    document.getElementById("pointsCounter").innerHTML = c;
   }
 </script>
 
@@ -19,6 +25,8 @@
   <option value="{{name}}">{{description}}</option>
   {{/reasons}}
 </select>
+<span id="pointsCounter">{{points.length}}</span>
+<ul>
 {{#points}}
 <li class="point reason-{{reason}}"> 
   <a href="point/{{id}}"> {{id}} </a> | 
@@ -27,3 +35,4 @@
   <pre> {{{json}}} </pre>
 </li>
 {{/points}}
+</ul>
