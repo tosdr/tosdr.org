@@ -119,14 +119,12 @@ function loadServices(){
     if(filename.match(/\.json$/))
       try {
         var obj = JSON.parse(fs.readFileSync(path+filename));
+        obj.points = [];
         if(index[obj.id])
           try { 
-            obj.points = index[obj.id].points.map(function(point_id){
-              return points[point_id];
-            })
             obj.links = index[obj.id].links;
           } catch(e){
-            console.log("no points found for " , filename, index[obj.id], e)
+            console.log("Error on processing index for  " , filename, index[obj.id], e)
           }
         
         services[obj.id] = obj;
@@ -196,9 +194,6 @@ function savePoint(item){
 }
 
 function loadPoints() {
-  var extend_topic = function(topic){
-    topics[topic].points.push(data);
-  }
   points={};
   var files = fs.readdirSync('points/');
   for(var i=0; i<files.length; i++) {
@@ -218,20 +213,29 @@ function loadPoints() {
         var blacklist = ['multiple', 'refunds', 'undefined', 'payment']
         if(blacklist.indexOf(topic) < 0)
           if(typeof topic === 'object'){
-            topic.forEach(extend_topic);
+            topic.forEach(function(t){
+              topics[t].points.push(data);
+            }
+            );
           } else {
-            extend_topic(topic);
+            topics[topic].points.push(data);
           }
         
       } catch(e) {
-        console.log("error wrong topics in "+data.id, data)
+        //console.log("error wrong topics in "+data.id, data)
       }
       
-      // try{
-      //    services[data.service].points.push(data);
-      // } catch(e) {
-      //   console.log("error wrong service in "+data.id, data)
-      // }
+      try{
+        if(typeof data.service === 'object')
+          data.service.forEach(function(s){
+            services[s].points.push(data);
+          });
+        else
+          services[data.service].points.push(data);
+        ///services[data.service].points.push(data);
+      } catch(e) {
+        console.log("error wrong service in "+data.id, data.service, e)
+      }
     }
   }
 }
