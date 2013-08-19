@@ -228,7 +228,7 @@ function loadPoints() {
       }
       
       // try{
-      //   services[data.service].points.push(data);
+      //    services[data.service].points.push(data);
       // } catch(e) {
       //   console.log("error wrong service in "+data.id, data)
       // }
@@ -241,14 +241,15 @@ loadServices();
 loadCases();
 loadPoints();
 loadTemplates();
-services.save = saveService;
-points.save = savePoint;
-topics.save = saveTopic;
-cases.save = saveCase;
+
 module.exports = {
   services : services,
   points : points,
   topics : topics,
   cases : cases,
-  templates :templates
+  templates : templates,
+  saveService : saveService,
+  savePoint : savePoint,
+  saveTopic : saveTopic,
+  saveCase : saveCase
 }

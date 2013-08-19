@@ -5,7 +5,8 @@ var fs = require('fs');
 var topics = []
 for(var t in db.topics){
   var topic = db.topics[t]
-  topic.is_category = topic.type === 'category'
+  topic.is_category = topic.type === 'category';
+  topic.topic_id = topic.id;
   topics.push(topic);
 }
 fs.writeFileSync('./topics.html',
