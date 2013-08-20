@@ -1,16 +1,31 @@
 var db = require('./database.js');
 var fs = require('fs');
 
+function sort_by_score(points){
+  return points.sort(function(p,q){
+    var a = -1;
+    var b = -1;
+    if(p.tosdr && p.tosdr.score)
+      a = Math.abs(p.tosdr.score)
+    if(q.tosdr && q.tosdr.score)
+      b = Math.abs(q.tosdr.score)
+    if(a > b)
+      return -1;
+    if(a == b)
+      return 0;
+    if(a < b)
+      return 1;
+  })
+}
+
 // topics.html
 var topics = []
 for(var t in db.topics){
   var topic = db.topics[t]
   topic.is_category = topic.type === 'category';
   topic.topic_id = topic.id;
-  if(topic.points) { //TODO this might be better in the database.js
-    topic.points = topic.points.sort(function(a,b){
-      return Math.abs(b.score)-Math.abs(a.score);
-    })
+  if(topic.points) { 
+    topic.points = sort_by_score(topic.points)
   }
   topics.push(topic);
 }
@@ -21,10 +36,8 @@ db.templates['topics.html']({topics:topics}));
 var services = []
 for(var t in db.services){
   var service = db.services[t];
-  if(service.points) { //TODO this might be better in the database.js
-    service.points = service.points.filter(function(a){return a}).sort(function(a,b){
-      return Math.abs(b.score)-Math.abs(a.score);
-    }) 
+  if(service.points) { 
+    service.points = sort_by_score(service.points);
     if(service.links){
       var links = [];
       for(var k in service.links){
