@@ -15,8 +15,8 @@ function displayPoints(res) {
       test: function(point) { return !point.id } 
     },
     {name:'notopic',
-     description:'no or flaud topic',
-     test: flaud_topic
+     description:'no or non existent topic',
+     test: untopic
     },
     {name:'notitle', 
      description:'no title',
@@ -24,7 +24,11 @@ function displayPoints(res) {
     },
     {name:'noservice', 
      description:'no service',
-     test: function(point) { return !point.service }
+     test: noservice
+    },
+    {name : 'unservice',
+     description : 'non existent service',
+     test : unservice
     },
     {name:'noscore', 
      description:"no score",
@@ -59,7 +63,20 @@ function displayPoints(res) {
   function nocase(point){ 
    return (!point.tosdr || !point.tosdr.case);
   }
-  function flaud_topic(point){
+  function noservice(point) { return !point.service }
+  function unservice(point){
+    if(noservice(point))
+      return false;
+    var service = point.service
+    if(typeof service === 'object'){
+      return (service.filter(function(service){
+        return !db.services[service];
+      }).length < db.services.length);
+    }else{
+      return !db.services[service]
+    }
+  }
+  function untopic(point){
     var topic;
     if(point.tosdr && point.tosdr.topic)
       topic = point.tosdr.topic
@@ -72,7 +89,7 @@ function displayPoints(res) {
     if(typeof topic == 'object'){
       return (topic.filter(function(topic){
         return !db.topics[topic]
-      }).length > 0 );
+      }).length < topic.length );
     }
     //topic not in list
     else {
@@ -92,7 +109,7 @@ function displayPoints(res) {
     var point = db.points[i]
     data.reasons.forEach(function(reason){
       if(reason.test(point))
-        data.points.push( prepare(point, reason.name) );
+        data.points.push( prepare(point, reason) );
     })
   }
   res.write(db.templates['points'](data));
