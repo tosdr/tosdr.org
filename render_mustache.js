@@ -7,6 +7,11 @@ for(var t in db.topics){
   var topic = db.topics[t]
   topic.is_category = topic.type === 'category';
   topic.topic_id = topic.id;
+  if(topic.points) { //TODO this might be better in the database.js
+    topic.points = topic.points.sort(function(a,b){
+      return Math.abs(b.score)-Math.abs(a.score);
+    })
+  }
   topics.push(topic);
 }
 fs.writeFileSync('./topics.html',
@@ -16,10 +21,10 @@ db.templates['topics.html']({topics:topics}));
 var services = []
 for(var t in db.services){
   var service = db.services[t];
-  if(service.points) {
+  if(service.points) { //TODO this might be better in the database.js
     service.points = service.points.filter(function(a){return a}).sort(function(a,b){
       return Math.abs(b.score)-Math.abs(a.score);
-    })
+    }) 
     if(service.links){
       var links = [];
       for(var k in service.links){
