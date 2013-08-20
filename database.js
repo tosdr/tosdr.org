@@ -82,8 +82,7 @@ function loadTopics(){
   var files = fs.readdirSync(path);
   for(var i = 0; i < files.length ; i++){
     var filename = files[i];
-    
-    if(filename.match(/\.json$/))
+    if(filename.match(/(.*)\.json$/))
       try {
         var obj = getFile(path+filename);
         obj.points = [];
@@ -115,21 +114,24 @@ function loadServices(){
   var files = fs.readdirSync(path);
   for(var i = 0; i < files.length ; i++){
     var filename = files[i];
-    
-    if(filename.match(/\.json$/))
+    var m;
+    if(( m = filename.match(/(.*)\.json$/) ))
       try {
-        var obj = JSON.parse(fs.readFileSync(path+filename));
+        var obj = getFile(path+filename);
         obj.points = [];
-        if(index[obj.id])
+        if(!obj.id)
+          obj.id = m[1];
+        if(index[obj.id]) {
           try { 
             obj.links = index[obj.id].links;
           } catch(e){
             console.log("Error on processing index for  " , filename, index[obj.id], e)
           }
+        }
         
         services[obj.id] = obj;
       } catch(e) {
-        console.log("error in loading topic ",e, filename);
+        console.log("error in loading Service ",e, filename);
       }
   }
 }
@@ -222,7 +224,7 @@ function loadPoints() {
           }
         
       } catch(e) {
-        //console.log("error wrong topics in "+data.id, data)
+        console.log("error wrong topics in "+data.id, topic)
       }
       
       try{

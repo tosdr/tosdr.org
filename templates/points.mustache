@@ -28,8 +28,9 @@
 <span id="pointsCounter">{{points.length}}</span>
 <ul>
 {{#points}}
-<li class="point reason-{{reason}}"> 
+<li class="point reason-{{reason.name}}"> 
   <a href="point/{{id}}"> {{id}} </a> | 
+  {{reason.description}} |
   <a href="{{discussion}}"> discussion </a>
   <br>
   <pre> {{{json}}} </pre>
