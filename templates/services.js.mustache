@@ -20,7 +20,7 @@
     </div>
     <section class="specificissues">
       <ul class="tosdr-points">
-        {{#points}}
+        {{#viewable_points}}
           <li id="popup-point-{{service}}-{{id}}" class="point">
             <div class="{{tosdr.point}}">
               <h5>
@@ -37,7 +37,7 @@
               </p>
             </div>
           </li>
-        {{/points}}
+        {{/viewable_points}}
       </ul>
       <section>
         {{!#links}}
