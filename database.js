@@ -7,6 +7,45 @@ var topics = {};
 var cases = {}
 var templates = {};
 
+function prepare(){
+	for(var k in services){
+		var service = services[k];
+		service.viewable_points = viewables(service.points);
+	}
+	for(var k in topics){
+		var topic = topics[k];
+		topic.viewable_points = viewables(topic.points);
+	}
+}
+	
+function viewable(obj){
+	if(obj.disputed || obj.irrelevant || obj.additional || 
+	    typeof(obj.tosdr)=='undefined' || 
+	    typeof(obj.tosdr.point)=='undefined' || 
+	    typeof(obj.tosdr.score)=='undefined' || 
+	     typeof(obj.tosdr.tldr)=='undefined' ) 
+		return false;
+	else
+		return true;
+}
+
+function viewables(points){
+  return points.filter(viewable).sort(function(p,q){
+    var a = -1;
+    var b = -1;
+    if(p.tosdr && p.tosdr.score)
+      a = Math.abs(p.tosdr.score)
+    if(q.tosdr && q.tosdr.score)
+      b = Math.abs(q.tosdr.score)
+    if(a > b)
+      return -1;
+    if(a == b)
+      return 0;
+    if(a < b)
+      return 1;
+  })
+}
+		
 function sortObject(obj, strict)
 {
   if(obj instanceof Array) {
@@ -247,7 +286,7 @@ loadServices();
 loadCases();
 loadPoints();
 loadTemplates();
-
+prepare();
 module.exports = {
   services : services,
   points : points,
