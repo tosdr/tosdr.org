@@ -1,102 +1,114 @@
-Statuts de l'association *«Terms of Service; Didn't Read»*
-==========================================================
+% Statuts de l’association  
+ Terms of Service; Didn’t Read
 
-## Titre de l'Association
+# Titre de l’Association
 
 Il est fondé entre les adhérents aux présents statuts une
 Association régie par la loi du premier juillet 1901 et le décret
 du 16 août 1901, ayant pour titre:
 
-> *Terms of Service; Didn't Read*
+> *Terms of Service; Didn’t Read*
 
-## But de l'Association
+et ayant pour sigle: 
 
-L'Association a pour but de contribuer à une meilleure
+> ToSDR
+
+# But de l’Association
+
+L’Association a pour but de contribuer à une meilleure
 connaissance des droits et libertés des utilisateurs de services
 Web, notamment par la résolution du problème des conditions
-générales d'utilisation (« Terms of Service »), que peu
-d'utilisateurs prennent le temps de lire et comprendre.
+générales d’utilisation (« Terms of Service »);
 
-## Objet de l'Association
+# Objet de l’Association
 
-L'Association a pour objet la gestion des financements et la
-gestion des droits d'auteur, droits de marque et autres droits
-relatifs au projet «Terms of Service; Didn't Read»
-(www.tosdr.org). Les droits d'auteur et autres droits relatifs au
-projet, à l'exclusion des droits de marque, sont donnés en licence
-libre approuvée par la «Free Software Foundation Europe» lorsque
-cela est possible.
+L’Association a pour objet de soutenir le développement du projet
+«Terms of Service; Didn’t Read» <http://tosdr.org> notamment par la
+gestion de financements et de droits d’auteur, droits de marque et
+autres droits relatifs au projet.
 
-## Siège social
+## Obligations de l’Association relatives à l’objet
+
+Les droits d’auteur et autres droits relatifs au projet, à
+l’exclusion des droits de marque, sont donnés en licence libre
+approuvée par la «Free Software Foundation Europe e.V.».
+
+Les comptes annuels de l’Association sont publiés sur son site
+web.
+
+# Siège social
 
 Le siège social est fixé au 152, rue de la Rianderie; 59700
-Marcq-en-Barœul. Il pourra être transféré sur décision d'une
+Marcq-en-Barœul. Il pourra être transféré sur décision d’une
 Assemblée Générale.
 
-## Durée
+# Durée
 
-La durée de l'association est fixée à 10 ans à compter de
+La durée de l’association est fixée à 10 ans à compter de
 la première Assemblée Générale. Cette durée est renouvelable sur
-décision de l'Assemblée Générale.
+décision de l’Assemblée Générale.
 
-## Membres de l'association
+# Membres de l’association
 
-L'association se compose de membres fondateurs et de membres
+L’association se compose de membres fondateurs et de membres
 adhérents. Un membre est une personne physique.
 
 Sont membres adhérents ceux qui versent la cotisation normale
 telle que fixée par le Bureau. À cette cotisation est ajouté un
-droit d'entrée défini par le règlement intérieur.
+droit d’entrée défini par le règlement intérieur.
+
+Sont membres actifs les membres à jour de leurs cotisations et
+membres depuis plus d’un an.
 
 <!--Sont contributeurs actifs les personnes physiques inscrites sur la
 liste de courrier électronique tosdr@googlegroups.com ayant envoyé
 au moins un message sur ladite liste pendant les six mois
 précédant une Assemblée Générale.-->
 
-## Admission
+# Admission
 
-Pour faire partie de l'Association en tant que membre adhérent,
+Pour faire partie de l’Association en tant que membre adhérent,
 il faut être agréé par le Bureau qui statue, lors de chacune de
-ses réunions, sur les demandes d'admission présentées.
+ses réunions, sur les demandes d’admission présentées.
 
-## Radiation
+# Radiation
 
 La qualité de membre se perd par:
 
  - la démission;
  - le décès de la personne physique;
  - la radiation prononcée par le Bureau pour non-paiement de la
-   cotisation ou pour motif grave, l'intéressé ayant été invité
+   cotisation ou pour motif grave, l’intéressé ayant été invité
    par courrier électronique à se présenter devant le Bureau pour
    fournir des explications.
 
-## Les ressources de l'Association
+# Les ressources de l’Association
 
 Elles comprennent:
 
  - les dons;
  - le montant des cotisations;
  - les sommes perçues en contrepartie des prestations fournies par
-   l'Association;
- - les subventions de l'État, des régions, des départements et des
+   l’Association;
+ - les subventions de l’État, des régions, des départements et des
    communes, ou de tout autre organisme public;
  - toutes les autres ressources autorisées par les textes
    législatifs ou réglementaires.
 
-## Le Bureau
+# Le Bureau
 
-L'Association est dirigée par un Bureau d'au moins deux membres
-élus pour une année par l'Assemblée Générale.
+L’Association est dirigée par un Bureau d’au moins deux membres
+élus pour une année par l’Assemblée Générale.
 
 Les membres sont ré-rééligibles.
 
 En cas de vacances, le Bureau pourvoit provisoirement au
 remplacement des membres.
 
-Il est procédé à leur remplacement définitif par l'Assemblée
+Il est procédé à leur remplacement définitif par l’Assemblée
 Générale suivante.
 
-### Réunions
+## Réunions
 
 Le Bureau se réunit une fois au moins tous les six mois, sur
 convocation du Président ou à la demande du quart de ses membres.
@@ -107,43 +119,43 @@ présents ou représentés.
 
 En cas de partage, la voix du Président est prépondérante.
 
-### Attributions
+## Attributions
 
-Le Bureau établit l'ordre du jour des Assemblées Générales et
-assure l'exécution des décisions de ces Assemblées. Il autorise
+Le Bureau établit l’ordre du jour des Assemblées Générales et
+assure l’exécution des décisions de ces Assemblées. Il autorise
 toutes acquisitions, aliénations ou locations immobilières ainsi
-que les contrats à intervenir entre l'Association et toute autre
-partie. Ces autorisations sont faites uniquement à l'unanimité des
+que les contrats à intervenir entre l’Association et toute autre
+partie. Ces autorisations sont faites uniquement à l’unanimité des
 membres du Bureau présents ou représentés.
 
-Il établit le budget de l'Association et fixe le montant des
-cotisations.
+Il établit le budget de l’Association et fixe le montant des
+cotisations dans son règlement intérieur.
 
-Le Bureau assure le bon fonctionnement de l'association sous le
-contrôle de l'Assemblée Générale Ordinaire dont il prépare les
+Le Bureau assure le bon fonctionnement de l’association sous le
+contrôle de l’Assemblée Générale Ordinaire dont il prépare les
 réunions.
 
-### Composition
+## Composition
 
-Le Président représente l'Association dans tous les actes de la
+Le Président représente l’Association dans tous les actes de la
 vie civile et il conclut tout accord sous réserve des
-autorisations qu'il doit obtenir du Bureau. Il a qualité pour
+autorisations qu’il doit obtenir du Bureau. Il a qualité pour
 présenter toute réclamation auprès de toutes administrations,
 notamment en matière fiscale, et pour ouvrir tout compte bancaire
-ou postal. Il agit en justice au nom de l'Association tant en
-demande (avec l'autorisation du Bureau s'il n'y a pas urgence)
-qu'en défense.
+ou postal. Il agit en justice au nom de l’Association tant en
+demande (avec l’autorisation du Bureau s’il n’y a pas urgence)
+qu’en défense.
 
-En cas d'empêchement, le Président est remplacé par le Trésorier
-qui dispose alors des mêmes pouvoirs.
+En cas d’empêchement, le Président est remplacé par le
+Vice-Président qui dispose alors des mêmes pouvoirs.
 
 Le Président peut accorder des délégations partielles de ses
-pouvoirs sous réserve, lorsqu'il s’agit de délégations d’une
+pouvoirs sous réserve, lorsqu’il s’agit de délégations d’une
 certaine durée ou permanentes, d’en informer le Vice-Président.
 
 Le Trésorier est chargé de tenir ou de faire tenir sous son
-contrôle la comptabilité de l'Association. Il perçoit les
-recettes; il effectue tout paiement sous réserve de l'autorisation
+contrôle la comptabilité de l’Association. Il perçoit les
+recettes; il effectue tout paiement sous réserve de l’autorisation
 du Président dans les cas éventuellement prévus par le Bureau.
 
 En cas d’empêchement le Trésorier est remplacé par le Président,
@@ -151,50 +163,50 @@ ou par un autre membre du Bureau désigné par le Président.
 
 Vis-à-vis des organismes bancaires ou postaux, le Président, le
 Trésorier ou tout autre membre du Bureau désigné par le Président
-avec l'accord du Trésorier, ont pouvoir, chacun séparément, de
+avec l’accord du Trésorier, ont pouvoir, chacun séparément, de
 signer tout moyen de paiement (chèques, virements, etc).
 
 
-## Les Assemblées Générales
+# Les Assemblées Générales
 
-L'Assemblée Générale Ordinaire  ou Extraordinaire comprend :
+L’Assemblée Générale Ordinaire  ou Extraordinaire comprend :
 
 - les membres du Bureau;
-- tous les membres de l'Association, quel que soit le titre auquel
-  ils sont affiliés, sous réserve qu'ils aient acquitté leur
-  cotisation de l'année en cours depuis au moins soixante jours.
+- tous les membres de l’Association, quel que soit le titre auquel
+  ils sont affiliés, sous réserve qu’ils aient acquitté leur
+  cotisation de l’année en cours depuis au moins soixante jours.
 
 Les membres peuvent se faire représenter par un autre membre.
 
 Quinze jours au moins avant la date fixée par le Bureau, les
-membres de l'Association sont convoqués par courriel.
+membres de l’Association sont convoqués par courriel.
 
-L'ordre du jour est indiqué sur les convocations.
+L’ordre du jour est indiqué sur les convocations.
 
-L'Assemblée est présidée par le Président.
+L’Assemblée est présidée par le Président.
 
 Une Assemblée peut se tenir sous forme électronique conformément
 aux dispositions prévues par le règlement intérieur.
 
-## Les Assemblées Générales Ordinaires.
+# Les Assemblées Générales Ordinaires.
 
-L'Assemblée Générale Ordinaire se réunit obligatoirement une fois
+L’Assemblée Générale Ordinaire se réunit obligatoirement une fois
 par an, si possible au cours du premier trimestre.
 
 Lors de cette réunion dite «annuelle», le Président soumet à
-l'Assemblée un rapport sur l'activité de l'Association.
+l’Assemblée un rapport sur l’activité de l’Association.
 
 Le Trésorier soumet le rapport financier comportant les comptes de
-l'exercice écoulé.
+l’exercice écoulé.
 
-Il est ensuite procédé à l'élection des membres du Bureau et de
+Il est ensuite procédé à l’élection des membres du Bureau et de
 son Président, celui-ci désignant parmi les membres du Bureau un
 Trésorier et un Vice-Président.
 
-Il est ensuite procédé à l'examen des autres questions figurant à
-l'ordre du jour.
+Il est ensuite procédé à l’examen des autres questions figurant à
+l’ordre du jour.
 
-L'Assemblée Générale Ordinaire peut également être convoquée à
+L’Assemblée Générale Ordinaire peut également être convoquée à
 tout moment à la demande du Président ou de la majorité des
 membres du Bureau.
 
@@ -203,76 +215,75 @@ exprimés par les membres présents ou représentés.
 
 Les adhérents en faisant la demande par écrit, pourront se faire
 représenter par un membre de leur famille ou par un autre membre
-de l'Association, ou voter par correspondance (sous forme
-numérique sur le serveur de l'Association, ou par simple
+de l’Association, ou voter par correspondance (sous forme
+numérique sur le serveur de l’Association, ou par simple
 courrier).
 
-## L'Assemblée Générale Extraordinaire.
+# L’Assemblée Générale Extraordinaire.
 
-L'Assemblée Générale Extraordinaire se prononce sur les
+L’Assemblée Générale Extraordinaire se prononce sur les
 modifications à apporter aux Statuts et sur la dissolution de
-l'Association. Elle se réunit à la demande du Président ou de la
+l’Association. Elle se réunit à la demande du Président ou de la
 majorité des membres du Bureau.
 
-L'Assemblée Générale Extraordinaire ne peut se prononcer
+L’Assemblée Générale Extraordinaire ne peut se prononcer
 valablement que si les deux-tiers des membres actifs de
-l'Association sont présents ou représentés. Si plus de la moitié
-des membres à jour de leurs cotisations et membres depuis plus
-d’un an étaient absents, alors les décisions de l'Assemblée dont
-le degré d’urgence le permettraient seraient soumises à
-l'approbation, par vote électronique, de l'ensemble des adhérents.
-Ce vote, à approbation implicite, se ferait à la majorité absolue
-des membres de l'Association.
+l’Association sont présents ou représentés. Si plus de la moitié
+des membres actifs  étaient absents, alors les décisions de
+l’Assemblée dont le degré d’urgence le permettraient seraient
+soumises à l’approbation, par vote électronique, de l’ensemble des
+adhérents.  Ce vote, à approbation implicite, se ferait à la
+majorité absolue des membres de l’Association.
 
 Les décisions sont prises à la majorité des deux-tiers des
 suffrages exprimés par les membres présents ou représentés.
 
-L'Assemblée Générale Extraordinaire à également la possibilité de
-prendre toutes les décisions prévues pour l'Assemblée Générale
-Ordinaire, et ce dans les mêmes circonstances, c'est-à-dire sans
+L’Assemblée Générale Extraordinaire à également la possibilité de
+prendre toutes les décisions prévues pour l’Assemblée Générale
+Ordinaire, et ce dans les mêmes circonstances, c’est-à-dire sans
 minimum de représentation des membres, et à la majorité absolue
 des suffrages exprimés.
 
 Si le quorum des deux-tiers des membres actifs n’était pas
-atteint, l'Assemblée serait, de facto, une Assemblée Générale
-Ordinaire, et statuerait sur les points de l'ordre du jour qui le
+atteint, l’Assemblée serait, de facto, une Assemblée Générale
+Ordinaire, et statuerait sur les points de l’ordre du jour qui le
 permettent.
 
-## Règlement intérieur
+# Règlement intérieur
 
 Un règlement intérieur est établi par le Bureau qui le fait
-approuver par l'Assemblée Générale. Le règlement intérieur peut
+approuver par l’Assemblée Générale. Le règlement intérieur peut
 être en anglais ou en français.
 
 Ce règlement éventuel est destiné à fixer les divers points non
 prévus par les Statuts, notamment ceux qui ont trait à
-l'administration interne de l'Association.
+l’administration interne de l’Association.
 
-## Dissolution
+# Dissolution
 
-En cas de dissolution prononcée par l'Assemblée Générale
+En cas de dissolution prononcée par l’Assemblée Générale
 Extraordinaire, un ou plusieurs liquidateurs sont nommés par
 celle-ci.
 
-L'actif, s’il y a lieu, est dévolu par cette Assemblée à une ou
+L’actif, s’il y a lieu, est dévolu par cette Assemblée à une ou
 plusieurs Associations ayant un objet similaire ou à tout
 établissement à but social ou culturel de son choix.
 
---------------------
+\vfill
 
-Fait à Paris le \today en 10 exemplaires originaux.
+Fait à Paris le \today en 10 exemplaires originaux.
 
-Les membres fondateurs:
+Les membres du Bureau, provisoirement jusque l’Assemblée Générale:
 
- - Jan-Christoph Borchardt
- - Michiel B. de Jong
- - Hugo Roy
-
-Les membres du Bureau, provisoirement jusque l'Assemblée Générale:
-
- - Président: Hugo Roy
- - Vice-président: Jan-Christoph Borchardt
- - Trésorier: Michiel B. de Jong
+ - *Président:* Hugo Roy
+ - *Vice-président:* Jan-Christoph Borchardt
+ - *Trésorier:* Michiel B. de Jong
  - Ian McGowan
  - James Stout
- - Julien Kirch
+ - Suzanne Azmayesh
+
+Signatures:
+
+\vfill
+
+ 
