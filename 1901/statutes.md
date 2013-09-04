@@ -32,6 +32,8 @@ and translation of the French statutes.
 
     - Founding members
     - Members (only individuals, no legal persons), with a fee
+    - Active members (necessary for some quorums): members who
+      paid the fee and subscribed more than a year ago.
 
  - Admission
 
@@ -164,17 +166,3 @@ and translation of the French statutes.
     with similar goals or any other social or culturally oriented
     establishment it sees fits.
 
-Founding members
-
- - Jan-Christoph Borchardt
- - Michiel B. de Jong
- - Hugo Roy
-
-Temporary Bureau members until the 1st GA
-
- - Président: Hugo Roy
- - Vice-président: Jan-Christoph Borchardt
- - Trésorier: Michiel B. de Jong
- - Ian McGowan
- - James Stout
- - Julien Kirch
