@@ -111,7 +111,7 @@ function  getFile(path)
 }
 
 function saveTopic(item){
-  var indexes = ['cases', 'points']
+  var indexes = ['cases', 'points', 'viewable_points']
   return save(item, indexes, topics, 'topics/')
 }
 
@@ -143,7 +143,7 @@ function loadIndex(name){
 
 
 function saveService(item){
-  var indexes = ['points']
+  var indexes = ['points','viewable_points']
   return save(item, indexes, sevices, 'services/')
 }
 
