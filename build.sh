@@ -1,5 +1,5 @@
 node buildIndexes.js
-#node render.js
+node render.js
 lessc -x css/custom.less css/custom.css
 cd import
 mkdir -p points topics services index cases
