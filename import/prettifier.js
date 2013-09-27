@@ -2,7 +2,7 @@ var fs = require('fs');
 
 function sortObject(obj, strict)
 {
-  console.log(obj);
+  //console.log(obj);
   if(obj instanceof Array) {
     var ary;
     if(strict) ary =  obj.sort();
@@ -29,7 +29,7 @@ function fixArrays(obj){
     l.forEach(function(k){
       ret.push(obj[k])
     })
-    console.log(ret);
+    //console.log(ret);
     return ret;
   } else
     return false;
