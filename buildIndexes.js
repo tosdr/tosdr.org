@@ -14,7 +14,7 @@ function writeOut() {
       console.log('successfully wrote index/services.json');
     }
   });
-  console.log(topic);
+  //console.log(topic);
   fs.writeFile('index/topics.json', JSON.stringify(topic), function(err) {
     if(err) {
       console.log('error writing index/topics.json');
@@ -97,12 +97,15 @@ function parseServiceFile(id) {
   //have a look at the files in the services/ directory of this
   //repo to get a better feeling for what this function does
 
-  console.log('SERVICE '+id);
+  //console.log('SERVICE '+id);
   //this is a bit of an ugly way to deal with asyncronicity, but it works:
   pending++;
   fs.readFile('services/'+id+'.json', function(err, data) {
     console.log(id);
-    console.log(data.toString());
+    if(err) {
+      console.log(err);
+    }
+    //console.log(data.toString());
     var obj = JSON.parse(data.toString());
     if(typeof(obj.tosback2)=='object') {
       for(var i in obj.tosback2) { 
@@ -133,8 +136,8 @@ fs.readdir('points/', function(err, files) {
         parsePointFile(files[i].substring(0, files[i].length-5));
       }
     }
-    console.log('SERVICES');
-    console.log(service);
+    //console.log('SERVICES');
+    //console.log(service);
     for(var i in service) {
       parseServiceFile(i);
     }

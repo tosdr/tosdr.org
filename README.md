@@ -16,6 +16,12 @@ We use bootstrap. http://github.com/twitter/bootstrap/
 
 NEW BUILD INSTRUCTIONS:
 
+    npm install
+    npm install -g less
+    sh ./build.sh
+
+NOTES FROM @ggrin:
+
 * database.js
   the cases aren't used anywhere else in the project, there was a version
   using the cases in the topics.html but gat ereased again
