@@ -18,7 +18,7 @@ function doFile(fileName) {
       console.log(err, fileName);
       exit(1);
     } else {
-      var obj;
+      var obj, changed = false;
       try {
         obj = JSON.parse(data);
       } catch(e) {
@@ -31,6 +31,17 @@ function doFile(fileName) {
         } else {
           obj.services = [obj.service];
         }
+        changed = true;
+      }
+      if(!obj.topics && obj.topic) {
+        if(Array.isArray(obj.topic)) {
+          obj.topics = obj.topic;
+        } else {
+          obj.topics = [obj.topic];
+        }
+        changed = true;
+      }
+      if(changed) {
         fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
           if(err) {
             console.log(e, filename);
