@@ -40,6 +40,9 @@ function renderDataPoint(service, dataPoint, forPopup) {
     sign = '?';
   }
   //return the html for this data point, for inclusion in the popup or in the main page:
+  if(!obj.name) {
+    obj.name=obj.title;
+  }
   if (forPopup) {
     return {
       id:dataPoint,
