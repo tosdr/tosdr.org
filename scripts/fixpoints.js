@@ -28,6 +28,7 @@ function doFile(fileName) {
         }
         if(typeof(obj.tosdr)!='object' || Array.isArray(obj.tosdr)) {
           obj.tosdr = {};
+          changed = true;
         }
         if(obj.disputed) {
           obj.tosdr.disputed = true;
