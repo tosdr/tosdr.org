@@ -3,7 +3,8 @@
 // those data points, and writes that information out to two files in the
 // index/ directory
 
-var fs = require('fs');
+var fs = require('fs'),
+  prettyjson = require('./prettyjson');
 var service = {}, topic = {}, pending = 0;
 function writeOut() {
   //console.log(service);

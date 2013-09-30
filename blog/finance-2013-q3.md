@@ -19,17 +19,17 @@
 * compensation Adrian: 300
     * (M) preparative work on topics tools, 30 hours (up to 60) * 10 euros: 300 (31 Aug)
 
-* compensation Michiel: 40
+* compensation Michiel: 50
     * (M) fixing the build, making up finances, 3 hours (up to 3) * 10 euros: 30 (27 Sep)
-    * (M) fixing some data point format issues, 1 hour (up to 4) * 10 euros: 10 (30 Sep)
+    * (M) fixing some data point format issues, 2 hour (up to 5) * 10 euros: 20 (30 Sep)
 
 * operations: 18.95
     * (M) tos-dr.info renewed for the last time: 7.80 (12 aug)
     * (M) tosback server at serverdragon 5.77 (19 Aug)
     * (M) tosback server at serverdragon 5.38 (5 Sep)
 
-# Finish: 9362.33 + 193.77  = 9556.10 EUR
+# Finish: 9362.33 + 183.77  = 9546.10 EUR
 
 * kept safe by Hugo: 9362.33 = 9362.33 EUR
-* kept safe by Michiel: 1411.22 - 404 - 454.50 - 300 - 40 - 18.95 = 193.77 EUR
+* kept safe by Michiel: 1411.22 - 404 - 454.50 - 300 - 50 - 18.95 = 183.77 EUR
 
