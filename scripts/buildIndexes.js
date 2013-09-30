@@ -70,7 +70,7 @@ function parsePointFile(id) {
     console.log(e, id, data, fs.readFileSync('points/'+id+'.json'));
     exit();
   }
-  if(obj.disputed || obj.irrelevant || obj.additional || typeof(obj.tosdr)=='undefined'
+  if(obj.tosdr.disputed || obj.tosdr.irrelevant || obj.additional || typeof(obj.tosdr)=='undefined'
                   || typeof(obj.tosdr.point)=='undefined' || typeof(obj.tosdr.score)=='undefined'
                   || typeof(obj.tosdr.tldr)=='undefined' ) {
     return;
