@@ -25,6 +25,10 @@ function doFile(fileName) {
         console.log(e, fileName);
         exit(1);
       }
+      if(obj.disputed) {
+        obj.tosdr.disputed = true;
+        changed = true;
+      }
       if(!obj.services && obj.service) {
         if(Array.isArray(obj.service)) {
           obj.services = obj.service;
