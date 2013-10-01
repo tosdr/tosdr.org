@@ -78,6 +78,13 @@ function doFile(fileName) {
             changed = true;
           }
         }
+        if(typeof(obj.tosdr.score)=='string') {
+          var num = parseInt(obj.tosdr.score);
+          if(typeof(num)=='number' && num >= 0 && num <= 100) {
+            obj.tosdr.score = num;
+            changed = true;
+          }
+        }
         if(changed) {
           fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
             if(err) {
