@@ -85,6 +85,11 @@ function doFile(fileName) {
             changed = true;
           }
         }
+        if(obj.name) {
+          obj.title = obj.name;
+          delete obj.name;
+          changed = true;
+        }
         if(changed) {
           fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
             if(err) {
