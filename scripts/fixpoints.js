@@ -44,13 +44,22 @@ function doFile(fileName) {
           obj.tosdr.reason = obj.irrelevant;
           changed = true;
         }
-        if(!obj.services && obj.service) {
-          if(Array.isArray(obj.service)) {
-            obj.services = obj.service;
-          } else {
-            obj.services = [obj.service];
+        if(!obj.services) {
+          if(obj.service) {
+            if(Array.isArray(obj.service)) {
+              obj.services = obj.service;
+            } else {
+              obj.services = [obj.service];
+            }
+            changed = true;
+          } else if(obj.tosdr.service) {
+            if(Array.isArray(obj.tosdr.service)) {
+              obj.services = obj.tosdr.service;
+            } else {
+              obj.services = [obj.tosdr.service];
+            }
+            changed = true;
           }
-          changed = true;
         }
         if(!obj.topics) {
           if(obj.topic) {
