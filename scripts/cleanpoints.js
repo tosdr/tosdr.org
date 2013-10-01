@@ -47,6 +47,14 @@ function doFile(fileName) {
           delete obj.service;
           changed = true;
         }
+        if(obj.tosdr.topic) {
+          delete obj.tosdr.topic;
+          changed = true;
+        }
+        if(obj.tosdr.service) {
+          delete obj.tosdr.service;
+          changed = true;
+        }
         if(changed) {
           fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
             if(err) {
