@@ -34,6 +34,12 @@ function doFile(fileName) {
         if(typeof(obj.tosdr.point) != 'string' || typeof(obj.tosdr.score) != 'number' || typeof(obj.tosdr.tldr) != 'string') {
           console.log('types wrong', fileName);
         }
+        if(obj.tosdr.point != 'good' && obj.tosdr.point != 'neutral' && obj.tosdr.point != 'bad' && obj.tosdr.point != 'blocker') {
+          console.log('point wrong', obj.tosdr.point, fileName);
+        }
+        if(obj.tosdr.score != Math.floor(obj.tosdr.score) || obj.tosdr.score < 0 || obj.tosdr.score > 100) {
+          console.log('score wrong', obj.tosdr.score, fileName);
+        }
       }
     } catch(e) {
       console.log(e, fileName);
