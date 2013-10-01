@@ -77,18 +77,7 @@ function parsePointFile(id) {
     return;
   }
   addToServices(obj.services, id);
-  if(typeof(obj.topic)=='string') {
-    addToTopics([obj.topic], id);
-  } else  if(typeof(obj.topic)=='object') {
-    addToTopics(obj.topic, id);
-  }
-  if(typeof(obj.tosdr)=='object') {
-    if(typeof(obj.tosdr.topic)=='string') {
-      addToTopics([obj.tosdr.topic], id);
-    } else  if(typeof(obj.tosdr.topic)=='object') {
-      addToTopics(obj.tosdr.topic, id);
-    }
-  }
+  addToTopics(obj.topics, id);
 }
 function parseServiceFile(id) {
   //have a look at the files in the services/ directory of this
