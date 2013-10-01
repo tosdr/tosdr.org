@@ -39,6 +39,14 @@ function doFile(fileName) {
           delete obj.irrelevant;
           changed = true;
         }
+        if(obj.topic) {
+          delete obj.topic;
+          changed = true;
+        }
+        if(obj.service) {
+          delete obj.service;
+          changed = true;
+        }
         if(changed) {
           fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
             if(err) {
