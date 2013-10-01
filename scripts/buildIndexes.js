@@ -76,11 +76,7 @@ function parsePointFile(id) {
                   || typeof(obj.tosdr.tldr)=='undefined' ) {
     return;
   }
-  if(typeof(obj.service)=='string') {
-    addToServices([obj.service], id);
-  } else  if(typeof(obj.service)=='object') {
-    addToServices(obj.service, id);
-  }
+  addToServices(obj.services, id);
   if(typeof(obj.topic)=='string') {
     addToTopics([obj.topic], id);
   } else  if(typeof(obj.topic)=='object') {
