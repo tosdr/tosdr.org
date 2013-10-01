@@ -52,13 +52,22 @@ function doFile(fileName) {
           }
           changed = true;
         }
-        if(!obj.topics && obj.topic) {
-          if(Array.isArray(obj.topic)) {
-            obj.topics = obj.topic;
-          } else {
-            obj.topics = [obj.topic];
+        if(!obj.topics) {
+          if(obj.topic) {
+            if(Array.isArray(obj.topic)) {
+              obj.topics = obj.topic;
+            } else {
+              obj.topics = [obj.topic];
+            }
+            changed = true;
+          } else if(obj.tosdr.topic) {
+            if(Array.isArray(obj.tosdr.topic)) {
+              obj.topics = obj.tosdr.topic;
+            } else {
+              obj.topics = [obj.tosdr.topic];
+            }
+            changed = true;
           }
-          changed = true;
         }
         if(changed) {
           fs.writeFile('points/'+fileName, prettyjson(obj), function(err) {
