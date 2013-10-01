@@ -2,7 +2,8 @@
 //generate the index.html and get-involved.html files from that.
 
 var elements = {};
-var fs = require('fs');
+var fs = require('fs'),
+  prettyjson = require('./prettyjson');
 function renderDataPoint(service, dataPoint, forPopup) {
   var text = fs.readFileSync('points/' + dataPoint + '.json').toString().split('\xA0').join('');
   var obj, badge, icon, sign, score;
@@ -286,7 +287,7 @@ function go() {
       toString().
       replace('<!-- ##services-content## -->', '<div id="services-list" class="row">\n' + servicesList + '</div>\n')
   );
-  fs.writeFileSync('js/services.js', "var popupsContent = " + JSON.stringify(popups) + ";");
+  fs.writeFileSync('js/services.js', "var popupsContent = " + prettyjson(popups) + ";");
   fs.writeFileSync('get-involved.html',
     fs.readFileSync('get-involved-template.html').
       toString().
