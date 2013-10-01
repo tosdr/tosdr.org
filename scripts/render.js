@@ -41,15 +41,12 @@ function renderDataPoint(service, dataPoint, forPopup) {
     sign = '?';
   }
   //return the html for this data point, for inclusion in the popup or in the main page:
-  if(!obj.name) {
-    obj.name=obj.title;
-  }
   if (forPopup) {
     return {
       id:dataPoint,
       score:obj.tosdr.score,
       text:'<div class="' + obj.tosdr.point + '"><h5><span class="badge ' + badge
-        + '" title="' + obj.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' + sign + '</i></span> ' + obj.name + ' <a href="' + obj.discussion + '" target="_blank" class="label context">Discussion</a></h5><p>'
+        + '" title="' + obj.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' + sign + '</i></span> ' + obj.title + ' <a href="' + obj.discussion + '" target="_blank" class="label context">Discussion</a></h5><p>'
         + obj.tosdr.tldr + '</p></div>'
     };
   } else {
@@ -57,7 +54,7 @@ function renderDataPoint(service, dataPoint, forPopup) {
       id:dataPoint,
       score:obj.tosdr.score,
       text:'<span class="badge ' + badge + '" title="' + obj.tosdr.score + '">'
-        + '<i class="icon-' + icon + ' icon-white">' + sign + '</i></span>&nbsp;' + obj.name
+        + '<i class="icon-' + icon + ' icon-white">' + sign + '</i></span>&nbsp;' + obj.title
     };
   }
 }
@@ -143,8 +140,8 @@ function renderDetails(name, points, toslinks, obj) {
       search.push(obj.related[j]);
     }
   }
-  if (obj.name) {
-    search.push(obj.name);
+  if (obj.title) {
+    search.push(obj.title);
   }
   if (obj.url) {
     search.push(obj.url);
