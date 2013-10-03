@@ -112,7 +112,7 @@ function doFile(fileName) {
         if(typeof(obj.alexa) != 'number') {
           console.log('wrong obj.alexa', fileName);
           if(!obj.alexa) {
-            obj.tosdr.alexa = 1000000;
+            obj.alexa = 1000000;
             changed = true;
           }
         }
