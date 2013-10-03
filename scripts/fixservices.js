@@ -31,7 +31,7 @@ function doFile(fileName) {
           if(!obj.id) {
             obj.id = fileName.substring(0, fileName.length-5);
             changed = true;
-          }
+         }
         }
         if(typeof(obj.name) != 'string') {
           console.log('name wrong', fileName);
@@ -69,19 +69,73 @@ function doFile(fileName) {
             }
             if(typeof(obj.fulltos[i]) != 'object') {
               console.log('entry type wrong', i, fileName);
+            } else {
+              if(typeof(obj.service) != 'string') {
+                if(typeof(obj.name) != 'string') {
+                  console.log('not a service-pointer entry, and no name', i, fileName);
+                }
+                if(typeof(obj.url) != 'string') {
+                  console.log('not a service-pointer entry, and no url', i, fileName);
+                }
+              }
             }
           }
         }
-      }
-      if(changed) {
-        fs.writeFile('services/'+fileName, prettyjson(obj), function(err) {
-          if(err) {
-            console.log(e, filename);
-            process.exit(1);
-          } else {
-            console.log('fixed '+fileName);
+        if(typeof(obj.tosdr) != 'object' || Array.isArray(obj.tosdr)) {
+          console.log('wrong type tosdr', fileName);
+          if(!obj.tosdr) {
+            obj.tosdr = {};
+            changed = true;
           }
-        });
+        }
+        if([false, 'A', 'B', 'C', 'D', 'E'].indexOf(obj.tosdr.rated)==-1) {
+          console.log('wrong obj.tosdr.rated', fileName);
+          if(!obj.tosdr.rated) {
+            obj.tosdr.rated = false;
+            changed = true;
+          }
+        }
+        if(!Array.isArray(obj.tosdr.keywords)) {
+          console.log('wrong obj.tosdr.keywords', fileName);
+          if(!obj.tosdr.keywords) {
+            obj.tosdr.keywords = [];
+            changed = true;
+          }
+        }
+        if(!Array.isArray(obj.tosdr.related)) {
+          console.log('wrong obj.tosdr.related', fileName);
+          if(!obj.tosdr.related) {
+            obj.tosdr.related = [];
+            changed = true;
+          }
+        }
+        if(typeof(obj.alexa) != 'number') {
+          console.log('wrong obj.alexa', fileName);
+          if(!obj.alexa) {
+            obj.tosdr.alexa = 1000000;
+            changed = true;
+          }
+        }
+        if(typeof(obj.freesoftware) != 'boolean') {
+          console.log('wrong obj.freesoftware', fileName);
+          obj.freesoftware = false;
+          changed = true;
+        }
+        if(obj.type == 'software' && typeof(obj.license) != 'string') {
+          console.log('wrong obj.license', fileName);
+          obj.license = '(proprietary)';
+          changed = true;
+        }
+        if(changed) {
+          fs.writeFile('services/'+fileName, prettyjson(obj), function(err) {
+            if(err) {
+              console.log(e, filename);
+              process.exit(1);
+            } else {
+              console.log('fixed '+fileName);
+            }
+          });
+        }
       }
     } catch(e) {
       console.log(e, fileName);
