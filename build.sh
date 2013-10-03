@@ -1,3 +1,6 @@
+node scripts/fixpoints.js
+node scripts/fixservices.js
+node scripts/fixtopics.js
 node scripts/buildIndexes.js
 node scripts/render.js
 lessc -x css/custom.less css/custom.css
