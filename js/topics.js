@@ -32,7 +32,7 @@ function renderDataPoint(topic, dataPoint) {
         document.getElementById('point-' + topic + '-' + dataPoint).innerHTML = '<span class="badge ' + badge + '">'
           + obj.tosdr.score + '</span>&nbsp;'
           + '<a class="tldr" data-toggle="collapse" data-target="#collapse-point-' + topic + '-' + dataPoint + '" href="#' + topic + '-' + dataPoint + '">'
-          + '<img height="24" alt="" title="' + obj.service + '" class="favlogo" src="logo/' + (obj.service + "").split(",")[0] + '.png">' + obj.title + '&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
+          + '<img height="24" alt="" title="' + obj.service + '" class="favlogo" src="logo/' + obj.services[0] + '.png">' + obj.title + '&nbsp;&nbsp;&nbsp;<i class="icon icon-chevron-down icon-collapser"></i></a>'
           + '<p class="collapse tldr" id="collapse-point-' + topic + '-' + dataPoint + '">' + obj.tosdr.tldr + ' <a href="' + obj.discussion + '" target="_blank" class="label context">Discussion</a></p></li>';
       }
     }
