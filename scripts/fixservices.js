@@ -28,12 +28,24 @@ function doFile(fileName) {
         }
         if(typeof(obj.id) != 'string') {
           console.log('id wrong', fileName);
+          if(!obj.id) {
+            obj.id = fileName.substring(0, fileName.length-5);
+            changed = true;
+          }
         }
         if(typeof(obj.name) != 'string') {
           console.log('name wrong', fileName);
+          if(!obj.name) {
+            obj.name = fileName.substring(0, fileName.length-5);
+            changed = true;
+          }
         }
         if(obj.type != 'service' && obj.type != 'software') {
           console.log('type wrong', fileName);
+          if(!obj.type) {
+            obj.type = 'service';
+            changed = true;
+          }
         }
         if(!Array.isArray(obj.urls)) {
           console.log('urls wrong', fileName);
