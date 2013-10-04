@@ -33,12 +33,12 @@ function doFile(fileName) {
                         || typeof(obj.tosdr.tldr)=='undefined' ) {
           return;
         }
-        if(found || !cases[obj.topics[0]]) {
+        if(found || !cases[obj.topics[0]] || obj.tosdr.case) {
           return;
         }
         var topic = obj.topics[0];
         found = true;
-        console.log(obj, cases[obj.topics[0]]);
+        console.log(obj, '\nplease assign a case:\n', cases[obj.topics[0]]);
         var stdin = process.openStdin();
         stdin.on('data', function(chunk) {
           chunk = chunk.toString();
@@ -57,7 +57,7 @@ function doFile(fileName) {
       console.log(e, fileName);
       process.exit(1);
     } 
-    console.log('async end ', fileName);
+    //console.log('async end ', fileName);
   });
   console.log('sync end ', fileName);
 }
