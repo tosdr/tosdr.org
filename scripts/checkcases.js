@@ -1,5 +1,6 @@
 var fs = require('fs'),
-  prettyjson = require('./prettyjson'), 
+  prettyjson = require('./prettyjson'),
+  cases = require('./cases'),
   found = false;
 fs.readdir('points/', function(err, files) {
   if(err) {
@@ -32,18 +33,10 @@ function doFile(fileName) {
                         || typeof(obj.tosdr.tldr)=='undefined' ) {
           return;
         }
-        if(found || obj.topics[0]!='changes') {
+        if(found || !cases[obj.topics[0]]) {
           return;
         }
-        var topic = obj.topics[0] = 'changes-notice';
-        var cases= {
-          'changes-notice': {
-             1: { name: 'user needs to check tosback.org', point: 'bad', score: 70 },
-             2: { name: 'user is notified on the day', point: 'neutral', score: 0 },
-             3: { name: 'user is notified a week or more in advance', point: 'good', score: 30 },
-             4: { name: 'user is notified a month or more in advance', point: 'good', score: 40 }
-          }
-        };
+        var topic = obj.topics[0];
         found = true;
         console.log(obj, cases[obj.topics[0]]);
         var stdin = process.openStdin();
