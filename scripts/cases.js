@@ -13,7 +13,7 @@ module.exports = {
      1: { name: 'only temporary session cookies', point: 'good', score: 20 },
      2: { name: 'requires first-party cookies', point: 'neutral', score: 10 },
      3: { name: 'third-party cookies, but with opt-out instructions', point: 'bad', score: 5 },
-     3: { name: 'sets third-party cookies and/or ads', point: 'bad', score: 10 },
-     4: { name: 'tracks you on other websites', point: 'bad', score: 60 },
+     4: { name: 'sets third-party cookies and/or ads', point: 'bad', score: 10 },
+     5: { name: 'tracks you on other websites', point: 'bad', score: 60 },
   },
 };
