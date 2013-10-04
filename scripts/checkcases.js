@@ -38,16 +38,20 @@ function doFile(fileName) {
         }
         var topic = obj.topics[0];
         found = true;
-        console.log(obj, '\nplease assign a case:\n', cases[obj.topics[0]]);
+        console.log(obj);
+        console.log('please assign a case:');
+        for(var i=0; i<cases[topic].length; i++) {
+          console.log(i, cases[topic][i]);
+        }
         var stdin = process.openStdin();
         stdin.on('data', function(chunk) {
           chunk = chunk.toString();
           chunk = chunk.substring(0, chunk.length-1);
-          console.log("Got chunk: " + chunk);
-          console.log(typeof(chunk), chunk.length, cases[topic]);
-          obj.tosdr.case = cases[topic][chunk].name;
-          obj.tosdr.point = cases[topic][chunk].point;
-          obj.tosdr.score = cases[topic][chunk].score;
+          //console.log("Got chunk: " + chunk);
+          //console.log(typeof(chunk), chunk.length, cases[topic]);
+          obj.tosdr.case = cases[topic][parseInt(chunk)].name;
+          obj.tosdr.point = cases[topic][parseInt(chunk)].point;
+          obj.tosdr.score = cases[topic][parseInt(chunk)].score;
           fs.writeFileSync('points/'+fileName, prettyjson(obj));
           process.exit();
         });
