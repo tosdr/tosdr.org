@@ -11,6 +11,7 @@
 * compensation Michiel: (...)
     * (M) adopting https://github.com/tosdr/tosdr.org/wiki/Specification:-points - 3 hours (up to 8) * 10 euros: 30 (1 Oct)
     * (M) introducing https://github.com/tosdr/tosdr.org/wiki/cases - 2 hours (up to 10) * 10 euros: 20 (3 Oct)
+    * (M) assigning cases to several topics- 2 hours (up to 12) * 10 euros: 20 (4 Oct)
 
 # Finish: 9362.33 + (...)  = (...) EUR
 
