@@ -30,5 +30,21 @@ module.exports = {
   'data-export': [
      { name: 'you can get your data back', point: 'good', score: 40 },
   ],
-     //{ name: '', point: '', score:  },
+  'governance': [
+    { name: 'only for your individual use', point: 'neutral', score: 10 },
+    { name: 'only for your individual and non-commercial use', point: 'bad', score: 25 },
+    { name: 'your use is subject to a policies, guidelines, etc.', point: 'neutral', score: 0 },
+    { name: 'responsible and indemnify', point: 'bad', score: 40 },
+    { name: 'defend, indemnify, hold harmless', point: 'bad', score: 60 },
+    { name: 'defend, indemnify, hold harmless; survives termination', point: 'bad', score: 80 },
+    { name: 'you are responsible for what you publish', point: 'neutral', score: 10 },
+    { name: 'liability limited to fees you paid', point: 'neutral', score: 10 },
+    { name: 'no spidering or crawling', point: 'neutral', score: 10 },
+    { name: 'reduction of legal period for cause of action', point: 'bad', score: 50 },
+    { name: 'age limit', point: 'neutral', score: 15 },
+    { name: 'fines for spammers', point: 'neutral', score: 30 },
+    { name: 'disputes with others', point: 'neutral', score: 0 },
+    { name: 'help you deal with take-down notices', point: 'good', score: 20 },
+  ],
+    //{ name: '', point: '', score:  },
 };
