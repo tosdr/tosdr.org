@@ -63,21 +63,24 @@ function doFile(fileName) {
             obj.fulltos={};
             changed=true;
           }
-          for(var i in obj.fulltos) {
-            if(['privacy', 'terms', 'faq', 'security', 'help', 'legal', 'trademark', 'copyright', 'dcma', 'guidelines'].indexOf(i)==-1) {
-              console.log('wrong fulltos entry name', i, fileName);
+        }
+        for(var i in obj.fulltos) {
+          if(['privacy', 'terms', 'faq', 'security', 'help', 'legal', 'trademark', 'copyright', 'dcma', 'guidelines'].indexOf(i)==-1) {
+            console.log('wrong fulltos entry name', i, fileName);
+          }
+          if(typeof(obj.fulltos[i]) != 'object') {
+            console.log('entry type wrong', i, fileName);
+            if(typeof(obj.fulltos[i])=='string') {
+              obj.fulltos[i]={url: obj.fulltos[i]};
+              changed = true;
             }
-            if(typeof(obj.fulltos[i]) != 'object') {
-              console.log('entry type wrong', i, fileName);
-            } else {
-              if(typeof(obj.service) != 'string') {
-                if(typeof(obj.name) != 'string') {
-                  console.log('not a service-pointer entry, and no name', i, fileName);
-                }
-                if(typeof(obj.url) != 'string') {
-                  console.log('not a service-pointer entry, and no url', i, fileName);
-                }
-              }
+          }
+          if(typeof(obj.service) != 'string') {
+            if(typeof(obj.name) != 'string') {
+              console.log('not a service-pointer entry, and no name', i, fileName);
+            }
+            if(typeof(obj.url) != 'string') {
+              console.log('not a service-pointer entry, and no url', i, fileName);
             }
           }
         }
