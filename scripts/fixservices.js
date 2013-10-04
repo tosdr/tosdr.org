@@ -75,11 +75,11 @@ function doFile(fileName) {
               changed = true;
             }
           }
-          if(typeof(obj.service) != 'string') {
-            if(typeof(obj.name) != 'string') {
+          if(typeof(obj.fulltos[i].service) != 'string') {
+            if(typeof(obj.fulltos[i].name) != 'string') {
               console.log('not a service-pointer entry, and no name', i, fileName);
             }
-            if(typeof(obj.url) != 'string') {
+            if(typeof(obj.fulltos[i].url) != 'string') {
               console.log('not a service-pointer entry, and no url', i, fileName);
             }
           }
