@@ -57,7 +57,5 @@ function doFile(fileName) {
       console.log(e, fileName);
       process.exit(1);
     } 
-    //console.log('async end ', fileName);
   });
-  console.log('sync end ', fileName);
 }
