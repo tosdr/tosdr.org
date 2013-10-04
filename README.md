@@ -16,6 +16,7 @@ We use bootstrap. http://github.com/twitter/bootstrap/
 
 NEW BUILD AND PUBLISH INSTRUCTIONS:
 
+    git commit -am"some changes i made" #make sure you `git add` and new files you added
     npm install
     npm install -g less
     sh ./build.sh
