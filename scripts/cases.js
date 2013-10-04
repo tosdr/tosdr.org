@@ -46,5 +46,9 @@ module.exports = {
     { name: 'disputes with others', point: 'neutral', score: 0 },
     { name: 'help you deal with take-down notices', point: 'good', score: 20 },
   ],
+  'guarantee': [
+    { name: '99.X% availability', point: 'good', score: 10 },
+    { name: 'no quality guarantee', point: 'bad', score: 20 },
+  ],
     //{ name: '', point: '', score:  },
 };
