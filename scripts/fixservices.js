@@ -81,6 +81,12 @@ function doFile(fileName) {
             }
           }
         }
+        if(typeof(obj.tos) != 'undefined') {
+          console.log('obj.tos exists next to obj.fulltos', fileName, obj.tos, obj.fulltos);
+          obj.fulltos = obj.tos;
+          delete obj.tos;
+          changed = true;
+        }
         if(typeof(obj.tosdr) != 'object' || Array.isArray(obj.tosdr)) {
           console.log('wrong type tosdr', fileName);
           if(!obj.tosdr) {
