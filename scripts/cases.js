@@ -50,5 +50,8 @@ module.exports = {
     { name: '99.X% availability', point: 'good', score: 10 },
     { name: 'no quality guarantee', point: 'bad', score: 20 },
   ],
+  'jurisdiction-law': [
+    { name: 'court of law is in location X', point: 'neutral', score: 0 },
+  ],
     //{ name: '', point: '', score:  },
 };
