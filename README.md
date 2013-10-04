@@ -14,11 +14,25 @@ We welcome other people to copy this project for other specific purposes (like a
  
 We use bootstrap. http://github.com/twitter/bootstrap/
 
-NEW BUILD INSTRUCTIONS:
+NEW BUILD AND PUBLISH INSTRUCTIONS:
 
     npm install
     npm install -g less
     sh ./build.sh
+    python -m SimpleHTTPServer
+    #browse to http://localhost:8000/ and http://localhost:8000/topics.html to see if everything looks ok
+    git commit -am"build"
+    git push
+    git push 5apps master #this will update the live site! Be careful. Ask Hugo or Michiel if you don't have permission
+
+USING THE `checkcases.js` SCRIPT:
+
+* edit `scripts/cases.js` to add some cases for some topics.
+* run `node scripts/checkcases.js`
+* you will be presented with one data point for which a case needs to be assigned. type the number and hit <enter>
+* do `git diff` to see what changed, and then `git commit -am"added a new case to the whatever topic"`
+* after that, follow the build-and-publish instructions again to make it live on http://tosdr.org/.
+* the script will only affect points that do not yet have a `tosdr > case` field. If you want to change the point or score of a data point that already have a `tosdr > case` field, then you just manually edit remove that and run `node scripts/checkcases.js` again.
 
 NOTES FROM @ggrin:
 
