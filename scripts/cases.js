@@ -27,5 +27,8 @@ module.exports = {
      { name: 'you have control over licensing options', point: 'good', score: 100 },
      { name: 'broad license including right to distribute through any media', point: 'bad', score: 100 },
   ],
-     //: { name: '', point: '', score:  },
+  'data-export': [
+     { name: 'you can get your data back', point: 'good', score: 40 },
+  ],
+     //{ name: '', point: '', score:  },
 };
