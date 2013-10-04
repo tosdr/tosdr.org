@@ -53,8 +53,11 @@ module.exports = {
   'jurisdiction-law': [
     { name: 'court of law is in location X', point: 'neutral', score: 0 },
   ],
-  'law-enforcement': [
-    { name: 'no notification', point: 'bad', score: 50 },
+  'law-gov': [
+    { name: 'no promise to inform/notify', point: 'bad', score: 50 },
+    { name: 'promise to inform/notify', point: 'good', score: 50 },
+    { name: 'third-party access without a warrant', point: 'bad', 50 },
+    { name: 'no third-party access without a warrant', point: 'good', 50 },
     { name: 'no transparency', point: 'bad', score: 30 },
     { name: 'transparency', point: 'good', score: 30 },
   ],
