@@ -20,6 +20,7 @@ module.exports = {
      { name: 'keep a license even after you close your account', point: 'bad', score: 25 },
      { name: 'you publish under a free license, not a bilateral one', point: 'good', score: 90 },
      { name: 'broader than necessary', point: 'bad', score: 50 },
+     { name: 'very broad', point: 'bad', score: 80 },
      { name: 'they can license to third parties', point: 'bad', score: 85 },
      { name: 'limited for purpose of same service', point: 'good', score: 80 },
      { name: 'limited for purpose across broad platform', point: 'good', score: 40 },
