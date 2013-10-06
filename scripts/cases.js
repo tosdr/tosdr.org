@@ -124,5 +124,10 @@ module.exports = {
     { name: 'targeted third-party advertising', point: 'bad', score: 30 },
     { name: 'tracking data deleted after 10 days and opt-out', point: 'good', score: 80 },
   ],
+  'user-choice': [
+    { name: 'you can choose the copyright license', point: 'good', score: 10 },
+    { name: 'promotional communications are opt-out', point: 'neutral', score: 10 },
+    { name: 'you can choose with whom you share content', point: 'good', score: 0 },
+  ],
     //{ name: '', point: '', score:  },
 };
