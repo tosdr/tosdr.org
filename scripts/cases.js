@@ -51,8 +51,12 @@ module.exports = {
     { name: 'help you deal with take-down notices', point: 'good', score: 20 },
   ],
   'guarantee': [
+    { name: 'your use is throttled', point: 'bad', score: 30 },
     { name: '99.X% availability', point: 'good', score: 10 },
+    { name: 'will warn about maintenance', point: 'good', score: 30 },
     { name: 'no quality guarantee', point: 'bad', score: 20 },
+    { name: 'refund policy', point: 'good', score: 30 },
+    { name: 'no refund policy', point: 'neutral', score: 50 },
   ],
   'jurisdiction-law': [
     { name: 'court of law is in location X', point: 'neutral', score: 0 },
@@ -88,6 +92,7 @@ module.exports = {
   'personal-data': [
     { name: 'your personal data is used for limited purposes', point: 'good', score: 60 },
     { name: 'they do not index or open files', point: 'good', score: 40 },
+    { name: 'your private content may be accessed by staff', point: 'neutral', score: 30 },
     { name: 'you can request access and deletion of personal data', point: 'good', score: 50 },
     { name: 'personal data is aggregated into statistics', point: 'neutral', score: 10 },
     { name: 'personal data is given to third parties', point: 'bad', score: 10 },
@@ -99,13 +104,13 @@ module.exports = {
     { name: 'archives provided', point: 'good', score: 10 },
     { name: 'translated into only a few languages', point: 'neutral', score: 0 },
     { name: 'easy to read', point: 'good', score: 10 },
+    { name: 'separate policies for some parts of the service', point: 'neutral', score: 0 },
   ],
   'suspension': [
     { name: 'they can delete your account without prior notice and without a reason', point: 'bad', score: 50 },
     { name: 'they can delete specific files without prior notice and without a reason', point: 'blocker', score: 50 },
     { name: 'they may stop providing the service at any time', point: 'bad', score: 40 },
     { name: 'they can suspend your account for several reasons', point: 'neutral', score: 15 },
-    { name: 'no refund policy', point: 'neutral', score: 50 },
     { name: 'they give 30 days notice before closing your account', point: 'good', score: 15 },
   ],
   'third': [
@@ -115,6 +120,7 @@ module.exports = {
   ],
   'track': [
     { name: 'may collect extra data about you in contests', point: 'neutral', score: 0 },
+    { name: 'no pseudonym allowed (relevant for billing)', point: 'neutral', score: 0 },
     { name: 'pseudonym not allowed (user-to-user trust is relevant for service)', point: 'neutral', score: 10 },
     { name: 'pseudonym not allowed (not because of user-to-user trust)', point: 'bad', score: 20 },
     { name: 'pseudonyms allowed', point: 'good', score: 20 },
@@ -128,6 +134,15 @@ module.exports = {
     { name: 'you can choose the copyright license', point: 'good', score: 10 },
     { name: 'promotional communications are opt-out', point: 'neutral', score: 10 },
     { name: 'you can choose with whom you share content', point: 'good', score: 0 },
+  ],
+  'user-info': [
+    { name: 'info given about security practices', point: 'good', score: 15 },
+    { name: 'info given about intended use of your information', point: 'good', score: 30 },
+    { name: 'info given about what personal data they collect', point: 'good', score: 30 },
+    { name: 'you cannot share screenshots of your admin panel', point: 'neutral', score: 10 },
+    { name: 'no pricing info given before you sign up', point: 'bad', score: 20 },
+    { name: 'info given about risk of publishing your info online', point: 'good', score: 50 },
+    { name: 'free help desk is provided', point: 'neutral', score: 10 },
   ],
     //{ name: '', point: '', score:  },
 };
