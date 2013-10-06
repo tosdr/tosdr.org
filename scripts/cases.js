@@ -68,5 +68,10 @@ module.exports = {
     { name: 'your content stays licensed', point: 'bad', score: 25 },
     { name: 'deleted content is not really deleted', point: 'blocker', score: 30 },
   ],
+  'logs-length': [
+    { name: 'only necessary logs are kept', point: 'good', score: 90 },
+    { name: 'logs are deleted after two weeks', point: 'good', score: 80 },
+    { name: 'logs are kept forever', point: 'bad', score: 100 },
+  ],
     //{ name: '', point: '', score:  },
 };
