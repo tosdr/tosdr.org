@@ -61,5 +61,12 @@ module.exports = {
     { name: 'no transparency', point: 'bad', score: 30 },
     { name: 'transparency', point: 'good', score: 30 },
   ],
+  'leave': [
+    { name: 'you can leave at any time', point: 'good', score: 15 },
+    { name: 'free software; you can run your own instance', point: 'good', score: 90 },
+    { name: 'no right to leave the service', point: 'blocker', score: 70 },
+    { name: 'your content stays licensed', point: 'bad', score: 25 },
+    { name: 'deleted content is not really deleted', point: 'blocker', score: 30 },
+  ],
     //{ name: '', point: '', score:  },
 };
