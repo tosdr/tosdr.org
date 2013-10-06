@@ -67,11 +67,19 @@ module.exports = {
     { name: 'no right to leave the service', point: 'blocker', score: 70 },
     { name: 'your content stays licensed', point: 'bad', score: 25 },
     { name: 'deleted content is not really deleted', point: 'blocker', score: 30 },
+    { name: 'you can delete your content', point: 'good', score: 50 },
   ],
   'logs-length': [
     { name: 'only necessary logs are kept', point: 'good', score: 90 },
     { name: 'logs are deleted after two weeks', point: 'good', score: 80 },
     { name: 'logs are kept forever', point: 'bad', score: 100 },
+  ],
+  'ownership': [
+    { name: 'they take credit for your content', point: 'blocker', score: 100 },
+    { name: 'you may not scrape', point: 'bad', score: 20 },
+    { name: 'they become the owner of ideas you give them', point: 'bad', score: 20 },
+    { name: 'they provide a way to export your data', point: 'good', score: 30 },
+    { name: 'they can use your content for all their existing and future services', point: 'bad', score: 60 },
   ],
     //{ name: '', point: '', score:  },
 };
