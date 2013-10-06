@@ -9,17 +9,27 @@
 # Money out
 
 * compensation Jimm: 404
-    * (M) tosback.org, 40 hours (up to 250) * 10 euros + 4 paypal commission: 404 (31 Aug)
+    * (M) tosback revival, 40 hours (up to ) * 10 euros + 4 paypal commission: 151.50 (5 Sep)
+
+* compensation Ian: 454.50
+    * (M) curating ML threads to data points, 15 hours (up to 135) * 10 euros + 1.50 paypal commission: 151.50 (1 Aug)
+    * (M) curating ML threads to data points, 15 hours (up to 150) * 10 euros + 1.50 paypal commission: 151.50 (15 Aug)
+    * (M) curating ML threads to data points, 15 hours (up to 165) * 10 euros + 1.50 paypal commission: 151.50 (25 Sep)
 
 * compensation Adrian: 300
-    * (M) tosdr.org templating, 30 hours (up to 60) * 10 euros: 300 (31 Aug)
+    * (M) preparative work on topics tools, 30 hours (up to 60) * 10 euros: 300 (31 Aug)
 
-* compensation Ian: 303
-    * (M) curating ML threads to data points, 15 hours (up to 135) * 10 euros + 1.50 paypal commission: 151.50 (1 Aug)
-    * (M) curating ML threads to data points, 15 hours (up to 150) * 10 euros + 1.50 paypal commission: 151.50 (planned for 16 Aug)
+* compensation Michiel: 50
+    * (M) fixing the build, making up finances, 3 hours (up to 3) * 10 euros: 30 (27 Sep)
+    * (M) fixing some data point format issues, 2 hour (up to 5) * 10 euros: 20 (30 Sep)
 
-# Finish: 9362.33 + 1108.22  = 10434.55 EUR
+* operations: 18.95
+    * (M) tos-dr.info renewed for the last time: 7.80 (12 aug)
+    * (M) tosback server at serverdragon 5.77 (19 Aug)
+    * (M) tosback server at serverdragon 5.38 (5 Sep)
+
+# Finish: 9362.33 + 183.77  = 9546.10 EUR
 
 * kept safe by Hugo: 9362.33 = 9362.33 EUR
-* kept safe by Michiel: 1411.22 - 404 - 303 -300 =  404.22 EUR
+* kept safe by Michiel: 1411.22 - 404 - 454.50 - 300 - 50 - 18.95 = 183.77 EUR
 
