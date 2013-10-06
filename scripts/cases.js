@@ -106,5 +106,10 @@ module.exports = {
     { name: 'no refund policy', point: 'neutral', score: 50 },
     { name: 'they give 30 days notice before closing your account', point: 'good', score: 15 },
   ],
+  'third': [
+    { name: 'third parties may be involved in operating the service', point: 'bad', score: 15 },
+    { name: 'many third parties are involved in operating the service', point: 'bad', score: 50 },
+    { name: 'they educate you about the risks', point: 'good', score: 30 },
+  ],
     //{ name: '', point: '', score:  },
 };
