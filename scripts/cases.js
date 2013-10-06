@@ -81,5 +81,13 @@ module.exports = {
     { name: 'they provide a way to export your data', point: 'good', score: 30 },
     { name: 'they can use your content for all their existing and future services', point: 'bad', score: 60 },
   ],
+  'personal-data': [
+    { name: 'your personal data is used for limited purposes', point: 'good', score: 60 },
+    { name: 'they do not index or open files', point: 'good', score: 40 },
+    { name: 'you can request access and deletion of personal data', point: 'good', score: 50 },
+    { name: 'personal data is not sold', point: 'good', score: 25 },
+    { name: 'personal data is aggregated into statistics', point: 'neutral', score: 10 },
+    { name: 'no liability for unauthorized access', point: 'bad', score: 30 },
+  ],
     //{ name: '', point: '', score:  },
 };
