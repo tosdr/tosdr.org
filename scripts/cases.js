@@ -3,6 +3,10 @@ module.exports = {
      { name: 'class action waiver', point: 'bad', score: 50 },
      { name: 'sign away moral rights', point: 'blocker', score: 50 },
   ],
+  'changes-involvement': [
+     { name: 'user feedback is invited', point: 'good', score: 30 },
+     { name: 'critical changes without user involvement', point: 'bad', score: 35 },
+  ],
   'changes-notice': [
      { name: 'user needs to check tosback.org', point: 'bad', score: 70 },
      { name: 'user is notified on the day', point: 'neutral', score: 0 },
@@ -88,6 +92,11 @@ module.exports = {
     { name: 'personal data is not sold', point: 'good', score: 25 },
     { name: 'personal data is aggregated into statistics', point: 'neutral', score: 10 },
     { name: 'no liability for unauthorized access', point: 'bad', score: 30 },
+  ],
+  'readability': [
+    { name: 'archives provided', point: 'good', score: 10 },
+    { name: 'translated into only a few languages', point: 'neutral', score: 0 },
+    { name: 'easy to read', point: 'good', score: 10 },
   ],
     //{ name: '', point: '', score:  },
 };
