@@ -13,7 +13,10 @@
     * (M) introducing https://github.com/tosdr/tosdr.org/wiki/cases - 2 hours (up to 10) * 10 euros: 20 (3 Oct)
     * (M) assigning cases to several topics- 2 hours (up to 12) * 10 euros: 20 (4 Oct)
 
+* operations: (...)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Oct)
+
 # Finish: 9362.33 + (...)  = (...) EUR
 
 * kept safe by Hugo: 9362.33 = 9362.33 EUR
-* kept safe by Michiel: 183.77 - (...) = (...) EUR
+* kept safe by Michiel: 183.77 - (...) - (...) = (...) EUR
