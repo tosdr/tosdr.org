@@ -32,7 +32,7 @@ function addToServices(services, point) {
       //points will be a list of data points about this service.
       //links will be a list of links to the various terms and
       //policy documents published by this service:
-      service[services[i]] = {points: [], links: {}};
+      service[services[i]] = {points: [], links: {}, class: false};
     }
     service[services[i]].points.push(point);
   }
