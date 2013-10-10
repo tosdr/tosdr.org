@@ -33,8 +33,22 @@ $(document).ready(function(){
 	}
 	
 	function showCommentForm(email){
-		$('#comment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form ><fieldset></fieldset><div class="control-group"><textarea name="comment" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Comment</button></div></form>');
+		$('#comment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset></fieldset><div class="control-group"><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Comment</button></div></form>');
+		$('.commentForm').submit(function(e){
+			var response = $.post('/post/comment', {comment: $('#commentField').val()});
+			response.done(showConfirmation);
+			response.fail(showError);
+			e.preventDefault();
+		});
 		$('.signoutButton').click(function(){ navigator.id.logout(); });
+	}
+	
+	function showConfirmation(){
+		$('#comment').html('Your comment has been submitted. Thank you!');
+	}
+	
+	function showError(){
+		$('#comment').prepend('<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button>Something went wrong saving your comment, did you fill in all the fields?</div>');
 	}
 	
 	showPersona();
