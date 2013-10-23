@@ -1,6 +1,7 @@
 'use strict';
 
-var assertionUrl = 'http://localhost:8000/persona'
+var assertionUrl = 'http://localhost:8000/persona';
+var postCommentUrl = 'http://localhost:8000/post/comment';
 
 $(document).ready(function(){
 	var loggedInUser = null;
@@ -12,9 +13,11 @@ $(document).ready(function(){
 	}
 	
 	function verify(assertion){
-		var response = $.post(assertionUrl + '/verify', {assertion: assertion});
+		var response = $.ajax(assertionUrl + '/verify', {data: {assertion: assertion}, type: 'POST', xhrFields: {withCredentials: true}});
 		response.done(login);
-		response.fail(navigator.id.logout);
+		response.fail(function(){
+			navigator.id.logout();
+		});
 	}
 	
 	function login(data){
@@ -35,7 +38,7 @@ $(document).ready(function(){
 	function showCommentForm(email){
 		$('#comment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset></fieldset><div class="control-group"><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Comment</button></div></form>');
 		$('.commentForm').submit(function(e){
-			var response = $.post('/post/comment', {comment: $('#commentField').val()});
+			var response = $.ajax(postCommentUrl, {data: {comment: $('#commentField').val()}, type: 'POST', xhrFields: {withCredentials: true}});
 			response.done(showConfirmation);
 			response.fail(showError);
 			e.preventDefault();
