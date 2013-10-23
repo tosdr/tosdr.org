@@ -36,9 +36,15 @@ $(document).ready(function(){
 	}
 	
 	function showCommentForm(email){
-		$('#comment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset></fieldset><div class="control-group"><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Comment</button></div></form>');
+		$('#comment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset><div class="control-group"><label for="title">Title</label><input type="text" id="titleField" name="title" required /></div><div class="control-group"><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label></div><div class="control-group"><label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" /></div><div class="control-group"><label for="comment">Comment</label><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Send</button></div></fieldset></form>');
+		
+		var services = ['Google', 'Github'];
+		
+		// Note: the width should be 'element', but for some reason it receives a different width than other input elements
+		$('#servicesField').select2({tags: services, width: '220px', containerCss: {'border-radius': '4px'}});
+		
 		$('.commentForm').submit(function(e){
-			var response = $.ajax(postCommentUrl, {data: {comment: $('#commentField').val()}, type: 'POST', xhrFields: {withCredentials: true}});
+			var response = $.ajax(postCommentUrl, {data: {title: $('#titleField').val(), point: $('input[name=point]:checked', '.commentForm').val(), services: $('#servicesField').val(), comment: $('#commentField').val()}, type: 'POST', xhrFields: {withCredentials: true}});
 			response.done(showConfirmation);
 			response.fail(showError);
 			e.preventDefault();
