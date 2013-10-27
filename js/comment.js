@@ -1,8 +1,8 @@
 'use strict';
 
-var assertionUrl = 'http://localhost:8000/persona';
-var postCommentUrl = 'http://localhost:8000/post/comment';
-var serviceListUrl = 'http://localhost:8000/get/services';
+var assertionUrl = 'https://3pp.io:4343/persona';
+var postCommentUrl = 'https://3pp.io:4343/post/comment';
+var serviceListUrl = 'https://3pp.io:4343/get/services';
 
 $(document).ready(function(){
 	var loggedInUser = null;
