@@ -31,16 +31,14 @@ $(document).ready(function(){
           icon = 'asterisk';
           sign = '⋅';
         }
-        $('#pendingpoints').append('<div class="' + point.id + '"><h5><span class="badge ' + badge
-                                 + '" title="' + point.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' + sign + '</i></span> ' + point.title + ' </h5><ul class="inline services"></ul><div class="comments collapse" style="margin-left: 25px"></div></div>');
+        $('#pendingpoints').append('<div class="point ' + point.id + '" data-toggle="collapse" data-target="#pendingpoints .comments-' + point.id + '"><h5><span class="badge ' + badge
+                                 + '" title="' + point.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' + sign + '</i></span> ' + point.title + ' </h5><ul class="inline services"></ul></div><div class="comments comments-' + point.id + ' collapse" style="margin-left: 25px"></div>');
         $.each(point.services, function(index, service){
           $('#pendingpoints .' + point.id + ' .services').append('<li class="label label-info">' + service.replace(/[^A-Za-z0-9_-]/g, '') + '</li> ');
         });
-        
-        $('#pendingpoints .' + point.id + ' .comments').before('<p><a style="margin-left: 25px" class="showComments btn btn-mini" data-toggle="collapse" data-target="#pendingpoints .' + point.id + ' .comments"">Show/hide comments</a></p>');
-        
+
         $.each(point.comments, function(index, comment){
-          $('#pendingpoints .' + point.id + ' .comments').append('<p id="currentAddition" class="comment"></p>');
+          $('#pendingpoints .comments-' + point.id).append('<p id="currentAddition" class="comment"></p>');
           $('#currentAddition').text(comment.content).prepend('<img src="https://secure.gravatar.com/avatar/' + comment.author.replace(/[^a-f0-9]/gi, '') + '?d=retro&r=g" class="avatar" style="margin: 1em;" />').removeAttr('id');
         });
       });
