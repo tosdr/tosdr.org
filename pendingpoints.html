@@ -24,6 +24,29 @@
 
 		<script src="js/jquery-1.7.1.min.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    <!--http://j.mp/mobileviewport-->
+
+        <!-- TODO: Move to custom.less -->
+        <style>
+            #pendingpoints .point{
+                border-bottom: 1px solid rgb(238, 238, 238);
+                overflow: auto;
+                cursor: pointer;
+                padding-left: 1em;
+            }
+
+            #pendingpoints .point:first-child{
+                border-top: 1px solid rgb(238, 238, 238);
+            }
+
+            #pendingpoints .point:hover{
+                background-color: rgb(238, 238, 238);
+            }
+
+            #pendingpoints .comment{
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        </style>
 	</head>
 	<body id="comments-html" data-spy="scroll">
 
