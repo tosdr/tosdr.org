@@ -81,11 +81,11 @@ $(document).ready(function(){
                     badge = 'badge-warning';
                     icon = 'thumbs-down';
                     sign = '-';
-                } else if (obj.tosdr.point == 'blocker') {
+                } else if (point.tosdr.point == 'blocker') {
                     badge = 'badge-important';
                     icon = 'remove';
                     sign = '×';
-                } else if (obj.tosdr.point == 'neutral') {
+                } else if (point.tosdr.point == 'neutral') {
                     badge = 'badge-neutral';
                     icon = 'asterisk';
                     sign = '⋅';
