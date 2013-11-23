@@ -1,8 +1,8 @@
 'use strict';
 
-var pendingpointsListUrl = 'http://localhost:8000/get/pendingpoints';
-var assertionUrl = 'http://localhost:8000/persona';
-var postCommentUrl = 'http://localhost:8000/post/comment';
+var pendingpointsListUrl = 'http://162.242.174.14:8000/get/pendingpoints';
+var assertionUrl = 'http://162.242.174.14:8000/persona';
+var postCommentUrl = 'http://162.242.174.14:8000/post/comment';
 
 $(document).ready(function(){
     var loggedInUser = null;

@@ -1,7 +1,7 @@
 'use strict';
 
-var assertionUrl = 'http://localhost:8000/persona';
-var postCommentUrl = 'http://localhost:8000/post/comment';
+var assertionUrl = 'http://162.242.174.14:8000/persona';
+var postCommentUrl = 'http://162.242.174.14:8000/post/comment';
 var serviceListUrl = 'http://tosdr.org/index/services.json';
 
 $(document).ready(function(){
