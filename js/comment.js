@@ -2,7 +2,7 @@
 
 var assertionUrl = 'http://3pp.io:4343/persona';
 var postCommentUrl = 'http://3pp.io:4343/post/comment';
-var serviceListUrl = 'http://3pp.io:4343/get/services';
+var serviceListUrl = 'http://tosdr.org/index/services.json';
 
 $(document).ready(function(){
 	var loggedInUser = null;
@@ -41,6 +41,9 @@ $(document).ready(function(){
 		
         var response = $.get(serviceListUrl, 'json');
         response.done(function(services){
+            services = $.map(services, function(value, key){
+                return key;
+            });
             // Note: the width should be 'element', but for some reason it receives a different width than other input elements
             $('#servicesField').select2({tags: services, width: '220px', containerCss: {'border-radius': '4px'}});
         });
