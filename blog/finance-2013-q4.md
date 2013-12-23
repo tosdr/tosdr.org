@@ -15,13 +15,15 @@
     * (M) assigning cases to remaining topics- 2 hours (up to 14) * 10 euros: 20 (6 Oct)
     * (M) scripts/checkcases.js - 1 hour (up to 15) * 10 euros: 20 (8 Oct)
 
-* compensation Vincent: 50
-    * (M) comments form, step 1 - 5 hours (up to 5) * 10 euros: 50 (21 Oct)
+* compensation Vincent: 190
+    * (M) comments form, step 1 - 2, 5 hours (up to 5) * 10 euros: 50 (22 Oct)
+    * (M) comments form, step 3 - 4, 7 hours (up to 12) * 10 euros: 70 (29 Oct)
+    * (M) pendingpoints form, 7 hours (up to 19) * 10 euros: 70 (28 Nov)
 
 * operations: 5.16
     * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Oct)
 
-# Finish: 9362.33 - 21.39  = 9340.94 EUR
+# Finish: 9362.33 - 161.39  = 9200.94 EUR
 
 * kept safe by Hugo: 9362.33 = 9362.33 EUR
-* kept safe by Michiel: 183.77 - 150 - 50 - 5.16 = -21.39 EUR
+* kept safe by Michiel: 183.77 - 150 - 190 - 5.16 = -161.39 EUR
