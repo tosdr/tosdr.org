@@ -103,6 +103,11 @@ $(document).ready(function(){
             });
             showPersona();
         });
+        
+        response.fail(function(response, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+            $('#pendingpoints').text('Unfortunately, something went wrong fetching the pending discussion points.');
+        });
     }
 
     showOverview();
