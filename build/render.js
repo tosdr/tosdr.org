@@ -2,19 +2,12 @@
 //generate the index.html and get-involved.html files from that.
 
 var elements = {};
-var fs = require('fs'),
-  prettyjson = require('./prettyjson');
+var prettyjson = require('../scripts/prettyjson');
+var grunt;
+
 function renderDataPoint(service, dataPoint, forPopup) {
-  var text = fs.readFileSync('points/' + dataPoint + '.json').toString().split('\xA0').join('');
-  var obj, badge, icon, sign, score;
-  try {
-    obj = JSON.parse(text);
-  } catch (e) {
-    console.log(e);
-    console.log('Could not load data for data point ' + dataPoint + ', sorry! Refreshing the page might sometimes help.');
-    die();
-    return;
-  }
+  var obj = grunt.file.readJSON('points/' + dataPoint + '.json');
+  var badge, icon, sign, score;
   if(!obj.tosdr) {
     obj.tosdr = {};
   }
@@ -61,15 +54,7 @@ function renderDataPoint(service, dataPoint, forPopup) {
 function getServiceObject(name) {
   //each service (website) has its own generic description data, that is stored in the services/ directory
   //of this repo. this function loads in such a file:
-  var text = fs.readFileSync('services/' + name + '.json').toString();
-  var obj;
-  try {
-    obj = JSON.parse(text);
-  } catch (e) {
-    console.log(e);
-    console.log('Could not load data for ' + name + ', sorry! Refreshing the page might sometimes help.');
-    die();
-  }
+  var obj = grunt.file.readJSON('services/' + name + '.json');
   if (obj) {
     return obj;
   } else {
@@ -90,10 +75,10 @@ function getRatingText(className) {
 }
 
 function renderDetails(name, points, toslinks, obj) {
-  console.log('renderDetails ' + name);
-  console.log(points);
-  console.log(toslinks);
-  console.log(obj);
+  grunt.log.writeln('renderDetails ' + name);
+  grunt.log.writeln(points);
+  grunt.log.writeln(toslinks);
+  grunt.log.writeln(obj);
   //this renders one service (for instance 'Facebook' or 'Google') on our main index.html page:
   var header = '<h3><img src="logo/' + name + '.png" class="favlogo"><a class="modal-link" data-service-name="' + name + '" href="#">' + obj.name + '</a>';
   var rating;
@@ -164,10 +149,10 @@ function isEmpty(map) {
 function renderPopup(name, obj, points, links) {
   //the popup is actually a popin, it is what you see when you click 'expand' for one of the services on index.html.
   //this is how we generate the html for them:
-  console.log('Rendering popup for ' + name);
-  console.log(obj);
-  console.log(points);
-  console.log(links);
+  grunt.log.writeln('Rendering popup for ' + name);
+  grunt.log.writeln(obj);
+  grunt.log.writeln(points);
+  grunt.log.writeln(links);
   if(!obj.tosdr) {
     obj.tosdr = {};
   }
@@ -207,88 +192,83 @@ function renderPopup(name, obj, points, links) {
   bodyHtml += '</div>';
   return headerHtml + bodyHtml;
 }
-function go() {
-  var text = fs.readFileSync('index/services.json').toString();
-  var popups = {};
-  var servicesList = '';
-  //get a list of services we will want to display on index.html:
-  try {
-    var services = JSON.parse(text);
-  } catch (e) {
-    console.log('services.json file not readable', e);
-  }
-  console.log(services);
-  var last, lastObj;
-  var serviceNames = [];
-  for (var i in services) {
-    serviceNames.push(i);
-  }
-  console.log(serviceNames);
-  //sort services by their Alexa rank ('big' websites first, 'small' ones at the bottom)
-  serviceNames.sort(function (a, b) {
-    if (typeof(services[a].alexa) == 'undefined') {
-      services[a].alexa = 1000000;
-    }
-    if (typeof(services[b].alexa) == 'undefined') {
-      services[b].alexa = 1000000;
-    }
-    return services[a].alexa - services[b].alexa;
-  });
-  //now sort services by whether or not they have a class (ones that do first, 'no class yet' ones at the bottom)
-  console.log('by Alexa', serviceNames);
-  var serviceNamesRated = [],
-    serviceNamesNotRated = [];
-  for(var i=0; i<serviceNames.length; i++) {
-    if(typeof(services[serviceNames[i]].class)=='string') {
-      console.log(serviceNames[i], 'yes');
-      serviceNamesRated.push(serviceNames[i]);
-    } else {
-      console.log(serviceNames[i], 'no');
-      serviceNamesNotRated.push(serviceNames[i]);
-    }
-  }
-  serviceNames = serviceNamesRated.concat(serviceNamesNotRated);
-  console.log('by rated', serviceNames);
-  //twitter is used as an example on /get-involved.html, so we store its html in a variable to render it there:
-  var twitterService = null;
-  for (var i = 0; i < serviceNames.length; i++) {
-    var serviceName = serviceNames[i];
 
-    var obj = getServiceObject(serviceName);
-    //if(obj.alexa >= 1000000) {
-    //  continue;
-    //}
-
-    if(serviceName == 'twitter') {
-      twitterService = renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+module.exports = function(grunt) {
+  grunt.task.registerTask('render', 'Render the website', function(){
+    var services = grunt.file.readJSON('index/services.json');
+    var popups = {};
+    var servicesList = '';
+    //get a list of services we will want to display on index.html:
+    grunt.log.writeln(services);
+    var last, lastObj;
+    var serviceNames = [];
+    for (var i in services) {
+      serviceNames.push(i);
     }
-
+    grunt.log.writeln(serviceNames);
+    //sort services by their Alexa rank ('big' websites first, 'small' ones at the bottom)
+    serviceNames.sort(function (a, b) {
+      if (typeof(services[a].alexa) == 'undefined') {
+        services[a].alexa = 1000000;
+      }
+      if (typeof(services[b].alexa) == 'undefined') {
+        services[b].alexa = 1000000;
+      }
+      return services[a].alexa - services[b].alexa;
+    });
+    //now sort services by whether or not they have a class (ones that do first, 'no class yet' ones at the bottom)
+    grunt.log.writeln('by Alexa', serviceNames);
+    var serviceNamesRated = [],
+      serviceNamesNotRated = [];
+    for(var i=0; i<serviceNames.length; i++) {
+      if(typeof(services[serviceNames[i]].class)=='string') {
+        grunt.log.writeln(serviceNames[i], 'yes');
+        serviceNamesRated.push(serviceNames[i]);
+      } else {
+        grunt.log.writeln(serviceNames[i], 'no');
+        serviceNamesNotRated.push(serviceNames[i]);
+      }
+    }
+    serviceNames = serviceNamesRated.concat(serviceNamesNotRated);
+    grunt.log.writeln('by rated', serviceNames);
+    //twitter is used as an example on /get-involved.html, so we store its html in a variable to render it there:
+    var twitterService = null;
+    for (var i = 0; i < serviceNames.length; i++) {
+      var serviceName = serviceNames[i];
+  
+      var obj = getServiceObject(serviceName);
+      //if(obj.alexa >= 1000000) {
+      //  continue;
+      //}
+  
+      if(serviceName == 'twitter') {
+        twitterService = renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+      }
+  
+      if (last) {
+        servicesList +=
+          renderDetails(last, services[last].points, services[last].links, lastObj)
+          + renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
+        last = undefined;
+      } else {
+        last = serviceName;
+        lastObj = obj;
+      }
+      popups[serviceName] = renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links);
+    }
     if (last) {
-      servicesList +=
-        renderDetails(last, services[last].points, services[last].links, lastObj)
-        + renderDetails(serviceName, services[serviceName].points, services[serviceName].links, obj);
-      last = undefined;
-    } else {
-      last = serviceName;
-      lastObj = obj;
+      servicesList += '\t<div class="row-fluid">\n\t'
+        + renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
+        + '\t</div>\n';
     }
-    popups[serviceName] = renderPopup(serviceName, obj, services[serviceName].points, services[serviceName].links);
-  }
-  if (last) {
-    servicesList += '\t<div class="row-fluid">\n\t'
-      + renderDetails(last, services[serviceName].points, services[serviceName].links, lastObj)
-      + '\t</div>\n';
-  }
-  fs.writeFileSync('index.html',
-    fs.readFileSync('index-template.html').
-      toString().
-      replace('<!-- ##services-content## -->', '<div id="services-list" class="row">\n' + servicesList + '</div>\n')
-  );
-  fs.writeFileSync('js/services.js', "var popupsContent = " + prettyjson(popups) + ";");
-  fs.writeFileSync('get-involved.html',
-    fs.readFileSync('get-involved-template.html').
-      toString().
-      replace('<!-- ##github-service-content## -->', '<div id="services-list" class="row">\n' + twitterService + '</div>\n')
-  );
+    grunt.file.write('index.html',
+      grunt.file.read('index-template.html').
+        replace('<!-- ##services-content## -->', '<div id="services-list" class="row">\n' + servicesList + '</div>\n')
+    );
+    grunt.file.write('js/services.js', "var popupsContent = " + prettyjson(popups) + ";");
+    grunt.file.write('get-involved.html',
+      grunt.file.read('get-involved-template.html').
+        replace('<!-- ##github-service-content## -->', '<div id="services-list" class="row">\n' + twitterService + '</div>\n')
+    );
+  });
 }
-go();
