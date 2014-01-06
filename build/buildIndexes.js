@@ -3,26 +3,15 @@
 // those data points, and writes that information out to two files in the
 // index/ directory
 
-var fs = require('fs'),
-  prettyjson = require('./prettyjson');
-var service = {}, topic = {}, pending = 0;
-function writeOut() {
+var prettyjson = require('../scripts/prettyjson');
+var service = {}, topic = {};
+function writeOut(grunt) {
   //console.log(service);
-  fs.writeFile('index/services.json', prettyjson(service), function(err) {
-    if(err) {
-      console.log('error writing index/services.json');
-    } else {
-      console.log('successfully wrote index/services.json');
-    }
-  });
+  grunt.file.write('index/services.json', prettyjson(service));
+  grunt.log.writeln('wrote index/services.json');
   //console.log(topic);
-  fs.writeFile('index/topics.json', prettyjson(topic), function(err) {
-    if(err) {
-      console.log('error writing index/topics.json');
-    } else {
-      console.log('successfully wrote index/topics.json');
-    }
-  });
+  grunt.file.write('index/topics.json', prettyjson(topic));
+  grunt.log.writeln('wrote index/topics.json');
 }
 function addToServices(services, point) {
   //console.log('adding point "'+point+'" to services:');
@@ -59,18 +48,11 @@ function addToTopics(topics, point) {
     }
   }
 }
-function parsePointFile(id) {
+function parsePointFile(id, grunt) {
   //have a look at the files in the points/ directory of this
   //repo to get a better feeling for what this function does
 
-  var data = fs.readFileSync('points/'+id+'.json').toString().split('\xa0').join('');
-  var obj;
-  try {
-    obj = JSON.parse(data);
-  } catch(e) {
-    console.log(e, id, data, fs.readFileSync('points/'+id+'.json'));
-    exit();
-  }
+  var obj = grunt.file.readJSON('points/'+id+'.json');
   if(obj.tosdr.disputed || obj.tosdr.irrelevant || !obj.tosdr.binding || typeof(obj.tosdr)=='undefined'
                   || typeof(obj.tosdr.point)=='undefined' || typeof(obj.tosdr.score)=='undefined'
                   || typeof(obj.tosdr.tldr)=='undefined' ) {
@@ -79,56 +61,46 @@ function parsePointFile(id) {
   addToServices(obj.services, id);
   addToTopics(obj.topics, id);
 }
-function parseServiceFile(id) {
+
+function parseServiceFile(id, grunt) {
   //have a look at the files in the services/ directory of this
   //repo to get a better feeling for what this function does
 
   //console.log('SERVICE '+id);
-  //this is a bit of an ugly way to deal with asyncronicity, but it works:
-  pending++;
-  fs.readFile('services/'+id+'.json', function(err, data) {
-    console.log(id);
-    if(err) {
-      console.log(err);
-    }
-    //console.log(data.toString());
-    var obj = JSON.parse(data.toString());
-    if(typeof(obj.tosback2)=='object') {
-      for(var i in obj.tosback2) { 
-        if(obj.tosback2[i].url) {
-          service[id].links[i]=obj.tosback2[i];
-          service[id].alexa=obj.alexa;
-          service[id].class=(obj.tosdr?obj.tosdr.rated:false);
-          console.log(id+' '+i+': '+obj.tosback2[i]);
-        }
+  var obj = grunt.file.readJSON('services/'+id+'.json');
+  console.log(id);
+  if(typeof(obj.tosback2)=='object') {
+    for(var i in obj.tosback2) { 
+      if(obj.tosback2[i].url) {
+        service[id].links[i]=obj.tosback2[i];
+        service[id].alexa=obj.alexa;
+        service[id].class=(obj.tosdr?obj.tosdr.rated:false);
+        console.log(id+' '+i+': '+obj.tosback2[i]);
       }
     }
-    pending--;
-    // "last person to leave switch off the lights please",
-    // or in this case, save everything to disk:
-    if(pending==0) {
-      writeOut();
-    }
-   });
+  }
 }
+
 //read all the points, and trigger the service files to be read
 //whenever mentioned.
-fs.readdir('points/', function(err, files) {
-  if(err) {
-    console.log(err);
-  } else {
-    for(var i=0; i<files.length; i++) {
-      if(files[i].substring(files[i].length-5) == '.json') {
-        parsePointFile(files[i].substring(0, files[i].length-5));
-      }
-    }
+module.exports = function(grunt){
+  grunt.task.registerTask('buildIndexes', 'Create indexes of all the points', function(){
+    grunt.file.recurse('points/', function(abspath, rootdir, subdir, filename){
+        if(filename.substring(filename.length-5) == '.json') {
+          parsePointFile(filename.substring(0, filename.length-5), grunt);
+        }
+    });
+    
     //console.log('SERVICES');
     //console.log(service);
     for(var i in service) {
-      parseServiceFile(i);
+      parseServiceFile(i, grunt);
     }
-  }
-});
+    
+    writeOut(grunt);
+  });
+}
+
 //after this, we still need to call writeOut() to write all results to disk,
 //but the trouble is that since this code is all asynchronous, we don't know
 //when it is safe to call writeOut yet, or whether some data will still be arriving.
