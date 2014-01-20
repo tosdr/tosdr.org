@@ -20,8 +20,7 @@ NEW BUILD AND PUBLISH INSTRUCTIONS:
     git diff #see what changes you are about to build
     git commit -am"some changes i made" #make sure you `git add` and new files you added
     npm install
-    npm install -g less
-    sh ./build.sh
+    grunt
     python -m SimpleHTTPServer
     #browse to http://localhost:8000/ and http://localhost:8000/topics.html to see if everything looks ok
     git commit -am"build"
