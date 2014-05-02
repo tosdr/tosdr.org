@@ -39,7 +39,7 @@ body {
     }
 }
 
-.point, .point:before {
+.point.good, .point.neutral, .point.bad, .point.blocker, .point.good:before, .point.neutral:before, .point.bad:before, .point.blocker:before {
     .fa; 
     .fa-fw;
     width: 20px;
@@ -458,7 +458,7 @@ img.avatar {
 }
 
 
-#ratings {
+#ratings, #services {
     .rating {
         display: inline;
         font-size: 0.5em;
@@ -527,6 +527,28 @@ img.avatar {
             padding: 0.75em;
         }
     }
+}
+
+.app .service#content {
+    .masthead {
+        text-align: left;
+        background: transparent;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+
+        h1 {
+            margin-top: 1em;
+            img.favlogo {
+                max-height: 66px;
+            }
+            .rating {
+                margin-left: 1em;
+                font-size: 0.5em;
+            }
+        }
+    }
+
+    #services {.container;}
 }
 
 
