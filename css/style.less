@@ -4,79 +4,167 @@
 
 body {
     font-size: @font-size-base;
-    margin:0;padding:0;
+    margin:0;
+    padding:0;
 }
+
+/*Service class ratings*/
+
+@rating-a: #46A546;
+@rating-b: #79B752;
+@rating-c: #F89406;
+@rating-d: #D66F2C;
+@rating-e: #C43C35;
+@rating-no: @gray-light;
+
+.badge { 
+    padding:1px 2px; 
+}
+
+.label { 
+    vertical-align: middle;
+}
+
+.label.false {
+    background-color: @rating-no;
+    .border-radius(0.25em);
+}
+
+.A {
+    background-color: @rating-a; 
+    .border-radius(1em);
+}
+.B {
+    background-color: @rating-b; 
+    .border-radius(0.75em);
+}
+.C {
+    background-color: @rating-c; 
+    .border-radius(0.5em);
+}
+.D {
+    background-color: @rating-d; 
+    .border-radius(0.25em);
+}
+.E {
+    background-color: @rating-e; 
+    .border-radius(0.1em);
+}
+
+.tosdr-badges {
+    .good .badge {
+        .A;
+        &:before {
+            content: "\f164";
+        }
+    }
+    .neutral .badge {
+        .C;
+        background-color: @rating-no;
+        &:before {
+            content: "\f10c";
+        }
+    }
+    .bad .badge {
+        .D;
+        &:before {
+            content: "\f165";
+        }
+    }
+    .blocker .badge {
+        .E;
+        &:before {
+            content: "\f00d";
+        }
+    }
+    .badge {
+        .fa;
+        .fa-fw;
+        &:before {
+            .badge;
+            background-color: transparent;
+        }
+    }
+    .badge.point {
+        width: auto;
+        font-weight: bold;
+        &:before {
+            width:auto;
+        }
+    }
+}
+
+.tosdr-tldr-list {
+            li {
+                margin-bottom: 0.25em;
+                margin-left: 30px;
+            }
+
+            .tosdr-badges;
+            
+            .badge {
+                width: 20px;
+                font-size: 1.05em;
+                padding: 0.1em 0em;
+                margin: 0 0.4em 0 -30px;
+                .point {
+                    .sr-only;
+                }
+            }
+}
+
+.tosdr-long-list {
+            li {
+                margin-bottom: 0.25em;
+                .make-row;
+            }
+            h4 .services {
+                margin-left: 0.5em;
+                .favlogo {
+                    vertical-align: -25%;
+                }
+            }
+            .tosdr-badges;
+            
+            .badge {
+                margin-right: 0.5em;
+            }
+            h4 {
+                .make-xs-column(12);
+            }
+            p {
+                .make-xs-column(10);
+            }
+            .actions {
+                .make-xs-column(2);
+                list-style-type: none;
+                padding-left:0;
+                a {
+                    font-size: 0.9em;
+                    text-decoration: none;
+                    padding: 2px 4px;
+                    background-color: rgba(0, 136, 204, 0.1);
+                    .border-radius;
+                }
+            }
+}
+
+/*misc*/
 
 .nav a, .menu a, nav a {
     text-decoration: none !important;
 }
 
-
-/*Service class ratings*/
-.badge { padding:1px 2px; background-color: transparent;}
-.label { padding:2px 4px; vertical-align: middle; }
-
-.A {background-color: #46A546; }
-.A {-webkit-border-radius:1em; -moz-border-radius:1em; border-radius:1em; }
-.B, .badge > .point.good {background-color: #79B752;  -webkit-border-radius:.75em; -moz-border-radius:.75em; border-radius:.75em; }
-.C {background-color: #F89406;}
-.C, .badge > .point.neutral {-webkit-border-radius:.5em; -moz-border-radius:.5em; border-radius:.5em; }
-.badge > .point.neutral {background-color: @gray-light;}
-.D, .badge > .point.bad {background-color:#D66F2C;  -webkit-border-radius:.25em; -moz-border-radius:.25em; border-radius:.25em; }
-.E, .badge > .point.blocker {background-color: #C43C35; -webkit-border-radius:.1em; -moz-border-radius:.1em; border-radius:.1em; }
-.label.false {background-color:#999; }
-
-.tosdr-points {
-    .badge {
-        margin-left: -28px;
-    }
-
-    list-style-type: none;
-    padding: 0;
-    li {
-        margin-bottom: 0.25em;
-        margin-left: 28px;
-    }
-}
-
-.point.good, .point.neutral, .point.bad, .point.blocker, .point.good:before, .point.neutral:before, .point.bad:before, .point.blocker:before {
-    .fa; 
-    .fa-fw;
-    width: 20px;
-    font-size: 1.05em;
-    padding: 0.1em 0em;
-}
-
-.point.good:before {
-    content: "\f164";
-}
-.point.neutral:before {
-    content: "\f10c";
-}
-.point.bad:before {
-    content: "\f165";
-}
-.point.blocker:before {
-    content: "\f00d";
-}
-.more-details:before {
-    content: "\f00b";
-    .fa;
-    .fa-fw;
-    margin: 0 0.4em 0 0.1em;
-}
-
-
-/*misc*/
 img.favlogo {margin:-.3em 5px 0 0;max-height:24px;}
 
 img.avatar {
-	border-radius:50%;
+	.border-radius(50%);
 	box-shadow:0 0 .2em #555;
 }
 
 
 
+/* general layout */
 
 
 .topbar {
@@ -89,9 +177,9 @@ img.avatar {
     .project-name {
         .navbar-brand;
         color: @gray-dark;
-    }
-    .project-name:hover {
-        text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
+        &:hover {
+            text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
+        }
     }
 
     nav {.container;}
@@ -102,9 +190,7 @@ img.avatar {
         li > a {
             height: 50px;
             padding: 14px;
-        }
-        li > a:hover {
-            background: #fff;
+            &:hover {background: #fff;}
         }
         a:link, a:visited{
             color: @gray;
@@ -123,19 +209,13 @@ img.avatar {
     }
 
     @media (max-width: @screen-md) {
-        nav {
-        }
-        .project-name {
-        }
         .navbar-toggle {
             .fa;
             .fa-fw;
             @media (max-width: 380px) {
                 float: left;
             }
-        }
-        .navbar-toggle:before {
-            content: "\f0c9";
+            &:before {content: "\f0c9";}
         }
         .top, .top.collapse {
             .collapse;
@@ -146,9 +226,12 @@ img.avatar {
 
 #content {
     .masthead {
-        background: #F4F4F4;
         margin: -80px 0 40px;
         padding: 110px 0 50px;
+
+        @media (min-width: @screen-md) {
+            text-align: center;
+        }
 
         h1, p {.container;}
 
@@ -159,15 +242,11 @@ img.avatar {
             font-weight: 700;
             span { font-weight: 400; display: block; }
             @media (min-width: @screen-md) {
-                font-size: 0.001em;
-                color: transparent;
+                .disappear;
             }
         }
     }
-    article section {
-        .container;
-    }
-    main {
+    article section, main, main + section {
         .container;
     }
 }
@@ -342,11 +421,6 @@ img.avatar {
 }
 
 
-.masthead {
-    @media (min-width: @screen-md) {
-        text-align: center;
-    }
-}
 
 #bottom {
     background: lighten(@project-color-2, 30%);
@@ -356,11 +430,8 @@ img.avatar {
     margin: 5em 0 0 0;
     padding: 50px 0;
 
-    ul, p, nav, p {
-        .container;
-    }
-
     .to-top {
+        .container;
         position: absolute;
         right: 7%;
         max-width: 170px;
@@ -371,14 +442,15 @@ img.avatar {
         border-radius: 5px;
         background: #fff;
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-    }
-    .to-top a:before {
-        content: "▴";
-        padding-right: 0.5ex;
-        margin-left: -1ex;
+        a:before {
+            content: "▴";
+            padding-right: 0.5ex;
+            margin-left: -1ex;
+        }
     }
 
-    #credits, #legalinfo, #licensing {
+    .info {
+        padding: 1em;
         @media (min-width: @screen-md) {
             float: right;
             max-width: 70em;
@@ -386,7 +458,13 @@ img.avatar {
             margin-right: 20px;
         }
     }
-
+    .menu {
+        @media (min-width: @screen-md) {
+            float: left;
+            width: 30%;
+            margin-left: 20px;
+        }
+    }
     .menu, .socialize {
         list-style-type: none;
         font-weight: 700;
@@ -397,6 +475,7 @@ img.avatar {
         }
     }
     .socialize {
+        padding-left: 0;
         li {display: inline;margin-right: 0.5em;}
         .twitter, .googleplus, .facebook, .github {
             .fa;
@@ -418,6 +497,7 @@ img.avatar {
         }
     }
     nav.nav, #hosting {
+        clear: both;
         text-align: center;
         margin-top: 2em;
     }
@@ -445,7 +525,6 @@ img.avatar {
 
 
 
-
 /* tosdr home */
 
 #tosdr .masthead p {
@@ -458,14 +537,7 @@ img.avatar {
 }
 
 
-#ratings, #services {
-    .rating {
-        display: inline;
-        font-size: 0.5em;
-        padding: 0.2em 0.4em;
-        margin-left: 1.5em;
-    }
-
+#ratings {
     .controls {
         .select {
             .nav;
@@ -514,20 +586,60 @@ img.avatar {
             .make-row;
         }
     }
-    .services-list {
-        clear: both;
-        padding: 0.5em 0;
+}
 
-        @media (min-width: @screen-md) {
-            .make-row;
+.tosdr-list, .tosdr-review {
+    clear: both;
+    padding: 0.5em 0;
+
+    @media (min-width: @screen-md) {
+        .make-row;
+    }
+    .rating {
+        display: inline;
+        font-size: 0.5em;
+        padding: 0.2em 0.4em;
+        margin-left: 1.5em;
+    }
+    .tosdr-points { 
+        list-style-type: none;
+        padding: 0;
+    }
+    .nutshell {
+        margin-bottom: 1.5em;
+        padding: 0.75em;
+
+        .tosdr-points + .more-details:before {
+            .fa;
+            .fa-fw;
+            content: "\f00b";
+            margin: 0 0.5em 0 0.1em;
         }
-        .service-nutshell {
-            .make-md-column(6);
-            margin-bottom: 1.5em;
-            padding: 0.75em;
+    }
+    .service.nutshell {
+        .make-md-column(6);
+
+        .tosdr-points {
+            .tosdr-tldr-list;
+        }
+    }
+    .topic.nutshell {
+        .make-md-column(12);
+        margin-bottom: 5em;
+
+        h3 a .subtitle {
+            font-size: 0.8em;
+            color: @gray-light;
+            padding-left: 1em;
+            text-decoration: none;
+        }
+        .tosdr-points {
+            .tosdr-long-list;
         }
     }
 }
+
+/* one service tosdr info */
 
 .app .service#content {
     .masthead {
@@ -547,8 +659,9 @@ img.avatar {
             }
         }
     }
-
-    #services {.container;}
+    .tosdr-review .tosdr-points {
+        .tosdr-long-list;
+    }
 }
 
 
