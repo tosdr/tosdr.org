@@ -15,9 +15,9 @@
     * (H) fee: 2 EUR
 
 * operations: 15.48 EUR
-    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Jan)
-    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Feb)
-    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Mar)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 May)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Jun)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Jul)
 
 # Finish: 9160.33 - 187.19  = 8973.14 EUR
 
