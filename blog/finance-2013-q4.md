@@ -20,10 +20,12 @@
     * (M) comments form, step 3 - 4, 7 hours (up to 12) * 10 euros: 70 (29 Oct)
     * (M) pendingpoints form, 7 hours (up to 19) * 10 euros: 70 (28 Nov)
 
-* operations: 5.16
+* operations: 15.48
     * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Oct)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Nov)
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Dec)
 
-# Finish: 9362.33 - 161.39  = 9200.94 EUR
+# Finish: 9362.33 - 171.71  = 9190.62 EUR
 
 * kept safe by Hugo: 9362.33 = 9362.33 EUR
-* kept safe by Michiel: 183.77 - 150 - 190 - 5.16 = -161.39 EUR
+* kept safe by Michiel: 183.77 - 150 - 190 - 15.48 = -171.71 EUR
