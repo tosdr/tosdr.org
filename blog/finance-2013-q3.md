@@ -9,7 +9,7 @@
 # Money out
 
 * compensation Jimm: 404
-    * (M) tosback revival, 40 hours (up to ) * 10 euros + 4 paypal commission: 151.50 (5 Sep)
+    * (M) tosback revival, 40 hours (up to 250) * 10 euros + 4 paypal commission: 151.50 (5 Sep)
 
 * compensation Ian: 454.50
     * (M) curating ML threads to data points, 15 hours (up to 135) * 10 euros + 1.50 paypal commission: 151.50 (1 Aug)
