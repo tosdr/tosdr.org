@@ -61,6 +61,7 @@ function process(path) {
       try {
         var item = JSON.parse(fs.readFileSync('../'+path+'/'+files[i]));
         if (item.object.inReplyTo && !threads[item.object.inReplyTo]) {
+          var found = false;
           for (var threadId in threads) {
             if (threads[threadId].posts[item.object.inReplyTo]) {
               if (!threads[threadId].posts[item.object.messageId]) {
@@ -70,8 +71,12 @@ function process(path) {
               } else {
                console.log('descendant already recorded');
               }
+              found = true;
               break;
             }
+          }
+          if (!found) {
+            //console.log('parent '+item.object.inReplyTo+' of '+item.object.messageId+' not found in any thread');
           }
         }
       } catch(e) {
