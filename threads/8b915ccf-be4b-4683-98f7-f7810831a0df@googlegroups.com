@@ -1,0 +1,96 @@
+{
+  "posts": [
+    {
+      "timestamp": 1386547989000,
+      "actor": [
+        {
+          "address": "tobi.lehman@gmail.com",
+          "name": "Tobi Lehman"
+        }
+      ],
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "object": {
+        "html": "<div dir=\"ltr\">Original:&nbsp;<div><br></div><blockquote class=\"gmail_quote\" style=\"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;\">CLAIMS. You agree (1) any claim, cause of action or dispute (\"Claim\") arising out of or related to the TOU or your CL use is governed by California (\"CA\") law regardless of your location or any conflict or choice of law principle; (2) Claims must be resolved exclusively by state or federal court in San Francisco, CA (except we may seek injunctive remedy anywhere); (3) to submit to personal jurisdiction of said courts; (4) any Claim must be filed by 1 year after it arose or be forever barred; (5) not to bring or take part in a class action against CL Entities; (6) (except government agencies) to indemnify CL Entities for any damage, loss, and expense (e.g. legal fees) arising from claims related to your CL use; (7) you are liable for TOU breaches by affiliates (e.g. marketers) paid by you, directly or indirectly (e.g. through an affiliate network); and (8) to pay us for breaching or inducing others to breach the \"USE\" section, not as a penalty, but as a reasonable estimate of our damages (actual damages are often hard to calculate): $0.10 per server request, $1 per post, email, flag, or account created, $1 per item of PI collected, and $1000 per software distribution, capped at $25,000 per day.<br></blockquote><div>&nbsp;</div></div>\n\n<p></p>\n\n-- <br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.<br />\nTo post to this group, send email to tosdr@googlegroups.com.<br />\nVisit this group at <a href=\"http://groups.google.com/group/tosdr\">http://groups.google.com/group/tosdr</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/groups/opt_out\">https://groups.google.com/groups/opt_out</a>.<br />\n",
+        "text": "Original: \n\nCLAIMS. You agree (1) any claim, cause of action or dispute (\"Claim\") \n> arising out of or related to the TOU or your CL use is governed by \n> California (\"CA\") law regardless of your location or any conflict or choice \n> of law principle; (2) Claims must be resolved exclusively by state or \n> federal court in San Francisco, CA (except we may seek injunctive remedy \n> anywhere); (3) to submit to personal jurisdiction of said courts; (4) any \n> Claim must be filed by 1 year after it arose or be forever barred; (5) not \n> to bring or take part in a class action against CL Entities; (6) (except \n> government agencies) to indemnify CL Entities for any damage, loss, and \n> expense (e.g. legal fees) arising from claims related to your CL use; (7) \n> you are liable for TOU breaches by affiliates (e.g. marketers) paid by you, \n> directly or indirectly (e.g. through an affiliate network); and (8) to pay \n> us for breaching or inducing others to breach the \"USE\" section, not as a \n> penalty, but as a reasonable estimate of our damages (actual damages are \n> often hard to calculate): $0.10 per server request, $1 per post, email, \n> flag, or account created, $1 per item of PI collected, and $1000 per \n> software distribution, capped at $25,000 per day.\n>\n \n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr.\nFor more options, visit https://groups.google.com/groups/opt_out.\n",
+        "headers": {
+          "return-path": "<tosdr+bncBC6JPJGM6UOBBFUWSSKQKGQECY7XDWY@googlegroups.com>",
+          "delivered-to": "anything@michielbdejong.com",
+          "received": [
+            "from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id B99E84136D for <anything@michielbdejong.com>; Mon,  9 Dec 2013 01:13:13 +0100 (CET)",
+            "from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141]) by spool.mail.gandi.net (Postfix) with ESMTP id B6B9017808E for <anything@michielbdejong.com>; Mon,  9 Dec 2013 01:13:13 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.133]) by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id WOjQxSHIlXAL for <anything@michielbdejong.com>; Mon,  9 Dec 2013 01:13:12 +0100 (CET)",
+            "from mail-ob0-x23c.google.com (mail-ob0-x23c.google.com [IPv6:2607:f8b0:4003:c01::23c]) by spool.mail.gandi.net (Postfix) with ESMTPS id BB91D1780EE for <anything@michielbdejong.com>; Mon,  9 Dec 2013 01:13:11 +0100 (CET)",
+            "by mail-ob0-f188.google.com with SMTP id wn1sf874378obc.25 for <anything@michielbdejong.com>; Sun, 08 Dec 2013 16:13:10 -0800 (PST)",
+            "by 10.50.61.134 with SMTP id p6ls1370391igr.38.canary; Sun, 08 Dec 2013 16:13:10 -0800 (PST)"
+          ],
+          "x-virus-scanned": "Debian amavisd-new at mfilter13-d.gandi.net",
+          "dkim-signature": [
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe:content-type; bh=g+8x2Uz4F2QzHa2BnzLMVuZmMwUNN/Urq8RKWwX6Pqs=; b=ETUr3lYvLppZzXesROg69JUTvySvB23QQcXacFYTVJk8HkWO6f6ckGrxkdwNEQuLC8 Ar3+jEE8vodrzn1ORoaEJmKE3S3w13Dt6qL+fOI9G4/1TRJ89oAG9PSf9/mocZvV7neh Ech1zf86ZDRum3YsA7bc3sqyZC4xPR3kXPFeo16ugdvYPmLkmHJ5K07iXoiC0xKQx8Rb lC9YVHvQ9kn0qFzv7kfES5n9lq7rTBqWGNhra2M1cyLoSdbF3elmOq6f1BgX4k4evt8J ePPBxsQatcwdRS7PgHdC5UlguR7yvDY7xTVBBIM37L0Ldm06vg4C/itapYTrppY1GJkB gekQ==",
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe:content-type; bh=g+8x2Uz4F2QzHa2BnzLMVuZmMwUNN/Urq8RKWwX6Pqs=; b=PWfZM25hgS8eSmS+74/EyGNK0bi+WPgvuFPxqC4rRXJSzZWZmdS5+9LJtdMT3sAuji 1zqR5SDZ48mEhLpDJSnB76l9ypFV8IcWivtPVkW402aaq+spgsii/cGvVSMn5/kGiBjs eqS0OjUM2ESoqKY4DzcPEgLBgCmV8dqXRl+T/16sVwfBm3J1sNQOuFaW5jS6YFvJpApI 5nsx2R5d0BCJnepVlmcDqTmdUz1F7KzZ+BuE7v1NqlHYKpzu2p0Cz1aYcnc6nKmTyhpg yt5nHew6djEPfwduQxAZWauDOi6DU2+M3X7GoLGC3LGvQoxRRCx7OwpRcnqc5QnA3gfD lr/g=="
+          ],
+          "x-received": [
+            "by 10.50.8.42 with SMTP id o10mr222197iga.3.1386547990597; Sun, 08 Dec 2013 16:13:10 -0800 (PST)",
+            "by 10.50.103.71 with SMTP id fu7mr224591igb.1.1386547990252; Sun, 08 Dec 2013 16:13:10 -0800 (PST)"
+          ],
+          "x-beenthere": "tosdr@googlegroups.com",
+          "date": "Sun, 8 Dec 2013 16:13:09 -0800 (PST)",
+          "from": "Tobi Lehman <tobi.lehman@gmail.com>",
+          "to": "tosdr@googlegroups.com",
+          "message-id": "<8b915ccf-be4b-4683-98f7-f7810831a0df@googlegroups.com>",
+          "subject": "[tosdr:2847] Craigslist.org [Info] California Jurisdiction",
+          "mime-version": "1.0",
+          "x-original-sender": "tobi.lehman@gmail.com",
+          "reply-to": "tosdr@googlegroups.com",
+          "precedence": "list",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "list-id": "<tosdr.googlegroups.com>",
+          "x-google-group-id": "966240515290",
+          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr>",
+          "sender": "tosdr@googlegroups.com",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "content-type": "multipart/alternative; boundary=\"----=_Part_1043_23434236.1386547989393\""
+        },
+        "subject": "[tosdr:2847] Craigslist.org [Info] California Jurisdiction",
+        "messageId": "8b915ccf-be4b-4683-98f7-f7810831a0df@googlegroups.com",
+        "priority": "normal",
+        "from": [
+          {
+            "address": "tobi.lehman@gmail.com",
+            "name": "Tobi Lehman"
+          }
+        ],
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "date": "2013-12-09T00:13:09.000Z",
+        "imapBox": "INBOX",
+        "imapSeqNo": 14658
+      },
+      "platform": "email",
+      "verb": "unknown",
+      "conversationName": "email: \"Tobi Lehman\" &lt;tobi.lehman@gmail.com&gt;",
+      "previous": "1385010152000",
+      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+    }
+  ],
+  "subject": "[tosdr:2847] Craigslist.org [Info] California Jurisdiction"
+}
