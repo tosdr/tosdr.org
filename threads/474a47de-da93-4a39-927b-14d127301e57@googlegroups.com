@@ -49,6 +49,59 @@
       "timestamp": 1366984734000,
       "verb": "unknown"
     },
+    "CBC78250-D2E7-457C-9203-16FF420144A6@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-04-26T14:08:05.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Fri, 26 Apr 2013 16:08:05 +0200",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<ee09dfd218b4790014efb71e96d31099@michielbdejong.com>",
+          "message-id": "<CBC78250-D2E7-457C-9203-16FF420144A6@gmail.com>",
+          "subject": "Re: [tosdr:1762] empty terms of services",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 2220,
+        "inReplyTo": [
+          "ee09dfd218b4790014efb71e96d31099@michielbdejong.com"
+        ],
+        "messageId": "CBC78250-D2E7-457C-9203-16FF420144A6@gmail.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:1762] empty terms of services",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393145129876",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1366985285000,
+      "verb": "unknown"
+    },
     "ee09dfd218b4790014efb71e96d31099@michielbdejong.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

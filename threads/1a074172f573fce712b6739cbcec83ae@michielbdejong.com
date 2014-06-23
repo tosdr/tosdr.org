@@ -49,6 +49,59 @@
       "timestamp": 1376401504000,
       "verb": "unknown"
     },
+    "203073eb-2c1f-4f7b-be84-e45ad2ee7600@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "leonhard.jason@gmail.com",
+          "name": ""
+        }
+      ],
+      "conversationName": "email: leonhard.jason@gmail.com",
+      "object": {
+        "date": "2013-08-16T05:20:19.000Z",
+        "from": [
+          {
+            "address": "leonhard.jason@gmail.com",
+            "name": ""
+          }
+        ],
+        "headers": {
+          "date": "Thu, 15 Aug 2013 22:20:19 -0700 (PDT)",
+          "from": "leonhard.jason@gmail.com",
+          "in-reply-to": "<9fc28cab-1a12-4865-815d-7a54a2a21d1f@googlegroups.com>",
+          "message-id": "<203073eb-2c1f-4f7b-be84-e45ad2ee7600@googlegroups.com>",
+          "subject": "[tosdr:2665] Re: [Bad] Google Fiber + 4 other ISPs ban running your own \"servers\"",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 8976,
+        "inReplyTo": [
+          "9fc28cab-1a12-4865-815d-7a54a2a21d1f@googlegroups.com"
+        ],
+        "messageId": "203073eb-2c1f-4f7b-be84-e45ad2ee7600@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2665] Re: [Bad] Google Fiber + 4 other ISPs ban running your own \"servers\"",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393152238937",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1376630419000,
+      "verb": "unknown"
+    },
     "337d2973-d91e-4e6a-820c-56421da26d23@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
@@ -153,6 +206,59 @@
         ]
       },
       "timestamp": 1376501857000,
+      "verb": "unknown"
+    },
+    "CAFvYCveHGR80mbrLCwQbXaea6hjj9XOQac2FWPdKF8DTOKvVow@mail.gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "tobi.lehman@gmail.com",
+          "name": "Tobi Lehman"
+        }
+      ],
+      "conversationName": "email: \"Tobi Lehman\" &lt;tobi.lehman@gmail.com&gt;",
+      "object": {
+        "date": "2013-08-16T15:33:21.000Z",
+        "from": [
+          {
+            "address": "tobi.lehman@gmail.com",
+            "name": "Tobi Lehman"
+          }
+        ],
+        "headers": {
+          "date": "Fri, 16 Aug 2013 08:33:21 -0700",
+          "from": "Tobi Lehman <tobi.lehman@gmail.com>",
+          "in-reply-to": "<203073eb-2c1f-4f7b-be84-e45ad2ee7600@googlegroups.com>",
+          "message-id": "<CAFvYCveHGR80mbrLCwQbXaea6hjj9XOQac2FWPdKF8DTOKvVow@mail.gmail.com>",
+          "subject": "Re: [tosdr:2667] Re: [Bad] Google Fiber + 4 other ISPs ban running your own \"servers\"",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 9014,
+        "inReplyTo": [
+          "203073eb-2c1f-4f7b-be84-e45ad2ee7600@googlegroups.com"
+        ],
+        "messageId": "CAFvYCveHGR80mbrLCwQbXaea6hjj9XOQac2FWPdKF8DTOKvVow@mail.gmail.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2667] Re: [Bad] Google Fiber + 4 other ISPs ban running your own \"servers\"",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1376667201000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1376667201000,
       "verb": "unknown"
     }
   },

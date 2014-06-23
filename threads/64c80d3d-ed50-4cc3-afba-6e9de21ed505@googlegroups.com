@@ -1,5 +1,58 @@
 {
   "posts": {
+    "0bdfabcb-b664-4a59-95b1-22a1d37961da@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-08T22:03:35.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Mon, 8 Jul 2013 15:03:35 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<f8efef51-bbe4-4390-9467-68aa5576bb6c@googlegroups.com>",
+          "message-id": "<0bdfabcb-b664-4a59-95b1-22a1d37961da@googlegroups.com>",
+          "subject": "[tosdr:2476] Re: Tumblr may modify or eliminate Paid Services",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6904,
+        "inReplyTo": [
+          "f8efef51-bbe4-4390-9467-68aa5576bb6c@googlegroups.com"
+        ],
+        "messageId": "0bdfabcb-b664-4a59-95b1-22a1d37961da@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2476] Re: Tumblr may modify or eliminate Paid Services",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148938165",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373321015000,
+      "verb": "unknown"
+    },
     "64c80d3d-ed50-4cc3-afba-6e9de21ed505@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

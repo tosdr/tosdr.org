@@ -53,6 +53,59 @@
       "timestamp": 1366809049000,
       "verb": "unknown"
     },
+    "7cad74a7-9719-45f7-8ccf-65951587510b@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-09T17:36:30.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 9 Jul 2013 10:36:30 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<113a367e-e8f2-4ee1-bb48-890f93d43d1b@googlegroups.com>",
+          "message-id": "<7cad74a7-9719-45f7-8ccf-65951587510b@googlegroups.com>",
+          "subject": "[tosdr:2488] Re: [Info] No promise to inform regarding law or government requests",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6953,
+        "inReplyTo": [
+          "113a367e-e8f2-4ee1-bb48-890f93d43d1b@googlegroups.com"
+        ],
+        "messageId": "7cad74a7-9719-45f7-8ccf-65951587510b@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2488] Re: [Info] No promise to inform regarding law or government requests",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1373391390000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373391390000,
+      "verb": "unknown"
+    },
     "9462a381-ef4d-45af-b483-892d4127fd70@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

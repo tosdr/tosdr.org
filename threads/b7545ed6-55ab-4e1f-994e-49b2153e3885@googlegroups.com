@@ -53,6 +53,59 @@
       "timestamp": 1372238626000,
       "verb": "unknown"
     },
+    "3be84b9c-ad16-42fb-8ded-848b618f2a99@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "fichterj@stpatsdc.org",
+          "name": "Jonathan Fichter"
+        }
+      ],
+      "conversationName": "email: \"Jonathan Fichter\" &lt;fichterj@stpatsdc.org&gt;",
+      "object": {
+        "date": "2013-06-26T09:56:03.000Z",
+        "from": [
+          {
+            "address": "fichterj@stpatsdc.org",
+            "name": "Jonathan Fichter"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 26 Jun 2013 02:56:03 -0700 (PDT)",
+          "from": "Jonathan Fichter <fichterj@stpatsdc.org>",
+          "in-reply-to": "<20130626092346.GP19397@synclavier.ampoliros.net>",
+          "message-id": "<3be84b9c-ad16-42fb-8ded-848b618f2a99@googlegroups.com>",
+          "subject": "Re: [tosdr:2359] tinkercad requires you to be 13 years old",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6083,
+        "inReplyTo": [
+          "20130626092346.GP19397@synclavier.ampoliros.net"
+        ],
+        "messageId": "3be84b9c-ad16-42fb-8ded-848b618f2a99@googlegroups.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2359] tinkercad requires you to be 13 years old",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1372240563000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372240563000,
+      "verb": "unknown"
+    },
     "b7545ed6-55ab-4e1f-994e-49b2153e3885@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

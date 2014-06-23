@@ -53,6 +53,59 @@
       "timestamp": 1366809106000,
       "verb": "unknown"
     },
+    "9b31e104-8bd7-42aa-b0b0-9876f332b23c@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-09T18:40:23.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 9 Jul 2013 11:40:23 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<84a46f9b-8155-4df3-ba6d-5353c592008c@googlegroups.com>",
+          "message-id": "<9b31e104-8bd7-42aa-b0b0-9876f332b23c@googlegroups.com>",
+          "subject": "[tosdr:2490] Re: [Good] Spotify tells users of privacy policy changes",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6966,
+        "inReplyTo": [
+          "84a46f9b-8155-4df3-ba6d-5353c592008c@googlegroups.com"
+        ],
+        "messageId": "9b31e104-8bd7-42aa-b0b0-9876f332b23c@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2490] Re: [Good] Spotify tells users of privacy policy changes",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1373395223000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373395223000,
+      "verb": "unknown"
+    },
     "bee4145c-4c21-46ae-a377-561cdd9042e1@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

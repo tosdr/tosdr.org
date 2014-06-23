@@ -1,5 +1,58 @@
 {
   "posts": {
+    "7f8190d8-a3e1-450b-b9a0-291963f4561b@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-09T18:21:44.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 9 Jul 2013 11:21:44 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<c06ffdd0-ad21-4e6a-bd5b-0ad696cf7870@googlegroups.com>",
+          "message-id": "<7f8190d8-a3e1-450b-b9a0-291963f4561b@googlegroups.com>",
+          "subject": "[tosdr:2489] Re: [Bad] Spotify may transfer and process your data to somewhere outside of your country",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6962,
+        "inReplyTo": [
+          "c06ffdd0-ad21-4e6a-bd5b-0ad696cf7870@googlegroups.com"
+        ],
+        "messageId": "7f8190d8-a3e1-450b-b9a0-291963f4561b@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2489] Re: [Bad] Spotify may transfer and process your data to somewhere outside of your country",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148939804",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373394104000,
+      "verb": "unknown"
+    },
     "a124c5bc-513a-424c-bc91-e5a85c998df2@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

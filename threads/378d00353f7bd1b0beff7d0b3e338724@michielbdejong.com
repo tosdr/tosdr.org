@@ -1,5 +1,58 @@
 {
   "posts": {
+    "20130523181248.GB24348@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-05-23T18:12:48.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Thu, 23 May 2013 20:12:48 +0200",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<55ecb880-5f5d-48d6-a03b-f9ea7e662e76@googlegroups.com>",
+          "message-id": "<20130523181248.GB24348@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:2235] Re: [Bad] you agree not to reverse-engineer Amazon's software",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 4270,
+        "inReplyTo": [
+          "55ecb880-5f5d-48d6-a03b-f9ea7e662e76@googlegroups.com"
+        ],
+        "messageId": "20130523181248.GB24348@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2235] Re: [Bad] you agree not to reverse-engineer Amazon's software",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148282323",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1369332768000,
+      "verb": "unknown"
+    },
     "378d00353f7bd1b0beff7d0b3e338724@michielbdejong.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

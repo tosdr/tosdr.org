@@ -153,6 +153,59 @@
       },
       "timestamp": 1369223461000,
       "verb": "unknown"
+    },
+    "ec32c82c-bf46-4cb0-b70d-d886588601a5@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-06-27T18:56:12.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Thu, 27 Jun 2013 11:56:12 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<b6ea0200-fca0-4624-b934-e529fd034a72@googlegroups.com>",
+          "message-id": "<ec32c82c-bf46-4cb0-b70d-d886588601a5@googlegroups.com>",
+          "subject": "Re: [Bad] Amazon will fingerprint your browser",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6231,
+        "inReplyTo": [
+          "b6ea0200-fca0-4624-b934-e529fd034a72@googlegroups.com"
+        ],
+        "messageId": "ec32c82c-bf46-4cb0-b70d-d886588601a5@googlegroups.com",
+        "priority": "normal",
+        "subject": "Re: [Bad] Amazon will fingerprint your browser",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148761366",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372359372000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1591] [Bad] Amazon will fingerprint your browser"

@@ -146,6 +146,59 @@
       },
       "timestamp": 1385010056000,
       "verb": "unknown"
+    },
+    "d59baee2-91f6-424c-bbc5-952e6ee1d2f3@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "tobi.lehman@gmail.com",
+          "name": "Tobi Lehman"
+        }
+      ],
+      "conversationName": "email: \"Tobi Lehman\" &lt;tobi.lehman@gmail.com&gt;",
+      "object": {
+        "date": "2013-11-21T17:01:25.000Z",
+        "from": [
+          {
+            "address": "tobi.lehman@gmail.com",
+            "name": "Tobi Lehman"
+          }
+        ],
+        "headers": {
+          "date": "Thu, 21 Nov 2013 09:01:25 -0800 (PST)",
+          "from": "Tobi Lehman <tobi.lehman@gmail.com>",
+          "in-reply-to": "<03677a30-57ae-4fb3-b18e-919fa84caba9@googlegroups.com>",
+          "message-id": "<d59baee2-91f6-424c-bbc5-952e6ee1d2f3@googlegroups.com>",
+          "subject": "[tosdr:2808] Re: Ancestry.com reserves the right to change the policies (no advance notice mentioned)",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 13822,
+        "inReplyTo": [
+          "03677a30-57ae-4fb3-b18e-919fa84caba9@googlegroups.com"
+        ],
+        "messageId": "d59baee2-91f6-424c-bbc5-952e6ee1d2f3@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2808] Re: Ancestry.com reserves the right to change the policies (no advance notice mentioned)",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1385053285000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1385053285000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:2802] Ancestry.com reserves the right to change the policies (no advance notice mentioned)"

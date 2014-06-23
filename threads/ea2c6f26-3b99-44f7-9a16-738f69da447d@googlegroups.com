@@ -53,6 +53,59 @@
       "timestamp": 1369312292000,
       "verb": "unknown"
     },
+    "AC99978C-92EB-458E-A652-EB8A6F51BA8E@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-05-23T12:33:10.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Thu, 23 May 2013 14:33:10 +0200",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com>",
+          "message-id": "<AC99978C-92EB-458E-A652-EB8A6F51BA8E@gmail.com>",
+          "subject": "Re: [tosdr:2233] Re: People's Terms of Service Contract",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 4246,
+        "inReplyTo": [
+          "033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com"
+        ],
+        "messageId": "AC99978C-92EB-458E-A652-EB8A6F51BA8E@gmail.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2233] Re: People's Terms of Service Contract",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148282292",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1369312390000,
+      "verb": "unknown"
+    },
     "ea2c6f26-3b99-44f7-9a16-738f69da447d@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

@@ -53,6 +53,59 @@
       "timestamp": 1368207574000,
       "verb": "unknown"
     },
+    "ba2a4e0e-981d-45f1-a04e-525f6b33cf6c@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "devlinks@gmail.com",
+          "name": "Robin Monks"
+        }
+      ],
+      "conversationName": "email: \"Robin Monks\" &lt;devlinks@gmail.com&gt;",
+      "object": {
+        "date": "2013-05-10T18:31:21.000Z",
+        "from": [
+          {
+            "address": "devlinks@gmail.com",
+            "name": "Robin Monks"
+          }
+        ],
+        "headers": {
+          "date": "Fri, 10 May 2013 11:31:21 -0700 (PDT)",
+          "from": "Robin Monks <devlinks@gmail.com>",
+          "in-reply-to": "<b13dc1ef-e5a0-4cc1-8999-0f519d273209@googlegroups.com>",
+          "message-id": "<ba2a4e0e-981d-45f1-a04e-525f6b33cf6c@googlegroups.com>",
+          "subject": "[tosdr:2040] Re: Microsoft.com [bad] Can share your personal information with anyone",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 3285,
+        "inReplyTo": [
+          "b13dc1ef-e5a0-4cc1-8999-0f519d273209@googlegroups.com"
+        ],
+        "messageId": "ba2a4e0e-981d-45f1-a04e-525f6b33cf6c@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2040] Re: Microsoft.com [bad] Can share your personal information with anyone",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393145149566",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1368210681000,
+      "verb": "unknown"
+    },
     "bf3caa52-4d04-49d1-a4d6-957cdc85f625@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

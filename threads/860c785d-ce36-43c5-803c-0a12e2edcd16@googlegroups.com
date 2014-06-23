@@ -1,5 +1,58 @@
 {
   "posts": {
+    "7d27434a-e506-4ef8-86f6-25f18f72d5cc@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-09T17:04:34.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 9 Jul 2013 10:04:34 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<ea7b7ebe-5cde-4bc9-951d-b79d96a59571@googlegroups.com>",
+          "message-id": "<7d27434a-e506-4ef8-86f6-25f18f72d5cc@googlegroups.com>",
+          "subject": "[tosdr:2485] Re: [Good] Spotify states risks of keeping information public",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6947,
+        "inReplyTo": [
+          "ea7b7ebe-5cde-4bc9-951d-b79d96a59571@googlegroups.com"
+        ],
+        "messageId": "7d27434a-e506-4ef8-86f6-25f18f72d5cc@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2485] Re: [Good] Spotify states risks of keeping information public",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1373389474000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373389474000,
+      "verb": "unknown"
+    },
     "860c785d-ce36-43c5-803c-0a12e2edcd16@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

@@ -101,6 +101,59 @@
       },
       "timestamp": 1372238460000,
       "verb": "unknown"
+    },
+    "8bdc1ddf-7e62-4c61-a6f7-52b8feb085ee@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "fichterj@stpatsdc.org",
+          "name": "Jonathan Fichter"
+        }
+      ],
+      "conversationName": "email: \"Jonathan Fichter\" &lt;fichterj@stpatsdc.org&gt;",
+      "object": {
+        "date": "2013-06-26T10:05:40.000Z",
+        "from": [
+          {
+            "address": "fichterj@stpatsdc.org",
+            "name": "Jonathan Fichter"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 26 Jun 2013 03:05:40 -0700 (PDT)",
+          "from": "Jonathan Fichter <fichterj@stpatsdc.org>",
+          "in-reply-to": "<20130626092750.GT19397@synclavier.ampoliros.net>",
+          "message-id": "<8bdc1ddf-7e62-4c61-a6f7-52b8feb085ee@googlegroups.com>",
+          "subject": "Re: [tosdr:2363] [good] tinkercad is pretty clear about what data it keeps about you",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6090,
+        "inReplyTo": [
+          "20130626092750.GT19397@synclavier.ampoliros.net"
+        ],
+        "messageId": "8bdc1ddf-7e62-4c61-a6f7-52b8feb085ee@googlegroups.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2363] [good] tinkercad is pretty clear about what data it keeps about you",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148737919",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372241140000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:2350] [good] tinkercad is pretty clear about what data it keeps about you"

@@ -101,6 +101,59 @@
       },
       "timestamp": 1366723688000,
       "verb": "unknown"
+    },
+    "f70c99bc-0a03-474b-b859-0d6147a923d8@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-10T15:36:16.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 10 Jul 2013 08:36:16 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<7afd1de1-2b5d-489f-b233-123d9a9abe7f@googlegroups.com>",
+          "message-id": "<f70c99bc-0a03-474b-b859-0d6147a923d8@googlegroups.com>",
+          "subject": "[tosdr:2495] Re: [Info] Spotify may merge your new information with what they have currently",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 7028,
+        "inReplyTo": [
+          "7afd1de1-2b5d-489f-b233-123d9a9abe7f@googlegroups.com"
+        ],
+        "messageId": "f70c99bc-0a03-474b-b859-0d6147a923d8@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2495] Re: [Info] Spotify may merge your new information with what they have currently",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393150882898",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373470576000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1717] [Info] Spotify may merge your new information with what they have currently"

@@ -101,6 +101,59 @@
       },
       "timestamp": 1372262180000,
       "verb": "unknown"
+    },
+    "8D594926-B8C4-4ABA-858C-1405B115B033@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-06-26T16:03:19.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 26 Jun 2013 11:03:19 -0500",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<20130626160056.GL7094@synclavier.ampoliros.net>",
+          "message-id": "<8D594926-B8C4-4ABA-858C-1405B115B033@gmail.com>",
+          "subject": "Re: [tosdr:2380] Wikipedia may use your IP as permanently available public identification",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6136,
+        "inReplyTo": [
+          "20130626160056.GL7094@synclavier.ampoliros.net"
+        ],
+        "messageId": "8D594926-B8C4-4ABA-858C-1405B115B033@gmail.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2380] Wikipedia may use your IP as permanently available public identification",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1372262599000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372262599000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:2378] Wikipedia may use your IP as permanently available public identification"
