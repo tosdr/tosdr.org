@@ -100,6 +100,59 @@
       "timestamp": 1362917658000,
       "verb": "unknown"
     },
+    "1363031361.11549.9.camel@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@fsfe.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@fsfe.org&gt;",
+      "object": {
+        "date": "2013-03-11T19:49:21.000Z",
+        "from": [
+          {
+            "address": "hugo@fsfe.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Mon, 11 Mar 2013 20:49:21 +0100",
+          "from": "Hugo Roy <hugo@fsfe.org>",
+          "in-reply-to": "<48d114fb79ce4b70a7372bff3779899e@michielbdejong.com>",
+          "message-id": "<1363031361.11549.9.camel@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:1646] Re: who wants to help create an html form on tosdr.org?",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 531,
+        "inReplyTo": [
+          "48d114fb79ce4b70a7372bff3779899e@michielbdejong.com"
+        ],
+        "messageId": "1363031361.11549.9.camel@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:1646] Re: who wants to help create an html form on tosdr.org?",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393138751427",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1363031361000,
+      "verb": "unknown"
+    },
     "48d114fb79ce4b70a7372bff3779899e@michielbdejong.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

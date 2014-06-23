@@ -106,6 +106,59 @@
       "timestamp": 1369894911000,
       "verb": "unknown"
     },
+    "20130531180931.GB2483@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-05-31T18:09:31.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Fri, 31 May 2013 20:09:31 +0200",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<CAHte5+LXGbHiimRAUeN0OC_+n+esXEmhWZ5oXV9ksSmWz062ZA@mail.gmail.com>",
+          "message-id": "<20130531180931.GB2483@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:2261] Re: Should I contribute?",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 4623,
+        "inReplyTo": [
+          "CAHte5+LXGbHiimRAUeN0OC_+n+esXEmhWZ5oXV9ksSmWz062ZA@mail.gmail.com"
+        ],
+        "messageId": "20130531180931.GB2483@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2261] Re: Should I contribute?",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148617711",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1370023771000,
+      "verb": "unknown"
+    },
     "CAHte5+JXVGipimdjiM4xWD2jCY0ycBcxgsnVEKTbwpJYgC_tWQ@mail.gmail.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
