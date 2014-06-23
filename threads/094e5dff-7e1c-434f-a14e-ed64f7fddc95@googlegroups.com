@@ -102,6 +102,59 @@
       "timestamp": 1372238671000,
       "verb": "unknown"
     },
+    "20130626102527.GW19397@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-06-26T10:25:27.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 26 Jun 2013 12:25:27 +0200",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<95cefba4-a359-47e3-9219-5bdd1f612d28@googlegroups.com>",
+          "message-id": "<20130626102527.GW19397@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:2364] [good] tinkercad claims \"no intellectual property rights over the material you provide\"",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6095,
+        "inReplyTo": [
+          "95cefba4-a359-47e3-9219-5bdd1f612d28@googlegroups.com"
+        ],
+        "messageId": "20130626102527.GW19397@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2364] [good] tinkercad claims \"no intellectual property rights over the material you provide\"",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1372242327000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372242327000,
+      "verb": "unknown"
+    },
     "95cefba4-a359-47e3-9219-5bdd1f612d28@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

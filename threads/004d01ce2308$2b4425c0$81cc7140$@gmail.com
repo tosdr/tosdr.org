@@ -48,6 +48,58 @@
       "timestamp": 1363522121000,
       "verb": "unknown"
     },
+    "43EE4857-AFCC-4241-9CBC-07815C28D3A4@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "aaronklaw@gmail.com",
+          "name": "Aaron Kelly"
+        }
+      ],
+      "conversationName": "email: \"Aaron Kelly\" &lt;aaronklaw@gmail.com&gt;",
+      "object": {
+        "date": "2013-03-18T16:02:25.000Z",
+        "from": [
+          {
+            "address": "aaronklaw@gmail.com",
+            "name": "Aaron Kelly"
+          }
+        ],
+        "headers": {
+          "date": "Mon, 18 Mar 2013 12:02:25 -0400",
+          "from": "Aaron Kelly <aaronklaw@gmail.com>",
+          "in-reply-to": "<b822f655-fd6b-472c-8338-abb566a9dd51@googlegroups.com>",
+          "message-id": "<43EE4857-AFCC-4241-9CBC-07815C28D3A4@gmail.com>",
+          "subject": "Re: [tosdr:1685] Fitocracy ToS, paragraph 7, Changes to ToS",
+          "to": "\"tosdr@googlegroups.com\" <tosdr@googlegroups.com>"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 841,
+        "inReplyTo": [
+          "b822f655-fd6b-472c-8338-abb566a9dd51@googlegroups.com"
+        ],
+        "messageId": "43EE4857-AFCC-4241-9CBC-07815C28D3A4@gmail.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:1685] Fitocracy ToS, paragraph 7, Changes to ToS",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1363622545000,
+      "verb": "unknown"
+    },
     "757AAAA0-81F4-4C1B-82EF-2AD994441578@gmail.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

@@ -100,6 +100,117 @@
       "timestamp": 1362917658000,
       "verb": "unknown"
     },
+    "48d114fb79ce4b70a7372bff3779899e@michielbdejong.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "anything@michielbdejong.com",
+          "name": "Michiel B. de Jong"
+        }
+      ],
+      "conversationName": "email: \"Michiel B. de Jong\" &lt;anything@michielbdejong.com&gt;",
+      "object": {
+        "date": "2013-03-11T12:18:57.000Z",
+        "from": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": "Michiel B. de Jong"
+          }
+        ],
+        "headers": {
+          "content-type": "text/plain; charset=ISO-8859-1; format=flowed",
+          "date": "Mon, 11 Mar 2013 20:48:57 +0830",
+          "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned :x-policy:x-originating-ip:mime-version:date:from:to:subject :in-reply-to:references:message-id:x-sender:user-agent :x-original-sender:x-original-authentication-results:reply-to :precedence:mailing-list:list-id:x-google-group-id:list-post :list-help:list-archive:sender:list-subscribe:list-unsubscribe :content-type; bh=nyMKCdPqbif5Im6zR0uCjAiY6IUuPtOQzThL32vIVC8=; b=tHEhjs/HNCes9ux6XHdrRsvqZNJsjSptqnQQkOZAmVHF0bGttlvHsKWZPHFoy9BS/z +1OYHuqVadkMOQUMTRQlOVGuI+aQb8GunCUWKdiydcGAjP1osdpxe2WumgA8GXeP2BDS CXYNIfe9boeKSPa9NQwrRcO+afIo/KywI1CUbHkV3VWam+2Nhz0CByuX41h7JBK9agJV /8jAPvtwwK4i8dK3P9rZT0QKePPqAoXdwr3Z9Qp9tSbWZ1mU00i4+VTHWx9KXhs9yePA w3RzIxw5FMHpgoQ1kAAy2D8KSF8T1YDmagZkFkje+ea+j8oiFccb7FNewLbXFSSQBL2T eX2g==",
+          "from": "\"Michiel B. de Jong\" <anything@michielbdejong.com>",
+          "in-reply-to": "<E7621372-569B-49B4-9971-A3867433C384@gmail.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr?hl=en>",
+          "list-help": "<http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<48d114fb79ce4b70a7372bff3779899e@michielbdejong.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
+          "received": [
+            "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id D1E1316172D for <anything@michielbdejong.com>; Mon, 11 Mar 2013 13:19:14 +0100 (CET)",
+            "from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151]) by spool.mail.gandi.net (Postfix) with ESMTP id CCA08116205; Mon, 11 Mar 2013 13:19:14 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.134]) by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id CQ3sdy6C1QQ4; Mon, 11 Mar 2013 13:19:13 +0100 (CET)",
+            "from mail-fa0-x238.google.com (mail-fa0-x238.google.com [IPv6:2a00:1450:4001:c02::238]) by spool.mail.gandi.net (Postfix) with ESMTPS id 07CD6116211; Mon, 11 Mar 2013 13:19:12 +0100 (CET)",
+            "by mail-fa0-f56.google.com with SMTP id y16sf1629891faj.1 for <multiple recipients>; Mon, 11 Mar 2013 05:19:11 -0700 (PDT)",
+            "by 10.180.189.52 with SMTP id gf20ls510615wic.47.canary; Mon, 11 Mar 2013 05:19:10 -0700 (PDT)",
+            "from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195]) by gmr-mx.google.com with ESMTP id v5si23803wij.0.2013.03.11.05.19.10; Mon, 11 Mar 2013 05:19:10 -0700 (PDT)",
+            "from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133]) by relay3-d.mail.gandi.net (Postfix) with ESMTP id BA4BBA80DC for <tosdr@googlegroups.com>; Mon, 11 Mar 2013 13:18:59 +0100 (CET)",
+            "from relay3-d.mail.gandi.net ([217.70.183.195]) by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id tyl3FN20f+5G for <tosdr@googlegroups.com>; Mon, 11 Mar 2013 13:18:58 +0100 (CET)",
+            "from webmail.gandi.net (webmail4-d.mgt.gandi.net [10.58.1.144]) (Authenticated sender: anything@michielbdejong.com) by relay3-d.mail.gandi.net (Postfix) with ESMTPA id 3F0B2A80E4 for <tosdr@googlegroups.com>; Mon, 11 Mar 2013 13:18:58 +0100 (CET)"
+          ],
+          "received-spf": "neutral (google.com: 217.70.183.195 is neither permitted nor denied by best guess record for domain of anything@michielbdejong.com) client-ip=217.70.183.195;",
+          "references": "<10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com> <8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com> <49f50811ecb496234b78c89dc9fffe6c@michielbdejong.com> <E7621372-569B-49B4-9971-A3867433C384@gmail.com>",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBCN23IMP34ARBPUX66EQKGQEACF4D3Q@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "Re: [tosdr:1645] Re: who wants to help create an html form on tosdr.org?",
+          "to": "<tosdr@googlegroups.com>",
+          "user-agent": "Roundcube Webmail/0.7.2",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-authentication-results": "gmr-mx.google.com;       spf=neutral (google.com: 217.70.183.195 is neither permitted nor denied by best guess record for domain of anything@michielbdejong.com) smtp.mail=anything@michielbdejong.com",
+          "x-original-sender": "anything@michielbdejong.com",
+          "x-originating-ip": "10.58.1.144",
+          "x-policy": "10.58.1.144 is whitelisted",
+          "x-received": [
+            "by 10.180.78.197 with SMTP id d5mr683702wix.13.1363004351780; Mon, 11 Mar 2013 05:19:11 -0700 (PDT)",
+            "by 10.180.19.132 with SMTP id f4mr2270960wie.2.1363004350316; Mon, 11 Mar 2013 05:19:10 -0700 (PDT)"
+          ],
+          "x-sender": "anything@michielbdejong.com",
+          "x-virus-scanned": [
+            "Debian amavisd-new at mfilter23-d.gandi.net",
+            "Debian amavisd-new at mfilter3-d.gandi.net"
+          ]
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 509,
+        "inReplyTo": [
+          "E7621372-569B-49B4-9971-A3867433C384@gmail.com"
+        ],
+        "messageId": "48d114fb79ce4b70a7372bff3779899e@michielbdejong.com",
+        "priority": "normal",
+        "references": [
+          "10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com",
+          "8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com",
+          "49f50811ecb496234b78c89dc9fffe6c@michielbdejong.com",
+          "E7621372-569B-49B4-9971-A3867433C384@gmail.com"
+        ],
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "subject": "Re: [tosdr:1645] Re: who wants to help create an html form on tosdr.org?",
+        "text": "On 2013-03-11 20:28, Sebastian Kippe wrote:\n> And btw, you can also pull both the PRs and the discussions to the\n> website via the API.\n\nhm, then it could make sense. and if we say 'log in with github' instead of 'log in with Persona' then we can submit the data point into the github api without the user ever having to set foot on github. i agree it's an advantage that it feels more transparent if the whole life cycle of a data point is in one place (namely in that case github, reflected one-to-one on tosdr.org).\n\ni'll think about it some more. also interested in what Hugo and Julien think of this?\n\n\ncheers,\nMichiel\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- You received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr?hl=en.\nFor more options, visit https://groups.google.com/groups/opt_out.\n\n\n",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1399188572263",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1363004337000,
+      "verb": "unknown"
+    },
     "49f50811ecb496234b78c89dc9fffe6c@michielbdejong.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
