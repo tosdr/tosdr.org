@@ -1,5 +1,58 @@
 {
   "posts": {
+    "20130625110920.GI23321@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-06-25T11:09:20.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 25 Jun 2013 13:09:20 +0200",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<2616cf8bffbca244140804a7c6ae0779@michielbdejong.com>",
+          "message-id": "<20130625110920.GI23321@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:2335] transparency reports",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 5997,
+        "inReplyTo": [
+          "2616cf8bffbca244140804a7c6ae0779@michielbdejong.com"
+        ],
+        "messageId": "20130625110920.GI23321@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2335] transparency reports",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148698784",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372158560000,
+      "verb": "unknown"
+    },
     "2616cf8bffbca244140804a7c6ae0779@michielbdejong.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

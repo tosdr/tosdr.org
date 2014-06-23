@@ -100,6 +100,59 @@
       },
       "timestamp": 1362470217000,
       "verb": "unknown"
+    },
+    "bbf1960a-2402-4e64-baaa-a0f01c008207@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-05-22T12:44:43.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 22 May 2013 05:44:43 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<1d5eb21c4cf95e83fdcd1d24198adb75@michielbdejong.com>",
+          "message-id": "<bbf1960a-2402-4e64-baaa-a0f01c008207@googlegroups.com>",
+          "subject": "[tosdr:2190] Re: [Good] Amazon emphasizes you can always choose not to provide information",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 4092,
+        "inReplyTo": [
+          "1d5eb21c4cf95e83fdcd1d24198adb75@michielbdejong.com"
+        ],
+        "messageId": "bbf1960a-2402-4e64-baaa-a0f01c008207@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2190] Re: [Good] Amazon emphasizes you can always choose not to provide information",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393147849542",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1369226683000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1587] [Good] Amazon emphasizes you can always choose not to provide information"

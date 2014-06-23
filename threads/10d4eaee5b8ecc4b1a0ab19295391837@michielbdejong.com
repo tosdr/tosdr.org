@@ -99,6 +99,118 @@
       },
       "timestamp": 1362917658000,
       "verb": "unknown"
+    },
+    "8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "sebastiankippe@gmail.com",
+          "name": ""
+        }
+      ],
+      "conversationName": "email: sebastiankippe@gmail.com",
+      "object": {
+        "cc": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": ""
+          }
+        ],
+        "date": "2013-03-10T13:22:03.000Z",
+        "from": [
+          {
+            "address": "sebastiankippe@gmail.com",
+            "name": ""
+          }
+        ],
+        "headers": {
+          "cc": "anything@michielbdejong.com",
+          "content-transfer-encoding": "quoted-printable",
+          "content-type": "text/plain; charset=windows-1252",
+          "date": "Sun, 10 Mar 2013 06:22:03 -0700 (PDT)",
+          "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": [
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=x-received:x-beenthere:x-received:date:from:to:cc:message-id :in-reply-to:references:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-google-group-id :list-post:list-help:list-archive:sender:list-subscribe :list-unsubscribe:content-type:content-transfer-encoding; bh=BjpzT3wQwFYWGATSfSCvVBjYr0VBrPTU8Z7P9FbKO7M=; b=zTPwvK1Yz0N4SigT/mVfx/Fp8bI8crbV7rPkgKiiVKVk3DQeh56UDKWNH2q8TrQdR0 T95uFXKxUiDlZ0iTWmnzgDuUnqQ1UL3OtnPl1Nl08KF4v8Hxf8CoUYzzMN4deXMqAUKg ss7XllSW4EqO+s88Y/aCVbLFlXOE1TES6jeEJnt7vvK6kTBHbPqS8AxUJ/5y0mmYTi9S IsXiEXXf6p0ktEtJDborcL4QcW41weq0gsaWfR0N5cRvVFeglcoUnNkWcz6q0HGfxXz1 NFDPG4wGjJ0/khtgZ05Yx1nlG2AkH04Lue4U2OMkVxvi74m2h63d8WRgR3zqZ6OWD8lc dfHg==",
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=x-received:x-beenthere:x-received:date:from:to:cc:message-id :in-reply-to:references:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-google-group-id :list-post:list-help:list-archive:sender:list-subscribe :list-unsubscribe:content-type:content-transfer-encoding; bh=BjpzT3wQwFYWGATSfSCvVBjYr0VBrPTU8Z7P9FbKO7M=; b=N6k9k9e9Zc5sNRyrDeg1C5OQza/MdvNCwGmuuITwdJ4gQgNKpDU3WwGAudiG3wD8lM LVBoPcXsDqy9QYxvBiY6HAF4chDcBTg7JLjNIYF81R9jo0F6h8cv8LOEX2T8daD5PD8p k+96Oeui2NgcywoW918cmnnJS5AjVcq/NlzHY/m/7MghDktaFnN6IyhpJFx8dO4tpzrU LQRpVbLz4WlgXRs5MzEltdKM4NhhofWY7D7ukdz8NHT6YWHqPtfCXzgLeKvn+iq2tXoD 5DecD3a5NMIzcLXEHyYBhq4wjclJppUhjWpOTUilm7cNmN1tpKmvS55D7WXgrpti6ISe lNOA=="
+          ],
+          "from": "sebastiankippe@gmail.com",
+          "in-reply-to": "<10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr?hl=en>",
+          "list-help": "<http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
+          "received": [
+            "from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131]) by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 2A8F2161735 for <anything@michielbdejong.com>; Sun, 10 Mar 2013 14:22:11 +0100 (CET)",
+            "from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129]) by spool.mail.gandi.net (Postfix) with ESMTP id 27BBA226083; Sun, 10 Mar 2013 14:22:11 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.131]) by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id SroTKE64A94w; Sun, 10 Mar 2013 14:22:09 +0100 (CET)",
+            "from mail-ie0-x23c.google.com (mail-ie0-x23c.google.com [IPv6:2607:f8b0:4001:c03::23c]) by spool.mail.gandi.net (Postfix) with ESMTPS id 4A25C226087; Sun, 10 Mar 2013 14:22:06 +0100 (CET)",
+            "by mail-ie0-f188.google.com with SMTP id 16sf1321539iea.25 for <multiple recipients>; Sun, 10 Mar 2013 06:22:05 -0700 (PDT)",
+            "by 10.49.24.13 with SMTP id q13ls711563qef.57.gmail; Sun, 10 Mar 2013 06:22:03 -0700 (PDT)"
+          ],
+          "references": "<10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com>",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBD47BXFE3IDRB64R6KEQKGQED4ZOXJA@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:1642] Re: who wants to help create an html form on tosdr.org?",
+          "to": "tosdr@googlegroups.com",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-sender": "sebastiankippe@gmail.com",
+          "x-received": [
+            "by 10.49.30.100 with SMTP id r4mr552461qeh.32.1362921724816; Sun, 10 Mar 2013 06:22:04 -0700 (PDT)",
+            "by 10.49.71.50 with SMTP id r18mr566357qeu.26.1362921723442; Sun, 10 Mar 2013 06:22:03 -0700 (PDT)"
+          ],
+          "x-virus-scanned": "Debian amavisd-new at mfilter12-d.gandi.net"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 487,
+        "inReplyTo": [
+          "10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com"
+        ],
+        "messageId": "8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com",
+        "priority": "normal",
+        "references": [
+          "10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com"
+        ],
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "subject": "[tosdr:1642] Re: who wants to help create an html form on tosdr.org?",
+        "text": "I don't see how all of this makes it so much easier, when looking at work involved and new problems/bottlenecks. Also, you're asking for someone to build a specific solution instead of getting feedback on the whole concept first.\n\nHere's what I would propose – no server or SSH or manual work needed, all transparent (and manageable by anyone, no credentials needed):\n\n* Build a form for creating a new point\n* Validate the input with a JSON schema you create for your JSON formats\n* Show output JSON to copy to GitHub\n* Link to the according create-a-new-file form on GitHub and say to paste there and hit save (maybe this step needs more thinking about UX)\n* User hits save on GitHub and automatically forks and creates a pull request with just one hit on the save button. No Git skills needed.\n\nI thought about this for adding JSON data to an app I created for Hacker Beach, and I think it would be possible to make this a convenient workflow. The best thing: You can discuss everything in the pull request, make line comments, have notifications, etc. It's so much better than having it uncategorized in a mailing list and detached from the actual content that's going to be merged. Also, everyone else can fork a proposed change and improve and make another PR, if needed. And the reviewer has everything in one place.\n\nIf this sounds remotely possible or interesting, you should probably consider rethinking your concept before implementing something that may be even more complicated instead of easier than now.\n\nCheers,\nBasti\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr?hl=en.\nFor more options, visit https://groups.google.com/groups/opt_out.\n\n\n",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1399188568746",
+      "target": {
+        "cc": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": ""
+          }
+        ],
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1362921723000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1640] who wants to help create an html form on tosdr.org?"

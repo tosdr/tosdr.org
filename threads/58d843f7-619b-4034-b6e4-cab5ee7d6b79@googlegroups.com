@@ -90,6 +90,59 @@
       },
       "timestamp": 1366719243000,
       "verb": "unknown"
+    },
+    "9f70cfea-4173-4e33-9416-4efc27370f84@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-04-24T11:38:55.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 24 Apr 2013 04:38:55 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<58d843f7-619b-4034-b6e4-cab5ee7d6b79@googlegroups.com>",
+          "message-id": "<9f70cfea-4173-4e33-9416-4efc27370f84@googlegroups.com>",
+          "subject": "[tosdr:1733] Re: [Bad] Spotify doesn't guarantee quality of service",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 2090,
+        "inReplyTo": [
+          "58d843f7-619b-4034-b6e4-cab5ee7d6b79@googlegroups.com"
+        ],
+        "messageId": "9f70cfea-4173-4e33-9416-4efc27370f84@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:1733] Re: [Bad] Spotify doesn't guarantee quality of service",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393145129375",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1366803535000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1710] [Bad] Spotify doesn't guarantee quality of service"

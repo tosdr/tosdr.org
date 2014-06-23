@@ -47,6 +47,59 @@
       },
       "timestamp": 1381546256000,
       "verb": "unknown"
+    },
+    "525A3827.2070208@michielbdejong.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "anything@michielbdejong.com",
+          "name": "Michiel B. de Jong"
+        }
+      ],
+      "conversationName": "email: \"Michiel B. de Jong\" &lt;anything@michielbdejong.com&gt;",
+      "object": {
+        "date": "2013-10-13T06:05:27.000Z",
+        "from": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": "Michiel B. de Jong"
+          }
+        ],
+        "headers": {
+          "date": "Sun, 13 Oct 2013 09:05:27 +0300",
+          "from": "\"Michiel B. de Jong\" <anything@michielbdejong.com>",
+          "in-reply-to": "<38c0033e-fea2-4471-b6bf-26d750a9ea89@googlegroups.com>",
+          "message-id": "<525A3827.2070208@michielbdejong.com>",
+          "subject": "Re: [tosdr:2750] Google TOS changes",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 11644,
+        "inReplyTo": [
+          "38c0033e-fea2-4471-b6bf-26d750a9ea89@googlegroups.com"
+        ],
+        "messageId": "525A3827.2070208@michielbdejong.com",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2750] Google TOS changes",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1381644327000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1381644327000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:2749] Google TOS changes"

@@ -100,6 +100,95 @@
       },
       "timestamp": 1362483850000,
       "verb": "unknown"
+    },
+    "b039e11f-aaa5-460c-8e32-f1bd5edb290c@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "tobi.lehman@gmail.com",
+          "name": "Tobi Lehman"
+        }
+      ],
+      "conversationName": "email: \"Tobi Lehman\" &lt;tobi.lehman@gmail.com&gt;",
+      "object": {
+        "cc": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": ""
+          }
+        ],
+        "date": "2013-03-07T14:50:34.000Z",
+        "from": [
+          {
+            "address": "tobi.lehman@gmail.com",
+            "name": "Tobi Lehman"
+          }
+        ],
+        "headers": {
+          "cc": "anything@michielbdejong.com",
+          "content-type": "multipart/mixed; boundary=\"----=_Part_1255_10028778.1362667834971\"",
+          "date": "Thu, 7 Mar 2013 06:50:34 -0800 (PST)",
+          "delivered-to": "anything@michielbdejong.com",
+          "from": "Tobi Lehman <tobi.lehman@gmail.com>",
+          "in-reply-to": "<40ac4666e088cda1d749cbdcf5e91cfc@michielbdejong.com>",
+          "message-id": "<b039e11f-aaa5-460c-8e32-f1bd5edb290c@googlegroups.com>",
+          "mime-version": "1.0",
+          "received": [
+            "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id B837A161739 for <anything@michielbdejong.com>; Thu,  7 Mar 2013 15:50:41 +0100 (CET)",
+            "from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145]) by spool.mail.gandi.net (Postfix) with ESMTP id B51321420A2 for <anything@michielbdejong.com>; Thu,  7 Mar 2013 15:50:41 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.135]) by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id Bq4dV9NscVC5 for <anything@michielbdejong.com>; Thu,  7 Mar 2013 15:50:40 +0100 (CET)",
+            "from mail-gh0-f184.google.com (mail-gh0-f184.google.com [209.85.160.184]) by spool.mail.gandi.net (Postfix) with ESMTPS id 16DE21420A6 for <anything@michielbdejong.com>; Thu,  7 Mar 2013 15:50:36 +0100 (CET)",
+            "by mail-gh0-f184.google.com with SMTP id f11so221326ghb.11 for <anything@michielbdejong.com>; Thu, 07 Mar 2013 06:50:35 -0800 (PST)"
+          ],
+          "references": "<40ac4666e088cda1d749cbdcf5e91cfc@michielbdejong.com>",
+          "return-path": "<tobi.lehman@gmail.com>",
+          "subject": "Re: [Bad] you agree not to reverse-engineer mint.com's software",
+          "to": "tosdr@googlegroups.com",
+          "x-google-doc-id": "8798d2bc2d0f1aa4",
+          "x-google-ip": "216.228.167.147",
+          "x-google-token": "ELrS4okFguWIa6gpeuU0",
+          "x-google-web-client": "true",
+          "x-received": "by 10.50.236.101 with SMTP id ut5mr2733474igc.17.1362667835708; Thu, 07 Mar 2013 06:50:35 -0800 (PST)",
+          "x-virus-scanned": "Debian amavisd-new at mfilter17-d.gandi.net"
+        },
+        "html": "I agree, reverse-engineering typically leads to a different implementation that has the same outward behavior. Also, how detailed is this condition?<div><br></div><div>If I create a program that categorizes transactions in a way that resembles mint.com's scheme, is that illegal?<br><br>On Tuesday, March 5, 2013 3:44:10 AM UTC-8, anyt...@michielbdejong.com wrote:<blockquote class=\"gmail_quote\" style=\"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;\">\"You agree that you will not [...] Attempt to decipher, decompile, \n<br>disassemble, or reverse-engineer any of the software comprising or in \n<br>any way making up a part of Mint.com or the Service.\"\n<br><a href=\"https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/mint.com/Terms%20of%20Use.txt#L132\" target=\"_blank\">https://github.com/tosdr/<wbr>tosback2/blob/<wbr>265e49bf24a91076495ce1fddf279c<wbr>4638421a66/crawl/mint.com/<wbr>Terms%20of%20Use.txt#L132</a>\n<br>\n<br>it's fair enough that you may not crawl their site in an automated way, \n<br>but as i said in the Amazon data point about the same topic, just trying \n<br>to reverse-engineer the products you consume should not be considered a \n<br>crime.\n<br>\n<br></blockquote></div>",
+        "imapBox": "INBOX",
+        "imapSeqNo": 420,
+        "inReplyTo": [
+          "40ac4666e088cda1d749cbdcf5e91cfc@michielbdejong.com"
+        ],
+        "messageId": "b039e11f-aaa5-460c-8e32-f1bd5edb290c@googlegroups.com",
+        "priority": "normal",
+        "references": [
+          "40ac4666e088cda1d749cbdcf5e91cfc@michielbdejong.com"
+        ],
+        "subject": "Re: [Bad] you agree not to reverse-engineer mint.com's software",
+        "text": "I agree, reverse-engineering typically leads to a different implementation \nthat has the same outward behavior. Also, how detailed is this condition?\n\nIf I create a program that categorizes transactions in a way that resembles \nmint.com's scheme, is that illegal?\n\nOn Tuesday, March 5, 2013 3:44:10 AM UTC-8, anyt...@michielbdejong.com \nwrote:\n>\n> \"You agree that you will not [...] Attempt to decipher, decompile, \n> disassemble, or reverse-engineer any of the software comprising or in \n> any way making up a part of Mint.com or the Service.\" \n>\n> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/mint.com/Terms%20of%20Use.txt#L132 \n>\n> it's fair enough that you may not crawl their site in an automated way, \n> but as i said in the Amazon data point about the same topic, just trying \n> to reverse-engineer the products you consume should not be considered a \n> crime. \n>\n>",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1386547989000",
+      "target": {
+        "cc": [
+          {
+            "address": "anything@michielbdejong.com",
+            "name": ""
+          }
+        ],
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1362667834000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1603] [Bad] you agree not to reverse-engineer mint.com's software"

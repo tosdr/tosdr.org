@@ -100,6 +100,59 @@
       },
       "timestamp": 1362486645000,
       "verb": "unknown"
+    },
+    "5a6dfe20-51a3-4718-a702-54783dd8bf80@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-05-08T16:35:16.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 8 May 2013 09:35:16 -0700 (PDT)",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<4a056b6682dce6d8828fe941d66fe369@michielbdejong.com>",
+          "message-id": "<5a6dfe20-51a3-4718-a702-54783dd8bf80@googlegroups.com>",
+          "subject": "Re: [Good] mint.com is TRUSTe certified",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 3106,
+        "inReplyTo": [
+          "4a056b6682dce6d8828fe941d66fe369@michielbdejong.com"
+        ],
+        "messageId": "5a6dfe20-51a3-4718-a702-54783dd8bf80@googlegroups.com",
+        "priority": "normal",
+        "subject": "Re: [Good] mint.com is TRUSTe certified",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393145145530",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1368030916000,
+      "verb": "unknown"
     }
   },
   "subject": "[tosdr:1612] [Good] mint.com is TRUSTe certified"

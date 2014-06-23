@@ -1,5 +1,58 @@
 {
   "posts": {
+    "033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-05-23T12:31:32.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Thu, 23 May 2013 05:31:32 -0700 (PDT)",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<ea2c6f26-3b99-44f7-9a16-738f69da447d@googlegroups.com>",
+          "message-id": "<033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com>",
+          "subject": "[tosdr:2233] Re: People's Terms of Service Contract",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 4244,
+        "inReplyTo": [
+          "ea2c6f26-3b99-44f7-9a16-738f69da447d@googlegroups.com"
+        ],
+        "messageId": "033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2233] Re: People's Terms of Service Contract",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393148282281",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1369312292000,
+      "verb": "unknown"
+    },
     "ea2c6f26-3b99-44f7-9a16-738f69da447d@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

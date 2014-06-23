@@ -1,5 +1,58 @@
 {
   "posts": {
+    "46810037-d7b2-4024-9a31-fe92e1b77135@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-05-08T15:52:45.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 8 May 2013 08:52:45 -0700 (PDT)",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<a9e612a2-9bcf-4ae4-aadc-9f603cbe64d1@googlegroups.com>",
+          "message-id": "<46810037-d7b2-4024-9a31-fe92e1b77135@googlegroups.com>",
+          "subject": "[tosdr:1993] Re: JAGEX [BAD] You don't own virtual currency, and your use of it can be revoked at any time",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 3085,
+        "inReplyTo": [
+          "a9e612a2-9bcf-4ae4-aadc-9f603cbe64d1@googlegroups.com"
+        ],
+        "messageId": "46810037-d7b2-4024-9a31-fe92e1b77135@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:1993] Re: JAGEX [BAD] You don't own virtual currency, and your use of it can be revoked at any time",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1368028365000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1368028365000,
+      "verb": "unknown"
+    },
     "a9e612a2-9bcf-4ae4-aadc-9f603cbe64d1@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

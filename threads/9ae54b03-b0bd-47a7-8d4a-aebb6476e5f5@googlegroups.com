@@ -1,5 +1,58 @@
 {
   "posts": {
+    "2d79fe60-0aa7-4e79-acf3-8aa88975c6a6@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "irmcgowan@gmail.com",
+          "name": "Ian McGowan"
+        }
+      ],
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
+      "object": {
+        "date": "2013-07-08T20:00:36.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
+        "headers": {
+          "date": "Mon, 8 Jul 2013 13:00:36 -0700 (PDT)",
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "in-reply-to": "<9ae54b03-b0bd-47a7-8d4a-aebb6476e5f5@googlegroups.com>",
+          "message-id": "<2d79fe60-0aa7-4e79-acf3-8aa88975c6a6@googlegroups.com>",
+          "subject": "[tosdr:2469] Re: [note] You can opt out of certain emails",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6879,
+        "inReplyTo": [
+          "9ae54b03-b0bd-47a7-8d4a-aebb6476e5f5@googlegroups.com"
+        ],
+        "messageId": "2d79fe60-0aa7-4e79-acf3-8aa88975c6a6@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2469] Re: [note] You can opt out of certain emails",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1373313636000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1373313636000,
+      "verb": "unknown"
+    },
     "9ae54b03-b0bd-47a7-8d4a-aebb6476e5f5@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [

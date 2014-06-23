@@ -1,5 +1,58 @@
 {
   "posts": {
+    "20130626084719.GM19397@synclavier.ampoliros.net": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
+      "actor": [
+        {
+          "address": "hugo@tosdr.org",
+          "name": "Hugo Roy"
+        }
+      ],
+      "conversationName": "email: \"Hugo Roy\" &lt;hugo@tosdr.org&gt;",
+      "object": {
+        "date": "2013-06-26T08:47:19.000Z",
+        "from": [
+          {
+            "address": "hugo@tosdr.org",
+            "name": "Hugo Roy"
+          }
+        ],
+        "headers": {
+          "date": "Wed, 26 Jun 2013 10:47:19 +0200",
+          "from": "Hugo Roy <hugo@tosdr.org>",
+          "in-reply-to": "<f056594e-4218-4e2f-9599-655b7d7e1a5e@googlegroups.com>",
+          "message-id": "<20130626084719.GM19397@synclavier.ampoliros.net>",
+          "subject": "Re: [tosdr:2342] Google not obliged to delete data",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 6048,
+        "inReplyTo": [
+          "f056594e-4218-4e2f-9599-655b7d7e1a5e@googlegroups.com"
+        ],
+        "messageId": "20130626084719.GM19397@synclavier.ampoliros.net",
+        "priority": "normal",
+        "subject": "Re: [tosdr:2342] Google not obliged to delete data",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1372194244000",
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1372236439000,
+      "verb": "unknown"
+    },
     "f056594e-4218-4e2f-9599-655b7d7e1a5e@googlegroups.com": {
       "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
