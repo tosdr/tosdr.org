@@ -1,90 +1,15 @@
 {
-  "posts": [
-    {
-      "timestamp": 1396002470000,
+  "posts": {
+    "53354EA6.7060703@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "pascal.joller@gmail.com",
           "name": "Pascal Joller"
         }
       ],
-      "target": {
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ]
-      },
+      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
       "object": {
-        "text": "i didnt found this in the TOS, but:\n\n- they delete your account without, mentioning why, they just generally point to artice §4 or §6 - §10 of their policies. they would give you more deteiled information. they can't recover your project.\n\nbad\n\n- they inform you about it. - they say you have 28 day time to save your data via ftp. -  no acees to mysql - which is were the important data lives mostly\n\nand thy remove the links to ftp and mysql, you wont find it if you havent saved it by yourself before..\n\n",
-        "headers": {
-          "return-path": "<tosdr+bncBD73Z4NJ44PRBJE52WMQKGQE7FIGR7Y@googlegroups.com>",
-          "delivered-to": "anything@michielbdejong.com",
-          "received": [
-            "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 5C1AA40F40 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:28:22 +0100 (CET)",
-            "from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135]) by spool.mail.gandi.net (Postfix) with ESMTP id 5935A14231C for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:28:22 +0100 (CET)",
-            "from spool.mail.gandi.net ([10.0.21.135]) by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id o4Dq4g16-FEZ for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:27:50 +0100 (CET)",
-            "from mail-la0-x238.google.com (mail-la0-x238.google.com [IPv6:2a00:1450:4010:c03::238]) by spool.mail.gandi.net (Postfix) with ESMTPS id 2E85F1422F2 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:27:50 +0100 (CET)",
-            "by mail-la0-f56.google.com with SMTP id hr13sf278001lab.21 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "by 10.152.182.103 with SMTP id ed7ls241022lac.49.gmail; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "from mail-ee0-x231.google.com (mail-ee0-x231.google.com [2a00:1450:4013:c00::231]) by gmr-mx.google.com with ESMTPS id m49si528746eeu.0.2014.03.28.03.27.48 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "by mail-ee0-f49.google.com with SMTP id c41so3905735eek.36 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id n41sm10703287eeg.4.2014.03.28.03.27.46 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 03:27:47 -0700 (PDT)"
-          ],
-          "x-virus-scanned": "Debian amavisd-new at mfilter6-d.gandi.net",
-          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=GBMzQeoCsHeMi3HOmLjNx351HkwlC2Tv9Ix/KvRKNWQ=; b=isGRgP+w47fp/X0iCpg632aq2WuN2PJzR7ELCfAAAapBOKTPMF51vEFG9T0iPAmEAb 0bTWJRXrWHGCDyQHYE1R0CrvHCjPqwv9Qc8KZX/NBFb5L26ZLpE5YEWK225xaQzhXLNx RXOVunG3JZXBsUBVjL1pkPmCO0yYtshsXgZtoigFWXKjI4G947m/fnrGlhSjk8lr/0qc 2UQIwgCnBFq5AcTeK/WJ9zUav3jG/tROvLfbmi0LThm8buoSvTo8ArkuRDGOUrmA390m eMJWenWpr+HHe7Bx+S0daIuGV7d0xzgM9lqg466W/AJ/+gBQA5z8REkhyRLzRrGjwgNF WjVA==",
-          "x-received": [
-            "by 10.152.4.4 with SMTP id g4mr7753lag.7.1396002468936; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "by 10.112.145.162 with SMTP id sv2mr3232723lbb.15.1396002468437; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
-            "by 10.14.115.1 with SMTP id d1mr8938098eeh.30.1396002468348; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)"
-          ],
-          "x-beenthere": "tosdr@googlegroups.com",
-          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::231 as permitted sender) client-ip=2a00:1450:4013:c00::231;",
-          "message-id": "<53354EA6.7060703@gmail.com>",
-          "date": "Fri, 28 Mar 2014 11:27:50 +0100",
-          "from": "Pascal Joller <pascal.joller@gmail.com>",
-          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
-          "mime-version": "1.0",
-          "to": "tosdr@googlegroups.com",
-          "subject": "[tosdr:2977] Kilu.de - General - Account deletion",
-          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms070101040006030508090309\"",
-          "x-original-sender": "pascal.joller@gmail.com",
-          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::231 as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
-          "reply-to": "tosdr@googlegroups.com",
-          "precedence": "list",
-          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
-          "list-id": "<tosdr.googlegroups.com>",
-          "x-google-group-id": "966240515290",
-          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
-          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
-          "list-archive": "<http://groups.google.com/group/tosdr>",
-          "sender": "tosdr@googlegroups.com",
-          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
-          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>"
-        },
-        "subject": "[tosdr:2977] Kilu.de - General - Account deletion",
-        "messageId": "53354EA6.7060703@gmail.com",
-        "priority": "normal",
-        "from": [
-          {
-            "address": "pascal.joller@gmail.com",
-            "name": "Pascal Joller"
-          }
-        ],
-        "replyTo": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "date": "2014-03-28T10:27:50.000Z",
         "attachments": [
           {
             "contentType": "application/pkcs7-signature",
@@ -3847,15 +3772,90 @@
             ]
           }
         ],
+        "date": "2014-03-28T10:27:50.000Z",
+        "from": [
+          {
+            "address": "pascal.joller@gmail.com",
+            "name": "Pascal Joller"
+          }
+        ],
+        "headers": {
+          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms070101040006030508090309\"",
+          "date": "Fri, 28 Mar 2014 11:27:50 +0100",
+          "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=GBMzQeoCsHeMi3HOmLjNx351HkwlC2Tv9Ix/KvRKNWQ=; b=isGRgP+w47fp/X0iCpg632aq2WuN2PJzR7ELCfAAAapBOKTPMF51vEFG9T0iPAmEAb 0bTWJRXrWHGCDyQHYE1R0CrvHCjPqwv9Qc8KZX/NBFb5L26ZLpE5YEWK225xaQzhXLNx RXOVunG3JZXBsUBVjL1pkPmCO0yYtshsXgZtoigFWXKjI4G947m/fnrGlhSjk8lr/0qc 2UQIwgCnBFq5AcTeK/WJ9zUav3jG/tROvLfbmi0LThm8buoSvTo8ArkuRDGOUrmA390m eMJWenWpr+HHe7Bx+S0daIuGV7d0xzgM9lqg466W/AJ/+gBQA5z8REkhyRLzRrGjwgNF WjVA==",
+          "from": "Pascal Joller <pascal.joller@gmail.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr>",
+          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<53354EA6.7060703@gmail.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
+          "received": [
+            "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 5C1AA40F40 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:28:22 +0100 (CET)",
+            "from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135]) by spool.mail.gandi.net (Postfix) with ESMTP id 5935A14231C for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:28:22 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.135]) by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id o4Dq4g16-FEZ for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:27:50 +0100 (CET)",
+            "from mail-la0-x238.google.com (mail-la0-x238.google.com [IPv6:2a00:1450:4010:c03::238]) by spool.mail.gandi.net (Postfix) with ESMTPS id 2E85F1422F2 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 11:27:50 +0100 (CET)",
+            "by mail-la0-f56.google.com with SMTP id hr13sf278001lab.21 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "by 10.152.182.103 with SMTP id ed7ls241022lac.49.gmail; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "from mail-ee0-x231.google.com (mail-ee0-x231.google.com [2a00:1450:4013:c00::231]) by gmr-mx.google.com with ESMTPS id m49si528746eeu.0.2014.03.28.03.27.48 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "by mail-ee0-f49.google.com with SMTP id c41so3905735eek.36 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id n41sm10703287eeg.4.2014.03.28.03.27.46 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 03:27:47 -0700 (PDT)"
+          ],
+          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::231 as permitted sender) client-ip=2a00:1450:4013:c00::231;",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBD73Z4NJ44PRBJE52WMQKGQE7FIGR7Y@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:2977] Kilu.de - General - Account deletion",
+          "to": "tosdr@googlegroups.com",
+          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::231 as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+          "x-original-sender": "pascal.joller@gmail.com",
+          "x-received": [
+            "by 10.152.4.4 with SMTP id g4mr7753lag.7.1396002468936; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "by 10.112.145.162 with SMTP id sv2mr3232723lbb.15.1396002468437; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)",
+            "by 10.14.115.1 with SMTP id d1mr8938098eeh.30.1396002468348; Fri, 28 Mar 2014 03:27:48 -0700 (PDT)"
+          ],
+          "x-virus-scanned": "Debian amavisd-new at mfilter6-d.gandi.net"
+        },
         "imapBox": "INBOX",
-        "imapSeqNo": 20087
+        "imapSeqNo": 20087,
+        "messageId": "53354EA6.7060703@gmail.com",
+        "priority": "normal",
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "subject": "[tosdr:2977] Kilu.de - General - Account deletion",
+        "text": "i didnt found this in the TOS, but:\n\n- they delete your account without, mentioning why, they just generally point to artice §4 or §6 - §10 of their policies. they would give you more deteiled information. they can't recover your project.\n\nbad\n\n- they inform you about it. - they say you have 28 day time to save your data via ftp. -  no acees to mysql - which is were the important data lives mostly\n\nand thy remove the links to ftp and mysql, you wont find it if you havent saved it by yourself before..\n\n",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
       },
       "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
       "previous": "1396002470000",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1396002470000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:2977] Kilu.de - General - Account deletion"
 }

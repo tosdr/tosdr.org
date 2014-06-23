@@ -1,13 +1,43 @@
 {
-  "posts": [
-    {
-      "timestamp": 1390688366000,
+  "posts": {
+    "4d2d4c8e-1473-4d86-898e-647321eb2bc1@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "kissaki0@gmail.com",
           "name": ""
         }
       ],
+      "conversationName": "email: kissaki0@gmail.com",
+      "object": {
+        "date": "2014-01-25T22:19:26.000Z",
+        "from": [
+          {
+            "address": "kissaki0@gmail.com",
+            "name": ""
+          }
+        ],
+        "headers": {
+          "date": "Sat, 25 Jan 2014 14:19:26 -0800 (PST)",
+          "from": "kissaki0@gmail.com",
+          "message-id": "<4d2d4c8e-1473-4d86-898e-647321eb2bc1@googlegroups.com>",
+          "subject": "[tosdr:2917] Twitch [Info] (User) Data is transferred to the USA",
+          "to": "tosdr@googlegroups.com"
+        },
+        "imapBox": "INBOX",
+        "imapSeqNo": 16777,
+        "messageId": "4d2d4c8e-1473-4d86-898e-647321eb2bc1@googlegroups.com",
+        "priority": "normal",
+        "subject": "[tosdr:2917] Twitch [Info] (User) Data is transferred to the USA",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "platform": "email",
+      "previous": "1393125466990",
       "target": {
         "to": [
           {
@@ -16,39 +46,9 @@
           }
         ]
       },
-      "object": {
-        "headers": {
-          "date": "Sat, 25 Jan 2014 14:19:26 -0800 (PST)",
-          "from": "kissaki0@gmail.com",
-          "to": "tosdr@googlegroups.com",
-          "message-id": "<4d2d4c8e-1473-4d86-898e-647321eb2bc1@googlegroups.com>",
-          "subject": "[tosdr:2917] Twitch [Info] (User) Data is transferred to the USA"
-        },
-        "subject": "[tosdr:2917] Twitch [Info] (User) Data is transferred to the USA",
-        "messageId": "4d2d4c8e-1473-4d86-898e-647321eb2bc1@googlegroups.com",
-        "priority": "normal",
-        "from": [
-          {
-            "address": "kissaki0@gmail.com",
-            "name": ""
-          }
-        ],
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "date": "2014-01-25T22:19:26.000Z",
-        "imapBox": "INBOX",
-        "imapSeqNo": 16777
-      },
-      "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: kissaki0@gmail.com",
-      "previous": "1393125466990",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "timestamp": 1390688366000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:2917] Twitch [Info] (User) Data is transferred to the USA"
 }

@@ -1,91 +1,15 @@
 {
-  "posts": [
-    {
-      "timestamp": 1395999646000,
+  "posts": {
+    "5335439E.4030801@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "pascal.joller@gmail.com",
           "name": "Pascal Joller"
         }
       ],
-      "target": {
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ]
-      },
+      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
       "object": {
-        "html": "<html>\n  <head>\n\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n  </head>\n  <body text=\"#000000\" bgcolor=\"#FFFFFF\">\n    2c<br>\n    Der Nutzer willigt hiermit gegenüber kilu.de ausdrücklich ein, dass\n    kilu.de seine Bestandsdaten für Zwecke der Beratung, der Werbung,\n    der Marktforschung oder zur bedarfsgerechten Gestaltung und\n    Weiterentwicklung seiner Dienste nutzt (Eigennutzung durch kilu.de).\n    Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser\n    E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu\n    bestätigen.<br>\n    <br>\n    - kilu, will save, userdata and use it for ads, consulting, market\n    research, or for the developement of their services. You can send a\n    fromless email if you want to stop them making that, thei will have\n    to confirm this avoidance<br>\n    <br>\n    <br>\n    <br>\n    2d<br>\n    <br>\n    <b>Der Nutzer willigt darüber hinaus gegenüber kilu.de ausdrücklich\n      ein, dass kilu.de gewonnene Bestandsdaten und Nutzungsdaten des\n      jeweiligen Nutzers Dritten zur Speicherung, Nutzung und/oder\n      Verarbeitung - auch entgeltlich - zur Verfügung stellt, wobei\n      diese Weitergabe auf Organisationen und Unternehmen beschränkt\n      wird, die den kilu.de - anhand der Nutzungsdaten- erkennbaren\n      Interessen und mutmaßlichen Wünschen des Nutzers entgegenkommen.\n      Eine Weitergabe der personenbezogenen Daten an Dritte oder einen\n      anderen Dienstanbieter wird kilu.de dem Nutzer anzeigen, § 4 V\n      TDDSG. Der Nutzer willigt ausdrücklich gegenüber kilu.de ein, dass\n      diese Organisationen und Unternehmen dem Nutzer Informationen,\n      Angebote, Muster und Werbung (per Post, per E-Mail und Telefon)\n      zukommen lassen dürfen. Der Nutzer kann diese Einwilligung\n      gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist\n      verpflichtet, den Widerruf zu bestätigen.<br>\n      <br>\n      - they, share all metadate with thirdparties, but only to these wo\n      seems approprieaty according to your interests ^^  ( &gt; thats\n      pointless), and you expicitly agree that these organisations can\n      send you informations, trials of products, offerings, via postmail\n      , email, anf phone)<br>\n      all very bad but again:<br>\n    </b>You can send a fromless email if you want to stop them making\n    that, thei will have to confirm this avoidance<br>\n    <br>\n    - i don't know if the trick is that they never confitm it ^^ - might\n    be possible<br>\n    <br>\n    <br>\n    2h<br>\n    Für den Fall, dass der Nutzer seiner gegenüber kilu.de erteilte\n    Einwilligung widerruft, ist kilu.de dazu berechtigt, den Account des\n    Nutzers entsprechend § 3 Nr. 3 zu kündigen.<br>\n    <br>\n    <br>\n    if revocate, an automatically granted right, they can quit/delete\n    your account. - very bad<br>\n    <br>\n    <br>\n    2i<br>\n    <br>\n    kilu.de führt aus Sicherheitsgründen ein sog. Whois-Verzeichnis über\n    die durch kilu.de gehosteten Subdomains. Der Nutzer erklärt sich\n    damit einverstanden, dass seine registrierungsrelevanten\n    personenbezogenen Daten (Name, Anschrift, Telefonnummer,\n    E-Mail-Adresse) gespeichert werden und auf der Internetseite kilu.de\n    abrufbar und damit für jedermann zugänglich sind.<br>\n    <br>\n    <br>\n    - they save whois data (name, adress, phone, email) about you, and\n    will make it public available for everyone. - i find that VERY bad,\n    but in some countries that is what the law says.. :(<br>\n    <br>\n    <br>\n    2j<br>\n    Nach den Bestimmungen des Bundesdatenschutzgesetzes haben Sie als\n    Nutzer des Online-Angebotes kilu.de jederzeit das Recht, Auskunft\n    darüber zu verlangen, welche Daten über Sie gespeichert sind und zu\n    welchem Zweck diese Speicherung erfolgt. Darüber hinaus können Sie\n    eine Berichtigung unrichtiger Daten oder die Löschung von Daten\n    verlangen, deren Speicherung unzulässig oder nicht erforderlich ist.\n    Eine entsprechende Auskunft über gespeicherte Daten erhalten Sie\n    aufgrund einer schriftlichen Anfrage.<br>\n    <br>\n    <br>\n    - they, will tell you what data is saved about you, and for what\n    intension, if you make a written request.<br>\n    - thats standard german law.<br>\n    <br>\n    <br>\n    general<br>\n    <br>\n    they, say 2 or 3 times, that you can view at least some data that is\n    saved about you in the backend.<br>\n    - thats nice, but incomplete.<br>\n    <br>\n    <br>\n  </body>\n</html>\n",
-        "text": "2c\nDer Nutzer willigt hiermit gegenüber kilu.de ausdrücklich ein, dass kilu.de seine Bestandsdaten für Zwecke der Beratung, der Werbung, der Marktforschung oder zur bedarfsgerechten Gestaltung und Weiterentwicklung seiner Dienste nutzt (Eigennutzung durch kilu.de). Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu bestätigen.\n\n- kilu, will save, userdata and use it for ads, consulting, market research, or for the developement of their services. You can send a fromless email if you want to stop them making that, thei will have to confirm this avoidance\n\n\n\n2d\n\n*Der Nutzer willigt darüber hinaus gegenüber kilu.de ausdrücklich ein, dass kilu.de gewonnene Bestandsdaten und Nutzungsdaten des jeweiligen Nutzers Dritten zur Speicherung, Nutzung und/oder Verarbeitung - auch entgeltlich - zur Verfügung stellt, wobei diese Weitergabe auf Organisationen und Unternehmen beschränkt wird, die den kilu.de - anhand der Nutzungsdaten- erkennbaren Interessen und mutmaßlichen Wünschen des Nutzers entgegenkommen. Eine Weitergabe der personenbezogenen Daten an Dritte oder einen anderen Dienstanbieter wird kilu.de dem Nutzer anzeigen, § 4 V TDDSG. Der Nutzer willigt ausdrücklich gegenüber kilu.de ein, dass diese Organisationen und Unternehmen dem Nutzer Informationen, Angebote, Muster und Werbung (per Post, per E-Mail und Telefon) zukommen lassen dürfen. Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu bestätigen.\n\n- they, share all metadate with thirdparties, but only to these wo seems approprieaty according to your interests ^^  ( > thats pointless), and you expicitly agree that these organisations can send you informations, trials of products, offerings, via postmail , email, anf phone)\nall very bad but again:\n*You can send a fromless email if you want to stop them making that, thei will have to confirm this avoidance\n\n- i don't know if the trick is that they never confitm it ^^ - might be possible\n\n\n2h\nFür den Fall, dass der Nutzer seiner gegenüber kilu.de erteilte Einwilligung widerruft, ist kilu.de dazu berechtigt, den Account des Nutzers entsprechend § 3 Nr. 3 zu kündigen.\n\n\nif revocate, an automatically granted right, they can quit/delete your account. - very bad\n\n\n2i\n\nkilu.de führt aus Sicherheitsgründen ein sog. Whois-Verzeichnis über die durch kilu.de gehosteten Subdomains. Der Nutzer erklärt sich damit einverstanden, dass seine registrierungsrelevanten personenbezogenen Daten (Name, Anschrift, Telefonnummer, E-Mail-Adresse) gespeichert werden und auf der Internetseite kilu.de abrufbar und damit für jedermann zugänglich sind.\n\n\n- they save whois data (name, adress, phone, email) about you, and will make it public available for everyone. - i find that VERY bad, but in some countries that is what the law says.. :(\n\n\n2j\nNach den Bestimmungen des Bundesdatenschutzgesetzes haben Sie als Nutzer des Online-Angebotes kilu.de jederzeit das Recht, Auskunft darüber zu verlangen, welche Daten über Sie gespeichert sind und zu welchem Zweck diese Speicherung erfolgt. Darüber hinaus können Sie eine Berichtigung unrichtiger Daten oder die Löschung von Daten verlangen, deren Speicherung unzulässig oder nicht erforderlich ist. Eine entsprechende Auskunft über gespeicherte Daten erhalten Sie aufgrund einer schriftlichen Anfrage.\n\n\n- they, will tell you what data is saved about you, and for what intension, if you make a written request.\n- thats standard german law.\n\n\ngeneral\n\nthey, say 2 or 3 times, that you can view at least some data that is saved about you in the backend.\n- thats nice, but incomplete.\n\n\n",
-        "headers": {
-          "return-path": "<tosdr+bncBD73Z4NJ44PRBG4H2WMQKGQEPCR3YWY@googlegroups.com>",
-          "delivered-to": "anything@michielbdejong.com",
-          "received": [
-            "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D671640F3B for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:41:17 +0100 (CET)",
-            "from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145]) by spool.mail.gandi.net (Postfix) with ESMTP id C367B142254 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:41:17 +0100 (CET)",
-            "from spool.mail.gandi.net ([10.0.21.135]) by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id 4yPGpZ2WkDU1 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:40:45 +0100 (CET)",
-            "from mail-ee0-x240.google.com (mail-ee0-x240.google.com [IPv6:2a00:1450:4013:c00::240]) by spool.mail.gandi.net (Postfix) with ESMTPS id 1273614227A for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:40:44 +0100 (CET)",
-            "by mail-ee0-f64.google.com with SMTP id e53sf274590eek.9 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "by 10.180.82.67 with SMTP id g3ls63499wiy.16.canary; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "from mail-ee0-x22e.google.com (mail-ee0-x22e.google.com [2a00:1450:4013:c00::22e]) by gmr-mx.google.com with ESMTPS id u49si485207eeo.1.2014.03.28.02.40.43 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "by mail-ee0-f46.google.com with SMTP id t10so3842205eei.33 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id m44sm10432237eep.14.2014.03.28.02.40.41 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:40:41 -0700 (PDT)"
-          ],
-          "x-virus-scanned": "Debian amavisd-new at mfilter17-d.gandi.net",
-          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=CKcaBC5qJdW3dbB+cwT0+UE3wHZAD/wbgwko09gHTpQ=; b=lU/QOQgaEvZWr8W1ZZuCfzt0L2+P9Js0pKqPQ+et/haQvgOvZJRTjU8ry7R02ovTyq wMBJG/2KJa3Yj8YOzrfZH/vJxRTgGb9dD3M5IhCFWRM9Jbxlhpr7IwuJKmocI2W3eS6b 60BYe3tBOYMSEBlBpNbFrL+UPhkKP2HPOSxSKp1zQns9Gn4q52xAKJsDgnXOJM5Fg6lx Gigav/oVImGG9ebrMN1t2jg8PP1Oo3wsQbv27CH7FBfPg/B1ZLQmsiEW4NUW6qr2evAJ 7edd3LV239oY0pZZ5wDOit9TNmXBWuhLQ5uUWIIaCuNmY3KeYNM8j0BHPrrlcfLSyHqZ iqQg==",
-          "x-received": [
-            "by 10.180.96.167 with SMTP id dt7mr34601wib.9.1395999643834; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "by 10.180.20.177 with SMTP id o17mr4035784wie.7.1395999643134; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
-            "by 10.14.210.65 with SMTP id t41mr8664531eeo.35.1395999643042; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)"
-          ],
-          "x-beenthere": "tosdr@googlegroups.com",
-          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::22e as permitted sender) client-ip=2a00:1450:4013:c00::22e;",
-          "message-id": "<5335439E.4030801@gmail.com>",
-          "date": "Fri, 28 Mar 2014 10:40:46 +0100",
-          "from": "Pascal Joller <pascal.joller@gmail.com>",
-          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
-          "mime-version": "1.0",
-          "to": "tosdr@googlegroups.com",
-          "subject": "[tosdr:2976] Kilu.de Privacy",
-          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms000107010307000409050306\"",
-          "x-original-sender": "pascal.joller@gmail.com",
-          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::22e as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
-          "reply-to": "tosdr@googlegroups.com",
-          "precedence": "list",
-          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
-          "list-id": "<tosdr.googlegroups.com>",
-          "x-google-group-id": "966240515290",
-          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
-          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
-          "list-archive": "<http://groups.google.com/group/tosdr>",
-          "sender": "tosdr@googlegroups.com",
-          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
-          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>"
-        },
-        "subject": "[tosdr:2976] Kilu.de Privacy",
-        "messageId": "5335439E.4030801@gmail.com",
-        "priority": "normal",
-        "from": [
-          {
-            "address": "pascal.joller@gmail.com",
-            "name": "Pascal Joller"
-          }
-        ],
-        "replyTo": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "date": "2014-03-28T09:40:46.000Z",
         "attachments": [
           {
             "contentType": "application/pkcs7-signature",
@@ -3848,15 +3772,91 @@
             ]
           }
         ],
+        "date": "2014-03-28T09:40:46.000Z",
+        "from": [
+          {
+            "address": "pascal.joller@gmail.com",
+            "name": "Pascal Joller"
+          }
+        ],
+        "headers": {
+          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms000107010307000409050306\"",
+          "date": "Fri, 28 Mar 2014 10:40:46 +0100",
+          "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=CKcaBC5qJdW3dbB+cwT0+UE3wHZAD/wbgwko09gHTpQ=; b=lU/QOQgaEvZWr8W1ZZuCfzt0L2+P9Js0pKqPQ+et/haQvgOvZJRTjU8ry7R02ovTyq wMBJG/2KJa3Yj8YOzrfZH/vJxRTgGb9dD3M5IhCFWRM9Jbxlhpr7IwuJKmocI2W3eS6b 60BYe3tBOYMSEBlBpNbFrL+UPhkKP2HPOSxSKp1zQns9Gn4q52xAKJsDgnXOJM5Fg6lx Gigav/oVImGG9ebrMN1t2jg8PP1Oo3wsQbv27CH7FBfPg/B1ZLQmsiEW4NUW6qr2evAJ 7edd3LV239oY0pZZ5wDOit9TNmXBWuhLQ5uUWIIaCuNmY3KeYNM8j0BHPrrlcfLSyHqZ iqQg==",
+          "from": "Pascal Joller <pascal.joller@gmail.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr>",
+          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<5335439E.4030801@gmail.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
+          "received": [
+            "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D671640F3B for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:41:17 +0100 (CET)",
+            "from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145]) by spool.mail.gandi.net (Postfix) with ESMTP id C367B142254 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:41:17 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.135]) by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id 4yPGpZ2WkDU1 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:40:45 +0100 (CET)",
+            "from mail-ee0-x240.google.com (mail-ee0-x240.google.com [IPv6:2a00:1450:4013:c00::240]) by spool.mail.gandi.net (Postfix) with ESMTPS id 1273614227A for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:40:44 +0100 (CET)",
+            "by mail-ee0-f64.google.com with SMTP id e53sf274590eek.9 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "by 10.180.82.67 with SMTP id g3ls63499wiy.16.canary; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "from mail-ee0-x22e.google.com (mail-ee0-x22e.google.com [2a00:1450:4013:c00::22e]) by gmr-mx.google.com with ESMTPS id u49si485207eeo.1.2014.03.28.02.40.43 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "by mail-ee0-f46.google.com with SMTP id t10so3842205eei.33 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id m44sm10432237eep.14.2014.03.28.02.40.41 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:40:41 -0700 (PDT)"
+          ],
+          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::22e as permitted sender) client-ip=2a00:1450:4013:c00::22e;",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBD73Z4NJ44PRBG4H2WMQKGQEPCR3YWY@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:2976] Kilu.de Privacy",
+          "to": "tosdr@googlegroups.com",
+          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::22e as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+          "x-original-sender": "pascal.joller@gmail.com",
+          "x-received": [
+            "by 10.180.96.167 with SMTP id dt7mr34601wib.9.1395999643834; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "by 10.180.20.177 with SMTP id o17mr4035784wie.7.1395999643134; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)",
+            "by 10.14.210.65 with SMTP id t41mr8664531eeo.35.1395999643042; Fri, 28 Mar 2014 02:40:43 -0700 (PDT)"
+          ],
+          "x-virus-scanned": "Debian amavisd-new at mfilter17-d.gandi.net"
+        },
+        "html": "<html>\n  <head>\n\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n  </head>\n  <body text=\"#000000\" bgcolor=\"#FFFFFF\">\n    2c<br>\n    Der Nutzer willigt hiermit gegenüber kilu.de ausdrücklich ein, dass\n    kilu.de seine Bestandsdaten für Zwecke der Beratung, der Werbung,\n    der Marktforschung oder zur bedarfsgerechten Gestaltung und\n    Weiterentwicklung seiner Dienste nutzt (Eigennutzung durch kilu.de).\n    Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser\n    E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu\n    bestätigen.<br>\n    <br>\n    - kilu, will save, userdata and use it for ads, consulting, market\n    research, or for the developement of their services. You can send a\n    fromless email if you want to stop them making that, thei will have\n    to confirm this avoidance<br>\n    <br>\n    <br>\n    <br>\n    2d<br>\n    <br>\n    <b>Der Nutzer willigt darüber hinaus gegenüber kilu.de ausdrücklich\n      ein, dass kilu.de gewonnene Bestandsdaten und Nutzungsdaten des\n      jeweiligen Nutzers Dritten zur Speicherung, Nutzung und/oder\n      Verarbeitung - auch entgeltlich - zur Verfügung stellt, wobei\n      diese Weitergabe auf Organisationen und Unternehmen beschränkt\n      wird, die den kilu.de - anhand der Nutzungsdaten- erkennbaren\n      Interessen und mutmaßlichen Wünschen des Nutzers entgegenkommen.\n      Eine Weitergabe der personenbezogenen Daten an Dritte oder einen\n      anderen Dienstanbieter wird kilu.de dem Nutzer anzeigen, § 4 V\n      TDDSG. Der Nutzer willigt ausdrücklich gegenüber kilu.de ein, dass\n      diese Organisationen und Unternehmen dem Nutzer Informationen,\n      Angebote, Muster und Werbung (per Post, per E-Mail und Telefon)\n      zukommen lassen dürfen. Der Nutzer kann diese Einwilligung\n      gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist\n      verpflichtet, den Widerruf zu bestätigen.<br>\n      <br>\n      - they, share all metadate with thirdparties, but only to these wo\n      seems approprieaty according to your interests ^^  ( &gt; thats\n      pointless), and you expicitly agree that these organisations can\n      send you informations, trials of products, offerings, via postmail\n      , email, anf phone)<br>\n      all very bad but again:<br>\n    </b>You can send a fromless email if you want to stop them making\n    that, thei will have to confirm this avoidance<br>\n    <br>\n    - i don't know if the trick is that they never confitm it ^^ - might\n    be possible<br>\n    <br>\n    <br>\n    2h<br>\n    Für den Fall, dass der Nutzer seiner gegenüber kilu.de erteilte\n    Einwilligung widerruft, ist kilu.de dazu berechtigt, den Account des\n    Nutzers entsprechend § 3 Nr. 3 zu kündigen.<br>\n    <br>\n    <br>\n    if revocate, an automatically granted right, they can quit/delete\n    your account. - very bad<br>\n    <br>\n    <br>\n    2i<br>\n    <br>\n    kilu.de führt aus Sicherheitsgründen ein sog. Whois-Verzeichnis über\n    die durch kilu.de gehosteten Subdomains. Der Nutzer erklärt sich\n    damit einverstanden, dass seine registrierungsrelevanten\n    personenbezogenen Daten (Name, Anschrift, Telefonnummer,\n    E-Mail-Adresse) gespeichert werden und auf der Internetseite kilu.de\n    abrufbar und damit für jedermann zugänglich sind.<br>\n    <br>\n    <br>\n    - they save whois data (name, adress, phone, email) about you, and\n    will make it public available for everyone. - i find that VERY bad,\n    but in some countries that is what the law says.. :(<br>\n    <br>\n    <br>\n    2j<br>\n    Nach den Bestimmungen des Bundesdatenschutzgesetzes haben Sie als\n    Nutzer des Online-Angebotes kilu.de jederzeit das Recht, Auskunft\n    darüber zu verlangen, welche Daten über Sie gespeichert sind und zu\n    welchem Zweck diese Speicherung erfolgt. Darüber hinaus können Sie\n    eine Berichtigung unrichtiger Daten oder die Löschung von Daten\n    verlangen, deren Speicherung unzulässig oder nicht erforderlich ist.\n    Eine entsprechende Auskunft über gespeicherte Daten erhalten Sie\n    aufgrund einer schriftlichen Anfrage.<br>\n    <br>\n    <br>\n    - they, will tell you what data is saved about you, and for what\n    intension, if you make a written request.<br>\n    - thats standard german law.<br>\n    <br>\n    <br>\n    general<br>\n    <br>\n    they, say 2 or 3 times, that you can view at least some data that is\n    saved about you in the backend.<br>\n    - thats nice, but incomplete.<br>\n    <br>\n    <br>\n  </body>\n</html>\n",
         "imapBox": "INBOX",
-        "imapSeqNo": 20078
+        "imapSeqNo": 20078,
+        "messageId": "5335439E.4030801@gmail.com",
+        "priority": "normal",
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "subject": "[tosdr:2976] Kilu.de Privacy",
+        "text": "2c\nDer Nutzer willigt hiermit gegenüber kilu.de ausdrücklich ein, dass kilu.de seine Bestandsdaten für Zwecke der Beratung, der Werbung, der Marktforschung oder zur bedarfsgerechten Gestaltung und Weiterentwicklung seiner Dienste nutzt (Eigennutzung durch kilu.de). Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu bestätigen.\n\n- kilu, will save, userdata and use it for ads, consulting, market research, or for the developement of their services. You can send a fromless email if you want to stop them making that, thei will have to confirm this avoidance\n\n\n\n2d\n\n*Der Nutzer willigt darüber hinaus gegenüber kilu.de ausdrücklich ein, dass kilu.de gewonnene Bestandsdaten und Nutzungsdaten des jeweiligen Nutzers Dritten zur Speicherung, Nutzung und/oder Verarbeitung - auch entgeltlich - zur Verfügung stellt, wobei diese Weitergabe auf Organisationen und Unternehmen beschränkt wird, die den kilu.de - anhand der Nutzungsdaten- erkennbaren Interessen und mutmaßlichen Wünschen des Nutzers entgegenkommen. Eine Weitergabe der personenbezogenen Daten an Dritte oder einen anderen Dienstanbieter wird kilu.de dem Nutzer anzeigen, § 4 V TDDSG. Der Nutzer willigt ausdrücklich gegenüber kilu.de ein, dass diese Organisationen und Unternehmen dem Nutzer Informationen, Angebote, Muster und Werbung (per Post, per E-Mail und Telefon) zukommen lassen dürfen. Der Nutzer kann diese Einwilligung gegenüber kilu.de mit formloser E-Mail widerrufen. kilu.de ist verpflichtet, den Widerruf zu bestätigen.\n\n- they, share all metadate with thirdparties, but only to these wo seems approprieaty according to your interests ^^  ( > thats pointless), and you expicitly agree that these organisations can send you informations, trials of products, offerings, via postmail , email, anf phone)\nall very bad but again:\n*You can send a fromless email if you want to stop them making that, thei will have to confirm this avoidance\n\n- i don't know if the trick is that they never confitm it ^^ - might be possible\n\n\n2h\nFür den Fall, dass der Nutzer seiner gegenüber kilu.de erteilte Einwilligung widerruft, ist kilu.de dazu berechtigt, den Account des Nutzers entsprechend § 3 Nr. 3 zu kündigen.\n\n\nif revocate, an automatically granted right, they can quit/delete your account. - very bad\n\n\n2i\n\nkilu.de führt aus Sicherheitsgründen ein sog. Whois-Verzeichnis über die durch kilu.de gehosteten Subdomains. Der Nutzer erklärt sich damit einverstanden, dass seine registrierungsrelevanten personenbezogenen Daten (Name, Anschrift, Telefonnummer, E-Mail-Adresse) gespeichert werden und auf der Internetseite kilu.de abrufbar und damit für jedermann zugänglich sind.\n\n\n- they save whois data (name, adress, phone, email) about you, and will make it public available for everyone. - i find that VERY bad, but in some countries that is what the law says.. :(\n\n\n2j\nNach den Bestimmungen des Bundesdatenschutzgesetzes haben Sie als Nutzer des Online-Angebotes kilu.de jederzeit das Recht, Auskunft darüber zu verlangen, welche Daten über Sie gespeichert sind und zu welchem Zweck diese Speicherung erfolgt. Darüber hinaus können Sie eine Berichtigung unrichtiger Daten oder die Löschung von Daten verlangen, deren Speicherung unzulässig oder nicht erforderlich ist. Eine entsprechende Auskunft über gespeicherte Daten erhalten Sie aufgrund einer schriftlichen Anfrage.\n\n\n- they, will tell you what data is saved about you, and for what intension, if you make a written request.\n- thats standard german law.\n\n\ngeneral\n\nthey, say 2 or 3 times, that you can view at least some data that is saved about you in the backend.\n- thats nice, but incomplete.\n\n\n",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
       },
       "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
       "previous": "1395999646000",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1395999646000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:2976] Kilu.de Privacy"
 }

@@ -1,26 +1,38 @@
 {
-  "posts": [
-    {
-      "timestamp": 1397190526000,
+  "posts": {
+    "53476f7e81c1a_3ab1432b8167ae@dragon.mail": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "tosback@tosdr.org",
           "name": "ToSBack"
         }
       ],
-      "target": {
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ]
-      },
+      "conversationName": "email: \"ToSBack\" &lt;tosback@tosdr.org&gt;",
       "object": {
-        "text": "att.com: Privacy Policy\ngithub.com: Terms of Service\ngrammarly.com: Terms of Service and License Agreement\n These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/2522b3cb75f236c98332065b85bc16624c9f4956 to see the differences!\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr.\nFor more options, visit https://groups.google.com/d/optout.\n",
+        "date": "2014-04-11T04:28:46.000Z",
+        "from": [
+          {
+            "address": "tosback@tosdr.org",
+            "name": "ToSBack"
+          }
+        ],
         "headers": {
-          "return-path": "<tosdr+bncBAABBAG7TWNAKGQE4ATAP5Q@googlegroups.com>",
+          "content-type": "text/plain; charset=UTF-8",
+          "date": "Fri, 11 Apr 2014 00:28:46 -0400",
           "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=date:from:to:message-id:subject:mime-version:x-original-sender :x-original-authentication-results:reply-to:precedence:mailing-list :list-id:list-post:list-help:list-archive:sender:list-subscribe :list-unsubscribe:content-type; bh=wmC8tkFun6Eji+zjoRoXhFAo/aBunFStOxXa4RzQ81w=; b=JciBfrgeatdFIJQfZTLv9/1WZPe4bM/Aht2FUq/IgrtruuqyF0Gwfj5jN/qtlLpBrT H2wwVZi3NUBFeiBD1av0Xs0utDAmkxAYcrcDDqrp1nljcNYW5jvoscZBJ37EaZ5ruzFV SmjUAc6M+l5FNGJhiL0eIP2D6EqKWc6AZ3+aPfe02iVX66onvphEl22QDHInV7idd8jr rhIelvqTy7UhuB4gN6J8BxMDojV1RNlKM0rAm5udA4EhMSYru5jg3Vb9HaM/pCWH4e5G Lx2upeDS1ajqKwOuAwAfF6fgaV+wxebQUXtXr0vRBv9f0DtJzrTGAETzQwYRRLeq2kJU kLPA==",
+          "from": "ToSBack <tosback@tosdr.org>",
+          "list-archive": "<http://groups.google.com/group/tosdr>",
+          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<53476f7e81c1a_3ab1432b8167ae@dragon.mail>",
+          "mime-version": "1.0",
+          "precedence": "list",
           "received": [
             "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id F13DC40F40 for <anything@michielbdejong.com>; Fri, 11 Apr 2014 06:28:56 +0200 (CEST)",
             "from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140]) by spool.mail.gandi.net (Postfix) with ESMTP id ED6B2116099 for <anything@michielbdejong.com>; Fri, 11 Apr 2014 06:28:56 +0200 (CEST)",
@@ -32,68 +44,56 @@
             "by filter-143.sjc1.sendgrid.net with SMTP id filter-143.7295.53476F7E6 Fri, 11 Apr 2014 04:28:46 +0000 (UTC)",
             "from tosdr.org (unknown [162.211.64.106]) by ismtpd-006 (SG) with ESMTP id 1454f0b87cf.503c.4eb61 for <tosdr@googlegroups.com>; Fri, 11 Apr 2014 04:28:46 +0000 (GMT)"
           ],
-          "x-virus-scanned": "Debian amavisd-new at mfilter2-d.gandi.net",
-          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=date:from:to:message-id:subject:mime-version:x-original-sender :x-original-authentication-results:reply-to:precedence:mailing-list :list-id:list-post:list-help:list-archive:sender:list-subscribe :list-unsubscribe:content-type; bh=wmC8tkFun6Eji+zjoRoXhFAo/aBunFStOxXa4RzQ81w=; b=JciBfrgeatdFIJQfZTLv9/1WZPe4bM/Aht2FUq/IgrtruuqyF0Gwfj5jN/qtlLpBrT H2wwVZi3NUBFeiBD1av0Xs0utDAmkxAYcrcDDqrp1nljcNYW5jvoscZBJ37EaZ5ruzFV SmjUAc6M+l5FNGJhiL0eIP2D6EqKWc6AZ3+aPfe02iVX66onvphEl22QDHInV7idd8jr rhIelvqTy7UhuB4gN6J8BxMDojV1RNlKM0rAm5udA4EhMSYru5jg3Vb9HaM/pCWH4e5G Lx2upeDS1ajqKwOuAwAfF6fgaV+wxebQUXtXr0vRBv9f0DtJzrTGAETzQwYRRLeq2kJU kLPA==",
+          "received-spf": "pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 50.31.49.41 as permitted sender) client-ip=50.31.49.41;",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBAABBAG7TWNAKGQE4ATAP5Q@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:2990] ToSBack: Policy Changes",
+          "to": "tosdr@googlegroups.com",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 50.31.49.41 as permitted sender) smtp.mail=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info; dkim=pass header.i=@sendgrid.me",
+          "x-original-sender": "tosback@tosdr.org",
           "x-received": [
             "by 10.182.248.165 with SMTP id yn5mr190330obc.16.1397190528726; Thu, 10 Apr 2014 21:28:48 -0700 (PDT)",
             "by 10.182.45.131 with SMTP id n3mr8994944obm.20.1397190528345; Thu, 10 Apr 2014 21:28:48 -0700 (PDT)"
           ],
-          "x-beenthere": "tosdr@googlegroups.com",
-          "received-spf": "pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 50.31.49.41 as permitted sender) client-ip=50.31.49.41;",
-          "date": "Fri, 11 Apr 2014 00:28:46 -0400",
-          "from": "ToSBack <tosback@tosdr.org>",
-          "to": "tosdr@googlegroups.com",
-          "message-id": "<53476f7e81c1a_3ab1432b8167ae@dragon.mail>",
-          "subject": "[tosdr:2990] ToSBack: Policy Changes",
-          "mime-version": "1.0",
-          "x-sg-eid": "QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYsvuNIJEW9uZbAUAH24rNdhzVSy2iTmmNLLprUIsTHTPb+U1WpyioEtmk+DR3lzfZwG98xyi72BuIv6dS51O+Fic6wSTIrr2gMPx9G9tpKDGi0Yo8Gyuxqm/rTkrI3Gc6o=",
           "x-sendgrid-contentd-id": "{\"test_id\":\"1397190527\"}",
-          "x-original-sender": "tosback@tosdr.org",
-          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 50.31.49.41 as permitted sender) smtp.mail=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info; dkim=pass header.i=@sendgrid.me",
-          "reply-to": "tosdr@googlegroups.com",
-          "precedence": "list",
-          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
-          "list-id": "<tosdr.googlegroups.com>",
-          "x-google-group-id": "966240515290",
-          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
-          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
-          "list-archive": "<http://groups.google.com/group/tosdr>",
-          "sender": "tosdr@googlegroups.com",
-          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
-          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
-          "content-type": "text/plain; charset=UTF-8"
+          "x-sg-eid": "QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYsvuNIJEW9uZbAUAH24rNdhzVSy2iTmmNLLprUIsTHTPb+U1WpyioEtmk+DR3lzfZwG98xyi72BuIv6dS51O+Fic6wSTIrr2gMPx9G9tpKDGi0Yo8Gyuxqm/rTkrI3Gc6o=",
+          "x-virus-scanned": "Debian amavisd-new at mfilter2-d.gandi.net"
         },
-        "subject": "[tosdr:2990] ToSBack: Policy Changes",
+        "imapBox": "INBOX",
+        "imapSeqNo": 20811,
         "messageId": "53476f7e81c1a_3ab1432b8167ae@dragon.mail",
         "priority": "normal",
-        "from": [
-          {
-            "address": "tosback@tosdr.org",
-            "name": "ToSBack"
-          }
-        ],
         "replyTo": [
           {
             "address": "tosdr@googlegroups.com",
             "name": ""
           }
         ],
+        "subject": "[tosdr:2990] ToSBack: Policy Changes",
+        "text": "att.com: Privacy Policy\ngithub.com: Terms of Service\ngrammarly.com: Terms of Service and License Agreement\n These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/2522b3cb75f236c98332065b85bc16624c9f4956 to see the differences!\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr.\nFor more options, visit https://groups.google.com/d/optout.\n",
         "to": [
           {
             "address": "tosdr@googlegroups.com",
             "name": ""
           }
-        ],
-        "date": "2014-04-11T04:28:46.000Z",
-        "imapBox": "INBOX",
-        "imapSeqNo": 20811
+        ]
       },
       "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: \"ToSBack\" &lt;tosback@tosdr.org&gt;",
       "previous": "1398363234526",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1397190526000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:2990] ToSBack: Policy Changes"
 }

@@ -1,27 +1,41 @@
 {
-  "posts": [
-    {
-      "timestamp": 1363428101000,
+  "posts": {
+    "6aaf467f-c777-465b-a3c1-19c030c9eb27@googlegroups.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "irmcgowan@gmail.com",
           "name": "Ian McGowan"
         }
       ],
-      "target": {
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ]
-      },
+      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
       "object": {
-        "html": "My dad actually forwarded this to me recently, and it seems somewhat in line with what we're trying to do here at ToS;DR. I'd like to see what people think about it, so if you have time (it's not very long), give it a read and post a response here.<div><br></div><div>Here's the link:&nbsp;<a href=\"http://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#\">http://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#</a></div><div><br></div><div>Ian</div>\n\n<p></p>\n\n-- <br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.<br />\nTo post to this group, send email to tosdr@googlegroups.com.<br />\nVisit this group at <a href=\"http://groups.google.com/group/tosdr?hl=en\">http://groups.google.com/group/tosdr?hl=en</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/groups/opt_out\">https://groups.google.com/groups/opt_out</a>.<br />\n&nbsp;<br />\n&nbsp;<br />\n",
-        "text": "My dad actually forwarded this to me recently, and it seems somewhat in \nline with what we're trying to do here at ToS;DR. I'd like to see what \npeople think about it, so if you have time (it's not very long), give it a \nread and post a response here.\n\nHere's the link: \nhttp://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#\n\nIan\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr?hl=en.\nFor more options, visit https://groups.google.com/groups/opt_out.\n\n\n",
+        "date": "2013-03-16T10:01:41.000Z",
+        "from": [
+          {
+            "address": "irmcgowan@gmail.com",
+            "name": "Ian McGowan"
+          }
+        ],
         "headers": {
-          "return-path": "<tosdr+bncBDLZX5PJWMBBBBUGSGFAKGQEZHEH72I@googlegroups.com>",
+          "content-type": "multipart/alternative; boundary=\"----=_Part_120_30093945.1363428101783\"",
+          "date": "Sat, 16 Mar 2013 03:01:41 -0700 (PDT)",
           "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": [
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=x-received:x-beenthere:x-received:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-google-group-id:list-post:list-help:list-archive:sender :list-subscribe:list-unsubscribe:content-type; bh=2s8FJQ5484Ryd+FVSZP4XsgJf5/7EBkMbH27ULg++Mk=; b=GG1vhexg5iUlCubezxDRWGlPXxMh0WgiiW4T3Yj6vWGJEta3E33CzUvBbE367MaYn/ Qgl+S4fJ385S4Jy5noOCsrQ5s1sHGAYGYfkMZ+QMLCroqovMfDuOdOY8Q+pIpygTdLj7 mXyWlHYh/M/U8DbyHwoGasD8jRPFTmZ+aCDTzIMNg3AcXvNKL3QlyFGUjJvBGRzuByPP RaZuptm//L7fN5o+yIF9lpmhHfyFlUX/6tAvPES0STdpk897zeWL3Kf5LS8vcizdJdzj hJG+PbCvpzqU1ZZlqsxE14o66iZPL/pYQeYfrHAg9AGKf6Ry9JXtiqN8aVj416LGdSIJ E6NA==",
+            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=x-received:x-beenthere:x-received:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-google-group-id:list-post:list-help:list-archive:sender :list-subscribe:list-unsubscribe:content-type; bh=2s8FJQ5484Ryd+FVSZP4XsgJf5/7EBkMbH27ULg++Mk=; b=005vizQEv40MVxKg4TTYqfaWRq2RLyVw+UU6JKWIrM3J6JZ6H1mzyDxwrSKBzzDsNU Few7fD8MDq17aWakYqh1kdHdmITEYG+fIV4S3K5kVpKL1gBtzT96jCsS1+I2Xs8ZHATz T0oQqtNaZZe5vyzBQOGd5QgwMr6Ie+xfpEwhryvgoKuR8KFqj/gKZHgXGk9g8XSrWQet 5MFQd7W1Gt5XTj9oow6dDe3QlMVhn5QeBLTaWSMXQJ6gVsV3fq5q8gdzvbiZz9ESFyLp oZA4EPE74CRjMcZ3O9S3NTPMd5EhDIj7w5wgaQKprLW9ic66ytVqv3zq9KeOXLtXaa96 g7RQ=="
+          ],
+          "from": "Ian McGowan <irmcgowan@gmail.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr?hl=en>",
+          "list-help": "<http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<6aaf467f-c777-465b-a3c1-19c030c9eb27@googlegroups.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
           "received": [
             "from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133]) by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 185B6161745 for <anything@michielbdejong.com>; Sat, 16 Mar 2013 11:01:52 +0100 (CET)",
             "from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130]) by spool.mail.gandi.net (Postfix) with ESMTP id 1439417807B; Sat, 16 Mar 2013 11:01:52 +0100 (CET)",
@@ -30,67 +44,53 @@
             "by mail-qa0-f56.google.com with SMTP id dx4sf548295qab.11 for <multiple recipients>; Sat, 16 Mar 2013 03:01:42 -0700 (PDT)",
             "by 10.49.39.138 with SMTP id p10ls717259qek.16.gmail; Sat, 16 Mar 2013 03:01:42 -0700 (PDT)"
           ],
-          "x-virus-scanned": "Debian amavisd-new at mfilter1-d.gandi.net",
-          "dkim-signature": [
-            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=x-received:x-beenthere:x-received:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-google-group-id:list-post:list-help:list-archive:sender :list-subscribe:list-unsubscribe:content-type; bh=2s8FJQ5484Ryd+FVSZP4XsgJf5/7EBkMbH27ULg++Mk=; b=GG1vhexg5iUlCubezxDRWGlPXxMh0WgiiW4T3Yj6vWGJEta3E33CzUvBbE367MaYn/ Qgl+S4fJ385S4Jy5noOCsrQ5s1sHGAYGYfkMZ+QMLCroqovMfDuOdOY8Q+pIpygTdLj7 mXyWlHYh/M/U8DbyHwoGasD8jRPFTmZ+aCDTzIMNg3AcXvNKL3QlyFGUjJvBGRzuByPP RaZuptm//L7fN5o+yIF9lpmhHfyFlUX/6tAvPES0STdpk897zeWL3Kf5LS8vcizdJdzj hJG+PbCvpzqU1ZZlqsxE14o66iZPL/pYQeYfrHAg9AGKf6Ry9JXtiqN8aVj416LGdSIJ E6NA==",
-            "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=x-received:x-beenthere:x-received:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-google-group-id:list-post:list-help:list-archive:sender :list-subscribe:list-unsubscribe:content-type; bh=2s8FJQ5484Ryd+FVSZP4XsgJf5/7EBkMbH27ULg++Mk=; b=005vizQEv40MVxKg4TTYqfaWRq2RLyVw+UU6JKWIrM3J6JZ6H1mzyDxwrSKBzzDsNU Few7fD8MDq17aWakYqh1kdHdmITEYG+fIV4S3K5kVpKL1gBtzT96jCsS1+I2Xs8ZHATz T0oQqtNaZZe5vyzBQOGd5QgwMr6Ie+xfpEwhryvgoKuR8KFqj/gKZHgXGk9g8XSrWQet 5MFQd7W1Gt5XTj9oow6dDe3QlMVhn5QeBLTaWSMXQJ6gVsV3fq5q8gdzvbiZz9ESFyLp oZA4EPE74CRjMcZ3O9S3NTPMd5EhDIj7w5wgaQKprLW9ic66ytVqv3zq9KeOXLtXaa96 g7RQ=="
-          ],
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBDLZX5PJWMBBBBUGSGFAKGQEZHEH72I@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:1677] Article from The Nation: \"Small Print, Big Problem (Part II: Remedies)\"",
+          "to": "tosdr@googlegroups.com",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-sender": "irmcgowan@gmail.com",
           "x-received": [
             "by 10.49.108.42 with SMTP id hh10mr89113qeb.5.1363428102828; Sat, 16 Mar 2013 03:01:42 -0700 (PDT)",
             "by 10.49.85.165 with SMTP id i5mr717583qez.28.1363428102173; Sat, 16 Mar 2013 03:01:42 -0700 (PDT)"
           ],
-          "x-beenthere": "tosdr@googlegroups.com",
-          "date": "Sat, 16 Mar 2013 03:01:41 -0700 (PDT)",
-          "from": "Ian McGowan <irmcgowan@gmail.com>",
-          "to": "tosdr@googlegroups.com",
-          "message-id": "<6aaf467f-c777-465b-a3c1-19c030c9eb27@googlegroups.com>",
-          "subject": "[tosdr:1677] Article from The Nation: \"Small Print, Big Problem (Part II: Remedies)\"",
-          "mime-version": "1.0",
-          "x-original-sender": "irmcgowan@gmail.com",
-          "reply-to": "tosdr@googlegroups.com",
-          "precedence": "list",
-          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
-          "list-id": "<tosdr.googlegroups.com>",
-          "x-google-group-id": "966240515290",
-          "list-post": "<http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>",
-          "list-help": "<http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>",
-          "list-archive": "<http://groups.google.com/group/tosdr?hl=en>",
-          "sender": "tosdr@googlegroups.com",
-          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>",
-          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
-          "content-type": "multipart/alternative; boundary=\"----=_Part_120_30093945.1363428101783\""
+          "x-virus-scanned": "Debian amavisd-new at mfilter1-d.gandi.net"
         },
-        "subject": "[tosdr:1677] Article from The Nation: \"Small Print, Big Problem (Part II: Remedies)\"",
+        "html": "My dad actually forwarded this to me recently, and it seems somewhat in line with what we're trying to do here at ToS;DR. I'd like to see what people think about it, so if you have time (it's not very long), give it a read and post a response here.<div><br></div><div>Here's the link:&nbsp;<a href=\"http://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#\">http://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#</a></div><div><br></div><div>Ian</div>\n\n<p></p>\n\n-- <br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.<br />\nTo post to this group, send email to tosdr@googlegroups.com.<br />\nVisit this group at <a href=\"http://groups.google.com/group/tosdr?hl=en\">http://groups.google.com/group/tosdr?hl=en</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/groups/opt_out\">https://groups.google.com/groups/opt_out</a>.<br />\n&nbsp;<br />\n&nbsp;<br />\n",
+        "imapBox": "INBOX",
+        "imapSeqNo": 736,
         "messageId": "6aaf467f-c777-465b-a3c1-19c030c9eb27@googlegroups.com",
         "priority": "normal",
-        "from": [
-          {
-            "address": "irmcgowan@gmail.com",
-            "name": "Ian McGowan"
-          }
-        ],
         "replyTo": [
           {
             "address": "tosdr@googlegroups.com",
             "name": ""
           }
         ],
+        "subject": "[tosdr:1677] Article from The Nation: \"Small Print, Big Problem (Part II: Remedies)\"",
+        "text": "My dad actually forwarded this to me recently, and it seems somewhat in \nline with what we're trying to do here at ToS;DR. I'd like to see what \npeople think about it, so if you have time (it's not very long), give it a \nread and post a response here.\n\nHere's the link: \nhttp://www.thenation.com/blog/173362/small-print-big-problem-part-ii-remedies#\n\nIan\n\n-- \ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at http://groups.google.com/group/tosdr?hl=en.\nFor more options, visit https://groups.google.com/groups/opt_out.\n\n\n",
         "to": [
           {
             "address": "tosdr@googlegroups.com",
             "name": ""
           }
-        ],
-        "date": "2013-03-16T10:01:41.000Z",
-        "imapBox": "INBOX",
-        "imapSeqNo": 736
+        ]
       },
       "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: \"Ian McGowan\" &lt;irmcgowan@gmail.com&gt;",
       "previous": "1387300259000",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1363428101000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:1677] Article from The Nation: \"Small Print, Big Problem (Part II: Remedies)\""
 }

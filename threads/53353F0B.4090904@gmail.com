@@ -1,90 +1,15 @@
 {
-  "posts": [
-    {
-      "timestamp": 1395998475000,
+  "posts": {
+    "53353F0B.4090904@gmail.com": {
+      "@context": "http://remotestoragejs.com/spec/modules/email/message",
       "actor": [
         {
           "address": "pascal.joller@gmail.com",
           "name": "Pascal Joller"
         }
       ],
-      "target": {
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ]
-      },
+      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
       "object": {
-        "text": "\n§13 Änderung der Nutzungsbedingungen\n\nkilu.de behält sich das Recht vor, Änderungen an den Nutzungsbedingungen vorzunehmen. kilu.de wird die Nutzer unverzüglich über die Änderungen informieren.\n\n- kilu, can change TOS at any time, but it will inform you imedeatly about it\n\n",
-        "headers": {
-          "return-path": "<tosdr+bncBD73Z4NJ44PRBCP62SMQKGQESBKI2PQ@googlegroups.com>",
-          "delivered-to": "anything@michielbdejong.com",
-          "received": [
-            "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id A75E640F3B for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)",
-            "from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139]) by spool.mail.gandi.net (Postfix) with ESMTP id A442D1164AA for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)",
-            "from spool.mail.gandi.net ([10.0.21.134]) by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id jymo22sAt-8J for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:15 +0100 (CET)",
-            "from mail-wi0-x23e.google.com (mail-wi0-x23e.google.com [IPv6:2a00:1450:400c:c05::23e]) by spool.mail.gandi.net (Postfix) with ESMTPS id 8F2FB116481 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:15 +0100 (CET)",
-            "by mail-wi0-f190.google.com with SMTP id z2sf29508wiv.7 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 02:21:14 -0700 (PDT)",
-            "by 10.180.182.227 with SMTP id eh3ls60070wic.13.canary; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
-            "from mail-ee0-x242.google.com (mail-ee0-x242.google.com [2a00:1450:4013:c00::242]) by gmr-mx.google.com with ESMTPS id m49si470197eeu.0.2014.03.28.02.21.13 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
-            "by mail-ee0-f66.google.com with SMTP id b57so1705783eek.9 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
-            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id e42sm10295723eev.32.2014.03.28.02.21.10 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:21:11 -0700 (PDT)"
-          ],
-          "x-virus-scanned": "Debian amavisd-new at mfilter10-d.gandi.net",
-          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=gFMcRZasvpM9x0lgAjUlk+x5LPsf3+a7DNa2MIp54eU=; b=xviV7kTlu+CdnGtHiTDt/78Pbwyt+6DZ4fHAOwIOZn4raXaSXMe/ze9cGMl98EzBm/ Odm3PUxlNe7nAJ5glNlHwgviV5zsdMbz/cOwFOlhW1RUqkIqZ+B+ywzE1XXxkAwVyTnS aZYTV7YBSVjirom45XunVbdlf1FofCH1tXdLzqqRFOXTYV7N/QbbMPXj5mVmyz8raiUr HIu/S6hjt49gwo/ZaLXRloY0yWDmEO9O6+xa0CFDz8HSZXZqU8rdT9nRzWEkWSd5q6NQ Z2WuwkycSa7r1/ALDlSXsuN0SqUnBahXRPSlcgmTApBHU9RH5EAEmoRngjYZIB4m0fWA XWhg==",
-          "x-received": [
-            "by 10.180.88.69 with SMTP id be5mr34478wib.3.1395998474480; Fri, 28 Mar 2014 02:21:14 -0700 (PDT)",
-            "by 10.180.198.146 with SMTP id jc18mr4026094wic.4.1395998473588; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
-            "by 10.14.206.137 with SMTP id l9mr8679256eeo.40.1395998473512; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)"
-          ],
-          "x-beenthere": "tosdr@googlegroups.com",
-          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242 as permitted sender) client-ip=2a00:1450:4013:c00::242;",
-          "message-id": "<53353F0B.4090904@gmail.com>",
-          "date": "Fri, 28 Mar 2014 10:21:15 +0100",
-          "from": "Pascal Joller <pascal.joller@gmail.com>",
-          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
-          "mime-version": "1.0",
-          "to": "tosdr@googlegroups.com",
-          "subject": "[tosdr:2975] Kilu.de Changes to TOS",
-          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms020104090304070409090806\"",
-          "x-original-sender": "pascal.joller@gmail.com",
-          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242 as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
-          "reply-to": "tosdr@googlegroups.com",
-          "precedence": "list",
-          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
-          "list-id": "<tosdr.googlegroups.com>",
-          "x-google-group-id": "966240515290",
-          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
-          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
-          "list-archive": "<http://groups.google.com/group/tosdr>",
-          "sender": "tosdr@googlegroups.com",
-          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
-          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>"
-        },
-        "subject": "[tosdr:2975] Kilu.de Changes to TOS",
-        "messageId": "53353F0B.4090904@gmail.com",
-        "priority": "normal",
-        "from": [
-          {
-            "address": "pascal.joller@gmail.com",
-            "name": "Pascal Joller"
-          }
-        ],
-        "replyTo": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "to": [
-          {
-            "address": "tosdr@googlegroups.com",
-            "name": ""
-          }
-        ],
-        "date": "2014-03-28T09:21:15.000Z",
         "attachments": [
           {
             "contentType": "application/pkcs7-signature",
@@ -3847,14 +3772,89 @@
             ]
           }
         ],
+        "date": "2014-03-28T09:21:15.000Z",
+        "from": [
+          {
+            "address": "pascal.joller@gmail.com",
+            "name": "Pascal Joller"
+          }
+        ],
+        "headers": {
+          "content-type": "multipart/signed; protocol=\"application/pkcs7-signature\"; micalg=sha1; boundary=\"------------ms020104090304070409090806\"",
+          "date": "Fri, 28 Mar 2014 10:21:15 +0100",
+          "delivered-to": "anything@michielbdejong.com",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=message-id:date:from:user-agent:mime-version:to:subject :content-type:x-original-sender:x-original-authentication-results :reply-to:precedence:mailing-list:list-id:list-post:list-help :list-archive:sender:list-subscribe:list-unsubscribe; bh=gFMcRZasvpM9x0lgAjUlk+x5LPsf3+a7DNa2MIp54eU=; b=xviV7kTlu+CdnGtHiTDt/78Pbwyt+6DZ4fHAOwIOZn4raXaSXMe/ze9cGMl98EzBm/ Odm3PUxlNe7nAJ5glNlHwgviV5zsdMbz/cOwFOlhW1RUqkIqZ+B+ywzE1XXxkAwVyTnS aZYTV7YBSVjirom45XunVbdlf1FofCH1tXdLzqqRFOXTYV7N/QbbMPXj5mVmyz8raiUr HIu/S6hjt49gwo/ZaLXRloY0yWDmEO9O6+xa0CFDz8HSZXZqU8rdT9nRzWEkWSd5q6NQ Z2WuwkycSa7r1/ALDlSXsuN0SqUnBahXRPSlcgmTApBHU9RH5EAEmoRngjYZIB4m0fWA XWhg==",
+          "from": "Pascal Joller <pascal.joller@gmail.com>",
+          "list-archive": "<http://groups.google.com/group/tosdr>",
+          "list-help": "<http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+          "list-id": "<tosdr.googlegroups.com>",
+          "list-post": "<http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+          "list-subscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+          "list-unsubscribe": "<http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>",
+          "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+          "message-id": "<53353F0B.4090904@gmail.com>",
+          "mime-version": "1.0",
+          "precedence": "list",
+          "received": [
+            "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id A75E640F3B for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)",
+            "from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139]) by spool.mail.gandi.net (Postfix) with ESMTP id A442D1164AA for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)",
+            "from spool.mail.gandi.net ([10.0.21.134]) by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024) with ESMTP id jymo22sAt-8J for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:15 +0100 (CET)",
+            "from mail-wi0-x23e.google.com (mail-wi0-x23e.google.com [IPv6:2a00:1450:400c:c05::23e]) by spool.mail.gandi.net (Postfix) with ESMTPS id 8F2FB116481 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:15 +0100 (CET)",
+            "by mail-wi0-f190.google.com with SMTP id z2sf29508wiv.7 for <anything@michielbdejong.com>; Fri, 28 Mar 2014 02:21:14 -0700 (PDT)",
+            "by 10.180.182.227 with SMTP id eh3ls60070wic.13.canary; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
+            "from mail-ee0-x242.google.com (mail-ee0-x242.google.com [2a00:1450:4013:c00::242]) by gmr-mx.google.com with ESMTPS id m49si470197eeu.0.2014.03.28.02.21.13 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
+            "by mail-ee0-f66.google.com with SMTP id b57so1705783eek.9 for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
+            "from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232]) by mx.google.com with ESMTPSA id e42sm10295723eev.32.2014.03.28.02.21.10 for <tosdr@googlegroups.com> (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128); Fri, 28 Mar 2014 02:21:11 -0700 (PDT)"
+          ],
+          "received-spf": "pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242 as permitted sender) client-ip=2a00:1450:4013:c00::242;",
+          "reply-to": "tosdr@googlegroups.com",
+          "return-path": "<tosdr+bncBD73Z4NJ44PRBCP62SMQKGQESBKI2PQ@googlegroups.com>",
+          "sender": "tosdr@googlegroups.com",
+          "subject": "[tosdr:2975] Kilu.de Changes to TOS",
+          "to": "tosdr@googlegroups.com",
+          "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0",
+          "x-beenthere": "tosdr@googlegroups.com",
+          "x-google-group-id": "966240515290",
+          "x-original-authentication-results": "gmr-mx.google.com;       spf=pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242 as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+          "x-original-sender": "pascal.joller@gmail.com",
+          "x-received": [
+            "by 10.180.88.69 with SMTP id be5mr34478wib.3.1395998474480; Fri, 28 Mar 2014 02:21:14 -0700 (PDT)",
+            "by 10.180.198.146 with SMTP id jc18mr4026094wic.4.1395998473588; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)",
+            "by 10.14.206.137 with SMTP id l9mr8679256eeo.40.1395998473512; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)"
+          ],
+          "x-virus-scanned": "Debian amavisd-new at mfilter10-d.gandi.net"
+        },
         "imapBox": "INBOX",
-        "imapSeqNo": 20075
+        "imapSeqNo": 20075,
+        "messageId": "53353F0B.4090904@gmail.com",
+        "priority": "normal",
+        "replyTo": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ],
+        "subject": "[tosdr:2975] Kilu.de Changes to TOS",
+        "text": "\n§13 Änderung der Nutzungsbedingungen\n\nkilu.de behält sich das Recht vor, Änderungen an den Nutzungsbedingungen vorzunehmen. kilu.de wird die Nutzer unverzüglich über die Änderungen informieren.\n\n- kilu, can change TOS at any time, but it will inform you imedeatly about it\n\n",
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
       },
       "platform": "email",
-      "verb": "unknown",
-      "conversationName": "email: \"Pascal Joller\" &lt;pascal.joller@gmail.com&gt;",
-      "@context": "http://remotestoragejs.com/spec/modules/email/message"
+      "target": {
+        "to": [
+          {
+            "address": "tosdr@googlegroups.com",
+            "name": ""
+          }
+        ]
+      },
+      "timestamp": 1395998475000,
+      "verb": "unknown"
     }
-  ],
+  },
   "subject": "[tosdr:2975] Kilu.de Changes to TOS"
 }

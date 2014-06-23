@@ -48,8 +48,9 @@ function process(path){
         if (!item.object.inReplyTo) {
           var threadItem = {
             subject: item.object.subject,
-            posts: [item]
+            posts: {}
           };
+          threadItem.posts[item.object.messageId] = item;
           fs.writeFileSync('../threads/'+item.object.messageId, JSON.stringify(sortObject(threadItem, true), undefined, 2));
         }
       } catch(e) {
