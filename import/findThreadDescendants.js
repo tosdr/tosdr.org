@@ -63,9 +63,13 @@ function process(path) {
         if (item.object.inReplyTo && !threads[item.object.inReplyTo]) {
           for (var threadId in threads) {
             if (threads[threadId].posts[item.object.inReplyTo]) {
-              console.log('found descendant');
-              threads[threadId].posts[item.object.messageId] = item;
-              fs.writeFileSync('../threads/'+threadId, JSON.stringify(sortObject(threads[threadId], true), undefined, 2));
+              if (!threads[threadId].posts[item.object.messageId]) {
+                console.log('found descendant');
+                threads[threadId].posts[item.object.messageId] = item;
+                fs.writeFileSync('../threads/'+threadId, JSON.stringify(sortObject(threads[threadId], true), undefined, 2));
+              } else {
+               console.log('descendant already recorded');
+              }
               break;
             }
           }
