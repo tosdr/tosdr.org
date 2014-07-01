@@ -1,7 +1,7 @@
 # finances 2014 Q2:
 
 # Start: 9362.33 - 187.19  = 9175.14 EUR 
-(from https://github.com/tosdr/tosdr.org/blob/master/blog/finance-2013-q4.md )
+(from https://github.com/tosdr/tosdr.org/blob/master/blog/finance-2014-q1.md )
 
 * kept safe by Hugo: 9362.33 EUR
 * kept safe by Michiel: -187.19 EUR
@@ -18,10 +18,10 @@
     * (H) fee: 3 EUR (please confirm?)
 
 * operations: 31.60 EUR
+    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Apr)
     * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 May)
     * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Jun)
     * (H) tosdr.org DNR renewal 16.12 EUR (30 Jun)
-    * (M) tosback server at serverdragon - one month: $6.99=5.16 EUR (5 Jul)
 
 # Finish: 9043.21 - 237.19  = 8806.02 EUR
 
