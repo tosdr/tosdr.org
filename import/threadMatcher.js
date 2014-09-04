@@ -32,18 +32,15 @@ for (i=0; i<pointFiles.length; i++) {
     }
   }
 }
-//console.log(uniqueSubjects);
 done = 0;
 function onEnd(mailObject) {
   var subjectParts = mailObject.subject.split('] ');
-  //console.log('subjectParts', subjectParts);
   if (subjectParts[0].split(':')[0] === '[tosdr') {
     subjectParts.shift();
-    //console.log('changing', mailObject.subject, subjectParts.join('] '));
     mailObject.subject = subjectParts.join('] ');
   }
   if (uniqueSubjects[mailObject.subject]) {
-    index[uniqueSubjects[mailObject.subject]].posts.push[mailObject.messageId];
+    index[uniqueSubjects[mailObject.subject]].posts.push(mailObject.messageId);
     fs.writeFileSync('../posts/'+mailObject.messageId, JSON.stringify(mailObject));
   }
   done++;
