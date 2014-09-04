@@ -41,7 +41,7 @@ function onEnd(mailObject) {
   }
   if (uniqueSubjects[mailObject.subject]) {
     index[uniqueSubjects[mailObject.subject]].posts.push(mailObject.messageId);
-    fs.writeFileSync('../posts/'+mailObject.messageId, JSON.stringify(mailObject));
+    fs.writeFileSync('../posts/'+mailObject.messageId+'.json', JSON.stringify(mailObject));
   }
   done++;
   if (done === rawPostFiles.length) {
