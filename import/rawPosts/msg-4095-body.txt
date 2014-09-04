@@ -1,0 +1,148 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB7UH6OGAKGQEHV545LI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3F7C3161744
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 15:11:33 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3C6AB178092
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 15:11:33 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id O7A1+cJB579F for <anything@michielbdejong.com>;
+	Wed, 22 May 2013 15:11:31 +0200 (CEST)
+Received: from mail-ie0-x239.google.com (mail-ie0-x239.google.com [IPv6:2607:f8b0:4001:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 780351780B4
+	for <michiel@michielbdejong.com>; Wed, 22 May 2013 15:11:28 +0200 (CEST)
+Received: by mail-ie0-f185.google.com with SMTP id a14sf169175iee.12
+        for <michiel@michielbdejong.com>; Wed, 22 May 2013 06:11:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=X4OtreHq7m4e15A20Cr/YDwcRRcLnJ0SGq8uh9ex+Rk=;
+        b=bCf7ieSKNjUkeM8CtqMOOBhdCTgkWoAiBlyh3fWEYcH0fEhxXxJPGAjq9vUORV5Oep
+         //30EK6f+BSBTu8EuMsrF5aEng0PVHRIccTpXSf423gQtX+OemcnCajd4GnjztwFtRV8
+         QQLkrtYj8Wr1grX36jVuzdjvyw+WsEfHwO2pZZesRV7AscRAHOu7jgy3cdTh4pcJDi5D
+         FNw3yoe0TavdsQRsjCte73yHz1ljGe9sVvBjs0uq9+fDEaESnm5p5bKtLxSY/DBNM8Xd
+         qGQs8Z3HDfZUYHNpqj+ucuqF87BAhRf2ylKhX7BnYSpjKWiqvWcIeQov1Z45suRBalsW
+         dKwA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=X4OtreHq7m4e15A20Cr/YDwcRRcLnJ0SGq8uh9ex+Rk=;
+        b=wOkTEse5s4A1LtUhMtNoB8k8IkXu4eFCyTBFtnDAYY0JoiKWyu7VFsocWz6wEYaseA
+         BR6aakmZWPMVYud/7gkPpoDtXXVaAwh9iSjHJPu7qatvZJmOwtwnNxW3c2x/kac/ehOq
+         F5Lk5+TsANkhmpJieEkCpO5+tFtQMz4I9bqaG2GenPaJIPfmsaWLKulDoDd4uHoAuo0M
+         OxU8bP8Oo92Zj4kIsXVmet4fStm0thmVzyrleFtDRf0atWz9Oh/zET/pbX3EW+duJiTR
+         LlbGwvXgVgNhgE3jtYhGI+OBz/wse9I0X8VvzgeZ82tdz6D/iJM/AG8+uBzfiygkzbNP
+         60tg==
+X-Received: by 10.182.243.202 with SMTP id xa10mr166435obc.22.1369228286858;
+        Wed, 22 May 2013 06:11:26 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.89.69 with SMTP id bm5ls358787obb.95.gmail; Wed, 22 May
+ 2013 06:11:26 -0700 (PDT)
+X-Received: by 10.182.17.9 with SMTP id k9mr167564obd.7.1369228286061;
+        Wed, 22 May 2013 06:11:26 -0700 (PDT)
+Date: Wed, 22 May 2013 06:11:24 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <618b0140-2669-41f1-9bb3-3055e80a7060@googlegroups.com>
+In-Reply-To: <dc219014b020e9bcb0a6487e585a1e73@michielbdejong.com>
+References: <dc219014b020e9bcb0a6487e585a1e73@michielbdejong.com>
+Subject: [tosdr:2192] Re: [Good] Amazon does not sell your data
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_39_33163439.1369228284990"
+
+------=_Part_39_33163439.1369228284990
+Content-Type: text/plain; charset=ISO-8859-1
+
+Agreed, especially given the nature of the information that they can keep 
+(real names, credit card numbers, dates of birth, etc) compared to other 
+services. Good points for this one!
+
+On Tuesday, March 5, 2013 8:36:24 AM UTC+1, anyt...@michielbdejong.com 
+wrote:
+>
+> "Information about our customers is an important part of our business, 
+> and we are not in the business of selling it to others" 
+>
+> https://github.com/tosdr/tosback2/blob/master/crawl/amazon.com/Amazon.com%20Privacy%20Notice.txt#L60 
+>
+> after a few negative points, it's great to find this positive one, more 
+> services should make that pledge in their privacy policies. we should 
+> give them good positive points for this. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_39_33163439.1369228284990
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Agreed, especially given the nature of the information that they can keep (=
+real names, credit card numbers, dates of birth, etc) compared to other ser=
+vices. Good points for this one!<br><br>On Tuesday, March 5, 2013 8:36:24 A=
+M UTC+1, anyt...@michielbdejong.com wrote:<blockquote class=3D"gmail_quote"=
+ style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-=
+left: 1ex;">"Information about our customers is an important part of our bu=
+siness,=20
+<br>and we are not in the business of selling it to others"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/master/crawl/amazon.c=
+om/Amazon.com%20Privacy%20Notice.txt#L60" target=3D"_blank">https://github.=
+com/tosdr/<wbr>tosback2/blob/master/crawl/<wbr>amazon.com/Amazon.com%<wbr>2=
+0Privacy%20Notice.txt#L60</a>
+<br>
+<br>after a few negative points, it's great to find this positive one, more=
+=20
+<br>services should make that pledge in their privacy policies. we should=
+=20
+<br>give them good positive points for this.
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_39_33163439.1369228284990--

@@ -1,0 +1,163 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBQGL52GAKGQEDIPVV6A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id EDCA6161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 18:50:12 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E80EA226067
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 18:50:12 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id QPrfYTqYeFiI for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 18:50:11 +0200 (CEST)
+Received: from mail-ie0-x238.google.com (mail-ie0-x238.google.com [IPv6:2607:f8b0:4001:c03::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0C36B22607E
+	for <michiel@michielbdejong.com>; Tue, 21 May 2013 18:50:10 +0200 (CEST)
+Received: by mail-ie0-f184.google.com with SMTP id s9sf290263iec.11
+        for <michiel@michielbdejong.com>; Tue, 21 May 2013 09:50:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yEXSZTd6jEz1FFUQSND802G77pRl2rycpLFqvZ1bV/8=;
+        b=Te/2TDEbdrBlRhiIewPB9dk0bIQz3eeSX4T6fPcVfCaxjpxRQ4Om+w8Jig+rMd1Kqe
+         EN6moAG8CR//70mX29a9GwWbSmNnomzEv9FM7wCFQrqdasaWtGiLLLo4GAE56xcORI4F
+         5Lqs7ts5XhslC4PcsAj30BmFsjzMDWOSVVzwxyotUN0VzjP+DchrWJKjdVAFM5gfrmrZ
+         ujiMdQk9Wdj6Vq1B6ltNSB3/uET0Qy1EBQYV1RXcPn7JJbrHfdbXtwmPm1cyZrX3vVsx
+         4p/tQAYOY4YhC6PdzLdFXNf5fBNnjoy0qyuVbUCSTeW2LeZ7r+KO9Z12OyoFmTBOA9Du
+         GawQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yEXSZTd6jEz1FFUQSND802G77pRl2rycpLFqvZ1bV/8=;
+        b=ejvPhrU2eaEpuSh3TIeVoDBvKvlBlBEUorzHDfiIxW1+OqqZ6R3BUQ9k4S6716OSth
+         sqAfCfuqs5K4yk+317tRq0VIQz21fFzpS5SqR2dLwLjVY270PAiN5os73N2T5swzsHSn
+         XhB6rZSPu+B+X4g0gVxGPoli4FHRIWKAURRvb6yqsaPLT53KnRJhYIs5sf/BndRwhB+f
+         ikfC4qVSl3YhzYcozFcu2UL3nv2lvXDD8SdrDmiTkA7pYMk/NwBuKNZHyrlC2DgTrDmW
+         /HubGLykdFMbZXiAJmFa1T9cXj5yK0VZoHg3rOvgr6pgvwAGhyI+VcqctkrcaRu0RDpj
+         nEkg==
+X-Received: by 10.50.50.204 with SMTP id e12mr1814908igo.0.1369155009801;
+        Tue, 21 May 2013 09:50:09 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.115.102 with SMTP id jn6ls705754igb.26.gmail; Tue, 21 May
+ 2013 09:50:08 -0700 (PDT)
+X-Received: by 10.50.33.14 with SMTP id n14mr508751igi.3.1369155008782;
+        Tue, 21 May 2013 09:50:08 -0700 (PDT)
+Date: Tue, 21 May 2013 09:50:07 -0700 (PDT)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <9d51a2f0-0efa-4d8e-a056-e68e8b679c89@googlegroups.com>
+In-Reply-To: <20130521073621.GC5633@synclavier.ampoliros.net>
+References: <20130515103134.GA19856@synclavier.ampoliros.net>
+ <4ec16333-5ff6-4ce6-93f5-ebe902b8e7fe@googlegroups.com>
+ <20130516190123.GI10401@synclavier.ampoliros.net>
+ <082e2401-77ae-48a6-bc08-1c3fb1112cbb@googlegroups.com>
+ <20130520223012.GA3759@synclavier.ampoliros.net>
+ <163a5f88-aab9-41d3-b474-d3e2652c7760@googlegroups.com>
+ <20130521073621.GC5633@synclavier.ampoliros.net>
+Subject: Re: [tosdr:2183] Re: Sony Entertainment Network [bad] Binding
+ Arbitration clause and class action waiver (30 days optout)
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1678_26845082.1369155007900"
+
+------=_Part_1678_26845082.1369155007900
+Content-Type: text/plain; charset=ISO-8859-1
+
+Sure, that's reasonable. I just wish we had a way to differentiate between 
+degrees of bad.
+
+And I don't mind at all -- thank you for asking!
+
+Hannah
+
+On Tuesday, May 21, 2013 12:36:21 AM UTC-7, Hugo Roy wrote:
+>
+> Thank you Hannah. 
+>
+> So to me, even though they can be legal in the US and Canada, I 
+> would still point them out with a negative "thumbs-down". After 
+> all, we are trying to get an assessment of fairness from the user 
+> point of view. 
+>
+> PS: do you mind if we link to your post from 
+> http://tosdr.org/blog/ ? 
+>
+> -- 
+> Hugo Roy, Project Lead 
+> Terms of Service; Didn't Read | www.tosdr.org 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1678_26845082.1369155007900
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Sure, that's reasonable. I just wish we had a way to differentiate between =
+degrees of bad.<div><br></div><div>And I don't mind at all -- thank you for=
+ asking!</div><div><br></div><div>Hannah<br><br>On Tuesday, May 21, 2013 12=
+:36:21 AM UTC-7, Hugo Roy wrote:<blockquote class=3D"gmail_quote" style=3D"=
+margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;=
+">Thank you Hannah.
+<br>
+<br>So to me, even though they can be legal in the US and Canada, I
+<br>would still point them out with a negative "thumbs-down". After
+<br>all, we are trying to get an assessment of fairness from the user
+<br>point of view.
+<br>
+<br>PS: do you mind if we link to your post from
+<br><a href=3D"http://tosdr.org/blog/" target=3D"_blank">http://tosdr.org/b=
+log/</a> ?
+<br>
+<br>--=20
+<br>Hugo Roy, Project Lead
+<br>Terms of Service; Didn't Read | <a href=3D"http://www.tosdr.org" target=
+=3D"_blank">www.tosdr.org</a>
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1678_26845082.1369155007900--

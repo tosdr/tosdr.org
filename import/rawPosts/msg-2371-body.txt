@@ -1,0 +1,362 @@
+Return-Path: <tosdr+bncBCYPB2HXZENBB76D5KFQKGQEPXU5AHQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 8B724161736
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 17:49:23 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 865F0142063
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 17:49:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id TlvFSo50iw9P for <anything@michielbdejong.com>;
+	Fri, 26 Apr 2013 17:49:21 +0200 (CEST)
+Received: from mail-vb0-x23f.google.com (mail-vb0-x23f.google.com [IPv6:2607:f8b0:400c:c02::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 755711420C8
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 17:49:21 +0200 (CEST)
+Received: by mail-vb0-f63.google.com with SMTP id f12sf420725vbg.18
+        for <anything@michielbdejong.com>; Fri, 26 Apr 2013 08:49:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=khvaKbKQuwFCwWSLkUygWmE+/dYwKWyoL2boiNZP3Hs=;
+        b=PSkVHUyx21m5iETr3gV0K0nUSVGA8/4FnLUCEtY3cSCtn2neD2ZQ4WC+2g+gzzvPXA
+         +NcIusSq4AUl3+7du+qG0B6zOtYk37cxI2hNgl3EyQ/Ci3SMtvJyhraozRGY/Ecfhj56
+         EyApPkyVGZ8ijMZusVCIJB+kNYPPfqsFjVUjIwObkQ+gLGig3LpP7pdXCgn8fGPLnaLc
+         uXEqNs0VoncNPv3Nf5AiJF1B75UNYsP7v2dhzkK+qx4LzLwaB22Tx8AdI0XYYbq8bnjg
+         CqDLJB8/rZS1V4g5eBXHrvisC8o7ltyjvpb3Idn/xKDZcY9RDddww2sC4l90k3k3fvt+
+         6GbA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=khvaKbKQuwFCwWSLkUygWmE+/dYwKWyoL2boiNZP3Hs=;
+        b=VLxCEN6WaXGGL/SMwaj+SJjR0x+soXAVfJOnkLCokEKIZbULsp7kh3HuT8mx6MKN48
+         XrF4xLAEH8R+GPJdzqV2hMO2G4fOahhGYNzhQXaIrkUtHsfXsfeMupTBlPwwhnEFGC0r
+         Fw/o6LqygDlPT1kKUy8Qku7cQOFvg/nBHd+bgk3jOdftqnj0apfOYJB15n12EsiqUmPC
+         iLz2ftU3y3w7REUDP52Am4XD7RfBcfooMm7VmAV4b/QYcbD9EejFt0vQD0lO/IzAIjPa
+         kFYf0ytUwLhYI7ifnvhmORaMTDHShG7WmUAcwizP6hz/Wb23Or0XBHfNq+PG6HG6A/CQ
+         Jcxw==
+X-Received: by 10.182.119.202 with SMTP id kw10mr872323obb.32.1366991359595;
+        Fri, 26 Apr 2013 08:49:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.117.233 with SMTP id kh9ls352222obb.17.gmail; Fri, 26 Apr
+ 2013 08:49:19 -0700 (PDT)
+X-Received: by 10.182.243.230 with SMTP id xb6mr588083obc.5.1366991359148;
+        Fri, 26 Apr 2013 08:49:19 -0700 (PDT)
+Date: Fri, 26 Apr 2013 08:49:18 -0700 (PDT)
+From: Alessandro Cosentino <cosenal@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <6e6cf4dc-4e0a-418f-9d4d-7c72fb3622c3@googlegroups.com>
+In-Reply-To: <6AF0BD3C-1AB6-4106-8B31-D4455DD88FCE@gmail.com>
+References: <474a47de-da93-4a39-927b-14d127301e57@googlegroups.com> <ee09dfd218b4790014efb71e96d31099@michielbdejong.com> <CBC78250-D2E7-457C-9203-16FF420144A6@gmail.com> <36b0a660-fcb1-46df-8a2d-57e62fab6996@googlegroups.com> <CACnPWSb4ZCzis1nBx+Y7xJ640WwxU=EmTj7SdO46UEFABK7i5Q@mail.gmail.com>
+ <6AF0BD3C-1AB6-4106-8B31-D4455DD88FCE@gmail.com>
+Subject: Re: [tosdr:1774] empty terms of services
+MIME-Version: 1.0
+X-Original-Sender: cosenal@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2430_28582240.1366991358827"
+
+------=_Part_2430_28582240.1366991358827
+Content-Type: text/plain; charset=ISO-8859-1
+
+Ian, thanks a lot for your answers and I apologize if this looks like 
+asking for legal advice.
+Let's stick to the more tos;dr question, which is also the one I am more 
+interested about.
+Again, suppose I start a service on the lines of your or Vinayak's 
+examples. 
+How would you rate that on tos;dr?
+I want to understand if my laziness would pay back. Will I end up with an A 
+or a B (as Michiel conjectures)? If I end up with an E on tos;dr, then it's 
+better if I sit down and start to write the tos page :P
+
+Alessandro
+
+On Friday, April 26, 2013 5:32:56 PM UTC+2, Ian McGowan wrote:
+>
+> All I can do here is speculate (again, this is in no way legal advice).
+>
+> My assumption is that with something like an email service, there is an 
+> expectation of privacy. Each user expects that their unique 
+> username/password is protected and only accessible by them (in the simplest 
+> case scenario). Thus, if your servers were hacked and everyone's emails 
+> made public, I'd guess they'd be able to sue you. 
+>
+> I would consult a lawyer on this, though, to be sure. All I can do is 
+> speculate, as I am not a lawyer and thus can't give any kind of legal 
+> advice. 
+>
+> On Apr 26, 2013, at 5:28 PM, Vinayak Pathak wrote:
+>
+> I can add in a specific example too, if that makes the question more clear.
+>
+> Say, you start an email service and put an empty ToS. Once you have a 
+> large user base, someone hacks into your server and makes all emails ever 
+> sent or received using your service public. Can the users then sue you? Or 
+> can you get away with saying, "I didn't *say* I was going to protect your 
+> privacy."?
+>
+>
+>
+>
+> On Fri, Apr 26, 2013 at 11:09 AM, Alessandro Cosentino <cos...@gmail.com<javascript:>
+> > wrote:
+>
+>> Well, I suppose there must be drawbacks to laziness of leaving the page 
+>> empty, of course :)
+>> Still, I would appreciate a more precise answer...or that depends on the 
+>> particular service?
+>> Does it depend at all on the way I host the service (country, kind of 
+>> users, ...)
+>>
+>> Ian, can you explain further when you say: "Users could run rampant with 
+>> your service in a way you didn't intend".
+>>
+>> An important question I missed in my first email: can there be legal 
+>> consequences to having an empty terms of services?
+>>
+>> Thanks again,
+>> Alessandro
+>>
+>> On Friday, April 26, 2013 4:08:05 PM UTC+2, Ian McGowan wrote:
+>>>
+>>> I agree with Michiel here. Although most ToS agreements are just 
+>>> spelling out restrictions of use, not having any could be both a good and 
+>>> bad thing. Users could run rampant with your service in a way you didn't 
+>>> intend, that is also harmful to other users, for example. I don't think 
+>>> that would be a good thing. 
+>>>
+>>> On Apr 26, 2013, at 4:04 PM, Michiel B. de Jong wrote: 
+>>>
+>>> > On 2013-04-26 15:58, Alessandro Cosentino wrote: 
+>>> >> I am new to this list and the question might be out of the scope. 
+>>> It's 
+>>> >> a question that I asked Jan-Christoph, but he didn't have an answer. 
+>>> >> He suggested me to post the question on this list. Please flag it if 
+>>> >> it's off-topic. 
+>>> >> 
+>>> >> Suppose I start a web service, say a social network, or a blog 
+>>> >> platform (I don't have a real example in mind). 
+>>> >> Now suppose I am too lazy to write a terms of service page, so I 
+>>> leave 
+>>> >> it empty. 
+>>> >> I consider this a "default" case. What would be the rating of tos;dr 
+>>> >> in for my service? 
+>>> > 
+>>> > i would guess you would probably end up in class A or B. Most things 
+>>> people write in their ToS are restrictions on the user's rights, although 
+>>> sometimes there are some commitments in there (positive points). So if 
+>>> you're the "default" case, then you would end up pretty high in the 
+>>> rankings, but not necessarily the very best one. 
+>>> > 
+>>> > -- 
+>>> > tosdr.org | twitter.com/tosdr | github.com/tosdr 
+>>> > --- You received this message because you are subscribed to the Google 
+>>> Groups "Terms of Service; Didn't Read" group. 
+>>> > To unsubscribe from this group and stop receiving emails from it, send 
+>>> an email to tosdr+un...@**googlegroups.com. 
+>>> > To post to this group, send email to to...@googlegroups.com. 
+>>> > Visit this group at http://groups.google.com/**group/tosdr?hl=en<http://groups.google.com/group/tosdr?hl=en>. 
+>>>
+>>> > For more options, visit https://groups.google.com/**groups/opt_out<https://groups.google.com/groups/opt_out>. 
+>>>
+>>> > 
+>>> > 
+>>>
+>>>
+>
+>
+> -- 
+> I didn't like my previous signature. 
+>
+> -- 
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> --- 
+> You received this message because you are subscribed to the Google Groups 
+> "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an 
+> email to tosdr+un...@googlegroups.com <javascript:>.
+> To post to this group, send email to to...@googlegroups.com <javascript:>.
+> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>  
+>  
+>
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2430_28582240.1366991358827
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Ian, thanks a lot for your answers and I apologize if this looks like  aski=
+ng for legal advice.<br>Let's stick to the more tos;dr question, which is a=
+lso the one I am more interested about.<br>Again, suppose I start a service=
+ on the lines of your or Vinayak's examples. <br>How would you rate that on=
+ tos;dr?<br>I want to understand if my laziness would pay back. Will I end =
+up with an A or a B (as Michiel conjectures)? If I end up with an E on tos;=
+dr, then it's better if I sit down and start to write the tos page :P<br><b=
+r>Alessandro<br><br>On Friday, April 26, 2013 5:32:56 PM UTC+2, Ian McGowan=
+ wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.=
+8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div style=3D"word-wrap=
+:break-word">All I can do here is speculate (again, this is in no way legal=
+ advice).<div><br></div><div>My assumption is that with something like an e=
+mail service, there is an expectation of privacy. Each user expects that th=
+eir unique username/password is protected and only accessible by them (in t=
+he simplest case scenario). Thus, if your servers were hacked and everyone'=
+s emails made public, I'd guess they'd be able to sue you.&nbsp;</div><div>=
+<br></div><div>I would consult a lawyer on this, though, to be sure. All I =
+can do is speculate, as I am not a lawyer and thus can't give any kind of l=
+egal advice.&nbsp;</div><div><br><div><div>On Apr 26, 2013, at 5:28 PM, Vin=
+ayak Pathak wrote:</div><br><blockquote type=3D"cite">I can add in a specif=
+ic example too, if that makes the question more clear.<br><br>Say, you star=
+t an email service and put an empty ToS. Once you have a large user base, s=
+omeone hacks into your server and makes all emails ever sent or received us=
+ing your service public. Can the users then sue you? Or can you get away wi=
+th saying, "I didn't <i>say</i> I was going to protect your privacy."?<br>
+
+<br><br><br><br><div class=3D"gmail_quote">On Fri, Apr 26, 2013 at 11:09 AM=
+, Alessandro Cosentino <span dir=3D"ltr">&lt;<a href=3D"javascript:" target=
+=3D"_blank" gdf-obfuscated-mailto=3D"FBhZS88XF0UJ">cos...@gmail.com</a>&gt;=
+</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .=
+8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+Well, I suppose there must be drawbacks to laziness of leaving the page emp=
+ty, of course :)<br>Still, I would appreciate a more precise answer...or th=
+at depends on the particular service?<br>Does it depend at all on the way I=
+ host the service (country, kind of users, ...)<br>
+
+<br>Ian, can you explain further when you say: "Users could run rampant wit=
+h your service in a way you didn't intend".<br><br>An important question I =
+missed in my first email: can there be legal consequences to having an empt=
+y terms of services?<br>
+
+<br>Thanks again,<br>Alessandro<br><br>On Friday, April 26, 2013 4:08:05 PM=
+ UTC+2, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin=
+:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">I agree w=
+ith Michiel here. Although most ToS agreements are just spelling out restri=
+ctions of use, not having any could be both a good and bad thing. Users cou=
+ld run rampant with your service in a way you didn't intend, that is also h=
+armful to other users, for example. I don't think that would be a good thin=
+g.
+<br>
+<br>On Apr 26, 2013, at 4:04 PM, Michiel B. de Jong wrote:
+<br>
+<br>&gt; On 2013-04-26 15:58, Alessandro Cosentino wrote:
+<br>&gt;&gt; I am new to this list and the question might be out of the sco=
+pe. It's
+<br>&gt;&gt; a question that I asked Jan-Christoph, but he didn't have an a=
+nswer.
+<br>&gt;&gt; He suggested me to post the question on this list. Please flag=
+ it if
+<br>&gt;&gt; it's off-topic.
+<br>&gt;&gt;=20
+<br>&gt;&gt; Suppose I start a web service, say a social network, or a blog
+<br>&gt;&gt; platform (I don't have a real example in mind).
+<br>&gt;&gt; Now suppose I am too lazy to write a terms of service page, so=
+ I leave
+<br>&gt;&gt; it empty.
+<br>&gt;&gt; I consider this a "default" case. What would be the rating of =
+tos;dr
+<br>&gt;&gt; in for my service?
+<br>&gt;=20
+<br>&gt; i would guess you would probably end up in class A or B. Most thin=
+gs people write in their ToS are restrictions on the user's rights, althoug=
+h sometimes there are some commitments in there (positive points). So if yo=
+u're the "default" case, then you would end up pretty high in the rankings,=
+ but not necessarily the very best one.
+<br>&gt;=20
+<br>&gt; --=20
+<br>&gt; <a href=3D"http://tosdr.org/" target=3D"_blank">tosdr.org</a> | <a=
+ href=3D"http://twitter.com/tosdr" target=3D"_blank">twitter.com/tosdr</a> =
+| <a href=3D"http://github.com/tosdr" target=3D"_blank">github.com/tosdr</a=
+>
+<br>&gt; --- You received this message because you are subscribed to the Go=
+ogle Groups "Terms of Service; Didn't Read" group.
+<br>&gt; To unsubscribe from this group and stop receiving emails from it, =
+send an email to <a>tosdr+un...@<u></u>googlegroups.com</a>.
+<br>&gt; To post to this group, send email to <a>to...@googlegroups.com</a>=
+.
+<br>&gt; Visit this group at <a href=3D"http://groups.google.com/group/tosd=
+r?hl=3Den" target=3D"_blank">http://groups.google.com/<u></u>group<wbr>/tos=
+dr?hl=3Den</a>.
+<br>&gt; For more options, visit <a href=3D"https://groups.google.com/group=
+s/opt_out" target=3D"_blank">https://groups.google.com/<u></u>grou<wbr>ps/o=
+pt_out</a>.
+<br>&gt;=20
+<br>&gt;=20
+<br>
+<br></blockquote></blockquote></div><br><br clear=3D"all"><br>-- <br>I didn=
+'t like my previous signature.
+
+<div><br></div>
+
+-- <br>
+<a href=3D"http://tosdr.org" target=3D"_blank">tosdr.org</a> | <a href=3D"h=
+ttp://twitter.com/tosdr" target=3D"_blank">twitter.com/tosdr</a> | <a href=
+=3D"http://github.com/tosdr" target=3D"_blank">github.com/tosdr</a><br>
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"javascript:" target=3D"_blank" gdf-obfuscated-mailto=3D"=
+FBhZS88XF0UJ">tosdr+un...@<wbr>googlegroups.com</a>.<br>
+To post to this group, send email to <a href=3D"javascript:" target=3D"_bla=
+nk" gdf-obfuscated-mailto=3D"FBhZS88XF0UJ">to...@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den</a>.<=
+br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</blockquote></div><br></div></div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2430_28582240.1366991358827--

@@ -1,0 +1,123 @@
+Return-Path: <tosdr+bncBCG7Z4EO7ENBBHPA3KHAKGQE3FNVF3Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A18DF16174A
+	for <anything@michielbdejong.com>; Fri,  5 Jul 2013 13:38:09 +0200 (CEST)
+Received: from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9F15F226170
+	for <anything@michielbdejong.com>; Fri,  5 Jul 2013 13:38:09 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter17-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id xF+sVwiPxf5L for <anything@michielbdejong.com>;
+	Fri,  5 Jul 2013 13:38:08 +0200 (CEST)
+Received: from mail-pa0-x238.google.com (mail-pa0-x238.google.com [IPv6:2607:f8b0:400e:c03::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B037D22611C
+	for <anything@michielbdejong.com>; Fri,  5 Jul 2013 13:38:07 +0200 (CEST)
+Received: by mail-pa0-f56.google.com with SMTP id tj12sf588487pac.1
+        for <anything@michielbdejong.com>; Fri, 05 Jul 2013 04:38:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=Z5dsUiiB8wdx3HcV3jaT5TNC7xabCT8EwZZDo/VSqGQ=;
+        b=XVDywRdWSwKDSg+ZOZLL+TKZj9/4tI53Oj8R3EF4s+6iJtj6iEeJrP2gLD5YmqcBQb
+         EXmhsAm1yiQVzPQyAFJuHCyLP13ckRVJGLYYhjkDx8sFFjqaGvTiJuK7g9kQnJFscwY4
+         7/nc1INp9sN4mEpYKywtgKbbsEAhQYziMWspViwq1fY6Mw9cVVt+JqOFjPFDd2rd9wGS
+         yOBYMUM5T0iPfYifWQ2hzo2L54FxCs/qY3A4mcrhpR/Sbsgj68nGb0toLwFHpilxiPpW
+         E8sEuM9y/BZW7UQiESOAbVZh5PFH44D7GNLjQzsdsLF+Xicewg6ZOdIuvZHw0mBgcUuF
+         d30w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=Z5dsUiiB8wdx3HcV3jaT5TNC7xabCT8EwZZDo/VSqGQ=;
+        b=CzeT25eL+HW15ODybQzBGbuXkKYPrpcZutZe6TVpdCugEN03SvjEwWn8a7XNVRBh1g
+         CCMLs3/Ac4s/yYSV8gPieMPguR+5KoJHkHvgFVEBylsJ9r1T+CptTqj4hmKWXotm+rNW
+         04IF1vvAoyZRC4cFj+ks7PP2NSqN3zkPwjetTHA4Cu1+V42twmdG/OsXsO4UA1G8EJnT
+         sljaRdm5P7hiIesJrU8C/sOLdwD7DFKaA137VgP5sXZ8FDT3M+DFAZYzcSPrwvLT0fHu
+         Ro4/ctO3p2ii+/kHNGj51JqQrY6qzTRcY9FqAwOoIvtAzCKRWLeyV8/Q4bPBTU8gKoXM
+         ggag==
+X-Received: by 10.49.47.10 with SMTP id z10mr214748qem.7.1373024285731;
+        Fri, 05 Jul 2013 04:38:05 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.120.234 with SMTP id lf10ls912544qeb.49.gmail; Fri, 05 Jul
+ 2013 04:38:05 -0700 (PDT)
+X-Received: by 10.49.129.104 with SMTP id nv8mr219953qeb.27.1373024285494;
+        Fri, 05 Jul 2013 04:38:05 -0700 (PDT)
+Date: Fri, 5 Jul 2013 04:38:04 -0700 (PDT)
+From: Jimm Stout <jamesstout1@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <bec944ab-e7e1-4ded-9415-c5937a9bdb65@googlegroups.com>
+Subject: [tosdr:2445] TOS Changes
+MIME-Version: 1.0
+X-Original-Sender: jamesstout1@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_204_299349.1373024284979"
+
+------=_Part_204_299349.1373024284979
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi everyone! I'm still working on getting proper notifications when 
+policies change, but here's one from twitter:
+
+FYI:
+Twitter updated it's Third-Party section: 
+https://github.com/tosdr/tosback2/commit/07dedb6413d791cf40216546d0c8b94a9110c49a#L1L69
+
+Take care,
+Jimm
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_204_299349.1373024284979
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi everyone! I'm still working on getting proper notifications when policie=
+s change, but here's one from twitter:<br><br>FYI:<br>Twitter updated it's =
+Third-Party section: https://github.com/tosdr/tosback2/commit/07dedb6413d79=
+1cf40216546d0c8b94a9110c49a#L1L69<br><br>Take care,<br>Jimm<br>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_204_299349.1373024284979--

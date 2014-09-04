@@ -1,0 +1,125 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBKWEQ6FAKGQEZSFI2TY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 517C1161740
+	for <anything@michielbdejong.com>; Thu, 14 Mar 2013 15:44:02 +0100 (CET)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4BE441420A2;
+	Thu, 14 Mar 2013 15:44:02 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id sSYnxe95TZ8m; Thu, 14 Mar 2013 15:44:00 +0100 (CET)
+Received: from mail-gh0-f191.google.com (mail-gh0-f191.google.com [209.85.160.191])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 874E61420AF;
+	Thu, 14 Mar 2013 15:43:57 +0100 (CET)
+Received: by mail-gh0-f191.google.com with SMTP id f1sf861573ghb.8
+        for <multiple recipients>; Thu, 14 Mar 2013 07:43:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=+BBfSc7Ft/6hQ/gra4k4kXnDdOdx0Z41xThPAyrzBGY=;
+        b=QZQYMS7K23Iw36LwCrY4qaNW74E3OuNpmRnKtAhgH7/lcxHLNYMDSWiZL9EH7fgxQK
+         sVfjlQL5ulA25q9JidX3xPCRuZFksU+55EUdv3cFFT2K66QvOQBVFVkLD15Tw7VW/Q5T
+         yQhP91E3KIpeFDzm/ZnJ7yDBtMG9rtwc1pnbgYJqOXdfG11x4wjhxxiMWroEoNTtcyrv
+         8jKYLC8+hOG7cx/m1OwtbvEip727ftPXM+uOkTF3PVeKqSVaHhGeCUYwJS8UuXnpu8Q4
+         Ldf5IBx3iOYfgIEf6E1k914TAiJ5JZKP/LvWPsPCbFXd8y1HY7TVEC/8EoTBEfqajhUP
+         vzlw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=+BBfSc7Ft/6hQ/gra4k4kXnDdOdx0Z41xThPAyrzBGY=;
+        b=DA0C8vFTMB/ogPUehL0yFq2eYG5vsG+7A6MadXhy8g+/DWRkC5m3B3Ck3Hd8O0hl0R
+         U/bG44UjnabAsCyg0B99LIJFIIXyS9+hdyyVRvzLH/P7Jt80ZNaBfqzouJORGqD6spsr
+         UWLJsNehaoVkFOyz1TRylZK9DxY6iwvX/VPCUZlNu/mJD8qEBUuLgrIc3jTJA+u2WoFl
+         L56C8bYg87y9CgcAskz6bzj9GLBQHZZVAZb9FdoJ+aYHsYBewraWne+j1k3rBR1BtmK4
+         xSAi3ZT2N3/HD4uxsXSLFAXRQEuRUX6hII8msBNKnLoNYskNcOtacXQ2r9XCfjkwPGAo
+         ZRIw==
+X-Received: by 10.49.85.35 with SMTP id e3mr241919qez.7.1363272236177;
+        Thu, 14 Mar 2013 07:43:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.134.35 with SMTP id ph3ls2105926qeb.63.gmail; Thu, 14 Mar
+ 2013 07:43:54 -0700 (PDT)
+X-Received: by 10.49.85.165 with SMTP id i5mr112336qez.28.1363272234824;
+        Thu, 14 Mar 2013 07:43:54 -0700 (PDT)
+Date: Thu, 14 Mar 2013 07:43:54 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <46611e2a-651b-46e9-b5f5-1f591599a031@googlegroups.com>
+In-Reply-To: <484ec619-f154-4ba7-9676-51db62953eb8@googlegroups.com>
+References: <484ec619-f154-4ba7-9676-51db62953eb8@googlegroups.com>
+Subject: [tosdr:1660] Re: (Good) grammerly Privacy policy is easy to read
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_341_12573782.1363272234565"
+
+------=_Part_341_12573782.1363272234565
+Content-Type: text/plain; charset=ISO-8859-1
+
+This is excellent. This has been noted and will be on the website soon.
+
+On Tuesday, December 11, 2012 4:03:30 AM UTC+1, Robin Monks wrote:
+>
+> http://privacy-policy.truste.com/verified-policy/www.grammarly.com
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_341_12573782.1363272234565
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is excellent. This has been noted and will be on the website soon.<br>=
+<br>On Tuesday, December 11, 2012 4:03:30 AM UTC+1, Robin Monks wrote:<bloc=
+kquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-l=
+eft: 1px #ccc solid;padding-left: 1ex;"><a href=3D"http://privacy-policy.tr=
+uste.com/verified-policy/www.grammarly.com" target=3D"_blank">http://privac=
+y-policy.truste.<wbr>com/verified-policy/www.<wbr>grammarly.com</a></blockq=
+uote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_341_12573782.1363272234565--

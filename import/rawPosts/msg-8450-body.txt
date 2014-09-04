@@ -1,0 +1,83 @@
+Return-Path: <tosdr+bncBCQKBMV2REEBB4ETXCIAKGQE5PFDDVA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id B54E8161743
+	for <anything@michielbdejong.com>; Fri, 16 Aug 2013 13:16:07 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B2B27178082
+	for <anything@michielbdejong.com>; Fri, 16 Aug 2013 13:16:07 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id U2HJhCRrsUio for <anything@michielbdejong.com>;
+	Fri, 16 Aug 2013 13:16:06 +0200 (CEST)
+Received: from mail-pa0-x238.google.com (mail-pa0-x238.google.com [IPv6:2607:f8b0:400e:c03::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 06987178074
+	for <michiel@michielbdejong.com>; Fri, 16 Aug 2013 13:16:02 +0200 (CEST)
+Received: by mail-pa0-f56.google.com with SMTP id fa1sf579364pad.1
+        for <michiel@michielbdejong.com>; Fri, 16 Aug 2013 04:16:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=gtQVRmb9UWdBQ6onv45I3z1BdceHNtrP7yRq7kK+wz0=;
+        b=jr6fJIPyb/kMTKirwiMEptUP5WcjOQ0jkRFtab5vBaP3Nu48Qxiy6TeCANuPsNl3dL
+         nANozy0iQX19gFxTKYYhdf1+awwHfmGk0eTvCj7QSz5WNGpF3Q8P3LWdtiDH3/C9jVkD
+         2Xr4yd+JcX26oADJ+jquM8Q08CGeEkA4OnF6ywVCq8Ys9mcJYIoyBh/RhN9q0M2Fibks
+         vQws6pfmjl64KwborMVwQoqwQY4cvQxmVM4G9zhuk8KRawBoLNPjx4LmQOSOil0z+and
+         TybaRt99B4tZFYh0d22E4+V9RS/TMFU+cX5LJ7yhb+eZFDEqseraHR62vOM2mdg3DkG9
+         pR9w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=gtQVRmb9UWdBQ6onv45I3z1BdceHNtrP7yRq7kK+wz0=;
+        b=ms5UAVb4NF5+zZoPY/MXojIFDJOfauAe4WCpfJnZvsmOgS+z5pn8A+now9umapqCf3
+         RPyP9f0OKixYG07oQ0cXUIoFSIaAuhOXY/wQuzRCOdTWZrRXsPrAMP8vvodB7VhLsEd6
+         +/hws3iYRDrnX/tjjIZxrm58k3a6/8fnQRjyPpP5sAOieLTGsLvx5FaxnUHyWG/WLCFn
+         /kyvYUKuxi+z5xIGKxTEJ9j5n10aYlvXGHeNkdN1sOM4igVv6VEGCUwR/MoCMCXQu+wE
+         M7GlaDYLbvJ35ItdYs3XQdTII3XmIWOm048Ud6bgaND7QxEJCTwHmLT/F4aWJi4b91Ua
+         jT3w==
+X-Received: by 10.49.26.66 with SMTP id j2mr3279qeg.26.1376651761020;
+        Fri, 16 Aug 2013 04:16:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.1.38 with SMTP id 6ls714786qej.92.gmail; Fri, 16 Aug 2013
+ 04:16:00 -0700 (PDT)
+X-Received: by 10.49.70.170 with SMTP id n10mr4646qeu.22.1376651760607;
+        Fri, 16 Aug 2013 04:16:00 -0700 (PDT)
+Date: Fri, 16 Aug 2013 04:16:00 -0700 (PDT)
+From: dunaedine@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <a1d94097-1a22-4e52-aedd-42e34b65572d@googlegroups.com>
+In-Reply-To: <CADNfgRf9k9oW_VNWv_kadetMx_fG6vZnE1VfrgzfttRKM-LeNg@mail.gmail.com>
+References: <CADNfgRf9k9oW_VNWv_kadetMx_fG6vZnE1VfrgzfttRKM-LeNg@mail.gmail.com>
+Subject: [tosdr:2667] Re: governance on youtube
+MIME-Version: 1.0
+X-Original-Sender: dunaedine@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+It seems logical to me. Otherwise, Youtube became an editor, not only an host. It's a commun rule among host.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

@@ -1,0 +1,141 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBF7L5SHAKGQE5JGRCIY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 20F46161740
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 00:01:42 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2C6A8142254
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 23:56:43 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id c1POLIv6c9d2 for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 23:56:41 +0200 (CEST)
+Received: from mail-ve0-x23c.google.com (mail-ve0-x23c.google.com [IPv6:2607:f8b0:400c:c01::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 953AB1422D0
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 23:56:41 +0200 (CEST)
+Received: by mail-ve0-f188.google.com with SMTP id oz10sf1492236veb.5
+        for <anything@michielbdejong.com>; Mon, 08 Jul 2013 14:56:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n+eFkOMNXoEK42y4G/RYcELDkbdNJXNME62tPPg8pQg=;
+        b=yXVZUEXPJxERXYjjNsaGBJpBD8bNmyCnSjLSCOGE5P8H3/zDmM2LF/LPh17PHsMF6A
+         wIRx9qbvEBcYW8/x/4yDAsbJZ3yTe4QYp8X+MIrqes1Z0SvrTr94jTwDXqBEiYRUnOcF
+         OXflEpUAdKYkpocgC8/zVwHBG1CzOua7YX0v1vABcvcewlcBgHHwDqn2AN5v/zD0UETm
+         8Z+fsdctXGAnk6cChCHEkVkaaZ4Xr5XBBT4InE43aXkn92YdWsvxvvd0E2SFg7sLLxm7
+         rAkB8aF/1lTlaAkKJvjvLjDnypnI8PFd5o0aOWphJfniKmiSq343SPbbMPughEU761p/
+         F9+g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n+eFkOMNXoEK42y4G/RYcELDkbdNJXNME62tPPg8pQg=;
+        b=PX0gIu52kMUaCXrL7FweYI5GFFo3Gcd3HTe0O1A2u0fxGryQaLw6uFizhluvSGN4NY
+         gGPbKlHiMlnSnuazgqCKLtLvkPhEFlp5BvDSOVChR/N7z52uhG9gOx13lDPFdD3H1lTv
+         xqxwLC2O8QAHpPOVJooxQISxTdpn8kSP+B+rM75KQHq6oCDWzOBnCV0xHv6HLInI/7EL
+         xUte2IeFwsQfzdxf/4S4kZ2A75omgrjJIfq9IWJ6O3J7ZK8kse44F1iyqLUdhDlen0e4
+         XYvGVVATdG224BBOKvT8B8yoFEn1jvxm7xZIdCMes/gLNP2i8NC4eyyJmaLo653gpy6S
+         c0ww==
+X-Received: by 10.49.0.200 with SMTP id 8mr592228qeg.38.1373320600413;
+        Mon, 08 Jul 2013 14:56:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.50.167 with SMTP id d7ls1962792qeo.25.gmail; Mon, 08 Jul
+ 2013 14:56:39 -0700 (PDT)
+X-Received: by 10.49.34.133 with SMTP id z5mr586598qei.39.1373320599713;
+        Mon, 08 Jul 2013 14:56:39 -0700 (PDT)
+Date: Mon, 8 Jul 2013 14:56:39 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <919e478d-e5f6-4e14-972c-7bed60efda92@googlegroups.com>
+In-Reply-To: <a75a32d1-6374-4fcb-b621-1a38c8d0e83c@googlegroups.com>
+References: <a75a32d1-6374-4fcb-b621-1a38c8d0e83c@googlegroups.com>
+Subject: [tosdr:2473] Re: Tumblr requires accurate registration info
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4575_23988962.1373320599356"
+
+------=_Part_4575_23988962.1373320599356
+Content-Type: text/plain; charset=ISO-8859-1
+
+This is similar to basically every other service we've looked at, and I 
+believe we've only been making a note of services that don't allow 
+pseudonyms. This is for registration information, so I feel that's 
+different and it makes sense to be truthful about that.
+
+On Monday, May 6, 2013 6:56:41 AM UTC-5, Ian McGowan wrote:
+>
+> You should provide Tumblr with accurate, complete, and updated 
+>> registration information, particularly your e-mail address, and failure to 
+>> do so may result in suspension of your Account.
+>
+>
+> http://www.tumblr.com/policy/en/terms_of_service 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_4575_23988962.1373320599356
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is similar to basically every other service we've looked at, and I bel=
+ieve we've only been making a note of services that don't allow pseudonyms.=
+ This is for registration information, so I feel that's different and it ma=
+kes sense to be truthful about that.<br><br>On Monday, May 6, 2013 6:56:41 =
+AM UTC-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"marg=
+in: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><b=
+lockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-le=
+ft-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;pad=
+ding-left:1ex"><span style=3D"color:rgb(68,68,68);font-family:'Helvetica Ne=
+ue',Helvetica,sans-serif;font-size:15px;line-height:22px">You should provid=
+e Tumblr with accurate, complete, and updated registration information, par=
+ticularly your e-mail address, and failure to do so may result in suspensio=
+n of your Account.</span></blockquote><div><br></div><div><a href=3D"http:/=
+/www.tumblr.com/policy/en/terms_of_service" target=3D"_blank">http://www.tu=
+mblr.com/policy/<wbr>en/terms_of_service</a>&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_4575_23988962.1373320599356--

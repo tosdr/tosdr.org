@@ -1,0 +1,126 @@
+Return-Path: <tosdr+bncBCN23IMP34ARBR7L4GPQKGQEHOXWAJI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D8FC34091A
+	for <anything@michielbdejong.com>; Sat, 23 Aug 2014 13:06:49 +0200 (CEST)
+Received: from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D4D3E14220C
+	for <anything@michielbdejong.com>; Sat, 23 Aug 2014 13:06:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter30-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter30-d.gandi.net (mfilter30-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LrBY62uPSN5Z for <anything@michielbdejong.com>;
+	Sat, 23 Aug 2014 13:06:48 +0200 (CEST)
+Received: from mail-wg0-x23a.google.com (mail-wg0-x23a.google.com [IPv6:2a00:1450:400c:c00::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 76A83142241
+	for <michiel@michielbdejong.com>; Sat, 23 Aug 2014 13:06:48 +0200 (CEST)
+Received: by mail-wg0-f58.google.com with SMTP id l18sf1249435wgh.3
+        for <michiel@michielbdejong.com>; Sat, 23 Aug 2014 04:06:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IicuII5H28Qb2tWxNCl3Hr3w1nlDE6pEfL96KODTzcs=;
+        b=A27e3Lk0MsdQ6jYdBiUNkSMJ3SFJ356kxTv95RH4e0lO1cL/RU4ztwwFWEuYn6BWQW
+         O50HqdfkPpaQCel2j0y+0PXnxDW7qk2YNCAbLOg9Lo5hnX0JGJ26zOJ6qHPbvprsXZqj
+         S/Dh655prjtr2ROian4eTH16nryY46VGWVVdvpKcriX5d1rtBLBJLAInOJ5kAMLIJeUx
+         3rAwg9fELtc7dZAfBrCIry82DyTmvslVnlk5/xlf1Zc1265YoBIKxWdw4nwUZ2FG7wlQ
+         EYxfUUXXAsBACB5Axhpm4dq3TFeJ8aw2Jf0+e82BKtFhqK/KtVQS32Mmz36vQijkG8IN
+         4uoA==
+X-Received: by 10.152.116.67 with SMTP id ju3mr394lab.13.1408792008223;
+        Sat, 23 Aug 2014 04:06:48 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.239.132 with SMTP id vs4ls277226lac.26.gmail; Sat, 23 Aug
+ 2014 04:06:47 -0700 (PDT)
+X-Received: by 10.112.255.99 with SMTP id ap3mr160719lbd.7.1408792007380;
+        Sat, 23 Aug 2014 04:06:47 -0700 (PDT)
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by gmr-mx.google.com with ESMTPS id r19si290432wik.0.2014.08.23.04.06.47
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 23 Aug 2014 04:06:47 -0700 (PDT)
+Received-SPF: none (google.com: anything@michielbdejong.com does not designate permitted sender hosts) client-ip=2001:4b98:c:538::196;
+Received: from mfilter31-d.gandi.net (mfilter31-d.gandi.net [217.70.178.162])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 0EB74172089
+	for <tosdr@googlegroups.com>; Sat, 23 Aug 2014 13:06:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter31-d.gandi.net
+Received: from relay4-d.mail.gandi.net ([217.70.183.196])
+	by mfilter31-d.gandi.net (mfilter31-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id H3wycL3Yasl1 for <tosdr@googlegroups.com>;
+	Sat, 23 Aug 2014 13:06:45 +0200 (CEST)
+X-Originating-IP: 77.186.184.107
+Received: from [192.168.0.108] (brln-4dbab86b.pool.mediaWays.net [77.186.184.107])
+	(Authenticated sender: anything@michielbdejong.com)
+	by relay4-d.mail.gandi.net (Postfix) with ESMTPSA id 644F4172081
+	for <tosdr@googlegroups.com>; Sat, 23 Aug 2014 13:06:45 +0200 (CEST)
+Message-ID: <53F875C4.4050406@michielbdejong.com>
+Date: Sat, 23 Aug 2014 13:06:44 +0200
+From: Michiel de Jong <anything@michielbdejong.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Thunderbird/31.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3149] Evernote not blacklisted
+References: <55189bf1-3bbc-4a2d-8fbe-352014baf3d1@googlegroups.com>
+In-Reply-To: <55189bf1-3bbc-4a2d-8fbe-352014baf3d1@googlegroups.com>
+X-Original-Sender: anything@michielbdejong.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: anything@michielbdejong.com does not designate permitted sender
+ hosts) smtp.mail=anything@michielbdejong.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+thanks for reporting this! we'll have a look at it, and update our
+info as necessary.
+
+On 23.08.2014 12:01, lenabolsson@gmail.com wrote:
+> I use Evernote and am quite satisfied with their view on integrity.
+> So I was surprised to see the warning on TosDR, saying account
+> cannot be deleted - according to the accountkillerblacklist. Well,
+> I checked. Evernote is not blacklisted there (anymore?) And it is
+> possible to kill your Evernote account (yes I did read the terms
+> before signing up, and was already sure). If TosDR rely on other
+> sources, it's necessary to check these out now and then. Yours,
+> LenaO
+> 
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJT+HXEAAoJECmDVpL5muhKtXQP/2/+p2hORCRsgquVjmAjB8kb
+lVClAXcM10nsnzX1aBk4v0QcFjmKOZzLEaUvd1sxE+KyuD7dlpMhqjaB97f4qo7t
+ntq8oSv4U0qNptcRbfEG9zLgNQQwsWHCQemHnhLF+9XZWafSLvfL+SFiQBlvwlEg
+EkEcYmMddG5n6n6L0LdFP4o02ciHBCO2TS2rsLtNObdKC6LPt+Ueg7wgQATJajcV
+/oITNmROuT75Yz0XvkRSVDLuEbkZHQeB6//DpG/zuLGhmhXMLDyvxWNtBxEnG0tB
+yQ3bIvlgqQdB+PVJkFZEAdS/qmMWT4SPc/ybKlNu2t4DprHYgIQvPLbHPGvJQIBD
+6g6l+pMER0FZ51EftS7hipB3CbQu819NBbxLdgaba4Y5cBS/gAyf40ekn2AMjFQx
+qW7LZIByL3TySGYBAbP3bHXM05PzarlKHJUrpx5ZY8aSyyYLQfYyMfLHoZoI/7ed
+aj95hOBy7lbjRJ1vMrJKHPEP90Be/GLjbUJweNLwS0+ruXGmhKM5oYPPyD4WqJzH
+RcQ8+yZYp1eXL5Z4tYLCkxkc/aVTos80tEzOBgACa6eXaBgiFULUgsfXFRyg+kck
+Xw2nYA35BZOCAGID+ryKl2VgpUc7/68P5xEQZHjcYvC86VcjpyJuurtfau1xTyiv
+FXq+ektYzW7/wHL+NjJC
+=Ot0W
+-----END PGP SIGNATURE-----
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

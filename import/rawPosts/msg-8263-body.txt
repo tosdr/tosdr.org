@@ -1,0 +1,187 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBT4ZUSIAKGQEXXBQXDY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 439B1161743
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:26:58 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3B5DA2261D3
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:26:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id MhJVjY6-QhLI for <anything@michielbdejong.com>;
+	Mon, 12 Aug 2013 18:26:56 +0200 (CEST)
+Received: from mail-qc0-x238.google.com (mail-qc0-x238.google.com [IPv6:2607:f8b0:400d:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6315E2261E5
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:26:56 +0200 (CEST)
+Received: by mail-qc0-f184.google.com with SMTP id e1sf2031136qcx.11
+        for <anything@michielbdejong.com>; Mon, 12 Aug 2013 09:26:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=PfgQPjYQ2HyShiSOghHT6yVUmgLamQJoxCSlO2UZt/4=;
+        b=UQ5OF3LDJumS8tcEUPD1aKLuAJ/J4EfEMOlRMZ7lBRFJqvCZQ6VkxUO3E0HWJPYHgC
+         jSmKalhNNCBDiU/5rI86JPjWqBQNxjsHsQKYXAjsQIq3pX4Fx+/ACxYBZbOh2vzIm8jy
+         SS21NoCfIa+g0w/SrdsW8ML5XgyXSqt6kry7/cc3veIZSaZIK/3wFJJCFMky/PuvHbRq
+         A20wu7c3DZSbCSuutmL4DxIe0W7xpldC1SKBqc7l3cbs3bRhzoVYnsHuNXEwSLoNVH5n
+         TiHBboHwT1aukWV9D6Ngg5wzUHy1cG+J2ljwlcDWwxjapcy+9u31umHqcKb2bMJ/tEwx
+         tJOg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=PfgQPjYQ2HyShiSOghHT6yVUmgLamQJoxCSlO2UZt/4=;
+        b=ZpZBtmbRCBKJ0i+wyBFA1WXYFeGnJRrX7xPIgiGeFmlsbZBYeBVPaMDYCoZ7GHB3dh
+         o4nH4+XSufYffvwJDAfCph/gf3yE8AJfrGsoeVF3yHUUAj3f9n1z05z9qyh3FvjtVCaX
+         3jZSjFIKR2xzVHFH7dYizpBWN2dBbK4CwoxNb9yojqzeOsEH30hALi/PXNgqpETdOrUh
+         oidGu2TcnP+ByYxwdAQgvZ/rK5nqTrUmdzg7FRz9p7sEIHMtPZDjIKjys25mQoUs2ZdT
+         l2jvJ166dp/m6Wq9eq8mW8MDPO/q1lpbrKkP9wm+Uyj+jvtMpaGBlzQA2lWmN0FkVVTQ
+         t+dg==
+X-Received: by 10.49.53.38 with SMTP id y6mr612112qeo.38.1376324815334;
+        Mon, 12 Aug 2013 09:26:55 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.105.3 with SMTP id gi3ls2074236qeb.81.gmail; Mon, 12 Aug
+ 2013 09:26:54 -0700 (PDT)
+X-Received: by 10.49.119.232 with SMTP id kx8mr625204qeb.12.1376324814983;
+        Mon, 12 Aug 2013 09:26:54 -0700 (PDT)
+Date: Mon, 12 Aug 2013 09:26:54 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <90a5474d-c577-49a1-acd6-fb254bcdda41@googlegroups.com>
+In-Reply-To: <be722b59-a2e1-4519-bf63-23d107d0c488@googlegroups.com>
+References: <be722b59-a2e1-4519-bf63-23d107d0c488@googlegroups.com>
+Subject: [tosdr:2647] Re: No nudity is allowed on Microsoft Services
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1725_11629395.1376324814618"
+
+------=_Part_1725_11629395.1376324814618
+Content-Type: text/plain; charset=ISO-8859-1
+
+I don't really think this is terribly relevant.
+
+On Friday, May 10, 2013 3:27:07 PM UTC-5, Robin Monks wrote:
+>
+> Applies to outlook.com skydrive.com, live.com, account.live.com, 
+> profile.microsoft.com, msn.com, bing.com, office.com, Windows Photo 
+> Gallery, Windows Movie Maker, Microsoft Mail, Windows Live Writer and 
+> "other Microsoft Services" that link to these terms (oddly enough 
+> Microsoft.com has a different ToS).
+>
+>
+> This would supposedly even include private libraries. In short, no storing 
+> porn on SkyDrive.
+>
+>
+> You will not upload, post, transmit, transfer, distribute or facilitate 
+> distribution of any content (including text, images, sound, video, data, 
+> information or software) or otherwise use the service in a way that:
+>
+>    - depicts nudity of any sort including full or partial human nudity or 
+>    nudity in non-human forms such as cartoons, fantasy art or manga. 
+>
+>  
+>
+> From <http://windows.microsoft.com/en-US/windows-live/code-of-conduct> 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1725_11629395.1376324814618
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I don't really think this is terribly relevant.<br><br>On =
+Friday, May 10, 2013 3:27:07 PM UTC-5, Robin Monks wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #cc=
+c solid;padding-left: 1ex;"><div><p style=3D"margin:0in;font-family:calibri=
+;font-size:11pt"><span style=3D"background-repeat:initial initial" lang=3D"=
+en-US">Applies to <a href=3D"http://outlook.com" target=3D"_blank">outlook.=
+com</a> <a href=3D"http://skydrive.com" target=3D"_blank">skydrive.com</a>,
+<a href=3D"http://live.com" target=3D"_blank">live.com</a>, <a href=3D"http=
+://account.live.com" target=3D"_blank">account.live.com</a></span><span sty=
+le=3D"background-repeat:initial initial" lang=3D"en-CA">,
+<a href=3D"http://profile.microsoft.com" target=3D"_blank">profile.microsof=
+t.com</a>, <a href=3D"http://msn.com" target=3D"_blank">msn.com</a>, <a hre=
+f=3D"http://bing.com" target=3D"_blank">bing.com</a>, <a href=3D"http://off=
+ice.com" target=3D"_blank">office.com</a>, Windows Photo Gallery,
+Windows Movie Maker, Microsoft Mail, Windows Live Writer and "other
+Microsoft Services" that link to these terms (oddly enough Microsoft.com
+has a different ToS).</span></p><p style=3D"margin:0in;font-family:calibri;=
+font-size:11pt"><span style=3D"background-repeat:initial initial" lang=3D"e=
+n-CA"><br></span></p></div><div>This would supposedly even include private =
+libraries. In short, no storing porn on SkyDrive.</div><div><br></div><div>=
+<br></div><div><p style=3D"margin-left:.375in;margin-top:0pt;margin-bottom:=
+11pt;line-height:15pt;font-family:&quot;Segoe UI&quot;;font-size:9.75pt;col=
+or:#454545"><span style=3D"background-repeat:initial initial">You will not =
+upload, post, transmit, transfer,
+distribute or facilitate distribution of any content (including text, image=
+s,
+sound, video, data, information or software) or otherwise use the service i=
+n a
+way that:</span></p>
+
+<ul type=3D"disc" style=3D"margin-left:.375in;direction:ltr;margin-top:0in;=
+margin-bottom:0in">
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;margin-top=
+:0pt;margin-bottom:5pt;line-height:15pt;color:#454545"><span style=3D"font-=
+family:'Segoe UI';font-size:9.75pt;background-repeat:initial initial">depic=
+ts nudity of any sort
+     including full or partial human nudity or nudity in non-human forms su=
+ch
+     as cartoons, fantasy art or manga.</span></li>
+</ul>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.=
+0pt" lang=3D"en-CA">&nbsp;</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:9.0=
+pt;color:#595959">From &lt;<a href=3D"http://windows.microsoft.com/en-US/wi=
+ndows-live/code-of-conduct" target=3D"_blank">http://windows.microsoft.com/=
+<wbr>en-US/windows-live/code-of-<wbr>conduct</a>&gt;&nbsp;</p></div></block=
+quote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1725_11629395.1376324814618--

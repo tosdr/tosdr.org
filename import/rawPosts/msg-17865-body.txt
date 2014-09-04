@@ -1,0 +1,212 @@
+Return-Path: <michiel+caf_=gmail-fwd=michielbdejong.com@unhosted.org>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 3098440F3B
+	for <anything@michielbdejong.com>; Mon, 24 Mar 2014 05:25:45 +0100 (CET)
+Received: from mfilter8-d.gandi.net (mfilter8-d.gandi.net [217.70.178.137])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2CF7B17808D
+	for <anything@michielbdejong.com>; Mon, 24 Mar 2014 05:25:45 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter8-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter8-d.gandi.net (mfilter8-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id c5xVHcVAVTTY for <anything@michielbdejong.com>;
+	Mon, 24 Mar 2014 05:25:43 +0100 (CET)
+Received: from mail-pd0-x22b.google.com (mail-pd0-x22b.google.com [IPv6:2607:f8b0:400e:c02::22b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 18ABF178061
+	for <gmail-fwd@michielbdejong.com>; Mon, 24 Mar 2014 05:25:39 +0100 (CET)
+Received: by mail-pd0-f171.google.com with SMTP id r10so4792220pdi.2
+        for <gmail-fwd@michielbdejong.com>; Sun, 23 Mar 2014 21:25:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:delivered-to:dkim-signature:date:from:to
+         :message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=Y8nZZ3TVkFKojI2HxLUf+jM4i5aIVTcucg1jbm6OwdM=;
+        b=iosmOFGypeDmsJya5GVlSDUdbZED9RrcQ5mKrQ9Z0eUBRMk8WmWjCQbguxCiAIhNtv
+         C7KZet8xA0dCEjrIRKKTyA4B19kZkZg3C/tCE4Dgrii3BcU8T0BbciA1KFBiIz1GUNm6
+         XFkXIZcnyV9vs3ZH3KS1/pk8gJQd6hfOHTKtB9cHUFtDTK36Q1NcrKRmK6e8rCxEexXi
+         FwuWE26cN9OOSAad6xOU6cpKgqJjIZjkFkdy3RySqd4UhYaCwxgH/0t6StGfaN7u0fBu
+         S42MdF7IaYAITBtKqKYJbvG+ugZ5vXGkq/3WkjQ8LMaOt4JC0wzXF60tZaJXLfcVN6Aj
+         8hgg==
+X-Gm-Message-State: ALoCoQn/GkLMWmBVdk2vDZ7vN1E8GfTfLWHR+s86K2iKNWf6ZPNFumH/Rgz1QVrZMlV//L2CV14H
+X-Received: by 10.68.229.68 with SMTP id so4mr69005591pbc.110.1395635138274;
+        Sun, 23 Mar 2014 21:25:38 -0700 (PDT)
+X-Forwarded-To: gmail-fwd@michielbdejong.com
+X-Forwarded-For: michiel@unhosted.org gmail-fwd@michielbdejong.com
+Delivered-To: michiel@unhosted.org
+Received: by 10.68.60.106 with SMTP id g10csp184658pbr;
+        Sun, 23 Mar 2014 21:25:37 -0700 (PDT)
+X-Received: by 10.224.14.77 with SMTP id f13mr73046707qaa.31.1395635136716;
+        Sun, 23 Mar 2014 21:25:36 -0700 (PDT)
+Received: from mail-qc0-x23f.google.com (mail-qc0-x23f.google.com [2607:f8b0:400d:c01::23f])
+        by mx.google.com with ESMTPS id d8si5382882qao.115.2014.03.23.21.25.36
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sun, 23 Mar 2014 21:25:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC5ITJ5RSMJBBP7HX2MQKGQEDOWLAMY@googlegroups.com designates 2607:f8b0:400d:c01::23f as permitted sender)
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of tosdr+bncBC5ITJ5RSMJBBP7HX2MQKGQEDOWLAMY@googlegroups.com designates 2607:f8b0:400d:c01::23f as permitted sender) smtp.mail=tosdr+bncBC5ITJ5RSMJBBP7HX2MQKGQEDOWLAMY@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: by mail-qc0-f191.google.com with SMTP id r5sf1081619qcx.18
+        for <michiel@unhosted.org>; Sun, 23 Mar 2014 21:25:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=Y8nZZ3TVkFKojI2HxLUf+jM4i5aIVTcucg1jbm6OwdM=;
+        b=mGaBh8KrgXbtk15T9KPzSy6gC0bo41600F2bICgS9MLT/nFyUIG8J/aVoozdIDRt0T
+         22aV9Z24hBSxXlpR7y3t9xCp4/Lgq/2JlXApV0wCa+Eah/k8f87PYOu6RCYE6Ejh1ekE
+         XPV8faBJWyjJKxWHcEXv5Qo639ezICltg3JcnhxB8J3C7G1RMAKHu6klAidSDPCkj8TF
+         dRWx7bSaqHWEgyHmkCuuqCTEUHBpM8jY8cJX7P+skUzR7ki7Hoy82bMOlpyE4e3aDxKX
+         1JJ9KEPvR/Dk4pt28NusJbhCkOVHs/X5DByG/JM9mA/4aP5BLwFli4s8QIJf5oS244Xr
+         uX6w==
+X-Received: by 10.50.114.133 with SMTP id jg5mr271183igb.1.1395635136026;
+        Sun, 23 Mar 2014 21:25:36 -0700 (PDT)
+X-Received: by 10.182.19.231 with SMTP id i7mr11742693obe.25.1395635135689;
+        Sun, 23 Mar 2014 21:25:35 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.25.70 with SMTP id a6ls1274334igg.42.canary; Sun, 23 Mar
+ 2014 21:25:34 -0700 (PDT)
+X-Received: by 10.50.25.4 with SMTP id y4mr270303igf.10.1395635134357;
+        Sun, 23 Mar 2014 21:25:34 -0700 (PDT)
+Date: Sun, 23 Mar 2014 21:25:32 -0700 (PDT)
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Message-Id: <7db26d6f-5088-4157-a0ad-7c2d37394de6@googlegroups.com>
+In-Reply-To: <20c0e543-efda-48aa-b92d-98bbacaa24d9@googlegroups.com>
+References: <20c0e543-efda-48aa-b92d-98bbacaa24d9@googlegroups.com>
+Subject: [tosdr:3010] Re: Yammer.com (Microsoft Enterprise Social Network solution)
+MIME-Version: 1.0
+X-Original-Sender: michiel@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <https://groups.google.com/d/topic/tosdr/Gw8zB2bMUoU/unsubscribe>,
+ <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_222_30259749.1395635133049"
+
+------=_Part_222_30259749.1395635133049
+Content-Type: text/plain; charset=UTF-8
+
+hi, welcome!
+
+thanks for joining :)
+
+yes, you can just speak your mind. what is good about the terms of Yammer? 
+what is bad about them? what things should people be especially aware of 
+when choosing to agree to their terms of service or not?
+
+you can create one mailing list thread per discussion point, and put [Good] 
+or [Bad] at the beginning of the subject line, that makes it a bit easier 
+to process, but either way, even if you put it all in one mailing list 
+thread we'll work it out :) the important thing is to get some data points 
+about the Yammer terms, on which we can base a review, and eventually come 
+to an A-E rating.
+
+
+Cheers,
+Michiel
+
+On Monday, March 24, 2014 4:06:37 AM UTC+5:30, Pascal KOTTE wrote:
+>
+>
+> https://about.yammer.com/terms/
+>
+> https://about.yammer.com/privacy/
+> Also available other language
+>
+> https://about.yammer.com/service-terms/
+>
+> I am brand new this group; and I will try to understand what I can do for 
+> contributing. But I do not understand yet, if I should gives my opinions or 
+> not about the EULA, regarding criterias was defined under ToSDR ?
+> Not sure I am able to provide a clever point of view about...
+> Best regards.
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to a topic in the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this topic, visit https://groups.google.com/d/topic/tosdr/Gw8zB2bMUoU/unsubscribe.
+To unsubscribe from this group and all its topics, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_222_30259749.1395635133049
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">hi, welcome!<br><br>thanks for joining :)<br><br>yes, you =
+can just speak your mind. what is good about the terms of Yammer? what is b=
+ad about them? what things should people be especially aware of when choosi=
+ng to agree to their terms of service or not?<br><br>you can create one mai=
+ling list thread per discussion point, and put [Good] or [Bad] at the begin=
+ning of the subject line, that makes it a bit easier to process, but either=
+ way, even if you put it all in one mailing list thread we'll work it out :=
+) the important thing is to get some data points about the Yammer terms, on=
+ which we can base a review, and eventually come to an A-E rating.<br><br><=
+br>Cheers,<br>Michiel<br><br>On Monday, March 24, 2014 4:06:37 AM UTC+5:30,=
+ Pascal KOTTE wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;ma=
+rgin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div dir=
+=3D"ltr"><br><div><a href=3D"https://about.yammer.com/terms/" target=3D"_bl=
+ank" onmousedown=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F=
+%2Fabout.yammer.com%2Fterms%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNEUfQWaM6Q=
+NQe8kVJQ5qc1mJtTeww';return true;" onclick=3D"this.href=3D'https://www.goog=
+le.com/url?q\75https%3A%2F%2Fabout.yammer.com%2Fterms%2F\46sa\75D\46sntz\07=
+51\46usg\75AFQjCNEUfQWaM6QNQe8kVJQ5qc1mJtTeww';return true;">https://about.=
+yammer.com/<wbr>terms/</a><br></div><div><br></div><div><a href=3D"https://=
+about.yammer.com/privacy/" target=3D"_blank" onmousedown=3D"this.href=3D'ht=
+tps://www.google.com/url?q\75https%3A%2F%2Fabout.yammer.com%2Fprivacy%2F\46=
+sa\75D\46sntz\0751\46usg\75AFQjCNGPBJ2I3jiKpqzt9SzWOVl8vT6UJA';return true;=
+" onclick=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F%2Fabou=
+t.yammer.com%2Fprivacy%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNGPBJ2I3jiKpqzt=
+9SzWOVl8vT6UJA';return true;">https://about.yammer.com/<wbr>privacy/</a><br=
+></div><div>Also available other language</div><div><br></div><div><a href=
+=3D"https://about.yammer.com/service-terms/" target=3D"_blank" onmousedown=
+=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F%2Fabout.yammer.=
+com%2Fservice-terms%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNGbbAvUwaj_k9t2--5=
+XXo0PqKVbAg';return true;" onclick=3D"this.href=3D'https://www.google.com/u=
+rl?q\75https%3A%2F%2Fabout.yammer.com%2Fservice-terms%2F\46sa\75D\46sntz\07=
+51\46usg\75AFQjCNGbbAvUwaj_k9t2--5XXo0PqKVbAg';return true;">https://about.=
+yammer.com/<wbr>service-terms/</a><br></div><div><br></div><div>I am brand =
+new this group; and I will try to understand what I can do for contributing=
+. But I do not understand yet, if I should gives my opinions or not about t=
+he EULA, regarding criterias was defined under ToSDR ?</div><div>Not sure I=
+ am able to provide a clever point of view about...</div><div>Best regards.=
+</div></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to a topic in the Goog=
+le Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this topic, visit <a href=3D"https://groups.google.com/=
+d/topic/tosdr/Gw8zB2bMUoU/unsubscribe">https://groups.google.com/d/topic/to=
+sdr/Gw8zB2bMUoU/unsubscribe</a>.<br />
+To unsubscribe from this group and all its topics, send an email to <a href=
+=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegrou=
+ps.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_222_30259749.1395635133049--

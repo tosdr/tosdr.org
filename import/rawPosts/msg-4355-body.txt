@@ -1,0 +1,160 @@
+Return-Path: <jamesstout1@gmail.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id D3FB2161740
+	for <anything@michielbdejong.com>; Sun, 26 May 2013 15:46:31 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D11481420AF
+	for <anything@michielbdejong.com>; Sun, 26 May 2013 15:46:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id zJhM8M3F4fCY for <anything@michielbdejong.com>;
+	Sun, 26 May 2013 15:46:30 +0200 (CEST)
+Received: from mail-pb0-x23d.google.com (mail-pb0-x23d.google.com [IPv6:2607:f8b0:400e:c01::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E9A0F14207A
+	for <anything@michielbdejong.com>; Sun, 26 May 2013 15:46:29 +0200 (CEST)
+Received: by mail-pb0-f61.google.com with SMTP id jt11so1994530pbb.16
+        for <anything@michielbdejong.com>; Sun, 26 May 2013 06:46:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-google-doc-id:x-google-web-client:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:content-type
+         :x-google-token:x-google-ip;
+        bh=CgIb6fuJ1JjQaexU3GHAJds8k/XiZyNONOL7EedivKM=;
+        b=q+iDPgc6bJCJ1AqCITm3dEb2tCrFWZ6hh/VvO9nOyQOO8kqOtbLP8vsxzVSO97/Yqd
+         yMEH+3JeTG+hGAOtGRO9n8bHKx33D8dI2BnDj/ebHn2/ATJxUDQdaot/xUM5w8KVqFOp
+         wcbiUQuj/aDNXy2YM2DJYBCcgovVYfxZ5RWTpKq4Ss1u+3Ywxw7E1RfEHIrahhG+4jZ3
+         0lUJVdjoKajLiqlnpKJoRPH6WotmXJgpflLEXLXMD+WP4e+I0QzOl/FnlAgGl1ztkGlO
+         BtrczAy447SbCHyyHfvC3rTKKqiLsAJhAJNjLAJOycXjlm/MyrdreqS6G4ieoVsNnuX4
+         4M4A==
+X-Received: by 10.49.41.1 with SMTP id b1mr2125016qel.18.1369575987914;
+        Sun, 26 May 2013 06:46:27 -0700 (PDT)
+X-Google-Doc-Id: cfc23e47b7a5eef
+X-Google-Web-Client: true
+Date: Sun, 26 May 2013 06:46:27 -0700 (PDT)
+From: Jimm Stout <jamesstout1@gmail.com>
+To: tosdr@googlegroups.com
+Cc: "Michiel B. de Jong" <anything@michielbdejong.com>, jesse@wefu.org
+Message-Id: <8c3380ad-f9c0-43b3-b8b9-e22ac02b9058@googlegroups.com>
+In-Reply-To: <1369519229.2226.3.camel@zareason>
+References: <1369451694.2083.20.camel@zareason>
+ <8bf063add0bf7d701b99482e37d175ac@michielbdejong.com>
+ <1369519229.2226.3.camel@zareason>
+Subject: Re: Tosback2 crawler?
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_530_31174202.1369575987498"
+X-Google-Token: ELOkiI0FxMPaLIfsI9M0
+X-Google-IP: 2a01:e35:2427:7dd0:5c85:b8b0:6085:1dbc
+
+------=_Part_530_31174202.1369575987498
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_531_25919888.1369575987498"
+
+------=_Part_531_25919888.1369575987498
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hey Jesse,
+
+The server is current with the updated rules now. I believe you mentioned 
+that you don't have the environment set up for testing the rules, so I went 
+through and verified them today. I still think it would be best to verify 
+them before pulling them to the server.
+
+I noticed that you had replaced one of the rules with a comment about the 
+site going into maintenance. I added back the same url and xpath, so maybe 
+it's not necessary to do that? 
+
+Thanks for your updates,
+
+Jimm
+
+On Sunday, May 26, 2013 12:00:29 AM UTC+2, Jesse Weinstein wrote:
+>
+> On Sat, 2013-05-25 at 22:58 +0200, Michiel B. de Jong wrote: 
+> > On 2013-05-25 05:14, Jesse Weinstein wrote: 
+> > > Who and where is running the crawer, anyway? ;-) 
+>
+> > Actually Jimm is the expert here, but it looks like the crawler stopped 
+> > running again (last update 2 days ago). 
+> > 
+> > I think Jimm explained it last time: the crawler tries to push to 
+> > github, and that push will fail if there are remote changes. 
+> That makes sense, but it puts me in a difficulty position -- how do I 
+> fix rules (and add new ones), without breaking the crawler? 
+>
+> Can you run 
+>
+> git status 
+> git log -3 
+>
+> on the server, and email me the results? 
+>
+> (Or you could just give me access to the server, if I'm trusted, and 
+> that would be simpler.) 
+>
+> Thanks for the reply! 
+>
+> Jesse 
+>
+> >  Anyway, I 
+> > did the following: 
+> > 
+> >      ssh ro...@crawl.tosdr.org <javascript:> 
+> >      cd tosback2/ 
+> >      git pull 
+> > 
+> > and got "Everything up-to-date". Not sure what to conclude from that... 
+> > :/ 
+> > 
+> > Jimm, can you have a look maybe? 
+>
+>
+------=_Part_531_25919888.1369575987498
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hey Jesse,<br><br>The server is current with the updated rules now. I believe you mentioned that you don't have the environment set up for testing the rules, so I went through and verified them today. I still think it would be best to verify them before pulling them to the server.<br><br>I noticed that you had replaced one of the rules with a comment about the site going into maintenance. I added back the same url and xpath, so maybe it's not necessary to do that? <br><br>Thanks for your updates,<br><br>Jimm<br><br>On Sunday, May 26, 2013 12:00:29 AM UTC+2, Jesse Weinstein wrote:<blockquote class="gmail_quote" style="margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">On Sat, 2013-05-25 at 22:58 +0200, Michiel B. de Jong wrote:
+<br>&gt; On 2013-05-25 05:14, Jesse Weinstein wrote:
+<br>&gt; &gt; Who and where is running the crawer, anyway? ;-)
+<br>
+<br>&gt; Actually Jimm is the expert here, but it looks like the crawler stopped 
+<br>&gt; running again (last update 2 days ago).
+<br>&gt; 
+<br>&gt; I think Jimm explained it last time: the crawler tries to push to 
+<br>&gt; github, and that push will fail if there are remote changes.
+<br>That makes sense, but it puts me in a difficulty position -- how do I
+<br>fix rules (and add new ones), without breaking the crawler?
+<br>
+<br>Can you run
+<br>
+<br>git status
+<br>git log -3
+<br>
+<br>on the server, and email me the results?
+<br>
+<br>(Or you could just give me access to the server, if I'm trusted, and
+<br>that would be simpler.)
+<br>
+<br>Thanks for the reply!
+<br>
+<br>Jesse
+<br>
+<br>&gt; &nbsp;Anyway, I 
+<br>&gt; did the following:
+<br>&gt; 
+<br>&gt; &nbsp; &nbsp; &nbsp;ssh <a href="javascript:" target="_blank" gdf-obfuscated-mailto="GD4QpvC03RsJ">ro...@crawl.tosdr.org</a>
+<br>&gt; &nbsp; &nbsp; &nbsp;cd tosback2/
+<br>&gt; &nbsp; &nbsp; &nbsp;git pull
+<br>&gt; 
+<br>&gt; and got "Everything up-to-date". Not sure what to conclude from that... 
+<br>&gt; :/
+<br>&gt; 
+<br>&gt; Jimm, can you have a look maybe?
+<br>
+<br></blockquote>
+------=_Part_531_25919888.1369575987498--
+
+------=_Part_530_31174202.1369575987498--

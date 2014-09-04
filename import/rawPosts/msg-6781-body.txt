@@ -1,0 +1,168 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBAEL62HAKGQEHSJPNQQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 290BE16175A
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:02:12 +0200 (CEST)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2478A178089
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:02:12 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 2m+TkGWOb88m for <anything@michielbdejong.com>;
+	Wed, 10 Jul 2013 18:02:10 +0200 (CEST)
+Received: from mail-qe0-x23c.google.com (mail-qe0-x23c.google.com [IPv6:2607:f8b0:400d:c02::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 412D2178082
+	for <michiel@michielbdejong.com>; Wed, 10 Jul 2013 18:02:10 +0200 (CEST)
+Received: by mail-qe0-f60.google.com with SMTP id 2sf2083848qea.15
+        for <michiel@michielbdejong.com>; Wed, 10 Jul 2013 09:02:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=vLhDjR0T3Wb1NE6umHnbw6ORjtGnLIhmGq9fMuXzxoo=;
+        b=mMLUULqLqFe981TAu7Uurzm8Fd5Dx5h9LQ2X/LEWSO3NUmVoZeLwoacSsGznBrbu6i
+         wjbRCrWF3Cwd/nM0K5TZUqqcrmoa8J93tZmNS70sqgdK7n5ofW+rlNu9w2cH/YhJQd9W
+         3q+mkzSAoCUaa2VXtwLcCFUxPgGIRHIbwECAWnQD5WpnVy05HwkM9+b4J5s9/it9gYMw
+         /gHNMySpmzW26PwTy7uThL3xIxNcqHe/bdxNCb+JG+6v59pn16hqpkbK747d0YZDtAZA
+         kWXOSTVEpqb8iQ63yd3/ITTxj5rhCl2dzveABUniLjaQ3qTGkSEAnKLM4LArDtuaPmVM
+         skrQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=vLhDjR0T3Wb1NE6umHnbw6ORjtGnLIhmGq9fMuXzxoo=;
+        b=BzB3D71SnbQEYQCSr5kJPB1nqW7WjB2byl79pMb4bZdLknciBBoP3G5Xeb+KDrZcky
+         j1Ha7JfumspLb6HU6gvsuKSnatJibbRvjdMvdhTnXeHD/5OvJgFEscUhwDXFxTwfDe/q
+         PK20jnfUrBROMent2tWxxlCr76sIKImVOSkiy9H9896yVO1ffzTFNbZdw0QkbpjLwpcu
+         dzqAlt6+UblSaC27ZxQLWcVL2z0oE8/YO0h3ZvBnJdFvv6SoqHtNz5+rYxdpdGHvjGlv
+         +Frd/C9pzsSj0MhIkCDdheXwdvv6r4CITkcdclFkPiqKfbLF2S6xGxFAYOjt6/ocUOb6
+         RdvA==
+X-Received: by 10.49.30.105 with SMTP id r9mr941371qeh.4.1373472129093;
+        Wed, 10 Jul 2013 09:02:09 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.62.42 with SMTP id v10ls2714353qer.27.gmail; Wed, 10 Jul
+ 2013 09:02:08 -0700 (PDT)
+X-Received: by 10.49.62.3 with SMTP id u3mr944138qer.26.1373472128360;
+        Wed, 10 Jul 2013 09:02:08 -0700 (PDT)
+Date: Wed, 10 Jul 2013 09:02:07 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <1c0d83ac-6353-4e34-a02c-c5208d77981e@googlegroups.com>
+In-Reply-To: <9f20cb49-0f12-474b-a015-fc44dee16e75@googlegroups.com>
+References: <5023a990-b3e1-430e-9293-b04662e2572e@googlegroups.com>
+ <9f20cb49-0f12-474b-a015-fc44dee16e75@googlegroups.com>
+Subject: [tosdr:2497] Re: [Bad] Your data is accesible to Spotify's trading partners
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_479_7625919.1373472128024"
+
+------=_Part_479_7625919.1373472128024
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title: Your data is accessible to Spotify's trading partners
+
+Topic: personal-data
+
+Summary: If you sign up for the free service version of Spotify, Spotify 
+and their trading partners will be able to provide advertising and other 
+information to you.
+
+Score: 30 (mediocre)
+
+On Wednesday, April 24, 2013 6:38:31 AM UTC-5, Ian McGowan wrote:
+>
+> This has been curated.
+>
+> On Tuesday, April 23, 2013 2:08:45 PM UTC+2, Ian McGowan wrote:
+>>
+>> Your data is accessible to any of Spotify's trading partners. In 
+>> addition, such data isn't expressly defined in the EULA.
+>>
+>> In consideration for the rights granted to you under these Terms, you 
+>>> grant us the right (a) to allow the Spotify Service to use the processor, 
+>>> bandwidth and storage hardware on your Device in order to facilitate the 
+>>> operation of the Service, (b) to provide advertising and other information 
+>>> to you, if you subscribe to the Free Service, and (c) to allow our business 
+>>> partners to do the same.
+>>
+>>
+>> https://www.spotify.com/us/legal/end-user-agreement/
+>>  
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_479_7625919.1373472128024
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Your data is accessible to Spotify's trading partners<div><br></div>=
+<div>Topic: personal-data</div><div><br></div><div>Summary: If you sign up =
+for the free service version of Spotify, Spotify and their trading partners=
+ will be able to provide advertising and other information to you.</div><di=
+v><br></div><div>Score: 30 (mediocre)<br><br>On Wednesday, April 24, 2013 6=
+:38:31 AM UTC-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=
+=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: =
+1ex;">This has been curated.<br><br>On Tuesday, April 23, 2013 2:08:45 PM U=
+TC+2, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0=
+;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Your data i=
+s accessible to any of Spotify's trading partners. In addition, such data i=
+sn't expressly defined in the EULA.<br><div><br></div><blockquote class=3D"=
+gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border=
+-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><spa=
+n style=3D"color:rgb(85,85,85);font-family:helvetica,arial,'nimbus sans l',=
+sans-serif;font-size:14px;line-height:18px">In consideration for the rights=
+ granted to you under these Terms, you grant us the right (a) to allow the =
+Spotify Service to use the processor, bandwidth and storage hardware on you=
+r Device in order to facilitate the operation of the Service, (b) to provid=
+e advertising and other information to you, if you subscribe to the Free Se=
+rvice, and (c) to allow our business partners to do the same.</span></block=
+quote><div><br></div><div><a href=3D"https://www.spotify.com/us/legal/end-u=
+ser-agreement/" target=3D"_blank">https://www.spotify.com/us/<wbr>legal/end=
+-user-agreement/</a></div><div>&nbsp;</div></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_479_7625919.1373472128024--

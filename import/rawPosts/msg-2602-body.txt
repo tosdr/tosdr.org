@@ -1,0 +1,139 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB65776FQKGQETVBMTAA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 2C625161735
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 17:15:11 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 290CF178084
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 17:15:11 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 2rUhXXnYsBEL for <anything@michielbdejong.com>;
+	Tue, 30 Apr 2013 17:15:09 +0200 (CEST)
+Received: from mail-lb0-f188.google.com (mail-lb0-f188.google.com [209.85.217.188])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 67C2E1780DD
+	for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 17:15:09 +0200 (CEST)
+Received: by mail-lb0-f188.google.com with SMTP id 13sf176714lba.15
+        for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 08:15:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition;
+        bh=HrLNqoOLNBFyntu8k7rllGfcu9ISRwSZsvXn8E6Y9H0=;
+        b=e+Mg3ju1+iENO4kVIske18DntdHILNf+c/elFfUSRO7nkvMwvjCtSMALEeBfVO+tly
+         aOhc1JjHYo3HMXU1QtCqvjFqZxb0sRgfi8gXzxAcm3N87Momk0+1eGo5zw6vxrnpXQBv
+         wugehVOGgWF5dSC2UWfprUNQrSLVGLFYC/kaCglAWbpVjwl458cUbeUPdMIJKbaLrmc4
+         s8tIje7LWgo8foEJ6w3DwBsYsBdPdY4iM4KXexSEQ9tlW/mOENN5EZAgNhVmDyELZmva
+         OBzuibIX+306gwX45eoyVmr5V5V7wGrweF23Hfc2BKryEZmHEAyHpcBAGAje9XlUjUHS
+         EhVA==
+X-Received: by 10.180.105.229 with SMTP id gp5mr1279270wib.20.1367334907800;
+        Tue, 30 Apr 2013 08:15:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.20.239 with SMTP id q15ls1088254wie.29.canary; Tue, 30 Apr
+ 2013 08:15:06 -0700 (PDT)
+X-Received: by 10.14.102.9 with SMTP id c9mr2498314eeg.1.1367334906944;
+        Tue, 30 Apr 2013 08:15:06 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si7918054eeu.1.2013.04.30.08.15.06
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 30 Apr 2013 08:15:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id AB94063B4B7
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 17:15:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 3s+M7UGIPEVP for <tosdr@googlegroups.com>;
+	Tue, 30 Apr 2013 17:15:00 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 7AD3263A641
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 17:14:59 +0200 (CEST)
+Date: Tue, 30 Apr 2013 17:14:57 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: [tosdr:1880] Re: Question: can Twitpic reduce the prescription of
+ legal action?
+Message-ID: <20130430151457.GV9156@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <1341500063.10965.39.camel@synclavier.lan>
+MIME-Version: 1.0
+In-Reply-To: <1341500063.10965.39.camel@synclavier.lan>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Does anybody has an interest in this legal topic? How do you read
+this kind of clause?
+
+Thanks
+
+Le jeu. 05/07/12, 16:54, Hugo Roy <hugo@fsfe.org>:
+> My knowledge of other systems of law fails me here. Twitpic terms
+> include a strange paragraph:
+>         Statute of Limitations
+>         
+>         You agree that regardless of any statute or law to the contrary,
+>         any claim or cause of action arising out of or related to use of
+>         the Service or the Terms of Service must be filed within one (1)
+>         year after such claim or cause of action arose or be forever
+>         barred.
+>         http://www.twitpic.com/terms.do
+>         
+> I wonder to which extent this is applicable worldwide. I seriously doubt
+> that in France, a contract can reduce the period for prescription.
+> 
+> Whether this is legal or not however, I don't see any good reason why a
+> user should agree to this.
+> 
+> -- 
+> Hugo Roy 
+>   French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+>                                  mobile DE: +49 151 143 56 563
+> 
+> -- 
+> You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+> For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+> 
+
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

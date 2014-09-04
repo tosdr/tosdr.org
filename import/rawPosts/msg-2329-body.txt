@@ -1,0 +1,202 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBAED5SFQKGQEUA3BLVA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 0193D161735
+	for <anything@michielbdejong.com>; Sat, 27 Apr 2013 00:36:56 +0200 (CEST)
+Received: from mfilter4-d.gandi.net (mfilter4-d.gandi.net [217.70.178.134])
+	by spool.mail.gandi.net (Postfix) with ESMTP id F2FFB19F350
+	for <anything@michielbdejong.com>; Sat, 27 Apr 2013 00:36:55 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter4-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter4-d.gandi.net (mfilter4-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 1NZY-bhafQB0 for <anything@michielbdejong.com>;
+	Sat, 27 Apr 2013 00:36:54 +0200 (CEST)
+Received: from mail-qe0-f62.google.com (mail-qe0-f62.google.com [209.85.128.62])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 313F519F3BF
+	for <michiel@michielbdejong.com>; Sat, 27 Apr 2013 00:36:50 +0200 (CEST)
+Received: by mail-qe0-f62.google.com with SMTP id w7sf1392576qeb.7
+        for <michiel@michielbdejong.com>; Fri, 26 Apr 2013 15:36:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=uJnnV37vkb6qQB5Lwz5nIqruCqbbgyTCUofggdiQl5U=;
+        b=gRETFYRindnjtBVMqcngJVrbyylKGl2r9RzakriI9pK+4/E79y84Ql29kZAbFhNShz
+         QXI4uRi9rYV4hztjl+M2yKVFlLOE9jrmwNzFx1kLOoSRRUomQ4hKC47/iNjEbDhE/u/D
+         bh1T+4TAV25Ogpr0FIiRoIX5ahuDWntHyAllkrO4hQvrw5h7qNyWpa53nd8DaK+PWeK7
+         MwhSn6kMFoBsBe9i9MU8yBF9+28xuOr4Nxqk4BVn9ApimgrqKDJCAuN7AnrGF3wQdjG1
+         6G/JO547SjSsMsZ/+wfBcwQoRPZIEFEzmonbJBD7SeqlgRz11Nxe+TPtmFHeaXkBDAWP
+         ++Ng==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=uJnnV37vkb6qQB5Lwz5nIqruCqbbgyTCUofggdiQl5U=;
+        b=mJHHxXcKuyU4hqz8wdwGiecuUazN7tS8onj7J64P/iJmMyr4QlWh1vQMVyDFYOewdI
+         4v/uW5ADUqPZXz/4r4nGIYv2JYKlC8BjniLCWKDPthq2Xvuo6TntDRaTdUA2TvC5rZDU
+         VossKAkbgfJBtN+JKlYxUqwdPlz852gqHDMiPWGQirnxVrtXAkE3HE4USA/e/VPHoceh
+         +6HPOASp4j09nd02W3S7Q9HF70x9lMOFbKHwVSlWCqqqfuMgqkJ+VJmc+6kOgjM3AaKV
+         fjWKEXTEsRbcj4ZCo5PILOC0VvVBHShbVKzjvZsx+Zt2ICQ1V4tQJd+rJb0pwiaIWuSL
+         qaPA==
+X-Received: by 10.49.35.111 with SMTP id g15mr4144796qej.15.1367015809670;
+        Fri, 26 Apr 2013 15:36:49 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.49.229 with SMTP id x5ls1838932qen.96.gmail; Fri, 26 Apr
+ 2013 15:36:48 -0700 (PDT)
+X-Received: by 10.49.15.68 with SMTP id v4mr4199989qec.37.1367015808772;
+        Fri, 26 Apr 2013 15:36:48 -0700 (PDT)
+Date: Fri, 26 Apr 2013 15:36:48 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <53048b24-8916-4fa5-9166-2f7c5c8863f7@googlegroups.com>
+Subject: [tosdr:1806] JAGEX [info] You may request a refund, although there is
+ no assurance the request will be approved
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2958_836345.1367015808391"
+
+------=_Part_2958_836345.1367015808391
+Content-Type: text/plain; charset=ISO-8859-1
+
+Applies to http://jagex.com http://runescape.com/ http://waroflegends.com 
+http://www.transformersuniverse.com/ http://www.funorb.com/
+
+We are happy to review requests for refunds on a case by case basis. 
+> However, refunds are not always possible to give for many reasons.
+>
+> Unless required by law, we will not refund any amounts paid in relation to 
+> subscriptions, in-game activities, virtual items or virtual currency when:
+>
+>    - You have been the victim of in-game scamming, as there are many 
+>    warnings about avoiding this on the Jagex Products (however, we will do 
+>    everything we reasonably can to assist you to recover your accounts). 
+>    - You have been banned from a Jagex Product for violating these terms 
+>    and conditions, any Rules of a Jagex Product or the user content policy. 
+>    - Jagex stops offering the Jagex Product or you decide to cancel your 
+>    subscription or account. 
+>
+> If, after reading the above, you wish to request that we consider a 
+> refund, then please contact Billing Support for assistance, providing as 
+> much information as possible. Please note, refunds are given at the 
+> discretion of Jagex. If you are from the EU please also see "Right to 
+> cancel under Distance Selling Regulations" above.
+>
+>  
+>
+> From <http://www.jagex.com/g=runescape/terms/terms.ws> 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2958_836345.1367015808391
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>Applies to http://jagex.com http://runescape.com/ http://waroflegends.=
+com http://www.transformersuniverse.com/ http://www.funorb.com/</div><div><=
+br></div><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8=
+ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-l=
+eft-style: solid; padding-left: 1ex;"><p style=3D"margin:0in;margin-left:.3=
+75in;font-family:arial;font-size:9.0pt;
+color:#282828"><span style=3D"background:#AAAAAA">We are happy to review re=
+quests
+for refunds on a case by case basis. However, refunds are not always possib=
+le
+to give for many reasons.</span></p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:arial;font-size:9.0pt=
+;
+color:#282828"><span style=3D"background:#AAAAAA">Unless required by law, w=
+e will
+not refund any amounts paid in relation to subscriptions, in-game activitie=
+s,
+virtual items or virtual currency when:</span></p>
+
+<ul type=3D"disc" style=3D"margin-left:.375in;direction:ltr;unicode-bidi:em=
+bed;
+ margin-top:0in;margin-bottom:0in">
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#282=
+828"><span style=3D"font-family:arial;font-size:9.0pt;background:#AAAAAA">Y=
+ou have been
+     the victim of in-game scamming, as there are many warnings about avoid=
+ing
+     this on the Jagex Products (however, we will do everything we reasonab=
+ly
+     can to assist you to recover your accounts).</span></li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#282=
+828"><span style=3D"font-family:arial;font-size:9.0pt;background:#AAAAAA">Y=
+ou have been
+     banned from a Jagex Product for violating these terms and conditions, =
+any
+     Rules of a Jagex Product or the user content policy.</span></li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#282=
+828"><span style=3D"font-family:arial;font-size:9.0pt;background:#AAAAAA">J=
+agex stops
+     offering the Jagex Product or you decide to cancel your subscription o=
+r
+     account.</span></li>
+</ul>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:arial;font-size:9.0pt=
+;
+color:#282828"><span style=3D"background:#AAAAAA">If, after reading the abo=
+ve,
+you wish to request that we consider a refund, then please contact Billing
+Support for assistance, providing as much information as possible. Please n=
+ote,
+refunds are given at the discretion of Jagex. If you are from the EU please
+also see "Right to cancel under Distance Selling Regulations" above.</span>=
+</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.=
+0pt" lang=3D"en-CA">&nbsp;</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:9.0=
+pt;
+color:#595959">From &lt;<a href=3D"http://www.jagex.com/g=3Drunescape/terms=
+/terms.ws">http://www.jagex.com/g=3Drunescape/terms/terms.ws</a>&gt;&nbsp;<=
+/p></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2958_836345.1367015808391--

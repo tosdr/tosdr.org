@@ -1,0 +1,138 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBVWD7KFQKGQEZTI3NYI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 721B1161736
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 18:37:45 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4B44F2260BE
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 18:37:45 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id lCeAJOA099KX for <anything@michielbdejong.com>;
+	Mon, 29 Apr 2013 18:37:43 +0200 (CEST)
+Received: from mail-ee0-f63.google.com (mail-ee0-f63.google.com [74.125.83.63])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A72D12260A4
+	for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 18:37:43 +0200 (CEST)
+Received: by mail-ee0-f63.google.com with SMTP id e49sf877915eek.28
+        for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 09:37:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=kgjg1FgSvytMe8SmRkqAJq2PCKjl+PNqSQxajA6HDJQ=;
+        b=sSPmqfbEn4o+dWNQfCiIeTo/zFTsFF4kqB2K7YB1UjW49bI+BzDgn/P5gE9b9uLLyq
+         3nrrRvhVg+mPSKPbfx/1tswQMiEMQWI7+CaninQd8WjCJqsvvhXpaX50vFhHnN0LVsSj
+         9kGpWOTVk8FnKezcq1PZBAVm5E+zD1OGDZ2dXk5eOxCnbpMMQXi3zOsxBt6xjlLPRIfw
+         nCpTyeM/GHYiXXWQ1/DSrHksOpnNajbA6y5Tmxf1kOpdq96JR/OEVZMGifr2R5uSr/k4
+         CNyywZyla58X8IJAKcNWEXDRdS5oTR52Woz/BzqgXUMcUfL1gktbVbImQWu9qU7ZxuFZ
+         hMmg==
+X-Received: by 10.180.189.139 with SMTP id gi11mr844899wic.20.1367253462432;
+        Mon, 29 Apr 2013 09:37:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.103.168 with SMTP id fx8ls448819wib.4.canary; Mon, 29 Apr
+ 2013 09:37:41 -0700 (PDT)
+X-Received: by 10.15.95.2 with SMTP id bc2mr39051693eeb.4.1367253461822;
+        Mon, 29 Apr 2013 09:37:41 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si6768553eeu.1.2013.04.29.09.37.41
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 29 Apr 2013 09:37:41 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 72D7163A5E5;
+	Mon, 29 Apr 2013 18:37:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id TTw5BX7+oFAM; Mon, 29 Apr 2013 18:37:38 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id C7C9E63A40C;
+	Mon, 29 Apr 2013 18:37:36 +0200 (CEST)
+Date: Mon, 29 Apr 2013 18:37:27 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: =?iso-8859-1?Q?Retourn=E9?= du Japon <khatre@gmail.com>,
+	tosdr@googlegroups.com
+Subject: Re: [tosdr:1832] Re: [Bad] Google keeps your Searches forever
+Message-ID: <20130429163727.GF13057@synclavier.ampoliros.net>
+Mail-Followup-To: =?iso-8859-1?Q?Retourn=E9?= du Japon <khatre@gmail.com>,
+	tosdr@googlegroups.com
+References: <CA+aD3u35SjE2GwjaH6hyu2Wy4JXKQjx1u+iWm4h9Y=PgW0zUTw@mail.gmail.com>
+ <51670e88-2ff8-4c83-ba09-62c2a2d63a52@googlegroups.com>
+ <CAArouPymeunYyM2vOd2P6smSjpAxZa-YDHKvahjXKqus55bp0A@mail.gmail.com>
+ <20130429161149.GE13057@synclavier.ampoliros.net>
+MIME-Version: 1.0
+In-Reply-To: <20130429161149.GE13057@synclavier.ampoliros.net>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Le lun. 29/04/13, 18:11, Hugo Roy <hugo@tosdr.org>:
+> Le mer. 23/01/13, 13:40, Retourn=E9 du Japon <khatre@gmail.com>:
+> > In fact, the answer is hidden at
+> > https://www.google.com/intl/en/policies/privacy/faq/#toc-anonymize :
+> >=20
+> > > Why are search engine logs kept before being anonymized?
+> > > We strike a reasonable balance between the competing pressures we fac=
+e, such as the privacy of our users, the security of our systems and the ne=
+ed for innovation. We believe anonymizing IP addresses after 9 months and c=
+ookies in our search engine logs after 18 months strikes the right balance.
+> >=20
+> > No idea if there=92s a difference between registered users and the othe=
+rs=85
+>=20
+> Thank you for spotting this! I didn't read the "faq".
+>=20
+> 9 months and 18 months seem awfully long to me. What about others?
+> (DuckDuckGo doesn't log this I believe!)
+
+That's interesting. The current FAQ does not talk about this any
+more.
+
+If you have a look on the "Key terms" page, there are no mentions
+of this either about IP addresses and cookies
+https://www.google.com/intl/en/policies/privacy/key-terms/#toc-terms-ip
+
+Any clue?
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

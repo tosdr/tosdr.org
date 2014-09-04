@@ -1,0 +1,150 @@
+Return-Path: <tosdr+bncBCYIVNHJ5EARBLFFTWQAKGQEPFAA6NQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 132554091A
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:03 +0200 (CEST)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 10F9917839C
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HwRZrrEFkkL2 for <anything@michielbdejong.com>;
+	Wed,  3 Sep 2014 19:41:01 +0200 (CEST)
+Received: from mail-oa0-x238.google.com (mail-oa0-x238.google.com [IPv6:2607:f8b0:4003:c02::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6AACA1783B4
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:01 +0200 (CEST)
+Received: by mail-oa0-f56.google.com with SMTP id jd19sf1839496oac.1
+        for <anything@michielbdejong.com>; Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=VsPmf0aYlKbsNEcSU5JlauujFxodP+QoUaj37PJEL08=;
+        b=PlbyUEtNnMNAchu4rnEB14NkL0rrlENCkhwlr4hmbUufSAmUf0cZvCtan9IPmqknJu
+         rJloX2DEP9GBMV6p8CMGNjJyHXFhY10lCBztfcvjYu6g2Ygcf5tXuX7DU5ZsQy8r/slE
+         P+dTc/h858HMXwOXXHhHp2qjSMTun1rwkkm5xp1hNbcSoidVhHssJ2ePWHKiLwFGNIfN
+         1Tw9QVNvgp4K5n8W5fufZ2F3u8AdC9S2qZffGHuPnoERadsXSmeL5Cz3Mf/2eU9UpONl
+         hkIImXU7wVuJbe/AH9JqjKQdEW7D+/H4Ql8DPuS3F4jo9X7JKs9uVLiIEk1jgttkJ2NV
+         Gcqg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=VsPmf0aYlKbsNEcSU5JlauujFxodP+QoUaj37PJEL08=;
+        b=EVafvUgzsFfsKs6p3r0M8wLY4STXpHgyO8XfgTghpbzfXqVUV/mHK/gvWs3L3uyMgR
+         YOeDkNYmlbCqIrIn1wJx5wqkyz0mIa6FTMMOJyUHZafoMQ4Yu1BfSlcvgX5gKNGAgV1n
+         d1Qo+uRNTe1kavbrolqDQuaJ0zqj9KDW6oMRNJ+3gqPrG+AOuA4EtPEF+NAwc4d62yW8
+         QuhDAQzkC99TcpcTXr/OA+Udh8ehMPL9eXisgb/RPIeWg0bpk1SpzQkvbUlDdr4tJokV
+         9LCRNieHbEz72m0CSheqrEO5xzvJTsAJWVwWH06uHI248zhCLoGR2H2V/HhayYoQog9K
+         UBog==
+X-Received: by 10.140.41.112 with SMTP id y103mr77632qgy.7.1409766060321;
+        Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.106.136 with SMTP id e8ls2848926qgf.36.gmail; Wed, 03 Sep
+ 2014 10:41:00 -0700 (PDT)
+X-Received: by 10.140.82.81 with SMTP id g75mr80142qgd.12.1409766060087;
+        Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
+Date: Wed, 3 Sep 2014 10:40:59 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Cc: gingerling@inventati.org
+Message-Id: <4d0cd57b-ce1d-4290-86b5-215ce0b39e24@googlegroups.com>
+In-Reply-To: <5407520E.7060307@inventati.org>
+References: <8ad3373e-8ed0-42b9-b894-b2d679e7e276@googlegroups.com>
+ <5407520E.7060307@inventati.org>
+Subject: Re: [tosdr:3197] The new General Data Protection Regulation:
+ standarised information policies
+MIME-Version: 1.0
+X-Original-Sender: aanmeldingen49@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4919_1928475812.1409766059729"
+
+------=_Part_4919_1928475812.1409766059729
+Content-Type: text/plain; charset=UTF-8
+
+
+
+Op woensdag 3 september 2014 19:38:26 UTC+2 schreef Anna Morris:
+>
+> On 03/09/14 18:33, Anna D wrote: 
+> > It looks a bit like what Aza Raskin made with his Privacy Icons 
+> > (http://www.azarask.in/blog/post/privacy-icons/). 
+>
+> thanks for interesting post, also, thanks for this link it is fab. 
+>
+> a 
+> x 
+>
+
+You can see at the bottom of the tosdr.org homepage that ToS;DR was 
+inspired by his project ;)
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4919_1928475812.1409766059729
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br>Op woensdag 3 september 2014 19:38:26 UTC+2 schree=
+f Anna Morris:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-l=
+eft: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">On 03/09/14 18:3=
+3, Anna D wrote:
+<br>&gt; It looks a bit like what Aza Raskin made with his Privacy Icons
+<br>&gt; (<a href=3D"http://www.azarask.in/blog/post/privacy-icons/" target=
+=3D"_blank" onmousedown=3D"this.href=3D'http://www.google.com/url?q\75http%=
+3A%2F%2Fwww.azarask.in%2Fblog%2Fpost%2Fprivacy-icons%2F\46sa\75D\46sntz\075=
+1\46usg\75AFQjCNEunr2JPpP_R2iyZhtf1ceylw7mzg';return true;" onclick=3D"this=
+.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fwww.azarask.in%2Fblog%2=
+Fpost%2Fprivacy-icons%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNEunr2JPpP_R2iyZ=
+htf1ceylw7mzg';return true;">http://www.azarask.in/blog/<wbr>post/privacy-i=
+cons/</a>).
+<br>
+<br>thanks for interesting post, also, thanks for this link it is fab.
+<br>
+<br>a
+<br>x
+<br></blockquote><div><br>You can see at the bottom of the tosdr.org homepa=
+ge that ToS;DR was inspired by his project ;)<br></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4919_1928475812.1409766059729--

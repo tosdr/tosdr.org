@@ -1,0 +1,197 @@
+Return-Path: <tosdr+bncBDFPVJU7ZMJRBONEXCGAKGQE3SYHZOY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A4762161735
+	for <anything@michielbdejong.com>; Sat, 11 May 2013 11:41:19 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A0D30116063
+	for <anything@michielbdejong.com>; Sat, 11 May 2013 11:41:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 00UsMHOqiPIl for <anything@michielbdejong.com>;
+	Sat, 11 May 2013 11:41:18 +0200 (CEST)
+Received: from mail-ee0-f57.google.com (mail-ee0-f57.google.com [74.125.83.57])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C65F0116080
+	for <michiel@michielbdejong.com>; Sat, 11 May 2013 11:41:14 +0200 (CEST)
+Received: by mail-ee0-f57.google.com with SMTP id d41sf208651eek.22
+        for <michiel@michielbdejong.com>; Sat, 11 May 2013 02:41:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:mime-version
+         :x-received:sender:in-reply-to:references:date:message-id:subject
+         :from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=FtpxkUONs1OSQB9xxf8Zu6bcJz/P6lXr1nCQgo77etA=;
+        b=b3PF/zG76DPcf5f1JZYD7bbrokKmunhgJGWhASUuK46576+JzQQw6wPKbuEPpBVKxe
+         yFBonehTa60QQDVvPN/TzTVBbjqLMkNZWj0PtSZ5aLbJNK48pxXfucrQla5x7iqGk/z2
+         S5AqtmHFiPb8o73978HZrq8Rl7EH1SToz7Y5YPbdNLFXj4lhjNFtOykzmG59JbYM7XK3
+         W2YCal3t7DACZVs+/YSeIzKZACnQQVmXgP/tskBQ2VInpJxtBszRdX1R+DWDMNklXT6s
+         i3b0WA7VkLbZYtwYApN9HQM5ieh+8Qd1iEEs3rL9/c1X6IGHwlBJD8uoAggO9UkBq4Eh
+         zM6A==
+X-Received: by 10.181.13.138 with SMTP id ey10mr437548wid.11.1368265273400;
+        Sat, 11 May 2013 02:41:13 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.88.133 with SMTP id bg5ls392516wib.38.gmail; Sat, 11 May
+ 2013 02:41:12 -0700 (PDT)
+X-Received: by 10.204.183.197 with SMTP id ch5mr3906310bkb.3.1368265272724;
+        Sat, 11 May 2013 02:41:12 -0700 (PDT)
+Received: from mail-la0-x22a.google.com (mail-la0-x22a.google.com [2a00:1450:4010:c03::22a])
+        by gmr-mx.google.com with ESMTPS id cm16si436145bkb.0.2013.05.11.02.41.12
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sat, 11 May 2013 02:41:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suzanne.azmayesh@gmail.com designates 2a00:1450:4010:c03::22a as permitted sender) client-ip=2a00:1450:4010:c03::22a;
+Received: by mail-la0-f42.google.com with SMTP id er20so1902908lab.29
+        for <tosdr@googlegroups.com>; Sat, 11 May 2013 02:41:12 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.112.128.231 with SMTP id nr7mr9124530lbb.26.1368265272277;
+ Sat, 11 May 2013 02:41:12 -0700 (PDT)
+Sender: tosdr@googlegroups.com
+Received: by 10.114.177.97 with HTTP; Sat, 11 May 2013 02:41:12 -0700 (PDT)
+In-Reply-To: <CADNfgRepTqMT5sdWi5qEuy7C67Rovhpg=+t5HJBo14ZMCJHfrw@mail.gmail.com>
+References: <CADNfgRepTqMT5sdWi5qEuy7C67Rovhpg=+t5HJBo14ZMCJHfrw@mail.gmail.com>
+Date: Sat, 11 May 2013 11:41:12 +0200
+Message-ID: <CADNfgRfS0+m+rcwZj1-Gfq=Jt9OWKhB0WCW0eWW_swi3q1X+BQ@mail.gmail.com>
+Subject: [tosdr:2070] Re: Youtube about copyright licenses
+From: Suzanne Azmayesh <suzanne@azmayesh.fr>
+To: tosdr@googlegroups.com
+X-Original-Sender: suzanne@azmayesh.fr
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of suzanne.azmayesh@gmail.com designates
+ 2a00:1450:4010:c03::22a as permitted sender) smtp.mail=suzanne.azmayesh@gmail.com;
+       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b343d2083409104dc6e1520
+
+--047d7b343d2083409104dc6e1520
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title : The copyright license is broader than necessary
+
+Point : Scope of Copyright license
+
+Summary : The user grants Youtube a worldwide, non-exclusive, royalty-free
+license that is sublicenseable and transferable, and that can be used
+without limitation for the promotion of the service, in any media format
+and through any media channel, provided it is in connection with Youtube,
+its successors' and affiliates'.
+
+Score : 50
+
+
+
+2013/5/7 Suzanne Azmayesh <suzanne@azmayesh.fr>
+
+> The following point can be discussed, because Youtube can use the content
+> of the user in order for its own promotion or redistribution... which is
+> not such a good thing.
+>
+> For clarity, you retain all of your ownership rights in your Content.
+> However, by submitting Content to YouTube, you hereby grant *YouTube a
+> worldwide, non-exclusive, royalty-free, sublicenseable and transferable
+> license to use, reproduce, distribute, prepare derivative works of,
+> display, and perform the Content in connection with the Service and
+> YouTube's (and its successors' and affiliates') business, including witho=
+ut
+> limitation for promoting and redistributing part or all of the Service (a=
+nd
+> derivative works thereof) in any media formats and through any media
+> channels. You also hereby grant each user of the Service a non-exclusive
+> license to access your Content through the Service, and to use, reproduce=
+,
+> distribute, display and perform such Content as permitted through the
+> functionality of the Service and under these Terms of Service.* The above
+> licenses granted by you in video Content you submit to the Service
+> terminate within a commercially reasonable time after you remove or delet=
+e
+> your videos from the Service. =BB
+>
+>
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b343d2083409104dc6e1520
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Title : The copyright license is broader than necessary<di=
+v><br></div><div style>Point : Scope of Copyright license</div><div style><=
+br></div><div style>Summary : The user grants Youtube a worldwide, non-excl=
+usive, royalty-free license that is sublicenseable and transferable, and th=
+at can be used without limitation for the promotion of the service, in any =
+media format and through any media channel, provided it is in connection wi=
+th Youtube, its successors&#39; and affiliates&#39;.=A0</div>
+<div style><br></div><div style>Score : 50</div><div style><br></div></div>=
+<div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">2013/5/7 Suza=
+nne Azmayesh <span dir=3D"ltr">&lt;<a href=3D"mailto:suzanne@azmayesh.fr" t=
+arget=3D"_blank">suzanne@azmayesh.fr</a>&gt;</span><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr">The following point can be =
+discussed, because Youtube can use the content of the user in order for its=
+ own promotion or redistribution... which is not such a good thing.=A0<div>
+<br></div><div><p style=3D"margin:0px 0px 6px 36px;font-size:16px;font-fami=
+ly:Arial;color:rgb(51,50,51)">
+For clarity, you retain all of your ownership rights in your Content. Howev=
+er, by submitting Content to YouTube, you hereby grant <b>YouTube a worldwi=
+de, non-exclusive, royalty-free, sublicenseable and transferable license to=
+ use, reproduce, distribute, prepare derivative works of, display, and perf=
+orm the Content in connection with the Service and YouTube&#39;s (and its s=
+uccessors&#39; and affiliates&#39;) business, including without limitation =
+for promoting and redistributing part or all of the Service (and derivative=
+ works thereof) in any media formats and through any media channels. You al=
+so hereby grant each user of the Service a non-exclusive license to access =
+your Content through the Service, and to use, reproduce, distribute, displa=
+y and perform such Content as permitted through the functionality of the Se=
+rvice and under these Terms of Service.</b> The above licenses granted by y=
+ou in video Content you submit to the Service terminate within a commercial=
+ly reasonable time after you remove or delete your videos from the Service.=
+=A0=BB</p>
+
+</div><div><p style=3D"margin:0px 0px 6px 36px;font-size:24px;font-family:A=
+rial;color:rgb(51,50,51)">=A0</p></div><div><br></div></div>
+</blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b343d2083409104dc6e1520--

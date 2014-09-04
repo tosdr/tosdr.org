@@ -1,0 +1,180 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBWPJ3WGQKGQEUOP7REI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 490A6161735
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:05:02 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 459CB116063
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:05:02 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id we6lnzOM6kGN for <anything@michielbdejong.com>;
+	Tue, 11 Jun 2013 21:05:00 +0200 (CEST)
+Received: from mail-pa0-x23e.google.com (mail-pa0-x23e.google.com [IPv6:2607:f8b0:400e:c03::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1DC0D1163FC
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:04:59 +0200 (CEST)
+Received: by mail-pa0-f62.google.com with SMTP id fb1sf1687704pad.7
+        for <anything@michielbdejong.com>; Tue, 11 Jun 2013 12:04:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n+bQUifaaJ0VTgi2vcz7K/2g+PsFzQ9SaFgUJVjNrQU=;
+        b=qhaKd8C+dnXTnLMywvdePEQcLDQoQ9v8EpSUTMGYEcni3WqGaU6SAGW9gA06900jhL
+         J3IuDKcBM9+bZRqkNgAvndW31lr5GNHqKlKVX02Su05s69tdAww2nXLC4TCvxj80YBlS
+         +iVKUiY1q6A+fitcJSm9+EBNQq8bCiYKxSJ4J8WbFbCLqokRxZpIow3qyLyuQvE+oyy8
+         WC1I0eokH4zvxZUMYoMFO8EDAxiKSQ4OOXbpwC2Xsz3voLzccGGpU12IOaswok9aAQ3R
+         9e335fq2W3K5wRImOEflTG4o5Nzmk9kcHSF70K91OuQI156wIVm9dlkHyi65JriIP6nt
+         scTQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n+bQUifaaJ0VTgi2vcz7K/2g+PsFzQ9SaFgUJVjNrQU=;
+        b=UZnzG9tFgLij+Dwc7jaM3Jcy7KR0XSL3w1+ABAO7ITHmG6RfjL++1iLbBuRWYmWdeR
+         hv9f6yGxSyJzQb6qiBgO8gjThsN+6ApTUVbmenIxkLdVFgPWF/MSNJA9os+V6PCtIVrL
+         oDy2MHj4mJ+OKfAVXpQPriX3q86eK0ZX0p5iAmPn/2x9cVXHU9U/bxgxm3bWUEivAJgX
+         Ly7u41xNk8JLoGiPGA6UuLEVQaM+sSZtNNBOkOP9uZRkIKlPFKajFD5RUmWwkiBAK9Og
+         4wHhSU+EmK0fkk1lFI0DznoLICbik13ACh6ZVyIT0T3LDnhOkUR9bX+ZqqUfH9f3xPxz
+         6fMQ==
+X-Received: by 10.49.104.8 with SMTP id ga8mr942046qeb.18.1370977498099;
+        Tue, 11 Jun 2013 12:04:58 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.74.234 with SMTP id x10ls3275053qev.14.gmail; Tue, 11 Jun
+ 2013 12:04:57 -0700 (PDT)
+X-Received: by 10.49.0.81 with SMTP id 17mr916814qec.16.1370977497599;
+        Tue, 11 Jun 2013 12:04:57 -0700 (PDT)
+Date: Tue, 11 Jun 2013 12:04:56 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <aaf3770c-0011-4b0b-b362-9a529daffa5a@googlegroups.com>
+In-Reply-To: <1b49d49e-f7ff-4d3e-aabe-dfae6119bdda@googlegroups.com>
+References: <05eaecb2-60a9-4dfa-bd79-c24076a8d284@googlegroups.com>
+ <1b49d49e-f7ff-4d3e-aabe-dfae6119bdda@googlegroups.com>
+Subject: [tosdr:2282] Re: [Good] Dropbox deletes your content quickly upon request
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_588_3483361.1370977496884"
+
+------=_Part_588_3483361.1370977496884
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Your content is deleted quickly upon request
+
+Topic: Personal Data
+
+Summary: Although Dropbox may retain and use your information to comply=20
+with legal obligations, resolve disputes, and enforce their agreements,=20
+they will try and delete your information quickly upon request. However,=20
+that process may be delayed, and backed-up versions may exist even after=20
+deletion.
+
+Score: 20 (good)
+
+On Tuesday, November 27, 2012 6:17:53 AM UTC-6, Ian McGowan wrote:
+>
+> This point has been curated and will be appearing on the website soon.
+>
+> On Thursday, August 23, 2012 5:35:13 PM UTC+2, Sebasti=E1n Waisbrot wrote=
+:
+>>
+>> https://www.dropbox.com/privacy
+>>
+>>> We will retain your information for as long as your account is active o=
+r=20
+>>> as needed to provide you services. If you wish to cancel your account o=
+r=20
+>>> request that we no longer use your information to provide you services,=
+ you=20
+>>> may delete your account here. We may retain and use your information as=
+=20
+>>> necessary to comply with our legal obligations, resolve disputes, and=
+=20
+>>> enforce our agreements. Consistent with these requirements, we will try=
+ to=20
+>>> delete your information quickly upon request. Please note, however, tha=
+t=20
+>>> there might be latency in deleting information from our servers and=20
+>>> backed-up versions might exist after deletion.
+>>
+>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_588_3483361.1370977496884
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Your content is deleted quickly upon request<div><br></div><div>Topi=
+c: Personal Data</div><div><br></div><div>Summary: Although Dropbox may ret=
+ain and use your information to comply with legal obligations, resolve disp=
+utes, and enforce their agreements, they will try and delete your informati=
+on quickly upon request. However, that process may be delayed, and backed-u=
+p versions may exist even after deletion.</div><div><br></div><div>Score: 2=
+0 (good)<br><br>On Tuesday, November 27, 2012 6:17:53 AM UTC-6, Ian McGowan=
+ wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.=
+8ex;border-left: 1px #ccc solid;padding-left: 1ex;">This point has been cur=
+ated and will be appearing on the website soon.<br><br>On Thursday, August =
+23, 2012 5:35:13 PM UTC+2, Sebasti=E1n Waisbrot wrote:<blockquote class=3D"=
+gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid=
+;padding-left:1ex"><div><a href=3D"https://www.dropbox.com/privacy" target=
+=3D"_blank">https://www.dropbox.com/<wbr>privacy</a></div><blockquote class=
+=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;bo=
+rder-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">=
+We will retain your information for as long as your account is active or as=
+ needed to provide you services. If you wish to cancel your account or requ=
+est that we no longer use your information to provide you services, you may=
+ delete your account here. We may retain and use your information as necess=
+ary to comply with our legal obligations, resolve disputes, and enforce our=
+ agreements. Consistent with these requirements, we will try to delete your=
+ information quickly upon request. Please note, however, that there might b=
+e latency in deleting information from our servers and backed-up versions m=
+ight exist after deletion.</blockquote></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_588_3483361.1370977496884--

@@ -1,0 +1,162 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBT5E76HQKGQEZCWXBVA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7D76D16174A
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 18:26:59 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7A36A116C94
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 18:26:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id WriVBjxHUd3l for <anything@michielbdejong.com>;
+	Mon,  5 Aug 2013 18:26:57 +0200 (CEST)
+Received: from mail-ob0-x237.google.com (mail-ob0-x237.google.com [IPv6:2607:f8b0:4003:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 80BF0116C90
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 18:26:57 +0200 (CEST)
+Received: by mail-ob0-f183.google.com with SMTP id fb19sf1191669obc.20
+        for <anything@michielbdejong.com>; Mon, 05 Aug 2013 09:26:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=9HQBTsKDATnpuYmIeCSKlD6c15QDe/7S475oNUBKwmQ=;
+        b=SfkPG08QKyzbSe1phjLeKHic3EG38GSUYwsvlQh2ifazyg0XVDi8ejfh1WA60iqlU5
+         A3/I6rXOPY6CtbqzYa7KU/SAFSUFtu8Vg/D4Kil02Pfd5rsX2UOav3T7IEKzdGIabTlm
+         Xcy7s16CzWXoRm6gAlrEebu5Sd1DQjfq1nam4Q+I2+iP5oinL69DI3161Qda6RGNnOgD
+         dWuJcOK1Yd/kyUXo8QYcUnOwBP7SmMic7FifKPuK3ZyQ3x1n6GAAroC+xmk4KQZ6KvwP
+         u6rp5yAM7MJKsFl1bkh5nijkB5ACKnsRE0Aqn31ATWG8Yu1nGzpHxkHYSfxxqSagVefM
+         MCLQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=9HQBTsKDATnpuYmIeCSKlD6c15QDe/7S475oNUBKwmQ=;
+        b=KWxeV5O9hWyM5fZkf1zPPh0OV40emN5DzodRKS+VIkEMrs3RR0z9u4vvmWcE8Hm97N
+         cxV1Xi22K7y098ppOgt5xh5V9S3n2Ta8BC+68piibWxqry8E0wrNcB/7Iowo9o+OKyf7
+         HBriQKelMKRAuntw4VNF9npF0yWC+S095l30RPtbPfgtxUM4u06bCxNTt3qZA8AehiKo
+         Q91tFQJjoQMFVVG58h2ersqWZADigLF9cZAefqLbc9W6/nvidEgi0iJVO0SMm0lN3iaH
+         8aHz4UIDaBu81lXpATaKCgnRou0zk/TH5ifOo7LVqIZWdptU7gLJdlCxaFuENRuzAwvJ
+         arsA==
+X-Received: by 10.50.87.40 with SMTP id u8mr448097igz.4.1375720016022;
+        Mon, 05 Aug 2013 09:26:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.127.196 with SMTP id ni4ls411569igb.40.gmail; Mon, 05 Aug
+ 2013 09:26:55 -0700 (PDT)
+X-Received: by 10.50.98.38 with SMTP id ef6mr388759igb.0.1375720015484;
+        Mon, 05 Aug 2013 09:26:55 -0700 (PDT)
+Date: Mon, 5 Aug 2013 09:26:54 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <730337aa-68a3-4086-8b6f-8f0603c0e8b4@googlegroups.com>
+Subject: [tosdr:2596] Stack Exchange notifies you when they collect/share
+ sensitive info
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1_10196759.1375720014590"
+
+------=_Part_1_10196759.1375720014590
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+
+>
+> It=92s hard to imagine that we would ever consider collecting, let alone=
+=20
+> sharing, sensitive information with a non-agent<http://stackexchange.com/=
+legal/privacy-policy#agents> third=20
+> party, but if such a day should come, we will first give you the=20
+> opportunity to explicitly consent (opt-in) to such disclosure or to any u=
+se=20
+> of the information for a purpose other than the one for which it was=20
+> originally collected or previously authorized.
+
+
+http://stackexchange.com/legal/privacy-policy
+
+Title: Stack Exchange notifies you when they collect and/or share sensitive=
+=20
+info
+
+Topic: personal-data
+
+Summary: If Stack Exchange collects or shares sensitive information with=20
+third parties, they first notify you and give you the opportunity to=20
+explicitly consent to such disclosure.
+
+Score: 150 (good)=20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1_10196759.1375720014590
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(68, 68, 68); font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line=
+-height: 19px; background-color: rgb(253, 253, 253);">It=92s hard to imagin=
+e that we would ever consider collecting, let alone sharing, sensitive info=
+rmation with a non-</span><a href=3D"http://stackexchange.com/legal/privacy=
+-policy#agents" style=3D"color: rgb(18, 69, 124); cursor: pointer; font-fam=
+ily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-=
+height: 19px; background-color: rgb(253, 253, 253);">agent</a><span style=
+=3D"color: rgb(68, 68, 68); font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 14px; line-height: 19px; background-color: rgb(253=
+, 253, 253);">&nbsp;third party, but if such a day should come, we will fir=
+st give you the opportunity to explicitly consent (opt-in) to such disclosu=
+re or to any use of the information for a purpose other than the one for wh=
+ich it was originally collected or previously authorized.</span></blockquot=
+e><div><br></div><div><a href=3D"http://stackexchange.com/legal/privacy-pol=
+icy">http://stackexchange.com/legal/privacy-policy</a></div><div><br></div>=
+<div>Title: Stack Exchange notifies you when they collect and/or share sens=
+itive info</div><div><br></div><div>Topic: personal-data</div><div><br></di=
+v><div>Summary: If Stack Exchange collects or shares sensitive information =
+with third parties, they first notify you and give you the opportunity to e=
+xplicitly consent to such disclosure.</div><div><br></div><div>Score: 150 (=
+good)&nbsp;</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1_10196759.1375720014590--

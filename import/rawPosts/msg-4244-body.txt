@@ -1,0 +1,220 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBC4Z7CGAKGQEAM5LKZY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 93187161757
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 14:33:19 +0200 (CEST)
+Received: from mfilter27-d.gandi.net (mfilter27-d.gandi.net [217.70.178.155])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 8EAA4178074
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 14:33:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter27-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter27-d.gandi.net (mfilter27-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qIpR0Ca15y+5 for <anything@michielbdejong.com>;
+	Thu, 23 May 2013 14:33:17 +0200 (CEST)
+Received: from mail-ea0-x238.google.com (mail-ea0-x238.google.com [IPv6:2a00:1450:4013:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A34FC1780B6
+	for <michiel@michielbdejong.com>; Thu, 23 May 2013 14:33:17 +0200 (CEST)
+Received: by mail-ea0-f184.google.com with SMTP id g10sf399995eak.21
+        for <michiel@michielbdejong.com>; Thu, 23 May 2013 05:33:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:from:mime-version:subject:date:in-reply-to:to
+         :references:message-id:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=y2YNrp3e8/vROWy7Eh+f51BV3vGuvGMar8BeAGGeFPE=;
+        b=r+Ac+Lfa6p55h8l/U4A7PxWc9o4k7cdMcOgRr2wVbFxME8ou7sBFeKsRY6UIX4c6hw
+         SZMION+6lq159QFo/uuKlMjEqPj8+T5fWKKYm1SH7X/KQu2lwDF1g36x5/sDXfmKJq+i
+         1B2oV0D9fmQ7kQ0JHHV+akFYiER8rhidzGujTO5QyjOxr5dkYfO4eHUMfxm3VwFQF4zc
+         retu4cRZiCiTSq5x7fp2YCGQxjKZJ/w25vr5ZKjCZG/717PkK4cn3bKfzDY6U/1as+CY
+         L35A7sVHeDO3NEDzwPN4aGkN4ewmPAd3Y+uxISr3+ySWIlndA6nJX6AMmghlg3iZeSla
+         dsww==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:from:mime-version:subject:date:in-reply-to:to
+         :references:message-id:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=y2YNrp3e8/vROWy7Eh+f51BV3vGuvGMar8BeAGGeFPE=;
+        b=OiM+QO/JSmgz/wHHKspGBeMcB2vV/FC1mYhyP1jD9eH6LGwsXTG5pyN7JIsl9JMezU
+         /sIH0jWTB1i0VcVnsN4X7GA3aMV23ZWcHc/awai0iy12etaRHh98y+YOTS0pe2HHwC6/
+         8RIfPSxHQ4FsHYvd8G0WgHCcY77z3/C0YBME9CEOjk/Y3OCQmBENdag2OF5G199IYLag
+         +mhVePKncdzgTJ5OWo2oMicD2yBCTGHxpb3V+maqNQ8vGs70ha81Z3k0ifUr+g5GEfGX
+         iyElh0JgSkntxk5UP7HvH/HBlEQstLtbsV+biHX3c9TndLSUoA1+0zG67FY28DQYO6dS
+         orhw==
+X-Received: by 10.180.104.73 with SMTP id gc9mr1841759wib.9.1369312396337;
+        Thu, 23 May 2013 05:33:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.76.71 with SMTP id i7ls1704176wiw.47.canary; Thu, 23 May
+ 2013 05:33:15 -0700 (PDT)
+X-Received: by 10.180.14.40 with SMTP id m8mr3440006wic.7.1369312395669;
+        Thu, 23 May 2013 05:33:15 -0700 (PDT)
+Received: from mail-wi0-x22f.google.com (mail-wi0-x22f.google.com [2a00:1450:400c:c05::22f])
+        by gmr-mx.google.com with ESMTPS id cg10si983818wib.0.2013.05.23.05.33.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 23 May 2013 05:33:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:400c:c05::22f as permitted sender) client-ip=2a00:1450:400c:c05::22f;
+Received: by mail-wi0-f175.google.com with SMTP id hn14so4531513wib.2
+        for <tosdr@googlegroups.com>; Thu, 23 May 2013 05:33:15 -0700 (PDT)
+X-Received: by 10.180.189.136 with SMTP id gi8mr42925677wic.11.1369312393316;
+        Thu, 23 May 2013 05:33:13 -0700 (PDT)
+Received: from [192.168.1.2] (85.136.138.170.dyn.user.ono.com. [85.136.138.170])
+        by mx.google.com with ESMTPSA id fz8sm35414941wib.2.2013.05.23.05.33.11
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 23 May 2013 05:33:12 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2233] Re: People's Terms of Service Contract
+Date: Thu, 23 May 2013 14:33:10 +0200
+In-Reply-To: <033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com>
+To: tosdr@googlegroups.com
+References: <ea2c6f26-3b99-44f7-9a16-738f69da447d@googlegroups.com> <033f0d7f-dfb6-4d9f-8f8d-8a1882b385ff@googlegroups.com>
+Message-Id: <AC99978C-92EB-458E-A652-EB8A6F51BA8E@gmail.com>
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:400c:c05::22f
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=Apple-Mail-4-163166828
+
+--Apple-Mail-4-163166828
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=windows-1252
+
+Already did :) If they respond to me directly, I'll ask their permission to=
+ forward their response to the group, but I also pointed them toward the gr=
+oup to make any inquires, etc.=20
+
+On May 23, 2013, at 2:31 PM, Hugo Roy wrote:
+
+> Imagine if social media users came together and developed a People=92s Te=
+rms of Service Agreement=97a common reference point and stamp of approval, =
+like a Fair Trade label for the web, to govern the next photo-sharing app o=
+r responsible social network.
+>=20
+>=20
+>=20
+> Somebody should contact the author and point to tosdr.org ;-) Ian?
+> =20
+> On Thursday, May 23, 2013 2:02:16 PM UTC+2, Ian McGowan wrote:
+> An interesting article about a possible way forward with ToS:
+>=20
+> http://www.thenation.com/article/174441/fighting-facebook-campaign-people=
+s-terms-service
+>=20
+> Today, the law protects these arrangements by assuming they were fairly n=
+egotiated, and thus reflect a =93meeting of the minds=94 by equal parties. =
+That is weird.
+>=20
+>=20
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--Apple-Mail-4-163166828
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=windows-1252
+
+<html><head></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode:=
+ space; -webkit-line-break: after-white-space; ">Already did :) If they res=
+pond to me directly, I'll ask their permission to forward their response to=
+ the group, but I also pointed them toward the group to make any inquires, =
+etc.&nbsp;<div><br><div><div>On May 23, 2013, at 2:31 PM, Hugo Roy wrote:</=
+div><br class=3D"Apple-interchange-newline"><blockquote type=3D"cite"><bloc=
+kquote style=3D"margin: 0px 0px 0px 0.8ex; border-left: 1px solid rgb(204, =
+204, 204); padding-left: 1ex;" class=3D"gmail_quote"><p>Imagine if social m=
+edia users came together and developed a <em>People=92s Terms of Service Ag=
+reement</em>=97a
+ common reference point and stamp of approval, like a Fair Trade label=20
+for the web, to govern the next photo-sharing app or responsible social=20
+network.</p><br></blockquote><div><br>Somebody should contact the author an=
+d point to <a href=3D"http://tosdr.org">tosdr.org</a> ;-) Ian?<br>&nbsp;</d=
+iv>On Thursday, May 23, 2013 2:02:16 PM UTC+2, Ian McGowan wrote:<blockquot=
+e class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: =
+1px #ccc solid;padding-left: 1ex;">An interesting article about a possible =
+way forward with ToS:<div><br></div><div><a href=3D"http://www.thenation.co=
+m/article/174441/fighting-facebook-campaign-peoples-terms-service" target=
+=3D"_blank">http://www.thenation.com/<wbr>article/174441/fighting-<wbr>face=
+book-campaign-peoples-<wbr>terms-service</a><br></div><div><br></div><block=
+quote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-w=
+idth:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding=
+-left:1ex"><p>Today, the law protects these arrangements by <i>assuming </i=
+>they were fairly negotiated, and thus reflect a =93meeting of the minds=94=
+ by equal parties. That is weird.</p></blockquote></blockquote><div><br cla=
+ss=3D"webkit-block-placeholder"></div>
+
+-- <br>
+<a href=3D"http://tosdr.org">tosdr.org</a> | <a href=3D"http://twitter.com/=
+tosdr">twitter.com/tosdr</a> | <a href=3D"http://github.com/tosdr">github.c=
+om/tosdr</a><br>
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</blockquote></div><br></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--Apple-Mail-4-163166828--

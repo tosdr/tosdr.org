@@ -1,8 +1,10 @@
 var fs = require('fs'),
   subjects = JSON.parse(fs.readFileSync('./threadSubjects.json')),
   index = {},
-  point, i,
-  pointFiles = fs.readdirSync('../points/');
+  point, i, done, uniqueSubjects = {},
+  pointFiles = fs.readdirSync('../points/'),
+  rawPostFiles = fs.readdirSync('./rawPosts/'),
+  MailParser = require("mailparser").MailParser, mailParser;
 
 //...
 for (i in subjects) {
@@ -10,6 +12,11 @@ for (i in subjects) {
     subject: subjects[i],
     points: [],
     posts: []
+  };
+  if (uniqueSubjects[subjects[i]] === undefined) {
+    uniqueSubjects[subjects[i]] = i;
+  } else {
+    uniqueSubjects[subjects[i]] = false;
   }
 }
 for (i=0; i<pointFiles.length; i++) {
@@ -25,4 +32,34 @@ for (i=0; i<pointFiles.length; i++) {
     }
   }
 }
-console.log(index);
+//console.log(uniqueSubjects);
+done = 0;
+function onEnd(mailObject) {
+  var subjectParts = mailObject.subject.split('] ');
+  //console.log('subjectParts', subjectParts);
+  if (subjectParts[0].split(':')[0] === '[tosdr') {
+    subjectParts.shift();
+    //console.log('changing', mailObject.subject, subjectParts.join('] '));
+    mailObject.subject = subjectParts.join('] ');
+  }
+  if (uniqueSubjects[mailObject.subject]) {
+    index[uniqueSubjects[mailObject.subject]].posts.push[mailObject.messageId];
+    fs.writeFileSync('../posts/'+mailObject.messageId, JSON.stringify(mailObject));
+  }
+  done++;
+  if (done === rawPostFiles.length) {
+    console.log(JSON.stringify(index));
+  } else {
+    setTimeout(function() {
+      mailParser = new MailParser();
+      mailParser.on("end", onEnd);
+      mailParser.write(fs.readFileSync('./rawPosts/'+rawPostFiles[done]));
+      mailParser.end();
+    }, 0);
+  }
+}
+
+mailParser = new MailParser();
+mailParser.on("end", onEnd);
+mailParser.write(fs.readFileSync('./rawPosts/'+rawPostFiles[done]));
+mailParser.end();

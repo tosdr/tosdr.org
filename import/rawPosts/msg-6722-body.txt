@@ -1,0 +1,209 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBONJ6GHAKGQETLIJFKI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 5D4B7161740
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 20:21:50 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 58BBC1164F1
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 20:21:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id bkahACwHwBKV for <anything@michielbdejong.com>;
+	Tue,  9 Jul 2013 20:21:48 +0200 (CEST)
+Received: from mail-ie0-x23d.google.com (mail-ie0-x23d.google.com [IPv6:2607:f8b0:4001:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 777691164CB
+	for <michiel@michielbdejong.com>; Tue,  9 Jul 2013 20:21:48 +0200 (CEST)
+Received: by mail-ie0-f189.google.com with SMTP id 16sf1023697iea.6
+        for <michiel@michielbdejong.com>; Tue, 09 Jul 2013 11:21:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=TrJbEHH4H6W/6TXQdpp9Pe4So2cVix43N7XEn9v8mSs=;
+        b=WddpS6EPphmwF6l0ScN2UdGXbceVOpKB5BngiHTWDgEJLWuoDvjfXu2ElNsJnyHfGu
+         S8pqOv+zvAzqLJfSwnm6kkzntgaWqNPNagalAgpJ8zUfUAqsg8ucqb39RUh1nuFzqCa2
+         Ys3lL/wAAO9KlICo5tPAKLsq9kLojbXq4v9HjGb9KQJdUJOWBeGJk91VfmQlSs0qj1zS
+         tH+xCDNXa1gIaLbHlHHeN067whC5nCZUiT122ZUwdVEWNt6BgjTewel1C+nem9NVcci4
+         Sx7VZ7R5/hp6k+LaJnAueJncgpudrvxH7PklU1NyH0h7zDrV5hKpTUA1XUaPFRg1l50n
+         L7OA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=TrJbEHH4H6W/6TXQdpp9Pe4So2cVix43N7XEn9v8mSs=;
+        b=XTkeCqyMBxwtz+4j9FPPBxLX+X5yV88jvZ/DkqwTq1krTJF/Xg5756S+rRYFumWGz9
+         m8ZLeTiQ3w6AjgLI8Vq7+I8LNYB/IW7Rdqt9naG9X4/h1fbMCl5hsiq1fJ4stxG2O4ZE
+         ajpb/+QXap+hCHtaSSOH6p2S0s7NUJ8HnnODlFpErPmriOQ2kqcNFw3//oHTnZuN3LTV
+         wJb43sqb1L1OEhW1+7SFlvdRJfswIKAai+ucau0/DKGJzxchTvWrIrnnmO8p/J/kAdsb
+         pSoMszI0k2VJB4rgNXGZIlvTeLeNwHzq9KmT1VZLlyjKM5k+QxDnGKO/xQQFFD941Ype
+         3VOQ==
+X-Received: by 10.49.35.68 with SMTP id f4mr813470qej.0.1373394106989;
+        Tue, 09 Jul 2013 11:21:46 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.49.135 with SMTP id u7ls2421023qen.3.gmail; Tue, 09 Jul
+ 2013 11:21:45 -0700 (PDT)
+X-Received: by 10.49.48.201 with SMTP id o9mr807059qen.42.1373394105346;
+        Tue, 09 Jul 2013 11:21:45 -0700 (PDT)
+Date: Tue, 9 Jul 2013 11:21:44 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <7f8190d8-a3e1-450b-b9a0-291963f4561b@googlegroups.com>
+In-Reply-To: <c06ffdd0-ad21-4e6a-bd5b-0ad696cf7870@googlegroups.com>
+References: <a124c5bc-513a-424c-bc91-e5a85c998df2@googlegroups.com>
+ <c06ffdd0-ad21-4e6a-bd5b-0ad696cf7870@googlegroups.com>
+Subject: [tosdr:2489] Re: [Bad] Spotify may transfer and process your data to
+ somewhere outside of your country
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_661_4418346.1373394105029"
+
+------=_Part_661_4418346.1373394105029
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: Spotify may process your data in a country where you have fewer=20
+legal rights to your data
+
+Topic: personal-data
+
+Summary: Spotify processes information on a number of different servers in=
+=20
+different countries. This may include countries in which you don't have as=
+=20
+many legal rights to your information as in other countries. They will only=
+=20
+process your data as set out in their privacy policy, regardless of country=
+.
+
+Score: 50 (alert)
+
+On Wednesday, April 24, 2013 8:11:17 AM UTC-5, Ian McGowan wrote:
+>
+> This has been curated.
+>
+> On Tuesday, April 23, 2013 4:22:56 PM UTC+2, Ian McGowan wrote:
+>>
+>> Spotify may transfer and process your data outside of your home country.=
+=20
+>> This includes potentially a country in which you have fewer legal rights=
+=20
+>> regarding your personal information.
+>>
+>> Spotify processes information about our users on servers located in a=20
+>>> number of countries. Accordingly, Spotify may share your information wi=
+th=20
+>>> other companies in the Spotify Group for the purpose of them carrying o=
+ut=20
+>>> any of the activities specified in this Privacy Policy. Spotify may als=
+o=20
+>>> subcontract processing to or share your information with third parties=
+=20
+>>> located in countries, other than your home country. Information collect=
+ed=20
+>>> within the European Economic Area (=93EEA=94) and Switzerland may, for =
+example,=20
+>>> be transferred to, and processed by companies in the Spotify Group or o=
+ther=20
+>>> third parties identified above, located in a country outside of the EEA=
+ and=20
+>>> Switzerland, where you may have fewer legal rights in relation to your=
+=20
+>>> information. However, the Spotify Group will only process your informat=
+ion=20
+>>> as described in this Privacy Policy in every country. You expressly con=
+sent=20
+>>> to your information being used as set out in this section 6.
+>>
+>>
+>> https://www.spotify.com/us/legal/privacy-policy/=20
+>>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_661_4418346.1373394105029
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: Spotify may process your data in a country where you have fewer lega=
+l rights to your data<div><br></div><div>Topic: personal-data</div><div><br=
+></div><div>Summary: Spotify processes information on a number of different=
+ servers in different countries. This may include countries in which you do=
+n't have as many legal rights to your information as in other countries. Th=
+ey will only process your data as set out in their privacy policy, regardle=
+ss of country.</div><div><br></div><div>Score: 50 (alert)<br><br>On Wednesd=
+ay, April 24, 2013 8:11:17 AM UTC-5, Ian McGowan wrote:<blockquote class=3D=
+"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc s=
+olid;padding-left: 1ex;">This has been curated.<br><br>On Tuesday, April 23=
+, 2013 4:22:56 PM UTC+2, Ian McGowan wrote:<blockquote class=3D"gmail_quote=
+" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex">Spotify may transfer and process your data outside of your home cou=
+ntry. This includes potentially a country in which you have fewer legal rig=
+hts regarding your personal information.<br><div><br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;b=
+order-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"=
+><span style=3D"color:rgb(85,85,85);font-family:helvetica,arial,'nimbus san=
+s l',sans-serif;font-size:14px;line-height:18px">Spotify processes informat=
+ion about our users on servers located in a number of countries. Accordingl=
+y, Spotify may share your information with other companies in the Spotify G=
+roup for the purpose of them carrying out any of the activities specified i=
+n this Privacy Policy. Spotify may also subcontract processing to or share =
+your information with third parties located in countries, other than your h=
+ome country. Information collected within the European Economic Area (=93EE=
+A=94) and Switzerland may, for example, be transferred to, and processed by=
+ companies in the Spotify Group or other third parties identified above, lo=
+cated in a country outside of the EEA and Switzerland, where you may have f=
+ewer legal rights in relation to your information. However, the Spotify Gro=
+up will only process your information as described in this Privacy Policy i=
+n every country. You expressly consent to your information being used as se=
+t out in this section 6.</span></blockquote><div><br></div><div><a href=3D"=
+https://www.spotify.com/us/legal/privacy-policy/" target=3D"_blank">https:/=
+/www.spotify.com/us/<wbr>legal/privacy-policy/</a>&nbsp;</div></blockquote>=
+</blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_661_4418346.1373394105029--
