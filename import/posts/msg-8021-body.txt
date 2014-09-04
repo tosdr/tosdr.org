@@ -1,0 +1,194 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBVWHRKIAKGQE5YSCXOA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3F74A161747
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:45:31 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3D132226703
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:45:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id JJmhTieAKSBL for <anything@michielbdejong.com>;
+	Wed,  7 Aug 2013 21:45:29 +0200 (CEST)
+Received: from mail-pb0-x238.google.com (mail-pb0-x238.google.com [IPv6:2607:f8b0:400e:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4177922707A
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:45:29 +0200 (CEST)
+Received: by mail-pb0-f56.google.com with SMTP id rp2sf612488pbb.1
+        for <anything@michielbdejong.com>; Wed, 07 Aug 2013 12:45:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=20TO2niEq+tVpGOtHbPMRFTV0eothvBCtQAlnSDLGgk=;
+        b=dEwyo2eh6h4tk/BVdwG3KFghDLJUP/fyf8ArLZ+QOkQDG75zOqcJNJskg4lQDouZFE
+         Bjrs4CIM5VTVUE0YmPyUcamzglCehda9z5ftkxjuV2d7Nm8hQ7g340R4CVfvZ6fupa5Y
+         JcRt22kkF9ieZg/hQ/CUV+/t7wdEKHsySnk8agk0x7x0KKsXciGrNJXRrLJrKV/jCAA6
+         5Tl9EjUplTEslV3I/0kH8cuBqimpgVyZsT8pCSXGiKJjRkaXTsN7kXHws48ZYhGLrKgZ
+         EDLQYJ7MsFEGypPJ0cOh66BbunMIyD0++bHQIFbG1dfoDeILxx6pDH5UsCE8kNqf5UCa
+         i2Tw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=20TO2niEq+tVpGOtHbPMRFTV0eothvBCtQAlnSDLGgk=;
+        b=fxMjmCIxMDp3ZFxXVXIEbFM24FYkEFEyQSL2OMZgpnsK3Wrt8fgGgO3FeWNliRVV5y
+         oFQJBxB+Xg1tLazvqRSYTezUtbs5Ijf3t3Qfu7oeu4JHawYA2yQRpyXtbae6BqzJVQfY
+         RfH5XDxEdIAWYGIoWYTTVlOhM2W4wPxjjK/nuyGMirra4ytwjPUQ2/ekZ5ESFp6t1nzM
+         HRms23rq6znmIp+xO0LjSpRAIfnLgeBTdhakVzn7QDZrxoZpkBdC6UXxnP7wVh8Xza03
+         zMrxW24+1pWp9PvqhyK8vD0Yp1QXyGYnD9ZAhSkLRQDtIcCRE7vMKClwCGzlcA6EdGMP
+         mC4A==
+X-Received: by 10.49.13.10 with SMTP id d10mr145753qec.28.1375904727153;
+        Wed, 07 Aug 2013 12:45:27 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.4.8 with SMTP id g8ls897632qeg.67.gmail; Wed, 07 Aug 2013
+ 12:45:26 -0700 (PDT)
+X-Received: by 10.49.127.207 with SMTP id ni15mr145595qeb.15.1375904726816;
+        Wed, 07 Aug 2013 12:45:26 -0700 (PDT)
+Date: Wed, 7 Aug 2013 12:45:26 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <68307315-eccd-4f77-ac0b-74077a998ea1@googlegroups.com>
+In-Reply-To: <18b22170-ce30-4971-aba7-436177fce182@googlegroups.com>
+References: <18b22170-ce30-4971-aba7-436177fce182@googlegroups.com>
+Subject: [tosdr:2614] Re: [bad] Targeted advertising requires opt-out
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2751_22792102.1375904726341"
+
+------=_Part_2751_22792102.1375904726341
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title: You have to opt out of Microsoft's targeted advertising
+
+Topic: cookies
+
+Summary: Microsoft uses persistent cookies to keep track of and target 
+advertisements on their own websites and the websites of their advertising 
+and publishing partners. They do provide a link with information on how to 
+opt out of these cookies, however.
+
+Score: 50 (mediocre)
+
+On Sunday, May 12, 2013 8:47:45 AM UTC-5, Robin Monks wrote:
+>
+> Targeted Advertising. When we display online advertisements to you, we 
+>> will place one or more persistent cookies on your device in order to 
+>> recognize your device each time we display an ad to you. Because we serve 
+>> advertisements on our own web sites as well as those of our advertising and 
+>> publisher partners, we are able to compile information over time about the 
+>> types of pages, content and ads you, or others who are using your computer, 
+>> visited or viewed. This information is used for many purposes, for example, 
+>> it helps us try to ensure that you do not see the same advertisements over 
+>> and over again. We also use this information to help select and display 
+>> targeted advertisements that we believe may be of interest to you. You can 
+>> find more information about this use of cookies, including how to opt out 
+>> of receiving targeted advertising from Microsoft, in Microsoft 
+>> Advertising Privacy Statement<http://privacy.microsoft.com/en-us/AdDisplay.mspx>
+>> .
+>>
+>>  
+>>
+>> From <
+>> http://www.microsoftstore.com/store/msca/en_CA/DisplayPrivacyPage/ThemeID.27659600/
+>> > 
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2751_22792102.1375904726341
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: You have to opt out of Microsoft's targeted advertising<div><br></di=
+v><div>Topic: cookies</div><div><br></div><div>Summary: Microsoft uses pers=
+istent cookies to keep track of and target advertisements on their own webs=
+ites and the websites of their advertising and publishing partners. They do=
+ provide a link with information on how to opt out of these cookies, howeve=
+r.</div><div><br></div><div>Score: 50 (mediocre)<br><div><br>On Sunday, May=
+ 12, 2013 8:47:45 AM UTC-5, Robin Monks wrote:<blockquote class=3D"gmail_qu=
+ote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padd=
+ing-left: 1ex;"><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0=
+px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-le=
+ft-style:solid;padding-left:1ex"><p style=3D"margin:0in"><span style=3D"fon=
+t-weight:bold;font-family:'Segoe UI';font-size:9pt;color:black;background-r=
+epeat:initial initial" lang=3D"en-US">Targeted Advertising.</span><span sty=
+le=3D"font-family:Calibri;font-size:11.0pt" lang=3D"en-CA">&nbsp;When we di=
+splay
+online advertisements to you, we will place one or more persistent cookies =
+on
+your device in order to recognize your device each time we display an ad to
+you. Because we serve advertisements on our own web sites as well as those =
+of our
+advertising and publisher partners, we are able to compile information over
+time about the types of pages, content and ads you, or others who are using
+your computer, visited or viewed. This information is used for many purpose=
+s,
+for example, it helps us try to ensure that you do not see the same
+advertisements over and over again. We also use this information to help se=
+lect
+and display targeted advertisements that we believe may be of interest to y=
+ou.
+You can find more information about this use of cookies, including how to o=
+pt
+out of receiving targeted advertising from Microsoft, in&nbsp;</span><a hre=
+f=3D"http://privacy.microsoft.com/en-us/AdDisplay.mspx" target=3D"_blank"><=
+span style=3D"font-family:'Segoe UI';font-size:9pt;background-repeat:initia=
+l initial" lang=3D"en-CA">Microsoft
+Advertising Privacy Statement</span></a><span style=3D"font-family:Calibri;=
+font-size:11.0pt" lang=3D"en-CA">.</span></p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayPrivac=
+yPage/ThemeID.27659600/" target=3D"_blank">http://www.microsoftstore.<wbr>c=
+om/store/msca/en_CA/<wbr>DisplayPrivacyPage/ThemeID.<wbr>27659600/</a>&gt;&=
+nbsp;</p></blockquote></blockquote></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2751_22792102.1375904726341--

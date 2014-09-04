@@ -1,0 +1,109 @@
+Return-Path: <tosdr+bncBC235ANRQ4FRB5EMROIAKGQEI4Q37WI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A1A42161747
+	for <anything@michielbdejong.com>; Thu,  8 Aug 2013 00:13:12 +0200 (CEST)
+Received: from mfilter4-d.gandi.net (mfilter4-d.gandi.net [217.70.178.134])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9E71C14305E
+	for <anything@michielbdejong.com>; Thu,  8 Aug 2013 00:13:12 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter4-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter4-d.gandi.net (mfilter4-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id EKkJtqrttS46 for <anything@michielbdejong.com>;
+	Thu,  8 Aug 2013 00:13:10 +0200 (CEST)
+Received: from mail-fa0-x239.google.com (mail-fa0-x239.google.com [IPv6:2a00:1450:4001:c02::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 840D2142F70
+	for <anything@michielbdejong.com>; Thu,  8 Aug 2013 00:13:10 +0200 (CEST)
+Received: by mail-fa0-f57.google.com with SMTP id w1sf298950faw.2
+        for <anything@michielbdejong.com>; Wed, 07 Aug 2013 15:13:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mime-version:in-reply-to:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type
+         :content-disposition;
+        bh=AN2/D1dnIIKL0DTXW6bV1a/ipG2zS8pOOyhG7Q+023Q=;
+        b=PCZ5MTTrqAMRBPujAFHkuWT0pe13kIvhzH1i2eJO5u/gQEGwcUHTGI6zFnM/TJdV2x
+         qvySfKbTwCOVrgnPr/qC7M/KwjE9yfIYSIpqpT07k+iOD+cJ1HUx0jXjMoEOmA/UDa0w
+         p195fybJDJcyePQk8uaoe/VCZWPbPP3pePEdTo4hqR7uXOEebeBNhByplUTRteQjLxvI
+         emzh4Hx2i7TrHWqPnjihvKhg+n+aO+jU8dZmyzb8VbJS7m3G3vf0WYz7k/d1Boj1VovV
+         kPl0MzwC3nYga291x4Iw028C/NWiftxO1cMccgbRPAyePUyEARvFqcxfkig5rwWy7Wt2
+         vAmA==
+X-Received: by 10.181.12.19 with SMTP id em19mr271674wid.11.1375913588958;
+        Wed, 07 Aug 2013 15:13:08 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.181.13.197 with SMTP id fa5ls1249596wid.32.canary; Wed, 07 Aug
+ 2013 15:13:08 -0700 (PDT)
+X-Received: by 10.14.251.134 with SMTP id b6mr4736664ees.2.1375913588164;
+        Wed, 07 Aug 2013 15:13:08 -0700 (PDT)
+Received: from mail-out.m-online.net (mail-out.m-online.net. [212.18.0.10])
+        by gmr-mx.google.com with ESMTPS id a1si1910341ees.1.2013.08.07.15.13.06
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 07 Aug 2013 15:13:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 212.18.0.10 is neither permitted nor denied by best guess record for domain of dan@coneharvesters.com) client-ip=212.18.0.10;
+Received: from frontend1.mail.m-online.net (frontend1.mail.intern.m-online.net [192.168.8.180])
+	by mail-out.m-online.net (Postfix) with ESMTP id 3c9Rmf2wd9z3hhVr
+	for <tosdr@googlegroups.com>; Thu,  8 Aug 2013 00:13:06 +0200 (CEST)
+Received: from localhost (dynscan1.mnet-online.de [192.168.6.68])
+	by mail.m-online.net (Postfix) with ESMTP id 3c9Rmf2ql7zbbnZ
+	for <tosdr@googlegroups.com>; Thu,  8 Aug 2013 00:13:06 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at mnet-online.de
+Received: from mail.mnet-online.de ([192.168.8.180])
+	by localhost (dynscan1.mail.m-online.net [192.168.6.68]) (amavisd-new, port 10024)
+	with ESMTP id YE387adt0WGf for <tosdr@googlegroups.com>;
+	Thu,  8 Aug 2013 00:13:05 +0200 (CEST)
+X-Auth-Info: pcCDz6dBgql9Nk8wZCstOfLVClzN/jJaiLhlzl+WeRM=
+Received: from colibri.localdomain (ppp-93-104-56-236.dynamic.mnet-online.de [93.104.56.236])
+	(using TLSv1 with cipher ADH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mail.mnet-online.de (Postfix) with ESMTPSA
+	for <tosdr@googlegroups.com>; Thu,  8 Aug 2013 00:13:05 +0200 (CEST)
+Received: by colibri.localdomain (Postfix, from userid 501)
+	id 8DB16109B1; Thu,  8 Aug 2013 00:13:04 +0200 (CEST)
+Date: Thu, 8 Aug 2013 00:13:04 +0200
+From: Dan Fandrich <dan@coneharvesters.com>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2618] Re: Gravatar: Takes copyright, can transfer
+ copyright, can sublicense
+Message-ID: <20130807221304.GA20543@coneharvesters.com>
+MIME-Version: 1.0
+In-Reply-To: <1358000103.15341.14.camel@synclavier.lan>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: dan@coneharvesters.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 212.18.0.10 is neither permitted nor denied by best guess record
+ for domain of dan@coneharvesters.com) smtp.mail=dan@coneharvesters.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+> Although some of the parts of this copyright license are still problematic,
+
+The icon showing in the review is thumbs up, not thumbs down. Looks like
+somebody made a typo. Also, the "Help us find the Terms" link is being shown,
+despite TOSBack having a copy of those terms.
+
+>>> Dan
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

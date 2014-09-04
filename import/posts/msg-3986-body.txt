@@ -1,0 +1,107 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBEOI5KGAKGQEVUBKISQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A7489161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:44 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A4057116290
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:44 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id VoHUE5Ythl+Z for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 00:30:43 +0200 (CEST)
+Received: from mail-we0-x239.google.com (mail-we0-x239.google.com [IPv6:2a00:1450:400c:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C654B1163AF
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:42 +0200 (CEST)
+Received: by mail-we0-f185.google.com with SMTP id q56sf42428wes.22
+        for <anything@michielbdejong.com>; Mon, 20 May 2013 15:30:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:in-reply-to:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-disposition;
+        bh=NEjZ/Hua26Urvt/bUnLGmkGrn8LTxjJbn1l8cF/wSac=;
+        b=eqSqOJvT+p2O9Ml3sApxASvICe15Mg4saB3Ax1eIsKTceWg4C1aYtnNhERKr2F4db0
+         F5meQDq0bY41+U3il69qOaE3zIsOi94gWyM7UFO4DR0lfBl4xaX4bNDIya27znksZM3k
+         E0YOQMm8UGa/TlafHv9ItFsGBSozzNM0Ld+JKnhcQqk347chxGH83DepMyYfN9DJrdNn
+         nQoNzpY78SwrZ6R+vGMpXnZnTFp3cmSX0UR+2/Xe7MGzNicyGUUeRIjSIMtfJ9hhI3cP
+         sUQeafRLoHwvKrs3/+Wsg0LPy5gysOA9mOBX4usDyegLX90g5ASJfYuELOyGyNUsaGZW
+         2gDA==
+X-Received: by 10.180.102.194 with SMTP id fq2mr666243wib.15.1369089041740;
+        Mon, 20 May 2013 15:30:41 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.38.11 with SMTP id c11ls31147wik.6.gmail; Mon, 20 May 2013
+ 15:30:41 -0700 (PDT)
+X-Received: by 10.15.100.195 with SMTP id bn43mr61786977eeb.0.1369089041226;
+        Mon, 20 May 2013 15:30:41 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id bj52si7229912eeb.1.2013.05.20.15.30.41
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 20 May 2013 15:30:41 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 1484C63B4CB
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 00:30:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rTjXaHialiTl for <tosdr@googlegroups.com>;
+	Tue, 21 May 2013 00:30:35 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id E912963B4B5
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 00:30:30 +0200 (CEST)
+Date: Tue, 21 May 2013 00:30:28 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2161] Instagram- governance
+Message-ID: <20130520223028.GD3759@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <CADNfgRe_pQV-Gi8VrsHjR+iOuEOuiuVLTLQGdpa7jGW6W-fMZg@mail.gmail.com>
+MIME-Version: 1.0
+In-Reply-To: <CADNfgRe_pQV-Gi8VrsHjR+iOuEOuiuVLTLQGdpa7jGW6W-fMZg@mail.gmail.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le dim. 19/05/13, 13:55, Suzanne Azmayesh <suzanne@azmayesh.fr>:
+> To use Instagram, you must be at least 13 years old.
+
+This is standard in the US. I don't think we need to mention
+these.
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

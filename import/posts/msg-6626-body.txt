@@ -1,0 +1,140 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB7635OHAKGQECFC6HEI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 59C09161740
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 18:51:14 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 570191783E8
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 18:51:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id e+APnEY7Huah for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 18:51:13 +0200 (CEST)
+Received: from mail-ie0-x240.google.com (mail-ie0-x240.google.com [IPv6:2607:f8b0:4001:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D2F93178401
+	for <michiel@michielbdejong.com>; Mon,  8 Jul 2013 18:51:12 +0200 (CEST)
+Received: by mail-ie0-f192.google.com with SMTP id 9sf1494416iec.9
+        for <michiel@michielbdejong.com>; Mon, 08 Jul 2013 09:51:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=fVdp/9oFgc5735bE+Eu2905V8nXW4EzWMfeMWroZqEg=;
+        b=SmnEpGL4tcAH/OoZOpjnUi0RgD6t32fQs4/q9xU453Su6fy+hU+IVn8IIjwHuGW4vf
+         JkA4Y851EQzFfDXC3qVsKJwaA5v677p5GE+69j4CemEyFNg8bfeUvqcQHsU+YGOl/RB6
+         u8NiSwFD2YKHyrXCfPpwRdApx4H2w1wbevVDpsEg94VPyrd20HI+6x8eBLjPaHt0it2j
+         p23VosU9hkCQJCX/NQtk5AkviYj0FLDnS8Waxlfr0XAGUhXs/9WhK6X+pVRUV6eZBF3q
+         YTXEt/6s73p7p5mt79mkWTqX9rlHGSIgSb6eqqS0cIh1YNo/NYKxLegmXT8Xe92GvKKF
+         WgxA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=fVdp/9oFgc5735bE+Eu2905V8nXW4EzWMfeMWroZqEg=;
+        b=vKCLwsAJ7oOBC6R/IsoEpEavu7XXZ/I98WoccferUhJ+PItLK5Odb0Qv9dt+71YWpl
+         dnXVwJZbkNuAKQvlSoQBWuBphjSWofW3yzRrYw5jbSMOE1SXsT46r6JBSx1Y7qe5uQp0
+         gfd0NGD3/N7j9hn44uO9YpZU8iWiNq98HLHqbUqTdzog4NZUM9IBP+cvjzdHmG9d4pE6
+         Qj6FhknwP6IYQACDkHjHC2N7vnHPambVAcYYVskEgTCn8QUoFODRcWHvM4LY4KOocxMg
+         IUf2Rcjuh3H6rRIo1aiiCdlDLXf8Tu84NtMT6yzzLSixakgWBYCFB2Eu+S/Gxo9sAa3w
+         njZw==
+X-Received: by 10.49.30.105 with SMTP id r9mr551515qeh.4.1373302271400;
+        Mon, 08 Jul 2013 09:51:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.104.112 with SMTP id gd16ls1873755qeb.68.gmail; Mon, 08 Jul
+ 2013 09:51:10 -0700 (PDT)
+X-Received: by 10.49.82.50 with SMTP id f18mr552808qey.22.1373302270967;
+        Mon, 08 Jul 2013 09:51:10 -0700 (PDT)
+Date: Mon, 8 Jul 2013 09:51:10 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <de4b3ece-79f1-43be-b4c9-bfbf28ec6da6@googlegroups.com>
+In-Reply-To: <7cc2c27a-507b-4e64-8c27-a83abbb2d972@googlegroups.com>
+References: <7cc2c27a-507b-4e64-8c27-a83abbb2d972@googlegroups.com>
+Subject: [tosdr:2462] Re: Tumblr will notify you when their TOS change, which
+ can happen at any time
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_880_9399165.1373302270746"
+
+------=_Part_880_9399165.1373302270746
+Content-Type: text/plain; charset=ISO-8859-1
+
+This is already on the website.
+
+On Monday, May 6, 2013 6:44:37 AM UTC-5, Ian McGowan wrote:
+>
+> Tumblr reserves the right, in its sole discretion, to modify this 
+>> Agreement at any time by posting a revised Agreement through the Services 
+>> and by providing notice to you that this Agreement has changed, generally 
+>> via e-mail where practicable, and otherwise through the Services (such as 
+>> through a notification in your Tumblr Dashboard).
+>
+>
+> http://www.tumblr.com/policy/en/terms_of_service 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_880_9399165.1373302270746
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This is already on the website.<br><br>On Monday, May 6, 2013 6:44:37 AM UT=
+C-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0=
+;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-wi=
+dth:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-=
+left:1ex"><span style=3D"color:rgb(68,68,68);font-family:'Helvetica Neue',H=
+elvetica,sans-serif;font-size:15px;line-height:22px">Tumblr reserves the ri=
+ght, in its sole discretion, to modify this Agreement at any time by postin=
+g a revised Agreement through the Services and by providing notice to you t=
+hat this Agreement has changed, generally via e-mail where practicable, and=
+ otherwise through the Services (such as through a notification in your Tum=
+blr Dashboard).</span></blockquote><div><br></div><div><a href=3D"http://ww=
+w.tumblr.com/policy/en/terms_of_service" target=3D"_blank">http://www.tumbl=
+r.com/policy/<wbr>en/terms_of_service</a>&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_880_9399165.1373302270746--

@@ -1,0 +1,234 @@
+Return-Path: <tosdr+bncBCG7Z4EO7ENBBTU3USGAKGQEKKRYZTQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id DEF93161735
+	for <anything@michielbdejong.com>; Tue,  7 May 2013 16:21:06 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DAA54142092
+	for <anything@michielbdejong.com>; Tue,  7 May 2013 16:21:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id EZmRy0OYBlow for <anything@michielbdejong.com>;
+	Tue,  7 May 2013 16:21:05 +0200 (CEST)
+Received: from mail-vc0-f190.google.com (mail-vc0-f190.google.com [209.85.220.190])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A3A6614207E
+	for <michiel@michielbdejong.com>; Tue,  7 May 2013 16:21:04 +0200 (CEST)
+Received: by mail-vc0-f190.google.com with SMTP id hz10sf193729vcb.7
+        for <michiel@michielbdejong.com>; Tue, 07 May 2013 07:21:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=x6u8NT9N6A4HFqHYeeDNLQ1S0zBkRtTKcI6ZbK7vHLg=;
+        b=ZChwz9l4SawVzX5diJbySD1mpEHpm25r5b85YcfbAWD9E9YwL4aQvgHtVEp7jlODka
+         1+FTzK4PJRi0yL8g0H7b+jHZW9NWEtSxuUT+xk76nUrmxWQk6GUtuDtoJrsOAdeeysTX
+         8WI7USkiZuj7pDkv0/awMtLDykSNSdQP4+xkAj+RuUUjOORz4NF6EMF8S6z7TSdUk0zX
+         mPhxe/ZTzAfFswIepgr1Jv5EHhvL4w5g/cE9VoWpHcXs3Oc+WkEakJ/bVort6TAmaSHG
+         LqCmZal7lu2hGC4eZiXr8nCMe/DUcffs9JjHPraoyCsXxZ9Ku+r4uObbYybew4+/oC2x
+         D0tg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=x6u8NT9N6A4HFqHYeeDNLQ1S0zBkRtTKcI6ZbK7vHLg=;
+        b=r9BEtNbk9XVDrJTZoJtQLor/SdoPsGtk4O/lC30dwkwcnlwKRq5HOgxzuOAMuI4n0U
+         wQI/RtLvWc5Pj8wsoj7IQH+H0NLhpE9GZnfujIbesM7dqbzsFl6q7YMPtR0tmPDIJY/n
+         3ld2Zpap2Jt2SzKfx/1L5mXZWQMcsDLaXmerW8Yy5dmZRQpoftNASW9J6mQ7Ac4jW6/Z
+         B/mh6PkPj+HlqYf5BU++iyHC1iUHleloHZtDvuifU5BepnTKIzi6H4gltqY7o6peqTAe
+         0zR4T2jd62ZZoE65KkEd2HFMKN7jU7K/u9adIUliw4CqCjMaaioX8BDS26pcXkmwy2Qu
+         jDvw==
+X-Received: by 10.49.35.179 with SMTP id i19mr145309qej.3.1367936463387;
+        Tue, 07 May 2013 07:21:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.134.99 with SMTP id pj3ls320571qeb.93.gmail; Tue, 07 May
+ 2013 07:21:02 -0700 (PDT)
+X-Received: by 10.49.109.200 with SMTP id hu8mr139715qeb.31.1367936462366;
+        Tue, 07 May 2013 07:21:02 -0700 (PDT)
+Date: Tue, 7 May 2013 07:21:01 -0700 (PDT)
+From: Jimm Stout <jamesstout1@gmail.com>
+To: tosdr@googlegroups.com
+Cc: jesse@wefu.org
+Message-Id: <a19774f4-b5db-4c49-917d-ec937458a8d0@googlegroups.com>
+In-Reply-To: <1367804038.2840.13.camel@zareason>
+References: <1367680700.2840.10.camel@zareason>
+ <fc4ac208ab60809eb113bb8529cfcf7a@michielbdejong.com>
+ <9380e9c6-e810-414b-8a14-3af9f2e2cff1@googlegroups.com>
+ <1367804038.2840.13.camel@zareason>
+Subject: Re: [tosdr:1972] Pull request for tosback2
+MIME-Version: 1.0
+X-Original-Sender: jamesstout1@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4609_18972639.1367936461536"
+
+------=_Part_4609_18972639.1367936461536
+Content-Type: text/plain; charset=ISO-8859-1
+
+Just FYI: I'm in the middle of moving between cities, and my wifi isn't 
+great. I'll go through each new rule to verify and add xpath as soon as I 
+get a chance.
+
+I saw that some of them have encoded apostrophes in the xpath (&apos;); I 
+haven't tested that, but I assume they'll work. Maybe we should keep them 
+one way or the other though for consistency later on.
+
+Also, I think using an attribute on the html for xpath when possible (e.g. 
+"//div[@id='content']") instead of the full path (e.g. 
+"/html/body/center/div/div[2]") would be better preparation for future site 
+changes.
+
+Thanks for submitting these!
+
+Jimm
+
+On Sunday, May 5, 2013 9:33:58 PM UTC-4, Jesse Weinstein wrote:
+>
+> Thanks! I've now made another pull-request, with the other half of the 
+> URLs from tos-archive. 
+>
+> On Sun, 2013-05-05 at 06:58 -0700, Jimm Stout wrote: 
+> > Last night, I went through the rules to add xpath, test the output, 
+> > and merge them on the crawl server. Thanks again! 
+> > 
+> > On Saturday, May 4, 2013 12:57:37 PM UTC-4, Michiel B. de Jong wrote: 
+> >         On 2013-05-04 17:18, Jesse Weinstein wrote: 
+> >         > I have an open pull request on tosback2 -- could one of the 
+> >         > collaborators on that repo accept it? 
+> >         > 
+> >         > Jesse 
+> >         
+> >         Done. Thanks for the awesome work! 
+> >         
+> >         Jimm, can you pull it into the crawler server so that these 
+> >         new jobs 
+> >         start running daily? 
+> > 
+> > -- 
+> > tosdr.org | twitter.com/tosdr | github.com/tosdr 
+> > --- 
+> > You received this message because you are subscribed to the Google 
+> > Groups "Terms of Service; Didn't Read" group. 
+> > To unsubscribe from this group and stop receiving emails from it, send 
+> > an email to tosdr+un...@googlegroups.com <javascript:>. 
+> > To post to this group, send email to to...@googlegroups.com<javascript:>. 
+>
+> > Visit this group at http://groups.google.com/group/tosdr?hl=en. 
+> > For more options, visit https://groups.google.com/groups/opt_out. 
+> >   
+> >   
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_4609_18972639.1367936461536
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Just FYI: I'm in the middle of moving between cities, and my wifi isn't gre=
+at. I'll go through each new rule to verify and add xpath as soon as I get =
+a chance.<br><br>I saw that some of them have encoded apostrophes in the xp=
+ath (&amp;apos;); I haven't tested that, but I assume they'll work. Maybe w=
+e should keep them one way or the other though for consistency later on.<br=
+><br>Also, I think using an attribute on the html for xpath when possible (=
+e.g. "//div[@id=3D'content']") instead of the full path (e.g. "/html/body/c=
+enter/div/div[2]") would be better preparation for future site changes.<br>=
+<br>Thanks for submitting these!<br><br>Jimm<br><br>On Sunday, May 5, 2013 =
+9:33:58 PM UTC-4, Jesse Weinstein wrote:<blockquote class=3D"gmail_quote" s=
+tyle=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-le=
+ft: 1ex;">Thanks! I've now made another pull-request, with the other half o=
+f the
+<br>URLs from tos-archive.
+<br>
+<br>On Sun, 2013-05-05 at 06:58 -0700, Jimm Stout wrote:
+<br>&gt; Last night, I went through the rules to add xpath, test the output=
+,
+<br>&gt; and merge them on the crawl server. Thanks again!
+<br>&gt;=20
+<br>&gt; On Saturday, May 4, 2013 12:57:37 PM UTC-4, Michiel B. de Jong wro=
+te:
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; On 2013-05-04 17:18, Jesse Weinstein w=
+rote:=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &gt; I have an open pull request on to=
+sback2 -- could one of the=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &gt; collaborators on that repo accept=
+ it?=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &gt;=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &gt; Jesse=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp;=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; Done. Thanks for the awesome work!=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp;=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; Jimm, can you pull it into the crawler=
+ server so that these
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; new jobs=20
+<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; start running daily?=20
+<br>&gt;=20
+<br>&gt; --=20
+<br>&gt; <a href=3D"http://tosdr.org" target=3D"_blank">tosdr.org</a> | <a =
+href=3D"http://twitter.com/tosdr" target=3D"_blank">twitter.com/tosdr</a> |=
+ <a href=3D"http://github.com/tosdr" target=3D"_blank">github.com/tosdr</a>
+<br>&gt; ---=20
+<br>&gt; You received this message because you are subscribed to the Google
+<br>&gt; Groups "Terms of Service; Didn't Read" group.
+<br>&gt; To unsubscribe from this group and stop receiving emails from it, =
+send
+<br>&gt; an email to <a href=3D"javascript:" target=3D"_blank" gdf-obfuscat=
+ed-mailto=3D"-Uy4ERozol4J">tosdr+un...@<wbr>googlegroups.com</a>.
+<br>&gt; To post to this group, send email to <a href=3D"javascript:" targe=
+t=3D"_blank" gdf-obfuscated-mailto=3D"-Uy4ERozol4J">to...@googlegroups.com<=
+/a>.
+<br>&gt; Visit this group at <a href=3D"http://groups.google.com/group/tosd=
+r?hl=3Den" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=
+=3Den</a>.
+<br>&gt; For more options, visit <a href=3D"https://groups.google.com/group=
+s/opt_out" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out<=
+/a>.
+<br>&gt; &nbsp;
+<br>&gt; &nbsp;
+<br>
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_4609_18972639.1367936461536--

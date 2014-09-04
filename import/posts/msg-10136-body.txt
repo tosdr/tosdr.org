@@ -1,0 +1,177 @@
+Return-Path: <tosdr+bncBCCZL2G36YCRBXOZT6JAKGQEXZHEO5A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id F141940FF6
+	for <anything@michielbdejong.com>; Sun, 29 Sep 2013 11:03:31 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EE372178077
+	for <anything@michielbdejong.com>; Sun, 29 Sep 2013 11:03:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Mo0r-VADb6nm for <anything@michielbdejong.com>;
+	Sun, 29 Sep 2013 11:03:30 +0200 (CEST)
+Received: from mail-yh0-x237.google.com (mail-yh0-x237.google.com [IPv6:2607:f8b0:4002:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 365A2178094
+	for <michiel@michielbdejong.com>; Sun, 29 Sep 2013 11:03:27 +0200 (CEST)
+Received: by mail-yh0-f55.google.com with SMTP id f10sf919863yha.20
+        for <michiel@michielbdejong.com>; Sun, 29 Sep 2013 02:03:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=B7zTrIJllLNQ3vkBaf8ckshwniPtX4aeD354SE0PvQQ=;
+        b=nB00+7hQwhpgToIYR+u86N42Hyf0kRttVK5+qBbE0m3cIsR1xohJS9Cc9iGRjme/bb
+         43zkvuFgKH7KP8r3cE0BZj0J49Z8jJbBG1srMQAtJGb1bzjaTZQAtmePFHX4a1xEG2ra
+         hd97OQqmkAuDFyWGHM0aq5cstJA9SkZ84uFz0XZ6bk/me0sFGayqi28oLkk4ZuDuJuGZ
+         5cdOqoS/S7CeCjq8cIP/HZKkkNo1ffCN7uSsRZMzIGW0cVJ11YSGPnudEsEsTJJgtXWN
+         fUY2gfcPR9Q3JwzZt/oogC3pURtTFqGnajJBHfY6YmBACdC3qZ8dy5c5AjG6gmkhA5j9
+         0I9g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=B7zTrIJllLNQ3vkBaf8ckshwniPtX4aeD354SE0PvQQ=;
+        b=q8+PLSNE5Dmcz2Dl6gdgJ84xJv2HU6WoDVGOvJMpxyem1jxVQFRdKqqwWICywJQQ3M
+         8DoBpQRcl6iZDqfGjO5QN1zeWGHiC3KXn7M+DY/yi3OROK3GKhHJzz/LsDR5gUQIvPX/
+         70pMnkZwoyL9zzXxoSGPJhHNjbMTiDCPBjPV2aYOlICxkwtleAMGNaN9lvaVNyN2AQx5
+         2tExPVOeUqaIAK2S5T9MdxGTIJukwHiKY98lMaX7Crx/StvaJK5eUZcU4sNGL+eO1RLY
+         MfkRBKFNpRvj3zWnqnniGB/hy168Pycm7t2R6eyxJf+DskhXHyKS/PU1U6Bah3tf1i4E
+         aCJw==
+X-Received: by 10.50.3.70 with SMTP id a6mr330102iga.16.1380445406225;
+        Sun, 29 Sep 2013 02:03:26 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.111.199 with SMTP id ik7ls1260142igb.20.gmail; Sun, 29 Sep
+ 2013 02:03:25 -0700 (PDT)
+X-Received: by 10.50.9.33 with SMTP id w1mr327810iga.12.1380445405570;
+        Sun, 29 Sep 2013 02:03:25 -0700 (PDT)
+Date: Sun, 29 Sep 2013 02:03:23 -0700 (PDT)
+From: kissaki0@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <ed6dfc42-7c13-419b-b70c-f600e970fa4b@googlegroups.com>
+Subject: [tosdr:2737] OnLive
+MIME-Version: 1.0
+X-Original-Sender: kissaki0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+http://www.onlive.com/legal/text/14#privacypolicy
+
+Before stating how collected information is or can be used or passed on by =
+them they extensively list different types of information they collect. Yet=
+, they fail to differentiate between any types of data when writing about h=
+ow they may be used.
+
+> III. HOW WE USE YOUR INFORMATION
+
+>     When you provide us with your Personal Information, we and/or authori=
+zed third parties may use such information for a number of purposes identif=
+ied below.
+
+Notice we are talking not only about aggregated, anonymized or anonymous da=
+ta, we are talking about personal information.
+
+>     * To provide you with important functionality changes to the Websites=
+ or Services, including updates and upgrades, other new OnLive services, an=
+d advertising or special promotional offers from OnLive and reputable third=
+ parties that we think you will find valuable.
+
+Well, thank you for sending me unwanted ads I guess? That would be somethin=
+g I would spam-filter definitely, as given this phrasing there is no opt-ou=
+t.
+
+>     * For external demonstrations, marketing or promotional efforts.
+
+And you make yourself be able to use *personal* information for that? Oh re=
+ally.
+
+>     * To provide a report to our business partners that tells them who re=
+sponded to a particular offer or to facilitate the fulfillment of an order =
+that you have made with a business partner.
+
+Again, don=92t put this where you talk about usage of *personal* informatio=
+n.
+
+>     * To enforce the Terms and our other agreements with you, prevent fra=
+ud and other prohibited or illegal activities, for other legally permissibl=
+e purposes and generally to ensure that we comply with applicable laws.
+
+=93prevent fraud and other prohibited or illegal activities=94 is the why, =
+yet I do not see a =93how=94. No idea where my data may end up.
+
+=93for other legally permissible purposes=94 =96 wow. That is a broad state=
+ment.
+
+>     * To maintain and enforce security and safety of the Websites and Ser=
+vices.
+
+Yet again, what do you need personal information for here?
+
+>     * To enforce our agreements with third party content providers, game =
+developers, affiliates, and other OnLive business partners regarding third =
+party rights associated with your use of the Websites and Services.
+
+I do not really get this. They agree to something with a third party, then =
+the third party has a right to my data, and OnLive provides?
+
+>     * To process your entries and participation in sweepstakes, contests,=
+ promotions, tournaments or other events if any, in which you choose to par=
+ticipate.
+
+Again, it is unclear *which* (personal) information is used and how. Sure I=
+ can not participate in sweeptstakes, contests or promotions. But tournamen=
+ts are normally not such a problematic thing.
+
+>     *To enable the social networking features of the OnLive Websites and =
+OnLive Game Service.
+
+What ever that does I guess!?
+OnLive may share your Personal Information with an unaffiliated third party=
+ under the following circumstances:
+
+>     OnLive expressly reserves the right to disclose Personal Information =
+and any other information to third parties if we believe, in good faith, th=
+at we are required to do so by applicable law
+
+I never liked this statement. It allows them to just throw the data out whe=
+n they are asked by any government, law or similar organisation once they a=
+sk for it. What would be appropriate is to only hand it out once a court ru=
+ling is presented.
+
+>     We may also disclose Personal Information and any other information w=
+here necessary for the establishment, exercise or defense of legal claims o=
+r as otherwise permitted by law.
+
+Holy shit, so they do throw my data out to just any flawed corporate claimi=
+ng whatever.
+
+>     OnLive reserves the right to disclose to a third party the Personal I=
+nformation or any other information of a user who we believe is in violatio=
+n of any policy or rule as posted on the Websites and Services, even withou=
+t a subpoena, warrant, court order or other governmental request.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

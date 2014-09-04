@@ -1,0 +1,276 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBWOH3WGQKGQEL3YWNOQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool5-d.mgt.gandi.net [10.0.21.136])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3A593161735
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 19:52:33 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 377BB2A809E
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 19:52:33 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.136])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id kn33uDQ7FHGA for <anything@michielbdejong.com>;
+	Tue, 11 Jun 2013 19:52:31 +0200 (CEST)
+Received: from mail-pd0-f189.google.com (mail-pd0-f189.google.com [209.85.192.189])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1E0632A805E
+	for <michiel@michielbdejong.com>; Tue, 11 Jun 2013 19:52:27 +0200 (CEST)
+Received: by mail-pd0-f189.google.com with SMTP id 14sf1379310pdj.6
+        for <michiel@michielbdejong.com>; Tue, 11 Jun 2013 10:52:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=Y8QOLsCOOhqImcPpYatd/lOFZ0tbVi6x+QBAHuoeq5U=;
+        b=YJaGWba21nOJr/vuFn1KocY+qNOIsjmzyjDMnRvAcZWxbixaoZq+c471/0iGCKfLVA
+         dp4Q66Su/CIg5ngJYqciUGXuVpVLrVijQhZHbP0uPdQYRwNr0aBVofsAOqTwLmygMhl7
+         rI+f8ICM3WSRJsr7X4EZnEobcwidmz40F7OjbPn+7NsKk5QYldWSLKvUastA3G6loTkS
+         /Q3OyYbcOfBD0LeK5bjGRask1QoPbdyD6uxAaWOZZbhYKgMPFYHCQZoCwxkukmDzou+w
+         kPqdzZdOmnnZv9IGi4IPtRXMqQ5o5tOGVjmU4CZ8tIt33jyHTBVH7iNXWhlX5SlmAyE/
+         SW+Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=Y8QOLsCOOhqImcPpYatd/lOFZ0tbVi6x+QBAHuoeq5U=;
+        b=yIA1P0dx8tAIKerNfyp08otSMgTtT8k/GIeN17kNe2L25xXemmWQW+FTVROMXHSN4E
+         +CF9hez8IV5Dbt9qBSxSFtOY8LFaT3brLUgIzXepHpO0eoy3FRic+Xut+mgCCu66AkMl
+         hcbSkVgTHYswnIbFJmrU0vhjTJj4pSOOfLCWCAX50mILetWft8Jp9go+hBiqOcEZyBAe
+         0vhudjKGPY/J43fXUx7aityr5srXF7Yv3Zbw3923p4d5Ltty8ZF7tYfjR/oe4oI0xMf4
+         t3uypfA3nhVUy8LwN82vS1JnGT2G34KSKQOfOkZh0JlgyPvXN20bJuwToYkjNKv5sh9e
+         lvPw==
+X-Received: by 10.49.121.9 with SMTP id lg9mr860187qeb.39.1370973146017;
+        Tue, 11 Jun 2013 10:52:26 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.236 with SMTP id 12ls3363265qeh.97.gmail; Tue, 11 Jun
+ 2013 10:52:25 -0700 (PDT)
+X-Received: by 10.49.17.42 with SMTP id l10mr881854qed.10.1370973145118;
+        Tue, 11 Jun 2013 10:52:25 -0700 (PDT)
+Date: Tue, 11 Jun 2013 10:52:24 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <3fd56b93-d54c-4e21-b1f3-35438c25994f@googlegroups.com>
+In-Reply-To: <a951ed96-ffd4-496a-b38b-3caa58b395ba@googlegroups.com>
+References: <0c8a9815-476b-4eb0-8599-add10fa4ba12@googlegroups.com>
+ <a868e65c-889f-4f36-8883-3356e4364e72@googlegroups.com>
+ <1354291669.22722.3.camel@synclavier.lan>
+ <a951ed96-ffd4-496a-b38b-3caa58b395ba@googlegroups.com>
+Subject: Re: [tosdr:2278] Re: [Good] Dropbox can cancel your account without
+ notice but they'll try to avoid it
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5889_9459493.1370973144670"
+
+------=_Part_5889_9459493.1370973144670
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Valve, Netflix, and YouTube have similar clauses, although none of those=20
+services even hint at making an effort to inform users in advance, as=20
+Dropbox does. Here's my proposal for this point:
+
+Title: Dropbox can cancel your account without notice
+
+Topic: Suspension and Censorship
+
+Summary: We reserve the right to suspend or end the Services at any time,=
+=20
+with or without cause, and with or without notice. For example, we may=20
+suspend or terminate your use if you are not complying with these Terms, or=
+=20
+use the Services in any way that would cause us legal liability or disrupt=
+=20
+others=92 use of the Services. If we suspend or terminate your use, we will=
+=20
+try to let you know in advance and help you retrieve data, though there may=
+=20
+be some cases (for example, repeatedly or flagrantly violating these Terms,=
+=20
+a court order, or danger to other users) where we may suspend immediately.
+
+Score: 40 (mediocre)
+
+On Friday, June 7, 2013 3:04:01 PM UTC-5, Ian McGowan wrote:
+>
+> I think the "good" part may have been for the fact that they sound like=
+=20
+> they'll make a good faith effort to let users know in advance, but beside=
+s=20
+> that I think this is pretty harsh, and overall I'd put this somewhere mor=
+e=20
+> in the "mediocre" category...
+>
+> On Friday, November 30, 2012 10:07:49 AM UTC-6, Hugo Roy wrote:
+>>
+>> Le vendredi 30 novembre 2012 =E0 07:39 -0800, Ian McGowan a =E9crit :=20
+>> > This point has been curated and will appear on the website soon.=20
+>> >=20
+>> > On Thursday, August 23, 2012 5:31:32 PM UTC+2, Sebasti=E1n Waisbrot=20
+>> wrote:=20
+>> > >=20
+>> > > https://www.dropbox.com/terms=20
+>> > >=20
+>> > >> We may stop, suspend, or modify the Services at any time without=20
+>> prior=20
+>> > >> notice to you.=20
+>> > >=20
+>> > > We reserve the right to suspend or end the Services at any time, wit=
+h=20
+>> or=20
+>> > >> without cause, and with or without notice. For example, we may=20
+>> suspend or=20
+>> > >> terminate your use if you are not complying with these Terms, or us=
+e=20
+>> the=20
+>> > >> Services in any way that would cause us legal liability or disrupt=
+=20
+>> others=92=20
+>> > >> use of the Services. If we suspend or terminate your use, we will=
+=20
+>> try to=20
+>> > >> let you know in advance and help you retrieve data, though there ma=
+y=20
+>> be=20
+>> > >> some cases (for example, repeatedly or flagrantly violating these=
+=20
+>> Terms, a=20
+>> > >> court order, or danger to other users) where we may suspend=20
+>> immediately.=20
+>>
+>> I would be careful classifying this as a "good thing" especially the=20
+>> "without cause, without notice". How does this clause qualify regarding=
+=20
+>> other services? I'm not sure it is really necessary. Of course court=20
+>> orders are another matter.=20
+>>
+>> Can you expand on the reasoning behind the point? Thank you=20
+>>
+>> --=20
+>> Hugo Roy=20
+>>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org=20
+>>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41=20
+>>                                  mobile DE: +49 151 143 56 563=20
+>>
+>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_5889_9459493.1370973144670
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Valve, Netflix, and YouTube have similar clauses, although none of those se=
+rvices even hint at making an effort to inform users in advance, as Dropbox=
+ does. Here's my proposal for this point:<div><br></div><div>Title: Dropbox=
+ can cancel your account without notice</div><div><br></div><div>Topic: Sus=
+pension and Censorship<br><br>Summary: We reserve the right to suspend or e=
+nd the Services at any time, with or without cause, and with or without not=
+ice. For example, we may suspend or terminate your use if you are not compl=
+ying with these Terms, or use the Services in any way that would cause us l=
+egal liability or disrupt others=92 use of the Services. If we suspend or t=
+erminate your use, we will try to let you know in advance and help you retr=
+ieve data, though there may be some cases (for example, repeatedly or flagr=
+antly violating these Terms, a court order, or danger to other users) where=
+ we may suspend immediately.</div><div><br></div><div>Score: 40 (mediocre)<=
+br><br>On Friday, June 7, 2013 3:04:01 PM UTC-5, Ian McGowan wrote:<blockqu=
+ote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left=
+: 1px #ccc solid;padding-left: 1ex;">I think the "good" part may have been =
+for the fact that they sound like they'll make a good faith effort to let u=
+sers know in advance, but besides that I think this is pretty harsh, and ov=
+erall I'd put this somewhere more in the "mediocre" category...<br><br>On F=
+riday, November 30, 2012 10:07:49 AM UTC-6, Hugo Roy wrote:<blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc =
+solid;padding-left:1ex">Le vendredi 30 novembre 2012 =E0 07:39 -0800, Ian M=
+cGowan a =E9crit :
+<br>&gt; This point has been curated and will appear on the website soon.
+<br>&gt;=20
+<br>&gt; On Thursday, August 23, 2012 5:31:32 PM UTC+2, Sebasti=E1n Waisbro=
+t wrote:
+<br>&gt; &gt;
+<br>&gt; &gt; <a href=3D"https://www.dropbox.com/terms" target=3D"_blank">h=
+ttps://www.dropbox.com/terms</a>
+<br>&gt; &gt;
+<br>&gt; &gt;&gt; We may stop, suspend, or modify the Services at any time =
+without prior=20
+<br>&gt; &gt;&gt; notice to you.
+<br>&gt; &gt;
+<br>&gt; &gt; We reserve the right to suspend or end the Services at any ti=
+me, with or=20
+<br>&gt; &gt;&gt; without cause, and with or without notice. For example, w=
+e may suspend or=20
+<br>&gt; &gt;&gt; terminate your use if you are not complying with these Te=
+rms, or use the=20
+<br>&gt; &gt;&gt; Services in any way that would cause us legal liability o=
+r disrupt others=92=20
+<br>&gt; &gt;&gt; use of the Services. If we suspend or terminate your use,=
+ we will try to=20
+<br>&gt; &gt;&gt; let you know in advance and help you retrieve data, thoug=
+h there may be=20
+<br>&gt; &gt;&gt; some cases (for example, repeatedly or flagrantly violati=
+ng these Terms, a=20
+<br>&gt; &gt;&gt; court order, or danger to other users) where we may suspe=
+nd immediately.
+<br>
+<br>I would be careful classifying this as a "good thing" especially the
+<br>"without cause, without notice". How does this clause qualify regarding
+<br>other services? I'm not sure it is really necessary. Of course court
+<br>orders are another matter.
+<br>
+<br>Can you expand on the reasoning behind the point? Thank you
+<br>
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp; chat: <a>hu...@jab=
+ber.fsfe.org</a>
+<br>&nbsp; <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> &nbsp; &nbsp; &nbsp; &nbsp; mobile: +336 08 74 13 41
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mobile DE: +49 151 143 56 56=
+3
+<br>
+<br></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_5889_9459493.1370973144670--

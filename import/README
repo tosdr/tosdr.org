@@ -1,2 +1,6 @@
-There are some old files here, but right now I'm using bookmarklet.html to determine thread topics, and searcher.js (create imapCredentials.js first, from imapCredentials.js.sample in this directory, then run with node) to import post bodies from IMAP.
-I save the thread topics to ./threadTopics.json, and the posts to ./posts/, and then run threadMatcher.js to create ../index/threads.json
+There are some old files here, but right now I'm using:
+* Open bookmarklet.html with Firefox, and follow instructions there; save result to ./threadTopics.json
+* (from the repo root:) npm install ; cd import ; (create ./imapCredentials.js first, from ./imapCredentials.js.sample in this directory)
+* mkdir posts ; cd posts ; node ../searcher.js
+* cd .. ; node threadMatcher.js
+* cd .. ; sh build.sh

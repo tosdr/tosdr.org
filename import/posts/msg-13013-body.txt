@@ -1,0 +1,138 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBT4J5GKAKGQEQN4FVOA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2C9E740FF5
+	for <anything@michielbdejong.com>; Sat, 30 Nov 2013 21:04:35 +0100 (CET)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 28E34116163
+	for <anything@michielbdejong.com>; Sat, 30 Nov 2013 21:04:35 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id JW4RJT+rRPpe for <anything@michielbdejong.com>;
+	Sat, 30 Nov 2013 21:04:33 +0100 (CET)
+Received: from mail-ob0-x23f.google.com (mail-ob0-x23f.google.com [IPv6:2607:f8b0:4003:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 7EE78116457
+	for <anything@michielbdejong.com>; Sat, 30 Nov 2013 21:04:33 +0100 (CET)
+Received: by mail-ob0-f191.google.com with SMTP id gq1sf2943530obb.28
+        for <anything@michielbdejong.com>; Sat, 30 Nov 2013 12:04:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=bhf5LnZTvNHj3SrSOEpehl8ft1U3ZJIwwp69Pgb0skw=;
+        b=xQD/LKNYwYh3uosIGkNk3WUtOBaGi22igJiYNad5sfbgsXn/U7bJXCAnBtKEAozIez
+         Ku0TxJLZbXXhiGeLgkSrra6Vl2YqweTnF9XKkGYjiJQst9KYS1Wx14WwQqxoDSPqzmr9
+         7GCdgvGw8cXtX5kC6/tUOM+T+v9b3QHRfvfzhWPeq7mFJdH/ybQv2Y7pC0Wmk1QuldEh
+         1vYm+h1ts6pXNcL+oz/zV8KjTwxtdmT8mq7+U6EnbZ1oK3KjMt2QkCwtdjvvBc/z3kbP
+         bC0Y4qzcGCZunI7rYktM4Kw1bbcnt0dQVdnsJoW56KUpE2jrNUi9kCZ4MM5VxzNSujWL
+         //GQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=bhf5LnZTvNHj3SrSOEpehl8ft1U3ZJIwwp69Pgb0skw=;
+        b=EoeEdwm9YDXk3vLc1TDnZLrDC6WgPqvP22TtDgigrfuvlZ7yA+UeQz8/foFyKaFv2P
+         Ds/k8sxKEd50DREp6XNd0MHKcLVddYxpxNP0//uNThc0jRYa65FEocZGCZEd0CX+tpcE
+         w9kjBwoo0ILF299wDOivWmzfTYAd42RB/PxRU+Xgi7aj8HXF1Tv42MaAh51nZWnUuROa
+         f8DtpflKVz6TiDPhEg2eEPm+0JrgOcEuq9xiJeyYLLgSC1WCCaBiHtnX0ZBZI3+ylaTb
+         rQgMd1tGo8sFaEAoxoypcUCpImyRUDAtbSnIWAvqLxTpD/k0j4WIhFZRnfHZTgTsvoRk
+         xAnQ==
+X-Received: by 10.50.8.42 with SMTP id o10mr194692iga.3.1385841872205;
+        Sat, 30 Nov 2013 12:04:32 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.45.105 with SMTP id l9ls1200647igm.27.canary; Sat, 30 Nov
+ 2013 12:04:31 -0800 (PST)
+X-Received: by 10.50.66.161 with SMTP id g1mr194872igt.5.1385841871674;
+        Sat, 30 Nov 2013 12:04:31 -0800 (PST)
+Date: Sat, 30 Nov 2013 12:04:30 -0800 (PST)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <71e9915f-5f72-4952-b80c-75adf19d0aae@googlegroups.com>
+In-Reply-To: <e96c0b49-b1d9-418c-b8a9-abe2bd460441@googlegroups.com>
+References: <e96c0b49-b1d9-418c-b8a9-abe2bd460441@googlegroups.com>
+Subject: [tosdr:2825] Re: Yelp [bad]: Yelp may close the user account at any
+ time without notice & reason.
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2622_11285650.1385841870589"
+
+------=_Part_2622_11285650.1385841870589
+Content-Type: text/plain; charset=ISO-8859-1
+
+I wouldn't count this as bad. This is not only standard, it's necessary. 
+There are many reasons why a company may need to close an account without 
+notice: for instance, if the account got hacked and is being used to spam 
+others; if the user is being aggressively disruptive or actively trying to 
+attack the service; or if the company goes bankrupt and is forced to shut 
+down. 
+
+On Friday, November 29, 2013 7:07:34 AM UTC-8, Bonus Mile wrote:
+>
+> TOS <http://www.yelp.com/static?p=tos&country=US> state in pt.14.B that a 
+> user account may be closed at any time without notice for no reason 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_2622_11285650.1385841870589
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I wouldn't count this as bad. This is not only standard, i=
+t's necessary. There are many reasons why a company may need to close an ac=
+count without notice: for instance, if the account got hacked and is being =
+used to spam others; if the user is being aggressively disruptive or active=
+ly trying to attack the service; or if the company goes bankrupt and is for=
+ced to shut down.&nbsp;<br><br>On Friday, November 29, 2013 7:07:34 AM UTC-=
+8, Bonus Mile wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;ma=
+rgin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div dir=
+=3D"ltr"><a href=3D"http://www.yelp.com/static?p=3Dtos&amp;country=3DUS" ta=
+rget=3D"_blank" onmousedown=3D"this.href=3D'http://www.google.com/url?q\75h=
+ttp%3A%2F%2Fwww.yelp.com%2Fstatic%3Fp%3Dtos%26country%3DUS\46sa\75D\46sntz\=
+0751\46usg\75AFQjCNHfarqnrBQF9_h-yB2DH0Jv1hx1tQ';return true;" onclick=3D"t=
+his.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fwww.yelp.com%2Fstati=
+c%3Fp%3Dtos%26country%3DUS\46sa\75D\46sntz\0751\46usg\75AFQjCNHfarqnrBQF9_h=
+-yB2DH0Jv1hx1tQ';return true;">TOS</a> state in pt.14.B that a user account=
+ may be closed at any time without notice for no reason&nbsp;</div></blockq=
+uote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_2622_11285650.1385841870589--

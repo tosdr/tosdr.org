@@ -1,0 +1,551 @@
+Return-Path: <tosdr+bncBCG7Z4EO7ENBBUEJQCHQKGQE6Y52MFA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 2D293161768
+	for <anything@michielbdejong.com>; Fri, 12 Jul 2013 15:30:00 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2563C11642C
+	for <anything@michielbdejong.com>; Fri, 12 Jul 2013 15:30:00 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HT643Ajb2l3l for <anything@michielbdejong.com>;
+	Fri, 12 Jul 2013 15:29:58 +0200 (CEST)
+Received: from mail-qc0-x23a.google.com (mail-qc0-x23a.google.com [IPv6:2607:f8b0:400d:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0A5CE116436
+	for <anything@michielbdejong.com>; Fri, 12 Jul 2013 15:29:53 +0200 (CEST)
+Received: by mail-qc0-f186.google.com with SMTP id u12sf2830534qcx.3
+        for <anything@michielbdejong.com>; Fri, 12 Jul 2013 06:29:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=gLR1xMZ5Ey0pvn/T4cf7UvlFpeW+5ZDMewuurYUjIwA=;
+        b=lW9FkrprPYqqe9rfXDonC0H13gzK7vRlwy7AmSKLg1w9FotrgYt3soLtsEAiTdEalS
+         x0o26ptyE6Ct4jXbiRodU4iMgdC2oScPBy6t/vxk8izyCPck+zKANcNFN7W42LiNW7WP
+         xtB7pz4aAUsjeanPcW2L/nwzYMnH9rGAd0kzVIk1e1pa967qLYrJY9Vkl2ztj89cUO84
+         edZ9sjltHRlJkE8zOrL7XfuV/3nchGq02YjEMJ6HecuM0yRURgfpmpC/LAHa+HfiO/P3
+         yCQsqgmek1oX4TS8pW6/JKtyeLQ8arokTga9IWukvSgM2IUFs1gs7+nM1f6DvemKOOEA
+         1tRw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=gLR1xMZ5Ey0pvn/T4cf7UvlFpeW+5ZDMewuurYUjIwA=;
+        b=XdJS2gdvAz+H0TF4i/pUAKCg9xhaHq4gxDy+VIyQcInwRGedGb9mYWW52KTnsEDpu/
+         SiDLKHlN6GdIolAR6ZmufjkrOu7+tY7PRBN0ipYz6iHMQJTPqo3fFOXf3f5LMmREfZ3/
+         +TVDlvURZPsJG4zX3xAfgRUxYRPJ540OF1MynGqwHIFkq9Yr1iMK2QmrKpPWCi+hWCfe
+         eu6n/Il6wiS4+sNk97niF8f0bZUVWvh7ZEAG9E2NJxCoa5fgjJcuyt8bbqtgZLUZaxUY
+         55vPbGQSOP+puq7T3YyOWGLDfG2gBow9u8PZOyKgaIYFC0VRMlK+01a7cgqyYVYeKhxV
+         CgyQ==
+X-Received: by 10.49.13.71 with SMTP id f7mr1268120qec.31.1373635792734;
+        Fri, 12 Jul 2013 06:29:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.116.105 with SMTP id jv9ls3477536qeb.92.gmail; Fri, 12 Jul
+ 2013 06:29:52 -0700 (PDT)
+X-Received: by 10.49.28.66 with SMTP id z2mr1258458qeg.5.1373635792061;
+        Fri, 12 Jul 2013 06:29:52 -0700 (PDT)
+Date: Fri, 12 Jul 2013 06:29:51 -0700 (PDT)
+From: Jimm Stout <jamesstout1@gmail.com>
+To: tosdr@googlegroups.com
+Cc: tosback@tosdr.org
+Message-Id: <7894a571-160f-4cdb-9ba6-6ba96989e39f@googlegroups.com>
+In-Reply-To: <51df8611976f_5e9e4c7cbfe3392e@dragon.mail>
+References: <51df8611976f_5e9e4c7cbfe3392e@dragon.mail>
+Subject: [tosdr:2508] Re: ToSBack: Policy Changes
+MIME-Version: 1.0
+X-Original-Sender: jamesstout1@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7813_7175893.1373635791587"
+
+------=_Part_7813_7175893.1373635791587
+Content-Type: text/plain; charset=ISO-8859-1
+
+Really there were just a couple changes: 
+https://github.com/tosdr/tosback2/commit/32e6ce7bdb1c9a325366bd6578000ce84adb33d2
+
+Not sure why it listed so many changes in the message to the group, but 
+I'll work on getting the notifications right :)
+
+Jimm
+
+On Friday, July 12, 2013 6:29:05 AM UTC+2, ToSBack wrote:
+>
+> rapidshare.com: Terms of Use 
+> netflix.com: Terms of Use 
+> netflix.com: Privacy Policy 
+> spideroak.com: Terms of Use 
+> spideroak.com: Privacy Policy 
+> cloudant.com: Privacy 
+> cloudant.com: Terms of Service 
+> whatsapp.com: Terms of Service and Privacy 
+> blizzard.com: Terms of Use 
+> blizzard.com: Privacy Policy 
+> skype.com: Terms of Use 
+> skype.com: Group Video Calling Fair Usage Policy 
+> skype.com: Fair Usage Policy for Subscriptions 
+> skype.com: Fair Usage Policy for US Minute Bundles 
+> skype.com: Privacy Policy 
+> skype.com: Etiquette 
+> skype.com: Skype Emergency Calling 
+> skype.com: Trademark Guidelines 
+> skype.com: Business Terms of Use 
+> skype.com: Business Terms of Use (USA) 
+> foursquare.com: Terms of Use 
+> foursquare.com: Privacy Policy 
+> vbulletin.com: Terms and Conditions 
+> freeforums.org: Privacy Policy 
+> envato.com: Terms and Conditions 
+> app.net: Terms of Service 
+> google.com: Privacy Policy 
+> google.com: Terms of Service 
+> bit.ly: Terms of Service 
+> soundcloud.com: Privacy Policy 
+> soundcloud.com: Terms of Service 
+> gravatar.com: Privacy Policy 
+> twitpic.com: Privacy Policy 
+> twitpic.com: Terms of Service 
+> grammarly.com: Terms of Service and License Agreement 
+> yahoo.com: Terms of Service 
+> yahoo.com: Privacy Policy 
+> ebuddy.com: Terms of Use 
+> ebuddy.com: Privacy Policy 
+> flattr.com: Terms of Use 
+> flattr.com: Privacy Policy 
+> myspace.com: Privacy Policy 
+> myspace.com: Terms of Service 
+> evernote.com: Privacy Policy 
+> evernote.com: Terms of Service 
+> tumblr.com: Privacy Policy 
+> tumblr.com: Terms of Service 
+> youtube.com: Privacy Policy 
+> youtube.com: Terms of Service 
+> habbo.com: Terms of Service 
+> habbo.com: Privacy Policy 
+> facebook.com: Data Use Policy 
+> facebook.com: Terms of Service 
+> videobb.com: Terms and Conditions 
+> videobb.com: Privacy Policy 
+> faranow.com: Privacy Policy 
+> faranow.com: Terms of Service 
+> 500px.com: Terms of Service 
+> bearshare.com: Terms and Conditions 
+> olx.com: Terms of Use 
+> allrecipes.com: Privacy Policy 
+> allrecipes.com: Terms and Conditions 
+> ifttt.com: Privacy Policy 
+> ifttt.com: Terms of Use 
+> phpbb.com: Terms of Use 
+> phpbb.com: Privacy Policy 
+> disqus.com: Terms of Service 
+> disqus.com: Privacy Policy 
+> zoosk.com: Privacy Policy 
+> spotify.com: Privacy Policy 
+> spotify.com: Terms and Conditions (Mobile) 
+> spotify.com: Terms and Conditions (Premium) 
+> spotify.com: Terms and Conditions (Unlimited) 
+> spotify.com: Terms and Conditions of Use 
+> wordfeud.com: Terms of Service 
+> wordfeud.com: Privacy Policy 
+> wordpress.com: Terms Of Service 
+> wordpress.com: Privacy Policy 
+> lastpass.com: Terms of Service 
+> lastpass.com: Privacy Statement 
+> steampowered.com: Privacy Policy Agreement 
+> steampowered.com: Steam Subscriber Agreement 
+> twitter.com: Privacy Policy 
+> twitter.com: Terms of Service 
+> delicious.com: Privacy Policy 
+> delicious.com: Terms of Service 
+> runescape.com: Terms and Conditions 
+> runescape.com: Privacy Policy 
+> microsoftstore.com: Privacy Policy 
+> microsoftstore.com: Terms of Service 
+> linkedin.com: Privacy Policy 
+> linkedin.com: Terms of Service 
+> microsoft.com: Privacy Policy 
+> microsoft.com: Terms of Service 
+> amazon.com: Conditions of Use 
+> amazon.com: Kindle for Android Legal Notices 
+> amazon.com: Kindle for PC Legal Notices 
+> amazon.com: Kindle for Mac Legal Notices 
+> amazon.com: Kindle Cloud Reader Legal Notices 
+> amazon.com: Kindle for Windows 8 Legal Notices 
+> amazon.com: Amazon App Suite Legal Notices 
+> amazon.com: Interest-Based Ads 
+> amazon.com: Third Party Licenses 
+> hypster.com: Terms of Service 
+> apple.com: Privacy Policy 
+> apple.com: Application-Based Services Terms of Use 
+> apple.com: iChat Account Terms of Service 
+> apple.com: Game Center Terms and Conditions 
+> apple.com: Apple Support Communities Use Agreement 
+> apple.com: Website Terms of Service 
+> apple.com: iCloud Terms of Service 
+> apple.com: iTunes Terms of Service 
+> xing.com: Privacy Policy 
+> xing.com: Terms and Conditions 
+> flickr.com: Privacy Policy 
+> flickr.com: Terms of Service 
+> flickr.com: Community Guidelines 
+> verizon.com: Privacy Policy 
+> verizon.com: Terms of Service 
+> minecraft.net: Terms and Conditions 
+> duckduckgo.com: Privacy Policy 
+> att.com: Privacy Policy 
+> att.com: Internet Terms of Service 
+> att.com: Wireless Plan Terms 
+> couchsurfing.org: Terms of Use 
+> couchsurfing.org: Privacy Policy 
+> seenthis.net: Intellectual Property 
+> comcast.com: Privacy Statement 
+> comcast.com: Customer Privacy Policy 
+> comcast.com: Acceptable Use Policy for Xfinity Internet 
+> comcast.com: Residential Subscriber Agreement 
+> github.com: Terms of Service 
+> nabble.com: Terms of Service 
+> dropbox.com: Privacy Policy 
+> wikipedia.org: Privacy Policy 
+> wikipedia.org: Terms of Use 
+> comcast.net: Web Services Privacy Policy 
+> comcast.net: Web Terms of Service 
+> comcast.net: Software License Agreement 
+>  These were changed in last night's crawl. Please have a look at the 
+> commit called 'changes for reviewed docs' at 
+> https://github.com/tosdr/tosback2/commits/master to see the differences!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_7813_7175893.1373635791587
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Really there were just a couple changes: https://github.com/tosdr/tosback2/=
+commit/32e6ce7bdb1c9a325366bd6578000ce84adb33d2<br><br>Not sure why it list=
+ed so many changes in the message to the group, but I'll work on getting th=
+e notifications right :)<br><br>Jimm<br><br>On Friday, July 12, 2013 6:29:0=
+5 AM UTC+2, ToSBack wrote:<blockquote class=3D"gmail_quote" style=3D"margin=
+: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><a h=
+ref=3D"http://rapidshare.com" target=3D"_blank">rapidshare.com</a>: Terms o=
+f Use
+<br><a href=3D"http://netflix.com" target=3D"_blank">netflix.com</a>: Terms=
+ of Use
+<br><a href=3D"http://netflix.com" target=3D"_blank">netflix.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://spideroak.com" target=3D"_blank">spideroak.com</a>: T=
+erms of Use
+<br><a href=3D"http://spideroak.com" target=3D"_blank">spideroak.com</a>: P=
+rivacy Policy
+<br><a href=3D"http://cloudant.com" target=3D"_blank">cloudant.com</a>: Pri=
+vacy
+<br><a href=3D"http://cloudant.com" target=3D"_blank">cloudant.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://whatsapp.com" target=3D"_blank">whatsapp.com</a>: Ter=
+ms of Service and Privacy
+<br><a href=3D"http://blizzard.com" target=3D"_blank">blizzard.com</a>: Ter=
+ms of Use
+<br><a href=3D"http://blizzard.com" target=3D"_blank">blizzard.com</a>: Pri=
+vacy Policy
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Terms of =
+Use
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Group Vid=
+eo Calling Fair Usage Policy
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Fair Usag=
+e Policy for Subscriptions
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Fair Usag=
+e Policy for US Minute Bundles
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Etiquette
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Skype Eme=
+rgency Calling
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Trademark=
+ Guidelines
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Business =
+Terms of Use
+<br><a href=3D"http://skype.com" target=3D"_blank">skype.com</a>: Business =
+Terms of Use (USA)
+<br><a href=3D"http://foursquare.com" target=3D"_blank">foursquare.com</a>:=
+ Terms of Use
+<br><a href=3D"http://foursquare.com" target=3D"_blank">foursquare.com</a>:=
+ Privacy Policy
+<br><a href=3D"http://vbulletin.com" target=3D"_blank">vbulletin.com</a>: T=
+erms and Conditions
+<br><a href=3D"http://freeforums.org" target=3D"_blank">freeforums.org</a>:=
+ Privacy Policy
+<br><a href=3D"http://envato.com" target=3D"_blank">envato.com</a>: Terms a=
+nd Conditions
+<br><a href=3D"http://app.net" target=3D"_blank">app.net</a>: Terms of Serv=
+ice
+<br><a href=3D"http://google.com" target=3D"_blank">google.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://google.com" target=3D"_blank">google.com</a>: Terms o=
+f Service
+<br><a href=3D"http://bit.ly" target=3D"_blank">bit.ly</a>: Terms of Servic=
+e
+<br><a href=3D"http://soundcloud.com" target=3D"_blank">soundcloud.com</a>:=
+ Privacy Policy
+<br><a href=3D"http://soundcloud.com" target=3D"_blank">soundcloud.com</a>:=
+ Terms of Service
+<br><a href=3D"http://gravatar.com" target=3D"_blank">gravatar.com</a>: Pri=
+vacy Policy
+<br><a href=3D"http://twitpic.com" target=3D"_blank">twitpic.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://twitpic.com" target=3D"_blank">twitpic.com</a>: Terms=
+ of Service
+<br><a href=3D"http://grammarly.com" target=3D"_blank">grammarly.com</a>: T=
+erms of Service and License Agreement
+<br><a href=3D"http://yahoo.com" target=3D"_blank">yahoo.com</a>: Terms of =
+Service
+<br><a href=3D"http://yahoo.com" target=3D"_blank">yahoo.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://ebuddy.com" target=3D"_blank">ebuddy.com</a>: Terms o=
+f Use
+<br><a href=3D"http://ebuddy.com" target=3D"_blank">ebuddy.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://flattr.com" target=3D"_blank">flattr.com</a>: Terms o=
+f Use
+<br><a href=3D"http://flattr.com" target=3D"_blank">flattr.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://myspace.com" target=3D"_blank">myspace.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://myspace.com" target=3D"_blank">myspace.com</a>: Terms=
+ of Service
+<br><a href=3D"http://evernote.com" target=3D"_blank">evernote.com</a>: Pri=
+vacy Policy
+<br><a href=3D"http://evernote.com" target=3D"_blank">evernote.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://tumblr.com" target=3D"_blank">tumblr.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://tumblr.com" target=3D"_blank">tumblr.com</a>: Terms o=
+f Service
+<br><a href=3D"http://youtube.com" target=3D"_blank">youtube.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://youtube.com" target=3D"_blank">youtube.com</a>: Terms=
+ of Service
+<br><a href=3D"http://habbo.com" target=3D"_blank">habbo.com</a>: Terms of =
+Service
+<br><a href=3D"http://habbo.com" target=3D"_blank">habbo.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://facebook.com" target=3D"_blank">facebook.com</a>: Dat=
+a Use Policy
+<br><a href=3D"http://facebook.com" target=3D"_blank">facebook.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://videobb.com" target=3D"_blank">videobb.com</a>: Terms=
+ and Conditions
+<br><a href=3D"http://videobb.com" target=3D"_blank">videobb.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://faranow.com" target=3D"_blank">faranow.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://faranow.com" target=3D"_blank">faranow.com</a>: Terms=
+ of Service
+<br><a href=3D"http://500px.com" target=3D"_blank">500px.com</a>: Terms of =
+Service
+<br><a href=3D"http://bearshare.com" target=3D"_blank">bearshare.com</a>: T=
+erms and Conditions
+<br><a href=3D"http://olx.com" target=3D"_blank">olx.com</a>: Terms of Use
+<br><a href=3D"http://allrecipes.com" target=3D"_blank">allrecipes.com</a>:=
+ Privacy Policy
+<br><a href=3D"http://allrecipes.com" target=3D"_blank">allrecipes.com</a>:=
+ Terms and Conditions
+<br><a href=3D"http://ifttt.com" target=3D"_blank">ifttt.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://ifttt.com" target=3D"_blank">ifttt.com</a>: Terms of =
+Use
+<br><a href=3D"http://phpbb.com" target=3D"_blank">phpbb.com</a>: Terms of =
+Use
+<br><a href=3D"http://phpbb.com" target=3D"_blank">phpbb.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://disqus.com" target=3D"_blank">disqus.com</a>: Terms o=
+f Service
+<br><a href=3D"http://disqus.com" target=3D"_blank">disqus.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://zoosk.com" target=3D"_blank">zoosk.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://spotify.com" target=3D"_blank">spotify.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://spotify.com" target=3D"_blank">spotify.com</a>: Terms=
+ and Conditions (Mobile)
+<br><a href=3D"http://spotify.com" target=3D"_blank">spotify.com</a>: Terms=
+ and Conditions (Premium)
+<br><a href=3D"http://spotify.com" target=3D"_blank">spotify.com</a>: Terms=
+ and Conditions (Unlimited)
+<br><a href=3D"http://spotify.com" target=3D"_blank">spotify.com</a>: Terms=
+ and Conditions of Use
+<br><a href=3D"http://wordfeud.com" target=3D"_blank">wordfeud.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://wordfeud.com" target=3D"_blank">wordfeud.com</a>: Pri=
+vacy Policy
+<br><a href=3D"http://wordpress.com" target=3D"_blank">wordpress.com</a>: T=
+erms Of Service
+<br><a href=3D"http://wordpress.com" target=3D"_blank">wordpress.com</a>: P=
+rivacy Policy
+<br><a href=3D"http://lastpass.com" target=3D"_blank">lastpass.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://lastpass.com" target=3D"_blank">lastpass.com</a>: Pri=
+vacy Statement
+<br><a href=3D"http://steampowered.com" target=3D"_blank">steampowered.com<=
+/a>: Privacy Policy Agreement
+<br><a href=3D"http://steampowered.com" target=3D"_blank">steampowered.com<=
+/a>: Steam Subscriber Agreement
+<br><a href=3D"http://twitter.com" target=3D"_blank">twitter.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://twitter.com" target=3D"_blank">twitter.com</a>: Terms=
+ of Service
+<br><a href=3D"http://delicious.com" target=3D"_blank">delicious.com</a>: P=
+rivacy Policy
+<br><a href=3D"http://delicious.com" target=3D"_blank">delicious.com</a>: T=
+erms of Service
+<br><a href=3D"http://runescape.com" target=3D"_blank">runescape.com</a>: T=
+erms and Conditions
+<br><a href=3D"http://runescape.com" target=3D"_blank">runescape.com</a>: P=
+rivacy Policy
+<br><a href=3D"http://microsoftstore.com" target=3D"_blank">microsoftstore.=
+com</a>: Privacy Policy
+<br><a href=3D"http://microsoftstore.com" target=3D"_blank">microsoftstore.=
+com</a>: Terms of Service
+<br><a href=3D"http://linkedin.com" target=3D"_blank">linkedin.com</a>: Pri=
+vacy Policy
+<br><a href=3D"http://linkedin.com" target=3D"_blank">linkedin.com</a>: Ter=
+ms of Service
+<br><a href=3D"http://microsoft.com" target=3D"_blank">microsoft.com</a>: P=
+rivacy Policy
+<br><a href=3D"http://microsoft.com" target=3D"_blank">microsoft.com</a>: T=
+erms of Service
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Conditi=
+ons of Use
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Kindle =
+for Android Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Kindle =
+for PC Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Kindle =
+for Mac Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Kindle =
+Cloud Reader Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Kindle =
+for Windows 8 Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Amazon =
+App Suite Legal Notices
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Interes=
+t-Based Ads
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a>: Third P=
+arty Licenses
+<br><a href=3D"http://hypster.com" target=3D"_blank">hypster.com</a>: Terms=
+ of Service
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: Privacy P=
+olicy
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: Applicati=
+on-Based Services Terms of Use
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: iChat Acc=
+ount Terms of Service
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: Game Cent=
+er Terms and Conditions
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: Apple Sup=
+port Communities Use Agreement
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: Website T=
+erms of Service
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: iCloud Te=
+rms of Service
+<br><a href=3D"http://apple.com" target=3D"_blank">apple.com</a>: iTunes Te=
+rms of Service
+<br><a href=3D"http://xing.com" target=3D"_blank">xing.com</a>: Privacy Pol=
+icy
+<br><a href=3D"http://xing.com" target=3D"_blank">xing.com</a>: Terms and C=
+onditions
+<br><a href=3D"http://flickr.com" target=3D"_blank">flickr.com</a>: Privacy=
+ Policy
+<br><a href=3D"http://flickr.com" target=3D"_blank">flickr.com</a>: Terms o=
+f Service
+<br><a href=3D"http://flickr.com" target=3D"_blank">flickr.com</a>: Communi=
+ty Guidelines
+<br><a href=3D"http://verizon.com" target=3D"_blank">verizon.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://verizon.com" target=3D"_blank">verizon.com</a>: Terms=
+ of Service
+<br><a href=3D"http://minecraft.net" target=3D"_blank">minecraft.net</a>: T=
+erms and Conditions
+<br><a href=3D"http://duckduckgo.com" target=3D"_blank">duckduckgo.com</a>:=
+ Privacy Policy
+<br><a href=3D"http://att.com" target=3D"_blank">att.com</a>: Privacy Polic=
+y
+<br><a href=3D"http://att.com" target=3D"_blank">att.com</a>: Internet Term=
+s of Service
+<br><a href=3D"http://att.com" target=3D"_blank">att.com</a>: Wireless Plan=
+ Terms
+<br><a href=3D"http://couchsurfing.org" target=3D"_blank">couchsurfing.org<=
+/a>: Terms of Use
+<br><a href=3D"http://couchsurfing.org" target=3D"_blank">couchsurfing.org<=
+/a>: Privacy Policy
+<br><a href=3D"http://seenthis.net" target=3D"_blank">seenthis.net</a>: Int=
+ellectual Property
+<br><a href=3D"http://comcast.com" target=3D"_blank">comcast.com</a>: Priva=
+cy Statement
+<br><a href=3D"http://comcast.com" target=3D"_blank">comcast.com</a>: Custo=
+mer Privacy Policy
+<br><a href=3D"http://comcast.com" target=3D"_blank">comcast.com</a>: Accep=
+table Use Policy for Xfinity Internet
+<br><a href=3D"http://comcast.com" target=3D"_blank">comcast.com</a>: Resid=
+ential Subscriber Agreement
+<br><a href=3D"http://github.com" target=3D"_blank">github.com</a>: Terms o=
+f Service
+<br><a href=3D"http://nabble.com" target=3D"_blank">nabble.com</a>: Terms o=
+f Service
+<br><a href=3D"http://dropbox.com" target=3D"_blank">dropbox.com</a>: Priva=
+cy Policy
+<br><a href=3D"http://wikipedia.org" target=3D"_blank">wikipedia.org</a>: P=
+rivacy Policy
+<br><a href=3D"http://wikipedia.org" target=3D"_blank">wikipedia.org</a>: T=
+erms of Use
+<br><a href=3D"http://comcast.net" target=3D"_blank">comcast.net</a>: Web S=
+ervices Privacy Policy
+<br><a href=3D"http://comcast.net" target=3D"_blank">comcast.net</a>: Web T=
+erms of Service
+<br><a href=3D"http://comcast.net" target=3D"_blank">comcast.net</a>: Softw=
+are License Agreement
+<br>&nbsp;These were changed in last night's crawl. Please have a look at t=
+he commit called 'changes for reviewed docs' at <a href=3D"https://github.c=
+om/tosdr/tosback2/commits/master" target=3D"_blank">https://github.com/tosd=
+r/<wbr>tosback2/commits/master</a> to see the differences!</blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_7813_7175893.1373635791587--

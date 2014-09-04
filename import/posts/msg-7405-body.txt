@@ -1,0 +1,161 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBXP6YSHQKGQEAQNHKVI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7F68416175B
+	for <anything@michielbdejong.com>; Thu, 25 Jul 2013 17:08:19 +0200 (CEST)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7C167142146
+	for <anything@michielbdejong.com>; Thu, 25 Jul 2013 17:08:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 1NYZ2PSAfiVX for <anything@michielbdejong.com>;
+	Thu, 25 Jul 2013 17:08:17 +0200 (CEST)
+Received: from mail-gh0-x23f.google.com (mail-gh0-x23f.google.com [IPv6:2607:f8b0:4002:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9A67314205F
+	for <anything@michielbdejong.com>; Thu, 25 Jul 2013 17:08:14 +0200 (CEST)
+Received: by mail-gh0-f191.google.com with SMTP id f13sf599988ghb.28
+        for <anything@michielbdejong.com>; Thu, 25 Jul 2013 08:08:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=PqD65af6mTDlw3lUEsdOfa5Eko3JazwQU83TM56il44=;
+        b=iHxr/Kaq6iRzzs2wyrlqzLiD+w6Rg7rHk+XO0ihHZaBdQw5Rm/zUlTI75cfhw90nJD
+         1355ZCSW8U5aMB8OQZ8pul2kCL+fFYf6vMqU2fCmh4FzUK3tma/ecNIsO2HeCpvaE5mI
+         N4FtQztPMntTGPesvhmN7S/c9jZJ0eNQ7uqbxFH7KOsXa7Rmzxr/JlWmPrjJM5DtfR1w
+         CgI0D3GV1tGXMdQYtI3qPMmdWHG6aFNqWTmDXANt6NWHsSv3gkuQXruG6LZEarZdBREv
+         GxkYIGy248hqWIOB9KtAAVZmp8UqMR/5rxNmt0yydcfj0aKgC1k278OcRJOUCyPjuIdh
+         f6kg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=PqD65af6mTDlw3lUEsdOfa5Eko3JazwQU83TM56il44=;
+        b=MfzA29ZrJGGIBNBkm6+RHuUHcJrwlt299g67kZq06pYRa+PJ4+1yHAQUi3VsRARdpV
+         cVZ8o4iy1wbzGnx/eLrrEEsWDy+CXgjqWIGU4OrI5blP8nUCDeZA8y8BKOqWld2/ecLv
+         /UxDyYWdHZNq/nxVVimqkFoqcnkYcrppNTjqmLQXuCBpxeb93+jr9cM4ymz5DRykqMt1
+         qBTBlCAdGI2RL1HQFb5e3yCqmMAILKnckJbFvhznqm5XjeO1uIHzMuSqqIlNSXWiTlAX
+         V3jVhraTai5bUq/h7PXM6LBl/mgH0F5B1EEt26XYaBNClnx+o2kXlj+qECMVIWcXDP6N
+         u8PQ==
+X-Received: by 10.49.12.47 with SMTP id v15mr416862qeb.39.1374764893407;
+        Thu, 25 Jul 2013 08:08:13 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.49.226 with SMTP id x2ls641271qen.12.gmail; Thu, 25 Jul
+ 2013 08:08:13 -0700 (PDT)
+X-Received: by 10.49.35.68 with SMTP id f4mr1661287qej.0.1374764893124;
+        Thu, 25 Jul 2013 08:08:13 -0700 (PDT)
+Date: Thu, 25 Jul 2013 08:08:12 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <ac8d643c-da50-486f-ae54-28974ad57742@googlegroups.com>
+Subject: [tosdr:2548] Instagram may transfer personal info to a country with
+ different data protection laws
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2101_11828211.1374764892636"
+
+------=_Part_2101_11828211.1374764892636
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+>
+>    - Instagram, its Affiliates, or Service Providers may transfer 
+>    information that we collect about you, including personal information 
+>    across borders and from your country or jurisdiction to other countries or 
+>    jurisdictions around the world. If you are located in the European Union or 
+>    other regions with laws governing data collection and use that may differ 
+>    from U.S. law, please note that we may transfer information, including 
+>    personal information, to a country and jurisdiction that does not have the 
+>    same data protection laws as your jurisdiction.
+>
+> http://instagram.com/about/legal/privacy/
+
+Title: Instagram may transfer your personal information to a country with 
+different data protection laws
+
+Topic: personal-data
+
+Summary: When handling your personal information, Instagram may transfer 
+that information to a country or jurisdiction with data protection laws 
+that differ from the jurisdiction where you reside. This means that it's 
+possible they may transfer information to a country with less stringent 
+data protection laws than the country you currently live in.
+
+Score: 50 (mediocre)
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2101_11828211.1374764892636
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><ul style=3D"margin: 0px 0px 20px; padding: 0p=
+x 0px 0px 20px; list-style-position: outside; list-style-type: square; font=
+-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif; font=
+-size: 14px; line-height: 20px;"><li style=3D"margin: 0px 0px 5px;">Instagr=
+am, its Affiliates, or Service Providers may transfer information that we c=
+ollect about you, including personal information across borders and from yo=
+ur country or jurisdiction to other countries or jurisdictions around the w=
+orld. If you are located in the European Union or other regions with laws g=
+overning data collection and use that may differ from U.S. law, please note=
+ that we may transfer information, including personal information, to a cou=
+ntry and jurisdiction that does not have the same data protection laws as y=
+our jurisdiction.</li></ul></blockquote><div><a href=3D"http://instagram.co=
+m/about/legal/privacy/">http://instagram.com/about/legal/privacy/</a></div>=
+<div><br></div><div>Title: Instagram may transfer your personal information=
+ to a country with different data protection laws</div><div><br></div><div>=
+Topic: personal-data</div><div><br></div><div>Summary: When handling your p=
+ersonal information, Instagram may transfer that information to a country o=
+r jurisdiction with data protection laws that differ from the jurisdiction =
+where you reside. This means that it's possible they may transfer informati=
+on to a country with less stringent data protection laws than the country y=
+ou currently live in.</div><div><br></div><div>Score: 50 (mediocre)<br></di=
+v>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2101_11828211.1374764892636--

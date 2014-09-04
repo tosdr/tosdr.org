@@ -1,0 +1,133 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBMFZ7OFQKGQE6LSV5WQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool5-d.mgt.gandi.net [10.0.21.136])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CDBE8161735
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 22:48:51 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id CB0992A8065
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 22:48:51 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.136])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id s63Jt-JcS947 for <anything@michielbdejong.com>;
+	Mon, 29 Apr 2013 22:48:50 +0200 (CEST)
+Received: from mail-ee0-f56.google.com (mail-ee0-f56.google.com [74.125.83.56])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1AA9F2A809B
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 22:48:49 +0200 (CEST)
+Received: by mail-ee0-f56.google.com with SMTP id d41sf1543694eek.21
+        for <anything@michielbdejong.com>; Mon, 29 Apr 2013 13:48:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:mime-version:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-disposition:content-transfer-encoding;
+        bh=PR3g6NNX5LNvA7LbM0J8GoiqQVNOi9FlsLFCA3rU9No=;
+        b=L7Pg2VYNROj5lMG9xRTeFNL+U/YLzuHgWPWGWTdK/I0VjqgROmxHUVVATjFsjpBEru
+         PtlHf88e3Ui2SY9OBQqAldwlX17gTSoRquULwHMfWvXdDs40CMTiQO5tjYi30rSqcn7g
+         1O2YZ4VP0BtuA8FcalVPtkbzhJpUMQkNzvteaK8YuYMQEc3VqkPMqCf+nYZLs9V8N/bZ
+         noPaENvpqy+0qybeMijrlTIRppo6yKWWKzLEw+47lqJt/2X9W8e93L23ae7JxiF5Cc/k
+         Zg1yJ4uh3c+QvWMkfbSIlVk2ST1AfyxX2qev/fQuK4mfDEtvaO9IDc8hm3S2ASfpuRu9
+         8t6g==
+X-Received: by 10.180.11.8 with SMTP id m8mr1057349wib.10.1367268528878;
+        Mon, 29 Apr 2013 13:48:48 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.189.210 with SMTP id gk18ls891139wic.36.gmail; Mon, 29 Apr
+ 2013 13:48:48 -0700 (PDT)
+X-Received: by 10.15.67.206 with SMTP id u54mr51317189eex.6.1367268528472;
+        Mon, 29 Apr 2013 13:48:48 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id j6si7054069eew.0.2013.04.29.13.48.48
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 29 Apr 2013 13:48:48 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id F0F1163A69D
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 22:48:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Z1Z5LGAfHDtL for <tosdr@googlegroups.com>;
+	Mon, 29 Apr 2013 22:48:45 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id A7EC163A5F6
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 22:48:44 +0200 (CEST)
+Date: Mon, 29 Apr 2013 22:48:37 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: [tosdr:1852] Google ranks class C?
+Message-ID: <20130429204837.GL13057@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+MIME-Version: 1.0
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+Dear contributors,
+
+The general terms of service of Google are not very long. It is
+quite complex to rate them, as these ToS govern all google
+services, but contradictory clauses may supersede them in specific
+services.
+
+All in all, if you add up all points to Google, you still reach a
+negative result. Hence, Google will probably rank class C (defined
+as  =93The terms of service are okay but some issues need your
+consideration.=94 here http://tosdr.org/classification.html )
+
+Interesting enough, some of our points are pointed out by data
+protection authority as not compliant with the current European
+regulation
+http://www.cnil.fr/english/news-and-events/news/article/googles-new-privacy=
+-policy-incomplete-information-and-uncontrolled-combination-of-data-across-=
+ser/
+
+What do you think? Feel free to discuss all specific issues in
+their dedicated email thread, and above all to submit new emails
+regarding other points or other texts that we did not see!
+
+Thank you all for the great work you all did on helping us shed
+some light on these long terms.
+
+Best,
+Hugo
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

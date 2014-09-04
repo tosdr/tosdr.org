@@ -1,0 +1,217 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB6EUUSIAKGQERZYHCEQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E3FE9161743
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:17:03 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DB01917809B
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:17:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id V4UccJo29t0Q for <anything@michielbdejong.com>;
+	Mon, 12 Aug 2013 18:17:02 +0200 (CEST)
+Received: from mail-pd0-x23e.google.com (mail-pd0-x23e.google.com [IPv6:2607:f8b0:400e:c02::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D7A0C178190
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:16:58 +0200 (CEST)
+Received: by mail-pd0-f190.google.com with SMTP id x10sf992717pdj.17
+        for <anything@michielbdejong.com>; Mon, 12 Aug 2013 09:16:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=gPGu24VPlRXW9kBda6FYMs932RTNeXDvgH3S4yUK4W0=;
+        b=Zxv7LqttIUGnL4fcftL9ApY0VmD3HcZ3/VJPuDr2QHsLF1AKf7RIgCK2HPdXBpUnSn
+         7TyPLoqvpEGdhDzfguqeHBiAIu+gK4920ylOn900nevvKOW4D28ESa2uTdUMCUiU3JwG
+         YK2lbM8NshnYIsl0133hycta8LTHlClJcmhGerwRjKMN35gz7IBJooyIpfo6XsaFjkO8
+         R8RAjDnSCnmepXjuVoq7A9r9SkdbAEf6U66FuFy3K9pvQm17bAoxhUdTjpffjkFgzO+8
+         1Gxys29wnYIkVjCNDT360R3AiKsYB82D+HkhITWZ2gFZrFSxENaShBfGxAhLtA2t60hA
+         HmZQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=gPGu24VPlRXW9kBda6FYMs932RTNeXDvgH3S4yUK4W0=;
+        b=s0LZo9NvMJzO9GUJFaUO5SQuZAo8SWhMT//l2kjYIFbH00n9182eUe/tqfIrZ0bhVY
+         z3V6V5AmXCISOofPlbSGLmboP4KoYzXH3VMnCS1/vF+c2VA/XQiC5+cxsUmHs40o27mu
+         EehcCu3hVuLIkRJRKC4QdhblA5GlqCBkCN2dl6jUSqHbm2OHp9/GVHp8IaXNbPmdpkc/
+         au4aAgUYtJ8UDokhU5B4FOyLCV2R/1VvjFjzBxHqC3VIchrM6wWxqQrtA8Em2tj1iXwL
+         ZlSIPV/OiXv0GOF9wadFu9Jc9gTa+LFBgP063ClYAmUPn+j5jVCk6GDmQBSg2PuVom8h
+         PfeA==
+X-Received: by 10.49.53.38 with SMTP id y6mr610578qeo.38.1376324216854;
+        Mon, 12 Aug 2013 09:16:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.26.70 with SMTP id j6ls2382539qeg.94.gmail; Mon, 12 Aug
+ 2013 09:16:56 -0700 (PDT)
+X-Received: by 10.49.70.170 with SMTP id n10mr629067qeu.22.1376324216581;
+        Mon, 12 Aug 2013 09:16:56 -0700 (PDT)
+Date: Mon, 12 Aug 2013 09:16:56 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <c9774975-6f28-469a-b183-f8d68d98bc10@googlegroups.com>
+In-Reply-To: <f6c7da5c-9cb2-4bac-b677-c628e7d6391c@googlegroups.com>
+References: <f6c7da5c-9cb2-4bac-b677-c628e7d6391c@googlegroups.com>
+Subject: [tosdr:2646] Re: [bad] You agree to not attempt to break or bypass
+ DRM on provided software
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1731_5715013.1376324216270"
+
+------=_Part_1731_5715013.1376324216270
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Robin, would you care to expound on why this might be bad?=20
+
+On Friday, May 10, 2013 3:40:21 PM UTC-5, Robin Monks wrote:
+>
+> Applies to outlook.com skydrive.com, live.com, account.live.com,=20
+> profile.microsoft.com, msn.com, bing.com, office.com, Windows Photo=20
+> Gallery, Windows Movie Maker, Microsoft Mail, Windows Live Writer and=20
+> "other Microsoft Services" that link to these terms (oddly enough=20
+> Microsoft.com has a different ToS). Also DOES NOT APPLY to Windows.com=20
+> (oddly enough).
+>
+>
+> 7.3. Are there things I can't do with the software or services? Yes. In=
+=20
+>> addition to the other restrictions in this agreement, you may not=20
+>> circumvent or bypass any technological protection measures in or relatin=
+g=20
+>> to the software or services or disassemble, decompile, or reverse engine=
+er=20
+>> any software or other aspect of the services that is included in or=20
+>> accessible through the services, except and only to the extent that the=
+=20
+>> applicable copyright law expressly permits doing so; separate components=
+ of=20
+>> the software or services for use on different devices; publish, copy, re=
+nt,=20
+>> lease, or lend the software or the services; or transfer the software, a=
+ny=20
+>> software licenses, or any rights regarding the services, except as=20
+>> expressly permitted by this agreement. You may not use the services in a=
+ny=20
+>> unauthorized way that could interfere with anyone else=92s use of them o=
+r=20
+>> gain access to any service, data, account, or network. You may not enabl=
+e=20
+>> access to the services by unauthorized third-party applications.
+>>
+>> =20
+>>
+>> From <
+>> http://windows.microsoft.com/en-us/windows-live/microsoft-services-agree=
+ment
+>> >=20
+>>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1731_5715013.1376324216270
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Robin, would you care to expound on why this might be bad?=
+&nbsp;<br><br>On Friday, May 10, 2013 3:40:21 PM UTC-5, Robin Monks wrote:<=
+blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;bord=
+er-left: 1px #ccc solid;padding-left: 1ex;"><p style=3D"margin:0in;font-fam=
+ily:calibri;font-size:11pt"><span style=3D"background-repeat:initial initia=
+l" lang=3D"en-US">Applies to <a href=3D"http://outlook.com" target=3D"_blan=
+k">outlook.com</a> <a href=3D"http://skydrive.com" target=3D"_blank">skydri=
+ve.com</a>,
+<a href=3D"http://live.com" target=3D"_blank">live.com</a>, <a href=3D"http=
+://account.live.com" target=3D"_blank">account.live.com</a></span><span sty=
+le=3D"background-repeat:initial initial" lang=3D"en-CA">,
+<a href=3D"http://profile.microsoft.com" target=3D"_blank">profile.microsof=
+t.com</a>, <a href=3D"http://msn.com" target=3D"_blank">msn.com</a>, <a hre=
+f=3D"http://bing.com" target=3D"_blank">bing.com</a>, <a href=3D"http://off=
+ice.com" target=3D"_blank">office.com</a>, Windows Photo Gallery,
+Windows Movie Maker, Microsoft Mail, Windows Live Writer and "other
+Microsoft Services" that link to these terms (oddly enough Microsoft.com
+has a different ToS). Also DOES NOT APPLY to Windows.com (oddly enough).</s=
+pan></p><div><br></div><div><br></div><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(=
+204,204,204);border-left-style:solid;padding-left:1ex"><p style=3D"margin:0=
+in"><span style=3D"font-weight:bold;font-family:'Segoe UI';font-size:9.75pt=
+;color:rgb(69,69,69);background-repeat:initial initial" lang=3D"en-US">7.3.=
+ Are there
+things I can't do with the software or services?</span><span style=3D"font-=
+family:Calibri;font-size:11.0pt" lang=3D"en-CA">&nbsp;Yes. In addition to t=
+he other
+restrictions in this agreement, you may not circumvent or bypass any
+technological protection measures in or relating to the software or service=
+s or
+disassemble, decompile, or reverse engineer any software or other aspect of=
+ the
+services that is included in or accessible through the services, except and
+only to the extent that the applicable copyright law expressly permits doin=
+g
+so; separate components of the software or services for use on different
+devices; publish, copy, rent, lease, or lend the software or the services; =
+or
+transfer the software, any software licenses, or any rights regarding the
+services, except as expressly permitted by this agreement. You may not use =
+the
+services in any unauthorized way that could interfere with anyone else=92s =
+use of
+them or gain access to any service, data, account, or network. You may not
+enable access to the services by unauthorized third-party applications.</sp=
+an></p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://windows.microsoft.com/en-us/windows-live/microsoft-se=
+rvices-agreement" target=3D"_blank">http://windows.microsoft.com/<wbr>en-us=
+/windows-live/microsoft-<wbr>services-agreement</a>&gt;&nbsp;</p></blockquo=
+te></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1731_5715013.1376324216270--

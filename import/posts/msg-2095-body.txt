@@ -1,0 +1,158 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB5MI36FQKGQEHXZBQOY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 48D56161735
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 13:39:37 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 45F7C116245
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 13:39:37 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id zcJhVTXc44iz for <anything@michielbdejong.com>;
+	Wed, 24 Apr 2013 13:39:35 +0200 (CEST)
+Received: from mail-ie0-x237.google.com (mail-ie0-x237.google.com [IPv6:2607:f8b0:4001:c03::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 76E181162E1
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 13:39:35 +0200 (CEST)
+Received: by mail-ie0-f183.google.com with SMTP id x14sf634629ief.10
+        for <anything@michielbdejong.com>; Wed, 24 Apr 2013 04:39:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1xuItcoZ6BpuyUxPZdFW1jx+Ma3lrhL9lmJIDy7YZi0=;
+        b=J85mYiMc4e6clsm72UR9abOjuUe4J6SuobNxjM6LJ/MNV4oJD3h2VVRs4CS9pulsXP
+         a1/U6M+7wZBtFAZP4vWE9RJrdPQIFvOO8KnULoUz0zM4rc9FG/JckGX2RH4VznqHrJOU
+         iJE/P8W6YwLh4tuyDjbjeUDODce7SK4QVbpRc+dVCxT6IZFWKZcVqEaqcB1+6IE1u94S
+         YGexeJxj/xJZwteoDSJwd6fbiwfEYoWMETELX+r/gIVK3rk8VBTAL2wGJTXMPrudYyM9
+         zZJ0JXsBPMxADyfpNK3wjCDi/BT70HaLJBwk79rnWM6xeTagBpbVe2X745WRm7Lux8cZ
+         CiyA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1xuItcoZ6BpuyUxPZdFW1jx+Ma3lrhL9lmJIDy7YZi0=;
+        b=XOVnVg1Leegmgsiqfe+b7WDsmHiUkSkZpYFu0fCCuVFZtSFWFY8HTtU0byLi7cuWnK
+         nCOwIjThdMTKQXDNpiUxIrkqzJj6IhKwaJniDB052z6EBG8BYlzBfccos4vkt48RoTjs
+         jyNiQMMJxbibkXohWRz+6Ou9ui0c7LO3RcSZxXlGrQRjJABCxT58arLwWm1eUp+EQOEM
+         LqY46tMyE7oRugz/gxk3C0qhuKgakBKQVRIMuSVzItw4ferb4MlH97MLKdNtLn7VOzIH
+         OeOD3LXULVzbOUdMWKdPjGqBCZlGoVYZ3UQIIUawFBEHQZt+MXiAWvnsBmFvA1v8L/FI
+         gs8A==
+X-Received: by 10.49.15.68 with SMTP id v4mr3206051qec.37.1366803573939;
+        Wed, 24 Apr 2013 04:39:33 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.39.201 with SMTP id r9ls853826qek.98.gmail; Wed, 24 Apr
+ 2013 04:39:33 -0700 (PDT)
+X-Received: by 10.49.2.170 with SMTP id 10mr3092628qev.40.1366803573693;
+        Wed, 24 Apr 2013 04:39:33 -0700 (PDT)
+Date: Wed, 24 Apr 2013 04:39:33 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <dd95967b-4237-4a41-b1f5-82b082415f87@googlegroups.com>
+In-Reply-To: <93e6d693-8421-46e8-82a6-e900fd0bb610@googlegroups.com>
+References: <93e6d693-8421-46e8-82a6-e900fd0bb610@googlegroups.com>
+Subject: [tosdr:1736] Re: [Bad] Spotify can remove content at any time for any
+ or no reason
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5_2242282.1366803573478"
+
+------=_Part_5_2242282.1366803573478
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.
+
+On Tuesday, April 23, 2013 2:31:36 PM UTC+2, Ian McGowan wrote:
+>
+> They can close your account without notice, without refund and without=20
+> reason.
+>
+> Spotify does not monitor, review, or edit User Content, but reserves the=
+=20
+>> right to remove or disable access to any User Content for any or no reas=
+on,=20
+>> including but not limited to, User Content that, in Spotify=92s sole=20
+>> discretion, violates these Agreements. Spotify may take these actions=20
+>> without prior notification to you. Removal or disabling of access to Use=
+r=20
+>> Content shall be at our sole discretion, and we do not promise to remove=
+ or=20
+>> disable access to any specific User Content.
+>
+>
+> https://www.spotify.com/us/legal/end-user-agreement/=20
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_5_2242282.1366803573478
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.<br><br>On Tuesday, April 23, 2013 2:31:36 PM UTC+2, =
+Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;marg=
+in-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">They can clo=
+se your account without notice, without refund and&nbsp;without reason.<br>=
+<div><br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0p=
+x 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-lef=
+t-style:solid;padding-left:1ex"><span style=3D"color:rgb(85,85,85);font-fam=
+ily:helvetica,arial,'nimbus sans l',sans-serif;font-size:14px;line-height:1=
+8px">Spotify does not monitor, review, or edit User Content, but reserves t=
+he right to remove or disable access to any User Content for any or no reas=
+on, including but not limited to, User Content that, in Spotify=92s sole di=
+scretion, violates these Agreements. Spotify may take these actions without=
+ prior notification to you. Removal or disabling of access to User Content =
+shall be at our sole discretion, and we do not promise to remove or disable=
+ access to any specific User Content.</span></blockquote><div><br></div><di=
+v><a href=3D"https://www.spotify.com/us/legal/end-user-agreement/" target=
+=3D"_blank">https://www.spotify.com/us/<wbr>legal/end-user-agreement/</a>&n=
+bsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_5_2242282.1366803573478--

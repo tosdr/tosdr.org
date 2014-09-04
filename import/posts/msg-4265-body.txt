@@ -1,0 +1,120 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB6FX7GGAKGQEHU5XALI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 6E388161772
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 20:12:12 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6BD7D2260A7
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 20:12:12 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qXycE6i2hQgK for <anything@michielbdejong.com>;
+	Thu, 23 May 2013 20:12:10 +0200 (CEST)
+Received: from mail-wi0-x23b.google.com (mail-wi0-x23b.google.com [IPv6:2a00:1450:400c:c05::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9830E22607D
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 20:12:10 +0200 (CEST)
+Received: by mail-wi0-f187.google.com with SMTP id hi5sf433989wib.4
+        for <anything@michielbdejong.com>; Thu, 23 May 2013 11:12:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:in-reply-to:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-disposition;
+        bh=UuiEsXrF4+Dx5nV0BRYSVg0WBYQ3gpWqiybW6UBrasU=;
+        b=K5h2RYbdQqtblVbt9zM1qeHoPGcxDSGUgbB31/dP37ordARrjs5RbqnCeUPpwUddnD
+         AMDm6orUzDvveYukMI9GvD6fCLAO30y6vHmKsqauzL5DG2nKcw8v70yQe9HEQDvov0xg
+         qazR9ibidvULFDUL+4PQE3Uay/o/mHy7I6XseSOC/ij1UkHshcVTV6jL9MLap4xJH7ES
+         DK7/9wTwVWWqPzSySgvZyc0QsOTCAIoiy9rvWxgjOapK78j+/VxDo9TETT1HM8cNB7Ky
+         kr2IFJIzlvxUgTeh+uGmYtgd30NbI2wqtJMq5peNOOyL2s4veX4UhPOLRbqSaFPNb4w6
+         WTIg==
+X-Received: by 10.180.11.148 with SMTP id q20mr2069540wib.17.1369332729355;
+        Thu, 23 May 2013 11:12:09 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.82.197 with SMTP id k5ls30390wiy.10.gmail; Thu, 23 May
+ 2013 11:12:08 -0700 (PDT)
+X-Received: by 10.15.111.14 with SMTP id ci14mr14097419eeb.4.1369332728480;
+        Thu, 23 May 2013 11:12:08 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id o5si3271784eew.0.2013.05.23.11.12.08
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 23 May 2013 11:12:08 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id A976363ABC2
+	for <tosdr@googlegroups.com>; Thu, 23 May 2013 20:12:07 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id S7ZgDQdem9uT for <tosdr@googlegroups.com>;
+	Thu, 23 May 2013 20:11:57 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 398FB63A5E5
+	for <tosdr@googlegroups.com>; Thu, 23 May 2013 20:11:57 +0200 (CEST)
+Date: Thu, 23 May 2013 20:11:55 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2234] [Info] Amazon may release your data when they
+ believe it appropriate
+Message-ID: <20130523181155.GA24348@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <174cf15b42a0756197191ce36edd4722@michielbdejong.com>
+MIME-Version: 1.0
+In-Reply-To: <174cf15b42a0756197191ce36edd4722@michielbdejong.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le mar. 05/03/13, 16:22, anything@michielbdejong.com <anything@michielbdejong.com>:
+> "We release account and other personal information when we believe
+> release is appropriate to comply with the law; enforce or apply our
+> Conditions of Use and other agreements; or protect the rights,
+> property, or safety of Amazon.com, our users, or others"
+> https://github.com/tosdr/tosback2/blob/master/crawl/amazon.com/Amazon.com%20Privacy%20Notice.txt#L88
+> 
+> they don't promise to notify you when your data is given to a
+> government, but other than that the phrasing sounds like they commit
+> to being careful.
+
+This is already covered by the points from EFF "Who has your back"
+I suppose.
+
+See http://tosdr.org/#amazon
+
+(or do you think it's something else?)
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

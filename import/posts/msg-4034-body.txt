@@ -1,0 +1,152 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBHPJ5WGAKGQEJX6HLVQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A59EA161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 15:32:32 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A13121780C4
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 15:32:32 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id P3dccsi9sHWg for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 15:32:31 +0200 (CEST)
+Received: from mail-pa0-f64.google.com (mail-pa0-f64.google.com [209.85.220.64])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 86CC217806E
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 15:32:30 +0200 (CEST)
+Received: by mail-pa0-f64.google.com with SMTP id fb10sf253627pad.9
+        for <anything@michielbdejong.com>; Tue, 21 May 2013 06:32:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=ycSns67byz5rNAdQhrwVt4YUe+AzuXvEK3/pJ/zYIMI=;
+        b=noZK3a8bu1G5dRmjyJZBT+wZspT54r/NvxqOohCBrI9ZXmb+S45I/a3IN8EBnS03Y8
+         SuPIO4qGRMQ+syQWQWqOiOIFKcXV0rMkYWKkiTJZuQg+ksbfoKrHxJjNGHxbUD3mCOd9
+         Xt9jW50XhrFzzGo6xSGslhf8onqfn0GDZ4GETfxXjiDtNccIs5+wXPt5OWE1GFfzEL6r
+         9BX1miLGNXbQuNTbiuF0EohQK7c9Q89+DE4AzpY+bVedoOL3OlbmiM1FRh2EJGAbt+6U
+         FetDZG0m4ZcZ1LkUF/n/A8jBtUeQKggX2Ag/0FLRs+3dZacSIX4e9O8373Q8tPHT7jkQ
+         U7jw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=ycSns67byz5rNAdQhrwVt4YUe+AzuXvEK3/pJ/zYIMI=;
+        b=nSxbtbs8nyr+pK9pXuuc1VJgluUfPFguAFredBVt4nscLVsObzLqMVXPwWRJ+Sogc0
+         IKQRLNcTU2xW7+wrgV6xuErM+hFe20haeP03sLeJpWTZjX2ffHlt47HuQS7nzeC06juN
+         gTGxQb1V7Ei7XWutJr8wVRXucJxrt5tNVVpQQQkGWhvobtC++RjZXwGJfxe6l2pLTRPf
+         fQL+ZrT4LSc2prQrgapnl9zoIe2p08lKZw6pjOWtS8qE2Luz2F8FeFiv6qFgzaYQ2IB2
+         wmwI6ss92S4t1V4ENerEJvEp7c/Qz0I8Y+suklJW7KpsF9Ptl6QfKaHsb8lF111ZICmC
+         6lxw==
+X-Received: by 10.49.4.166 with SMTP id l6mr101820qel.1.1369142429166;
+        Tue, 21 May 2013 06:20:29 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.14.103 with SMTP id o7ls297725qec.9.gmail; Tue, 21 May 2013
+ 06:20:28 -0700 (PDT)
+X-Received: by 10.49.85.65 with SMTP id f1mr107436qez.36.1369142428926;
+        Tue, 21 May 2013 06:20:28 -0700 (PDT)
+Date: Tue, 21 May 2013 06:20:28 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <b02cb0c4-dddd-4e9c-b397-a2d93936085f@googlegroups.com>
+In-Reply-To: <f24bcaf73efa400012eccade9ef50dc3@michielbdejong.com>
+References: <f24bcaf73efa400012eccade9ef50dc3@michielbdejong.com>
+Subject: [tosdr:2178] Re: [Bad] Amazon cookies you on other websites
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_136_31190843.1369142428745"
+
+------=_Part_136_31190843.1369142428745
+Content-Type: text/plain; charset=ISO-8859-1
+
+That's really awful, and I'm in total agreement. Do you know if they have 
+the same "you can disable cookies, but our Services may not work correctly 
+if you do so" clause? I wouldn't be surprised.
+
+On Tuesday, March 5, 2013 8:10:03 AM UTC+1, anyt...@michielbdejong.com 
+wrote:
+>
+> "we obtain certain types of information when your Web browser accesses 
+> Amazon.com or advertisements and other content served by or on behalf of 
+> Amazon.com on other Web sites" 
+>
+> https://github.com/tosdr/tosback2/blob/master/crawl/amazon.com/Amazon.com%20Privacy%20Notice.txt#L32 
+>
+> it's expected that they will (try to) cookie you when you visit 
+> amazon.com or any domain that falls under that, but not on other Web 
+> sites. I don't want Amazon to spy on what pages I happen to visit 
+> outside theirs. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_136_31190843.1369142428745
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+That's really awful, and I'm in total agreement. Do you know if they have t=
+he same "you can disable cookies, but our Services may not work correctly i=
+f you do so" clause? I wouldn't be surprised.<br><br>On Tuesday, March 5, 2=
+013 8:10:03 AM UTC+1, anyt...@michielbdejong.com wrote:<blockquote class=3D=
+"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc s=
+olid;padding-left: 1ex;">"we obtain certain types of information when your =
+Web browser accesses=20
+<br>Amazon.com or advertisements and other content served by or on behalf o=
+f=20
+<br>Amazon.com on other Web sites"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/master/crawl/amazon.c=
+om/Amazon.com%20Privacy%20Notice.txt#L32" target=3D"_blank">https://github.=
+com/tosdr/<wbr>tosback2/blob/master/crawl/<wbr>amazon.com/Amazon.com%<wbr>2=
+0Privacy%20Notice.txt#L32</a>
+<br>
+<br>it's expected that they will (try to) cookie you when you visit=20
+<br><a href=3D"http://amazon.com" target=3D"_blank">amazon.com</a> or any d=
+omain that falls under that, but not on other Web=20
+<br>sites. I don't want Amazon to spy on what pages I happen to visit=20
+<br>outside theirs.
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_136_31190843.1369142428745--

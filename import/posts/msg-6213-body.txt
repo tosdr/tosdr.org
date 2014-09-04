@@ -1,0 +1,167 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBB5BXSHAKGQEVTYWIMA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 37C6C161743
+	for <anything@michielbdejong.com>; Sat, 29 Jun 2013 18:51:22 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 338EE142084
+	for <anything@michielbdejong.com>; Sat, 29 Jun 2013 18:51:22 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Go3GrtjeoqkV for <anything@michielbdejong.com>;
+	Sat, 29 Jun 2013 18:51:20 +0200 (CEST)
+Received: from mail-gh0-x23d.google.com (mail-gh0-x23d.google.com [IPv6:2607:f8b0:4002:c05::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5BEEB142087
+	for <anything@michielbdejong.com>; Sat, 29 Jun 2013 18:51:20 +0200 (CEST)
+Received: by mail-gh0-f189.google.com with SMTP id z13sf1045814ghb.26
+        for <anything@michielbdejong.com>; Sat, 29 Jun 2013 09:51:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=LxtdRDD3/FxeH2Ucv6b42HmGeKLW2rYUBGFB6nFEmdk=;
+        b=cykjzYV+ToYqs0VL6FrZBOyH27ohJOn+RWdPVcQ1cXLUz3gA3I/nvY5qXmHl8IBea+
+         Ae28BEHEoW19/PozAZMaq+XG3Vhbfw2hIOyQjfwV63DjRDDtVozvN6FgOxQ3z75Qn8C1
+         S0p8KV1L1jPb4yxgMirGis+S4mVUxToGCXFEXTd//GAPJ+uQm5EmawdlxHXzkRXdvd4o
+         nCq8VPO6g07++o+rkc28s8EpigBTFIOJigsz7PUFK2tMLqfGvsMdbf4C3tETxr27DpLz
+         kLW5/j8kKqv3KW04zMz8H0Wli+1pl8xF3WtOKRGba6tHPJj+CVlTPkDli5LmC1u/6w81
+         e7MA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=LxtdRDD3/FxeH2Ucv6b42HmGeKLW2rYUBGFB6nFEmdk=;
+        b=IzwaZx+draYx6UJgSafzzEIRuIKmsjL/WuhMJiYueU5fsMmBQBKdUzLET7kcixvkx5
+         0I1GXO4zpNJ368UtRgrnZtfFmjUTbe7y5YqOSXjudzC2vYYsu/CKyLEw8VBoJN8rut39
+         Og5UXVThYzwCPeBuz/7vlYWn+fkWP+yEY8+1BNmiZust+lZVc53GWZVzD3sf34G5OdRO
+         /0nowihtpXAyYb8htPFsSDjeG0SCSj/S+CExxsDFqChuUfnuJCvm1FWWkNfeCEjfouCy
+         5YUiDySBp2VcWsuuEB0fk33Ddlw83eBSYsPx4d2Qjjmmb5kV7l2I7YDfKH9QRVrulQNi
+         Fb+Q==
+X-Received: by 10.49.82.50 with SMTP id f18mr488281qey.22.1372524679225;
+        Sat, 29 Jun 2013 09:51:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.71.210 with SMTP id x18ls1665828qeu.85.gmail; Sat, 29 Jun
+ 2013 09:51:18 -0700 (PDT)
+X-Received: by 10.49.13.71 with SMTP id f7mr479433qec.31.1372524678878;
+        Sat, 29 Jun 2013 09:51:18 -0700 (PDT)
+Date: Sat, 29 Jun 2013 09:51:18 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <e4c4956a-5684-4147-819a-74cce0b4b5ba@googlegroups.com>
+Subject: [tosdr:2436] Skype provides opt-out for analytic cookies
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1835_14618940.1372524678190"
+
+------=_Part_1835_14618940.1372524678190
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> *4.5.3 Analytics*
+>
+> To opt out of Omniture analytic cookies, please visit: 
+> https://smetrics.skype.com/optout.html
+>
+> To opt out of Google Analytics cookies, please visit: 
+> http://tools.google.com/dlpage/gaoptout
+>
+
+http://www.skype.com/en/legal/privacy/
+
+Title: Skype provides an opt-out for analytic cookies
+
+Topic: cookies
+
+Summary: You can opt out of both Omniture analytic cookies (
+https://smetrics.skype.com/optout.html) and Google Analytics cookies (
+http://tools.google.com/dlpage/gaoptout).
+
+Score: 40 (good)
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1835_14618940.1372524678190
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><p style=3D"margin-bottom: 18px; font-family: =
+'Segoe UI', 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Ta=
+homa, 'Arial Unicode MS', sans-serif; font-size: 16px; line-height: 20px; c=
+olor: rgb(51, 53, 52);"><b style=3D"margin: 0px; padding: 0px; border: 0px;=
+ font-family: inherit; font-size: inherit; font-style: inherit; font-varian=
+t: inherit; line-height: inherit; vertical-align: baseline;">4.5.3 Analytic=
+s</b></p><p style=3D"margin-bottom: 18px; font-family: 'Segoe UI', 'Segoe W=
+P', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Arial Unicode=
+ MS', sans-serif; font-size: 16px; line-height: 20px; color: rgb(51, 53, 52=
+);">To opt out of Omniture analytic cookies, please visit:&nbsp;<a href=3D"=
+https://smetrics.skype.com/optout.html" shape=3D"rect" style=3D"font-family=
+: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; =
+line-height: inherit; color: rgb(0, 120, 202);">https://smetrics.skype.com/=
+optout.html</a></p><p style=3D"margin-bottom: 0px; font-family: 'Segoe UI',=
+ 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Aria=
+l Unicode MS', sans-serif; font-size: 16px; line-height: 20px; color: rgb(5=
+1, 53, 52);">To opt out of Google Analytics cookies, please visit:&nbsp;<a =
+href=3D"http://tools.google.com/dlpage/gaoptout" shape=3D"rect" style=3D"fo=
+nt-family: inherit; font-size: inherit; font-style: inherit; font-variant: =
+inherit; line-height: inherit; color: rgb(0, 120, 202);">http://tools.googl=
+e.com/dlpage/gaoptout</a></p></blockquote><div><br></div><div><a href=3D"ht=
+tp://www.skype.com/en/legal/privacy/">http://www.skype.com/en/legal/privacy=
+/</a></div><div><br></div><div>Title: Skype provides an opt-out for analyti=
+c cookies</div><div><br></div><div>Topic: cookies</div><div><br></div><div>=
+Summary: You can opt out of both Omniture analytic cookies (<a href=3D"http=
+s://smetrics.skype.com/optout.html" shape=3D"rect" style=3D"font-family: in=
+herit; font-size: inherit; color: rgb(0, 120, 202); font-style: inherit; fo=
+nt-variant: inherit; line-height: inherit;">https://smetrics.skype.com/opto=
+ut.html</a>)&nbsp;and Google Analytics cookies (<a href=3D"http://tools.goo=
+gle.com/dlpage/gaoptout" shape=3D"rect" style=3D"font-family: inherit; font=
+-size: inherit; color: rgb(0, 120, 202); font-style: inherit; font-variant:=
+ inherit; line-height: inherit;">http://tools.google.com/dlpage/gaoptout</a=
+>).</div><div><br></div><div>Score: 40 (good)</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1835_14618940.1372524678190--

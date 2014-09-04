@@ -1,0 +1,119 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB27Y52GAKGQEVDMEEOI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool5-d.mgt.gandi.net [10.0.21.136])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 13C26161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 20:26:59 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1137E2A8055
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 20:26:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.136])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id q5Z3n4pTkfxz for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 20:26:57 +0200 (CEST)
+Received: from mail-lb0-f184.google.com (mail-lb0-f184.google.com [209.85.217.184])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0B8B62A805E
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 20:26:53 +0200 (CEST)
+Received: by mail-lb0-f184.google.com with SMTP id t10sf113135lbi.1
+        for <anything@michielbdejong.com>; Tue, 21 May 2013 11:26:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:in-reply-to:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-disposition;
+        bh=aP+ZpLbyV3uUYQJL9Gun3uSmlDI4Djkhbo6mDQhVwfc=;
+        b=LuyN1UTHnwmiXEeuOcp6oYjkhherD9HiU8fhcTuigU6X3Sl2DRtt17DUwEWiKJ3R/z
+         ESq6aE5ANMwJmFBrJVSL1vlp6qaPacayrHQeUO+YztfmVSivL4XwKo6KfpoKHVaZYQvD
+         /WxL3agJ6D86GtujiYDx2qD5W0XXTXmBFUy3QQOBuYtkU57B9S+9/Kzp0FjcVmpNH6Jh
+         eFrkoond+f8sF7GmoLTuj3roSfa94XmL/emNiiIcnmSNmKnO7tgIJSzftB+A1GynDaRb
+         q0k2CiSAylrsWQkfahAvo2mT/QA42ztx/UMATg466zXSeyE8bDWumeIHPZCWs9+ee5Zf
+         7+rg==
+X-Received: by 10.180.198.199 with SMTP id je7mr284518wic.4.1369160812264;
+        Tue, 21 May 2013 11:26:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.181.13.201 with SMTP id fa9ls288629wid.5.gmail; Tue, 21 May
+ 2013 11:26:51 -0700 (PDT)
+X-Received: by 10.15.44.65 with SMTP id y41mr4171541eev.5.1369160811332;
+        Tue, 21 May 2013 11:26:51 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id bj52si941866eeb.1.2013.05.21.11.26.51
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 21 May 2013 11:26:51 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id D3BAD63A6C7
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 20:26:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id SMPsuoOZ-QgJ for <tosdr@googlegroups.com>;
+	Tue, 21 May 2013 20:26:48 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 5516463A672
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 20:26:48 +0200 (CEST)
+Date: Tue, 21 May 2013 20:26:47 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2183] Re: Sony Entertainment Network [bad] Binding
+ Arbitration clause and class action waiver (30 days optout)
+Message-ID: <20130521182647.GB22526@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <20130515103134.GA19856@synclavier.ampoliros.net>
+ <4ec16333-5ff6-4ce6-93f5-ebe902b8e7fe@googlegroups.com>
+ <20130516190123.GI10401@synclavier.ampoliros.net>
+ <082e2401-77ae-48a6-bc08-1c3fb1112cbb@googlegroups.com>
+ <20130520223012.GA3759@synclavier.ampoliros.net>
+ <163a5f88-aab9-41d3-b474-d3e2652c7760@googlegroups.com>
+ <20130521073621.GC5633@synclavier.ampoliros.net>
+ <9d51a2f0-0efa-4d8e-a056-e68e8b679c89@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <9d51a2f0-0efa-4d8e-a056-e68e8b679c89@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le mar. 21/05/13, 09:50, Hannah Poteat <hpoteat0@gmail.com>:
+> Sure, that's reasonable. I just wish we had a way to differentiate between 
+> degrees of bad.
+> 
+> And I don't mind at all -- thank you for asking!
+
+Actually, we do. Each point has a score from 0 to 100, and there
+are 2 levels: bad (orange) and very bad (red) ;)
+
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

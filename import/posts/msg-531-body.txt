@@ -1,0 +1,147 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBS7K7CEQKGQEKUFKQ3Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 22FA016172D
+	for <anything@michielbdejong.com>; Mon, 11 Mar 2013 20:49:41 +0100 (CET)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1F258178071;
+	Mon, 11 Mar 2013 20:49:41 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qMcO1mhYswjQ; Mon, 11 Mar 2013 20:49:38 +0100 (CET)
+Received: from mail-lb0-f190.google.com (mail-lb0-f190.google.com [209.85.217.190])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25A1217808F;
+	Mon, 11 Mar 2013 20:49:34 +0100 (CET)
+Received: by mail-lb0-f190.google.com with SMTP id q12sf1974316lbc.7
+        for <multiple recipients>; Mon, 11 Mar 2013 12:49:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned
+         :message-id:subject:from:to:date:in-reply-to:references:organization
+         :x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=X1BqjEkGpMfoahZPRRrSCUM5/tesby2neoWZ8CQSGa0=;
+        b=aBNfPjYULsrVIBATuhdE0D/0V+r1WPQNhfbx226nEBQvnsS3JnEeFhJOEChyKUHoy9
+         Y3keXkRJ5MvtWZRkoD08Gu9eM+xAJ6pMTiqAVrDBqRrANexz4xVSbOjvSv245HU6IwpX
+         y6s/OZUrV33IhSG8idyWR0WN+6DUD4QUnudEO9LGHGW6korvQykwFx/aC6Y3Vmvd5GgG
+         movnRiC47mQuCLJ0xrUrzQbjF1aBqOYdSv82E+UGmbZgNGxR/rezmE5iEtv+RrrD30/6
+         HMFbe9MQxhGOzwoZrhf7zZPFuTeIhLu854ghYo6fp/mBTIa4wpR4cZiVkWDr2KSNLUF+
+         vmRQ==
+X-Received: by 10.180.102.102 with SMTP id fn6mr1013530wib.8.1363031373196;
+        Mon, 11 Mar 2013 12:49:33 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.198.112 with SMTP id jb16ls744038wic.2.canary; Mon, 11 Mar
+ 2013 12:49:30 -0700 (PDT)
+X-Received: by 10.14.184.9 with SMTP id r9mr13891676eem.7.1363031370945;
+        Mon, 11 Mar 2013 12:49:30 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id 47si5116634eeh.1.2013.03.11.12.49.30
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 11 Mar 2013 12:49:30 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 813B663B4ED;
+	Mon, 11 Mar 2013 20:49:30 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RNv-6zVnENWL; Mon, 11 Mar 2013 20:49:26 +0100 (CET)
+Received: from [10.2.209.138] (pat-address.sciences-po.fr [193.54.67.93])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 35DA163AF67;
+	Mon, 11 Mar 2013 20:49:26 +0100 (CET)
+Message-ID: <1363031361.11549.9.camel@synclavier.ampoliros.net>
+Subject: Re: [tosdr:1646] Re: who wants to help create an html form on tosdr.org?
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Mon, 11 Mar 2013 20:49:21 +0100
+In-Reply-To: <48d114fb79ce4b70a7372bff3779899e@michielbdejong.com>
+References: <10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com>
+	 <8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com>
+	 <49f50811ecb496234b78c89dc9fffe6c@michielbdejong.com>
+	 <E7621372-569B-49B4-9971-A3867433C384@gmail.com>
+	 <48d114fb79ce4b70a7372bff3779899e@michielbdejong.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.4-2
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le lundi 11 mars 2013 =E0 20:48 +0830, Michiel B. de Jong a =E9crit :
+> i'll think about it some more. also interested in what Hugo and Julien
+> think of this?
+
+First, it could have helped to include
+https://github.com/tosdr/tosdr.org/issues/
+These issues are "priority" and known for about six months.
+
+I am not sure these technical discussions are interesting to the group.
+This mailing-list is a place where anyone, just by sending an email, can
+contribute to the discussion about terms; and also thanks to the google
+group web interface we can easily link to the discussions from the
+website.
+
+When discussiong github etc, this is something that should remain on top
+of our head. The threshold of first contribution right now is very, very
+low and we should keep it that way. What's actually needed is to work
+with tools between that first step (the mailing-list) and the second
+step (writing json data that displays on the website).
+
+The form should not be a big issue at first. It is only a few forms that
+are basically the same as the json fields (as soon as we have a version
+1 of that JSON data). In the future maybe these forms could be enhanced
+for instance by submitting directly from a website's TOS page through a
+web extension.
+
+What's very important is that we can keep in synch between the json data
+and the discussion. That means that for every json data generated by the
+form, there must be a link where people can discuss this data easily
+(right now this is done in this mailing-list).
+
+The way we did it is: every point/ has an id. This id is the same as the
+google group topic id. But being able to make the link between them
+automatically is not completely trivial. That's why the "backlog list"
+feature is very, very important too.
+See https://github.com/tosdr/tosdr.org/issues/47
+
+With such a backlog list, we could have a central place where people
+could help the review to happen by pushing up and down and tracking
+topics in the mailing list that haven't been dealt with already.
+
+
+
+
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
