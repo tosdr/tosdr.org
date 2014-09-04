@@ -57,4 +57,4 @@ function process(path){
 
 
 
-['cases','points', 'topics', 'services', 'index'].forEach(process);
+['points', 'topics', 'services', 'index', 'cases', 'posts'].forEach(process);
