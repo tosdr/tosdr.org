@@ -18,7 +18,7 @@ The data specification is available [on the wiki][wiki].
 Build
 =====
 
-    git status
+    git pull; git status
     git diff #see what changes you are about to build
     git commit -am"some changes i made" #make sure you `git add` and new files you added
     npm install
@@ -29,6 +29,17 @@ Build
     git commit -am"build"
     git push
     git push 5apps master #this will update the live site! Be careful. Ask Hugo or Michiel if you don't have permission
+
+Import
+======
+To import new and/or updated threads from the Google Group:
+
+* Open [import/bookmarklet.html](https://tosdr.org/import/bookmarklet.html) with Firefox, and follow instructions there; save result to `./import/threadSubjects.json` in your checked out local git repo
+* create `./import/imapCredentials.js` from `./import/imapCredentials.js.sample`
+* (from the repo root:) `git pull; npm install ; cd import ; mkdir rawPosts ; cd rawPosts ; node ../searcher.js`
+* `cd .. ; node threadMatcher.js > ../index/threads.json`
+* `cd .. ; sh build.sh`
+* `git add import/rawPosts ; git commit -am"import from Google Groups"; git push; git push 5apps master`
 
 Develop other applications
 ==========================

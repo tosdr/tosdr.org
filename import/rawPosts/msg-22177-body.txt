@@ -1,62 +1,63 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBEH3S6QAKGQE67QYGZA@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARBCULTCQAKGQEXNSYPHA@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
-Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D01FC40910
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:25:42 +0200 (CEST)
-Received: from mfilter32-d.gandi.net (mfilter32-d.gandi.net [217.70.178.163])
-	by spool.mail.gandi.net (Postfix) with ESMTP id CA70717809A
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:25:42 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter32-d.gandi.net
-Received: from spool.mail.gandi.net ([10.0.21.133])
-	by mfilter32-d.gandi.net (mfilter32-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id yk1rqXG-YUmO for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 19:25:41 +0200 (CEST)
-Received: from mail-yh0-x238.google.com (mail-yh0-x238.google.com [IPv6:2607:f8b0:4002:c01::238])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 12CBB17807E
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:25:37 +0200 (CEST)
-Received: by mail-yh0-f56.google.com with SMTP id v1sf1739747yhn.21
-        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 10:25:36 -0700 (PDT)
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 7120F40916
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:59:41 +0200 (CEST)
+Received: from mfilter31-d.gandi.net (mfilter31-d.gandi.net [217.70.178.162])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6C2FA142241
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:59:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter31-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter31-d.gandi.net (mfilter31-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 7vJbyFONBY4O for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 19:59:39 +0200 (CEST)
+Received: from mail-qc0-x237.google.com (mail-qc0-x237.google.com [IPv6:2607:f8b0:400d:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 94D4F14226F
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:59:39 +0200 (CEST)
+Received: by mail-qc0-f183.google.com with SMTP id c9sf1693523qcz.0
+        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 10:59:38 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
-        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
-         :x-original-sender:reply-to:precedence:mailing-list:list-id
-         :list-post:list-help:list-archive:sender:list-subscribe
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=cz6SQ/2bxgeohh/ObH7hZdlIfnFgVdYz9DtRLqp2TiE=;
-        b=W0mYj2FHuIFhebnJ2fvAFyt2a4OTgwNy6kM+whqT94cBezdbL7GkObT5yjhA9Vi2qq
-         odEl+vaBNk7SEzlIJMACc5jaWP0Tybp/iV9IltV0Be/VaAhGcfbvWnd7sMwIaCb9v0Eo
-         3rQjnzOSYDpL9clOXpR+SZDp2cL0O7e7PKKcXkXDKc3FNw/Zz9BqigfnbKRQvCkgMVj4
-         wZp07F0ZDuVWX711L5t8C9UWlixUbNFWvEKVtMTK+zXshK5ElM6iux6xaKAw6EAz6M9j
-         47GlyNbl7pwbWICgdz6JRf9Zmsm2j9I8IGwzm7F2Kd/xMTK1XUXUCcBQG/GDx1sagTDq
-         m9YA==
+        bh=iZXe9KC8B7zKW5ZvaV4NtZpvY7ZXys4A85Xad3gOpQM=;
+        b=w35+AEf4+e4V3fwOgLDCnmK+wbYPEFHRkzSZrKPH1b1Ku6HeV9Fu9BlR0q9vGHiEtC
+         5UGzUSi/iNDrwcySkPrdhFjt+XsZPMBxezafxa6BgEm0uarub6iOcu5NM/jZolLaRgmM
+         b2oKtw2+qFziUZXK8zX3zFQHVcUrdRHxu0O6d6ZuNyDsXp8ykOng73A3pV5IxMzpGh2l
+         JtDit6rI88FuUKJA1jj/vtzsd0X+WKMDx1ZidjP67GO+ZvM0esTsQNPu+xmKiI9FT510
+         T07mIKbBOkFb0hV0Iybd2V+Kmsn37KvoTvsUNlkZDrR8u6eQ29DSZK2N75KjyG1+o/zo
+         zgiA==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
-        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
-         :x-original-sender:reply-to:precedence:mailing-list:list-id
-         :list-post:list-help:list-archive:sender:list-subscribe
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=cz6SQ/2bxgeohh/ObH7hZdlIfnFgVdYz9DtRLqp2TiE=;
-        b=VRIsXRbmPXiGXiszBXHi0uSP2jS/nbmsPtwFr0l5BUU7GjgTkimqeW8wh4/y2Oqq6H
-         +1AouArGKQTht/VwnwrF+Oh58HZbk89mbnQodyMTDztucxXqmtl7HcUaLsEbuFxS/KVy
-         AZviJTeWkaRPNpfH4YRyQWpjMtwTZkXAa0XZRaTRh6gLEjfKhfCaljJYIfN7ARmHle/R
-         uFYkTxN6hW5TbPrEizaq0/8HR9chw10qVEzlNzSQ9BviE8U/IUBA3nTaq0SKgA5ggVyi
-         CNjVjeuVp+fbevLMvX2uvas/ifgjUBSM8nMHjtCnHCHquZdKfaNSQ8QzNCmEov/HowYL
-         g9vw==
-X-Received: by 10.140.98.52 with SMTP id n49mr30283qge.24.1409678736975;
-        Tue, 02 Sep 2014 10:25:36 -0700 (PDT)
+        bh=iZXe9KC8B7zKW5ZvaV4NtZpvY7ZXys4A85Xad3gOpQM=;
+        b=TiNh5SRpAWAdryaiRI9yn0lDsDHD5z2hdWuyPxYSkCKaTZikVRlxc9t/VHwJ3nd+Eg
+         9OEZbHT1PH9MXYsL7dfFCorPYIWYcTLp1zvkghgzy3r7HafP9zk7h5ECJTpdtDSM+W3O
+         Y7TL/RKAHHWJnd/+jIFuiwaaB30FkFCLVKsFwnSotzple3G+0kXoyMADNNR+irZGV7AH
+         mtOBkbcwaODLEjvBzGSyDSAXzxg99x6L+BtHcSa3w3tqw1PTFyA/Pt6OnTpavoOlozeC
+         uCO0/G0TWI35J/UOgHIBIrihGZfUlyN6yC56NbBSfiUcq++k1Ru/2qbJfeA9KLHqgQ8Y
+         Jc5Q==
+X-Received: by 10.140.107.69 with SMTP id g63mr403998qgf.2.1409680778696;
+        Tue, 02 Sep 2014 10:59:38 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.27.242 with SMTP id 105ls2549467qgx.17.gmail; Tue, 02 Sep
- 2014 10:25:36 -0700 (PDT)
-X-Received: by 10.140.19.213 with SMTP id 79mr750845qgh.5.1409678736784;
-        Tue, 02 Sep 2014 10:25:36 -0700 (PDT)
-Date: Tue, 2 Sep 2014 10:25:36 -0700 (PDT)
+Received: by 10.140.91.40 with SMTP id y37ls2522621qgd.2.gmail; Tue, 02 Sep
+ 2014 10:59:38 -0700 (PDT)
+X-Received: by 10.140.86.106 with SMTP id o97mr29497qgd.25.1409680778464;
+        Tue, 02 Sep 2014 10:59:38 -0700 (PDT)
+Date: Tue, 2 Sep 2014 10:59:37 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Message-Id: <c4a555aa-70d2-452f-b613-ada482d537f1@googlegroups.com>
-In-Reply-To: <20140902155700.GP4723@xps.fritz.box>
+Cc: aanmeldingen49@gmail.com, aanmeldingen49@gmail.com
+Message-Id: <0674ba27-c8a5-4237-b3fe-a5f837b1fe7c@googlegroups.com>
+In-Reply-To: <20140902155607.GO4723@xps.fritz.box>
 References: <82e59fac-cd72-4d8f-90a8-1c5afefa471f@googlegroups.com>
- <20140902155700.GP4723@xps.fritz.box>
-Subject: Re: [tosdr:3183] Wordfeud [bad] User Content
+ <20140902155607.GO4723@xps.fritz.box>
+Subject: Re: [tosdr:3185] Wordfeud [bad] User Content
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
@@ -72,26 +73,30 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_2876_1582950013.1409678736278"
+	boundary="----=_Part_26_1173539987.1409680777949"
 
-------=_Part_2876_1582950013.1409678736278
+------=_Part_26_1173539987.1409680777949
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
 
 
-Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef Hugo Roy:
+Op dinsdag 2 september 2014 17:56:14 UTC+2 schreef Hugo Roy:
 >
 > =E2=86=AA 2014-09-02 Tue 17:29, Anna D <aanmeld...@gmail.com <javascript:=
 >>:=20
-> > Not sure if these should be in separate posts, but here goes.=20
 > >=20
-> > The ToS states that all User Content "are subject, whether in whole or=
-=20
-> in=20
+> > On the upside, Bertheussen IT lets users keep their copyright=20
+> > according to this sentence: "You represent and warrant that User=20
+> > Content you transmit or submit is original to you and that you=20
+> > exclusively own the rights to such content". Not sure how the=20
+> > collision of these apply in practice.=20
 >
-> Can you give a little bit more context please? What is "User=20
-> Content" and what=E2=80=99s the service about?=20
+> This sentence just means that the user submitting the content=20
+> makes a promise to Berheussen IT that they have the right to=20
+> provide such content. It does not have an impact on the substance=20
+> of the license granted to them.=20
+>
 >
 > --=20
 > Hugo Roy  =20
@@ -103,13 +108,27 @@ Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef Hugo Roy:
 > https://emailselfdefense.fsf.org/fr/=20
 >
 
-User content =3D Any data, text, graphics, photographs and their selection=
+Wait, I'm confused about this part. You keep your copyright, but you grant=
 =20
-and arrangement, and any other materials uploaded to the Service by you or=
+Bertheusen a very broad license? Is that what the ToS is saying? Because=20
+first it says: "You represent and warrant that User Content you transmit or=
 =20
-other users. (ToS, par. 4) Service =3D the website (wordfeud.com) and any=
+submit is original to you and that *you exclusively own the rights to such=
 =20
-Bertheussen IT game or application (here: Wordfeud).
+content, including the right to grant all of the rights and licenses in=20
+these Terms* without Bertheussen IT incurring any third party obligations=
+=20
+or liability arising out of its exercise of such rights and licenses." And=
+=20
+then: "You hereby *grant to Bertheussen IT a worldwide, irrevocable,=20
+perpetual, non-exclusive, transferable, fully paid-up and royalty-free=20
+license*, (with the right to sublicense), to use, copy, adapt, modify,=20
+distribute, license, sell, transfer, publicly display, publicly perform,=20
+transmit, stream, broadcast and otherwise exploit User Content you transmit=
+=20
+or submit and all derivative works."
+
+Or did you mean something else?
 =20
 
 --=20
@@ -123,24 +142,29 @@ To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_2876_1582950013.1409678736278
+------=_Part_26_1173539987.1409680777949
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><br><br>Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef=
+<div dir=3D"ltr"><br><br>Op dinsdag 2 september 2014 17:56:14 UTC+2 schreef=
  Hugo Roy:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left:=
  0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">=E2=86=AA 2014-09-02=
  Tue 17:29, Anna D &lt;<a href=3D"javascript:" target=3D"_blank" gdf-obfusc=
-ated-mailto=3D"AlhByT3miFQJ" onmousedown=3D"this.href=3D'javascript:';retur=
+ated-mailto=3D"8l310-Yi8P0J" onmousedown=3D"this.href=3D'javascript:';retur=
 n true;" onclick=3D"this.href=3D'javascript:';return true;">aanmeld...@gmai=
 l.com</a>&gt;:
-<br>&gt; Not sure if these should be in separate posts, but here goes.
 <br>&gt;=20
-<br>&gt; The ToS states that all User Content "are subject, whether in whol=
-e or in=20
+<br>&gt; On the upside, Bertheussen IT lets users keep their copyright
+<br>&gt; according to this sentence: "You represent and warrant that User
+<br>&gt; Content you transmit or submit is original to you and that you
+<br>&gt; exclusively own the rights to such content". Not sure how the
+<br>&gt; collision of these apply in practice.
 <br>
-<br>Can you give a little bit more context please? What is "User
-<br>Content" and what=E2=80=99s the service about?
+<br>This sentence just means that the user submitting the content
+<br>makes a promise to Berheussen IT that they have the right to
+<br>provide such content. It does not have an impact on the substance
+<br>of the license granted to them.
+<br>
 <br>
 <br>--=20
 <br>Hugo Roy &nbsp;
@@ -167,11 +191,23 @@ MzigmqLlD_R6AYA';return true;" onclick=3D"this.href=3D'https://www.google.c=
 om/url?q\75https%3A%2F%2Femailselfdefense.fsf.org%2Ffr%2F\46sa\75D\46sntz\0=
 751\46usg\75AFQjCNHBz1iWMr_XFXMMzigmqLlD_R6AYA';return true;">https://email=
 selfdefense.fsf.<wbr>org/fr/</a>
-<br></blockquote><div><br>User content =3D Any data, text, graphics, photog=
-raphs and their selection and=20
-arrangement, and any other materials uploaded to the Service by you or=20
-other users. (ToS, par. 4) Service =3D the website (wordfeud.com) and any B=
-ertheussen IT game or application (here: Wordfeud).<br>&nbsp;</div></div>
+<br></blockquote><div><br>Wait, I'm confused about this part. You keep your=
+ copyright, but you grant Bertheusen a very broad license? Is that what the=
+ ToS is saying? Because first it says: "You represent and warrant that User=
+ Content you transmit or submit is=20
+original to you and that <b>you exclusively own the rights to such content,
+ including the right to grant all of the rights and licenses in these=20
+Terms</b> without Bertheussen IT incurring any third party obligations or=
+=20
+liability arising out of its exercise of such rights and licenses." And the=
+n: "You hereby <b>grant to Bertheussen IT a worldwide, irrevocable, perpetu=
+al,=20
+non-exclusive, transferable, fully paid-up and royalty-free license</b>,=20
+(with the right to sublicense), to use, copy, adapt, modify, distribute,
+ license, sell, transfer, publicly display, publicly perform, transmit,=20
+stream, broadcast and otherwise exploit User Content you transmit or=20
+submit and all derivative works."<br><br>Or did you mean something else?<br=
+>&nbsp;</div></div>
 
 <p></p>
 
@@ -190,4 +226,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_2876_1582950013.1409678736278--
+------=_Part_26_1173539987.1409680777949--

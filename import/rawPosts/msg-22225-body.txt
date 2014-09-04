@@ -1,63 +1,64 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBLFFTWQAKGQEPFAA6NQ@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARB75FTWQAKGQE2LZ5BXI@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
-Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 132554091A
-	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:03 +0200 (CEST)
-Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
-	by spool.mail.gandi.net (Postfix) with ESMTP id 10F9917839C
-	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:03 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
-Received: from spool.mail.gandi.net ([10.0.21.133])
-	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id HwRZrrEFkkL2 for <anything@michielbdejong.com>;
-	Wed,  3 Sep 2014 19:41:01 +0200 (CEST)
-Received: from mail-oa0-x238.google.com (mail-oa0-x238.google.com [IPv6:2607:f8b0:4003:c02::238])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 6AACA1783B4
-	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:41:01 +0200 (CEST)
-Received: by mail-oa0-f56.google.com with SMTP id jd19sf1839496oac.1
-        for <anything@michielbdejong.com>; Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D3F804091A
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:42:26 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D1B98226063
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:42:26 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nG5QChM1eiaQ for <anything@michielbdejong.com>;
+	Wed,  3 Sep 2014 19:42:25 +0200 (CEST)
+Received: from mail-vc0-x237.google.com (mail-vc0-x237.google.com [IPv6:2607:f8b0:400c:c03::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2B47F226064
+	for <michiel@michielbdejong.com>; Wed,  3 Sep 2014 19:42:25 +0200 (CEST)
+Received: by mail-vc0-f183.google.com with SMTP id le20sf1857670vcb.0
+        for <michiel@michielbdejong.com>; Wed, 03 Sep 2014 10:42:23 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
         h=date:from:to:cc:message-id:in-reply-to:references:subject
          :mime-version:x-original-sender:reply-to:precedence:mailing-list
          :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=VsPmf0aYlKbsNEcSU5JlauujFxodP+QoUaj37PJEL08=;
-        b=PlbyUEtNnMNAchu4rnEB14NkL0rrlENCkhwlr4hmbUufSAmUf0cZvCtan9IPmqknJu
-         rJloX2DEP9GBMV6p8CMGNjJyHXFhY10lCBztfcvjYu6g2Ygcf5tXuX7DU5ZsQy8r/slE
-         P+dTc/h858HMXwOXXHhHp2qjSMTun1rwkkm5xp1hNbcSoidVhHssJ2ePWHKiLwFGNIfN
-         1Tw9QVNvgp4K5n8W5fufZ2F3u8AdC9S2qZffGHuPnoERadsXSmeL5Cz3Mf/2eU9UpONl
-         hkIImXU7wVuJbe/AH9JqjKQdEW7D+/H4Ql8DPuS3F4jo9X7JKs9uVLiIEk1jgttkJ2NV
-         Gcqg==
+        bh=D8YyfllpIk4vGm1R3COdVOntQhFuqggp7r7PQr3ntl4=;
+        b=L0GLoYiTKhkjK4FaOfAaZMvVQXDkFca+kX/WjNHAyxqhSz6NvTUOe95XP9mFkuPDrB
+         SAmfg4MApIDHCtMyyR0dXVTCKSi8HuFvdd5KVEn4UXNIsBVoQIQvbViwNzekxrH2uHkB
+         PLNvZhu4ovhH1jJu98IXjPdiVhBQ1/NvFpjerydJoEvCdzVI7R2L06GzHtax928QOSqV
+         reOxfxbFK/L7v0I03zgJkc+NFRNaR6w85PEGrKFK/4CNvfAF61TkZ+J7xlbFz8WiUvXN
+         0mXjwHwpTgy5FrIpBpuPdaRjsnO4WcP/eV5Kf3yGDj9HYRcJO3LRaPANR4daE3bGaiKT
+         VGNQ==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
         h=date:from:to:cc:message-id:in-reply-to:references:subject
          :mime-version:x-original-sender:reply-to:precedence:mailing-list
          :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=VsPmf0aYlKbsNEcSU5JlauujFxodP+QoUaj37PJEL08=;
-        b=EVafvUgzsFfsKs6p3r0M8wLY4STXpHgyO8XfgTghpbzfXqVUV/mHK/gvWs3L3uyMgR
-         YOeDkNYmlbCqIrIn1wJx5wqkyz0mIa6FTMMOJyUHZafoMQ4Yu1BfSlcvgX5gKNGAgV1n
-         d1Qo+uRNTe1kavbrolqDQuaJ0zqj9KDW6oMRNJ+3gqPrG+AOuA4EtPEF+NAwc4d62yW8
-         QuhDAQzkC99TcpcTXr/OA+Udh8ehMPL9eXisgb/RPIeWg0bpk1SpzQkvbUlDdr4tJokV
-         9LCRNieHbEz72m0CSheqrEO5xzvJTsAJWVwWH06uHI248zhCLoGR2H2V/HhayYoQog9K
-         UBog==
-X-Received: by 10.140.41.112 with SMTP id y103mr77632qgy.7.1409766060321;
-        Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
+        bh=D8YyfllpIk4vGm1R3COdVOntQhFuqggp7r7PQr3ntl4=;
+        b=PJUY9N+Y9CaffEkM1ZZpQ6NUACcOCmDivBy98sEdOt3i4PBCIuX3GTvwiyYArCx32e
+         Ayf20QkpDLiGzlHb0vNT/w6x0OvWm4m6lem/olxsUdCFhAdSXnMTXKjrVgT2cCej5Lv/
+         PHMt1pGV9VbzULyH1vmgEa0gvow4GfrduBKUyJIIlI5fvQ3FlOcDA81xhqug6SEkBReN
+         EJ8b5iF2u2JDKEFILMJEXtg5fGgJl/QLLmh2+elTNLAdNkRyjYPnVWEAWnMeN/vEH5j+
+         P4gxSAV11H7OdvvQKkpz+76AYdpZ1znXRwbmW2K2cSxlroBIk6r/yfFbgJmf7tDr3Xzc
+         M3Dg==
+X-Received: by 10.140.92.226 with SMTP id b89mr34255qge.33.1409766143878;
+        Wed, 03 Sep 2014 10:42:23 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.106.136 with SMTP id e8ls2848926qgf.36.gmail; Wed, 03 Sep
- 2014 10:41:00 -0700 (PDT)
-X-Received: by 10.140.82.81 with SMTP id g75mr80142qgd.12.1409766060087;
-        Wed, 03 Sep 2014 10:41:00 -0700 (PDT)
-Date: Wed, 3 Sep 2014 10:40:59 -0700 (PDT)
+Received: by 10.140.44.119 with SMTP id f110ls2519469qga.96.gmail; Wed, 03 Sep
+ 2014 10:42:23 -0700 (PDT)
+X-Received: by 10.140.104.109 with SMTP id z100mr49195qge.24.1409766143555;
+        Wed, 03 Sep 2014 10:42:23 -0700 (PDT)
+Date: Wed, 3 Sep 2014 10:42:23 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
 Cc: gingerling@inventati.org
-Message-Id: <4d0cd57b-ce1d-4290-86b5-215ce0b39e24@googlegroups.com>
-In-Reply-To: <5407520E.7060307@inventati.org>
+Message-Id: <2c66c16d-ff01-4c03-b89f-c26294060023@googlegroups.com>
+In-Reply-To: <4d0cd57b-ce1d-4290-86b5-215ce0b39e24@googlegroups.com>
 References: <8ad3373e-8ed0-42b9-b894-b2d679e7e276@googlegroups.com>
  <5407520E.7060307@inventati.org>
-Subject: Re: [tosdr:3197] The new General Data Protection Regulation:
+ <4d0cd57b-ce1d-4290-86b5-215ce0b39e24@googlegroups.com>
+Subject: Re: [tosdr:3198] The new General Data Protection Regulation:
  standarised information policies
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
@@ -74,27 +75,35 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_4919_1928475812.1409766059729"
+	boundary="----=_Part_4866_627333135.1409766143201"
 
-------=_Part_4919_1928475812.1409766059729
+------=_Part_4866_627333135.1409766143201
 Content-Type: text/plain; charset=UTF-8
 
 
 
-Op woensdag 3 september 2014 19:38:26 UTC+2 schreef Anna Morris:
+Op woensdag 3 september 2014 19:40:59 UTC+2 schreef Anna D:
 >
-> On 03/09/14 18:33, Anna D wrote: 
-> > It looks a bit like what Aza Raskin made with his Privacy Icons 
-> > (http://www.azarask.in/blog/post/privacy-icons/). 
 >
-> thanks for interesting post, also, thanks for this link it is fab. 
 >
-> a 
-> x 
+> Op woensdag 3 september 2014 19:38:26 UTC+2 schreef Anna Morris:
+>>
+>> On 03/09/14 18:33, Anna D wrote: 
+>> > It looks a bit like what Aza Raskin made with his Privacy Icons 
+>> > (http://www.azarask.in/blog/post/privacy-icons/). 
+>>
+>> thanks for interesting post, also, thanks for this link it is fab. 
+>>
+>> a 
+>> x 
+>>
+>
+> You can see at the bottom of the tosdr.org homepage that ToS;DR was 
+> inspired by his project ;)
 >
 
-You can see at the bottom of the tosdr.org homepage that ToS;DR was 
-inspired by his project ;)
+Oh and at the first post I meant page 3*1*, which contains the required 
+tables. 
 
 -- 
 tosdr.org | twitter.com/tosdr | github.com/tosdr
@@ -105,14 +114,16 @@ To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_4919_1928475812.1409766059729
+------=_Part_4866_627333135.1409766143201
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><br><br>Op woensdag 3 september 2014 19:38:26 UTC+2 schree=
-f Anna Morris:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-l=
-eft: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">On 03/09/14 18:3=
-3, Anna D wrote:
+<div dir=3D"ltr"><br><br>Op woensdag 3 september 2014 19:40:59 UTC+2 schree=
+f Anna D:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: =
+0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div dir=3D"ltr"><br>=
+<br>Op woensdag 3 september 2014 19:38:26 UTC+2 schreef Anna Morris:<blockq=
+uote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:=
+1px #ccc solid;padding-left:1ex">On 03/09/14 18:33, Anna D wrote:
 <br>&gt; It looks a bit like what Aza Raskin made with his Privacy Icons
 <br>&gt; (<a href=3D"http://www.azarask.in/blog/post/privacy-icons/" target=
 =3D"_blank" onmousedown=3D"this.href=3D'http://www.google.com/url?q\75http%=
@@ -127,8 +138,15 @@ cons/</a>).
 <br>
 <br>a
 <br>x
-<br></blockquote><div><br>You can see at the bottom of the tosdr.org homepa=
-ge that ToS;DR was inspired by his project ;)<br></div></div>
+<br></blockquote><div><br>You can see at the bottom of the <a href=3D"http:=
+//tosdr.org" target=3D"_blank" onmousedown=3D"this.href=3D'http://www.googl=
+e.com/url?q\75http%3A%2F%2Ftosdr.org\46sa\75D\46sntz\0751\46usg\75AFQjCNEIW=
+5Dn4IMbzJWcYbnOv-vBYyev2A';return true;" onclick=3D"this.href=3D'http://www=
+.google.com/url?q\75http%3A%2F%2Ftosdr.org\46sa\75D\46sntz\0751\46usg\75AFQ=
+jCNEIW5Dn4IMbzJWcYbnOv-vBYyev2A';return true;">tosdr.org</a> homepage that =
+ToS;DR was inspired by his project ;)<br></div></div></blockquote><div><br>=
+Oh and at the first post I meant page 3<b>1</b>, which contains the require=
+d tables. <br></div></div>
 
 <p></p>
 
@@ -147,4 +165,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_4919_1928475812.1409766059729--
+------=_Part_4866_627333135.1409766143201--

@@ -1,57 +1,57 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBLWHS6QAKGQEWMMF6MQ@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARB6OKS6QAKGQEJ4EKZEA@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
-Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D288B40910
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:35:13 +0200 (CEST)
-Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
-	by spool.mail.gandi.net (Postfix) with ESMTP id CCEA0142289
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:35:13 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
-Received: from spool.mail.gandi.net ([10.0.21.135])
-	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id vKDKfO99u65D for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 17:35:12 +0200 (CEST)
-Received: from mail-yh0-x237.google.com (mail-yh0-x237.google.com [IPv6:2607:f8b0:4002:c01::237])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 32086142222
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:35:12 +0200 (CEST)
-Received: by mail-yh0-f55.google.com with SMTP id f73sf1667946yha.0
-        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 08:35:11 -0700 (PDT)
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 60F6F40910
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:42:52 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5D1BD226064
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:42:52 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Kf5qZ7sVZRmV for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 17:42:50 +0200 (CEST)
+Received: from mail-qc0-x239.google.com (mail-qc0-x239.google.com [IPv6:2607:f8b0:400d:c01::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B8AA5226069
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:42:50 +0200 (CEST)
+Received: by mail-qc0-f185.google.com with SMTP id r5sf1660257qcx.22
+        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 08:42:49 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
         h=date:from:to:message-id:subject:mime-version:x-original-sender
          :reply-to:precedence:mailing-list:list-id:list-post:list-help
          :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=a6BuCB4gIRTtCfs6ZCaX1eQTPsG0mWKo6Nktl7W/6Hg=;
-        b=t1iMiBAGhnB17jyVhxlREoKfZxRc7xf+/bB9gTO2zRZ8YOWFPLIxHvJsQiLqbNA0Vg
-         j76eBNY6VvTlDJJfb2ysLPHfybBazM4f0+1iIzAJTye3qb7HeY90NcobJ7udJTSZl3bb
-         XfT2c38ZPpZ4k8ulFyqG/mZ7fVz5ykDhSdLCLAJC+GgWFriUPiSRG1pb3sfW2rfiNmAl
-         GP97QMtzOXHRCrl0jbUsr5TxyERBVb5h1QIt+tMLqs0vlkMpJDuFI+8016lcN9+c3xhe
-         ZiVq4rl0Qeo2AYWlKg26Qvg9eDcCdfseTA7af2g1YY4m7xkvX9jcyrzWVzjZnfOJjEzS
-         awAQ==
+        bh=7gaHQdwFvgbTB6qn50buEdPn2zWgf2AefyqD0/f8+zk=;
+        b=HRnb1dZj3AqhHtskTKTMpTtx3XBwaVTJcz6BIolo89crh+i0dTzWE9Rh+ZSP19W5pe
+         tRTObF7uj562x6TVeoi/0zPIyta7TM2qWFfXaPK/jAR5BS2TU+NqWvvxjAx/BIxtZDR6
+         +sU+oaTTJrMTJh3Jfqs05tWKGpT/73gA7N/3kgMX6nbhP69Kyek9Ixj7RKxNwPYqf3i4
+         XYz/2w2NVExBmAFHdda5YxRJgDrT0NKP8uLSW/DeL+pzkbtZdqOWf/zvFVnuOXR/kA92
+         CZe5ewRpZl3gqLqMc+BCjZWEkX+euodMpivt2T47yqt9ikE3PWpiaOq960OG8zgM8or+
+         DGCQ==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
         h=date:from:to:message-id:subject:mime-version:x-original-sender
          :reply-to:precedence:mailing-list:list-id:list-post:list-help
          :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=a6BuCB4gIRTtCfs6ZCaX1eQTPsG0mWKo6Nktl7W/6Hg=;
-        b=Vo4g8EudwuYnSw1mQWVNVWinvNt2yaCHBOvtc0lOYY2txRs6dhLKjg5kN+toed/vew
-         WkeGi2JtWWeDBYMyCUNkq4rygQvmyOTCsgPwErVB8tlGSLIl3XKjgwe4o7B5v2oAHrk8
-         PPRud6pKHcho2Wx0gx7llvEmBSU1CjtgnvI9BfjM3wGJJ/daN7XWb2wZX4UpC6RvnVFv
-         wt+xiJ7yVsR8t7RS4BK6dKOL8rtjOBErirGltn3qEQR/QgiXaGNqr9uGtDqij0Gk5o4T
-         90Q1oCIMYxMLySLqPbprqb+w7qtPM6AMOOQ6vqCmrh9QnIEEw+1uOorH9MRbM2DYjZV/
-         l9TQ==
-X-Received: by 10.140.95.199 with SMTP id i65mr16293qge.38.1409672110660;
-        Tue, 02 Sep 2014 08:35:10 -0700 (PDT)
+        bh=7gaHQdwFvgbTB6qn50buEdPn2zWgf2AefyqD0/f8+zk=;
+        b=xDs/X1mIHDk6UaVsoMcFm6iUGLe1eJtf94REyy0I/YFDpMAombHxdgByV7feiXfgB8
+         9IlaEd4NA/O+Mg58bShZPxgjBwAhNOJy0Tj9lebuKYKxX0DHHfgSmeItzSsV9rDSETY0
+         DlFSTGJQV3vLXVfLOV2KrToZTunqglV1zD/OUNE/e6c3BnmXBhavWpDgQhzvnLzfYd0Y
+         2PgixCnUqqEbDZTiTjkgiAZkzDJwETKSAVDJ3aXUvuih3Uo1s//qffN/gjOdOwRqL6/Q
+         0QEUVa89nVDUjlUyZBYCpZl2fN/J38zQ1eJorkcxV2POFBFpGMruv+r5tinnSm1dOBdR
+         e6Nw==
+X-Received: by 10.140.29.5 with SMTP id a5mr31452qga.20.1409672569843;
+        Tue, 02 Sep 2014 08:42:49 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.30.245 with SMTP id d108ls1620846qgd.68.gmail; Tue, 02 Sep
- 2014 08:35:10 -0700 (PDT)
-X-Received: by 10.140.97.136 with SMTP id m8mr14qge.42.1409672110354;
-        Tue, 02 Sep 2014 08:35:10 -0700 (PDT)
-Date: Tue, 2 Sep 2014 08:35:09 -0700 (PDT)
+Received: by 10.140.100.180 with SMTP id s49ls2249349qge.42.gmail; Tue, 02 Sep
+ 2014 08:42:49 -0700 (PDT)
+X-Received: by 10.140.30.201 with SMTP id d67mr69495qgd.8.1409672569622;
+        Tue, 02 Sep 2014 08:42:49 -0700 (PDT)
+Date: Tue, 2 Sep 2014 08:42:49 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Message-Id: <6ccf2085-4b84-458b-994f-40ce00ac5d5b@googlegroups.com>
-Subject: [tosdr:3178] Wordfeud [bad] Terminate account without notification
+Message-Id: <b9ce3a02-48d7-41d1-8187-6a924ab09dfe@googlegroups.com>
+Subject: [tosdr:3179] Wordfeud [Bad] Delete account
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
@@ -67,62 +67,51 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_2684_1534844794.1409672109757"
+	boundary="----=_Part_496_205533674.1409672569263"
 
-------=_Part_2684_1534844794.1409672109757
+------=_Part_496_205533674.1409672569263
 Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
 
-Point 5 of the ToS states: "[Bertheussen IT] reserves the right to review=
-=20
-materials posted to the Communication Channels and to remove any materials=
-=20
-(including without limitation User Content), at any time, with or without=
-=20
-notice for any reason, at its sole discretion. Bertheussen IT may also=20
-terminate or suspend your access to any Communication Channels at any time,=
-=20
-without notice, for any reason."
+The discussion that is linked to the Wordfeud page directs me to a post 
+that has nothing to do with Wordfeud, so I thought it'd be better to make a 
+new one.
 
-Point 6 of the ToS is even more relentless: "Bertheussen IT may terminate=
-=20
-your account and your access to the Service (or, at Bertheussen IT=E2=80=99=
-s sole=20
-option, applicable portions of the Service) at any time and for any reason.=
-=20
-Bertheussen IT is not required to provide you with any notice or warning=20
-prior to any such termination."
+ToSDR states that "It is impossible to delete your account from this 
+service, according to the AccountKiller blacklist 
+<http://www.accountkiller.com/en/Blacklist>."
 
-ToS: http://wordfeud.com/tos/
+Although it is indeed not possible to delete your account via a webpage, 
+the ToS of Wordfeud (and AccountKiller) states that "You may terminate your 
+account at any time and for any reason by sending an email to 
+support@wordfeud.com". (See http://wordfeud.com/tos/ under par. 6) 
+Therefore I wouldn't say that it is *impossible *to delete your 
+Wordfeud-account. On the contrary, you're allowed to delete your account at 
+all times.
 
---=20
+-- 
 tosdr.org | twitter.com/tosdr | github.com/tosdr
----=20
-You received this message because you are subscribed to the Google Groups "=
-Terms of Service; Didn't Read" group.
-To unsubscribe from this group and stop receiving emails from it, send an e=
-mail to tosdr+unsubscribe@googlegroups.com.
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
 To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_2684_1534844794.1409672109757
+------=_Part_496_205533674.1409672569263
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Point 5 of the ToS states: "[Bertheussen IT] reserves the =
-right to review materials posted to the Communication=20
-Channels and to remove any materials (including without limitation User=20
-Content), at any time, with or without notice for any reason, at its=20
-sole discretion. Bertheussen IT may also terminate or suspend your=20
-access to any Communication Channels at any time, without notice, for=20
-any reason."<br><br>Point 6 of the ToS is even more relentless: "Bertheusse=
-n IT may terminate your account and your access to the Service
- (or, at Bertheussen IT=E2=80=99s sole option, applicable portions of the=
-=20
-Service) at any time and for any reason. Bertheussen IT is not required=20
-to provide you with any notice or warning prior to any such termination."<b=
-r><br>ToS: http://wordfeud.com/tos/<br></div>
+<div dir=3D"ltr">The discussion that is linked to the Wordfeud page directs=
+ me to a post that has nothing to do with Wordfeud, so I thought it'd be be=
+tter to make a new one.<br><br>ToSDR states that "It is impossible to delet=
+e your account from this service, according to the <a href=3D"http://www.ac=
+countkiller.com/en/Blacklist">AccountKiller blacklist</a>."<br><br>Although=
+ it is indeed not possible to delete your account via a webpage, the ToS of=
+ Wordfeud (and AccountKiller) states that "You may terminate your account a=
+t any time and for any reason by sending an email to support@wordfeud.com".=
+ (See http://wordfeud.com/tos/ under par. 6) Therefore I wouldn't say that =
+it is <i>impossible </i>to delete your Wordfeud-account. On the contrary, y=
+ou're allowed to delete your account at all times.<br></div>
 
 <p></p>
 
@@ -141,4 +130,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_2684_1534844794.1409672109757--
+------=_Part_496_205533674.1409672569263--

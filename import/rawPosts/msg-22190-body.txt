@@ -1,80 +1,59 @@
-Return-Path: <tosdr+bncBC3IF2OJ4QORBUGRS6QAKGQED65N27I@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARBI42TCQAKGQEY7CZ77I@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
-Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 9FE0240F80
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:57:06 +0200 (CEST)
-Received: from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161])
-	by spool.mail.gandi.net (Postfix) with ESMTP id 9B315142289
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:57:06 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter30-d.gandi.net
-Received: from spool.mail.gandi.net ([10.0.21.135])
-	by mfilter30-d.gandi.net (mfilter30-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id A6K0M727fyYK for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 17:57:05 +0200 (CEST)
-Received: from mail-ee0-x23e.google.com (mail-ee0-x23e.google.com [IPv6:2a00:1450:4013:c00::23e])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 44595142261
-	for <michiel@michielbdejong.com>; Tue,  2 Sep 2014 17:57:05 +0200 (CEST)
-Received: by mail-ee0-f62.google.com with SMTP id t10sf392494eei.17
-        for <michiel@michielbdejong.com>; Tue, 02 Sep 2014 08:57:05 -0700 (PDT)
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2D53740916
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:32:06 +0200 (CEST)
+Received: from mfilter8-d.gandi.net (mfilter8-d.gandi.net [217.70.178.137])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2A503226062
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:32:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter8-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter8-d.gandi.net (mfilter8-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Y4n3mkKmtTqL for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 20:32:04 +0200 (CEST)
+Received: from mail-qa0-x23e.google.com (mail-qa0-x23e.google.com [IPv6:2607:f8b0:400d:c00::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9B141226064
+	for <michiel@michielbdejong.com>; Tue,  2 Sep 2014 20:32:04 +0200 (CEST)
+Received: by mail-qa0-f62.google.com with SMTP id x12sf601922qac.27
+        for <michiel@michielbdejong.com>; Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
-        h=date:from:to:subject:message-id:mail-followup-to:references
-         :mime-version:content-type:content-disposition:in-reply-to
-         :organization:user-agent:x-original-sender
-         :x-original-authentication-results:reply-to:precedence:mailing-list
-         :list-id:list-post:list-help:list-archive:sender:list-subscribe
-         :list-unsubscribe;
-        bh=1eiEInTWeXj6CgHDnT5XB7dBw9cIBdqWNQIzXzBNAu8=;
-        b=Ag+btwZpGTRrvRRFev0z/NMwttvoL4HYIN08HbElbwK1Vjz8+yUrRkeKmXdk8j+uZ1
-         JuNjlLJXKvnQy4RJs5KEnqQi1WQrNc6glBxxWvuT+JCvT2Dt5bIyuXw3p5v/O4WxK45V
-         R1OT0hQpeoc0AmINo6cjQ0lcQxNpds0DIFkSNaMNXddkP/iVwEpD8TRWg3h//4xmXjD9
-         Aqef9fC/jOtzfa6c/YGjJzYfPu8E1oDdC3hfhb/AuPtQjQC+ZuGe5Eia1s3SlDgR1RZN
-         NikG29ZFRJOTMWU0Isx0s8l84Y+fZFBO4CQREFNigI7Wig4CvYL8tzMXVhqmw7EknEc8
-         HO+w==
-X-Received: by 10.152.18.226 with SMTP id z2mr15865lad.27.1409673424945;
-        Tue, 02 Sep 2014 08:57:04 -0700 (PDT)
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=aLDZVO3M7HxaPReW53vPmd9iC3ZW+r9MGTGEseQs/dU=;
+        b=aU/hfwMivKcG5cg1cT5eA+jktv9+HdibothzreAliTp7cIq+nNtFlT9fAYRs68JgUt
+         ARq7lduVwoeDEah9mO8oS/F58JhZej9Zq18+YIAX/lmyKt85AYDwgx3Oj6BUVg3tAXgi
+         MZcN+SPdq8Jg9BFzWhub55jsvgqyGuzJKPhTYVkewz8KQ2j8BF3s+E2ODfA5DvWJ5MmB
+         14CB8GPZBkSuRLj6Fy71tozjcK8OOx1VAnADgUReluEi/ZhfE78P+UlWfR5RuiucM8Dh
+         CXtTd93sIYsN/2DDiPGH1z1oY/9mjFrDmH1AijjMGBjbaZqfjRa/54vPtmJCNsuiSWVp
+         8vNQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=aLDZVO3M7HxaPReW53vPmd9iC3ZW+r9MGTGEseQs/dU=;
+        b=cA2KY7ML+dHVhQGA264eip0cGfbIoprU1sSgxx1Pb5BfdVZYvSirU2is6Xe3Cyqzgc
+         esGYo+aA5Etb8Bj7is18ZqcOuxQctjd/EVCag02J0Ipnyjy8osILr7cbN6c9W5Y5alwz
+         d6oZBZWRdBr4cde9bfHPkvwy3Tg9IvqNbqqaLLvXPyTMCpbCsuL7IFFy5oVaHmH+/O9C
+         WLM2x84OVa2fVLF7EneE2/14PeMSteQnpGH9oMYTXAN1Oy65IOoSBACAnkoH7xfakFb1
+         UYufzy9Qsze2BK7nJq9OEe/Ok4g/GCYIcLRdOhoJE3pcwDHjcdnhuAy99jB2ZI1amb6b
+         C1Eg==
+X-Received: by 10.140.88.85 with SMTP id s79mr49416qgd.18.1409682723614;
+        Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.152.88.52 with SMTP id bd20ls539472lab.11.gmail; Tue, 02 Sep
- 2014 08:57:04 -0700 (PDT)
-X-Received: by 10.152.120.166 with SMTP id ld6mr3297858lab.0.1409673424195;
-        Tue, 02 Sep 2014 08:57:04 -0700 (PDT)
-Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
-        by gmr-mx.google.com with ESMTPS id gk5si704871wic.1.2014.09.02.08.57.04
-        for <tosdr@googlegroups.com>
-        (version=TLSv1 cipher=RC4-SHA bits=128/128);
-        Tue, 02 Sep 2014 08:57:04 -0700 (PDT)
-Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
-Received: from localhost (localhost [127.0.0.1])
-	by cavendish.fsfeurope.org (Postfix) with ESMTP id 9920363A632
-	for <tosdr@googlegroups.com>; Tue,  2 Sep 2014 17:57:03 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at cavendish
-Received: from cavendish.fsfeurope.org ([127.0.0.1])
-	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id PMS47c9DWNqb for <tosdr@googlegroups.com>;
-	Tue,  2 Sep 2014 17:57:01 +0200 (CEST)
-Received: from localhost (p5DCA3D23.dip0.t-ipconnect.de [93.202.61.35])
-	(using TLSv1 with cipher AES128-SHA (128/128 bits))
-	(Client did not present a certificate)
-	(Authenticated sender: hugo)
-	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DE86263A628
-	for <tosdr@googlegroups.com>; Tue,  2 Sep 2014 17:57:00 +0200 (CEST)
-Date: Tue, 2 Sep 2014 17:57:00 +0200
-From: Hugo Roy <hugo@tosdr.org>
+Received: by 10.140.81.200 with SMTP id f66ls2456026qgd.24.gmail; Tue, 02 Sep
+ 2014 11:32:03 -0700 (PDT)
+X-Received: by 10.140.22.85 with SMTP id 79mr30890qgm.35.1409682723257;
+        Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
+Date: Tue, 2 Sep 2014 11:32:03 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Subject: Re: [tosdr:3180] Wordfeud [bad] User Content
-Message-ID: <20140902155700.GP4723@xps.fritz.box>
-Mail-Followup-To: tosdr@googlegroups.com
-References: <82e59fac-cd72-4d8f-90a8-1c5afefa471f@googlegroups.com>
+Message-Id: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com>
+Subject: [tosdr:3186] Twitter [bad] Right to access
 MIME-Version: 1.0
-Content-Type: multipart/signed; micalg=pgp-sha1;
-	protocol="application/pgp-signature"; boundary="cxMSjUqMQBJIqbX5"
-Content-Disposition: inline
-In-Reply-To: <82e59fac-cd72-4d8f-90a8-1c5afefa471f@googlegroups.com>
-Organization: Terms of Service, =?utf-8?B?RGlkbuKAmQ==?= =?utf-8?Q?t?= Read
-User-Agent: Mutt/1.5.22.1 (2013-10-16)
-X-Original-Sender: hugo@tosdr.org
-X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
- (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
 Precedence: list
 Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
@@ -87,43 +66,72 @@ Sender: tosdr@googlegroups.com
 List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_357_1626562715.1409682723039"
+
+------=_Part_357_1626562715.1409682723039
+Content-Type: text/plain; charset=UTF-8
 
 
---cxMSjUqMQBJIqbX5
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline
+
+<https://lh5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNwg8/s1600/twitter%2Bright%2Bto%2Baccess.jpg>
+(Trying this again, image in previous post didn't work) Under current 
+European law, users/data subjects have the right to access their personal 
+data which the controller has collected (art. 12 Directive 95/46/EC, 
+http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML) 
+and ask for a copy of those personal data. Twitter makes it very hard for 
+users to access their personal data, because they are required to send a *fax 
+*with various (personal) data to Twitter for identification purposes. It's 
+pretty obvious that most people don't have faxes at home anymore.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_357_1626562715.1409682723039
+Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-=E2=86=AA 2014-09-02 Tue 17:29, Anna D <aanmeldingen49@gmail.com>:
-> Not sure if these should be in separate posts, but here goes.
->=20
-> The ToS states that all User Content "are subject, whether in whole or in=
-=20
+<div dir=3D"ltr"><p style=3D"text-align: center; clear: both;" class=3D"sep=
+arator"><a style=3D"margin-left: 1em; margin-right: 1em;" href=3D"https://l=
+h5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNwg8/s=
+1600/twitter%2Bright%2Bto%2Baccess.jpg" imageanchor=3D"1"><img src=3D"https=
+://lh5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNw=
+g8/s320/twitter%2Bright%2Bto%2Baccess.jpg" style=3D"" border=3D"0" height=
+=3D"311" width=3D"320"></a></p>(Trying this again, image in previous post d=
+idn't work) Under current European law, users/data subjects have the right =
+to access
+ their personal data which the controller has collected (art. 12=20
+Directive 95/46/EC, <a href=3D"http://eur-lex.europa.eu/LexUriServ/LexUriSe=
+rv.do?uri=3DCELEX:31995L0046:en:HTML" target=3D"_blank">http://eur-lex.euro=
+pa.eu/<wbr>LexUriServ/LexUriServ.do?uri=3D<wbr>CELEX:31995L0046:en:HTML</a>=
+)
+ and ask for a copy of those personal data. Twitter makes it very hard=20
+for users to access their personal data, because they are required to=20
+send a <b>fax </b>with various (personal) data to Twitter for=20
+identification purposes. It's pretty obvious that most people don't have
+ faxes at home anymore.<br></div>
 
-Can you give a little bit more context please? What is "User
-Content" and what=E2=80=99s the service about?
+<p></p>
 
---=20
-Hugo Roy =20
-Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
-=20
-Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
-Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
-https://emailselfdefense.fsf.org/fr/
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
 
---cxMSjUqMQBJIqbX5
-Content-Type: application/pgp-signature
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2
-
-iQEcBAEBAgAGBQJUBejMAAoJEI0CLJmz17eV0CcIAIXej5JqVHw739WbB6KwxoxZ
-uUQLOnq9M6aD6rROfiGt1BY5ljdLa5OPqs8oL08FiWYt4uxRwxvFg1NE+KjDYTj2
-enaebgn57pwK8ow6k2UYOiJYoI2itb4WoMNlOBm2lA5GqbHVXIDGUkIFNpRjcGCs
-rVfGfgh921q1dJx9DUp4Fu2VGFDkI2lAQaCvQOFEqjhTp9Octk6nJTQa7A/OXtqP
-slnP0OgSO0Z4Bsi/nucRgALiR03oYY0Ci1EzlYLiPefR9zkmYB+R1y4FbkjvEULp
-q6NRLw96rphtOllWBHTA5dlroA5/J6sKinV5vro+W9TIyOnvI9yvp8UBbfPD2Vs=
-=lQF5
------END PGP SIGNATURE-----
-
---cxMSjUqMQBJIqbX5--
+------=_Part_357_1626562715.1409682723039--
