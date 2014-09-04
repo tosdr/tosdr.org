@@ -1,0 +1,171 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBEWK5OHAKGQENGJYFII@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E7B51161740
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 18:13:10 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E3615116550
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 18:13:10 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id rzhpsYnW6RWE for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 18:13:09 +0200 (CEST)
+Received: from mail-qe0-x23c.google.com (mail-qe0-x23c.google.com [IPv6:2607:f8b0:400d:c02::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A4432116555
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 18:13:08 +0200 (CEST)
+Received: by mail-qe0-f60.google.com with SMTP id 2sf1427213qea.25
+        for <anything@michielbdejong.com>; Mon, 08 Jul 2013 09:13:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1qM54RpDhskJLRwT4oy3DbU2Z/fHKlurfE91R3LgpWw=;
+        b=KSVXx5pQgIu/32A8QD4spBK9aOa/2ZT4R+0BeI1giF73tpSPXTAe6Ww9SwWwp+avSO
+         Mo6gXudgtWPbIxWTvU1jlywSjtx9WG9r6QU3UfsfJ8CdmrVn3YfkkVH+dCTX5sMBNVz8
+         oeHl6FX6PYXWkeXyeKaliRthyY0G9sdFrWBSklVuZ/HnyLDLFWj6yiED3ltGlpydTOOS
+         pqJN7puGBfszlth2RSS25ZHvxXsGl8FpjR+KlLfVT5qKtKsMTzDpD69YWGBq/llmumqp
+         1ZH3nphnywsu7DDY/lN/wjHCFTnSzDLbkSPvC1t/FsdVGHDT3iZHSOiSkgkNOlS/djZC
+         nmwQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1qM54RpDhskJLRwT4oy3DbU2Z/fHKlurfE91R3LgpWw=;
+        b=vHuF3hAKQj7uxxFp9Arf16BF1dfyBnfVZtCHVyOOluiTtFtU+Ln2CxVU4K+SqU1Ngq
+         Ib9JbtO2lPVfp2wA1yvZAQizMiAj+KGM2ht0RFviyUoJV+IZGHnR/BkB5CGYPaNSupfx
+         41ukhkvteqcAJkqNBbOUNLBkRGDf6XWuXg4AHOB7KmfOFpKephgaJ9CXKLtf2LhDV2L3
+         9bSu4N8QBHr8TWktMlEQHTBepo98SmYHGyxinkf8P+gjv3JHUwaQA4rtNik52MQDiUwR
+         Ua5hUVV1YELDiNWLnwYhcRjiQHC10tVHBFQbBy4Bq+3UMrerKAnpOggEwk+kD51I54DN
+         pDHg==
+X-Received: by 10.49.12.141 with SMTP id y13mr529291qeb.41.1373299987614;
+        Mon, 08 Jul 2013 09:13:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.50.66 with SMTP id a2ls2021011qeo.41.gmail; Mon, 08 Jul
+ 2013 09:13:06 -0700 (PDT)
+X-Received: by 10.49.94.174 with SMTP id dd14mr528801qeb.14.1373299986819;
+        Mon, 08 Jul 2013 09:13:06 -0700 (PDT)
+Date: Mon, 8 Jul 2013 09:13:06 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <5e8e3172-137d-4bda-8d41-ee19882e6ea4@googlegroups.com>
+In-Reply-To: <d5516f2c-f2c2-4535-8dc9-ecb30a87dad4@googlegroups.com>
+References: <d5516f2c-f2c2-4535-8dc9-ecb30a87dad4@googlegroups.com>
+Subject: [tosdr:2456] Re: You cannot scrape Tumblr Services or Content
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_6474_25081343.1373299986555"
+
+------=_Part_6474_25081343.1373299986555
+Content-Type: text/plain; charset=ISO-8859-1
+
+Just making a note here to disregard this, as it's not terribly relevant to 
+the service.
+
+On Monday, May 6, 2013 6:55:06 AM UTC-5, Ian McGowan wrote:
+>
+> You may not do any of the following while accessing or using the Services: 
+>> (a) access, tamper with, or use non-public areas of the Services, or the 
+>> computer or delivery systems of Tumblr and/or its service providers; (b) 
+>> probe, scan, or test any system or network (particularly for 
+>> vulnerabilities), or otherwise attempt to breach or circumvent any security 
+>> or authentication measures; (c) access or search or attempt to access or 
+>> search the Services by any means (automated or otherwise) other than 
+>> through our currently available, published interfaces that are provided by 
+>> Tumblr (and only pursuant to those terms and conditions), unless you have 
+>> been specifically allowed to do so in a separate agreement with Tumblr, or 
+>> unless permitted by Tumblr's robots.txt file or other robot exclusion 
+>> mechanisms; *(d) scrape the Services, and particularly scrape Content 
+>> (as defined below) from the Services, without Tumblr's express prior 
+>> written consent;* (e) use the Services to send altered, deceptive, or 
+>> false source-identifying information, including without limitation by 
+>> forging TCP-IP packet headers or e-mail headers; or (f) interfere with, or 
+>> disrupt, (or attempt to do so), the access of any Subscriber, host or 
+>> network, including, without limitation, by sending a virus to, spamming, or 
+>> overloading the Services, or by scripted use of the Services in such a 
+>> manner as to interfere with or create an undue burden on the Services.
+>
+>
+> http://www.tumblr.com/policy/en/terms_of_service 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_6474_25081343.1373299986555
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Just making a note here to disregard this, as it's not terribly relevant to=
+ the service.<br><br>On Monday, May 6, 2013 6:55:06 AM UTC-5, Ian McGowan w=
+rote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8e=
+x;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquote class=3D"gmai=
+l_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-lef=
+t-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><span st=
+yle=3D"color:rgb(68,68,68);font-family:'Helvetica Neue',Helvetica,sans-seri=
+f;font-size:15px;line-height:22px">You may not do any of the following whil=
+e accessing or using the Services: (a) access, tamper with, or use non-publ=
+ic areas of the Services, or the computer or delivery systems of Tumblr and=
+/or its service providers; (b) probe, scan, or test any system or network (=
+particularly for vulnerabilities), or otherwise attempt to breach or circum=
+vent any security or authentication measures; (c) access or search or attem=
+pt to access or search the Services by any means (automated or otherwise) o=
+ther than through our currently available, published interfaces that are pr=
+ovided by Tumblr (and only pursuant to those terms and conditions), unless =
+you have been specifically allowed to do so in a separate agreement with Tu=
+mblr, or unless permitted by Tumblr's robots.txt file or other robot exclus=
+ion mechanisms; <b>(d) scrape the Services, and particularly scrape Content=
+ (as defined below) from the Services, without Tumblr's express prior writt=
+en consent;</b> (e) use the Services to send altered, deceptive, or false s=
+ource-identifying information, including without limitation by forging TCP-=
+IP packet headers or e-mail headers; or (f) interfere with, or disrupt, (or=
+ attempt to do so), the access of any Subscriber, host or network, includin=
+g, without limitation, by sending a virus to, spamming, or overloading the =
+Services, or by scripted use of the Services in such a manner as to interfe=
+re with or create an undue burden on the Services.</span></blockquote><div>=
+<br></div><div><a href=3D"http://www.tumblr.com/policy/en/terms_of_service"=
+ target=3D"_blank">http://www.tumblr.com/policy/<wbr>en/terms_of_service</a=
+>&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_6474_25081343.1373299986555--

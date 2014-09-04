@@ -1,0 +1,150 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBFHH6KGAKGQEZEYFELA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 95FC0161743
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 14:01:31 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9350619F383
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 14:01:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id YKnSB9VZYrRe for <anything@michielbdejong.com>;
+	Wed, 22 May 2013 14:01:30 +0200 (CEST)
+Received: from mail-pa0-f59.google.com (mail-pa0-f59.google.com [209.85.220.59])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B283B19F369
+	for <michiel@michielbdejong.com>; Wed, 22 May 2013 14:01:26 +0200 (CEST)
+Received: by mail-pa0-f59.google.com with SMTP id hz10sf640713pad.24
+        for <michiel@michielbdejong.com>; Wed, 22 May 2013 05:01:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=VGd/a3XMzkcQB9eHPlewOEUN4Mf9L+3QUNT5VprZy4k=;
+        b=LeAU5ugAcplMfByjEo8Qt9Cr67H8uiAh92uDEDtKJgUTqbGKUOmiHdAVsQStuROfIc
+         RnRr+1+IwtmkBQLeVPLzEwY9fOfPJhFZTUY/MA8yg4IrnTopJbzcNNY3W+6OXz/8IiXN
+         ipSu4QKfOtHiI0p9REtj5MqIo96dBiDRFi2D1EX6lib5lLv7Hta0bk+bDaUwL2c4ijod
+         GznvN+IKLu0/iyzITr/6lBLOreoeyaO6YoIGFKcL0xObNUEvM9VKi1Sd8kfAYFLHER0J
+         RD8ltFl8DvcV7IOc4oy6/Kf10fnUohEra68/4eluMU6c7XhnxAKiW8GbO9RTX4ykusxj
+         NeuA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=VGd/a3XMzkcQB9eHPlewOEUN4Mf9L+3QUNT5VprZy4k=;
+        b=GOA3jlY4k75/OuoFxF2MyBU8vyP4U1Px0/zJtxFLyWUbs/fyWcc+ChGw8KWrMx6OJY
+         9wlo9DkhWApATAjATEc67HUUIPT2rn268B9KQbIajUAhtdaiPWUUp7dwdRYVmsWVqAKp
+         PZCrnYSYVNZNwurvLurBPwrHtPBkCQm2Ctab2Y/lH21YjruvMJJs85g5kBqu2mUvLZxu
+         Qoz1Ay6+gT6ruq4IQfXxu9oM6/b1Qj9lcDZmEWqi85NT9HTjWBaK1Osi6MwfrDtUhaRa
+         58lBgO6PZHTg9oNnFmJRPFMdvtJmd+jyNBvXdz6V5M1djV2qYMy+5QJEnig65j/oG4Tg
+         DAJQ==
+X-Received: by 10.49.35.179 with SMTP id i19mr605727qej.3.1369224084668;
+        Wed, 22 May 2013 05:01:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.3.5 with SMTP id 5ls736506qey.92.gmail; Wed, 22 May 2013
+ 05:01:24 -0700 (PDT)
+X-Received: by 10.49.110.103 with SMTP id hz7mr577740qeb.5.1369224084150;
+        Wed, 22 May 2013 05:01:24 -0700 (PDT)
+Date: Wed, 22 May 2013 05:01:23 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <13e51474-9449-462e-8229-7922ff83e2ee@googlegroups.com>
+In-Reply-To: <764cee134c883607f15eb3f40903d8df@michielbdejong.com>
+References: <764cee134c883607f15eb3f40903d8df@michielbdejong.com>
+Subject: [tosdr:2187] Re: [Bad] Amazon reserves the right to [...] terminate
+ accounts [...] in its sole discretion.
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_256_832033.1369224083947"
+
+------=_Part_256_832033.1369224083947
+Content-Type: text/plain; charset=ISO-8859-1
+
+This kind of blanket clause is a bit scary without any kind of 
+clarification that you mentioned. In fact, this reminds me of the blog that 
+Hugo mentioned about a woman who's account was terminated because of some 
+unspecified reason.
+
+On Tuesday, March 5, 2013 5:16:45 AM UTC+1, anyt...@michielbdejong.com 
+wrote:
+>
+> "Amazon reserves the right to [...] terminate accounts [...] in its 
+> sole discretion." 
+>
+> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L75 
+>
+> it would be nice if they could at least say "when we feel you breached 
+> these terms" or "when we feel our interests or the interest of other 
+> users or governments are at risk" 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_256_832033.1369224083947
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This kind of blanket clause is a bit scary without any kind of clarificatio=
+n that you mentioned. In fact, this reminds me of the blog that Hugo mentio=
+ned about a woman who's account was terminated because of some unspecified =
+reason.<br><br>On Tuesday, March 5, 2013 5:16:45 AM UTC+1, anyt...@michielb=
+dejong.com wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margi=
+n-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">"Amazon reser=
+ves the right to [...] terminate accounts [...] in its=20
+<br>sole discretion."
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce=
+1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L75" target=
+=3D"_blank">https://github.com/tosdr/<wbr>tosback2/blob/<wbr>265e49bf24a910=
+76495ce1fddf279c<wbr>4638421a66/crawl/amazon.com/<wbr>Conditions%20of%20Use=
+.txt#L75</a>
+<br>
+<br>it would be nice if they could at least say "when we feel you breached=
+=20
+<br>these terms" or "when we feel our interests or the interest of other=20
+<br>users or governments are at risk"
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_256_832033.1369224083947--

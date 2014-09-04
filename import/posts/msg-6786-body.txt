@@ -1,0 +1,168 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBE4W62HAKGQEZTAU2EA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 5F23A161735
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:26:00 +0200 (CEST)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5B04E142062
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:26:00 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id RTUknpK3c0uo for <anything@michielbdejong.com>;
+	Wed, 10 Jul 2013 18:25:58 +0200 (CEST)
+Received: from mail-pd0-x238.google.com (mail-pd0-x238.google.com [IPv6:2607:f8b0:400e:c02::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2B4B114210C
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:25:57 +0200 (CEST)
+Received: by mail-pd0-f184.google.com with SMTP id 10sf2178906pdc.21
+        for <anything@michielbdejong.com>; Wed, 10 Jul 2013 09:25:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=B9l3J1eHASLBXveqTwnb9RXOjsPcXz9wdYk2Rwzh0TU=;
+        b=teakmSkK+bGZB47FV4KtRGMR/DuGG+JEoi4Q8Bl3MY/1lfRgVyE8e7meEryCPFsqND
+         xp9hCqJKhk4sb85VnkYT9OxKYhis6bqlNNKPlLevEKdmTB36FKwST9MIov/1R03EHEdd
+         3irSX6DlVr8TS5Rp/1bGwGOxXUrqN+3qmsgO69D3AhoHivCG29mF57uRoWfc9W9zDfkq
+         nboprEFJMJ8HTxdIo+4i1yE9MXWZbx+nmYJxnooa75PdgW2UA4E4it9VpkS9inHn8E3x
+         7RDjcruO9uDNA8utUYm5+E8nwa3cHXj5OQR1iGZsbAu+OdGAap+dUcJZ4slnXgShWwqh
+         LZhw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=B9l3J1eHASLBXveqTwnb9RXOjsPcXz9wdYk2Rwzh0TU=;
+        b=teZjz3LdL4bEfyW6DSNGGh8iN0YJwYj0yai1ry/RNfijhRF99/Kmh831DlJWuucObx
+         qKkmA5uv5FlBMmXdDIOenL5pdvnt9U+j/OOpyDiDR448FZkLdkBlIkw2o5OIoOVb+TML
+         FGzo+TmZf+Rdzm+ooLH8ic9gKKi3ZC51RX/Q5lLIaHwY/WTo+szXb2yTHNjstneOF6Ab
+         y7E1VGToK77FQcE78Tz2URBzpP1CDueiiHM4Uz2ub0+grj8kxaNuFvH6lEn90KlunbM6
+         M9YTbfBP9xvK8C+bb1x8OdIMnw7PMU++gae6gMJmoLR5lNw3SqBhaJyPXwz/wY9n5+1r
+         hAdA==
+X-Received: by 10.50.22.9 with SMTP id z9mr1708208ige.6.1373473556283;
+        Wed, 10 Jul 2013 09:25:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.30.42 with SMTP id p10ls3927747igh.26.gmail; Wed, 10 Jul
+ 2013 09:25:55 -0700 (PDT)
+X-Received: by 10.50.153.80 with SMTP id ve16mr1181157igb.8.1373473555573;
+        Wed, 10 Jul 2013 09:25:55 -0700 (PDT)
+Date: Wed, 10 Jul 2013 09:25:54 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <12ed18a4-6810-4aee-acc6-11319abd9071@googlegroups.com>
+In-Reply-To: <4a3283c5-e665-47ba-b788-80017210172c@googlegroups.com>
+References: <93f06940-35c2-4739-8e6d-34ceca54697b@googlegroups.com>
+ <4a3283c5-e665-47ba-b788-80017210172c@googlegroups.com>
+Subject: [tosdr:2499] Re: [Bad] Spotify doesn't provide refunds
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2687_24786689.1373473555102"
+
+------=_Part_2687_24786689.1373473555102
+Content-Type: text/plain; charset=ISO-8859-1
+
+I think this is important to mention because it applies if Spotify 
+terminates the terms or suspends your access.
+
+Title: Spotify doesn't provide refunds
+
+Topic: user-info
+
+Summary: If you or Spotify terminate the terms, or if Spotify suspends your 
+access, they won't offer any refunds for any amount you've already paid 
+them.
+
+Score: 15 (mediocre) 
+
+On Wednesday, April 24, 2013 6:38:46 AM UTC-5, Ian McGowan wrote:
+>
+> This has been curated.
+>
+> On Tuesday, April 23, 2013 2:11:24 PM UTC+2, Ian McGowan wrote:
+>>
+>> Spotify does not offer refunds upon termination of their services, either 
+>> by you or Spotify.
+>>
+>> If you or Spotify terminate the Terms, or if Spotify suspends your access 
+>>> to the Spotify Service, you agree that Spotify shall have no liability or 
+>>> responsibility to you and Spotify will not refund any amounts that you have 
+>>> already paid, to the fullest extent permitted under applicable law.
+>>
+>>
+>> https://www.spotify.com/us/legal/end-user-agreement/ 
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2687_24786689.1373473555102
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I think this is important to mention because it applies if Spotify terminat=
+es the terms or suspends your access.<div><br></div><div>Title: Spotify doe=
+sn't provide refunds</div><div><br></div><div>Topic: user-info</div><div><b=
+r></div><div>Summary: If you or Spotify terminate the terms, or if Spotify =
+suspends your access, they won't offer any refunds for any amount you've al=
+ready paid them.</div><div><br></div><div>Score: 15 (mediocre)&nbsp;<br><br=
+>On Wednesday, April 24, 2013 6:38:46 AM UTC-5, Ian McGowan wrote:<blockquo=
+te class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left:=
+ 1px #ccc solid;padding-left: 1ex;">This has been curated.<br><br>On Tuesda=
+y, April 23, 2013 2:11:24 PM UTC+2, Ian McGowan wrote:<blockquote class=3D"=
+gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid=
+;padding-left:1ex">Spotify does not offer refunds upon termination of their=
+ services, either by you or Spotify.<br><div><br></div><blockquote class=3D=
+"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;borde=
+r-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><sp=
+an style=3D"color:rgb(85,85,85);font-family:helvetica,arial,'nimbus sans l'=
+,sans-serif;font-size:14px;line-height:18px">If you or Spotify terminate th=
+e Terms, or if Spotify suspends your access to the Spotify Service, you agr=
+ee that Spotify shall have no liability or responsibility to you and Spotif=
+y will not refund any amounts that you have already paid, to the fullest ex=
+tent permitted under applicable law.</span></blockquote><div><br></div><div=
+><a href=3D"https://www.spotify.com/us/legal/end-user-agreement/" target=3D=
+"_blank">https://www.spotify.com/us/<wbr>legal/end-user-agreement/</a>&nbsp=
+;</div></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2687_24786689.1373473555102--

@@ -1,0 +1,148 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBGUB6OGAKGQEOALAUDI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 962F0161743
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 14:57:01 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 919062260B8
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 14:57:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 8WZWYlrxbSHR for <anything@michielbdejong.com>;
+	Wed, 22 May 2013 14:57:00 +0200 (CEST)
+Received: from mail-qc0-x240.google.com (mail-qc0-x240.google.com [IPv6:2607:f8b0:400d:c01::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id F24912260B5
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 14:56:59 +0200 (CEST)
+Received: by mail-qc0-f192.google.com with SMTP id j10sf629797qcx.19
+        for <anything@michielbdejong.com>; Wed, 22 May 2013 05:56:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=reQQL/x/XhF+4uZ62dPfSEtKlPK7eIeC7tkF7jEy0rc=;
+        b=Fu7Vq90IGNYymBD6+jFArQIr5JdZbh9DzqXdIXvPp8GP9KeR6Cnz0bhoJw4CAs8+b6
+         C7dlcaAIpkYMrA46hjQYbDwW9arcwnve46UOV/5lhdpEKAXnANOWaTpghL0Rd2oc5zYV
+         zMNR/fWEsBCRm7wu8VsKivgdDblhpEm0viLdYUSwXT5QjpzTV9mKySt7RrA0fF3B+EnG
+         yM+SR3XFq6f1Tv7tit67gR5KPPC/Q2YCD/EW8TjNIQnjjblkw3jTeXwJGCiLZolF3kHJ
+         SwJ06c41iwikRibGDlXj+tZdfFIa2V+nzOpmiPGbvREGfl+f25w/5CNWTRYhXHZfB0m0
+         OT/w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=reQQL/x/XhF+4uZ62dPfSEtKlPK7eIeC7tkF7jEy0rc=;
+        b=z/eyh+YT3xWx11pAKicNqSRIvjcAFGlrWLCqkucdffZ516Oa8wbSxTOEe2iRBxj5Tb
+         13VJNnPdYZBHv9IHXvUkNusQ2SI1/rVj7jmF2g2UulumaDTr1U/ZJXxabliyJltyfY93
+         Z0asy+MRhRBZysm94QtHlP0XWV0u3qhdB+42c5Ss9Ty6qFGFn+kMxYVK1q+jbRBZG7hb
+         0R0qx2Wqwxq+BPeva/rW3Rm27ocSc9lopaCSTPuI5ohLNaqBMFHXEEUPqJ4klH24GD/O
+         YG/85bKCPc+QEZDfpoeOVV3Uq43e5xELQdMxY5P6YlK1BuIXwy2Q1R0GXA5wFbgvaf9q
+         gBhw==
+X-Received: by 10.49.0.81 with SMTP id 17mr608782qec.16.1369227418775;
+        Wed, 22 May 2013 05:56:58 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.15.66 with SMTP id v2ls818950qec.98.gmail; Wed, 22 May 2013
+ 05:56:58 -0700 (PDT)
+X-Received: by 10.49.87.232 with SMTP id bb8mr620685qeb.28.1369227418392;
+        Wed, 22 May 2013 05:56:58 -0700 (PDT)
+Date: Wed, 22 May 2013 05:56:57 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <1c219438-3268-4139-90f7-027eb3fd4d92@googlegroups.com>
+In-Reply-To: <8740f645b234e865df3603379c8ae4e3@michielbdejong.com>
+References: <8740f645b234e865df3603379c8ae4e3@michielbdejong.com>
+Subject: [tosdr:2191] Re: [Info] Amazon may sell user data as part of a
+ business transfer
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_636_11873755.1369227417717"
+
+------=_Part_636_11873755.1369227417717
+Content-Type: text/plain; charset=ISO-8859-1
+
+Fairly certain that Cloudant and Tumblr have similar phrasing in their 
+respective clauses relating to this. Good to see it extends past a rather 
+niche service (Cloudant) and into more mainstream ones.
+
+On Tuesday, March 5, 2013 8:46:22 AM UTC+1, anyt...@michielbdejong.com 
+wrote:
+>
+> "customer information generally is one of the transferred business 
+> assets but remains subject to the promises made in any pre-existing 
+> Privacy Notice" 
+>
+> https://github.com/tosdr/tosback2/blob/master/crawl/amazon.com/Amazon.com%20Privacy%20Notice.txt#L83 
+>
+> not sure what we said about this for other services, but i think this 
+> phrasing is quite reasonable. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_636_11873755.1369227417717
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Fairly certain that Cloudant and Tumblr have similar phrasing in their resp=
+ective clauses relating to this. Good to see it extends past a rather niche=
+ service (Cloudant) and into more mainstream ones.<br><br>On Tuesday, March=
+ 5, 2013 8:46:22 AM UTC+1, anyt...@michielbdejong.com wrote:<blockquote cla=
+ss=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #=
+ccc solid;padding-left: 1ex;">"customer information generally is one of the=
+ transferred business=20
+<br>assets but remains subject to the promises made in any pre-existing=20
+<br>Privacy Notice"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/master/crawl/amazon.c=
+om/Amazon.com%20Privacy%20Notice.txt#L83" target=3D"_blank">https://github.=
+com/tosdr/<wbr>tosback2/blob/master/crawl/<wbr>amazon.com/Amazon.com%<wbr>2=
+0Privacy%20Notice.txt#L83</a>
+<br>
+<br>not sure what we said about this for other services, but i think this=
+=20
+<br>phrasing is quite reasonable.
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_636_11873755.1369227417717--

@@ -1,0 +1,240 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBQGB5WGAKGQEYF3AJNA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 1278D161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 13:55:49 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0EB0D19F388
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 13:55:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id feCwokyOcnic for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 13:55:47 +0200 (CEST)
+Received: from mail-pd0-f188.google.com (mail-pd0-f188.google.com [209.85.192.188])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id EB8C619F393
+	for <michiel@michielbdejong.com>; Tue, 21 May 2013 13:55:46 +0200 (CEST)
+Received: by mail-pd0-f188.google.com with SMTP id y11sf174881pdj.25
+        for <michiel@michielbdejong.com>; Tue, 21 May 2013 04:55:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=m/RW8W/RHig/lnXbcWpo6bipLnJE67sk/gjCChir5j8=;
+        b=wQMKdoTm7yBaRynWWZk8IkTX0n3eD9Y1veSnyfZBj/pDIVS4IHU//QK+e0VtlVzc50
+         CPi6APMYwRCMtCfyPS8s3WzFYuRP9h9TYGug4MTaqrb2rhWv3688UMRrbDUikJ5Q98e8
+         S6McLdxax9A5oYP0Q+T54FV/GYAkNPFL9qUa9QEzPd7btcMHZjzVVSUix0UbAUowCHy/
+         aVZA+SirVdO3uap9LHgx4WTg/E1gt4kYhQZNMx2smerwlz5ocTz5iUQlB6Ffp+FNiPMT
+         mKK5e5dcCWplOzrktPirLpVDoBZC+eCPvtn0ppdTokA/P41TnvMW6k9n0fmf8iG0iEh9
+         2Jog==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=m/RW8W/RHig/lnXbcWpo6bipLnJE67sk/gjCChir5j8=;
+        b=1EBEd7vhKXXDtkIHOrFsm5IBf1Q++Wo5rEeCfbpUrdKkraoRYHNHiH4mqVuqtE/TL9
+         8MF48mYXjoy3NzbvUdlfl8ZEA3++4w+CZEOP5ouClqkq759EiasQJaZlQIoiYKhmQtr3
+         r/+rsHgzKLPxxwa3bytbEf/iJ1H7aNZNjaA5W8qa94btvCMtR2vbPrVPHZz50/ciRLQg
+         bibiZmoijmKhdzmamcBI6J/51wyw2ifQfFlGdECPg5f5HPDZ2ovfsA4DS06N0sDWGuot
+         Tes9kyRdwkDbplFBm0aD1dgJQBGfX2zb03z9WVIGMEad1hB5gaKTiWaOpseBdJNMhCeZ
+         zZkA==
+X-Received: by 10.49.121.9 with SMTP id lg9mr83713qeb.39.1369137344958;
+        Tue, 21 May 2013 04:55:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.134.34 with SMTP id ph2ls229585qeb.53.gmail; Tue, 21 May
+ 2013 04:55:44 -0700 (PDT)
+X-Received: by 10.49.95.40 with SMTP id dh8mr89641qeb.19.1369137344473;
+        Tue, 21 May 2013 04:55:44 -0700 (PDT)
+Date: Tue, 21 May 2013 04:55:44 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: duckjr159@gmail.com
+Message-Id: <da62aacc-95c2-4d27-906c-b5405a38610f@googlegroups.com>
+In-Reply-To: <593739ce-041b-45d1-805e-6cf6716f9e72@googlegroups.com>
+References: <f8a24294-8ce1-4183-8970-b696bd83ede8@googlegroups.com>
+ <1098570e-32c8-43f8-8a92-99fd68f915bb@googlegroups.com>
+ <593739ce-041b-45d1-805e-6cf6716f9e72@googlegroups.com>
+Subject: [tosdr:2173] Re: [Info] Amazon requires claims to be resolved by
+ binding arbitration rather than in court
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5543_2864579.1369137344226"
+
+------=_Part_5543_2864579.1369137344226
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This looks bad to me as well. I'm wondering why users would be "powerless"=
+=20
+against them in court. Because Amazon can afford the best lawyers? I think=
+=20
+that's true, but also does a diservice to the legal system we have (at=20
+least in the US). A good argument is a good argument, regardless of your=20
+retainer fees. Arbitration, and waiving your rights to a jury trial=20
+especially, really scares me. The class action waiver is also clearly to=20
+protect Amazon in the event that they have committed some wrong to a large=
+=20
+number of people. I'm not sure how that's beneficial to a user in the least=
+.
+
+Based on the points made here, can we agree this a "bad" point for Amazon?=
+=20
+This is something we might offer for BBC Law in Action.
+
+On Saturday, December 1, 2012 3:47:26 PM UTC+1, Hugo Roy wrote:
+>
+> Why is that a good thing? I see it as extremely bad! You're basically=20
+> giving up on your rights to a jury trial or to a class action lawsuit. I=
+=20
+> clearly don't think arbitration is going to be the right way for users to=
+=20
+> solve problems with Amazon. Aren't these kinds of clauses considered=20
+> abusive in many countries anyway? I know they're probably legal in the US=
+=85=20
+> But I see no win for the user here.
+>
+> On Monday, October 22, 2012 9:57:38 PM UTC+2, Duck X wrote:
+>>
+>> Actually, it's a good thing that Amazon cannot sue you except for=20
+>> copyright and patent infringement because you would be powerless against=
+=20
+>> them in court.
+>>
+>> On Thursday, August 23, 2012 6:50:39 AM UTC-4, Sebasti=E1n Waisbrot wrot=
+e:
+>>>
+>>>
+>>> http://www.amazon.com/gp/help/customer/display.html/ref=3Dfooter_cou?ie=
+=3DUTF8&nodeId=3D508088
+>>> =20
+>>>
+>>>> *Any dispute or claim relating in any way to your visit to Amazon.com=
+=20
+>>>> or to products or services sold or distributed by Amazon or through=20
+>>>> Amazon.com will be resolved by binding arbitration, rather than in cou=
+rt
+>>>> *, except that you may assert claims in small claims court if your=20
+>>>> claims qualify. The Federal Arbitration Act and federal arbitration la=
+w=20
+>>>> apply to this agreement.
+>>>> *There is no judge or jury in arbitration, and court review of an=20
+>>>> arbitration award is limited. However, an arbitrator can award on an=
+=20
+>>>> individual basis the same damages and relief as a court (including=20
+>>>> injunctive and declaratory relief or statutory damages), and must foll=
+ow=20
+>>>> the terms of these Conditions of Use as a court would.
+>>>> *(...)
+>>>> *We each agree that any dispute resolution proceedings will be=20
+>>>> conducted only on an individual basis and not in a class, consolidated=
+ or=20
+>>>> representative action.* If for any reason a claim proceeds in court=20
+>>>> rather than in arbitration *we each waive any right to a jury trial*.=
+=20
+>>>> We also both agree that you or we may bring suit in court to enjoin=20
+>>>> infringement or other misuse of intellectual property rights.
+>>>
+>>> (highlights by Amazon)
+>>>
+>>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_5543_2864579.1369137344226
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This looks bad to me as well. I'm wondering why users would be "powerless" =
+against them in court. Because Amazon can afford the best lawyers? I think =
+that's true, but also does a diservice to the legal system we have (at leas=
+t in the US). A good argument is a good argument, regardless of your retain=
+er fees. Arbitration, and waiving your rights to a jury trial especially, r=
+eally scares me. The class action waiver is also clearly to protect Amazon =
+in the event that they have committed some wrong to a large number of peopl=
+e. I'm not sure how that's beneficial to a user in the least.<div><br></div=
+><div>Based on the points made here, can we agree this a "bad" point for Am=
+azon? This is something we might offer for BBC Law in Action.<br><br>On Sat=
+urday, December 1, 2012 3:47:26 PM UTC+1, Hugo Roy wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #cc=
+c solid;padding-left: 1ex;">Why is that a good thing? I see it as extremely=
+ bad! You're basically giving up on your rights to a jury trial or to a cla=
+ss action lawsuit. I clearly don't think arbitration is going to be the rig=
+ht way for users to solve problems with Amazon. Aren't these kinds of claus=
+es considered abusive in many countries anyway? I know they're probably leg=
+al in the US=85 But I see no win for the user here.<br><br>On Monday, Octob=
+er 22, 2012 9:57:38 PM UTC+2, Duck X wrote:<blockquote class=3D"gmail_quote=
+" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex">Actually, it's a good thing that Amazon cannot sue you except for c=
+opyright and patent infringement because you would be powerless against the=
+m in court.<br><br>On Thursday, August 23, 2012 6:50:39 AM UTC-4, Sebasti=
+=E1n Waisbrot wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;mar=
+gin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"><div><a href=3D=
+"http://www.amazon.com/gp/help/customer/display.html/ref=3Dfooter_cou?ie=3D=
+UTF8&amp;nodeId=3D508088" target=3D"_blank">http://www.amazon.com/gp/help/<=
+wbr>customer/display.html/ref=3D<wbr>footer_cou?ie=3DUTF8&amp;nodeId=3D<wbr=
+>508088</a>&nbsp;</div><blockquote class=3D"gmail_quote" style=3D"margin:0p=
+x 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);bo=
+rder-left-style:solid;padding-left:1ex"><b>Any dispute or claim relating in=
+ any way to your visit to Amazon.com or to products or services sold or dis=
+tributed by Amazon or through Amazon.com will be resolved by binding arbitr=
+ation, rather than in court</b>, except that you may assert claims in small=
+ claims court if your claims qualify. The Federal Arbitration Act and feder=
+al arbitration law apply to this agreement.<br><b>There is no judge or jury=
+ in arbitration, and court review of an arbitration award is limited. Howev=
+er, an arbitrator can award on an individual basis the same damages and rel=
+ief as a court (including injunctive and declaratory relief or statutory da=
+mages), and must follow the terms of these Conditions of Use as a court wou=
+ld.<br></b>(...)<br><b>We each agree that any dispute resolution proceeding=
+s will be conducted only on an individual basis and not in a class, consoli=
+dated or representative action.</b>&nbsp;If for any reason a claim proceeds=
+ in court rather than in arbitration&nbsp;<b>we each waive any right to a j=
+ury trial</b>. We also both agree that you or we may bring suit in court to=
+ enjoin infringement or other misuse of intellectual property rights.</bloc=
+kquote><div>(highlights by Amazon)</div><div><br></div></blockquote></block=
+quote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_5543_2864579.1369137344226--

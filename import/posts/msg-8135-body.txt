@@ -1,0 +1,146 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBSG6SSIAKGQEA3M3UDY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 75A39161747
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 20:04:59 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 727B41FA016
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 20:04:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id w+8KkylS+3ES for <anything@michielbdejong.com>;
+	Fri,  9 Aug 2013 20:04:57 +0200 (CEST)
+Received: from mail-oa0-x239.google.com (mail-oa0-x239.google.com [IPv6:2607:f8b0:4003:c02::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A7550117C42
+	for <michiel@michielbdejong.com>; Fri,  9 Aug 2013 20:04:57 +0200 (CEST)
+Received: by mail-oa0-f57.google.com with SMTP id m1sf1232565oag.12
+        for <michiel@michielbdejong.com>; Fri, 09 Aug 2013 11:04:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=ctD7aRX2PptML4HligZ5RMlFaqDvqkHS3URBxzY3K8A=;
+        b=vYsTn5tnRhXwWkBAVwFBnc2t97vX0GwhFZSUQiyDkNUVdSoiV3sUk6enQBzd6LeVxG
+         Io5MwtooT/RJwJp4HwdJboh7zvW2LpkttlnJ/938WA+D5vH53cmmvObIsXqLzAqSdBSn
+         I2P5NybjanTpBE9+NRfKxWIuQiK9LE4P7DosOIIaHnb2m8c8LZ9YuKfMBGl7qU8RHLYV
+         JGOMSTsBfMCkUHNKlScVvTv131kdXoXIb9jUSD1XtCML/LqHVsgEd8vRqPXCsLKCxE7y
+         I7oaWJRT7zlX8xlS3FrVpjnV6XApXMpA9Bcc05SumOrGi8MmmTqrm798F/ueE0XHQmto
+         9Tlg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=ctD7aRX2PptML4HligZ5RMlFaqDvqkHS3URBxzY3K8A=;
+        b=gGWksFCq+ygfkPmju/wofmt5LhOvFR+HpQCXGvYydHzylKG8zzorcFyV/PXf9icii0
+         gVn1D5SjgeZvtUghZkEOQu6IDf1P56QX1ix88zOKagTcjBHVFn3at+N6ZIfGcGShl61L
+         W1GeqKPjcglScglIwc4ZardAtBOUqvMKloV0Zzu327emv6ERLVMDnh73MuT8XhqgOhb8
+         I9NnE+5fXaILnenKdyQXRq+HlzpCmuJGPfH2mse9nzBeCiKAxE9Xd9fviij6ceQip82P
+         J/Nn03bBncfOLDLmUB9xqhglwD71IPlKdVc+gtEODVkbizaAFW+W56u6RkcN2duxgEf9
+         ybng==
+X-Received: by 10.49.35.225 with SMTP id l1mr414569qej.1.1376071496267;
+        Fri, 09 Aug 2013 11:04:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.16.200 with SMTP id i8ls1644986qed.65.gmail; Fri, 09 Aug
+ 2013 11:04:55 -0700 (PDT)
+X-Received: by 10.49.30.8 with SMTP id o8mr417293qeh.36.1376071495943;
+        Fri, 09 Aug 2013 11:04:55 -0700 (PDT)
+Date: Fri, 9 Aug 2013 11:04:55 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <4cdd4063-86ab-4c25-87f1-51da186e298d@googlegroups.com>
+In-Reply-To: <33276af1-c941-4576-b76a-f4b70291cf1d@googlegroups.com>
+References: <33276af1-c941-4576-b76a-f4b70291cf1d@googlegroups.com>
+Subject: [tosdr:2633] Re: [neutral] Does not price match competitors
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_262_11273861.1376071495757"
+
+------=_Part_262_11273861.1376071495757
+Content-Type: text/plain; charset=ISO-8859-1
+
+I don't think this is relevant.
+
+On Sunday, May 12, 2013 8:27:00 AM UTC-5, Robin Monks wrote:
+>
+> Microsoft Store does not have a price match guarantee. We will not match 
+>> the advertised price other retailers offer for the same items
+>>
+>>  
+>>
+>> From <
+>> http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/
+>> > 
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_262_11273861.1376071495757
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I don't think this is relevant.<br><br>On Sunday, May 12, =
+2013 8:27:00 AM UTC-5, Robin Monks wrote:<blockquote class=3D"gmail_quote" =
+style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-l=
+eft: 1ex;"><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.=
+8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-st=
+yle:solid;padding-left:1ex"><p style=3D"margin:0in;font-family:Calibri;font=
+-size:11.0pt">Microsoft Store does
+not have a price match guarantee. We will not match the advertised price ot=
+her
+retailers offer for the same items</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsO=
+fUseAndSalePage/ThemeID.27659600/" target=3D"_blank">http://www.microsoftst=
+ore.<wbr>com/store/msca/en_CA/<wbr>DisplayTermsOfUseAndSalePage/<wbr>ThemeI=
+D.27659600/</a>&gt;&nbsp;</p></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_262_11273861.1376071495757--

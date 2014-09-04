@@ -1,0 +1,121 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBSWAQCGAKGQEKML55BA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 0BF76161735
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 21:49:34 +0200 (CEST)
+Received: from mfilter22-d.gandi.net (mfilter22-d.gandi.net [217.70.178.150])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 08B8B1161D4
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 21:49:34 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter22-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter22-d.gandi.net (mfilter22-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id GKrSLtXQajZ2 for <anything@michielbdejong.com>;
+	Tue, 30 Apr 2013 21:49:32 +0200 (CEST)
+Received: from mail-wi0-x237.google.com (mail-wi0-x237.google.com [IPv6:2a00:1450:400c:c05::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6B7F9116290
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 21:49:32 +0200 (CEST)
+Received: by mail-wi0-f183.google.com with SMTP id m6sf215879wiv.20
+        for <anything@michielbdejong.com>; Tue, 30 Apr 2013 12:49:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition;
+        bh=p2+nJ34Mt6DHpG55Nb9NPoFk29+fdyBwaR0VFwcHvso=;
+        b=lW7a9XZnhpnzoA7HiG6KjYJC5WokWcFwXAXfC7WAYeJtUQQE0jVl2hGqHD+Ry6Oykh
+         XtGImsqPTUQq+7ASkIkHqTiKACOclEU8GvKhDNtWT9+SEQPkUyOrL+HP67pQgJG/5nQK
+         tEKswJ6bd2pZnOL7q/r5FXRufcit1rF/qJbcmFnXREqb55KMA7ozsZ2FOsyuVC5BV8c+
+         0nW6/8muKIcHQa8wcCr8WKSHo2VgWlT6S2Ml/0EenL9IECUQdBn8HMQl29APyd04Ik0V
+         pS0kv2FhqjWJ/8LyVGzI2ZgWvV/BiBJvGs9EE17WuZgqja3wK7vnb3ZRtiiFb63/xo3a
+         osGQ==
+X-Received: by 10.180.211.166 with SMTP id nd6mr141210wic.11.1367351370838;
+        Tue, 30 Apr 2013 12:49:30 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.90.48 with SMTP id bt16ls1055364wib.24.canary; Tue, 30 Apr
+ 2013 12:49:30 -0700 (PDT)
+X-Received: by 10.14.111.73 with SMTP id v49mr2987993eeg.2.1367351370266;
+        Tue, 30 Apr 2013 12:49:30 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si8243786eeu.1.2013.04.30.12.49.30
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 30 Apr 2013 12:49:30 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id EA41363B431
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 21:49:29 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id mUFMU9-Tv1tS for <tosdr@googlegroups.com>;
+	Tue, 30 Apr 2013 21:49:18 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id EC20E63AF73
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 21:49:17 +0200 (CEST)
+Date: Tue, 30 Apr 2013 21:49:16 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1909] JAGEX [neutral] Failing to follow games rules is prohibited
+Message-ID: <20130430194916.GG27348@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <eb882892-ec66-4b97-bf25-7b8854dc9d84@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <eb882892-ec66-4b97-bf25-7b8854dc9d84@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le ven. 26/04/13, 15:26, Robin Monks <devlinks@gmail.com>:
+> Applies to http://jagex.com http://runescape.com/ http://waroflegends.com 
+> http://www.transformersuniverse.com/ http://www.funorb.com/
+> 
+> You must comply with the current version of any rules, guidelines, codes of 
+> > conduct or instructions specified in any Jagex Product including our game 
+> > rules, the current version of which is linked to here<http://www.jagex.com/g=runescape/kbase/guid/rules_of_conduct>(
+> > http://www.jagex.com/g=runescape/kbase/guid/rules_of_conduct). Any use of 
+> > a Jagex Product not in accordance with the game rules exceeds the scope of 
+> > the license granted by these terms and conditions and is prohibited.
+> >
+> >  
+> >
+> > From <http://www.jagex.com/g=runescape/terms/terms.ws> 
+> >
+> 
+
+Hardly surprising. We shouldn't need to mention that I think.
+
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

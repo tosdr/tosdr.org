@@ -2,7 +2,7 @@ var Imap = require('imap'),
     inspect = require('util').inspect,
     fs = require('fs');
 
-var imap = new Imap(JSON.parse(fs.readFileSync('imapCredentials.js')));
+var imap = new Imap(JSON.parse(fs.readFileSync('../imapCredentials.js')));
 
 function openInbox(cb) {
   imap.openBox('INBOX', true, cb);

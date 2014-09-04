@@ -1,0 +1,302 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBG536OGAKGQEXSRG6FY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 6F48E161744
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 17:00:49 +0200 (CEST)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6B81814205F
+	for <anything@michielbdejong.com>; Wed, 22 May 2013 17:00:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id N7JC1FLBhUmA for <anything@michielbdejong.com>;
+	Wed, 22 May 2013 17:00:47 +0200 (CEST)
+Received: from mail-oa0-f60.google.com (mail-oa0-f60.google.com [209.85.219.60])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 216E71420B6
+	for <michiel@michielbdejong.com>; Wed, 22 May 2013 17:00:46 +0200 (CEST)
+Received: by mail-oa0-f60.google.com with SMTP id h1sf659057oag.15
+        for <michiel@michielbdejong.com>; Wed, 22 May 2013 08:00:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=N3O22wSpgv5X4wViVsv+tYK1JoidFq174h6dT8AZZ04=;
+        b=AGAH2eRwFzRHcr7OXGAQIf/PYx4UJnzIv9L8J+tK0EtsfMyj84BhO85KgnyhFr7ULM
+         EosW+tqN6q6iTF9BrIC4FXq1wWJPu9eaCeiDuQYf+VsugkoM22uxuCUNg75zhldpwl6K
+         YO7eYkeQVZYHwvOid8lA/mUVcxvlxjo/pBik0dU4DQHMqqL3r1TYW5uunRFSkHwTHrvD
+         sDj792hoduA21/3d31QXZks9OnLjs6FzKwejdionLaMd0hBPWSFujuSPN2HJJlxl1snv
+         CTTL7VCjpM7C3At7Q6o7K6w0z1trzF9g+QM8Lq9JFJEgkLMKVRf15FihRhBj59LT0ePB
+         Q5Rg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=N3O22wSpgv5X4wViVsv+tYK1JoidFq174h6dT8AZZ04=;
+        b=USDlZ+knzMfYgOt6qHlR4MTJHnJYfzCDnrQfZoE4WUVpvd565Yv7AwOQVPcwy6f1uu
+         X6Jju1QuceExR5D+nNsBbZsCOf5BZEnQGbYH/U/YCFM6oh+YZzb06kVDw2GF34VF7G76
+         t3258tJzXAyQN92UfzFe9OOEIKX2YU48HQJsmKv1hYdcmv/SnnTAEvG39AHC24iRIVpz
+         R7t3zoaZfrCzt+iucjkV41rBuWU0f3F25NeN/lMIWHNSX156Jh3gG9EGKjUIjIURIrSW
+         yRDqU9RxZ0n4vAOpg+JNi5FhvR+Xlha+Zq4COw3QcRgb38evi+GTPXVA+a4GwP9MHaSj
+         mpdw==
+X-Received: by 10.182.99.195 with SMTP id es3mr273386obb.23.1369234844396;
+        Wed, 22 May 2013 08:00:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.65.163 with SMTP id y3ls482289obs.5.gmail; Wed, 22 May
+ 2013 08:00:43 -0700 (PDT)
+X-Received: by 10.182.99.195 with SMTP id es3mr273330obb.23.1369234843312;
+        Wed, 22 May 2013 08:00:43 -0700 (PDT)
+Date: Wed, 22 May 2013 08:00:42 -0700 (PDT)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Cc: duckjr159@gmail.com
+Message-Id: <1aa2fcba-16ae-4c18-8036-091e597a3aff@googlegroups.com>
+In-Reply-To: <da62aacc-95c2-4d27-906c-b5405a38610f@googlegroups.com>
+References: <f8a24294-8ce1-4183-8970-b696bd83ede8@googlegroups.com>
+ <1098570e-32c8-43f8-8a92-99fd68f915bb@googlegroups.com>
+ <593739ce-041b-45d1-805e-6cf6716f9e72@googlegroups.com>
+ <da62aacc-95c2-4d27-906c-b5405a38610f@googlegroups.com>
+Subject: [tosdr:2193] Re: [Info] Amazon requires claims to be resolved by
+ binding arbitration rather than in court
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5023_25629829.1369234842244"
+
+------=_Part_5023_25629829.1369234842244
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+For what it's worth, binding arbitration and class action waivers are=20
+something Hugo and I have recently been discussing at some length over in=
+=20
+the Sony Entertainment thread<https://groups.google.com/forum/?fromgroups=
+=3D#!msg/tosdr/di_y5K5pzZw/4OEqTmUteFEJ>.=20
+As I said there, since the Supreme Court's decision in 2010, these are=20
+becoming standard. That doesn't mean they're *good*, it just means they're=
+=20
+standard.
+
+In general, they do reduce consumers' rights. On the plus side, arbitration=
+=20
+is usually much faster, more convenient, and less expensive than going to=
+=20
+court, so it can be a better option for both parties in smaller disputes=20
+(which most consumer disputes are). In fact, they can actually be more=20
+beneficial to the consumer than to the corporation: it may be too expensive=
+=20
+for a consumer to bring a smaller dispute (less than around $10,000) to=20
+court, and an unscrupulous large entity can drive up court costs to force a=
+=20
+weaker party to drop a legitimate suit. However, if both parties are bound=
+=20
+to arbitration, it may be easier for a consumer to bring a small dispute=20
+against a large entity. Arbitration agreements *can* be written to be=20
+consumer-friendly.
+
+It's class action waivers that I have a bigger problem with, and I discuss=
+=20
+those in more detail over in the other thread.
+
+Hannah =20
+
+On Tuesday, May 21, 2013 4:55:44 AM UTC-7, Ian McGowan wrote:
+>
+> This looks bad to me as well. I'm wondering why users would be "powerless=
+"=20
+> against them in court. Because Amazon can afford the best lawyers? I thin=
+k=20
+> that's true, but also does a diservice to the legal system we have (at=20
+> least in the US). A good argument is a good argument, regardless of your=
+=20
+> retainer fees. Arbitration, and waiving your rights to a jury trial=20
+> especially, really scares me. The class action waiver is also clearly to=
+=20
+> protect Amazon in the event that they have committed some wrong to a larg=
+e=20
+> number of people. I'm not sure how that's beneficial to a user in the lea=
+st.
+>
+> Based on the points made here, can we agree this a "bad" point for Amazon=
+?=20
+> This is something we might offer for BBC Law in Action.
+>
+> On Saturday, December 1, 2012 3:47:26 PM UTC+1, Hugo Roy wrote:
+>>
+>> Why is that a good thing? I see it as extremely bad! You're basically=20
+>> giving up on your rights to a jury trial or to a class action lawsuit. I=
+=20
+>> clearly don't think arbitration is going to be the right way for users t=
+o=20
+>> solve problems with Amazon. Aren't these kinds of clauses considered=20
+>> abusive in many countries anyway? I know they're probably legal in the U=
+S=85=20
+>> But I see no win for the user here.
+>>
+>> On Monday, October 22, 2012 9:57:38 PM UTC+2, Duck X wrote:
+>>>
+>>> Actually, it's a good thing that Amazon cannot sue you except for=20
+>>> copyright and patent infringement because you would be powerless agains=
+t=20
+>>> them in court.
+>>>
+>>> On Thursday, August 23, 2012 6:50:39 AM UTC-4, Sebasti=E1n Waisbrot wro=
+te:
+>>>>
+>>>>
+>>>> http://www.amazon.com/gp/help/customer/display.html/ref=3Dfooter_cou?i=
+e=3DUTF8&nodeId=3D508088
+>>>> =20
+>>>>
+>>>>> *Any dispute or claim relating in any way to your visit to Amazon.com=
+=20
+>>>>> or to products or services sold or distributed by Amazon or through=
+=20
+>>>>> Amazon.com will be resolved by binding arbitration, rather than in co=
+urt
+>>>>> *, except that you may assert claims in small claims court if your=20
+>>>>> claims qualify. The Federal Arbitration Act and federal arbitration l=
+aw=20
+>>>>> apply to this agreement.
+>>>>> *There is no judge or jury in arbitration, and court review of an=20
+>>>>> arbitration award is limited. However, an arbitrator can award on an=
+=20
+>>>>> individual basis the same damages and relief as a court (including=20
+>>>>> injunctive and declaratory relief or statutory damages), and must fol=
+low=20
+>>>>> the terms of these Conditions of Use as a court would.
+>>>>> *(...)
+>>>>> *We each agree that any dispute resolution proceedings will be=20
+>>>>> conducted only on an individual basis and not in a class, consolidate=
+d or=20
+>>>>> representative action.* If for any reason a claim proceeds in court=
+=20
+>>>>> rather than in arbitration *we each waive any right to a jury trial*.=
+=20
+>>>>> We also both agree that you or we may bring suit in court to enjoin=
+=20
+>>>>> infringement or other misuse of intellectual property rights.
+>>>>
+>>>> (highlights by Amazon)
+>>>>
+>>>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_5023_25629829.1369234842244
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+For what it's worth, binding arbitration and class action waivers are somet=
+hing Hugo and I have recently been discussing at some length over in the <a=
+ href=3D"https://groups.google.com/forum/?fromgroups=3D#!msg/tosdr/di_y5K5p=
+zZw/4OEqTmUteFEJ">Sony Entertainment thread</a>. As I said there, since the=
+ Supreme Court's decision in 2010, these are becoming standard. That doesn'=
+t mean they're <i>good</i>, it just means they're standard.<div><br></div><=
+div>In general, they do reduce consumers' rights. On the plus side, arbitra=
+tion is usually much faster, more convenient, and less expensive than going=
+ to court, so it can be a better option for both parties in smaller dispute=
+s (which most consumer disputes are). In fact, they can actually be more be=
+neficial to the consumer than to the corporation: it may be too expensive f=
+or a consumer to bring a smaller dispute (less than around $10,000) to cour=
+t, and an unscrupulous large entity can drive up court costs to force a wea=
+ker party to drop a legitimate suit. However, if both parties are bound to =
+arbitration, it may be easier for a consumer to bring a small dispute again=
+st a large entity. Arbitration agreements <i>can</i>&nbsp;be written to be =
+consumer-friendly.</div><div><br></div><div>It's class action waivers that =
+I have a bigger problem with, and I discuss those in more detail over in th=
+e other thread.</div><div><br></div><div>Hannah&nbsp;&nbsp;</div><div><br>O=
+n Tuesday, May 21, 2013 4:55:44 AM UTC-7, Ian McGowan wrote:<blockquote cla=
+ss=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #=
+ccc solid;padding-left: 1ex;">This looks bad to me as well. I'm wondering w=
+hy users would be "powerless" against them in court. Because Amazon can aff=
+ord the best lawyers? I think that's true, but also does a diservice to the=
+ legal system we have (at least in the US). A good argument is a good argum=
+ent, regardless of your retainer fees. Arbitration, and waiving your rights=
+ to a jury trial especially, really scares me. The class action waiver is a=
+lso clearly to protect Amazon in the event that they have committed some wr=
+ong to a large number of people. I'm not sure how that's beneficial to a us=
+er in the least.<div><br></div><div>Based on the points made here, can we a=
+gree this a "bad" point for Amazon? This is something we might offer for BB=
+C Law in Action.<br><br>On Saturday, December 1, 2012 3:47:26 PM UTC+1, Hug=
+o Roy wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left=
+:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Why is that a good thin=
+g? I see it as extremely bad! You're basically giving up on your rights to =
+a jury trial or to a class action lawsuit. I clearly don't think arbitratio=
+n is going to be the right way for users to solve problems with Amazon. Are=
+n't these kinds of clauses considered abusive in many countries anyway? I k=
+now they're probably legal in the US=85 But I see no win for the user here.=
+<br><br>On Monday, October 22, 2012 9:57:38 PM UTC+2, Duck X wrote:<blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1=
+px #ccc solid;padding-left:1ex">Actually, it's a good thing that Amazon can=
+not sue you except for copyright and patent infringement because you would =
+be powerless against them in court.<br><br>On Thursday, August 23, 2012 6:5=
+0:39 AM UTC-4, Sebasti=E1n Waisbrot wrote:<blockquote class=3D"gmail_quote"=
+ style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-lef=
+t:1ex"><div><a href=3D"http://www.amazon.com/gp/help/customer/display.html/=
+ref=3Dfooter_cou?ie=3DUTF8&amp;nodeId=3D508088" target=3D"_blank">http://ww=
+w.amazon.com/gp/help/<wbr>customer/display.html/ref=3D<wbr>footer_cou?ie=3D=
+UTF8&amp;nodeId=3D<wbr>508088</a>&nbsp;</div><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-col=
+or:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><b>Any disput=
+e or claim relating in any way to your visit to Amazon.com or to products o=
+r services sold or distributed by Amazon or through Amazon.com will be reso=
+lved by binding arbitration, rather than in court</b>, except that you may =
+assert claims in small claims court if your claims qualify. The Federal Arb=
+itration Act and federal arbitration law apply to this agreement.<br><b>The=
+re is no judge or jury in arbitration, and court review of an arbitration a=
+ward is limited. However, an arbitrator can award on an individual basis th=
+e same damages and relief as a court (including injunctive and declaratory =
+relief or statutory damages), and must follow the terms of these Conditions=
+ of Use as a court would.<br></b>(...)<br><b>We each agree that any dispute=
+ resolution proceedings will be conducted only on an individual basis and n=
+ot in a class, consolidated or representative action.</b>&nbsp;If for any r=
+eason a claim proceeds in court rather than in arbitration&nbsp;<b>we each =
+waive any right to a jury trial</b>. We also both agree that you or we may =
+bring suit in court to enjoin infringement or other misuse of intellectual =
+property rights.</blockquote><div>(highlights by Amazon)</div><div><br></di=
+v></blockquote></blockquote></blockquote></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_5023_25629829.1369234842244--

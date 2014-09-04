@@ -1,0 +1,310 @@
+Return-Path: <tosdr+bncBCFJJRF5WYBBBC7NVCGQKGQEN6NV22Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 209D0161735
+	for <anything@michielbdejong.com>; Sat,  1 Jun 2013 19:59:47 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1D81C17808D
+	for <anything@michielbdejong.com>; Sat,  1 Jun 2013 19:59:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KT3HiNsOjE19 for <anything@michielbdejong.com>;
+	Sat,  1 Jun 2013 19:59:45 +0200 (CEST)
+Received: from mail-gg0-x237.google.com (mail-gg0-x237.google.com [IPv6:2607:f8b0:4002:c02::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 17802178092
+	for <michiel@michielbdejong.com>; Sat,  1 Jun 2013 19:59:41 +0200 (CEST)
+Received: by mail-gg0-f183.google.com with SMTP id q1sf842045ggm.10
+        for <michiel@michielbdejong.com>; Sat, 01 Jun 2013 10:59:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-ironport-anti-spam-filtered
+         :x-ironport-anti-spam-result:x-ironport-av:x-spam-status
+         :x-spam-level:subject:from:to:cc:date:message-id:mime-version
+         :x-mailer:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=UPjkle2MW2ZxMNV8VvTbOgigFZOOziEq3snGq8noyOY=;
+        b=f7rIEKGiTOR3/BUL9EhKJsEN2SyQQcC9EDtnp5ChpXMz4Lvgppd/BqYC+Mnae5usqZ
+         q5TigXdioJvI8MLzKAEzeAfcPGLtO/QlL/GzalbGPPtvXJdcT5JVc6x+3N0ZUDQWQdmF
+         ABskpoA4BItcNXO3fgkbxTmaf7PTU8zgvsTo59vKYshuQZ3vcHrnadXGwYfBTT2GGDFc
+         4pfTur9PADKCLrFia7hHx52yXYtkaWZuX728YDxXRF3kpYZESr9t7raTUik2e9/WvxhX
+         EKgwhsIYaeZD6VHrfsCGIChpXeVTYb0rSXCEozhA2HZtA08h3HrVQr6mSLLsKptnTZNX
+         Zu8w==
+X-Received: by 10.50.102.71 with SMTP id fm7mr987098igb.7.1370109580741;
+        Sat, 01 Jun 2013 10:59:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.61.230 with SMTP id t6ls1146655igr.7.canary; Sat, 01 Jun
+ 2013 10:59:39 -0700 (PDT)
+X-Received: by 10.42.64.143 with SMTP id g15mr12151676ici.30.1370109579463;
+        Sat, 01 Jun 2013 10:59:39 -0700 (PDT)
+Received: from iport-c3-out.ucsd.edu (iport-c3-out.ucsd.edu. [132.239.0.119])
+        by gmr-mx.google.com with ESMTPS id b5si477222igx.3.2013.06.01.10.59.39
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 01 Jun 2013 10:59:39 -0700 (PDT)
+Received-SPF: neutral (google.com: 132.239.0.119 is neither permitted nor denied by best guess record for domain of jesse@wefu.org) client-ip=132.239.0.119;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AowFAF41qlGE7/kU/2dsb2JhbABAGoMJAS9DgnmpIosihwB8FnQYAoIzVjUCJgJHBAETJ4dnAw8HBTKnQIgWA4h2F4EmixsBgS2BOIJLgRQDgxwBhgOIDoc5hGKFR0cHhSCBWIFXgUg
+X-IronPort-AV: E=Sophos;i="4.87,784,1363158000"; 
+   d="scan'208";a="239130152"
+Received: from smtp-tpcs.ucsd.edu ([132.239.249.20])
+  by iport-c3-out.ucsd.edu with ESMTP; 01 Jun 2013 10:59:37 -0700
+Received: from localhost (unknown [209.134.71.253])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by smtp-tpcs.ucsd.edu (Postfix) with ESMTPSA id 980D97FDF5;
+	Sat,  1 Jun 2013 10:59:37 -0700 (PDT)
+Subject: [tosdr:2262] Differences between the services/*.json files and the
+ tosback2/rules/*.xml files
+From: Jesse Weinstein <jesse@wefu.org>
+To: tosdr <tosdr@googlegroups.com>
+Cc: team <team@tosdr.org>
+Date: Sat, 01 Jun 2013 10:59:35 -0700
+Message-ID: <1370109575.2168.31.camel@zareason>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.3
+X-Original-Sender: jesse@wefu.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 132.239.0.119 is neither permitted nor denied by best guess
+ record for domain of jesse@wefu.org) smtp.mail=jesse@wefu.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Here's a list of the differences between the entries in the tosback2
+files and in the tosdr/services files. First is listed the sites with
+different URLs (the tosdr ones are listed first). Next is a list of the
+sites that are only in the tosdr files, and not in tosback2 at all. I
+didn't list the reverse, as there are hundreds of those. ;-) Finally is
+a list of the 5 sites that are in sync, out of the total of 23 sites in
+the tosdr list that have URLs listed.
+
+--------------
+amazon.com
+Conditions of Use
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=508088
+Privacy Notice
+http://www.amazon.com/gp/help/customer/display.html/ref=footer_privacy?ie=UTF8&nodeId=468496
+Security, Privacy &amp; Accessibility
+http://www.amazon.com/gp/help/customer/display.html/?nodeId=551434
+-----
+AMAZON SILK TERMS & CONDITIONS
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200775270
+Amazon App Suite Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=201008370
+Amazon Kindle Store Terms of Use
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=201014950
+Amazon.com Privacy Notice
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=468496
+Conditions of Use
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=508088
+Interest-Based Ads	http://www.amazon.com/b/?&node=5160028011
+Kindle Cloud Reader Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200701450
+Kindle for Android Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200495390
+Kindle for Mac Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200443370
+Kindle for PC Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200499360
+Kindle for Windows 8 Legal Notices
+http://www.amazon.com/gp/help/customer/display.html/?ie=UTF8&nodeId=200939440
+Third Party Licenses
+http://www.amazon.com/gp/help/customer/display.html/ref=help_search_1-1?ie=UTF8&nodeId=200910440&qid=1368379047&sr=1-1
+
+apple.com
+Privacy Policy	http://www.apple.com/privacy/
+iCloud Terms of Service	http://www.apple.com/legal/icloud/en/terms.html
+-----
+Privacy Policy	http://www.apple.com/privacy/
+Website Terms of Service	http://www.apple.com/legal/terms/site.html
+iCloud Terms of Service	http://www.apple.com/legal/icloud/en/terms.html
+iTunes Terms of Service	http://www.apple.com/legal/itunes/us/terms.html
+
+apple.com
+Privacy Policy	http://www.apple.com/privacy/
+Website Terms of Service	http://www.apple.com/legal/terms/site.html
+iTunes Terms of Service	http://www.apple.com/legal/itunes/us/terms.html
+-----
+Privacy Policy	http://www.apple.com/privacy/
+Website Terms of Service	http://www.apple.com/legal/terms/site.html
+iCloud Terms of Service	http://www.apple.com/legal/icloud/en/terms.html
+iTunes Terms of Service	http://www.apple.com/legal/itunes/us/terms.html
+
+disqus.com
+Privacy Policy
+http://help.disqus.com/customer/portal/articles/466259-privacy-policy
+Terms and Policies	http://docs.disqus.com/kb/terms-and-policies/
+Terms of Service
+http://help.disqus.com/customer/portal/articles/466260-terms-of-service
+-----
+Privacy Policy
+http://help.disqus.com/customer/portal/articles/466259-privacy-policy
+Terms of Service
+http://help.disqus.com/customer/portal/articles/466260-terms-of-service
+
+flickr.com
+Privacy Policy
+http://info.yahoo.com/privacy/us/yahoo/flickr/details.html
+Yahoo! Terms of Service	http://www.yahoo.com/r/ts
+-----
+Privacy Policy	http://info.yahoo.com/privacy/us/yahoo/
+
+google.com
+FAQ	https://www.google.fr/intl/en/policies/faq/
+Key terms	https://www.google.fr/intl/en/policies/privacy/key-terms/
+Privacy Policy	https://www.google.com/intl/en/policies/privacy/
+Terms of Service	https://www.google.com/intl/en/policies/terms/
+-----
+Google Analytics Terms of Service
+https://www.google.com/intl/en/analytics/tos.html
+Privacy Policy	https://www.google.com/intl/en/policies/privacy/
+Terms of Service	https://www.google.com/intl/en/policies/terms/
+
+skype.com
+Business End User License Agreement
+http://www.skype.com/intl/en-us/legal/business/eula/
+Business End User License Agreement (US)
+http://www.skype.com/intl/en-us/legal/business/eula-us/
+Cookies Policy	http://www.skype.com/intl/en-us/legal/privacy/general/#5
+Etiquette	http://www.skype.com/intl/en-us/legal/terms/etiquette/
+Fair Usage Policy for Subscriptions
+http://www.skype.com/intl/en-us/legal/terms/fair_usage/
+Fair Usage Policy for US Minute Bundles
+http://www.skype.com/intl/en-us/legal/terms/fair_usage_minute_bundles/
+Group Video Calling Fair Usage Policy
+http://www.skype.com/intl/en/legal/terms/gvc-fair-usage/
+Privacy Policies	http://www.skype.com/intl/en-us/legal/privacy/general/
+Skype Emergency Calling
+http://www.skype.com/intl/en-us/legal/skype-limited-emergency-calling/
+Terms and Policies	http://www.skype.com/intl/en-us/legal/
+Terms of Service - Business
+http://www.skype.com/intl/en-us/legal/business/terms/
+Terms of Service - Business (US)
+http://www.skype.com/intl/en-us/legal/business/terms-us/
+Terms of Use	http://www.skype.com/intl/en-us/legal/terms/tou/
+Trademark Guidelines
+http://www.skype.com/intl/en-us/legal/terms/trademark-guidelines/
+-----
+Business End User License Agreement
+http://www.skype.com/intl/en-us/legal/business/eula/
+Business End User License Agreement (US)
+http://www.skype.com/intl/en-us/legal/business/eula-us/
+Etiquette	http://www.skype.com/intl/en-us/legal/terms/etiquette/
+Fair Usage Policy for Subscriptions
+http://www.skype.com/intl/en-us/legal/terms/fair_usage/
+Fair Usage Policy for US Minute Bundles
+http://www.skype.com/intl/en-us/legal/terms/fair_usage_minute_bundles/
+Group Video Calling Fair Usage Policy
+http://www.skype.com/intl/en/legal/terms/gvc-fair-usage/
+Privacy Policy English (International)
+http://www.skype.com/intl/en/legal/privacy/general/
+Skype Emergency Calling
+http://www.skype.com/intl/en-us/legal/skype-limited-emergency-calling/
+Terms of Service - Business
+http://www.skype.com/intl/en-us/legal/business/terms/
+Terms of Service - Business (US)
+http://www.skype.com/intl/en-us/legal/business/terms-us/
+Terms of Use	http://www.skype.com/intl/en-us/legal/terms/tou/
+Trademark Guidelines
+http://www.skype.com/intl/en-us/legal/terms/trademark-guidelines/
+
+tumblr.com
+Privacy Policy	http://www.tumblr.com/policy/en/terms_of_service
+Terms of Service	http://www.tumblr.com/policy/en/privacy
+-----
+Privacy Policy	http://www.tumblr.com/policy/en/privacy
+Terms of Service	http://www.tumblr.com/policy/en/terms_of_service
+
+twitter.com
+Privacy Policy	https://twitter.com/privacy
+Terms of Service	https://twitter.com/tos
+-----
+Privacy Policy	http://twitter.com/privacy
+Terms of Service	http://twitter.com/tos
+
+yahoo.com
+Community Guidelines
+http://docs.yahoo.com/info/guidelines/community.html
+Privacy Policy	http://info.yahoo.com/privacy/us/yahoo/details.html
+Yahoo! Terms of Service	http://www.yahoo.com/r/ts
+-----
+Privacy Policy	http://info.yahoo.com/privacy/us/yahoo/
+Terms of Service	http://info.yahoo.com/legal/us/yahoo/utos/terms/
+
+youtube.com
+Google Privacy Policy	http://www.google.com/intl/en/policies/privacy/
+Terms	http://www.youtube.com/t/terms
+-----
+Community Guidelines	http://www.youtube.com/t/community_guidelines
+Privacy Policy	http://www.youtube.com/t/privacy_at_youtube
+
+-----------------------------
+cloudant.com
+FAQ	https://www.cloudant.com/for-developers/faq/
+Privacy	https://www.cloudant.com/privacy/
+Terms of Service	https://www.cloudant.com/terms/
+
+grammarly.com
+Privacy Policy
+http://privacy-policy.truste.com/verified-policy/www.grammarly.com
+Terms of Service and License Agreement	http://www.grammarly.com/terms
+
+owncube.com
+Privacy	https://owncube.com/privacy.php
+Terms	https://owncube.com/terms.php
+
+soundcloud.com
+Community Guidelines	http://soundcloud.com/community-guidelines
+Privacy Policy	http://soundcloud.com/pages/privacy
+Terms of Service	http://soundcloud.com/terms-of-use
+
+spotify.com
+Privacy Policy	http://www.spotify.com/se/legal/privacy-policy
+Terms and Conditions (Mobile)
+http://www.spotify.com/se/legal/mobile-terms-and-conditions/
+Terms and Conditions (Premium)
+http://www.spotify.com/se/legal/premium-code-terms-and-conditions/
+Terms and Conditions (Unlimited)
+http://www.spotify.com/se/legal/unlimited-code-terms-and-conditions/
+Terms and Conditions of Use
+http://www.spotify.com/se/legal/end-user-agreement/
+
+store.steampowered.com
+Privacy Policy Agreement
+http://store.steampowered.com/privacy_agreement/
+Steam Subscriber Agreement
+http://store.steampowered.com/subscriber_agreement/
+
+xing.com
+Privacy Policy	http://www.xing.com/privacy
+Terms	http://www.xing.com/terms
+
+------------------------
+500px.com
+app.net
+facebook.com
+github.com
+twitpic.com
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

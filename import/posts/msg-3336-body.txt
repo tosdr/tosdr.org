@@ -1,0 +1,160 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBN53WWGAKGQEESSIAQA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 92A51161735
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 22:51:06 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 8F74F22606F
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 22:51:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nPH11azo6Gqn for <anything@michielbdejong.com>;
+	Fri, 10 May 2013 22:51:05 +0200 (CEST)
+Received: from mail-qa0-x23d.google.com (mail-qa0-x23d.google.com [IPv6:2607:f8b0:400d:c00::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id CEF6222607D
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 22:51:04 +0200 (CEST)
+Received: by mail-qa0-f61.google.com with SMTP id j8sf253814qah.26
+        for <anything@michielbdejong.com>; Fri, 10 May 2013 13:51:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=SQGZQzWckcnCblS2FdbzK+3GaA/imJwbmlmoGZf0foA=;
+        b=K/QVS4EQ2P8mgU0oqkRVv5YvyuNRLyQ0rIH12F6h0rWu9eTf4hwSSE1zJD6bFIJL14
+         g2V8QhEsbWzcdy9W9SYrAoxXoFdQqK0v8x+LscnztwpNUgT2czuBfXaw1fVbbwxAcL52
+         GzgnCz3MKwoir5zQsFsqVBCv5qRFD1uclZV/LGApBxhKfyUPf3SMWDBFQpnUkZdFoHRU
+         7BQyIAkup4rGRS0C8KQ4TAxRwY806+cZfjV0GDZs7hCHBdw+3IdhYNAuiH1TQ1yJvaHx
+         z3In8moJmnPUwobW+LxS2fDu2/36I6hguErrtI+sIDyOIseNSdYm7Rs+3pvu7hVG3buv
+         Dj7A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=SQGZQzWckcnCblS2FdbzK+3GaA/imJwbmlmoGZf0foA=;
+        b=MZZAnCoMobU0/ahC1RdqQ7EOrWKF0U9NSBwyuxK6A2/9KFvTAM/MnjhUIyXWt9Akmc
+         +AAwhkhwGoY999qcihDUw3hX5otYVtgCmw9TjM31MCt2mJ+mQz+5qy7y9N/b+drWEmqS
+         PHcO3GLcolHPvYt0BBkvK4IZWZrLsA9vorbbH8whYbtAmEqpioaxeT78iFE1H4qsanVj
+         7c+kd2RoKiR1cdRhRGOraU155FDXC1j6QaV33NzL0/1hffKPhBNidH4/26hLUu7TIfHx
+         VvNvSJ+KO+wH6rdLXYc1q83itT8bVvl7vPv42x5/e323IUPT3nkFsQmEhVVAoYrtt+4j
+         h8mA==
+X-Received: by 10.49.42.1 with SMTP id j1mr1594280qel.41.1368219063773;
+        Fri, 10 May 2013 13:51:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.107.201 with SMTP id he9ls2186280qeb.2.gmail; Fri, 10 May
+ 2013 13:51:03 -0700 (PDT)
+X-Received: by 10.49.35.111 with SMTP id g15mr1631507qej.15.1368219063517;
+        Fri, 10 May 2013 13:51:03 -0700 (PDT)
+Date: Fri, 10 May 2013 13:51:02 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <fb2aa4df-2bda-44a9-b48d-8d32a1575597@googlegroups.com>
+In-Reply-To: <25cece19-3697-4bd6-a8d3-59e2c6a03f78@googlegroups.com>
+References: <2cb0b254-9a59-4d11-934f-a87f0e0495f4@googlegroups.com>
+ <25cece19-3697-4bd6-a8d3-59e2c6a03f78@googlegroups.com>
+Subject: [tosdr:2063] Re: Softpedia may share data when require by law or in
+ its best interests
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1484_7673349.1368219062981"
+
+------=_Part_1484_7673349.1368219062981
+Content-Type: text/plain; charset=ISO-8859-1
+
+"As a rule, SoftNews NET will never unveil any sort of personally 
+identifiable information about any of its users, without their prior 
+express consent. On the other hand, SoftNews NET may unveil this kind of 
+data when expressly permitted by law or when this measure is necessary in 
+order to protect Softpedia rights and interests."
+http://www.softpedia.com/user/privacy.shtml
+
+On Wednesday, May 8, 2013 12:59:42 PM UTC-3, Hugo Roy wrote:
+>
+> Is it "permitted" or when "required"? This is contradicting. Can you link 
+> / quote the ToS?
+>
+> Thanks
+>
+> On Monday, December 17, 2012 4:13:09 AM UTC+1, Robin Monks wrote:
+>>
+>> As a rule, SoftNews NET will never unveil any sort of personally 
+>> identifiable information about any of its users, without their prior 
+>> express consent. On the other hand, SoftNews NET may unveil this kind of 
+>> data when expressly permitted by law or when this measure is necessary in 
+>> order to protect Softpedia rights and interests.
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1484_7673349.1368219062981
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+"<span style=3D"color: rgb(94, 94, 94); font-family: Verdana, Arial, Helvet=
+ica, sans-serif; font-size: 10px; text-align: justify;">As a rule, SoftNews=
+ NET will never unveil any sort of personally identifiable information abou=
+t any of its users, without their prior express consent. On the other hand,=
+ SoftNews NET may unveil this kind of data when expressly permitted by law =
+or when this measure is necessary in order to protect Softpedia rights and =
+interests."</span><div><div style=3D"text-align: justify;"><a href=3D"http:=
+//www.softpedia.com/user/privacy.shtml">http://www.softpedia.com/user/priva=
+cy.shtml</a><font color=3D"#5e5e5e" face=3D"Verdana, Arial, Helvetica, sans=
+-serif" size=3D"1"><br></font></div><br>On Wednesday, May 8, 2013 12:59:42 =
+PM UTC-3, Hugo Roy wrote:<blockquote class=3D"gmail_quote" style=3D"margin:=
+ 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">Is it=
+ "permitted" or when "required"? This is contradicting. Can you link / quot=
+e the ToS?<br><br>Thanks<br><br>On Monday, December 17, 2012 4:13:09 AM UTC=
++1, Robin Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;m=
+argin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">As a rule, So=
+ftNews NET will never unveil any sort of personally identifiable informatio=
+n about any of its users, without their prior express consent. On the other=
+ hand, SoftNews NET may unveil this kind of data when expressly permitted b=
+y law or when this measure is necessary in order to protect Softpedia right=
+s and interests.</blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1484_7673349.1368219062981--

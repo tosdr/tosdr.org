@@ -1,0 +1,155 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBJFDRKIAKGQEILWTXZY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 1DFC5161747
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 20:27:52 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1A5611431A0
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 20:27:52 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id aHSdJn4HXMBq for <anything@michielbdejong.com>;
+	Wed,  7 Aug 2013 20:27:50 +0200 (CEST)
+Received: from mail-wg0-x237.google.com (mail-wg0-x237.google.com [IPv6:2a00:1450:400c:c00::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25563143797
+	for <michiel@michielbdejong.com>; Wed,  7 Aug 2013 20:27:50 +0200 (CEST)
+Received: by mail-wg0-f55.google.com with SMTP id c11sf279740wgh.10
+        for <michiel@michielbdejong.com>; Wed, 07 Aug 2013 11:27:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:subject:from:in-reply-to:date:message-id:references:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=3EqELFOFNKfskFu08gmHh0qoO493oovwdwR9NCVL7Vo=;
+        b=KY84m0vqSlBBnos5YgAFwWUpVGVoz4FRNU4QvuZCPhlgrY//QOuEGvVtWre3iL0sbF
+         Q7ZgZqzouOza5PCHVW6I121Rj4fyUGtlNDPyq5yIAOw2g4fFDjkhN1DJM9n444STLPDK
+         h94RjfB9b5WQ22f23gDnTCrps6/WY1H2OJ5GyG9NjFkVGDbhxRXSEnokoayLa4+bqNnA
+         EbuYpaL8cQrv8Vol9rA2CHG4NdEtr2Jsb67QUJGf3MFVPID3AH9MuBe4AcdNbfI/eaOP
+         vu/SoGRBtqRfCwL+T05L1XOxzxZFJJKWFkzGrbE2+F3aNZ7mymZYOyxs5Xm2MmU2FpjA
+         rS+Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:subject:from:in-reply-to:date:message-id:references:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=3EqELFOFNKfskFu08gmHh0qoO493oovwdwR9NCVL7Vo=;
+        b=xa7L1dCQ6f3MM/VU0qDnIUVTHrOFn2Cw1DmUpw6m3VJp+TTErpFJoIM9nVKzq+DQ60
+         X9aCvkikXnnW7XIUnJfzIunxmtvvubm8UyZSGr+vMYXgbnSgO41QNd6uprEc0idQllDv
+         rO+Zi4CEckYSzxaR+0TI07eBh/mtmP1/8H7yMISJ5tYOwaSVIVsesisey/RYgF3+wy94
+         lCyNA5YTBa/xop+Hj15ScAVODbP21Y4hfNpO54rWeUN8ueZyM6wfYo4MBecj2obSB3yI
+         59i9xIm/QewwHVHZfQDq1cfqbwANTOZ5qjfguN+8848jdYtl72PLmC4c0/l8GnmRdVuj
+         8fYw==
+X-Received: by 10.180.211.200 with SMTP id ne8mr212504wic.15.1375900068819;
+        Wed, 07 Aug 2013 11:27:48 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.74.34 with SMTP id q2ls807772qev.66.gmail; Wed, 07 Aug 2013
+ 11:27:47 -0700 (PDT)
+X-Received: by 10.58.69.101 with SMTP id d5mr186865veu.23.1375900067895;
+        Wed, 07 Aug 2013 11:27:47 -0700 (PDT)
+Received: from mail-ve0-x22b.google.com (mail-ve0-x22b.google.com [2607:f8b0:400c:c01::22b])
+        by gmr-mx.google.com with ESMTPS id xc1si450742vdc.2.2013.08.07.11.27.47
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 07 Aug 2013 11:27:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400c:c01::22b as permitted sender) client-ip=2607:f8b0:400c:c01::22b;
+Received: by mail-ve0-x22b.google.com with SMTP id pa12so2208958veb.2
+        for <tosdr@googlegroups.com>; Wed, 07 Aug 2013 11:27:47 -0700 (PDT)
+X-Received: by 10.58.118.70 with SMTP id kk6mr1218314veb.1.1375900067780;
+        Wed, 07 Aug 2013 11:27:47 -0700 (PDT)
+Received: from [192.168.1.104] (adsl-108-71-199-117.dsl.stl2mo.sbcglobal.net. [108.71.199.117])
+        by mx.google.com with ESMTPSA id b6sm4145530vdh.12.2013.08.07.11.27.42
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 07 Aug 2013 11:27:46 -0700 (PDT)
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2611] ToSBack: Policy Changes
+From: Ian McGowan <irmcgowan@gmail.com>
+In-Reply-To: <5201cdd7d5bc0_39ca45cf00e88181@dragon.mail>
+Date: Wed, 7 Aug 2013 13:27:30 -0500
+Message-Id: <DFC5EB95-ACD6-4222-A2F5-694F0049DCB6@gmail.com>
+References: <5201cdd7d5bc0_39ca45cf00e88181@dragon.mail>
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400c:c01::22b
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) d=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+One of the changes made here is in regards to the Skype's Internet Communic=
+ations Software license. If you are using an OS before Windows 8.1, it's li=
+censed under Skype Software S=E0rl. If you are using a version that came wi=
+th Windows 8.1 OS or later, the software is licensed under the OS you're ru=
+nning.
+
+To me, this puts more onus on the user. If they are prudent and reading the=
+se terms, they still have to go and read MORE if they're running software t=
+hat came with Windows 8.1 or later. I personally think this is a negative a=
+nd should be reflected as such.
+
+Also, when they mention third-party notices, they explicitly mention that S=
+kype websites may include a third-party cookie, something they did not ment=
+ion explicitly in the previous version. I like the transparency, but am not=
+ sure it changes too much.
+
+A third change mentions a possible requirement to download the newest versi=
+on in order to continue using Skype. I don't like that. Even iTunes doesn't=
+ require you to download the newest incarnation of the software in order to=
+ continue use. This doesn't seem necessary. Skype ends up listing possible =
+reasons that may require a software version update, however.=20
+
+The other changes are mostly formatting and not really relevant to tosdr.
+
+-Ian
+
+
+On Aug 6, 2013, at 11:32 PM, ToSBack wrote:
+
+> skype.com: Terms of Use
+> These were changed in last night's crawl. Please have a look at the commi=
+t at https://github.com/tosdr/tosback2/commit/fc8fa3fb948bf344343d44f8ae9f3=
+532de7eab26 to see the differences!
+>=20
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>=20
+>=20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

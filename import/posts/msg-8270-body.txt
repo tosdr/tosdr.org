@@ -1,0 +1,164 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBKFAUSIAKGQEUA3CLNY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 86DD9161743
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:41:15 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 836881781A0
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 18:41:15 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id FhJ1UgmuNGPu for <anything@michielbdejong.com>;
+	Mon, 12 Aug 2013 18:41:14 +0200 (CEST)
+Received: from mail-qc0-x240.google.com (mail-qc0-x240.google.com [IPv6:2607:f8b0:400d:c01::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B744B1781A3
+	for <michiel@michielbdejong.com>; Mon, 12 Aug 2013 18:41:13 +0200 (CEST)
+Received: by mail-qc0-f192.google.com with SMTP id k14sf2090951qcv.19
+        for <michiel@michielbdejong.com>; Mon, 12 Aug 2013 09:41:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=msTNx+d4KL5XSzgF1xPaCvGOy42wHDeIPM6X9LGAPcw=;
+        b=NgeeRHgRgO+YUnMKO7rl3aJvwNr6sKg959vxpR+daA+uFOubGHIXqo2iPpUdCnP8rN
+         FD6uwn6Hnki9vTuw9rqa7rxdyXFajwXBYN4JDQ/9tx+MoHcVSDujn7Pa0V0wOCkQVnll
+         F6PWOGcXIcsqnLQuRauCg/DVfzFzmBJoWduauMcp0cUZ/MbHm4DulXR91torh5oETzXh
+         ISHBTivwbvEsvfVNlm6j5tzH+P+u0b5jjGytcOqaB2L7mfkrhyOF5InjvdW08e2F2yCA
+         3UPr0ppSMjdA87f87z8NxUJ2fm5UUQaYDv+SvE7Ws8ogzPakIaK3BACUsp50Ab0PfSnm
+         /JfQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=msTNx+d4KL5XSzgF1xPaCvGOy42wHDeIPM6X9LGAPcw=;
+        b=j/Y+kqZMcBlYf6q5q00WVqeuLWIMXYLtNnsLxxNZMwTrFPVzKKIoCmP99F8bLwl5xv
+         SDnCQDQiMiFaVR5s8APNAxYcg6IGOIfXw0m4NLy6dw5gDXWswR2KP0wclQOMCj/7nWVV
+         2AWVzmLxeZIr9zTImxy2eXdBOhL/KvSCmL0UCy/F/PUnRI5+H/WFSGp5grhgXXu5OCnj
+         pwwBhd8PaiKlpyOvEhwceJNdntaNTF93TNIMDVXYLJc2RdVaX5YyuiTgJ29vvx8hOolx
+         fPsD6iXcPfVSPmyJGlvrnig6gEELMgHV3w9nG9OYzIvLMsHxgbfXw+5FZP/17k0QF7ad
+         a0hg==
+X-Received: by 10.49.127.177 with SMTP id nh17mr623430qeb.30.1376325672566;
+        Mon, 12 Aug 2013 09:41:12 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.81.179 with SMTP id b19ls2417120qey.31.gmail; Mon, 12 Aug
+ 2013 09:41:12 -0700 (PDT)
+X-Received: by 10.49.28.230 with SMTP id e6mr611635qeh.41.1376325672153;
+        Mon, 12 Aug 2013 09:41:12 -0700 (PDT)
+Date: Mon, 12 Aug 2013 09:41:11 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <05ae7571-cee1-4f0e-bd79-1324577a28c1@googlegroups.com>
+In-Reply-To: <a025f82d9a4980f07a1e7e44d275d41f@michielbdejong.com>
+References: <4cb2a3bd-12f6-4523-9edc-26e7c9e6b371@googlegroups.com>
+ <e22fea86-148e-4dc0-bfc4-3a82358fb35b@googlegroups.com>
+ <a025f82d9a4980f07a1e7e44d275d41f@michielbdejong.com>
+Subject: Re: [tosdr:2650] Re: [bad] Microsoft can change the price of
+ recurring billing with 15 day's notice
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_134_29540750.1376325671854"
+
+------=_Part_134_29540750.1376325671854
+Content-Type: text/plain; charset=ISO-8859-1
+
+I'm not really sure how that would be possible based on their terms. They 
+will notify you 15 days before the price change, which won't take effect 
+until the renewal term. If there is a fixed price on whatever service 
+you're using, that price stays the same until the renewal term. 
+
+So, say I'm paying $14.99/month for something. Before the month is 
+complete, Microsoft changes the price to $19.99/month. According to their 
+terms, I'll be notified via email at least 15 days before the price change. 
+So, I have 15 days to decide if I want to continue using that service or 
+not. They can't suddenly take $19.99 out of my bank account just because 
+they've notified me unless the 15 days have expired.
+
+That's my understanding, anyway. Am I missing something?
+
+On Monday, August 12, 2013 11:27:16 AM UTC-5, Michiel B. de Jong wrote:
+>
+> On 2013-08-12 17:50, Ian McGowan wrote: 
+> > I wouldn't really say this is bad. 15 days certainly isn't the best 
+> > heads up, but it certainly beats not being notified. If I remember 
+> > correctly, Google's notification of changes in terms is only 14 days. 
+>
+> yeah, but does that include "random price renewals"? what if they 
+> suddenly take 1000 dollars from your bank account? 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_134_29540750.1376325671854
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I'm not really sure how that would be possible based on th=
+eir terms. They will notify you 15 days before the price change, which won'=
+t take effect until the renewal term. If there is a fixed price on whatever=
+ service you're using, that price stays the same until the renewal term.&nb=
+sp;<div><br></div><div>So, say I'm paying $14.99/month for something. Befor=
+e the month is complete, Microsoft changes the price to $19.99/month. Accor=
+ding to their terms, I'll be notified via email at least 15 days before the=
+ price change. So, I have 15 days to decide if I want to continue using tha=
+t service or not. They can't suddenly take $19.99 out of my bank account ju=
+st because they've notified me unless the 15 days have expired.</div><div><=
+br></div><div>That's my understanding, anyway. Am I missing something?<br><=
+br>On Monday, August 12, 2013 11:27:16 AM UTC-5, Michiel B. de Jong wrote:<=
+blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;bord=
+er-left: 1px #ccc solid;padding-left: 1ex;">On 2013-08-12 17:50, Ian McGowa=
+n wrote:
+<br>&gt; I wouldn't really say this is bad. 15 days certainly isn't the bes=
+t
+<br>&gt; heads up, but it certainly beats not being notified. If I remember
+<br>&gt; correctly, Google's notification of changes in terms is only 14 da=
+ys.
+<br>
+<br>yeah, but does that include "random price renewals"? what if they=20
+<br>suddenly take 1000 dollars from your bank account?
+<br></blockquote></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_134_29540750.1376325671854--
