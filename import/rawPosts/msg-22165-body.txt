@@ -1,57 +1,57 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBVWES6QAKGQE7IPCO2Q@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARBLWHS6QAKGQEWMMF6MQ@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
 Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 4EAF940F80
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:29:30 +0200 (CEST)
-Received: from mfilter38-d.gandi.net (mfilter38-d.gandi.net [217.70.178.169])
-	by spool.mail.gandi.net (Postfix) with ESMTP id 49CDE1421DE
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:29:30 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter38-d.gandi.net
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 8EBA940910
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:35:13 +0200 (CEST)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 86C2E14220D
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:35:13 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
 Received: from spool.mail.gandi.net ([10.0.21.135])
-	by mfilter38-d.gandi.net (mfilter38-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id wTjrkrEaBlDu for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 17:29:28 +0200 (CEST)
-Received: from mail-oa0-x23c.google.com (mail-oa0-x23c.google.com [IPv6:2607:f8b0:4003:c02::23c])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id AFD6F142207
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 17:29:27 +0200 (CEST)
-Received: by mail-oa0-f60.google.com with SMTP id eb12sf1622026oac.15
-        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 08:29:26 -0700 (PDT)
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id OVKeVEJK8j-M for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 17:35:11 +0200 (CEST)
+Received: from mail-qc0-x23d.google.com (mail-qc0-x23d.google.com [IPv6:2607:f8b0:400d:c01::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B5BAF14229E
+	for <michiel@michielbdejong.com>; Tue,  2 Sep 2014 17:35:11 +0200 (CEST)
+Received: by mail-qc0-f189.google.com with SMTP id w7sf1640405qcr.26
+        for <michiel@michielbdejong.com>; Tue, 02 Sep 2014 08:35:10 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
         h=date:from:to:message-id:subject:mime-version:x-original-sender
          :reply-to:precedence:mailing-list:list-id:list-post:list-help
          :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=K1ju0fMqbWUg1/tq4aCRKsS84iP3fhhUZPzRLAFFwQM=;
-        b=oaTKzHWojnBLyI4lvUiL/jmwC4VFw2Fj1FPGnjlPIG/AfV0SnIPTT9is6F4rRljpIk
-         hj5spU+70OoR63H6I8YioTHA+7H9fIGh0KfiNViMCktKHLlFpQRvKc5pWQFSs4FjkShG
-         VmsPSqJcvEjIBOkK8doovBnQcuvzzmCk5wsXbos98lGkvZMTwL0K5FJV3tt6w0hjJG3G
-         tq1OS3OEniW0mguAXvmr0FTMIe7bzCwCw/8yv/pEZg9Ci4KBy5ZcBZsttYjvn22+YcI1
-         9JjNJPemV+l7+f+1NwWWk9h4OoHBRfRlGwnJ2FUUx9DsKZxpNLcGWKTBWeP8xC2d2ORL
-         SLfA==
+        bh=a6BuCB4gIRTtCfs6ZCaX1eQTPsG0mWKo6Nktl7W/6Hg=;
+        b=t1iMiBAGhnB17jyVhxlREoKfZxRc7xf+/bB9gTO2zRZ8YOWFPLIxHvJsQiLqbNA0Vg
+         j76eBNY6VvTlDJJfb2ysLPHfybBazM4f0+1iIzAJTye3qb7HeY90NcobJ7udJTSZl3bb
+         XfT2c38ZPpZ4k8ulFyqG/mZ7fVz5ykDhSdLCLAJC+GgWFriUPiSRG1pb3sfW2rfiNmAl
+         GP97QMtzOXHRCrl0jbUsr5TxyERBVb5h1QIt+tMLqs0vlkMpJDuFI+8016lcN9+c3xhe
+         ZiVq4rl0Qeo2AYWlKg26Qvg9eDcCdfseTA7af2g1YY4m7xkvX9jcyrzWVzjZnfOJjEzS
+         awAQ==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
         h=date:from:to:message-id:subject:mime-version:x-original-sender
          :reply-to:precedence:mailing-list:list-id:list-post:list-help
          :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=K1ju0fMqbWUg1/tq4aCRKsS84iP3fhhUZPzRLAFFwQM=;
-        b=zP699Y4i+QuSjFX8Le9fl3xOmTMcml+aLWt/UIRI9ENSo9xu/neZZE/6apWbiH18yb
-         MbsZpu/0hOSEatFJpOEJdSmkJ6HC3rOk7ya3HxZZZzvBH+2Sxh4ua/7H/oSY74W5Jt0H
-         FnFelw6sunf1UTbCBuWCdPLKjzOCpbTGNrIi6/KaXevPCZ8duG81GNvax2KdCosjljkx
-         iE/SoXgSrt9D9etcgAOc+JDjoaP5TiA6AbpOZLaIhf6bHmUVdjQKRxJdfUHxEqndo2Sq
-         A2dsD+uCyq633C6nH5dRD7vECOuDSm4Geh+pYkyBY9BbSMnQs6DEa2Hiu0deK5Udr/+e
-         dfTQ==
-X-Received: by 10.140.94.34 with SMTP id f31mr57514qge.11.1409671766255;
-        Tue, 02 Sep 2014 08:29:26 -0700 (PDT)
+        bh=a6BuCB4gIRTtCfs6ZCaX1eQTPsG0mWKo6Nktl7W/6Hg=;
+        b=Vo4g8EudwuYnSw1mQWVNVWinvNt2yaCHBOvtc0lOYY2txRs6dhLKjg5kN+toed/vew
+         WkeGi2JtWWeDBYMyCUNkq4rygQvmyOTCsgPwErVB8tlGSLIl3XKjgwe4o7B5v2oAHrk8
+         PPRud6pKHcho2Wx0gx7llvEmBSU1CjtgnvI9BfjM3wGJJ/daN7XWb2wZX4UpC6RvnVFv
+         wt+xiJ7yVsR8t7RS4BK6dKOL8rtjOBErirGltn3qEQR/QgiXaGNqr9uGtDqij0Gk5o4T
+         90Q1oCIMYxMLySLqPbprqb+w7qtPM6AMOOQ6vqCmrh9QnIEEw+1uOorH9MRbM2DYjZV/
+         l9TQ==
+X-Received: by 10.140.100.182 with SMTP id s51mr16659qge.29.1409672110728;
+        Tue, 02 Sep 2014 08:35:10 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.86.9 with SMTP id o9ls2524457qgd.47.gmail; Tue, 02 Sep
- 2014 08:29:25 -0700 (PDT)
-X-Received: by 10.140.22.85 with SMTP id 79mr16313qgm.35.1409671765957;
-        Tue, 02 Sep 2014 08:29:25 -0700 (PDT)
-Date: Tue, 2 Sep 2014 08:29:25 -0700 (PDT)
+Received: by 10.140.30.245 with SMTP id d108ls1620846qgd.68.gmail; Tue, 02 Sep
+ 2014 08:35:10 -0700 (PDT)
+X-Received: by 10.140.97.136 with SMTP id m8mr14qge.42.1409672110354;
+        Tue, 02 Sep 2014 08:35:10 -0700 (PDT)
+Date: Tue, 2 Sep 2014 08:35:09 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Message-Id: <82e59fac-cd72-4d8f-90a8-1c5afefa471f@googlegroups.com>
-Subject: [tosdr:3177] Wordfeud [bad] User Content
+Message-Id: <6ccf2085-4b84-458b-994f-40ce00ac5d5b@googlegroups.com>
+Subject: [tosdr:3178] Wordfeud [bad] Terminate account without notification
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
@@ -67,70 +67,62 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_1970_2097467985.1409671765179"
+	boundary="----=_Part_2684_1534844794.1409672109757"
 
-------=_Part_1970_2097467985.1409671765179
+------=_Part_2684_1534844794.1409672109757
 Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-Not sure if these should be in separate posts, but here goes.
+Point 5 of the ToS states: "[Bertheussen IT] reserves the right to review=
+=20
+materials posted to the Communication Channels and to remove any materials=
+=20
+(including without limitation User Content), at any time, with or without=
+=20
+notice for any reason, at its sole discretion. Bertheussen IT may also=20
+terminate or suspend your access to any Communication Channels at any time,=
+=20
+without notice, for any reason."
 
-The ToS states that all User Content "are subject, whether in whole or in 
-part, to unlimited commercial, non-commercial and/or promotional use by 
-Bertheussen IT". (http://wordfeud.com/tos/ under 4) Furthermore: "You 
-hereby grant to Bertheussen IT a worldwide, irrevocable, perpetual, 
-non-exclusive, transferable, fully paid-up and royalty-free license, (with 
-the right to sublicense), to use, copy, adapt, modify, distribute, license, 
-sell, transfer, publicly display, publicly perform, transmit, stream, 
-broadcast and otherwise exploit User Content you transmit or submit and all 
-derivative works. To the extent permitted by applicable laws, you hereby 
-waive any moral rights you may have in User Content."
+Point 6 of the ToS is even more relentless: "Bertheussen IT may terminate=
+=20
+your account and your access to the Service (or, at Bertheussen IT=E2=80=99=
+s sole=20
+option, applicable portions of the Service) at any time and for any reason.=
+=20
+Bertheussen IT is not required to provide you with any notice or warning=20
+prior to any such termination."
 
-Apparently all User Content can be used by Bertheussen IT in any thinkable 
-way. This is perticularly relevant when it comes to in-game chats and 
-uploaded pictures (avatars). On the upside, Bertheussen IT lets users keep 
-their copyright according to this sentence: "You represent and warrant that 
-User Content you transmit or submit is original to you and that you 
-exclusively own the rights to such content". Not sure how the collision of 
-these apply in practice.
+ToS: http://wordfeud.com/tos/
 
-Also, "User Content is not confidential and will not be returned to the 
-user". Not sure what this is supposed to mean though.
-
-
-
--- 
+--=20
 tosdr.org | twitter.com/tosdr | github.com/tosdr
---- 
-You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
-To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
 To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_1970_2097467985.1409671765179
+------=_Part_2684_1534844794.1409672109757
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Not sure if these should be in separate posts, but here go=
-es.<br><br>The ToS states that all User Content "are subject, whether in wh=
-ole or in part, to unlimited commercial, non-commercial and/or promotional =
-use by Bertheussen IT". (http://wordfeud.com/tos/ under 4) Furthermore: "Yo=
-u hereby grant to Bertheussen IT a worldwide, irrevocable, perpetual,=20
-non-exclusive, transferable, fully paid-up and royalty-free license,=20
-(with the right to sublicense), to use, copy, adapt, modify, distribute,
- license, sell, transfer, publicly display, publicly perform, transmit,=20
-stream, broadcast and otherwise exploit User Content you transmit or=20
-submit and all derivative works. To the extent permitted by applicable=20
-laws, you hereby waive any moral rights you may have in User Content."<br><=
-br>Apparently all User Content can be used by Bertheussen IT in any thinkab=
-le way. This is perticularly relevant when it comes to in-game chats and up=
-loaded pictures (avatars). On the upside, Bertheussen IT lets users keep th=
-eir copyright according to this sentence: "You represent and warrant that U=
-ser Content you transmit or submit is=20
-original to you and that you exclusively own the rights to such content". N=
-ot sure how the collision of these apply in practice.<br><br>Also, "User Co=
-ntent is not confidential and will not be returned to the user". Not sure w=
-hat this is supposed to mean though.<br><br><br><br></div>
+<div dir=3D"ltr">Point 5 of the ToS states: "[Bertheussen IT] reserves the =
+right to review materials posted to the Communication=20
+Channels and to remove any materials (including without limitation User=20
+Content), at any time, with or without notice for any reason, at its=20
+sole discretion. Bertheussen IT may also terminate or suspend your=20
+access to any Communication Channels at any time, without notice, for=20
+any reason."<br><br>Point 6 of the ToS is even more relentless: "Bertheusse=
+n IT may terminate your account and your access to the Service
+ (or, at Bertheussen IT=E2=80=99s sole option, applicable portions of the=
+=20
+Service) at any time and for any reason. Bertheussen IT is not required=20
+to provide you with any notice or warning prior to any such termination."<b=
+r><br>ToS: http://wordfeud.com/tos/<br></div>
 
 <p></p>
 
@@ -149,4 +141,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_1970_2097467985.1409671765179--
+------=_Part_2684_1534844794.1409672109757--

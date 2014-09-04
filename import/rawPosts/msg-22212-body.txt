@@ -1,62 +1,64 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBEH3S6QAKGQE67QYGZA@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARB5MVTWQAKGQEZRTLTWI@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
 Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id E9BE940910
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:25:39 +0200 (CEST)
-Received: from mfilter9-d.gandi.net (mfilter9-d.gandi.net [217.70.178.138])
-	by spool.mail.gandi.net (Postfix) with ESMTP id E7A45226063
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 19:25:39 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter9-d.gandi.net
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id E68EE4091A
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:08:11 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E4A0422606C
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:08:11 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
 Received: from spool.mail.gandi.net ([10.0.21.131])
-	by mfilter9-d.gandi.net (mfilter9-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id prFuoqoqGmyu for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 19:25:38 +0200 (CEST)
-Received: from mail-ob0-x23a.google.com (mail-ob0-x23a.google.com [IPv6:2607:f8b0:4003:c01::23a])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 2373B226062
-	for <michiel@michielbdejong.com>; Tue,  2 Sep 2014 19:25:38 +0200 (CEST)
-Received: by mail-ob0-f186.google.com with SMTP id wn1sf1729450obc.13
-        for <michiel@michielbdejong.com>; Tue, 02 Sep 2014 10:25:37 -0700 (PDT)
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id RwNlF5Qjk3Hq for <anything@michielbdejong.com>;
+	Wed,  3 Sep 2014 19:08:10 +0200 (CEST)
+Received: from mail-ig0-x23d.google.com (mail-ig0-x23d.google.com [IPv6:2607:f8b0:4001:c05::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25CFE226062
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 19:08:07 +0200 (CEST)
+Received: by mail-ig0-f189.google.com with SMTP id h3sf1954550igd.26
+        for <anything@michielbdejong.com>; Wed, 03 Sep 2014 10:08:05 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
-        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
-         :x-original-sender:reply-to:precedence:mailing-list:list-id
-         :list-post:list-help:list-archive:sender:list-subscribe
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=cz6SQ/2bxgeohh/ObH7hZdlIfnFgVdYz9DtRLqp2TiE=;
-        b=W0mYj2FHuIFhebnJ2fvAFyt2a4OTgwNy6kM+whqT94cBezdbL7GkObT5yjhA9Vi2qq
-         odEl+vaBNk7SEzlIJMACc5jaWP0Tybp/iV9IltV0Be/VaAhGcfbvWnd7sMwIaCb9v0Eo
-         3rQjnzOSYDpL9clOXpR+SZDp2cL0O7e7PKKcXkXDKc3FNw/Zz9BqigfnbKRQvCkgMVj4
-         wZp07F0ZDuVWX711L5t8C9UWlixUbNFWvEKVtMTK+zXshK5ElM6iux6xaKAw6EAz6M9j
-         47GlyNbl7pwbWICgdz6JRf9Zmsm2j9I8IGwzm7F2Kd/xMTK1XUXUCcBQG/GDx1sagTDq
-         m9YA==
+        bh=sOcsjC9rP2rk8IkTjBqmUHsEwWP5ttUam/SEqRUOTws=;
+        b=P5TXkFiRo4NKwEnZd/rfABmUXQ9U5XaGY+pvwclL7mBDo+2zOy/7FhNu6Lv913nC0A
+         0QZG55FsYvww4nCsBRmOoaNl65ktcT4dVcWOQHqRSuoxQeyFIa9lMn2765P+8i8ErGCB
+         PUHlA9ADUtsWeRwFWqoRRwwKM19JKivkEA4bTrA0bDY46u4La0ZiBstbZcznSQPHJcd2
+         OeNejfcsY9SgH0EjQtNabz2ZcR5HuUhHGrvfWO8g8dY3zqxk9HJ7gdjXrVqL+7gAEUKj
+         JRXeSxRWc92C+/i9L5uvNLCZgGnWcyYkV4sSSwWawjh8p85YYEaEx4JhhzNLxhLMEhXF
+         w24A==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
-        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
-         :x-original-sender:reply-to:precedence:mailing-list:list-id
-         :list-post:list-help:list-archive:sender:list-subscribe
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
          :list-unsubscribe:content-type;
-        bh=cz6SQ/2bxgeohh/ObH7hZdlIfnFgVdYz9DtRLqp2TiE=;
-        b=VRIsXRbmPXiGXiszBXHi0uSP2jS/nbmsPtwFr0l5BUU7GjgTkimqeW8wh4/y2Oqq6H
-         +1AouArGKQTht/VwnwrF+Oh58HZbk89mbnQodyMTDztucxXqmtl7HcUaLsEbuFxS/KVy
-         AZviJTeWkaRPNpfH4YRyQWpjMtwTZkXAa0XZRaTRh6gLEjfKhfCaljJYIfN7ARmHle/R
-         uFYkTxN6hW5TbPrEizaq0/8HR9chw10qVEzlNzSQ9BviE8U/IUBA3nTaq0SKgA5ggVyi
-         CNjVjeuVp+fbevLMvX2uvas/ifgjUBSM8nMHjtCnHCHquZdKfaNSQ8QzNCmEov/HowYL
-         g9vw==
-X-Received: by 10.140.93.44 with SMTP id c41mr41748qge.21.1409678737037;
-        Tue, 02 Sep 2014 10:25:37 -0700 (PDT)
+        bh=sOcsjC9rP2rk8IkTjBqmUHsEwWP5ttUam/SEqRUOTws=;
+        b=Zn24Ld0alSZ84wNSRBu/6mG/qTsao9E+GfuGP4aFJImwc4D7FxSIu0A0lAxKkHrBlE
+         gqekjWk8F1Hln5bSWxh7CtvTVul51dKy6/zyzmUWk/vFdGJGIhJZLhmNT8diYXlNJnz7
+         UEAB3EJM/EUj0bS/Fh5BB4BPo462DJtjpRcHdaVxi5q6UBX//kezDsghQ0yXwkl/JYW3
+         BroG5LZ9KwMafCsYXg+ilaavpKyZEnS8VKw8cVOS1eg8dvR2+ZcoNXAUEwMQnBEYwMYC
+         hcu0Xw0O63k4aCCqVWe6/r3lmNJ2cMzrtYmP6De/ym9s8wZFQUaEi84LB/lj9uMAgpqK
+         Ml+g==
+X-Received: by 10.140.89.232 with SMTP id v95mr29966qgd.34.1409764085850;
+        Wed, 03 Sep 2014 10:08:05 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.27.242 with SMTP id 105ls2549467qgx.17.gmail; Tue, 02 Sep
- 2014 10:25:36 -0700 (PDT)
-X-Received: by 10.140.19.213 with SMTP id 79mr750845qgh.5.1409678736784;
-        Tue, 02 Sep 2014 10:25:36 -0700 (PDT)
-Date: Tue, 2 Sep 2014 10:25:36 -0700 (PDT)
+Received: by 10.140.103.177 with SMTP id y46ls3009343qge.79.gmail; Wed, 03 Sep
+ 2014 10:08:05 -0700 (PDT)
+X-Received: by 10.140.30.201 with SMTP id d67mr78329qgd.8.1409764085635;
+        Wed, 03 Sep 2014 10:08:05 -0700 (PDT)
+Date: Wed, 3 Sep 2014 10:08:05 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Message-Id: <c4a555aa-70d2-452f-b613-ada482d537f1@googlegroups.com>
-In-Reply-To: <20140902155700.GP4723@xps.fritz.box>
-References: <82e59fac-cd72-4d8f-90a8-1c5afefa471f@googlegroups.com>
- <20140902155700.GP4723@xps.fritz.box>
-Subject: Re: [tosdr:3183] Wordfeud [bad] User Content
+Cc: aanmeldingen49@gmail.com, mariecpa2000@yahoo.com
+Message-Id: <3373bce6-2175-47fd-a304-bdbe13ed4e93@googlegroups.com>
+In-Reply-To: <20140902204539.GB1032@xps>
+References: <1409095984.34027.YahooMailNeo@web162601.mail.bf1.yahoo.com>
+ <95dd3074-d418-4db1-af56-581daaa644db@googlegroups.com>
+ <20140902204539.GB1032@xps>
+Subject: Re: [tosdr:3192] Re: Twich TOS
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
@@ -72,26 +74,30 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_2876_1582950013.1409678736278"
+	boundary="----=_Part_378_1171169283.1409764085251"
 
-------=_Part_2876_1582950013.1409678736278
+------=_Part_378_1171169283.1409764085251
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
 
 
-Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef Hugo Roy:
+Op dinsdag 2 september 2014 23:54:15 UTC+2 schreef Hugo Roy:
 >
-> =E2=86=AA 2014-09-02 Tue 17:29, Anna D <aanmeld...@gmail.com <javascript:=
+> =E2=86=AA 2014-09-02 Tue 20:39, Anna D <aanmeld...@gmail.com <javascript:=
 >>:=20
-> > Not sure if these should be in separate posts, but here goes.=20
 > >=20
-> > The ToS states that all User Content "are subject, whether in whole or=
+> > Definitely looks like it. I really hope ToSDR will add Twitch to the=20
+> list,=20
+> > as it is a very popular broadcasting channel and with Amazon as the new=
 =20
-> in=20
+> > owner I'm really interested to see if anything will change in the ToS.=
+=20
 >
-> Can you give a little bit more context please? What is "User=20
-> Content" and what=E2=80=99s the service about?=20
+> Yes, we have it on the list here, so in all optimist probability=20
+> we will add it soon. But we have to take care of some of our code=20
+> and internal tools before we can get back at updating the main=20
+> page. Sorry if this takes time...=20
 >
 > --=20
 > Hugo Roy  =20
@@ -103,14 +109,9 @@ Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef Hugo Roy:
 > https://emailselfdefense.fsf.org/fr/=20
 >
 
-User content =3D Any data, text, graphics, photographs and their selection=
+Ah, I see. Anyway, I look forward to the updates on the site and I'm glad=
 =20
-and arrangement, and any other materials uploaded to the Service by you or=
-=20
-other users. (ToS, par. 4) Service =3D the website (wordfeud.com) and any=
-=20
-Bertheussen IT game or application (here: Wordfeud).
-=20
+Twitch is part of the list :)
 
 --=20
 tosdr.org | twitter.com/tosdr | github.com/tosdr
@@ -123,24 +124,29 @@ To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_2876_1582950013.1409678736278
+------=_Part_378_1171169283.1409764085251
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><br><br>Op dinsdag 2 september 2014 17:57:05 UTC+2 schreef=
+<div dir=3D"ltr"><br><br>Op dinsdag 2 september 2014 23:54:15 UTC+2 schreef=
  Hugo Roy:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left:=
  0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">=E2=86=AA 2014-09-02=
- Tue 17:29, Anna D &lt;<a href=3D"javascript:" target=3D"_blank" gdf-obfusc=
-ated-mailto=3D"AlhByT3miFQJ" onmousedown=3D"this.href=3D'javascript:';retur=
+ Tue 20:39, Anna D &lt;<a href=3D"javascript:" target=3D"_blank" gdf-obfusc=
+ated-mailto=3D"ot7CuudnF68J" onmousedown=3D"this.href=3D'javascript:';retur=
 n true;" onclick=3D"this.href=3D'javascript:';return true;">aanmeld...@gmai=
 l.com</a>&gt;:
-<br>&gt; Not sure if these should be in separate posts, but here goes.
 <br>&gt;=20
-<br>&gt; The ToS states that all User Content "are subject, whether in whol=
-e or in=20
+<br>&gt; Definitely looks like it. I really hope ToSDR will add Twitch to t=
+he list,=20
+<br>&gt; as it is a very popular broadcasting channel and with Amazon as th=
+e new=20
+<br>&gt; owner I'm really interested to see if anything will change in the =
+ToS.
 <br>
-<br>Can you give a little bit more context please? What is "User
-<br>Content" and what=E2=80=99s the service about?
+<br>Yes, we have it on the list here, so in all optimist probability
+<br>we will add it soon. But we have to take care of some of our code
+<br>and internal tools before we can get back at updating the main
+<br>page. Sorry if this takes time...
 <br>
 <br>--=20
 <br>Hugo Roy &nbsp;
@@ -167,11 +173,8 @@ MzigmqLlD_R6AYA';return true;" onclick=3D"this.href=3D'https://www.google.c=
 om/url?q\75https%3A%2F%2Femailselfdefense.fsf.org%2Ffr%2F\46sa\75D\46sntz\0=
 751\46usg\75AFQjCNHBz1iWMr_XFXMMzigmqLlD_R6AYA';return true;">https://email=
 selfdefense.fsf.<wbr>org/fr/</a>
-<br></blockquote><div><br>User content =3D Any data, text, graphics, photog=
-raphs and their selection and=20
-arrangement, and any other materials uploaded to the Service by you or=20
-other users. (ToS, par. 4) Service =3D the website (wordfeud.com) and any B=
-ertheussen IT game or application (here: Wordfeud).<br>&nbsp;</div></div>
+<br></blockquote><div><br>Ah, I see. Anyway, I look forward to the updates =
+on the site and I'm glad Twitch is part of the list :)<br></div></div>
 
 <p></p>
 
@@ -190,4 +193,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_2876_1582950013.1409678736278--
+------=_Part_378_1171169283.1409764085251--

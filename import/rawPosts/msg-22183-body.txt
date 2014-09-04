@@ -1,57 +1,62 @@
-Return-Path: <tosdr+bncBCYIVNHJ5EARBI42TCQAKGQEY7CZ77I@googlegroups.com>
+Return-Path: <tosdr+bncBCYIVNHJ5EARB245TCQAKGQE7K6UWEI@googlegroups.com>
 Delivered-To: anything@michielbdejong.com
-Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
-	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 4036D40F80
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:32:06 +0200 (CEST)
-Received: from mfilter40-d.gandi.net (mfilter40-d.gandi.net [217.70.178.171])
-	by spool.mail.gandi.net (Postfix) with ESMTP id 3C08917801C
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:32:06 +0200 (CEST)
-X-Virus-Scanned: Debian amavisd-new at mfilter40-d.gandi.net
-Received: from spool.mail.gandi.net ([10.0.21.133])
-	by mfilter40-d.gandi.net (mfilter40-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
-	with ESMTP id SnXI5cJ56-Kf for <anything@michielbdejong.com>;
-	Tue,  2 Sep 2014 20:32:04 +0200 (CEST)
-Received: from mail-qa0-x23e.google.com (mail-qa0-x23e.google.com [IPv6:2607:f8b0:400d:c00::23e])
-	by spool.mail.gandi.net (Postfix) with ESMTPS id 9CB1117807C
-	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:32:04 +0200 (CEST)
-Received: by mail-qa0-f62.google.com with SMTP id x12sf589934qac.7
-        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 6B4A340F80
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:39:43 +0200 (CEST)
+Received: from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 69733226063
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:39:43 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter12-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id TcCxQ+6DQRgK for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 20:39:42 +0200 (CEST)
+Received: from mail-pa0-x23c.google.com (mail-pa0-x23c.google.com [IPv6:2607:f8b0:400e:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 85DEF226065
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 20:39:41 +0200 (CEST)
+Received: by mail-pa0-f60.google.com with SMTP id lj1sf1670069pab.5
+        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 11:39:40 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=googlegroups.com; s=20120806;
-        h=date:from:to:message-id:subject:mime-version:x-original-sender
-         :reply-to:precedence:mailing-list:list-id:list-post:list-help
-         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=aLDZVO3M7HxaPReW53vPmd9iC3ZW+r9MGTGEseQs/dU=;
-        b=aU/hfwMivKcG5cg1cT5eA+jktv9+HdibothzreAliTp7cIq+nNtFlT9fAYRs68JgUt
-         ARq7lduVwoeDEah9mO8oS/F58JhZej9Zq18+YIAX/lmyKt85AYDwgx3Oj6BUVg3tAXgi
-         MZcN+SPdq8Jg9BFzWhub55jsvgqyGuzJKPhTYVkewz8KQ2j8BF3s+E2ODfA5DvWJ5MmB
-         14CB8GPZBkSuRLj6Fy71tozjcK8OOx1VAnADgUReluEi/ZhfE78P+UlWfR5RuiucM8Dh
-         CXtTd93sIYsN/2DDiPGH1z1oY/9mjFrDmH1AijjMGBjbaZqfjRa/54vPtmJCNsuiSWVp
-         8vNQ==
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=LplwhaAJTTj8dBSXFLi5X/vlVl3m1bGLWVEAZOAmH04=;
+        b=XHTcMRGws8R+G8Hh3Bk44/bSl32fuBAwLucNSEIfVSZAbpwu3RsFcZZsyITNqn6OV1
+         /awTwW2i5DGy/byXmOlnli+53iGIbl9dAqbwRaETAreZckhBqqGohIsg+BR1NKDXOuJI
+         eOSmGSMyW15UGmNqTEyTBYhZNg2qvLh6hj2eHRVoFhCZI8PBFKCfuCt6j2tYKa5C1hLA
+         2dOQcebgcj6c0SLYL/OtJle+/kWthvbXt9OzkXOLy8HWoMawti/4AHwPFJ21Phk4ahuz
+         z2RmIxjwwuHYQxJE6c4G8Nl6UFZkcyMhbFVfxT6R9vIHT9jZ1/8969D/szYuE3hG2OLl
+         DaEQ==
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20120113;
-        h=date:from:to:message-id:subject:mime-version:x-original-sender
-         :reply-to:precedence:mailing-list:list-id:list-post:list-help
-         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
-        bh=aLDZVO3M7HxaPReW53vPmd9iC3ZW+r9MGTGEseQs/dU=;
-        b=cA2KY7ML+dHVhQGA264eip0cGfbIoprU1sSgxx1Pb5BfdVZYvSirU2is6Xe3Cyqzgc
-         esGYo+aA5Etb8Bj7is18ZqcOuxQctjd/EVCag02J0Ipnyjy8osILr7cbN6c9W5Y5alwz
-         d6oZBZWRdBr4cde9bfHPkvwy3Tg9IvqNbqqaLLvXPyTMCpbCsuL7IFFy5oVaHmH+/O9C
-         WLM2x84OVa2fVLF7EneE2/14PeMSteQnpGH9oMYTXAN1Oy65IOoSBACAnkoH7xfakFb1
-         UYufzy9Qsze2BK7nJq9OEe/Ok4g/GCYIcLRdOhoJE3pcwDHjcdnhuAy99jB2ZI1amb6b
-         C1Eg==
-X-Received: by 10.140.25.162 with SMTP id 31mr79383qgt.9.1409682723543;
-        Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=LplwhaAJTTj8dBSXFLi5X/vlVl3m1bGLWVEAZOAmH04=;
+        b=ItUakO6LfX0hG/FtnVDR5OmRTivAThK6S+waJIUYA5EQBF4TQAHBY2nA+w5k7IuoNC
+         4ciDsfZ3ODTKm3e07oCcAcGAUCTz5OJW405UNlvRGXTGDvrUy5o8pm2wjgO/f1oiuV8p
+         kfuXSKX9CtBzMHTXrCQy1gNdoElG6ecPuOGVyA0KIT/zdjiRU9IZBX77721T7paVKV8O
+         Otu7OXt45WAvHN54ibCbQ4c8zBnGs+ZoB0cUWuQdUy2N8j4g+bRWulbyQ20s1XpV3En9
+         VimxZTJuRTMzs31vamaK//cycC9q1BK4kWxhSHPiQWiIX6k7Z2Zmh0fuHE4LAIrAObtg
+         kRfg==
+X-Received: by 10.140.32.227 with SMTP id h90mr32582qgh.26.1409683179960;
+        Tue, 02 Sep 2014 11:39:39 -0700 (PDT)
 X-BeenThere: tosdr@googlegroups.com
-Received: by 10.140.81.200 with SMTP id f66ls2456026qgd.24.gmail; Tue, 02 Sep
- 2014 11:32:03 -0700 (PDT)
-X-Received: by 10.140.22.85 with SMTP id 79mr30890qgm.35.1409682723257;
-        Tue, 02 Sep 2014 11:32:03 -0700 (PDT)
-Date: Tue, 2 Sep 2014 11:32:03 -0700 (PDT)
+Received: by 10.140.32.138 with SMTP id h10ls2515899qgh.87.gmail; Tue, 02 Sep
+ 2014 11:39:39 -0700 (PDT)
+X-Received: by 10.140.101.120 with SMTP id t111mr32896qge.39.1409683179743;
+        Tue, 02 Sep 2014 11:39:39 -0700 (PDT)
+Date: Tue, 2 Sep 2014 11:39:39 -0700 (PDT)
 From: Anna D <aanmeldingen49@gmail.com>
 To: tosdr@googlegroups.com
-Message-Id: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com>
-Subject: [tosdr:3186] Twitter [bad] Right to access
+Cc: mariecpa2000@yahoo.com, mariecpa2000@yahoo.com
+Message-Id: <95dd3074-d418-4db1-af56-581daaa644db@googlegroups.com>
+In-Reply-To: <1409095984.34027.YahooMailNeo@web162601.mail.bf1.yahoo.com>
+References: <1409095984.34027.YahooMailNeo@web162601.mail.bf1.yahoo.com>
+Subject: [tosdr:3187] Re: Twich TOS
 MIME-Version: 1.0
 X-Original-Sender: aanmeldingen49@gmail.com
 Reply-To: tosdr@googlegroups.com
@@ -67,22 +72,33 @@ List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+
 List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
  <http://groups.google.com/group/tosdr/subscribe>
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_357_1626562715.1409682723039"
+	boundary="----=_Part_484_2146647203.1409683179448"
 
-------=_Part_357_1626562715.1409682723039
+------=_Part_484_2146647203.1409683179448
 Content-Type: text/plain; charset=UTF-8
 
 
 
-<https://lh5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNwg8/s1600/twitter%2Bright%2Bto%2Baccess.jpg>
-(Trying this again, image in previous post didn't work) Under current 
-European law, users/data subjects have the right to access their personal 
-data which the controller has collected (art. 12 Directive 95/46/EC, 
-http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML) 
-and ask for a copy of those personal data. Twitter makes it very hard for 
-users to access their personal data, because they are required to send a *fax 
-*with various (personal) data to Twitter for identification purposes. It's 
-pretty obvious that most people don't have faxes at home anymore.
+Op woensdag 27 augustus 2014 01:33:07 UTC+2 schreef Marie Lockwood:
+>
+>
+>    1.  By distributing or disseminating Broadcaster Content through the 
+>    Twitch Service, you hereby grant to Twitch a worldwide, nonexclusive, 
+>    royalty-free, perpetual, transferable and fully sublicensable right to use, 
+>    host, convert for streaming, reproduce, modify, adapt, publish, translate, 
+>    create derivative works from, distribute, perform, display and otherwise 
+>    exploit your Broadcaster Content, in any form, format, media or media 
+>    channels now known or later developed or discovered. You grant Twitch and 
+>    our sublicensees the right to use the name that you submit in connection 
+>    with that content, if we or they choose. 
+>    
+> Anything you upload is theirs-forever.  And now this is owned by 
+> Amazon................
+>
+
+Definitely looks like it. I really hope ToSDR will add Twitch to the list, 
+as it is a very popular broadcasting channel and with Amazon as the new 
+owner I'm really interested to see if anything will change in the ToS.
 
 -- 
 tosdr.org | twitter.com/tosdr | github.com/tosdr
@@ -93,29 +109,32 @@ To post to this group, send email to tosdr@googlegroups.com.
 Visit this group at http://groups.google.com/group/tosdr.
 For more options, visit https://groups.google.com/d/optout.
 
-------=_Part_357_1626562715.1409682723039
+------=_Part_484_2146647203.1409683179448
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><p style=3D"text-align: center; clear: both;" class=3D"sep=
-arator"><a style=3D"margin-left: 1em; margin-right: 1em;" href=3D"https://l=
-h5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNwg8/s=
-1600/twitter%2Bright%2Bto%2Baccess.jpg" imageanchor=3D"1"><img src=3D"https=
-://lh5.googleusercontent.com/-e639t2akYOs/VAYM_IHKX_I/AAAAAAAAAAk/iyVk5BKNw=
-g8/s320/twitter%2Bright%2Bto%2Baccess.jpg" style=3D"" border=3D"0" height=
-=3D"311" width=3D"320"></a></p>(Trying this again, image in previous post d=
-idn't work) Under current European law, users/data subjects have the right =
-to access
- their personal data which the controller has collected (art. 12=20
-Directive 95/46/EC, <a href=3D"http://eur-lex.europa.eu/LexUriServ/LexUriSe=
-rv.do?uri=3DCELEX:31995L0046:en:HTML" target=3D"_blank">http://eur-lex.euro=
-pa.eu/<wbr>LexUriServ/LexUriServ.do?uri=3D<wbr>CELEX:31995L0046:en:HTML</a>=
-)
- and ask for a copy of those personal data. Twitter makes it very hard=20
-for users to access their personal data, because they are required to=20
-send a <b>fax </b>with various (personal) data to Twitter for=20
-identification purposes. It's pretty obvious that most people don't have
- faxes at home anymore.<br></div>
+<div dir=3D"ltr"><br><br>Op woensdag 27 augustus 2014 01:33:07 UTC+2 schree=
+f Marie Lockwood:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margi=
+n-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div><div sty=
+le=3D"color:#000;background-color:#fff;font-family:HelveticaNeue,Helvetica =
+Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-size:12pt"><ol><li>
+<div>
+By distributing or disseminating Broadcaster Content through the Twitch=20
+Service, you hereby grant to Twitch a worldwide, nonexclusive,=20
+royalty-free, perpetual, transferable and fully sublicensable right to=20
+use, host, convert for streaming, reproduce, modify, adapt, publish,=20
+translate, create derivative works from, distribute, perform, display=20
+and otherwise exploit your Broadcaster Content, in any form, format,=20
+media or media channels now known or later developed or discovered. You=20
+grant Twitch and our sublicensees the right to use the name that you=20
+submit in connection with that content, if we or they choose.
+</div>
+</li></ol><div>Anything you upload is theirs-forever.&nbsp; And now this is=
+ owned by Amazon................</div></div></div></blockquote><div><br>Def=
+initely looks like it. I really hope ToSDR will add Twitch to the list, as =
+it is a very popular broadcasting channel and with Amazon as the new owner =
+I'm really interested to see if anything will change in the ToS.<br></div><=
+/div>
 
 <p></p>
 
@@ -134,4 +153,4 @@ Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
 For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
 s://groups.google.com/d/optout</a>.<br />
 
-------=_Part_357_1626562715.1409682723039--
+------=_Part_484_2146647203.1409683179448--
