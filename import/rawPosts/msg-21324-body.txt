@@ -1,0 +1,83 @@
+Return-Path: <tosdr+bncBC7OJ5M2QMPBBYHYWSOQKGQEQYB5PGQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2477140915
+	for <anything@michielbdejong.com>; Fri, 27 Jun 2014 11:41:59 +0200 (CEST)
+Received: from mfilter8-d.gandi.net (mfilter8-d.gandi.net [217.70.178.137])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 22678226072
+	for <anything@michielbdejong.com>; Fri, 27 Jun 2014 11:41:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter8-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter8-d.gandi.net (mfilter8-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Bhs4sdrT0bS1 for <anything@michielbdejong.com>;
+	Fri, 27 Jun 2014 11:41:57 +0200 (CEST)
+Received: from mail-pd0-x23a.google.com (mail-pd0-x23a.google.com [IPv6:2607:f8b0:400e:c02::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 63F19226088
+	for <michiel@michielbdejong.com>; Fri, 27 Jun 2014 11:41:54 +0200 (CEST)
+Received: by mail-pd0-f186.google.com with SMTP id fp1sf919780pdb.13
+        for <michiel@michielbdejong.com>; Fri, 27 Jun 2014 02:41:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=HYmaARIiDQN0FFi/mPRt8eJuRD8LjUNBlf9PLgxMUUM=;
+        b=A8t5RSIySdj54xx1h2zqJLAytdnyQq8Ut89kcA2Pm1dXpLP6ROTUfgM/OMdbn21O+9
+         IB1IImZoJbh4xfcQt0k+X6dKqSVr4goz9hJHJn/zNcNamDwd0e2L2hwEF4CokQ+bdqGZ
+         7op4p6TWL2Hdw9w/gjg2dLvyWS92uswC8w9dKwQwbFc0E15lkzi8sROW0tqNyz8bPrVP
+         SGbYb5pgacFh8hpC/VYadfuqpaPKWZRrFvdqIU9xyjhZ61qHgVNlAy3d+fZM1Fku05md
+         1wUilPeB9Ppo+6HCHP3aKa8ebSqqn8+LHGp32++m/YAzvN3pobtzB7Z1MvyEXXLW/kui
+         0f7Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=HYmaARIiDQN0FFi/mPRt8eJuRD8LjUNBlf9PLgxMUUM=;
+        b=ABvIAHVdwuH3QmC/UqQ2LzxZq+2ujcGts+RM1H9/g2k8WBusKnMsE2XOuP7SqJh65c
+         gcPQzvtd4sBj5CdkM+GzkV4QUdVZVtQXiGi/0g6E+Wk/5KYSglmVqGDYbDmxtIVeqw/u
+         TLQgEzmNC/+vd/2cC/gTjLUJzH8zHrHtele70oMTnm3t+QMjAcNVxuniQ2cV4qqdw5sZ
+         2iXsiOblHKc7xOV+L4ED9HPjIke8hyCrhRx57OZybXh+SOR53XM2gu+2XKm3gz023MGH
+         2oFTcDvlXswRs0Z2b+7tNXUbelgeHQrfCruYenfUUiXKPlso9GGWzhGp4EW9xz/zsCXt
+         UQ1Q==
+X-Received: by 10.50.132.72 with SMTP id os8mr201676igb.0.1403862112917;
+        Fri, 27 Jun 2014 02:41:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.12.37 with SMTP id v5ls265478igb.38.gmail; Fri, 27 Jun 2014
+ 02:41:52 -0700 (PDT)
+X-Received: by 10.50.78.195 with SMTP id d3mr230953igx.17.1403862112190;
+        Fri, 27 Jun 2014 02:41:52 -0700 (PDT)
+Date: Fri, 27 Jun 2014 02:41:50 -0700 (PDT)
+From: wourghk@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <37c30a17-ff1a-402f-80de-7e6edb3092f0@googlegroups.com>
+In-Reply-To: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+References: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+Subject: [tosdr:3069] Re: Steam Subscriber Agreement & Privacy Policy
+MIME-Version: 1.0
+X-Original-Sender: wourghk@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+
+I vote 'D'. The waiver at the end is borderline 'F' material.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

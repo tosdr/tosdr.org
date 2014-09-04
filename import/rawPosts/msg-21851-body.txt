@@ -1,0 +1,245 @@
+Return-Path: <tosdr+bncBAABBC4MVSPQKGQESR6PWZI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 35E5C40916
+	for <anything@michielbdejong.com>; Wed, 13 Aug 2014 08:30:42 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3216411603A
+	for <anything@michielbdejong.com>; Wed, 13 Aug 2014 08:30:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yRtF5m7m-ITM for <anything@michielbdejong.com>;
+	Wed, 13 Aug 2014 08:30:40 +0200 (CEST)
+Received: from mail-ob0-x239.google.com (mail-ob0-x239.google.com [IPv6:2607:f8b0:4003:c01::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 68765116034
+	for <michiel@michielbdejong.com>; Wed, 13 Aug 2014 08:30:37 +0200 (CEST)
+Received: by mail-ob0-f185.google.com with SMTP id wp18sf2298438obc.22
+        for <michiel@michielbdejong.com>; Tue, 12 Aug 2014 23:30:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:reply-to:subject:to:mime-version
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ESvkgce17XyznAkQS6Nv/+2LqfzJ6zYQ8X8dMiLgj9o=;
+        b=j96SHsnel3tguMJczZbYG3tx2rtFnE/7EMAnTzpAtITzqyWnHW8OaZxi998HCW/vvr
+         1hmuwzBkBmR/uID3G9Dq6LMKA8LylZaIdg/iNUqGWM0YyXMTgJ9yAFchCU//E8MFxzxM
+         RNCOWbZv1arDgGJjqXgOaJDwkPLOQZ61lRONsSuAWCZ4K9JyYaUh3iYw4eDcNRQ/9nHo
+         fQShjOCic//zH77p21m2hGyFtyBbYRLvw7p0hZdFAmW4ja9CfgsGK/TQBT6zI1WKXsRB
+         8a1GTM52PkjL5bKuWf9WNP5DqqMu2U9bEIZXHAm+e4bMV5D2/ne241gWz5D9FprQHY8h
+         GOcQ==
+X-Received: by 10.50.39.113 with SMTP id o17mr101018igk.14.1407911436188;
+        Tue, 12 Aug 2014 23:30:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.13.4 with SMTP id d4ls3098031igc.19.canary; Tue, 12 Aug
+ 2014 23:30:35 -0700 (PDT)
+X-Received: by 10.66.66.46 with SMTP id c14mr1493976pat.21.1407911435385;
+        Tue, 12 Aug 2014 23:30:35 -0700 (PDT)
+Received: from nm26-vm0.bullet.mail.bf1.yahoo.com (nm26-vm0.bullet.mail.bf1.yahoo.com. [98.139.213.74])
+        by gmr-mx.google.com with ESMTPS id r5si130405qcl.0.2014.08.12.23.30.35
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 12 Aug 2014 23:30:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dorukalp7@yahoo.com designates 98.139.213.74 as permitted sender) client-ip=98.139.213.74;
+Received: from [98.139.215.142] by nm26.bullet.mail.bf1.yahoo.com with NNFMP; 13 Aug 2014 06:30:35 -0000
+Received: from [98.139.212.238] by tm13.bullet.mail.bf1.yahoo.com with NNFMP; 13 Aug 2014 06:30:34 -0000
+Received: from [127.0.0.1] by omp1047.mail.bf1.yahoo.com with NNFMP; 13 Aug 2014 06:30:34 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 977394.19026.bm@omp1047.mail.bf1.yahoo.com
+Received: (qmail 19163 invoked by uid 60001); 13 Aug 2014 06:30:34 -0000
+X-YMail-OSG: wdarDLMVM1nWyKqLL4Fm7bDd3faMacP2EBn9VUYM8AXTYqV
+ qOYbWju7pIdhK6Wi7ORKrqyM2PUJ7tVEA4IpoVZ9YC18FjlwBN6S8t8QIwwz
+ n7B0gKw0SgPspygfJzPjeFXfWgsW56vIGpaaZ5PuDWWIlNkIAW5Kv.XURdrS
+ LNgCZ.E92eEgQCzc8inaYTG1yajNsdkw16K1gBLBmyOHLOR3jyc2gzX8NHSW
+ z0vVR42TTc16ZAk3kU4k4r4pyP6nV0Ivhuxxaqss8wqx.1D1p880is3WisnT
+ AWBYus5E0WuINhWOIOnkF02grs4eOhsGrWwJ9nYjTL.FqluK0sN3S9BFchor
+ I7ChsshZT5wGchHBqL.NSahO4YD9lJxcnsOYdNDZNgEbG11FG3_YRW9snHQc
+ nLq6lYcm5Jd1zXUTaJCol1LAhvhco6YG8dbT1r08nYF.kpPi5qqo7F7Nlf2u
+ yh6WGoN.J7teA5twgmgofz8j75ta8O4k4i80C05UrMV4lkzM0p5ZVoMm5I1z
+ f45f7yTqvv2OTQD2Vzdo_cmaT3kI4yWU71zNR.OD0_jfzNwksFmsUvuJOVjt
+ nlKCBW_YfPAcGW2_vxozybHodK_4psms6KSxT_NvOj88H3itl9cEpElfJAWI
+ Mc7Y41O.IrIifZRTjC3nyXG.t6DOan5MMofrsENjQyGEV2EtsZg2J1Lhb.ym
+ sR8jvaUp5EKqlQBRXCWe52cYoo42DELCU75urv.3a3ZHFkllO6pkCuCH698Y
+ 4IK9W1l47vawo4B0fLOdlaQU0aRy8j4CliGz2HPxL9QZv7U7fzromR0d3Jr3
+ Opav_qZwGDwhQgnT2P0K.29zWg6xFWjKUe95tTxSu2iNyHdLhKsB5hNOVb7L
+ KZ3uGN8xGqGEzp2Dvo2vNFUZDdje9N04RJ_L79Ua48d3qHlcOPVu1A6dTEpQ
+ LyZCgmSxHAz3OQJZ81A--
+Received: from [129.78.56.208] by web140801.mail.bf1.yahoo.com via HTTP; Tue, 12 Aug 2014 23:30:34 PDT
+X-Rocket-MIMEInfo: 002.001,SGksIAoKCkZpcnN0bHksIGkgd291bGQgbGlrZSB0byB0aGFuayB5b3UgZm9yIHRoaXMgZ3JlYXQgYWRkLW9uISBJdHMgYSBzcGxlbmRpZCBpZGVhIcKgCgpBbHNvIEkgd291bGQgbGlrZSB0byBhc2sgeW91IGlmIHlvdSBjb3VsZCBjb25zaWRlciBjaGVja2luZyBmb2xsb3dpbmcgcG9wdWxhciB3ZWJzaXRlJ3MgdGVybXMgYW5kIGNvbmRpdGlvbnM6IArCoAplYmF5IHRlcm1zICYgY29uZGl0aW9ucwoKaHR0cDovL3BhZ2VzLmViYXkuY29tLmF1L3NlcnZpY2VzL3JlZ2lzdHJhdGlvbi9yZWctY29uZmlybS5odG0BMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.201.700
+Message-ID: <1407911434.83034.YahooMailNeo@web140801.mail.bf1.yahoo.com>
+Date: Tue, 12 Aug 2014 23:30:34 -0700
+From: "'dorukalp durmus' via Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Reply-To: tosdr@googlegroups.com
+Subject: [tosdr:3135] greetings and requests
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+MIME-Version: 1.0
+X-Original-Sender: dorukalp7@yahoo.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of dorukalp7@yahoo.com designates 98.139.213.74 as
+ permitted sender) smtp.mail=dorukalp7@yahoo.com;       dkim=pass
+ header.i=@yahoo.com;       dmarc=pass (p=REJECT dis=NONE) header.from=yahoo.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+X-Original-From: dorukalp durmus <dorukalp7@yahoo.com>
+Content-Type: multipart/alternative; boundary="-158940594-1109121323-1407911434=:83034"
+
+---158940594-1109121323-1407911434=:83034
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi,=20
+
+
+Firstly, i would like to thank you for this great add-on! Its a splendid id=
+ea!=A0
+
+Also I would like to ask you if you could consider checking following popul=
+ar website's terms and conditions:=20
+=A0
+ebay terms & conditions
+
+http://pages.ebay.com.au/services/registration/reg-confirm.html
+
+paypal terms & conditions
+
+https://www.paypal.com/au/webapps/mpp/ua/legalhub-full
+https://www.paypal.com/au/webapps/mpp/ua/useragreement-full
+
+dropbox
+
+https://www.dropbox.com/terms
+
+gumtree=20
+
+
+https://help.gumtree.com.au/knowledgebase.php?article=3D120
+
+
+I reckon they will be great additions to your add-on.=20
+
+Yours sincerely
+
+Alp
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+---158940594-1109121323-1407911434=:83034
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><div style=3D"color:#000; background-color:#fff; font-family:ar=
+ial, helvetica, sans-serif;font-size:10pt"><div style=3D"" class=3D"">Hi, <=
+br style=3D""></div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size=
+: 13.3333px; font-family: arial,helvetica,sans-serif; background-color: tra=
+nsparent; font-style: normal;"><br style=3D"" class=3D""></div><div class=
+=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-family: aria=
+l,helvetica,sans-serif; background-color: transparent; font-style: normal;"=
+>Firstly, i would like to thank you for this great add-on! Its a splendid i=
+dea!&nbsp; <br style=3D"" class=3D""></div><div class=3D"" style=3D"color: =
+rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif=
+; background-color: transparent; font-style: normal;">Also I would like to =
+ask you if you could consider checking following popular website's terms an=
+d conditions: <br style=3D"" class=3D""></div>&nbsp;<div class=3D"" style=
+=3D"color: rgb(0, 0, 0);
+ font-size: 13.3333px; font-family: arial,helvetica,sans-serif; background-=
+color: transparent; font-style: normal;"><span class=3D"" style=3D"font-wei=
+ght: bold;">ebay terms &amp; conditions</span></div><div class=3D"" style=
+=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica=
+,sans-serif; background-color: transparent; font-style: normal;"><br style=
+=3D"" class=3D""></div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-s=
+ize: 13.3333px; font-family: arial,helvetica,sans-serif; background-color: =
+transparent; font-style: normal;">http://pages.ebay.com.au/services/registr=
+ation/reg-confirm.html</div><div class=3D"" style=3D"color: rgb(0, 0, 0); f=
+ont-size: 13.3333px; font-family: arial,helvetica,sans-serif; background-co=
+lor: transparent; font-style: normal;"><br style=3D"" class=3D""></div><div=
+ class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-family=
+: arial,helvetica,sans-serif; background-color: transparent; font-style: no=
+rmal;"><span class=3D""
+ style=3D"font-weight: bold;">paypal terms &amp; conditions</span></div><di=
+v class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-famil=
+y: arial,helvetica,sans-serif; background-color: transparent; font-style: n=
+ormal;"><br style=3D"" class=3D""></div><div class=3D"" style=3D"color: rgb=
+(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; b=
+ackground-color: transparent; font-style: normal;">https://www.paypal.com/a=
+u/webapps/mpp/ua/legalhub-full</div><div class=3D"" style=3D"color: rgb(0, =
+0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; backg=
+round-color: transparent; font-style: normal;">https://www.paypal.com/au/we=
+bapps/mpp/ua/useragreement-full</div><div class=3D"" style=3D"color: rgb(0,=
+ 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; back=
+ground-color: transparent; font-style: normal;"><br style=3D"" class=3D""><=
+/div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; fo=
+nt-family:
+ arial,helvetica,sans-serif; background-color: transparent; font-style: nor=
+mal;"><span class=3D"" style=3D"font-weight: bold;">dropbox</span></div><di=
+v class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-famil=
+y: arial,helvetica,sans-serif; background-color: transparent; font-style: n=
+ormal;"><br style=3D"" class=3D""></div><div class=3D"" style=3D"color: rgb=
+(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; b=
+ackground-color: transparent; font-style: normal;">https://www.dropbox.com/=
+terms</div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333=
+px; font-family: arial,helvetica,sans-serif; background-color: transparent;=
+ font-style: normal;"><br style=3D"" class=3D""></div><div class=3D"" style=
+=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica=
+,sans-serif; background-color: transparent; font-style: normal;"><span styl=
+e=3D"font-weight: bold;">gumtree </span><br style=3D"" class=3D""></div><di=
+v class=3D"" style=3D"color:
+ rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-seri=
+f; background-color: transparent; font-style: normal;"><br style=3D"" class=
+=3D""></div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.333=
+3px; font-family: arial,helvetica,sans-serif; background-color: transparent=
+; font-style: normal;">https://help.gumtree.com.au/knowledgebase.php?articl=
+e=3D120<br style=3D"" class=3D""></div><div class=3D"" style=3D"color: rgb(=
+0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; ba=
+ckground-color: transparent; font-style: normal;"><br style=3D"" class=3D""=
+></div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; =
+font-family: arial,helvetica,sans-serif; background-color: transparent; fon=
+t-style: normal;">I reckon they will be great additions to your add-on. <br=
+ style=3D"" class=3D""></div><div class=3D"" style=3D"color: rgb(0, 0, 0); =
+font-size: 13.3333px; font-family: arial,helvetica,sans-serif; background-c=
+olor: transparent;
+ font-style: normal;">Yours sincerely</div><div class=3D"" style=3D"color: =
+rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif=
+; background-color: transparent; font-style: normal;"><br style=3D"" class=
+=3D""></div><div class=3D"" style=3D"color: rgb(0, 0, 0); font-size: 13.333=
+3px; font-family: arial,helvetica,sans-serif; background-color: transparent=
+; font-style: normal;">Alp<br style=3D"" class=3D""></div></div></body></ht=
+ml>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+---158940594-1109121323-1407911434=:83034--

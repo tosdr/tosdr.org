@@ -1,0 +1,225 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBEMST6LQKGQEOX24NKI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 6A345413E0
+	for <anything@michielbdejong.com>; Tue, 28 Jan 2014 16:13:25 +0100 (CET)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5702F22607D
+	for <anything@michielbdejong.com>; Tue, 28 Jan 2014 16:13:25 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id JJzPMOy0+d5S for <anything@michielbdejong.com>;
+	Tue, 28 Jan 2014 16:13:23 +0100 (CET)
+Received: from mail-bk0-x23f.google.com (mail-bk0-x23f.google.com [IPv6:2a00:1450:4008:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A7C53226079
+	for <anything@michielbdejong.com>; Tue, 28 Jan 2014 16:13:23 +0100 (CET)
+Received: by mail-bk0-f63.google.com with SMTP id w16sf196179bkz.18
+        for <anything@michielbdejong.com>; Tue, 28 Jan 2014 07:13:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mime-version:content-type
+         :content-disposition:organization:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=q5CSgihHxiErafb0BU/AljsR1YrzDUeZ6sYjXrnDVk0=;
+        b=UJWcUbhv0s4LLVfBXnSMq7FYkOL2+LEoxP8GQNTjAB63bEgMjpiP0F4yXfMDaY/RtP
+         mXJL4A4RJryHN/3jwln8V5iXWiPiiLAYeo5MPp2rbkdFukDleTWxVIgIL1t3YuSJX50s
+         TP4SH3XTR0aUVZLGYchdiKsrb06J7Y+DXLfYVtI2weeb4QDHkLJmzVUYa35Mc4VEMFFq
+         F8hqfIAoX2Md6ERlaFCj0dLrqs6TaIIOXcstky7Glh25/nBvh4By+dKotTLJirPPjLgW
+         M2K647d/LA+9NXTI8TuCFMFAqVEQfKCE9HSKOAyOHy+Ztrowb7MvNRuivvFQStV5zlFi
+         nbwQ==
+X-Received: by 10.152.164.129 with SMTP id yq1mr52374lab.7.1390922002367;
+        Tue, 28 Jan 2014 07:13:22 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.9.101 with SMTP id y5ls553546laa.30.gmail; Tue, 28 Jan
+ 2014 07:13:21 -0800 (PST)
+X-Received: by 10.112.135.232 with SMTP id pv8mr1158939lbb.15.1390922001663;
+        Tue, 28 Jan 2014 07:13:21 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id rk7si545619bkb.2.2014.01.28.07.13.21
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 28 Jan 2014 07:13:21 -0800 (PST)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id BFF6A63D168
+	for <tosdr@googlegroups.com>; Tue, 28 Jan 2014 16:13:17 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id G+N3xfPCRq3L for <tosdr@googlegroups.com>;
+	Tue, 28 Jan 2014 16:13:11 +0100 (CET)
+Received: from localhost (unknown [10.66.77.14])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 9FBA42020F2
+	for <tosdr@googlegroups.com>; Tue, 28 Jan 2014 16:13:01 +0100 (CET)
+Date: Tue, 28 Jan 2014 16:12:58 +0100
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Subject: [tosdr:2923] [Fwd] [tosdr.org] Revisit Tumblr services (#121)
+Message-ID: <20140128151258.GF2389@xps.lan>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="K1n7F7fSdjvFAEnM"
+Content-Disposition: inline
+Organization: Free Software Foundation Europe, e.V.
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--K1n7F7fSdjvFAEnM
+Content-Type: multipart/mixed; boundary="oXNgvKVxGWJ0RPMJ"
+Content-Disposition: inline
+
+
+--oXNgvKVxGWJ0RPMJ
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+
+
+--oXNgvKVxGWJ0RPMJ
+Content-Type: message/rfc822
+Content-Disposition: inline
+
+Return-Path: <noreply@github.com>
+Received: from localhost (localhost [127.0.0.1])
+	 by kolab.fsfeurope.org (Cyrus v2.3.16-kolab-nocaps) with LMTPA;
+	 Tue, 28 Jan 2014 02:23:37 +0100
+X-Sieve: CMU Sieve 2.3
+Received: from localhost (localhost [127.0.0.1])
+	by kolab.fsfeurope.org (Postfix) with ESMTP id D70133DE81D
+	for <roy@kolab.fsfeurope.org>; Tue, 28 Jan 2014 02:23:36 +0100 (CET)
+X-Virus-Scanned: by amavisd-new at fsfeurope.org
+Received: from kolab.fsfeurope.org ([127.0.0.1])
+	by localhost (kolab.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Ym42GVhbccrk for <roy@kolab.fsfeurope.org>;
+	Tue, 28 Jan 2014 02:23:36 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by kolab.fsfeurope.org (Postfix) with ESMTP id 769DF3DE82B
+	for <roy@kolab.fsfeurope.org>; Tue, 28 Jan 2014 02:23:36 +0100 (CET)
+Received: from gadolin.fsfeurope.org (gadolin.fsfeurope.org [217.69.89.163])
+	by kolab.fsfeurope.org (Postfix) with ESMTPS id 5283F3DE81D
+	for <roy@kolab.fsfeurope.org>; Tue, 28 Jan 2014 02:23:36 +0100 (CET)
+Received: by gadolin.fsfeurope.org (Postfix)
+	id 22A09734D23; Tue, 28 Jan 2014 02:23:36 +0100 (CET)
+Delivered-To: roy@fsfeurope.org
+Received: from localhost (localhost [127.0.0.1])
+	by gadolin.fsfeurope.org (Postfix) with ESMTP id DC298734D67
+	for <roy@fsfeurope.org>; Tue, 28 Jan 2014 02:23:35 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at gadolin
+Received: from gadolin.fsfeurope.org ([127.0.0.1])
+	by localhost (gadolin.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id TIfjH0th+VgN for <roy@fsfeurope.org>;
+	Tue, 28 Jan 2014 02:23:35 +0100 (CET)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org [IPv6:2001:aa8:ffed::3:102])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client CN "mail.fsfe.org", Issuer "StartCom Class 2 Primary Intermediate Server CA" (verified OK))
+	by gadolin.fsfeurope.org (Postfix) with ESMTPS id 2474C734D23
+	for <roy@fsfeurope.org>; Tue, 28 Jan 2014 02:23:35 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id DE2D063B4B1
+	for <roy@fsfeurope.org>; Tue, 28 Jan 2014 02:23:34 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id f9+13NG+cx+z for <roy@fsfeurope.org>;
+	Tue, 28 Jan 2014 02:23:31 +0100 (CET)
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net [IPv6:2001:4b98:c:538::197])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPS id 538E663AF7A
+	for <hugo@fsfe.org>; Tue, 28 Jan 2014 02:23:31 +0100 (CET)
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id F10E241C054
+	for <hugo@fsfe.org>; Tue, 28 Jan 2014 02:23:30 +0100 (CET)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DB5BC116DA2
+	for <hugo@fsfe.org>; Tue, 28 Jan 2014 02:23:30 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HAfjRGvyghru for <hugo@fsfe.org>;
+	Tue, 28 Jan 2014 02:23:29 +0100 (CET)
+Received: from github-smtp2a-ext-cp1-prd.iad.github.net (github-smtp2-ext5.iad.github.net [192.30.252.196])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4087A116DA6
+	for <hugo@tosdr.org>; Tue, 28 Jan 2014 02:23:25 +0100 (CET)
+Date: Mon, 27 Jan 2014 17:23:24 -0800
+From: Alex Jordan <notifications@github.com>
+Reply-To: "tosdr/tosdr.org" <reply+i-26409877-a6d2ac914ec5551e73036e24d354cc265587b4dd-1629771@reply.github.com>
+To: "tosdr/tosdr.org" <tosdr.org@noreply.github.com>
+Message-ID: <tosdr/tosdr.org/issues/121@github.com>
+Subject: [tosdr.org] Revisit Tumblr services (#121)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_52e7068cc0ca4_59573f8e4339f2a4324e0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Recipient: hugoroy
+List-ID: tosdr/tosdr.org <tosdr.org.tosdr.github.com>
+List-Archive: https://github.com/tosdr/tosdr.org
+List-Post: <mailto:reply+i-26409877-a6d2ac914ec5551e73036e24d354cc265587b4dd-1629771@reply.github.com>
+List-Unsubscribe: <mailto:unsub+i-26409877-a6d2ac914ec5551e73036e24d354cc265587b4dd-1629771@reply.github.com>,
+ <https://github.com/notifications/unsubscribe/1629771__eyJzY29wZSI6Ik5ld3NpZXM6TXV0ZSIsImV4cGlyZXMiOjE3MDY0MDUwMDQsImRhdGEiOnsiaWQiOjI0Mzc3OTc0fX0=--449097bf2652a62fad26660c36fac65a66382da4>
+X-Auto-Response-Suppress: All
+X-GitHub-Recipient-Address: hugo@tosdr.org
+X-Kolab-Scheduling-Message: FALSE
+
+
+----==_mimepart_52e7068cc0ca4_59573f8e4339f2a4324e0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Tumblr has just changed their Terms of Service, Privacy Policy, and Community Guidelines. ToS;DR should revisit these.
+
+---
+Reply to this email directly or view it on GitHub:
+https://github.com/tosdr/tosdr.org/issues/121
+----==_mimepart_52e7068cc0ca4_59573f8e4339f2a4324e0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Tumblr has just changed their Terms of Service, Privacy Policy, and Community Guidelines. ToS;DR should revisit these.</p>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">&mdash;<br>Reply to this email directly or <a href='https://github.com/tosdr/tosdr.org/issues/121'>view it on GitHub</a>.<img src='https://github.com/notifications/beacon/1629771__eyJzY29wZSI6Ik5ld3NpZXM6QmVhY29uIiwiZXhwaXJlcyI6MTcwNjQwNTAwNCwiZGF0YSI6eyJpZCI6MjQzNzc5NzR9fQ==--614b264f8d229818d6fab9474f52fc7e838e3959.gif' height='1' width='1'></p>
+----==_mimepart_52e7068cc0ca4_59573f8e4339f2a4324e0--
+
+--oXNgvKVxGWJ0RPMJ--
+
+--K1n7F7fSdjvFAEnM
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iQEcBAEBAgAGBQJS58j6AAoJEI0CLJmz17eVMZwIANCp8KBU2pbWdweLlzNHB7g/
+vNYB+PlDLBUGedHmNo8jEtYJl2/74rIp8OruAUwpr/xnxmuKT4O4/xNcevlmlQ56
+hbMUtYoTMNnoiDWFZtqstZqULmtGV5yioXQBCYZvM8fIunpmzta+x8l601mG01gF
+MjbzXEdY0HdOH/H86ATy+K5YN6bOzkEa+Z/xDISMOmKD7D4+iEIeHvpsirLnR/A9
+Nz6nz6llVIPbJdOkGGroM7tK7dAb+ZUPdaR8IKeaLyU0KSzfIAeESuhx0s4/jRg9
+/aYYYuhWwPr0pspsigbkChWHZEn5khfmYajJSNPMJGHXet/Gux9z8c9ZZeL3siM=
+=K1hL
+-----END PGP SIGNATURE-----
+
+--K1n7F7fSdjvFAEnM--
