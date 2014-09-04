@@ -1,0 +1,13 @@
+<html>
+  <h1>Google Groups thread subjects scraper</h1>
+  <p>This is aimed at scraping the subjects of ToS;DR threads, but you could adapt it to other forums by changing the string 'tosdr' in the bookmarklet code to something else.</p>
+  <ul>
+    <li>Drag the &quot;bookmarklet&quot; link from below here to your bookmark bar</li>
+    <li>Visit <a href="https://groups.google.com/forum#!forum/tosdr">the ToS;DR forum</a></li>
+    <li>Wait for the topics to load</li>
+    <li>Scroll down, so that more topics load</li>
+    <li>Now click the bookmarklet in your browser's bookmark bar</li>
+    <li>The page will turn into a JSON document which maps topic hash to topic subject</li>
+  </ul>
+
+<a href="javascript:var topicPrefix = 'https://groups.google.com/forum/#!topic/tosdr/', i, aElts = document.getElementsByTagName('a'), result = {}; for (i=0; i<aElts.length; i++) { if (aElts[i].href.substring(0, topicPrefix.length) === topicPrefix) { result[aElts[i].href.substring(topicPrefix.length)] = aElts[i].innerHTML; } } document.body.innerHTML = JSON.stringify(result);">ToS;DR thread subjects scraper</a>
