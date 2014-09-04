@@ -20,6 +20,9 @@ for (i in subjects) {
   }
 }
 for (i=0; i<pointFiles.length; i++) {
+  if (pointFiles[i] === 'README.md') {
+    continue;
+  }
   point = {};
   try {
     point = JSON.parse(fs.readFileSync('../points/'+pointFiles[i]));
@@ -29,7 +32,37 @@ for (i=0; i<pointFiles.length; i++) {
     parts = point.discussion.substring('https://groups.google.com/d/topic/tosdr/'.length).split('/');
     if (index[parts[0]]) {
       index[parts[0]].points.push(pointFiles[i]);
+    } else {
+      console.log('cannot find thread', parts[0], pointFiles[i]);
+      die();
     }
+   } else if (point.discussion && point.discussion.substring(0, 'https://groups.google.com/d/msg/tosdr/'.length) === 'https://groups.google.com/d/msg/tosdr/') {
+    parts = point.discussion.substring('https://groups.google.com/d/msg/tosdr/'.length).split('/');
+    if (index[parts[0]]) {
+      index[parts[0]].points.push(pointFiles[i]);
+    } else {
+      console.log('cannot find thread', parts[0], pointFiles[i]);
+      die();
+    }
+  } else if (point.discussion && point.discussion.substring(0, 'https://groups.google.com/forum/#!topic/tosdr/'.length) === 'https://groups.google.com/forum/#!topic/tosdr/') {
+    parts = point.discussion.substring('https://groups.google.com/forum/#!topic/tosdr/'.length).split('/');
+    if (index[parts[0]]) {
+      index[parts[0]].points.push(pointFiles[i]);
+    } else {
+      console.log('cannot find thread', parts[0], pointFiles[i]);
+      die();
+    }
+  } else if (point.discussion && point.discussion.substring(0, 'https://groups.google.com/forum/?fromgroups#!topic/tosdr/'.length) === 'https://groups.google.com/forum/?fromgroups#!topic/tosdr/') {
+    parts = point.discussion.substring('https://groups.google.com/forum/?fromgroups#!topic/tosdr/'.length).split('/');
+    if (index[parts[0]]) {
+      index[parts[0]].points.push(pointFiles[i]);
+    } else {
+      console.log('cannot find thread', parts[0], pointFiles[i]);
+      die();
+    }
+  } else {
+    console.log('cannot parse discussion link', point.discussion, pointFiles[i]);
+    die();
   }
 }
 done = 0;
