@@ -50,6 +50,7 @@ module.exports = {
     { name: 'fines for spammers', point: 'neutral', score: 30 },
     { name: 'disputes with others', point: 'neutral', score: 0 },
     { name: 'help you deal with take-down notices', point: 'good', score: 20 },
+    { name: 'you may not express negative opinions about them', point: 'bad', score: 40 },
   ],
   'guarantee': [
     { name: 'your use is throttled', point: 'bad', score: 30 },
