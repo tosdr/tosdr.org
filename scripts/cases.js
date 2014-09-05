@@ -12,7 +12,6 @@ module.exports = {
      { name: 'user is notified on the day', point: 'neutral', score: 0 },
      { name: 'user is notified a week or more in advance', point: 'good', score: 30 },
      { name: 'user is notified a month or more in advance', point: 'good', score: 40 },
-     { name: 'they publish the change history', point: 'good', score: 50 },
   ],
   'cookies': [
      { name: 'only temporary session cookies', point: 'good', score: 20 },
@@ -103,7 +102,7 @@ module.exports = {
     { name: 'no liability for unauthorized access', point: 'bad', score: 30 },
   ],
   'readability': [
-    { name: 'archives provided', point: 'good', score: 10 },
+    { name: 'archives provided', point: 'good', score: 50 },
     { name: 'translated into only a few languages', point: 'neutral', score: 0 },
     { name: 'easy to read', point: 'good', score: 10 },
     { name: 'separate policies for some parts of the service', point: 'neutral', score: 0 },
@@ -120,6 +119,7 @@ module.exports = {
     { name: 'third parties may be involved in operating the service', point: 'bad', score: 15 },
     { name: 'many third parties are involved in operating the service', point: 'bad', score: 50 },
     { name: 'they educate you about the risks', point: 'good', score: 30 },
+    { name: 'third parties are bound by confidentiality obligations', point: 'good', score: 20 },
   ],
   'track': [
     { name: 'may collect extra data about you in contests', point: 'neutral', score: 0 },
@@ -130,6 +130,7 @@ module.exports = {
     { name: 'personal data is used for advertising', point: 'neutral', score: 10 },
     { name: 'tracking pixels used in service-to-user communication', point: 'neutral', score: 10 },
     { name: 'no tracking', point: 'good', score: 100 },
+    { name: 'personalized ads are opt-out', point: 'good', score: 40 },
     { name: 'targeted third-party advertising', point: 'bad', score: 30 },
     { name: 'tracking data deleted after 10 days and opt-out', point: 'good', score: 80 },
   ],
