@@ -34,6 +34,7 @@ module.exports = {
   ],
   'data-export': [
      { name: 'you can get your data back', point: 'good', score: 40 },
+     { name: 'you can get your data back but it requires hard work like sending faxes', point: 'good', score: 30 },
   ],
   'governance': [
     { name: 'only for your individual use', point: 'neutral', score: 10 },
