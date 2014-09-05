@@ -5,13 +5,14 @@ var fs = require('fs'),
   point, i, done, uniqueSubjects = {},
   pointFiles = fs.readdirSync('../points/'),
   rawPostFiles = fs.readdirSync('./rawPosts/'),
-  MailParser = require("mailparser").MailParser, mailParser;
+  MailParser = require("mailparser").MailParser, mailParser,
+  prettyjson = require('../scripts/prettyjson');
 
 //...
 for (i in newSubjects) {
   subjects[i] = newSubjects[i];
 }
-fs.writeFileSync('./threadSubjects.json', JSON.stringify(subjects));
+fs.writeFileSync('./threadSubjects.json', prettyjson(subjects));
 
 for (i in subjects) {
   index[i] = {
@@ -82,11 +83,11 @@ function onEnd(mailObject) {
     if (index[uniqueSubjects[mailObject.subject]].posts.indexOf(mailObject.messageId) === -1) {
       index[uniqueSubjects[mailObject.subject]].posts.push(mailObject.messageId);
     }
-    fs.writeFileSync('../posts/'+mailObject.messageId+'.json', JSON.stringify(mailObject));
+    fs.writeFileSync('../posts/'+mailObject.messageId+'.json', prettyjson(mailObject));
   }
   done++;
   if (done === rawPostFiles.length) {
-    console.log(JSON.stringify(index));
+    console.log(prettyjson(index));
   } else {
     setTimeout(function() {
       mailParser = new MailParser();
