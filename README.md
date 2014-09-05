@@ -41,6 +41,14 @@ To import new and/or updated threads from the Google Group:
 * `cd .. ; sh build.sh`
 * `git add import/rawPosts ; git commit -am"import from Google Groups"; git push; git push 5apps master`
 
+Curate
+======
+These scripts are what I (Michiel) currently use for curating points after import. The ideas is to integrate these into the web interface:
+
+* `node scripts/checkcases.js` - an interactive command-line tool that helps you assign cases to points that don't have one yet
+* `node scripts/checkclasses.js` - outputs recommendations for adding/updating the class of services, based on their data points
+
+
 Develop other applications
 ==========================
 
