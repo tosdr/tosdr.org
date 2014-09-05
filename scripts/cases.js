@@ -12,6 +12,7 @@ module.exports = {
      { name: 'user is notified on the day', point: 'neutral', score: 0 },
      { name: 'user is notified a week or more in advance', point: 'good', score: 30 },
      { name: 'user is notified a month or more in advance', point: 'good', score: 40 },
+     { name: 'they publish the change history', point: 'good', score: 50 },
   ],
   'cookies': [
      { name: 'only temporary session cookies', point: 'good', score: 20 },
