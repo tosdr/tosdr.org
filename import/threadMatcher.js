@@ -73,7 +73,9 @@ function onEnd(mailObject) {
     mailObject.subject = subjectParts.join('] ');
   }
   if (uniqueSubjects[mailObject.subject]) {
-    index[uniqueSubjects[mailObject.subject]].posts.push(mailObject.messageId);
+    if (index[uniqueSubjects[mailObject.subject]].posts.indexOf(mailObject.messageId) === -1) {
+      index[uniqueSubjects[mailObject.subject]].posts.push(mailObject.messageId);
+    }
     fs.writeFileSync('../posts/'+mailObject.messageId+'.json', JSON.stringify(mailObject));
   }
   done++;
