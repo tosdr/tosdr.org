@@ -56,10 +56,10 @@ function displayPoints(res) {
       displayPoint(res, i, 'no id', points[i]);
     } else if(!points[i].title) {
       displayPoint(res, i, 'no title', points[i]);
-    } else if(!points[i].irrelevant && !points[i].service) {
-      displayPoint(res, i, 'no service', points[i]);
-    } else if(!points[i].irrelevant && !points[i].topic) {
-      displayPoint(res, i, 'no topic', points[i]);
+    } else if(!points[i].tosdr.irrelevant && !points[i].services) {
+      displayPoint(res, i, 'no services', points[i]);
+    } else if(!points[i].tosdr.irrelevant && !points[i].topics) {
+      displayPoint(res, i, 'no topics', points[i]);
     }
   }
   res.write(fs.readFileSync('curator-postfix.html'));
