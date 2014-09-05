@@ -1,5 +1,7 @@
 var fs = require('fs'),
   http = require('http'),
+  cases = require('./cases'),
+  services = JSON.parse(fs.readFileSync('index/services.json')),
   points = {};
 
 function addFile(filename) {
@@ -21,22 +23,35 @@ function displayPoint(res, filename, reason, data) {
   console.log(filename);
 }
 
-function displayField(res, point, field, hidden) {
+function displayField(res, point, field, hidden, options) {
   console.log(point, field, hidden);
   if(typeof(point[field])=='string') {
     point[field]=point[field].split('"').join('&quot;');
   }
-  res.write((hidden?'<input hidden ':field+': <input ')+'value="'+point[field]+'" name="'+field+'"/>');
+  if(Array.isArray(options)) {
+    res.write('<select name="'+field+'">');
+    for(var i=0; i<options.length; i++) {
+      res.write('<option value="'+options[i]+'"'+(point[field]===options[i]?' selected':'')+'>'+options[i]+'</option>');
+    }
+    res.write('</select>');
+  } else {
+    res.write((hidden?'<input hidden ':field+': <input ')+'value="'+point[field]+'" name="'+field+'"/>');
+  }
 }
 function displayForm(res, filename) {
-  var point = points[filename];
+  var topic, i, point = points[filename];
+  res.write('<pre>'+JSON.stringify(point)+'</pre>');
   res.write('<form method="POST">');
   displayField(res, {filename: filename}, 'filename', true);
-  displayField(res, point, 'topic');
-  displayField(res, point, 'service');
-  res.write('<input type="submit" value="set service and topic" name="set"><br>');
-  
-  res.write('<a href="/">index</a>');
+  displayField(res, point, 'service', false, Object.keys(services));
+  for(topic in cases) {
+    res.write('<h6>'+topic+'</h6>');
+    for(i=0; i<cases[topic].length; i++) {
+      res.write('<input type="submit" value="'+topic+' | '+i+'" name="set"> '
+          +cases[topic][i].name+'('+cases[topic][i].point+':'+cases[topic][i].score+')<br>');
+    }
+  }
+  res.write('<a href="/">index</a> ');
   res.write('<a href="'+point.discussion+'" target="blank">discussion</a>');
 }
 
@@ -63,7 +78,7 @@ function displayPoints(res) {
     }
   }
   res.write(fs.readFileSync('curator-postfix.html'));
-	//console.log(points);
+  //console.log(points);
 }
 function processPost(req) {
   var str='';
@@ -71,18 +86,30 @@ function processPost(req) {
     str += chunk;
   });
   req.on('end', function() {
+    var pairs, i, j, parts, caseObj, incoming = {};
     if(!str.length) {
       return;
     }
-    var pairs = str.split('&');
+    pairs = str.split('&');
     console.log(pairs);
-    var incoming = {};
-    for(var i=0; i<pairs.length; i++) {
-      var parts = pairs[i].split('=');
+    for(i=0; i<pairs.length; i++) {
+      parts = pairs[i].split('=');
       incoming[parts[0]]=parts[1];
     }
-    for(var i in incoming) {
-      if(i!='filename') {
+    for(i in incoming) {
+      if(i==='set') {
+        parts=incoming[i].split('+%7C+');
+        if(parts.length!=2) {
+          console.log('cannot parse set field', incoming);
+          die();
+        }
+        points[incoming.filename].topics = [parts[0]];
+        points[incoming.filename].tosdr['case'] = cases[parts[0]][parseInt(parts[1])]['name'];
+        points[incoming.filename].tosdr.point = cases[parts[0]][parseInt(parts[1])].point;
+        points[incoming.filename].tosdr.score = cases[parts[0]][parseInt(parts[1])].score;
+      } else if(i==='service') {
+        points[incoming.filename].services=[incoming[i]];
+      } else if(i!='filename') {
         points[incoming.filename][i]=incoming[i];
       }
     }
@@ -93,8 +120,8 @@ function loadPoints() {
   points={};
   files = fs.readdirSync('points/');
   for(var i=0; i<files.length; i++) {
-  	if(files[i]!='README.md') {
-  		addFile(files[i]);
+    if(files[i]!='README.md') {
+      addFile(files[i]);
     }
   }
 }
