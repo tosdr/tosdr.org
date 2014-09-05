@@ -110,6 +110,7 @@ module.exports = {
     { name: 'they can delete your account without prior notice and without a reason', point: 'bad', score: 50 },
     { name: 'they can delete specific files without prior notice and without a reason', point: 'blocker', score: 50 },
     { name: 'they may stop providing the service at any time', point: 'bad', score: 40 },
+    { name: 'suspension will be fair and proportionate', point: 'good', score: 20 },
     { name: 'they can suspend your account for several reasons', point: 'neutral', score: 15 },
     { name: 'they give 30 days notice before closing your account', point: 'good', score: 15 },
   ],
