@@ -1,5 +1,6 @@
 var fs = require('fs'),
-  i, threads = JSON.parse(fs.readFileSync('index/threads.json'));
+  i, threads = JSON.parse(fs.readFileSync('index/threads.json')),
+  prettyjson = require('./prettyjson');
 
 //...
 for (i in threads) {
@@ -9,7 +10,7 @@ for (i in threads) {
       console.log('ERROR: points file exists but not listed in index/threads.json. Was it added manually?');
       die();
     }
-    fs.writeFileSync('points/'+i+'.json', JSON.stringify({
+    fs.writeFileSync('points/'+i+'.json', prettyjson({
       discussion: 'https://groups.google.com/forum#!topic/tosdr/'+i,
       id: i,
       title: threads[i].subject,
@@ -19,4 +20,4 @@ for (i in threads) {
     threads[i].points.push(i+'.json');
   }
 }
-fs.writeFileSync('index/threads.json', JSON.stringify(threads));
+fs.writeFileSync('index/threads.json', prettyjson(threads));

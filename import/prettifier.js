@@ -1,43 +1,9 @@
-var fs = require('fs');
-
-function sortObject(obj, strict)
-{
-  //console.log(obj);
-  if(obj instanceof Array) {
-    var ary;
-    if(strict) ary =  obj.sort();
-    else ary = obj
-    return ary
-  }
-  if(typeof obj === 'object') {
-    //var fixed;
-    //if(fixed = fixArrays(obj))
-    //  return fixed;
-    var tObj = {};
-    Object.keys(obj).sort().forEach( function(key) {
-      tObj[key] = sortObject(obj[key])
-    } )
-    return tObj;
-  }
-  return obj;
-}
-
-function fixArrays(obj){
-  var l = Object.keys(obj);
-  var ret = [];
-  if( l.length == l.filter(function(e){return e.match(/^\d+$/)}).length && l.length > 0){
-    l.forEach(function(k){
-      ret.push(obj[k])
-    })
-    //console.log(ret);
-    return ret;
-  } else
-    return false;
-}
+var fs = require('fs'),
+  prettyjson = require('../scripts/prettyjson.js');
 
 function doFile(from, to) {
   var item = JSON.parse(fs.readFileSync(from));
-  fs.writeFileSync(to, JSON.stringify(sortObject(item, true),undefined, 2));
+  fs.writeFileSync(to, prettyjson(item));
 }
 
 function process(path){
