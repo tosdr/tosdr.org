@@ -49,7 +49,7 @@ function displayForm(res, filename) {
     res.write('<h6>'+topic+'</h6>');
     for (i=0; i<cases[topic].length; i++) {
       res.write('<input type="submit" value="' + topic + ' | ' + i + '" name="set"> '
-          + cases[topic][i].name + '(' + cases[topic][i].point + ':' + cases[topic][i].score + ')<br>');
+          + cases[topic][i].name + ' (' + cases[topic][i].point + ':' + cases[topic][i].score + ')<br>');
     }
   }
   res.write('<a href="/">index</a> ');
