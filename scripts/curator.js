@@ -2,7 +2,8 @@ var fs = require('fs'),
   http = require('http'),
   cases = require('./cases'),
   services = JSON.parse(fs.readFileSync('index/services.json')),
-  points = {};
+  points = {},
+  prettyjson = require('./prettyjson');
 
 function addFile(filename) {
   try {
@@ -13,7 +14,7 @@ function addFile(filename) {
 }
 
 function savePoint(filename) {
-  fs.writeFileSync('points/' + filename, JSON.stringify(points[filename]));
+  fs.writeFileSync('points/' + filename, prettyjson(points[filename]));
 }
 
 function displayPoint(res, filename, reason, data) {
@@ -41,7 +42,7 @@ function displayField(res, point, field, hidden, options) {
 }
 function displayForm(res, filename) {
   var topic, i, point = points[filename];
-  res.write('<pre>' + JSON.stringify(point) + '</pre>');
+  res.write('<pre>' + prettyjson(point) + '</pre>');
   res.write('<form method="POST">');
   displayField(res, {filename: filename}, 'filename', true);
   displayField(res, point, 'service', false, Object.keys(services));
