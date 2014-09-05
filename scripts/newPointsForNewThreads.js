@@ -10,7 +10,7 @@ for (i in threads) {
       die();
     }
     fs.writeFileSync('points/'+i+'.json', JSON.stringify({
-      discussion: 'https://groups.google.com/forum#!topic/'+i,
+      discussion: 'https://groups.google.com/forum#!topic/tosdr/'+i,
       id: i,
       title: threads[i].subject,
       tosdr: {
