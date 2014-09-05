@@ -112,7 +112,7 @@ function processPost(req) {
         points[incoming.filename].services = [incoming[i]];
       } else if(i === 'irrelevant') {
         points[incoming.filename].tosdr.irrelevant = incoming[i];
-      } else if(i! = 'filename') {
+      } else if(i != 'filename') {
         points[incoming.filename][i] = incoming[i];
       }
     }
