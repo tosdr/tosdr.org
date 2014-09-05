@@ -35,6 +35,11 @@ function fixArrays(obj){
     return false;
 }
 
+function doFile(from, to) {
+  var item = JSON.parse(fs.readFileSync(from));
+  fs.writeFileSync(to, JSON.stringify(sortObject(item, true),undefined, 2));
+}
+
 function process(path){
   fs.readdir('../'+path, function(err, files){
     if(err){
@@ -44,9 +49,8 @@ function process(path){
     for(var i=0; i<files.length; i++) {
       if( files[i].match(/\.json$/) ) {
         try {
-          console.log('starting '+path+'/'+files[i]); 
-          var item = JSON.parse(fs.readFileSync('../'+path+'/'+files[i]));
-          fs.writeFileSync(path+'/'+files[i], JSON.stringify(sortObject(item, true),undefined, 2));
+          console.log('starting '+path+'/'+files[i]);
+          doFile('../'+path+'/'+files[i], path+'/'+files[i]);
         } catch(e) {
           console.error("SOMETHING IS WRONG with ",path+'/'+files[i],e)
         }        
@@ -58,3 +62,4 @@ function process(path){
 
 
 ['points', 'topics', 'services', 'index', 'cases', 'posts'].forEach(process);
+doFile('threadSubjects.json', 'threadSubjects.json');

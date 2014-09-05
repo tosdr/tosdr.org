@@ -1,5 +1,6 @@
 var fs = require('fs'),
   subjects = JSON.parse(fs.readFileSync('./threadSubjects.json')),
+  newSubjects = JSON.parse(fs.readFileSync('./newThreadSubjects.json')),
   index = {},
   point, i, done, uniqueSubjects = {},
   pointFiles = fs.readdirSync('../points/'),
@@ -7,6 +8,11 @@ var fs = require('fs'),
   MailParser = require("mailparser").MailParser, mailParser;
 
 //...
+for (i in newSubjects) {
+  subjects[i] = newSubjects[i];
+}
+fs.writeFileSync('./threadSubjects.json', JSON.stringify(subjects));
+
 for (i in subjects) {
   index[i] = {
     subject: subjects[i],
