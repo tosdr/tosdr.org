@@ -1,8 +1,7 @@
 $(function () {
 
-  $('#searchBox').keyup(function(){
+  function search(searchTerm) {
     var serviceDivs = document.getElementsByClassName('service-nutshell');
-    var searchTerm = document.getElementById('searchBox').value.toLowerCase();
     var tophit;
     for (var i = 0; i < serviceDivs.length; i++) {
       var terms = [];
@@ -32,6 +31,11 @@ $(function () {
     //  var elt = document.getElementById('services-list').removeChild(serviceDivs[tophit]);
     //  document.getElementById('services-list').insertBefore(elt, serviceDivs[0]);//
     //}
+  }
+
+  $('#searchBox').keyup(function(){
+    var searchTerm = document.getElementById('searchBox').value.toLowerCase();
+    search(searchTerm);
   });
 
   $('#searchDiv').css('display', 'block');
@@ -73,8 +77,21 @@ $(function () {
   });
 
   if (location.hash.length > 1) {
-    showModal(location.hash.substring(1));
-  }
+    var hash = location.hash.substring(1);
 
+    if (hash.indexOf("=") != -1) {
+      var splits = hash.split("=");
+      if (splits.length == 2 && splits[0] == "search" && splits[1].length > 0) {
+        search(splits[1]);
+
+        // scroll down to #services
+        $('html, body').animate({
+          scrollTop: $("#services").offset().top
+        }, 1000);
+      }
+    } else {
+      showModal(hash);
+    }
+  }
 });
 
