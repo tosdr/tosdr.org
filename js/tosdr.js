@@ -36,6 +36,7 @@ $(function () {
   $('#searchBox').keyup(function(){
     var searchTerm = document.getElementById('searchBox').value.toLowerCase();
     search(searchTerm);
+    location = '#search=' + encodeURIComponent(searchTerm);
   });
 
   $('#searchDiv').css('display', 'block');
@@ -83,6 +84,7 @@ $(function () {
       var splits = hash.split("=");
       if (splits.length == 2 && splits[0] == "search" && splits[1].length > 0) {
         search(splits[1]);
+        document.getElementById('searchBox').value = splits[1];
 
         // scroll down to #services
         $('html, body').animate({
