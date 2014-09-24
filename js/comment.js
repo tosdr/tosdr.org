@@ -1,8 +1,8 @@
 'use strict';
 
-var assertionUrl = 'http://3pp.io:4343/persona';
-var postCommentUrl = 'http://3pp.io:4343/post/comment';
-var serviceListUrl = 'http://tosdr.org/index/services.json';
+var assertionUrl = 'https://3pp.io:4343/persona';
+var postCommentUrl = 'https://3pp.io:4343/post/comment';
+var serviceListUrl = 'https://tosdr.org/index/services.json';
 
 $(document).ready(function(){
 	var loggedInUser = null;
