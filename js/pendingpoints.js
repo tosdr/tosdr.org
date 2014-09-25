@@ -1,8 +1,8 @@
 'use strict';
 
-var pendingpointsListUrl = 'http://3pp.io:4343/get/pendingpoints';
-var assertionUrl = 'http://3pp.io:4343/persona';
-var postCommentUrl = 'http://3pp.io:4343/post/comment';
+var pendingpointsListUrl = 'https://3pp.io:4343/get/pendingpoints';
+var assertionUrl = 'https://3pp.io:4343/persona';
+var postCommentUrl = 'https://3pp.io:4343/post/comment';
 
 $(document).ready(function(){
     var loggedInUser = null;
