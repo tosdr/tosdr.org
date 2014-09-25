@@ -58,7 +58,9 @@ $(document).ready(function(){
 	}
 	
 	function showConfirmation(){
-		$('#comment').html('Your comment has been submitted. Thank you!');
+		$('#comment').html('Your comment has been submitted. Thank you! '
+                   +'<a href="/comments.html">submit another one</a> or '
+                   +'<a href="/pendingpoints.html">see the list</a>.');
 	}
 	
 	function showError(){
