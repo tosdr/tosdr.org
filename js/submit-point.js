@@ -1,3 +1,7 @@
+//
+// Please update "commments" to "submit point"
+//
+
 'use strict';
 
 var assertionUrl = 'https://3pp.io:4343/persona';
@@ -36,8 +40,21 @@ $(document).ready(function(){
 		$('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
 	}
 	
+        // This is ugly, too much html here
+        //
+        //
+
 	function showCommentForm(email){
-		$('#comment').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset><div class="control-group"><label for="title">Title</label><input type="text" id="titleField" name="title" required /></div><div class="control-group"><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label></div><div class="control-group"><label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" /></div><div class="control-group"><label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" /></div><div class="control-group"><label for="comment">Can you summarise this clause?</label><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Send</button></div></fieldset></form>');
+		$('#comment').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p>' +
+                        '<form class="commentForm">' +
+                            '<fieldset>' +
+                                '<div class="control-group"><label for="title">Title</label><input type="text" id="titleField" name="title" required /></div>' +
+                                '<div class="control-group"><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label></div>' +
+                                '<div class="control-group"><label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" /></div>' +
+                                '<div class="control-group"><label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" /></div>' +
+                                '<div class="control-group"><label for="comment">Can you summarise this clause?</label><textarea name="comment" id="commentField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Send</button></div>' +
+                            '</fieldset>' +
+                        '</form>');
 		
         var response = $.get(serviceListUrl, 'json');
         response.done(function(services){
