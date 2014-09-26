@@ -15,4 +15,5 @@ mv cases/* ../cases/
 mv posts/* ../posts/
 
 cd ..
+node scripts/generateApiFiles.js
 git status
