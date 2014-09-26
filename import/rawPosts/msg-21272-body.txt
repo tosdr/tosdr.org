@@ -1,0 +1,167 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB2VUSGOQKGQE2EHACUA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 24BC040908
+	for <anything@michielbdejong.com>; Fri, 20 Jun 2014 17:59:46 +0200 (CEST)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 02736178114
+	for <anything@michielbdejong.com>; Fri, 20 Jun 2014 17:59:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id s+2GMJMN01CY for <anything@michielbdejong.com>;
+	Fri, 20 Jun 2014 17:59:44 +0200 (CEST)
+Received: from mail-la0-x239.google.com (mail-la0-x239.google.com [IPv6:2a00:1450:4010:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6A7E9178154
+	for <michiel@michielbdejong.com>; Fri, 20 Jun 2014 17:59:41 +0200 (CEST)
+Received: by mail-la0-f57.google.com with SMTP id ty20sf421514lab.12
+        for <michiel@michielbdejong.com>; Fri, 20 Jun 2014 08:59:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:references:mime-version
+         :content-type:content-disposition:in-reply-to:organization
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=Y10VgZ+P3Ut3EgqXoSL2EsolXCsK3ZRbax5etEnkSfQ=;
+        b=Skfr2qVENo1I3SSz0TFzdPIybvVb6Fh2rMQ3aoSO4LPOFBcQR3778FROlYrHNAj+QZ
+         mwuR2KplP1M4viMoEEhdVHbr2NFqPbWlKChPw8ODG4L69TucmCywVkqhiq0AjbO4Lrt0
+         SUgB0zEw9wWLZFUJp02MSNfEZLI1gVu/4eWoAzoEGbRhUCpTr6g1k5r0cei7GMjE3hIR
+         8TboomxLTj7wET/5iwhwzHyohg2YJ8LJkJr7DQ9tZSi4TNZs5vkTg2EXFVq2j6KYR8Q2
+         0gfHlgKYkRGKyTWQ1erZ6spBI8ve26CvgCKsZkwVDArzXfjy+xuefcI69L41gjXU+ser
+         4IHw==
+X-Received: by 10.152.205.39 with SMTP id ld7mr10564lac.23.1403279979982;
+        Fri, 20 Jun 2014 08:59:39 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.5.100 with SMTP id r4ls161900lar.107.gmail; Fri, 20 Jun
+ 2014 08:59:38 -0700 (PDT)
+X-Received: by 10.112.54.169 with SMTP id k9mr412149lbp.1.1403279978556;
+        Fri, 20 Jun 2014 08:59:38 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id s1si149209wiw.3.2014.06.20.08.59.38
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 20 Jun 2014 08:59:38 -0700 (PDT)
+Received-SPF: none (google.com: hugo@fsfe.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id E910763B544
+	for <tosdr@googlegroups.com>; Fri, 20 Jun 2014 17:59:37 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7ES9covxH+Ug for <tosdr@googlegroups.com>;
+	Fri, 20 Jun 2014 17:59:35 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:242d:1bb0:3e77:e6ff:fe18:ed03])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id C8A6D63B40D
+	for <tosdr@googlegroups.com>; Fri, 20 Jun 2014 17:59:34 +0200 (CEST)
+Date: Fri, 20 Jun 2014 17:59:34 +0200
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3062] You should do Mozilla's Privacy Policy.
+Message-ID: <20140620155933.GB15876@xps>
+References: <CAGTawzMzS14YuEp0AKpTZLCZ8uoKJdg=epFEC_xFVLJURew+FA@mail.gmail.com>
+ <20140520143828.GB23612@xps>
+ <338db406-3187-4f05-ac10-5444d9645808@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="ftEhullJWpWg/VHq"
+Content-Disposition: inline
+In-Reply-To: <338db406-3187-4f05-ac10-5444d9645808@googlegroups.com>
+Organization: Free Software Foundation Europe, e.V.
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@fsfe.org does not designate permitted sender hosts) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--ftEhullJWpWg/VHq
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Of course, everything written in the privacy policy itself can be
+used to make an argument before the courts.
+
+Still, sentences such as=C2=A0=E2=80=9Cwe care about your privacy=E2=80=9D =
+don=E2=80=99t hold
+much water (which is not the same thing is not holding water at
+all).
+
+The fact that such sentences are often used at the beginning of
+the privacy policies make them act like a preamble and it can be
+reasonably argued that they are important in spirit.
+
+But when the letter of the policy will later in the text
+contradict the spirit of sentences such as "we care about your
+priacy" what do you think is going to happen really? This is why I
+would much rather focus on the concrete provisions on ToSDR and
+not focus much on broad and possibly empty promises such as "we
+care about your privacy."=20
+
+=E2=86=AA 2014-06-13 Fri 19:10, Hannah Poteat <hpoteat0@gmail.com>:
+> This has been made very clear in the recent *FTC v. Wyndham Hotels* decis=
+ion,=20
+> where Wyndham's privacy policy promised that it cared a lot about its=20
+> guests' privacy, and used "industry standard practices" to secure persona=
+l=20
+> information, and made all reasonable efforts to protect privacy, etc etc.=
+=20
+> But they had unpatched systems, systems with default admin passwords, and=
+=20
+> all kinds of terrible security practices, so over the course of two years=
+=20
+> they were hacked three times (but still left their systems unpatched). Th=
+e=20
+> FTC went after them for unfair and deceptive business practices, saying,=
+=20
+> look, if you've *promised* that you use industry standard practices to=20
+> protect personal information, and you're clearly not using industry=20
+> standard practices or taking reasonable efforts to protect your systems=
+=20
+> from intrusion, then your promise is deceptive. You can't just lie.
+
+It seems clear to me that the important part here clearly is
+"industry standard practices" not "Wyndham cares about your
+privacy".
+
+
+Thanks for your contribution Hannah,
+
+
+--=20
+Hugo Roy, Free Software Foundation Europe, <www.fsfe.org>=20
+Deputy Coordinator, FSFE Legal Team, <www.fsfe.org/legal>=20
+Coordinator, FSFE French Team, <www.fsfe.org/fr>=20
+=20
+Get our monthly newsletter, sign up! <https://l.fsfe.org/nl>
+
+--ftEhullJWpWg/VHq
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJTpFplAAoJEI0CLJmz17eV9T4H/3+/lmCGcbPFzuMSOFNRr0Qj
+UEl7JSO2fzpBwyFms3+Y0bxqYu2aGBIhn7/WMRJeI+BPtLSulRQIlNRI6hPZPQO3
+Hny11xaTnTcgFuFoLVx0XtpGqJoULTigniJ2ioRTaiZ5emjNfN8iX8VypVSyp2iN
+O393z0bc6uNK67+ceRmKlz9c2va1saI8k1xj5kzutsdN68+U+J12aVQ7uy5Olvi4
+hn2P9xXvcV4LKRnvgJ5PBwW7OEiMpDAvLURZk3l5OAOnKXX0Qpui1VFotW9pcjyf
+ErqJS5ARhCYRuyKNXqCOwwaCeFPGVs7BI6SL8FUpgk0KmpBR1sd2d0Nf1TuoSkA=
+=4bAl
+-----END PGP SIGNATURE-----
+
+--ftEhullJWpWg/VHq--

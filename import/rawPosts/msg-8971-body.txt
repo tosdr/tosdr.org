@@ -1,0 +1,140 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBW7N7WIAKGQEWLHLALI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 71BC7161743
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 18:29:18 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 67D5417808F
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 18:29:18 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id wnCfQ+ahZExu for <anything@michielbdejong.com>;
+	Thu, 29 Aug 2013 18:29:17 +0200 (CEST)
+Received: from mail-ye0-x238.google.com (mail-ye0-x238.google.com [IPv6:2607:f8b0:4002:c04::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C089817809B
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 18:29:16 +0200 (CEST)
+Received: by mail-ye0-f184.google.com with SMTP id r10sf184668yen.11
+        for <anything@michielbdejong.com>; Thu, 29 Aug 2013 09:29:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=CDJszZKr28CJXPKYWix3/gx3GJuVCnT/sTFw+Icw/Eg=;
+        b=sAgYfzXLqUNZD7Jqfx20v5TczR6XkreF/mT5qoNxRdAE0PqFi3iDpVA10MZUcSi8Nh
+         H8UDe8IDtxV05FC1SqGcp2GxyqG3TlnpHkp5J7zokDkjPsjnuapllDpW9XeMF/9mLjWv
+         9aLDx1QKIvbboUfy8df6gT4uRaQLnKkZZxFeVbVDAqR0XZvCU4zOyH/0jDhtAwolol8E
+         qAB5/eNMCXWTgl8f0Nj6gs6KchczHr66sPBJ6KpXJoV68H7hEFy1+uHKluYEbHkY4Bjt
+         9UJCSvukdRbOZOAp2pCHbHqJ/MBamptOuLF+54zds60AMTHRUfIzhADuYZyzuBsBU6W0
+         du8g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=CDJszZKr28CJXPKYWix3/gx3GJuVCnT/sTFw+Icw/Eg=;
+        b=A5PmDJoY85SxaX+ldyzUZeTByb3PNc8xak/2J1+Rw3dznrpWd+x2Sq7TeYNf9PImwz
+         VofoiFGcSjjxSa98kpxBg/arT/ersmN98bfg7lOwMfMRXVNI5YAdWbaFmmNHgvk+ykSE
+         sPu1B5FtOGSxoI1LGqKT6NaaVIABKknkmCHkiXRF2v6+Tn8f+kAhCGUs1gSsrNY24Lv5
+         0QgNgJSg/mcTSZQ0AhKOq/fbmvrd2r4kvS/H+XExzP9OUvhCUcnN8KRvVdOqR/IY4o+F
+         kp9RwAwrhg2lxUnDKVFmPuKWk8OnyXH2dftRauaMFK+fWXW8WyAkY/Xjv0gf19qKAvVq
+         i2Kw==
+X-Received: by 10.49.28.97 with SMTP id a1mr156383qeh.0.1377793755667;
+        Thu, 29 Aug 2013 09:29:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.4.41 with SMTP id h9ls955848qeh.79.gmail; Thu, 29 Aug 2013
+ 09:29:15 -0700 (PDT)
+X-Received: by 10.49.56.7 with SMTP id w7mr151419qep.16.1377793755327;
+        Thu, 29 Aug 2013 09:29:15 -0700 (PDT)
+Date: Thu, 29 Aug 2013 09:29:14 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <943eaa60-2aa6-4df3-aa6c-eabd537c67e5@googlegroups.com>
+Subject: [tosdr:2689] MyKolab only keeps the minimum number of logs to provide
+ the service
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4317_26317198.1377793754986"
+
+------=_Part_4317_26317198.1377793754986
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> We will only keep the minimum of logs and debug information necessary to 
+> ensure that we can improve the service and resolve issues that may have 
+> occurred. The Service employs a state-of-the art security-centric design of 
+> which we make use of to provide the Service.
+
+
+https://mykolab.com/tos
+
+Title: MyKolab only keeps the minimum number of logs to provide the service
+
+Topic: user-info
+
+Summary: MyKolab keeps the minimum number of logs and debug information 
+strictly to help improve the service or resolve any possible issues that 
+may have occurred. 
+
+Score: 50 (good)
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_4317_26317198.1377793754986
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px=
+ 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); =
+border-left-style: solid; padding-left: 1ex;"><span style=3D"color: rgb(122=
+, 122, 122); font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicod=
+e', 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; line-height:=
+ 21px; background-color: rgb(232, 232, 232);">We will only keep the minimum=
+ of logs and debug information necessary to ensure that we can improve the =
+service and resolve issues that may have occurred. The Service employs a st=
+ate-of-the art security-centric design of which we make use of to provide t=
+he Service.</span></blockquote><div><br></div><div><a href=3D"https://mykol=
+ab.com/tos">https://mykolab.com/tos</a></div><div><br></div><div>Title:&nbs=
+p;MyKolab only keeps the minimum number of logs to provide the service</div=
+><div><br></div><div>Topic: user-info</div><div><br></div><div>Summary: MyK=
+olab keeps the minimum number of logs and debug information strictly to hel=
+p improve the service or resolve any possible issues that may have occurred=
+.&nbsp;</div><div><br></div><div>Score: 50 (good)</div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_4317_26317198.1377793754986--

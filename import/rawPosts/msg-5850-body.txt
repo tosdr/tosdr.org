@@ -1,0 +1,252 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBXMVUKHAKGQEYHBOS2Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id C8852161743
+	for <anything@michielbdejong.com>; Mon, 24 Jun 2013 20:07:58 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C624322607E
+	for <anything@michielbdejong.com>; Mon, 24 Jun 2013 20:07:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id u94i0O9c3xUB for <anything@michielbdejong.com>;
+	Mon, 24 Jun 2013 20:07:27 +0200 (CEST)
+Received: from mail-qa0-x23b.google.com (mail-qa0-x23b.google.com [IPv6:2607:f8b0:400d:c00::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D5E392260AB
+	for <anything@michielbdejong.com>; Mon, 24 Jun 2013 20:07:26 +0200 (CEST)
+Received: by mail-qa0-f59.google.com with SMTP id ci6sf1498869qab.14
+        for <anything@michielbdejong.com>; Mon, 24 Jun 2013 11:07:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=7oloNKY/8W5h+L3S30z8Na8ZpHamPS5UJjY0K9AachE=;
+        b=IMFu1bjECs+fLBYC9Ccb/1iHA11mgESLSoqms/OKEXFbI0+mRcoBjZj2pOqzEDZ5P4
+         1dzBkZ9kw2OGa7/rdLxN1Cy/wIRsoVVvjhnqV/FXyF5NECoJURfkeDN5FL9Ks438ATVs
+         pSU87o/qIQ0gM9zP77QKBV03FGf1cWOBfkXXktzXkiAuGgQclfS8/FdDYr+3gi5bGSRx
+         rvGXDed+3MM6fy2TIUHZ6NU37jz0SGfgHqmsESzcuEMjPhvpnzaulkVVchD5dRSBrY5D
+         oankrgklmINb9boe/EZVPDfgNAfmsIPtkqkarIJ7IycSoqX/YktMOfyrorMETSyL9eBP
+         I9/w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=7oloNKY/8W5h+L3S30z8Na8ZpHamPS5UJjY0K9AachE=;
+        b=B7sClnupVuwqjJ2BEA/dpOn+yogaJXxRB1aUdTLs2JV8a+rf7+Q40yzhrgtsRR+upc
+         vn2RYND6WN+wGbmI1FpCL/uGjpwDZKUDzS59ycq1KXDjadvX0sghofpaYfeqw98cpiXe
+         LDTGniextgdPPUBQwkxurmzMqXn6+lP5LyYaGiX3SQF4C+PqyXhgspbZc2mfJ3OZoORB
+         fnVR4lg17IwKZsGhvu1WmJCAgdvt69/dfKKY/41HuY2QSUByc5yvHStPTxSOV5iSHsu6
+         8gwK3tM8zUnUgDCPkYowXz7glh58pwKj3Q343lzXbH5MPM+qd4F3VN7wtnRe9b3oBbGD
+         xVBQ==
+X-Received: by 10.49.94.174 with SMTP id dd14mr546264qeb.14.1372097245802;
+        Mon, 24 Jun 2013 11:07:25 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.63.1 with SMTP id c1ls1685331qes.32.gmail; Mon, 24 Jun 2013
+ 11:07:25 -0700 (PDT)
+X-Received: by 10.49.64.136 with SMTP id o8mr545974qes.32.1372097245485;
+        Mon, 24 Jun 2013 11:07:25 -0700 (PDT)
+Date: Mon, 24 Jun 2013 11:07:25 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <5dce54cd-efe9-44c2-a8a4-1dde2f95cee0@googlegroups.com>
+In-Reply-To: <1341344444.7860.10.camel@synclavier.lan>
+References: <1340905522.26161.13.camel@synclavier.lan>
+ <CA+aD3u1Ea92---x28kf5yTH-YXiq8TUnXpUuX--KWMZte+-YEQ@mail.gmail.com>
+ <1341344444.7860.10.camel@synclavier.lan>
+Subject: [tosdr:2327] Re: personal data and business transfers twitter,
+ google, delicious and al.
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_150_10884743.1372097245215"
+
+------=_Part_150_10884743.1372097245215
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+So, since this idea that personal information is a business asset is=20
+common, this particular point isn't relevant, as I understand it. What=20
+would be relevant for people to know would be something like:
+
+Title: Your data is a business asset
+
+Topic: Personal Data
+
+Summary: If Twitter is bought, goes into bankruptcy, is involved in a=20
+merger or is reorganized, the transfer of your personal information may be=
+=20
+part of that process. This data includes your name, username, password,=20
+email address, and your tweets, including photos.
+
+Score: 20, mediocre
+
+
+
+On Tuesday, July 3, 2012 2:40:44 PM UTC-5, Hugo Roy wrote:
+>
+> Le jeudi 28 juin 2012 =E0 22:48 +0300, Michiel de Jong a =E9crit :=20
+> > the fact that it's common practice to consider user data as a business=
+=20
+> > asset is the core of what is wrong with web 2.0 and SaaS. the fact=20
+> > that everybody does it actually makes it worse, not acceptable.=20
+> >=20
+> > if i have to pay money for a service then so be it. i don't want to=20
+> > pay with my data.=20
+>
+> That's exactly why I have said what matters is what the privacy policy=20
+> actually says about what data is collected, for what purpose, how long,=
+=20
+> etc. The fact that the data which is collected for reasonable rasons=20
+> (e.g. an email address tied to a user name) is transferred along when=20
+> the company gets transferred seems normal to me.=20
+>
+> As you point out, the Google paragraph is good; but that's the kind of=20
+> thing which should happen anyway when the privacy policy changes, no=20
+> matter if it's during a merger or anything else!=20
+>
+> In a nutshell: if Company A owns your data, here's the problem. Whether=
+=20
+> company A gets owned by company B or C or stays company A doesn't=20
+> matter. The problem arises when company A gets to own some of your data=
+=20
+> that it shouldn't own.=20
+>
+> "Own" here clearly means that it's data which is collected and for which=
+=20
+> they have a right to sell, transfer it. That happens in two situations:=
+=20
+>  - content under very broad copyright license (think: Facebook, Twitter)=
+=20
+>  - data for which privacy policy states it can be transferred, shared,=20
+> publicised, etc.=20
+>
+> So we need to focus on these 2 aspects rather than on the business=20
+> transfer aspect, which in most cases is irrelevant (although we still=20
+> should watch them in case something weird slips in).=20
+>
+>
+>
+> --=20
+> Hugo Roy=20
+>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org <javascript:=
+>=20
+>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41=20
+>                                  mobile DE: +49 151 143 56 563=20
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_150_10884743.1372097245215
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+So, since this idea that personal information is a business asset is common=
+, this particular point isn't relevant, as I understand it. What would be r=
+elevant for people to know would be something like:<div><br></div><div>Titl=
+e: Your data is a business asset</div><div><br></div><div>Topic: Personal D=
+ata</div><div><br></div><div>Summary: If Twitter is bought, goes into bankr=
+uptcy, is involved in a merger or is reorganized, the transfer of your pers=
+onal information may be part of that process. This data includes your name,=
+ username, password, email address, and your tweets, including photos.<br><=
+br>Score: 20, mediocre</div><div><br></div><div><br></div><div><br>On Tuesd=
+ay, July 3, 2012 2:40:44 PM UTC-5, Hugo Roy wrote:<blockquote class=3D"gmai=
+l_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;=
+padding-left: 1ex;">Le jeudi 28 juin 2012 =E0 22:48 +0300, Michiel de Jong =
+a =E9crit :
+<br>&gt; the fact that it's common practice to consider user data as a busi=
+ness
+<br>&gt; asset is the core of what is wrong with web 2.0 and SaaS. the fact
+<br>&gt; that everybody does it actually makes it worse, not acceptable.
+<br>&gt;=20
+<br>&gt; if i have to pay money for a service then so be it. i don't want t=
+o
+<br>&gt; pay with my data.=20
+<br>
+<br>That's exactly why I have said what matters is what the privacy policy
+<br>actually says about what data is collected, for what purpose, how long,
+<br>etc. The fact that the data which is collected for reasonable rasons
+<br>(e.g. an email address tied to a user name) is transferred along when
+<br>the company gets transferred seems normal to me.
+<br>
+<br>As you point out, the Google paragraph is good; but that's the kind of
+<br>thing which should happen anyway when the privacy policy changes, no
+<br>matter if it's during a merger or anything else!
+<br>
+<br>In a nutshell: if Company A owns your data, here's the problem. Whether
+<br>company A gets owned by company B or C or stays company A doesn't
+<br>matter. The problem arises when company A gets to own some of your data
+<br>that it shouldn't own.
+<br>
+<br>"Own" here clearly means that it's data which is collected and for whic=
+h
+<br>they have a right to sell, transfer it. That happens in two situations:
+<br>&nbsp;- content under very broad copyright license (think: Facebook, Tw=
+itter)
+<br>&nbsp;- data for which privacy policy states it can be transferred, sha=
+red,
+<br>publicised, etc.
+<br>
+<br>So we need to focus on these 2 aspects rather than on the business
+<br>transfer aspect, which in most cases is irrelevant (although we still
+<br>should watch them in case something weird slips in).
+<br>
+<br>
+<br>
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp; chat: <a href=3D"j=
+avascript:" target=3D"_blank" gdf-obfuscated-mailto=3D"5gTwi3EMF9IJ">hu...@=
+jabber.fsfe.org</a>
+<br>&nbsp; <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> &nbsp; &nbsp; &nbsp; &nbsp; mobile: +336 08 74 13 41
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mobile DE: +49 151 143 56 56=
+3
+<br>
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_150_10884743.1372097245215--

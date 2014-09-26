@@ -1,0 +1,871 @@
+Return-Path: <tosdr+bncBDC2XCXU7YKRBUPHWCFQKGQEQU5UPPI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 4C3C3161735
+	for <anything@michielbdejong.com>; Mon, 15 Apr 2013 19:07:38 +0200 (CEST)
+Received: from mfilter9-d.gandi.net (mfilter9-d.gandi.net [217.70.178.138])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4843B1780B4
+	for <anything@michielbdejong.com>; Mon, 15 Apr 2013 19:07:38 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter9-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter9-d.gandi.net (mfilter9-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LC8EngQ6bJh7 for <anything@michielbdejong.com>;
+	Mon, 15 Apr 2013 19:07:36 +0200 (CEST)
+Received: from mail-qc0-x23e.google.com (mail-qc0-x23e.google.com [IPv6:2607:f8b0:400d:c01::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C921D178068
+	for <michiel@michielbdejong.com>; Mon, 15 Apr 2013 19:07:31 +0200 (CEST)
+Received: by mail-qc0-f190.google.com with SMTP id j2sf1672216qch.7
+        for <michiel@michielbdejong.com>; Mon, 15 Apr 2013 10:07:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:x-received:received-spf:reply-to
+         :from:to:subject:date:message-id:mime-version:x-mailer:thread-index
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-language;
+        bh=WdkvwBGkJEBGZ6Uz+2b4V2wbG2fYeLGo2YL6mit6vWw=;
+        b=k9pZaPEndhsEVKAvdkwcPz5Y4w49NSu7V9DZnJ419zm8ds4A226YjGkHOdF+KnIej/
+         pJVJ9qknFcSy5Dm48BJttri7IXBavIk54oMesRX657nvZcsXxiShCyvNcIg9tOMc1sOK
+         Q9EbNzgDi7ApDbiLw6SW+qWazJamhPNjTNHJIXNtbsj/I/qX0EB9VdZIJwtGjeAC1eDQ
+         XP0CXhsN28bFAZ1k7poS0Iw/IK7MD2N8r8QVnUutN2n+MDSD9nCBqWgnp/IjeNYesoV8
+         dQUeKFQ1mN1mI3Gh765l6c6Q1G6VOjs5UnqwYe1iwIW7EKus1fU5pO6xlkyX8rhDheQS
+         1l9Q==
+X-Received: by 10.182.230.232 with SMTP id tb8mr117591obc.38.1366045650584;
+        Mon, 15 Apr 2013 10:07:30 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.97.35 with SMTP id dx3ls186824obb.58.gmail; Mon, 15 Apr
+ 2013 10:07:29 -0700 (PDT)
+X-Received: by 10.224.178.205 with SMTP id bn13mr9942088qab.3.1366045649735;
+        Mon, 15 Apr 2013 10:07:29 -0700 (PDT)
+Received: by 10.224.181.20 with SMTP id bw20msqab;
+        Sat, 13 Apr 2013 20:50:00 -0700 (PDT)
+X-Received: by 10.236.181.234 with SMTP id l70mr8369444yhm.53.1365911400050;
+        Sat, 13 Apr 2013 20:50:00 -0700 (PDT)
+Received: from atl4mhob05.myregisteredsite.com (atl4mhob05.myregisteredsite.com. [209.17.115.43])
+        by gmr-mx.google.com with ESMTP id o63si780040yhe.3.2013.04.13.20.49.59;
+        Sat, 13 Apr 2013 20:49:59 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.17.115.43 is neither permitted nor denied by best guess record for domain of email@stjohndeakins.com) client-ip=209.17.115.43;
+Received: from mail.hostingplatform.com ([10.30.71.210])
+	by atl4mhob05.myregisteredsite.com (8.14.4/8.14.4) with ESMTP id r3E3nw5V009426
+	for <tosdr@googlegroups.com>; Sat, 13 Apr 2013 23:49:58 -0400
+Received: (qmail 13577 invoked by uid 0); 14 Apr 2013 03:49:56 -0000
+Received: from unknown (HELO PERSONALPC) (email@stjohndeakins.com@218.212.196.189)
+  by 0 with ESMTPA; 14 Apr 2013 03:49:56 -0000
+Reply-To: tosdr@googlegroups.com
+From: "StJohn Deakins" <email@stjohndeakins.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:1700] FW: Hugo Roy (@hugoroyd) replied to one of your Tweets!
+Date: Sun, 14 Apr 2013 11:49:50 +0800
+Message-ID: <00c501ce38c3$1f4d7070$5de85150$@com>
+MIME-Version: 1.0
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: Ac44JCYhQiS2HDIkRFOwxKoUsWz+YwAns32w
+X-Original-Sender: email@stjohndeakins.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 209.17.115.43 is neither permitted nor denied by best guess
+ record for domain of email@stjohndeakins.com) smtp.mail=email@stjohndeakins.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_00C6_01CE3906.2D70B070"
+Content-Language: en-sg
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_00C7_01CE3906.2D70B070"
+
+------=_NextPart_001_00C7_01CE3906.2D70B070
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+FYI =96 FourSq may sell your location to 3rd parties "Foursquare to Start O=
+ffering Data to Third-Party Advertisers  <http://t.co/GYDsQLDglW> http://ad=
+age.com/u/AYsOlb  "
+
+=20
+
+Not sure if this is covered under existing ToS or they=92ll need to change =
+them.=20
+
+=20
+
+=20
+
+StJohn Deakins
+
+M: +65 9088 6844
+
+S:   stjohndeakins
+
+T:  @stjohndeakins
+
+=20
+
+From: Hugo Roy (Twitter) [mailto:n-rznvy=3Dfgwbuaqrnxvaf.pbz-01e6d@postmast=
+er.twitter.com]=20
+Sent: Saturday, 13 April, 2013 4:52 PM
+To: StJohnDeakins
+Subject: Hugo Roy (@hugoroyd) replied to one of your Tweets!
+
+=20
+
+@StJohnDeakins thanks. Can you send an email to tosdr@about that? :-) - @hu=
+goroyd=20
+
+
+
+
+ =20
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%3Frefsrc%3=
+Demail&sig=3D76add118f9dfd33f63864ce34d9372e483cfba4a&uid=3D16923319&iid=3D=
+31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+21&t=3D1> Image removed by se=
+nder.
+
+ =20
+
+ =20
+
+
+StJohnDeakins,=20
+
+
+Your Tweet got a reply!=20
+
+ =20
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDe=
+akins%3Frefsrc%3Demail&sig=3D276d27e361f36ce751bcea59654139728265f24d&uid=
+=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+22&t=3D1> I=
+mage removed by sender. StJohnDeakins
+
+=09
+
+=20
+
+=20
+
+Image removed by sender.
+
+=20
+
+=09
+
+
+=09
+
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDe=
+akins%2Fstatus%2F322742434851328003%3Frefsrc%3Demail&sig=3Dd29d2b361276368a=
+cdf14dfdcf275ec1ec0f20ae&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda=
+3381069&nid=3D27+223&t=3D1> Image removed by sender. StJohnDeakins
+
+	 <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnD=
+eakins%2Fstatus%2F322742434851328003%3Frefsrc%3Demail&sig=3Dd29d2b361276368=
+acdf14dfdcf275ec1ec0f20ae&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbed=
+a3381069&nid=3D27+225&t=3D1> StJohnDeakins  <https://twitter.com/i/redirect=
+?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDeakins%2Fstatus%2F322742434851328=
+003%3Frefsrc%3Demail&sig=3Dd29d2b361276368acdf14dfdcf275ec1ec0f20ae&uid=3D1=
+6923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+224&t=3D1> @StJ=
+ohnDeakins=20
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDe=
+akins%2Fstatus%2F322742434851328003%3Frefsrc%3Demail&sig=3Dd29d2b361276368a=
+cdf14dfdcf275ec1ec0f20ae&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda=
+3381069&nid=3D27+227&t=3D1> 13 Apr=20
+
+=09
+
+ <https://twitter.com/i/redirect?url=3Dhttp%3A%2F%2Ftwitter.com%2Fhugoroyd%=
+3Frefsrc%3Demail&sig=3D5cb46c51434e8eb7db6e5e259daf88c95133ef52&uid=3D16923=
+319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+231&t=3D1> @hugoroy=
+d FYI - may sell your location to 3rd parties "Foursquare to Start Offering=
+ Data to Third-Party Advertisers  <https://t.co/redirect?url=3Dhttp%3A%2F%2=
+Ft.co%2FGYDsQLDglW&sig=3D5d35a774772649f235d0d274cb3c707c8c17fc36&uid=3D169=
+23319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+228&t=3D1> adage.=
+com/u/AYsOlb "=20
+
+=20
+
+=09
+  _____ =20
+
+=09
+
+=20
+
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd=
+%2Fstatus%2F322995481452101632%3Frefsrc%3Demail&sig=3D99410b3314ec0e51ccce3=
+4a4fed4bd5b23273ed9&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda33810=
+69&nid=3D27+232&t=3D1> Image removed by sender. Hugo Roy
+
+	 <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroy=
+d%2Fstatus%2F322995481452101632%3Frefsrc%3Demail&sig=3D99410b3314ec0e51ccce=
+34a4fed4bd5b23273ed9&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381=
+069&nid=3D27+234&t=3D1> Hugo Roy=20
+
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd=
+%2Fstatus%2F322995481452101632%3Frefsrc%3Demail&sig=3D99410b3314ec0e51ccce3=
+4a4fed4bd5b23273ed9&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda33810=
+69&nid=3D27+233&t=3D1> @hugoroyd=20
+
+=09
+
+ <https://twitter.com/i/redirect?url=3Dhttp%3A%2F%2Ftwitter.com%2FStJohnDea=
+kins%3Frefsrc%3Demail&sig=3Dcbd7f22c1f62caafad41e19838f678eec4dcecd5&uid=3D=
+16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&nid=3D27+240&t=3D1> @St=
+JohnDeakins thanks. Can you send an email to tosdr@googlegroups.com about t=
+hat? :-)=20
+
+=09
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd=
+%2Fstatus%2F322995481452101632%3Frefsrc%3Demail&sig=3D99410b3314ec0e51ccce3=
+4a4fed4bd5b23273ed9&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda33810=
+69&nid=3D27+236&t=3D1> 04:51 PM - 13 Apr 13=20
+
+=20
+
+=09
+  _____ =20
+
+=09
+
+
+
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2=
+Ftweet%3Fin_reply_to%3D322995481452101632%26refsrc%3Demail&sig=3D027c4142f5=
+04c03cf079cb18c61311b359e546e4&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7=
+-bbeda3381069&nid=3D27+570&t=3D1> Image removed by sender.
+
+	 <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%=
+2Ftweet%3Fin_reply_to%3D322995481452101632%26refsrc%3Demail&sig=3D027c4142f=
+504c03cf079cb18c61311b359e546e4&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a=
+7-bbeda3381069&nid=3D27+570&t=3D1> Reply to @hugoroyd=20
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2=
+Fretweet%3Fea_u%3D16923319%26ea_e%3D1367052698%26tweet_id%3D322995481452101=
+632%26ea_s%3D2f492a5e47b6151da8fcea0f7df914bf1f2320a9%26refsrc%3Demail&sig=
+=3Df0496a49cd840b0346dbaa57edcab7be0198f763&uid=3D16923319&iid=3D31e1d628-0=
+8af-4b36-a1a7-bbeda3381069&nid=3D27+571&t=3D1> Image removed by sender.Retw=
+eet=20
+
+ <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2=
+Ffavorite%3Fea_u%3D16923319%26ea_e%3D1367052698%26tweet_id%3D32299548145210=
+1632%26ea_s%3D51483046bb8bb86c98d4a58eae186d801085a05c%26refsrc%3Demail&sig=
+=3Dc06442093c8320de19bfef312e3a468a6661bafc&uid=3D16923319&iid=3D31e1d628-0=
+8af-4b36-a1a7-bbeda3381069&nid=3D27+572&t=3D1> Image removed by sender.Favo=
+rite=20
+
+=09
+=09
+
+=09
+=09
+
+Forgot your Twitter password?  <https://twitter.com/i/redirect?url=3Dhttps%=
+3A%2F%2Ftwitter.com%2Faccount%2Fresend_password&sig=3Df5d73c6d6c8577b4b9588=
+9880e513526930e35d0&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bbeda33810=
+69&nid=3D27+24&t=3D1> Get instructions on how to reset it.=20
+
+You can also  <https://twitter.com/i/u?t=3D1&sig=3Dec310a6619bf4cf0492da51e=
+df036cbd567a6dfb&iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&uid=3D16923319&=
+nid=3D27+26> unsubscribe from these emails or change your  <https://twitter=
+.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fsettings%2Fnotifications&=
+sig=3Ddfe6fc4e06fdfbeffa510642835ff34af916458c&uid=3D16923319&iid=3D31e1d62=
+8-08af-4b36-a1a7-bbeda3381069&nid=3D27+27&t=3D1> notification settings. Nee=
+d  <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fsupport.twitter.com&=
+sig=3Dd5a93ec8dc3f5086b47a0022aac6b1bd71661580&uid=3D16923319&iid=3D31e1d62=
+8-08af-4b36-a1a7-bbeda3381069&nid=3D27+97&t=3D1> help?=20
+
+If you received this message in error and did not sign up for Twitter, clic=
+k  <https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Faccoun=
+t%2Fnot_my_account%2FStJohnDeakins%2F7E25A-F967B-136584&sig=3D3891ce1f109e0=
+1705edf6410f73e5a9122eb65a6&uid=3D16923319&iid=3D31e1d628-08af-4b36-a1a7-bb=
+eda3381069&nid=3D27+25&t=3D1> not my account.=20
+
+Twitter, Inc. 1355 Market St., Suite 900 San Francisco, CA 94103=20
+
+	=09
+	=09
+
+=20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_NextPart_001_00C7_01CE3906.2D70B070
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3Dutf-8"><meta name=3DGenerator content=3D"Microsoft=
+ Word 12 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#defaul=
+t#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.medialogodiv
+	{mso-style-name:media_logo_div;}
+span.small-tweet-template-name
+	{mso-style-name:small-tweet-template-name;}
+span.small-tweet-template-screen-name
+	{mso-style-name:small-tweet-template-screen-name;}
+span.small-tweet-template-date
+	{mso-style-name:small-tweet-template-date;}
+span.big-tweet-template-name
+	{mso-style-name:big-tweet-template-name;}
+span.big-tweet-template-screen-name
+	{mso-style-name:big-tweet-template-screen-name;}
+span.hide-mobile
+	{mso-style-name:hide-mobile;}
+span.screen-name
+	{mso-style-name:screen-name;}
+span.reset
+	{mso-style-name:reset;}
+span.nobreak
+	{mso-style-name:nobreak;}
+span.EmailStyle27
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.invisible
+	{mso-style-name:invisible;}
+span.js-display-url
+	{mso-style-name:js-display-url;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body bgcolor=3Dwhite lang=3DEN-SG=
+ link=3Dblue vlink=3Dpurple style=3D'-webkit-text-size-adjust:100%'><div cl=
+ass=3DWordSection1><p class=3DMsoNormal><span style=3D'font-size:13.5pt;fon=
+t-family:"Arial","sans-serif";color:#333333;background:#F6F6F6'>FYI =96 Fou=
+rSq may sell your location to 3rd parties &quot;Foursquare to Start Offerin=
+g Data to Third-Party Advertisers </span><a href=3D"http://t.co/GYDsQLDglW"=
+ target=3D"_blank" title=3D"http://adage.com/u/AYsOlb"><span class=3Dinvisi=
+ble><span style=3D'font-size:1.0pt;font-family:"Arial","sans-serif";color:#=
+0084B4;background:#F6F6F6;text-decoration:none'>http://</span></span><span =
+class=3Djs-display-url><span style=3D'font-size:13.5pt;font-family:"Arial",=
+"sans-serif";color:#0084B4;background:#F6F6F6;text-decoration:none'>adage.c=
+om/u/AYsOlb</span></span><span class=3Dinvisible><span style=3D'font-size:1=
+.0pt;font-family:"Arial","sans-serif";color:#0084B4;background:#F6F6F6;text=
+-decoration:none'>&nbsp;</span></span></a><span style=3D'font-size:13.5pt;f=
+ont-family:"Arial","sans-serif";color:#333333;background:#F6F6F6'> &quot;</=
+span><span style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";col=
+or:#1F497D'><o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-=
+size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</=
+o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:11.0pt;font-fa=
+mily:"Calibri","sans-serif";color:#1F497D'>Not sure if this is covered unde=
+r existing ToS or they=92ll need to change them. <o:p></o:p></span></p><p c=
+lass=3DMsoNormal><span style=3D'font-size:11.0pt;font-family:"Calibri","san=
+s-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><s=
+pan style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F4=
+97D'><o:p>&nbsp;</o:p></span></p><div><p class=3DMsoNormal><b><span lang=3D=
+EN-US style=3D'font-size:10.0pt;font-family:"Verdana","sans-serif";color:#1=
+7365D'>StJohn Deakins<o:p></o:p></span></b></p><p class=3DMsoNormal><b><spa=
+n style=3D'font-size:10.0pt;font-family:"Verdana","sans-serif";color:#17365=
+D'>M: +65 9088 6844<o:p></o:p></span></b></p><p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Verdana","sans-serif";color:#17365D'=
+>S:=A0=A0 stjohndeakins<o:p></o:p></span></b></p><p class=3DMsoNormal><b><s=
+pan style=3D'font-size:10.0pt;font-family:"Verdana","sans-serif";color:#173=
+65D'>T:=A0 @stjohndeakins<o:p></o:p></span></b></p></div><p class=3DMsoNorm=
+al><span style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";color=
+:#1F497D'><o:p>&nbsp;</o:p></span></p><div><div style=3D'border:none;border=
+-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm'><p class=3DMsoNormal><b=
+><span lang=3DEN-US style=3D'font-size:10.0pt;font-family:"Tahoma","sans-se=
+rif"'>From:</span></b><span lang=3DEN-US style=3D'font-size:10.0pt;font-fam=
+ily:"Tahoma","sans-serif"'> Hugo Roy (Twitter) [mailto:n-rznvy=3Dfgwbuaqrnx=
+vaf.pbz-01e6d@postmaster.twitter.com] <br><b>Sent:</b> Saturday, 13 April, =
+2013 4:52 PM<br><b>To:</b> StJohnDeakins<br><b>Subject:</b> Hugo Roy (@hugo=
+royd) replied to one of your Tweets!<o:p></o:p></span></p></div></div><p cl=
+ass=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal><span style=3D'fo=
+nt-size:1.0pt;color:white'>@StJohnDeakins thanks. Can you send an email to =
+tosdr@about that? :-) - @hugoroyd</span> <o:p></o:p></p><table class=3DMsoN=
+ormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 width=3D"100%" style=
+=3D'width:100.0%;background:#DDDDDD'><tr><td style=3D'padding:0cm 0cm 0cm 0=
+cm'><div align=3Dcenter><table class=3DMsoNormalTable border=3D1 cellspacin=
+g=3D0 cellpadding=3D0 width=3D670 style=3D'width:502.5pt;background:white;b=
+order-top:none;border-left:solid #CCCCCC 1.0pt;border-bottom:none;border-ri=
+ght:solid #CCCCCC 1.0pt'><tr><td style=3D'border:none;padding:0cm 0cm 0cm 0=
+cm'><table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D=
+0 width=3D670 style=3D'width:502.5pt;background:#F2F2F2'><tr style=3D'heigh=
+t:57.75pt'><td width=3D19 style=3D'width:14.25pt;padding:0cm 0cm 0cm 0cm;he=
+ight:57.75pt'><p class=3DMsoNormal>&nbsp; <o:p></o:p></p></td><td width=3D4=
+6 rowspan=3D2 valign=3Dtop style=3D'width:34.5pt;background:white;padding:0=
+cm 0cm 0cm 0cm;height:57.75pt'><p class=3DMsoNormal><a href=3D"https://twit=
+ter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%3Frefsrc%3Demail&amp;sig=
+=3D76add118f9dfd33f63864ce34d9372e483cfba4a&amp;uid=3D16923319&amp;iid=3D31=
+e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+21&amp;t=3D1"><span style=
+=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0cm;text-decoration:=
+none'><img border=3D0 width=3D46 height=3D94 id=3D"_x0000_i1025" src=3D"cid=
+:image001.jpg@01CE3906.2AE01A80" alt=3D"Image removed by sender."></span></=
+a><o:p></o:p></p></td><td width=3D9 style=3D'width:6.75pt;padding:0cm 0cm 0=
+cm 0cm;height:57.75pt'><p class=3DMsoNormal>&nbsp; <o:p></o:p></p></td><td =
+width=3D10 style=3D'width:7.5pt;padding:0cm 0cm 0cm 0cm;height:57.75pt'><p =
+class=3DMsoNormal>&nbsp; <o:p></o:p></p></td><td width=3D458 style=3D'width=
+:343.5pt;padding:0cm 0cm 0cm 0cm;height:57.75pt'><table class=3DMsoNormalTa=
+ble border=3D0 cellspacing=3D0 cellpadding=3D0><tr><td style=3D'padding:0cm=
+ 0cm 0cm 0cm'><p class=3DMsoNormal><b><span style=3D'font-size:10.5pt;color=
+:black'>StJohnDeakins, <o:p></o:p></span></b></p></td></tr><tr><td style=3D=
+'padding:0cm 0cm 0cm 0cm'><p class=3DMsoNormal><span style=3D'font-size:10.=
+5pt;color:#666666'>Your Tweet got a reply! <o:p></o:p></span></p></td></tr>=
+</table></td><td width=3D10 style=3D'width:7.5pt;padding:0cm 0cm 0cm 0cm;he=
+ight:57.75pt'><p class=3DMsoNormal>&nbsp; <o:p></o:p></p></td><td width=3D3=
+2 style=3D'width:24.0pt;padding:0cm 0cm 0cm 0cm;height:57.75pt'><p class=3D=
+MsoNormal align=3Dright style=3D'text-align:right'><a href=3D"https://twitt=
+er.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDeakins%3Frefsrc%=
+3Demail&amp;sig=3D276d27e361f36ce751bcea59654139728265f24d&amp;uid=3D169233=
+19&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+22&amp;t=3D1=
+"><span style=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0cm;tex=
+t-decoration:none'><img border=3D0 width=3D32 height=3D32 id=3D"_x0000_i102=
+6" src=3D"cid:image002.jpg@01CE3906.2AE01A80" alt=3D"Image removed by sende=
+r. StJohnDeakins"></span></a><o:p></o:p></p></td><td width=3D85 style=3D'wi=
+dth:63.75pt;padding:0cm 0cm 0cm 0cm;height:57.75pt'></td></tr><tr style=3D'=
+height:12.75pt'><td style=3D'border:none;border-top:solid #DDDDDD 1.0pt;bac=
+kground:white;padding:0cm 0cm 0cm 0cm;height:12.75pt'><p class=3DMsoNormal>=
+<span style=3D'font-family:"Helvetica","sans-serif"'>&nbsp;<o:p></o:p></spa=
+n></p></td><td style=3D'border:none;border-top:solid #DDDDDD 1.0pt;backgrou=
+nd:white;padding:0cm 0cm 0cm 0cm;height:12.75pt'><p class=3DMsoNormal><span=
+ style=3D'font-family:"Helvetica","sans-serif"'>&nbsp;<o:p></o:p></span></p=
+></td><td style=3D'border:none;border-top:solid #DDDDDD 1.0pt;background:wh=
+ite;padding:0cm 0cm 0cm 0cm;height:12.75pt'><p class=3DMsoNormal><span styl=
+e=3D'font-family:"Helvetica","sans-serif";border:solid windowtext 1.0pt;pad=
+ding:0cm'><img border=3D0 width=3D1 height=3D1 id=3D"_x0000_i1027" src=3D"c=
+id:image003.jpg@01CE3906.2AE01A80" alt=3D"Image removed by sender."></span>=
+<span style=3D'font-family:"Helvetica","sans-serif"'><o:p></o:p></span></p>=
+</td><td colspan=3D4 style=3D'border:none;border-top:solid #DDDDDD 1.0pt;ba=
+ckground:white;padding:0cm 0cm 0cm 0cm;height:12.75pt'><p class=3DMsoNormal=
+><span style=3D'font-family:"Helvetica","sans-serif"'>&nbsp;<o:p></o:p></sp=
+an></p></td></tr></table></td><td rowspan=3D3 style=3D'border:none;padding:=
+0cm 0cm 0cm 0cm'></td></tr><tr><td style=3D'border:none;padding:0cm 0cm 0cm=
+ 0cm'><table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=
+=3D0 width=3D670 style=3D'width:502.5pt;background:white'><tr><td style=3D'=
+padding:0cm 0cm 0cm 0cm'><div align=3Dcenter><table class=3DMsoNormalTable =
+border=3D0 cellspacing=3D0 cellpadding=3D0 width=3D520 style=3D'width:390.0=
+pt'><tr style=3D'height:15.0pt'><td style=3D'padding:0cm 0cm 0cm 0cm;height=
+:15.0pt'></td></tr><tr><td style=3D'padding:0cm 0cm 0cm 0cm'><div align=3Dc=
+enter><table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=
+=3D0 width=3D500 style=3D'width:375.0pt;background:white'><tr><td width=3D4=
+8 rowspan=3D3 valign=3Dtop style=3D'width:36.0pt;padding:0cm 0cm 0cm 0cm'><=
+p class=3DMsoNormal><span style=3D'font-family:"Helvetica","sans-serif"'><a=
+ href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FS=
+tJohnDeakins%2Fstatus%2F322742434851328003%3Frefsrc%3Demail&amp;sig=3Dd29d2=
+b361276368acdf14dfdcf275ec1ec0f20ae&amp;uid=3D16923319&amp;iid=3D31e1d628-0=
+8af-4b36-a1a7-bbeda3381069&amp;nid=3D27+223&amp;t=3D1"><span style=3D'color=
+:#0084B4;border:none windowtext 1.0pt;padding:0cm;text-decoration:none'><im=
+g border=3D0 width=3D48 height=3D48 id=3D"_x0000_i1028" src=3D"cid:image004=
+.jpg@01CE3906.2AE01A80" alt=3D"Image removed by sender. StJohnDeakins"></sp=
+an></a><o:p></o:p></span></p></td><td width=3D10 rowspan=3D3 valign=3Dtop s=
+tyle=3D'width:7.5pt;padding:0cm 0cm 0cm 0cm'></td><td valign=3Dtop style=3D=
+'padding:0cm 0cm 0cm 0cm'><p class=3DMsoNormal><span style=3D'font-family:"=
+Helvetica","sans-serif"'><a href=3D"https://twitter.com/i/redirect?url=3Dht=
+tps%3A%2F%2Ftwitter.com%2FStJohnDeakins%2Fstatus%2F322742434851328003%3Fref=
+src%3Demail&amp;sig=3Dd29d2b361276368acdf14dfdcf275ec1ec0f20ae&amp;uid=3D16=
+923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+225&amp;=
+t=3D1"><span class=3Dsmall-tweet-template-name><b><span style=3D'font-size:=
+10.5pt;color:#333333;border:none windowtext 1.0pt;padding:0cm;text-decorati=
+on:none'>StJohnDeakins</span></b></span></a> <a href=3D"https://twitter.com=
+/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDeakins%2Fstatus%2F3227=
+42434851328003%3Frefsrc%3Demail&amp;sig=3Dd29d2b361276368acdf14dfdcf275ec1e=
+c0f20ae&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&a=
+mp;nid=3D27+224&amp;t=3D1"><span class=3Dsmall-tweet-template-screen-name><=
+span style=3D'font-size:9.0pt;color:#999999;border:none windowtext 1.0pt;pa=
+dding:0cm;text-decoration:none'>@StJohnDeakins</span></span></a> <o:p></o:p=
+></span></p></td><td width=3D60 valign=3Dtop style=3D'width:45.0pt;padding:=
+0cm 0cm 0cm 0cm'><p class=3DMsoNormal align=3Dright style=3D'text-align:rig=
+ht'><span style=3D'font-family:"Helvetica","sans-serif"'><a href=3D"https:/=
+/twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FStJohnDeakins%2Fs=
+tatus%2F322742434851328003%3Frefsrc%3Demail&amp;sig=3Dd29d2b361276368acdf14=
+dfdcf275ec1ec0f20ae&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bb=
+eda3381069&amp;nid=3D27+227&amp;t=3D1"><span class=3Dsmall-tweet-template-d=
+ate><span style=3D'font-size:9.0pt;color:#BBBBBB;border:none windowtext 1.0=
+pt;padding:0cm;text-decoration:none'>13 Apr</span></span></a> <o:p></o:p></=
+span></p></td></tr><tr style=3D'height:1.5pt'><td colspan=3D2 valign=3Dtop =
+style=3D'padding:0cm 0cm 0cm 0cm;height:1.5pt'></td></tr><tr><td colspan=3D=
+2 valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm;word-wrap:break-word'><p cl=
+ass=3DMsoNormal style=3D'line-height:13.5pt'><span style=3D'font-size:10.5p=
+t;font-family:"Helvetica","sans-serif";color:#333333'><a href=3D"https://tw=
+itter.com/i/redirect?url=3Dhttp%3A%2F%2Ftwitter.com%2Fhugoroyd%3Frefsrc%3De=
+mail&amp;sig=3D5cb46c51434e8eb7db6e5e259daf88c95133ef52&amp;uid=3D16923319&=
+amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+231&amp;t=3D1">=
+<span style=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0cm;text-=
+decoration:none'>@hugoroyd</span></a> FYI - may sell your location to 3rd p=
+arties &quot;Foursquare to Start Offering Data to Third-Party Advertisers <=
+a href=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Ft.co%2FGYDsQLDglW&amp;si=
+g=3D5d35a774772649f235d0d274cb3c707c8c17fc36&amp;uid=3D16923319&amp;iid=3D3=
+1e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+228&amp;t=3D1"><span style=
+=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0cm;text-decoration:=
+none'>adage.com/u/AYsOlb</span></a> &quot; <o:p></o:p></span></p></td></tr>=
+</table></div><p class=3DMsoNormal><span style=3D'font-family:"Helvetica","=
+sans-serif";display:none'><o:p>&nbsp;</o:p></span></p><div align=3Dcenter><=
+table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 wid=
+th=3D500 style=3D'width:375.0pt'><tr style=3D'height:9.0pt'><td width=3D500=
+ style=3D'width:375.0pt;padding:0cm 0cm 0cm 0cm;height:9.0pt'></td></tr></t=
+able></div><div class=3DMsoNormal align=3Dcenter style=3D'text-align:center=
+'><span style=3D'font-family:"Helvetica","sans-serif"'><hr size=3D1 width=
+=3D520 style=3D'width:390.0pt' align=3Dcenter></span></div><div align=3Dcen=
+ter><table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D=
+0 width=3D500 style=3D'width:375.0pt'><tr style=3D'height:9.0pt'><td width=
+=3D500 style=3D'width:375.0pt;padding:0cm 0cm 0cm 0cm;height:9.0pt'></td></=
+tr></table></div><p class=3DMsoNormal><span style=3D'font-family:"Helvetica=
+","sans-serif";display:none'><o:p>&nbsp;</o:p></span></p><div align=3Dcente=
+r><table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 =
+width=3D500 style=3D'width:375.0pt;background:white'><tr style=3D'height:18=
+.0pt'><td width=3D48 rowspan=3D2 valign=3Dtop style=3D'width:36.0pt;padding=
+:0cm 0cm 0cm 0cm;height:18.0pt'><p class=3DMsoNormal><span style=3D'font-fa=
+mily:"Helvetica","sans-serif"'><a href=3D"https://twitter.com/i/redirect?ur=
+l=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd%2Fstatus%2F322995481452101632%3Fre=
+fsrc%3Demail&amp;sig=3D99410b3314ec0e51ccce34a4fed4bd5b23273ed9&amp;uid=3D1=
+6923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+232&amp=
+;t=3D1"><span style=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0=
+cm;text-decoration:none'><img border=3D0 width=3D48 height=3D48 id=3D"_x000=
+0_i1030" src=3D"cid:image004.jpg@01CE3906.2AE01A80" alt=3D"Image removed by=
+ sender. Hugo Roy"></span></a><o:p></o:p></span></p></td><td width=3D10 row=
+span=3D2 valign=3Dtop style=3D'width:7.5pt;padding:0cm 0cm 0cm 0cm;height:1=
+8.0pt'></td><td width=3D442 valign=3Dbottom style=3D'width:331.5pt;padding:=
+0cm 0cm 0cm 0cm;height:18.0pt'><p class=3DMsoNormal><span style=3D'font-fam=
+ily:"Helvetica","sans-serif"'><a href=3D"https://twitter.com/i/redirect?url=
+=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd%2Fstatus%2F322995481452101632%3Fref=
+src%3Demail&amp;sig=3D99410b3314ec0e51ccce34a4fed4bd5b23273ed9&amp;uid=3D16=
+923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+234&amp;=
+t=3D1"><span class=3Dbig-tweet-template-name><b><span style=3D'font-size:13=
+.5pt;color:#333333;border:none windowtext 1.0pt;padding:0cm;text-decoration=
+:none'>Hugo Roy</span></b></span></a> <o:p></o:p></span></p></td></tr><tr s=
+tyle=3D'height:18.0pt'><td valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm;he=
+ight:18.0pt'><p class=3DMsoNormal><span style=3D'font-family:"Helvetica","s=
+ans-serif"'><a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ft=
+witter.com%2Fhugoroyd%2Fstatus%2F322995481452101632%3Frefsrc%3Demail&amp;si=
+g=3D99410b3314ec0e51ccce34a4fed4bd5b23273ed9&amp;uid=3D16923319&amp;iid=3D3=
+1e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+233&amp;t=3D1"><span class=
+=3Dbig-tweet-template-screen-name><span style=3D'font-size:10.5pt;color:#99=
+9999;border:none windowtext 1.0pt;padding:0cm;text-decoration:none'>@hugoro=
+yd</span></span><span style=3D'color:#0084B4;border:none windowtext 1.0pt;p=
+adding:0cm;text-decoration:none'> </span></a><o:p></o:p></span></p></td></t=
+r><tr style=3D'height:7.5pt'><td colspan=3D3 style=3D'padding:0cm 0cm 0cm 0=
+cm;height:7.5pt'></td></tr><tr><td colspan=3D3 style=3D'padding:0cm 0cm 0cm=
+ 0cm;word-wrap:break-word'><p class=3DMsoNormal style=3D'line-height:19.5pt=
+'><span style=3D'font-size:16.5pt;font-family:"Georgia","serif";color:#3333=
+33'><a href=3D"https://twitter.com/i/redirect?url=3Dhttp%3A%2F%2Ftwitter.co=
+m%2FStJohnDeakins%3Frefsrc%3Demail&amp;sig=3Dcbd7f22c1f62caafad41e19838f678=
+eec4dcecd5&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda338106=
+9&amp;nid=3D27+240&amp;t=3D1"><span style=3D'color:#0084B4;border:none wind=
+owtext 1.0pt;padding:0cm;text-decoration:none'>@StJohnDeakins</span></a> th=
+anks. Can you send an email to tosdr@googlegroups.com about that? :-) <o:p>=
+</o:p></span></p></td></tr><tr style=3D'height:3.0pt'><td colspan=3D3 style=
+=3D'padding:0cm 0cm 0cm 0cm;height:3.0pt'></td></tr><tr><td colspan=3D3 sty=
+le=3D'padding:0cm 0cm 0cm 0cm'><p class=3DMsoNormal><span style=3D'font-siz=
+e:9.0pt;font-family:"Helvetica","sans-serif";color:#BBBBBB'><a href=3D"http=
+s://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fhugoroyd%2Fsta=
+tus%2F322995481452101632%3Frefsrc%3Demail&amp;sig=3D99410b3314ec0e51ccce34a=
+4fed4bd5b23273ed9&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbed=
+a3381069&amp;nid=3D27+236&amp;t=3D1"><span style=3D'color:#BBBBBB;border:no=
+ne windowtext 1.0pt;padding:0cm;text-decoration:none'>04:51 PM - 13 Apr 13<=
+/span></a> <o:p></o:p></span></p></td></tr></table></div><p class=3DMsoNorm=
+al><span style=3D'font-family:"Helvetica","sans-serif";display:none'><o:p>&=
+nbsp;</o:p></span></p><div align=3Dcenter><table class=3DMsoNormalTable bor=
+der=3D0 cellspacing=3D0 cellpadding=3D0 width=3D500 style=3D'width:375.0pt'=
+><tr style=3D'height:9.0pt'><td width=3D500 style=3D'width:375.0pt;padding:=
+0cm 0cm 0cm 0cm;height:9.0pt'></td></tr></table></div><div class=3DMsoNorma=
+l align=3Dcenter style=3D'text-align:center'><span style=3D'font-family:"He=
+lvetica","sans-serif"'><hr size=3D1 width=3D520 style=3D'width:390.0pt' ali=
+gn=3Dcenter></span></div><div align=3Dcenter><table class=3DMsoNormalTable =
+border=3D0 cellspacing=3D0 cellpadding=3D0 width=3D500 style=3D'width:375.0=
+pt'><tr style=3D'height:9.0pt'><td colspan=3D2 style=3D'padding:0cm 0cm 0cm=
+ 0cm;height:9.0pt'></td></tr><tr><td style=3D'padding:0cm 0cm 0cm 0cm'><tab=
+le class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 style=
+=3D'border-radius:5px;word-wrap:break-word'><tr><td style=3D'padding:0cm 0c=
+m 0cm 0cm'><table class=3DMsoNormalTable border=3D1 cellspacing=3D0 cellpad=
+ding=3D0 style=3D'background:#33A9E5;border:solid #2288CC 1.0pt'><tr><td st=
+yle=3D'border:none;padding:0cm 11.25pt 0cm 11.25pt'><div align=3Dcenter><ta=
+ble class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0><tr s=
+tyle=3D'height:21.0pt'><td style=3D'padding:0cm 0cm 0cm 0cm;height:21.0pt'>=
+<p class=3DMsoNormal><a href=3D"https://twitter.com/i/redirect?url=3Dhttps%=
+3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Fin_reply_to%3D322995481452101632%26r=
+efsrc%3Demail&amp;sig=3D027c4142f504c03cf079cb18c61311b359e546e4&amp;uid=3D=
+16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+570&am=
+p;t=3D1"><span style=3D'color:white;border:none windowtext 1.0pt;padding:0c=
+m;text-decoration:none'><img border=3D0 width=3D100 height=3D100 id=3D"_x00=
+00_i1032" src=3D"cid:~WRD131.jpg" alt=3D"Image removed by sender."></span><=
+/a><o:p></o:p></p></td><td width=3D6 style=3D'width:4.5pt;padding:0cm 0cm 0=
+cm 0cm;height:21.0pt'></td><td style=3D'padding:0cm 0cm 0cm 0cm;height:21.0=
+pt'><p class=3DMsoNormal><b><span style=3D'font-size:10.0pt;font-family:"He=
+lvetica","sans-serif";color:white'><a href=3D"https://twitter.com/i/redirec=
+t?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Fin_reply_to%3D32299548=
+1452101632%26refsrc%3Demail&amp;sig=3D027c4142f504c03cf079cb18c61311b359e54=
+6e4&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;n=
+id=3D27+570&amp;t=3D1"><span style=3D'color:white;border:none windowtext 1.=
+0pt;padding:0cm;text-decoration:none'>Reply<span class=3Dhide-mobile> to </=
+span><span class=3Dscreen-name>@hugoroyd</span> </span></a><o:p></o:p></spa=
+n></b></p></td></tr></table></div></td></tr></table></td><td style=3D'paddi=
+ng:0cm 0cm 0cm 7.5pt'><p class=3DMsoNormal style=3D'line-height:9.0pt'><spa=
+n style=3D'font-size:9.0pt'><a href=3D"https://twitter.com/i/redirect?url=
+=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2Fretweet%3Fea_u%3D16923319%26ea_e%3D=
+1367052698%26tweet_id%3D322995481452101632%26ea_s%3D2f492a5e47b6151da8fcea0=
+f7df914bf1f2320a9%26refsrc%3Demail&amp;sig=3Df0496a49cd840b0346dbaa57edcab7=
+be0198f763&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda338106=
+9&amp;nid=3D27+571&amp;t=3D1"><span style=3D'color:#0084B4;border:none wind=
+owtext 1.0pt;padding:0cm;text-decoration:none'><img border=3D0 width=3D30 h=
+eight=3D15 id=3D"_x0000_i1033" src=3D"cid:image005.jpg@01CE3906.2AE01A80" a=
+lt=3D"Image removed by sender.">Retweet</span></a> <o:p></o:p></span></p></=
+td><td style=3D'padding:0cm 0cm 0cm 7.5pt'><p class=3DMsoNormal style=3D'li=
+ne-height:9.0pt'><span style=3D'font-size:9.0pt'><a href=3D"https://twitter=
+.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fintent%2Ffavorite%3Fea_u%=
+3D16923319%26ea_e%3D1367052698%26tweet_id%3D322995481452101632%26ea_s%3D514=
+83046bb8bb86c98d4a58eae186d801085a05c%26refsrc%3Demail&amp;sig=3Dc06442093c=
+8320de19bfef312e3a468a6661bafc&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4=
+b36-a1a7-bbeda3381069&amp;nid=3D27+572&amp;t=3D1"><span style=3D'color:#008=
+4B4;border:none windowtext 1.0pt;padding:0cm;text-decoration:none'><img bor=
+der=3D0 width=3D21 height=3D15 id=3D"_x0000_i1034" src=3D"cid:image006.jpg@=
+01CE3906.2AE01A80" alt=3D"Image removed by sender.">Favorite</span></a> <o:=
+p></o:p></span></p></td></tr></table></td><td style=3D'padding:0cm 0cm 0cm =
+0cm'></td></tr><tr style=3D'height:9.0pt'><td colspan=3D2 style=3D'padding:=
+0cm 0cm 0cm 0cm;height:9.0pt'></td></tr></table></div></td></tr></table></d=
+iv></td></tr></table></td></tr><tr><td style=3D'border:none;padding:0cm 0cm=
+ 0cm 0cm'><table class=3DMsoNormalTable border=3D1 cellspacing=3D0 cellpadd=
+ing=3D0 width=3D670 style=3D'width:502.5pt;background:#EEEEEE;border:none;b=
+order-top:solid #DDDDDD 1.0pt;background-position-x:50%;background-position=
+-y:0%'><tr style=3D'height:12.0pt'><td colspan=3D4 style=3D'border:none;pad=
+ding:0cm 0cm 0cm 0cm;height:12.0pt'></td></tr><tr><td width=3D85 style=3D'w=
+idth:63.75pt;border:none;padding:0cm 0cm 0cm 0cm'></td><td style=3D'border:=
+none;padding:0cm 0cm 0cm 0cm;text-shadow:0 1px 0 #fff'><div><p class=3DMsoN=
+ormal style=3D'line-height:12.75pt'><span style=3D'font-size:9.0pt;font-fam=
+ily:"Helvetica","sans-serif";color:#777777'>Forgot your Twitter password? <=
+a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2F=
+account%2Fresend_password&amp;sig=3Df5d73c6d6c8577b4b95889880e513526930e35d=
+0&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=
+=3D27+24&amp;t=3D1"><span style=3D'color:#0084B4;border:none windowtext 1.0=
+pt;padding:0cm;text-decoration:none'>Get instructions on how to reset it.</=
+span></a> <o:p></o:p></span></p></div><div><p class=3DMsoNormal style=3D'li=
+ne-height:12.75pt'><span style=3D'font-size:9.0pt;font-family:"Helvetica","=
+sans-serif";color:#777777'>You can also <a href=3D"https://twitter.com/i/u?=
+t=3D1&amp;sig=3Dec310a6619bf4cf0492da51edf036cbd567a6dfb&amp;iid=3D31e1d628=
+-08af-4b36-a1a7-bbeda3381069&amp;uid=3D16923319&amp;nid=3D27+26"><span styl=
+e=3D'color:#0084B4;border:none windowtext 1.0pt;padding:0cm;text-decoration=
+:none'>unsubscribe from these emails</span></a> <span class=3Dreset>or chan=
+ge your <a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitt=
+er.com%2Fsettings%2Fnotifications&amp;sig=3Ddfe6fc4e06fdfbeffa510642835ff34=
+af916458c&amp;uid=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069=
+&amp;nid=3D27+27&amp;t=3D1"><span style=3D'color:#0084B4;border:none window=
+text 1.0pt;padding:0cm;text-decoration:none'>notification settings</span></=
+a>. Need <a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fsupp=
+ort.twitter.com&amp;sig=3Dd5a93ec8dc3f5086b47a0022aac6b1bd71661580&amp;uid=
+=3D16923319&amp;iid=3D31e1d628-08af-4b36-a1a7-bbeda3381069&amp;nid=3D27+97&=
+amp;t=3D1"><span style=3D'color:#0084B4;border:none windowtext 1.0pt;paddin=
+g:0cm;text-decoration:none'>help</span></a>?</span> <o:p></o:p></span></p><=
+/div><div><p class=3DMsoNormal style=3D'line-height:12.75pt'><span style=3D=
+'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#777777'>If you=
+ received this message in error and did not sign up for Twitter, click <a h=
+ref=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Facc=
+ount%2Fnot_my_account%2FStJohnDeakins%2F7E25A-F967B-136584&amp;sig=3D3891ce=
+1f109e01705edf6410f73e5a9122eb65a6&amp;uid=3D16923319&amp;iid=3D31e1d628-08=
+af-4b36-a1a7-bbeda3381069&amp;nid=3D27+25&amp;t=3D1"><span style=3D'color:#=
+0084B4;border:none windowtext 1.0pt;padding:0cm;text-decoration:none'>not m=
+y account</span></a>. <o:p></o:p></span></p></div><div><p class=3DMsoNormal=
+ style=3D'line-height:12.75pt'><span style=3D'font-size:9.0pt;font-family:"=
+Helvetica","sans-serif";color:#777777'><span class=3DMsoHyperlink><span sty=
+le=3D'font-size:8.5pt;color:#999999;border:none windowtext 1.0pt;padding:0c=
+m;text-decoration:none'>Twitter, Inc. 1355 Market St., Suite 900 </span></s=
+pan><span class=3Dnobreak><span style=3D'font-size:8.5pt;color:#999999;bord=
+er:none windowtext 1.0pt;padding:0cm'>San Francisco, CA 94103 </span></span=
+><o:p></o:p></span></p></div></td><td width=3D85 style=3D'width:63.75pt;bor=
+der:none;padding:0cm 0cm 0cm 0cm'></td><td style=3D'border:none;padding:0cm=
+ 0cm 0cm 0cm'></td></tr><tr style=3D'height:18.75pt'><td colspan=3D3 style=
+=3D'border:none;padding:0cm 0cm 0cm 0cm;height:18.75pt'></td><td style=3D'b=
+order:none;padding:0cm 0cm 0cm 0cm;height:18.75pt'></td></tr></table></td><=
+/tr></table></div></td></tr></table><p class=3DMsoNormal><o:p>&nbsp;</o:p><=
+/p></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_NextPart_001_00C7_01CE3906.2D70B070--
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="~WRD131.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <~WRD131.jpg>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAGQDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigD//2Q==
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCABeAC4BAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZqKKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK//9k=
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image002.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image002.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCAAgACABAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZqKKKKKKKKKKKKKKK/
+/9k=
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image003.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image003.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCAABAAEBAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZq/9k=
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image004.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image004.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCAAwADABAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZqKKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKKKKK//9k=
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image005.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image005.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCAAPAB4BAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZqKKKKKKK//9k=
+
+------=_NextPart_000_00C6_01CE3906.2D70B070
+Content-Type: image/jpeg;
+	name="image006.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image006.jpg@01CE3906.2AE01A80>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/wAALCAAPABUBAREA/8QAHwAAAQUBAQEB
+AQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1Fh
+ByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZ
+WmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APZqKKKKK//Z
+
+------=_NextPart_000_00C6_01CE3906.2D70B070--
+

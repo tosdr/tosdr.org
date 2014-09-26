@@ -1,0 +1,133 @@
+Return-Path: <tosdr+bncBC6JPJGM6UOBBIV56GFAKGQEAPIVX3Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A6225161736
+	for <anything@michielbdejong.com>; Wed,  3 Apr 2013 18:54:01 +0200 (CEST)
+Received: from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A31BC1162D2
+	for <anything@michielbdejong.com>; Wed,  3 Apr 2013 18:54:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter12-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id ibb4e47FRjkY for <anything@michielbdejong.com>;
+	Wed,  3 Apr 2013 18:54:00 +0200 (CEST)
+Received: from mail-pa0-f60.google.com (mail-pa0-f60.google.com [209.85.220.60])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id ECF4D1162D8
+	for <anything@michielbdejong.com>; Wed,  3 Apr 2013 18:53:56 +0200 (CEST)
+Received: by mail-pa0-f60.google.com with SMTP id bi5sf558600pad.5
+        for <anything@michielbdejong.com>; Wed, 03 Apr 2013 09:53:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=FxEwWi4KGr81dqGJ5B0lIdAmjbqAznfMxa2kkLtzCpw=;
+        b=Ob3pqBsnrPmT1T/XXG9yhlrh1WQQi832VQqd/b6s4p1VSUlXB3fx9wuC8H2+C4ENik
+         /+sXtyx+UOKbHiHDDmC8OBFXkwjqry4ZFefGKuKzp6ZzOv+/VePQLbuSrDKn3OyXe1Tc
+         p0/g3ZQFFoDnLMIA56Gk7bbdhET5nF5L7JctZEClDp1e1GHYxUuv+RyxC/FfW8mTg//w
+         /FeeKg7NnQFGTn0pTFH8YzX0p2KauHo3MHwb9ugyUFq/Pe+ZZu1XtzIgr+QI7CsD9y3E
+         iIVFUMJNY6n2p7OwoFVcooPfgeWr5slorQJyfH3NgB1U60BXQOVR1XrqBe/odOCQzs61
+         kudQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=FxEwWi4KGr81dqGJ5B0lIdAmjbqAznfMxa2kkLtzCpw=;
+        b=eucP2g0zG2M+9O5m50LNo40MRPJ0q2wCFItb6g/v6KqyTJBylmsY1uqp//vcLrFDS3
+         rUJRDIuckgXP9EjU9b7IrN1SChvGCCEM/864LCaRD+GkVoPf3TH9IH0R3yXbUqn3rN0G
+         5bevnnyK8ETcRdpvyCJuGVCR+iu5EkdY1Znua1f6FGjRRQEPC9IMN3ovgovRK8QZPGuJ
+         qDfFzsIrq9XZHhxRxFGnQwY9FVHFfIDwA7ryGeeeXSU1WOXmQW6bH3PEMJfvx1Hof+BS
+         /iBH+WacNxClADyV+aXvZ+paZXoZGe3dQ6/QdnGr0Saq7rrN05XGCwH8BzzPvkEuGtGB
+         ypCA==
+X-Received: by 10.182.231.34 with SMTP id td2mr75181obc.11.1365008034938;
+        Wed, 03 Apr 2013 09:53:54 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.152.69 with SMTP id uw5ls182258obb.9.gmail; Wed, 03 Apr
+ 2013 09:53:54 -0700 (PDT)
+X-Received: by 10.182.17.9 with SMTP id k9mr77707obd.7.1365008034425;
+        Wed, 03 Apr 2013 09:53:54 -0700 (PDT)
+Date: Wed, 3 Apr 2013 09:53:53 -0700 (PDT)
+From: Tobi Lehman <tobi.lehman@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <da9ac639-d044-4e1c-829e-6d8e956ff90f@googlegroups.com>
+In-Reply-To: <13076a3d-f7f0-47cf-84db-631841ae26c3@googlegroups.com>
+References: <13076a3d-f7f0-47cf-84db-631841ae26c3@googlegroups.com>
+Subject: [tosdr:1694] Re: It pays (literally) to read EULAs
+MIME-Version: 1.0
+X-Original-Sender: tobi.lehman@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_93_24960764.1365008033333"
+
+------=_Part_93_24960764.1365008033333
+Content-Type: text/plain; charset=ISO-8859-1
+
+Yeah, it's a good sample of how infrequently people actually read the fine 
+print. This is all the more reason we should be working on this project.
+
+On Tuesday, April 2, 2013 1:48:34 AM UTC-7, Ian McGowan wrote:
+>
+> Another article that might be of interest to the group.
+>
+>
+> http://techtalk.pcpitstop.com/2012/06/12/it-pays-to-read-license-agreements-7-years-later/
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_93_24960764.1365008033333
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Yeah, it's a good sample of how infrequently people actually read the fine =
+print. This is all the more reason we should be working on this project.<br=
+><br>On Tuesday, April 2, 2013 1:48:34 AM UTC-7, Ian McGowan wrote:<blockqu=
+ote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left=
+: 1px #ccc solid;padding-left: 1ex;">Another article that might be of inter=
+est to the group.<div><br></div><div><a href=3D"http://techtalk.pcpitstop.c=
+om/2012/06/12/it-pays-to-read-license-agreements-7-years-later/" target=3D"=
+_blank">http://techtalk.pcpitstop.com/<wbr>2012/06/12/it-pays-to-read-<wbr>=
+license-agreements-7-years-<wbr>later/</a><br></div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_93_24960764.1365008033333--

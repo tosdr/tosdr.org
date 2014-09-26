@@ -1,0 +1,150 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBLUI36FQKGQEN5AP6DA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 46324161735
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 13:38:28 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 41F9C1162E3
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 13:38:28 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KzyVJYst2zbD for <anything@michielbdejong.com>;
+	Wed, 24 Apr 2013 13:38:26 +0200 (CEST)
+Received: from mail-qa0-x23e.google.com (mail-qa0-x23e.google.com [IPv6:2607:f8b0:400d:c00::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8767B1162E2
+	for <michiel@michielbdejong.com>; Wed, 24 Apr 2013 13:38:23 +0200 (CEST)
+Received: by mail-qa0-f62.google.com with SMTP id bn16sf258085qab.7
+        for <michiel@michielbdejong.com>; Wed, 24 Apr 2013 04:38:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=TRatUNa9RZJhdZ1fzQU7Qm96pYfX5tQfnC8wK2+6uXs=;
+        b=JOJXsrjGBlUR5CZcqC8AL0RAzpjDBNujMbBiE9abe7BbIZeqbyWa/CgFp0LDccN2ET
+         5C89kUQZcVHEDKdrfCTU8aOdMnVuXhDwPwGlbfJt6j3zxVaufAePEDvAdJnuM1R+xeGu
+         SUOhAl3/sKVQ/BBny1MNhnqujAEDubUYi4y0Fbz8feTwV0NP5C8RB0mMOwFEeNzk93M6
+         HXP3daiX/n/dJWbrz34Gepl0zjgsf+VTYQX1BF88kOkumFjuU2UIQgrDtCTrMhrLJY/N
+         oXMnT0UhwQnOtehubEpuKpyY9adF2OZn9KrENjUZb6bAbMKWP4av2xmfzZx5xTcvd8xi
+         Trwg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=TRatUNa9RZJhdZ1fzQU7Qm96pYfX5tQfnC8wK2+6uXs=;
+        b=HNrGvyVSeIl/gCIU1HXtYVwGWKBtPmBjsa7CpYvbFW4OPSftFgos4V2upW2hQxS+hf
+         ctX6dL62UI9nfO++45Vq4MvEdZxgRQnBCpwEuvPr9Bi49Nif6AxbDOZcP425N6+0aLqE
+         x6zE17Py7Twcp1J4xMUTt9LI0cf5XWLPLcHrNMWSeKOrNGgRwLdoJr8ECIunecTwSVAY
+         PYV3itoSvTJySN/C39W/nbU3QWXChkCpHWL1j5MFOlmak9mJeqx4LvStooPkZLZjddIT
+         yKsw2kN1nK5+rPqyu1goZfu9OVdO2N/zCZLmU4OW6u7xP7yUW9h9QEryT7B376LnmUty
+         Ko0g==
+X-Received: by 10.49.12.15 with SMTP id u15mr1570431qeb.21.1366803502484;
+        Wed, 24 Apr 2013 04:38:22 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.30.68 with SMTP id q4ls723718qeh.8.gmail; Wed, 24 Apr 2013
+ 04:38:20 -0700 (PDT)
+X-Received: by 10.49.27.233 with SMTP id w9mr3096585qeg.23.1366803500188;
+        Wed, 24 Apr 2013 04:38:20 -0700 (PDT)
+Date: Wed, 24 Apr 2013 04:38:19 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <90847aa0-2a30-477e-8450-93cee19bb77e@googlegroups.com>
+In-Reply-To: <391bc416-4063-4a1a-806b-b5e71f2026b1@googlegroups.com>
+References: <391bc416-4063-4a1a-806b-b5e71f2026b1@googlegroups.com>
+Subject: [tosdr:1730] Re: [Bad] Spotify price changes take effect immediately
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4880_996669.1366803499957"
+
+------=_Part_4880_996669.1366803499957
+Content-Type: text/plain; charset=ISO-8859-1
+
+This has been curated.
+
+On Tuesday, April 23, 2013 2:04:24 PM UTC+2, Ian McGowan wrote:
+>
+> Spotify warns you if there is a change in the price of  subscription, but 
+> that change is implemented immediately, without delay. This means that if 
+> they change the price they day before your renewal, you will be charged the 
+> new price.
+>
+> Spotify may change the price for the Paid Subscriptions from time to time, 
+>> and will communicate any price changes to you. Price changes for Paid 
+>> Subscriptions will take effect at the start of the next subscription period 
+>> following the date of the price change. By continuing to use the Spotify 
+>> Service after the price change takes effect, you accept the new price.
+>
+>
+> https://www.spotify.com/us/legal/end-user-agreement/ 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_4880_996669.1366803499957
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.<br><br>On Tuesday, April 23, 2013 2:04:24 PM UTC+2, =
+Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;marg=
+in-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">Spotify warn=
+s you if there is a change in the price of &nbsp;subscription, but that cha=
+nge is implemented immediately, without delay. This means that if they chan=
+ge the price they day before your renewal, you will be charged the new pric=
+e.<br><div><br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px =
+0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);bord=
+er-left-style:solid;padding-left:1ex"><span style=3D"color:rgb(85,85,85);fo=
+nt-family:helvetica,arial,'nimbus sans l',sans-serif;font-size:14px;line-he=
+ight:18px">Spotify may change the price for the Paid Subscriptions from tim=
+e to time, and will communicate any price changes to you. Price changes for=
+ Paid Subscriptions will take effect at the start of the next subscription =
+period following the date of the price change. By continuing to use the Spo=
+tify Service after the price change takes effect, you accept the new price.=
+</span></blockquote><div><br></div><div><a href=3D"https://www.spotify.com/=
+us/legal/end-user-agreement/" target=3D"_blank">https://www.spotify.com/us/=
+<wbr>legal/end-user-agreement/</a>&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_4880_996669.1366803499957--

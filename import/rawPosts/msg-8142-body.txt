@@ -1,0 +1,106 @@
+Return-Path: <tosdr+bncBDA6JSH67IJBBZX6SSIAKGQE42MLA4Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CEED1161747
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 21:13:46 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id CC4EA227503
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 21:13:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id FAemvPdCnDff for <anything@michielbdejong.com>;
+	Fri,  9 Aug 2013 21:13:45 +0200 (CEST)
+Received: from mail-pb0-x238.google.com (mail-pb0-x238.google.com [IPv6:2607:f8b0:400e:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 136F02275DE
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 21:13:44 +0200 (CEST)
+Received: by mail-pb0-f56.google.com with SMTP id rp2sf1282583pbb.21
+        for <anything@michielbdejong.com>; Fri, 09 Aug 2013 12:13:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=91AzXfdv1aHK2Z1oYlbBa+xjxie8GC5Coz6m5Ly/KzM=;
+        b=bL+Yg7DGBPsShGOfiLr5olBd/+Y1ZmngjUZcaEzplZDOQzNal6a6qVXcjyNkXqRPhQ
+         1KXo38F5VvOKhuPdyC2scxkI88En3EigXymrz9Y2g8Z7n8PgXeb+FZuJfi/+xwdP2Xur
+         64uUkmN/Df3JIlaP8Q10PSzJTxMo3L6OPNorY9soVyfrrZM7dUYXzGpra4nLxNOs9ERN
+         LqoHnJbuiLgPNcvyj7srR75Yt7kFs3pDh+qXqpYmk4RqGsQnLjxkVbLEfmNg+g8HkzPJ
+         JyoRotWfuDk2AzMpo6lJbXzjbygB/3uhU8vJFpdH1au/FO1jvvd9QfkWwYY6AtcD1dSM
+         hVGQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=91AzXfdv1aHK2Z1oYlbBa+xjxie8GC5Coz6m5Ly/KzM=;
+        b=ZzAUM/RJtbkAz+D61IBfsxhy8Eu8hrJ6+t3dRDAtxxqqVroCv6Ydd14meKq4Br/YDd
+         YexKc8E99Bc2kJBAHM29VSfIO6FBAgpuB8FTOR7b5mfytXY1WOeFHtf79Iyk6RI0jZvF
+         KVDI6LLarcn4ZeP9IGkMh8rcKj2phK+/tQ2wYdkhMjR8y+IXS54Tp5ZJv5UEU6Uf+QxG
+         T0U38YWM/0hUkra1iUMaH7YYqGSmZCX6f/e9gf702qpTL3rG+9T6udHJqPlC0gy2fTni
+         pAW/xDiSLpHfTFg0+PfzCcnAsLs7GDVJiVQr5j5OSZrmxpV0kCkogWCaicd7vHPMfDhO
+         F71A==
+X-Received: by 10.182.111.137 with SMTP id ii9mr3216obb.31.1376075623169;
+        Fri, 09 Aug 2013 12:13:43 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.105.232 with SMTP id gp8ls387457obb.29.gmail; Fri, 09 Aug
+ 2013 12:13:42 -0700 (PDT)
+X-Received: by 10.182.112.165 with SMTP id ir5mr3093obb.11.1376075622293;
+        Fri, 09 Aug 2013 12:13:42 -0700 (PDT)
+Date: Fri, 9 Aug 2013 12:13:41 -0700 (PDT)
+From: zapgamma@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <be1a8448-5450-4852-b800-c0818eb34335@googlegroups.com>
+In-Reply-To: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+References: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+Subject: [tosdr:2636] Re: [Bad] Facebook automatically shares your information
+MIME-Version: 1.0
+X-Original-Sender: zapgamma@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, June 13, 2012 3:13:54 PM UTC-4, Michiel de Jong wrote:
+> according to http://www.kickstarter.com/projects/joeandrieu/a-standard-in=
+formation-sharing-label
+>=20
+>=20
+>=20
+> Facebook automatically shares your information with Bing, Pandora,
+>=20
+> TripAdvisor, Yelp, Rotten Tomatoes, Clicker, Scribd, and Docs, unless
+>=20
+> you manually opt-out
+
+QUESTION:
+
+If I'm posting copyrighted material (photo) on my facebook that I do not ow=
+n the copyright to and facebook shares/uses that material, can the original=
+ copyright owner file suit against facebook that they did not grant the use=
+ of the photo to facebook, that essentially facebook is using a pirated ima=
+ge?
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

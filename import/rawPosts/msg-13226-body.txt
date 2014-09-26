@@ -1,0 +1,121 @@
+Return-Path: <tosdr+bncBCH7TF5J4YORBYWSQKKQKGQEF6OQVEI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 25CEB412BE
+	for <anything@michielbdejong.com>; Thu,  5 Dec 2013 17:27:21 +0100 (CET)
+Received: from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 208E4226079
+	for <anything@michielbdejong.com>; Thu,  5 Dec 2013 17:27:21 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter12-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 5qRo6UWes2Dj for <anything@michielbdejong.com>;
+	Thu,  5 Dec 2013 17:27:19 +0100 (CET)
+Received: from mail-ob0-x23f.google.com (mail-ob0-x23f.google.com [IPv6:2607:f8b0:4003:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8C6A822606C
+	for <michiel@michielbdejong.com>; Thu,  5 Dec 2013 17:27:16 +0100 (CET)
+Received: by mail-ob0-f191.google.com with SMTP id gq1sf4527841obb.8
+        for <michiel@michielbdejong.com>; Thu, 05 Dec 2013 08:27:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=zYFTtTI37kGMPRuMR32JX4dW7NqaL8JUw3028IwBt1w=;
+        b=JMPHWCXgDb0zXFfXdBvN1nRZlYfVFRdG9KYJYcLOYmwqddgHf5US0whYwGWSGtyhl/
+         gTL7DebHf43iBqbtVy9Iwg0GnVYkHkAahhKg1JD3Amji8nv332g1VFbZ9/Ktpbebh2Hp
+         FZncC4SSaU8yX5Ug22KLaKT4zVoKgbgXVBXWWsfMRgyCUVQcymox2pb4DRRKKdHVYjaD
+         LHaEE8BQJG29R3m0NFyDoZVmJ3e4hNJ6i0AYARk+zp9RdWq1GgqbedYmjy9ct01+6UTm
+         6pYiBfKVMD3Uy6w9APYzM5s4AJe6Mdyh5o4AEHyOb6D4RUHGiMK5L81j9L/6XMSh8hJg
+         vPEA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=zYFTtTI37kGMPRuMR32JX4dW7NqaL8JUw3028IwBt1w=;
+        b=c18t9CSjZVdgr36Lc6zO85JPunSGoV+rIXHZY+9gNp8tSxai1yvX4aad55e14WGYVI
+         e0Jlc4ZCGlX+s/NiDH9cVQAhaLYRdWGwE5GPJLdUJqkTJiHJHvSvA0IOv0xzM0K+6RO4
+         ryYg11nmmzPAamUTC0KDZhHj+MJeYNmbA12eaHxxn48lIOOJFAH8q7kqxQIegWOGLTqf
+         s51y966xlB6YGgEUuYa2qPKPh5K0Zb3DzF62Ki0O2RzFzuIOPVfx2a5DIX96jCjLe9vS
+         NeztMgORdeKtCLgicYSs+OWE265Y9gb3v+8dJ5RtNSyZJkVLcNoxEwtm5rhkCW/FayCe
+         ud5Q==
+X-Received: by 10.182.243.131 with SMTP id wy3mr733310obc.17.1386260834599;
+        Thu, 05 Dec 2013 08:27:14 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.129.196 with SMTP id ny4ls248419obb.6.gmail; Thu, 05 Dec
+ 2013 08:27:14 -0800 (PST)
+X-Received: by 10.182.158.196 with SMTP id ww4mr396842obb.5.1386260834094;
+        Thu, 05 Dec 2013 08:27:14 -0800 (PST)
+Date: Thu, 5 Dec 2013 08:27:13 -0800 (PST)
+From: nathalie.montiel@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <a76db171-c2ed-48f7-84ed-02735e763905@googlegroups.com>
+In-Reply-To: <1339063492.4265.55.camel@synclavier.lan>
+References: <1339063492.4265.55.camel@synclavier.lan>
+Subject: [tosdr:2836] Re: EFF publishes report about companies practices
+ regarding handing over data to governments
+MIME-Version: 1.0
+X-Original-Sender: nathaliemontiel@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+I found this : http://info.yahoo.com/transparency-report/
+It seems to be one of the missing point in your ranking for Yahoo!
+Did you update the differents other ranking?
+Nathalie
+
+
+
+Le jeudi 7 juin 2012 12:04:52 UTC+2, Hugo Roy a =E9crit=A0:
+> https://www.eff.org/press/releases/when-government-comes-knocking-who-has=
+-your-back
+>=20
+> You can find the report at https://www.eff.org/pages/who-has-your-back=20
+>=20
+>=20
+>=20
+> Lots of useful information in there. We'd have to integrate it somehow
+>=20
+> in our approach. There is a due process coalition that sets legal
+>=20
+> standards regarding this issue. Companies can join the coalition and set
+>=20
+> their ToS according to these standards. That might be one way to
+>=20
+> integrate it in our rating.
+>=20
+> --=20
+>=20
+> Hugo Roy=20
+>=20
+>   French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+>=20
+>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+>=20
+>                                  mobile DE: +49 151 143 56 563
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

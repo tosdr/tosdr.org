@@ -1,0 +1,159 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBWNT36FQKGQEAQANVKA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 36AEE161736
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 15:10:53 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 32C9522609A
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 15:10:53 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id V4oTimXgCMtz for <anything@michielbdejong.com>;
+	Wed, 24 Apr 2013 15:10:51 +0200 (CEST)
+Received: from mail-qc0-x23b.google.com (mail-qc0-x23b.google.com [IPv6:2607:f8b0:400d:c01::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25AE52260A8
+	for <anything@michielbdejong.com>; Wed, 24 Apr 2013 15:10:51 +0200 (CEST)
+Received: by mail-qc0-f187.google.com with SMTP id a6sf646882qch.24
+        for <anything@michielbdejong.com>; Wed, 24 Apr 2013 06:10:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=z5uVqyqI50JEirN9V4fuBlI7LVly6RrZKxjvLuSyQ30=;
+        b=P/eKJSsOnChqJIKCPo4D5hTnkvD/SXA2nXATe51WEsj3KlIEzzxnKL+40U5lcUEkbD
+         Hslb/0woK63IYYMHbYGB/JDWGrvpFYe9Se1SA96omJly7psiS0hQjrj00KdUsWcFegjW
+         QftYwokIJSAPRqzIuaWAqSz6SMroZpQZw3Qc6qGllcR08aDUlNaLOiBxE69XpqShxi4W
+         qBxPcgbVdGaQ1oKyw0w0ABVxCMxdNlKBPsviCcL0dFaK25XV3ANTzm1B4oJtWWnjSyK2
+         OQUxxdkbJs4MkTch7fNoUQ08bFZHRdNxVvRf62EK8L8dbBCUs9PGyGJJIRovL7QVnR42
+         5DEg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=z5uVqyqI50JEirN9V4fuBlI7LVly6RrZKxjvLuSyQ30=;
+        b=G47/mMnijwKMnecii5R30JqUHosHXStWFL/BVxkhBYQylEZtDMursWT3GKrozOV3p8
+         MJPFxfw8LkgAmsH1dukClQxpp6RsZGymXctqgjr+Z3Kw/i2bfx5oqVZUmxpfSZ7PZOt1
+         DNaGr0P96iRACaUuDGZVWGHNNdu/bclYaQ1jCc73+hLc6cb29qS5HO3bwTlArjaHabLZ
+         1AHuM0+60Z3ihTNqKl5LxIWhv0ZCDP6l33EJchsvEHzYMBKhXjDqhR6+IcA6lZ1ey5Lq
+         y3JONzNPsjwYZbx0nlb1/0trc0hATmhtreXhn32tqrYB9Tlk6xas1tAlVHAjnpcLVLfK
+         eoJQ==
+X-Received: by 10.49.24.134 with SMTP id u6mr3178959qef.24.1366809050075;
+        Wed, 24 Apr 2013 06:10:50 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.63.228 with SMTP id j4ls756403qes.80.gmail; Wed, 24 Apr
+ 2013 06:10:49 -0700 (PDT)
+X-Received: by 10.49.103.135 with SMTP id fw7mr3106944qeb.38.1366809049420;
+        Wed, 24 Apr 2013 06:10:49 -0700 (PDT)
+Date: Wed, 24 Apr 2013 06:10:49 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <113a367e-e8f2-4ee1-bb48-890f93d43d1b@googlegroups.com>
+In-Reply-To: <9462a381-ef4d-45af-b483-892d4127fd70@googlegroups.com>
+References: <9462a381-ef4d-45af-b483-892d4127fd70@googlegroups.com>
+Subject: [tosdr:1743] Re: [Info] No promise to inform regarding law or
+ government requests
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_307_6430044.1366809049102"
+
+------=_Part_307_6430044.1366809049102
+Content-Type: text/plain; charset=ISO-8859-1
+
+This has been curated.
+
+On Tuesday, April 23, 2013 4:07:52 PM UTC+2, Ian McGowan wrote:
+>
+> Spotify does not explicitly state that they will inform users of any law 
+> or government requests regarding any personal user information.
+>
+> In addition to the above, we may also share your information to third 
+>> parties for these limited purposes:
+>
+>
+> to respond to legal process (e.g. a court order or subpoena), if we 
+>> believe in good faith that it is necessary to do so; to comply with 
+>> requirements of mandatory applicable law; to protect the safety of any 
+>> person; to protect the rights and property of Spotify, including to enforce 
+>> the Terms and Conditions of Use and Mobile Terms; and to address fraud, 
+>> security or technical issues;
+>
+>
+> https://www.spotify.com/us/legal/privacy-policy/ 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_307_6430044.1366809049102
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.<br><br>On Tuesday, April 23, 2013 4:07:52 PM UTC+2, =
+Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;marg=
+in-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">Spotify does=
+ not explicitly state that they will inform users of any law or government =
+requests regarding any personal user information.<br><div><br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-wi=
+dth:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-=
+left:1ex"><span style=3D"color:rgb(85,85,85);font-family:helvetica,arial,'n=
+imbus sans l',sans-serif;font-size:14px;line-height:18px">In addition to th=
+e above, we may also share your information to third parties for these limi=
+ted purposes:</span></blockquote><div><br></div><blockquote class=3D"gmail_=
+quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-=
+color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><span styl=
+e=3D"color:rgb(85,85,85);font-family:helvetica,arial,'nimbus sans l',sans-s=
+erif;font-size:14px;line-height:18px">to respond to legal process (e.g. a c=
+ourt order or subpoena), if we believe in good faith that it is necessary t=
+o do so; to comply with requirements of mandatory applicable law; to protec=
+t the safety of any person; to protect the rights and property of Spotify, =
+including to enforce the Terms and Conditions of Use and Mobile Terms; and =
+to address fraud, security or technical issues;</span></blockquote><div><br=
+></div><div><a href=3D"https://www.spotify.com/us/legal/privacy-policy/" ta=
+rget=3D"_blank">https://www.spotify.com/us/<wbr>legal/privacy-policy/</a>&n=
+bsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_307_6430044.1366809049102--

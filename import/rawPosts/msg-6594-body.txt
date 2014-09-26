@@ -1,0 +1,150 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBF465OHAKGQEUQREDMQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 9CF2B161743
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 16:39:23 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 97A86178146
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 16:39:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id oWdZvn8pUG5c for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 16:39:22 +0200 (CEST)
+Received: from mail-vc0-x23c.google.com (mail-vc0-x23c.google.com [IPv6:2607:f8b0:400c:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2A7C517817B
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 16:39:21 +0200 (CEST)
+Received: by mail-vc0-f188.google.com with SMTP id ha12sf1397350vcb.5
+        for <anything@michielbdejong.com>; Mon, 08 Jul 2013 07:39:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=XKQoe1sSb6jG+R1PmctN+mlo2O14bINv67waI87zSF8=;
+        b=mccO5wslBBYKghhiGVk0q1aa2GdjAVIWZqLU4jMRx9/UVouygQjTxvavM4/OAz46NL
+         bCJrFdo/HRZvtQ0R2GywM3nqk3DAYiYQHnNoWKj+c94IQxWQ9ktkMHgxurSokzP74dR4
+         Ec5AjjYfiJ+voWtrMorZycGN9LYk0sUwHcg2QFWU6Bdw45OnOIEmQrr0Sni5Khh02gH3
+         aiIKsFARKNF47tOnQjP1ESMl/CDeEmqRHPNHMbsXAyJni3NyqjLwncX9JIF4J/jSAjp8
+         jjNNmpHzOQUida5rx68OYzxEB2G0cfEgUio/ron5Zsmje8McWsKrmnynwRJJtXDNNWe5
+         6mqA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=XKQoe1sSb6jG+R1PmctN+mlo2O14bINv67waI87zSF8=;
+        b=JyMHVMntDxWF+nZbAtgluWsp0FVre+90fPCSixuTCwptdxyOp798RMugUhP5Q6a7Uu
+         pzYqj7BKf8N0JjAX46wfS22pKSiz2cV5lAZle63OrQ4CQelhlvcYqU41vx29uoBaaZZ7
+         J7SEnwTEriNMCi1QtpQ6181gZdjNpRpCStwHFpyCNbdFjEEpMvRsGPiPyPyq0gtdGBn0
+         7py53KAase8lQd0aMQCiLaM0ut6aV8SGCdL0/pqGmLTYX87lDjKe2vwx+OUEHPnQDTmh
+         hx6V1U0d5gjSUi3uOb5Q8Cm4l+Z+wLkB/guaVElLKCW1nmJUrttXBAARn0E7WbbFkG/s
+         992A==
+X-Received: by 10.49.63.195 with SMTP id i3mr523202qes.29.1373294360031;
+        Mon, 08 Jul 2013 07:39:20 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.59.74 with SMTP id x10ls2006229qeq.9.gmail; Mon, 08 Jul
+ 2013 07:39:19 -0700 (PDT)
+X-Received: by 10.49.35.195 with SMTP id k3mr516994qej.2.1373294359699;
+        Mon, 08 Jul 2013 07:39:19 -0700 (PDT)
+Date: Mon, 8 Jul 2013 07:39:19 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <0790461f-36b6-4562-ab52-154c749289b0@googlegroups.com>
+Subject: [tosdr:2453] Apple.com can suspend the Site whenever they want, for
+ any reason
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_6512_29310809.1373294359394"
+
+------=_Part_6512_29310809.1373294359394
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> Apple reserves the right to do any of the following, at any time, without 
+> notice: (1) to modify, suspend or terminate operation of or access to the 
+> Site, or any portion of the Site, for any reason; (2) to modify or change 
+> the Site, or any portion of the Site, and any applicable policies or terms; 
+> and (3) to interrupt the operation of the Site, or any portion of the Site, 
+> as necessary to perform routine or non-routine maintenance, error 
+> correction, or other changes.
+
+
+https://www.apple.com/legal/internet-services/terms/site.html 
+
+Title: Apple.com can suspend the site at any time for any reason
+
+Topic: suspension
+
+Summary: Apple can modify, suspend, or terminate their website (Apple.com) 
+at any time, for any reason, without notifying users. 
+
+Score: 50 (mediocre)
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_6512_29310809.1373294359394
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(51, 51, 51); font-fa=
+mily: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sa=
+ns-serif; font-size: 14px; line-height: 20px;">Apple reserves the right to =
+do any of the following, at any time, without notice: (1) to modify, suspen=
+d or terminate operation of or access to the Site, or any portion of the Si=
+te, for any reason; (2) to modify or change the Site, or any portion of the=
+ Site, and any applicable policies or terms; and (3) to interrupt the opera=
+tion of the Site, or any portion of the Site, as necessary to perform routi=
+ne or non-routine maintenance, error correction, or other changes.</span></=
+blockquote><div><br></div><div><a href=3D"https://www.apple.com/legal/inter=
+net-services/terms/site.html">https://www.apple.com/legal/internet-services=
+/terms/site.html</a>&nbsp;</div><div><br></div><div>Title: Apple.com can su=
+spend the site at any time for any reason</div><div><br></div><div>Topic: s=
+uspension</div><div><br></div><div>Summary: Apple can modify, suspend, or t=
+erminate their website (Apple.com) at any time, for any reason, without not=
+ifying users.&nbsp;</div><div><br></div><div>Score: 50 (mediocre)</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_6512_29310809.1373294359394--

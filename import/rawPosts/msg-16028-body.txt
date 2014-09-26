@@ -1,0 +1,96 @@
+Return-Path: <tosdr+bncBDFMTZPA3MIBBC4S5SLQKGQEYYSHJLQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 1F63040E33
+	for <anything@michielbdejong.com>; Wed, 12 Feb 2014 06:39:26 +0100 (CET)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1C92417809D
+	for <anything@michielbdejong.com>; Wed, 12 Feb 2014 06:39:26 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Te-nIfzRfLYi for <anything@michielbdejong.com>;
+	Wed, 12 Feb 2014 06:39:24 +0100 (CET)
+Received: from mail-yk0-x240.google.com (mail-yk0-x240.google.com [IPv6:2607:f8b0:4002:c07::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 7331A178099
+	for <anything@michielbdejong.com>; Wed, 12 Feb 2014 06:39:24 +0100 (CET)
+Received: by mail-yk0-f192.google.com with SMTP id 79sf4573203ykr.9
+        for <anything@michielbdejong.com>; Tue, 11 Feb 2014 21:39:23 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=DFq5F1lmM4r57NsS3Gy496/QZhqpZanGrRN7SqQ/xwQ=;
+        b=d8ymcdo1Yrn0B7/EOPE124JFRE8b0z2ir6tPPORSuvydP8FmmTBzb+wbtl7CBrL2+d
+         Leo4iwY+/8eUkM0JrcpnfFY9Ih8x2Ldj0u7L1zFJh99oM1aRKmj2Ikiq83Qz2ivYyN3u
+         PQoUnF/knOftxU/TBx3w1siZmBNL24CaVQ9Ol/T4C+MSVqfNuPXmqgEKGKf0OmZp+cXh
+         oKNCWR63rBEzKQlL43Q7Q7bQgor/QqLFd0sAS4IEng6OKN4mnzk7/5Oef+RPhLl6A2+H
+         95aRHtmw1oOEGgx8pgO09GMxIFMCWKHO8gCeOB3sE48MZfIZ8Jjvjto1pfBGobV0UKwD
+         +D8g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=DFq5F1lmM4r57NsS3Gy496/QZhqpZanGrRN7SqQ/xwQ=;
+        b=04/H8/xGJ17FInLL7GDgiScg3kCr0rUQpicvZf6nbL5aBe5+faC/a5I9adUHOFhGri
+         A0mR1vDCgJK9SU4dp7CUGL9RGSiQ5jRwsrI6V3AKPPSBVxdPwXSHA7szjizY9rRm2sI6
+         0m/IqG1zpHLkjJXP/D8x5k5D+sWddzesPVwPXKCXZfdLndSczOKL5YIXeRmIeP3QuoC1
+         OyFJvmbVzn6mVQEUA/nmsFcIJpkL0PY265Xhk+yi/koH8+Rm2BCE9hvU/kxMHbUehsAO
+         pfY36JuTW3AtoB+orE/gBxgycOFfQaRTpv6/5Pja2T1RPCnElr9/DTykH2FII1Z+G5UX
+         f6SA==
+X-Received: by 10.140.102.139 with SMTP id w11mr7410qge.37.1392183563232;
+        Tue, 11 Feb 2014 21:39:23 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.88.203 with SMTP id t69ls2758347qgd.87.gmail; Tue, 11 Feb
+ 2014 21:39:23 -0800 (PST)
+X-Received: by 10.140.96.37 with SMTP id j34mr7249qge.34.1392183563033;
+        Tue, 11 Feb 2014 21:39:23 -0800 (PST)
+Date: Tue, 11 Feb 2014 21:39:22 -0800 (PST)
+From: jonathanrynd@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <6d5c8e35-e48d-4bab-9d70-9af26ed17954@googlegroups.com>
+In-Reply-To: <20140128151258.GF2389@xps.lan>
+References: <20140128151258.GF2389@xps.lan>
+Subject: [tosdr:2937] Re: [Fwd] [tosdr.org] Revisit Tumblr services (#121)
+MIME-Version: 1.0
+X-Original-Sender: jonathanrynd@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Tuesday, January 28, 2014 10:12:58 AM UTC-5, Hugo Roy wrote:
+>=20
+
+Tumblr's new terms of service give them an non-exclusive, worldwide, royalt=
+y-free, sublicensable transferable right and license to your content. You c=
+an cancel the license by closing your account, but that lets them do whatev=
+er they've already done with it.
+
+They grant you a license to view their content, but it's worldwide, revocab=
+le, non-exclusive, non-sublicensable, and non-transferable. The "revocable"=
+ part is new.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

@@ -1,0 +1,198 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBYV2XWMAKGQE4SH2K5I@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id A5DB440F38
+	for <anything@michielbdejong.com>; Thu, 27 Feb 2014 16:45:10 +0100 (CET)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 93612142273
+	for <anything@michielbdejong.com>; Thu, 27 Feb 2014 16:45:10 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id mbUuxYKgsIPP for <anything@michielbdejong.com>;
+	Thu, 27 Feb 2014 16:44:39 +0100 (CET)
+Received: from mail-vc0-x23c.google.com (mail-vc0-x23c.google.com [IPv6:2607:f8b0:400c:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B1AA01422B8
+	for <michiel@michielbdejong.com>; Thu, 27 Feb 2014 16:44:35 +0100 (CET)
+Received: by mail-vc0-f188.google.com with SMTP id im17sf625504vcb.25
+        for <michiel@michielbdejong.com>; Thu, 27 Feb 2014 07:44:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=3Oep8VUBSljILfCkDU5cau8ziov+SVJemotXcJ/LNsw=;
+        b=a4GiL1g+YLdQt3sT6/iMFFhG2C7uSgGS20LXZFjLblWi69vlvi+v7+ggI2HluLeqj9
+         SeaTkZUfM9AKyFc7GS4iuNxH26rRjtnVq/pgFdQGtnb9ujzdFUK+h6MXkd5W/UMvVruD
+         vtzOOqQuOpEJZaZVb7xprvERE6PMil06qrxeNsu+avklxvzkh4Y/ha64ij9YJAxewlV1
+         H0P4jCM7dX1MpTTQPpT2XXcdmuUlsFjHnLkkG2RzSU+rGXgES/Zsy7Slsk7gNLpoY/p9
+         0ANEJcI9Ol+zXe6JMU7roZSe/7m/+s8an4QOEkKa87WonSXjfe7PvO3fF2ECifVJIIMa
+         lyig==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=3Oep8VUBSljILfCkDU5cau8ziov+SVJemotXcJ/LNsw=;
+        b=tqkkv45aoBm00dSb/ROup1dMV0twEqKoMP2YQHezM0m6ReMOF09ZnriJGgUbnTu7p4
+         fKzzcrHeEI0qSwUyWc6eeMc11CC3Gzfr5/pFIq6zu6hf+o8aWyN+jtNg/s8pw4HdCYg3
+         P5xNCh4QwkT8dDc4jnAtOgEix+TFlgY2BIwo0DJ5O5fyr61PCMJX4DrDzepstpxH1LAp
+         /m66Vv7tZKcv7QfrXVjbArI374Ve1um8VV21w27qH8CDulHW9Ta7coZ/FAF6H/hqjj14
+         1wS1ZeamojjX6CEEelABoNE3eXh1cYBIYC6QBARJM2/kARenADjSgtDdREW11h1U89SA
+         fSVw==
+X-Received: by 10.50.57.103 with SMTP id h7mr115386igq.15.1393515874626;
+        Thu, 27 Feb 2014 07:44:34 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.143.34 with SMTP id sb2ls4331736igb.41.canary; Thu, 27 Feb
+ 2014 07:44:33 -0800 (PST)
+X-Received: by 10.50.92.70 with SMTP id ck6mr697500igb.4.1393515873935;
+        Thu, 27 Feb 2014 07:44:33 -0800 (PST)
+Date: Thu, 27 Feb 2014 07:44:32 -0800 (PST)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Cc: mark.adams@sjsu.edu
+Message-Id: <4f2f019d-caba-48f3-9ed6-4fc81a084eaa@googlegroups.com>
+In-Reply-To: <09ab4178-de1b-4b37-985b-d378320e8a2c@googlegroups.com>
+References: <09ab4178-de1b-4b37-985b-d378320e8a2c@googlegroups.com>
+Subject: [tosdr:2953] Re: Dropbox
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_6120_24845094.1393515872689"
+
+------=_Part_6120_24845094.1393515872689
+Content-Type: text/plain; charset=UTF-8
+
+A clarification: the reason for ToS:DR isn't *to expose* anybody at all. 
+It's to inform users about their rights under the terms of use agreements 
+they're asked to agree to. 
+
+"No refund" policies are legal as long as they're clearly and conspicuously 
+marked prior to purchase (and the law assumes, rightly or wrongly, that 
+consumers read the terms of use agreements prior to using a website, so are 
+informed about policies like this prior to purchase). Also, a "no refund" 
+policy like this one is very common for a prepaid, recurring service like 
+Dropbox's: it's rare to find a similar service that *does* offer refunds. 
+
+Let me explain why: let's say you're a small business owner. You offer a 
+service online where users can sign up and pay for each month in advance, 
+on a recurring basis. A user signs up at the end of January and pre-pays 
+for February. On February 27, after nearly a full month of use, the user 
+cancels his account and demands a refund. Here's another example: let's say 
+you're a small business owner. You offer a service online where users can 
+*either* have a free account that comes with a monthly data cap, or they 
+can have a paid account that has no data cap. A user signs up for the paid 
+service and pre-pays for February. By February 4, the user has transmitted 
+more data than he would have been able to with a free account. On February 
+5, the user cancels his account and demands a refund, arguing that he 
+hasn't used it for a full month and should be credited for the unused 
+time...however, he has clearly gotten full use out of the paid service. 
+Enough issues like these crop up, and businesses simply adopt a "No 
+refunds" policy.
+
+Of course, some businesses do offer refunds on a discretionary basis. Not 
+all do, though, and it doesn't make a business necessarily *bad* if it 
+chooses not to.
+
+Hannah
+
+
+On Wednesday, February 26, 2014 5:53:23 PM UTC-8, mark....@sjsu.edu wrote:
+>
+> Surprised Dropbox isn't on the BAD list for having a NO REFUND policy on 
+> their accounts...this doesn;t seem fair--a perfect example of the reason 
+> for tour website (to expose these companies). Here's the fine print...
+>
+>
+> Dropbox Premium Accounts are prepaid and are non-refundable. DROPBOX DOES 
+> NOT PROVIDE REFUNDS OR CREDITS FOR ANY PARTIAL MONTHS OR YEARS. You may 
+> cancel your Dropbox Premium Account at anytime, and cancellation will be 
+> effective immediately. If you wish to cancel your Premium Account you may 
+> do so via your "Account" page. Should you elect to cancel your Premium 
+> Account, please note that you will not be issued a refund for the most 
+> recently (or any previously) charged monthly fees.
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_6120_24845094.1393515872689
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">A clarification: the reason for ToS:DR isn't <i>to expose<=
+/i>&nbsp;anybody at all. It's to inform users about their rights under the =
+terms of use agreements they're asked to agree to.&nbsp;<div><br></div><div=
+>"No refund" policies are legal as long as they're clearly and conspicuousl=
+y marked prior to purchase (and the law assumes, rightly or wrongly, that c=
+onsumers read the terms of use agreements prior to using a website, so are =
+informed about policies like this prior to purchase). Also, a "no refund" p=
+olicy like this one is very common for a prepaid, recurring service like Dr=
+opbox's: it's rare to find a similar service that <i>does</i>&nbsp;offer re=
+funds.&nbsp;</div><div><br></div><div>Let me explain why: let's say you're =
+a small business owner. You offer a service online where users can sign up =
+and pay for each month in advance, on a recurring basis. A user signs up at=
+ the end of January and pre-pays for February. On February 27, after nearly=
+ a full month of use, the user cancels his account and demands a refund. He=
+re's another example: let's say you're a small business owner. You offer a =
+service online where users can <i>either</i>&nbsp;have a free account that =
+comes with a monthly data cap, or they can have a paid account that has no =
+data cap. A user signs up for the paid service and pre-pays for February. B=
+y February 4, the user has transmitted more data than he would have been ab=
+le to with a free account. On February 5, the user cancels his account and =
+demands a refund, arguing that he hasn't used it for a full month and shoul=
+d be credited for the unused time...however, he has clearly gotten full use=
+ out of the paid service. Enough issues like these crop up, and businesses =
+simply adopt a "No refunds" policy.</div><div><br></div><div>Of course, som=
+e businesses do offer refunds on a discretionary basis. Not all do, though,=
+ and it doesn't make a business necessarily <i>bad</i>&nbsp;if it chooses n=
+ot to.</div><div><br></div><div>Hannah</div><div><br><br>On Wednesday, Febr=
+uary 26, 2014 5:53:23 PM UTC-8, mark....@sjsu.edu wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #cc=
+c solid;padding-left: 1ex;">Surprised Dropbox isn't on the BAD list for hav=
+ing a NO REFUND policy on their accounts...this doesn;t seem fair--a perfec=
+t example of the reason for tour website (to expose these companies). Here'=
+s the fine print...<p><br>Dropbox Premium Accounts are prepaid and are non-=
+refundable. DROPBOX DOES NOT PROVIDE REFUNDS OR CREDITS FOR ANY PARTIAL MON=
+THS OR YEARS. You may cancel your Dropbox Premium Account at anytime, and c=
+ancellation will be effective immediately. If you wish to cancel your Premi=
+um Account you may do so via your "Account" page. Should you elect to cance=
+l your Premium Account, please note that you will not be issued a refund fo=
+r the most recently (or any previously) charged monthly fees.</p></blockquo=
+te></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_6120_24845094.1393515872689--

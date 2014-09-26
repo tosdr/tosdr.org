@@ -1,0 +1,172 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBOMC5SFQKGQEXYLJV3Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 957B2161735
+	for <anything@michielbdejong.com>; Sat, 27 Apr 2013 00:35:41 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 90D3C116305
+	for <anything@michielbdejong.com>; Sat, 27 Apr 2013 00:35:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yMP0AF23a+UN for <anything@michielbdejong.com>;
+	Sat, 27 Apr 2013 00:35:40 +0200 (CEST)
+Received: from mail-vb0-x238.google.com (mail-vb0-x238.google.com [IPv6:2607:f8b0:400c:c02::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9CF08116322
+	for <michiel@michielbdejong.com>; Sat, 27 Apr 2013 00:35:39 +0200 (CEST)
+Received: by mail-vb0-f56.google.com with SMTP id e13sf172523vbg.21
+        for <michiel@michielbdejong.com>; Fri, 26 Apr 2013 15:35:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ODw+JfJIeM63Nutc1r9gywD8J9VpjulD1xLd7wx36Hs=;
+        b=mmkoZQKlgPOuNr4rKRIZPCW+N/1Iuj77dy8BPlOV0HQ8aoypK6cCvRB/3AHaCIV9oj
+         7TNf5j/Mlynt/zVt6GQGhXdfVbE9KsKDE9nJ0J2LgjeQA+fcLZ5wRk8JbjUKzIYxiUYH
+         Y2oO17zKSIvEh7ycoH4b7oHQ0lytXxdhOxlHHa/Pu33idelxngqTtVDU9yKYJhGaB6gB
+         O6wz8Cabdl18HFhkfx3polOECMRg4hFV3lOAwiBLOydPj7XNUhT6/CvnJvpPdYtWgTYj
+         ECHKU/FsALtKxHaO9OLxNqY4GwTZum0xezHAiLive5vSpX3JhvmHLriRiJJBwBx6ifCv
+         7AEw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ODw+JfJIeM63Nutc1r9gywD8J9VpjulD1xLd7wx36Hs=;
+        b=ZMb8FgNKa92uEUUckLWWFgfG1LEo4xQLAH1/9jbYr9igoJyDROd9VwnAYcJBMDPMVo
+         b+4x7DpysRCBcIQRHNceOY1u1CmMOSvDEMfAkiqxTeZ3lXSBP7f8yhRhosw5UO3vxVRu
+         YIZ76QPNCRNPSY6b4ZI/q8kZszHENkZa3D3b3diOkEOkUQRItO+zhaaIs6C+hz2aJWoO
+         vgi4WovO6zqXR9jinJlcgSNm/CMGFq2y+j6xuIvUvBMsWqNbJSknC8c0c/Qw9hnVsR2m
+         92z5Q6KWm6hV1bL6TwGQED5DNIcyC1BELoSEp3GmH0jq748LAY7DiVTcheN+zjMMzrdL
+         qeoQ==
+X-Received: by 10.49.129.233 with SMTP id nz9mr1105427qeb.10.1367015738487;
+        Fri, 26 Apr 2013 15:35:38 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.78 with SMTP id 14ls891785qec.10.gmail; Fri, 26 Apr 2013
+ 15:35:37 -0700 (PDT)
+X-Received: by 10.49.37.39 with SMTP id v7mr4091605qej.27.1367015737871;
+        Fri, 26 Apr 2013 15:35:37 -0700 (PDT)
+Date: Fri, 26 Apr 2013 15:35:37 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <329d6202-b163-45ea-921e-981166af3735@googlegroups.com>
+Subject: [tosdr:1802] JAGEX [info] The in-game value of virtual currency may
+ change at any time.
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1785_30648857.1367015737532"
+
+------=_Part_1785_30648857.1367015737532
+Content-Type: text/plain; charset=ISO-8859-1
+
+Applies to http://jagex.com http://runescape.com/ http://waroflegends.com 
+http://www.transformersuniverse.com/ http://www.funorb.com/
+
+You can only use virtual currency to acquire those Items which we decide in 
+> our discretion to offer in return for virtual currency. We do not provide 
+> any cash or refunds for virtual currency (except as required by law) and 
+> virtual currency does not have any real world value. Virtual currency and 
+> Items are for your personal use only. You must not sell or transfer them or 
+> make them available to anyone else or attempt to do so, or encourage anyone 
+> else to do any of these things. Virtual currency and Items have no monetary 
+> value. Virtual currency and Items can never be redeemed for real world 
+> money, goods or any other item of monetary value. We may impose additional 
+> restrictions concerning the acquisition or redemption of virtual currency 
+> and Items. For example we may cap the amount of virtual currency which can 
+> be acquired or held or redeemed in any particular period or we may impose 
+> restrictions based on your country of residence. Certain Items may also 
+> only be available to certain persons, such as those who have separately 
+> acquired a subscription.
+>
+>  
+>
+> From <http://www.jagex.com/g=runescape/terms/terms.ws> 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1785_30648857.1367015737532
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>Applies to http://jagex.com http://runescape.com/ http://waroflegends.=
+com http://www.transformersuniverse.com/ http://www.funorb.com/</div><div><=
+br></div><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8=
+ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-l=
+eft-style: solid; padding-left: 1ex;"><p style=3D"margin:0in;margin-left:.3=
+75in;font-family:Calibri;font-size:11.0pt">You
+can only use virtual currency to acquire those Items which we decide in our
+discretion to offer in return for virtual currency. We do not provide any c=
+ash
+or refunds for virtual currency (except as required by law) and virtual
+currency does not have any real world value. Virtual currency and Items are=
+ for
+your personal use only. You must not sell or transfer them or make them
+available to anyone else or attempt to do so, or encourage anyone else to d=
+o
+any of these things. Virtual currency and Items have no monetary value. Vir=
+tual
+currency and Items can never be redeemed for real world money, goods or any
+other item of monetary value. We may impose additional restrictions concern=
+ing
+the acquisition or redemption of virtual currency and Items. For example we=
+ may
+cap the amount of virtual currency which can be acquired or held or redeeme=
+d in
+any particular period or we may impose restrictions based on your country o=
+f
+residence. Certain Items may also only be available to certain persons, suc=
+h as
+those who have separately acquired a subscription.</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.=
+0pt" lang=3D"en-CA">&nbsp;</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:9.0=
+pt;
+color:#595959">From &lt;<a href=3D"http://www.jagex.com/g=3Drunescape/terms=
+/terms.ws">http://www.jagex.com/g=3Drunescape/terms/terms.ws</a>&gt;&nbsp;<=
+/p></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1785_30648857.1367015737532--

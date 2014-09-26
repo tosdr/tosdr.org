@@ -1,0 +1,174 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBZ5O76HQKGQEFWFZTJA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A900F16174A
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 18:48:45 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A4BCC142266
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 18:48:45 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id w6njLSeZHWQl for <anything@michielbdejong.com>;
+	Mon,  5 Aug 2013 18:48:44 +0200 (CEST)
+Received: from mail-yh0-x23a.google.com (mail-yh0-x23a.google.com [IPv6:2607:f8b0:4002:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D54D6142AD6
+	for <michiel@michielbdejong.com>; Mon,  5 Aug 2013 18:48:40 +0200 (CEST)
+Received: by mail-yh0-f58.google.com with SMTP id a41sf1195716yho.23
+        for <michiel@michielbdejong.com>; Mon, 05 Aug 2013 09:48:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=+TKB7xh/W+R+Fdo3Rb1fCfra709zXB3ntB2UBs5TJdo=;
+        b=oEmxVAo7szfFrTxM0I/fO2yMV7H8712nI/JXh+E+P09Pu+kghrKQNv/Lu+UnT2CAUx
+         GVpyOenXkldgEfJ2YFyIbqg70eMQbwFlNNYhXHlk+VlGSbaL5i//em14vTZA0cZoCYoq
+         WKIJ8dyoRcgO0IJMTSbJpoVMXqGWJpB5IaxP+PDhP5DqxEJ9cE+sIzg3u6Oh8zsx1uOG
+         IqpJDIm0VYj1SJQsq65p/MC5HhQLRAX1UDz/SIdAnDOZqAnPTOsqZNjNSxQKn5P8Ej+b
+         NJ+XNh9FyRx9Tn/sXC5aMeK1XEd85hgH9gyuZBU/dWmfj7hpynNuix9g1wvjOLKWkKNf
+         CJWg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=+TKB7xh/W+R+Fdo3Rb1fCfra709zXB3ntB2UBs5TJdo=;
+        b=xm9vz+Q4HDp+4Xq4ejOtMq36a7yDF5hYemxeKH8M1pjhzgTCPAwisDQGp0xGHJTxmu
+         2+4r1nPGyhBDpwckIv4K7qnDhhzb+P/Q4NeVxrpsLB4Q5isMdeAVxim8PnuVNwEYNgpR
+         +/FZZWD/ifv+/3zKmMWVo+SC4F4efGKF424KWzpNjK5RVocYguf/p72x9iSWEZSejXkk
+         kG4XxtANMBkgSYVt0OQw99jerM183LZTK+UlIXTV/IlhdPAmmax7GGFNI1OJs42uIsq8
+         T6U8W2ZciMMoY3ixHyECZWUd/Tjoqwf+Zur8Q+UY7t2i/qGwud4KVIsJ2sza5ASa6XVn
+         mMlw==
+X-Received: by 10.182.114.228 with SMTP id jj4mr25072obb.8.1375721319652;
+        Mon, 05 Aug 2013 09:48:39 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.73.228 with SMTP id o4ls266507obv.64.gmail; Mon, 05 Aug
+ 2013 09:48:39 -0700 (PDT)
+X-Received: by 10.182.114.201 with SMTP id ji9mr25029obb.25.1375721319241;
+        Mon, 05 Aug 2013 09:48:39 -0700 (PDT)
+Date: Mon, 5 Aug 2013 09:48:38 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <45c4a6e1-85e1-41ad-a711-94d1f3faa07a@googlegroups.com>
+In-Reply-To: <730c74c1-d178-4121-b818-27944b162f96@googlegroups.com>
+References: <730c74c1-d178-4121-b818-27944b162f96@googlegroups.com>
+Subject: [tosdr:2598] Re: Stack Exchanges stores your information until you
+ request it be deleted
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_276_13880233.1375721318995"
+
+------=_Part_276_13880233.1375721318995
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> Please note that some information may remain in our records even after you 
+> request deletion of your information as permitted by the Safe Harbor 
+> Principles.
+
+
+So, I'm amending this point's summary:
+
+Summary: Still, even after you ask Stack Exchange to delete your 
+information, that information might remain in their records based on the 
+Safe Harbor Principles, which comply with EU and Swiss privacy 
+requirements. 
+
+On Monday, August 5, 2013 11:44:06 AM UTC-5, Ian McGowan wrote:
+>
+> All such electronic information is stored on restricted database servers, 
+>> and is generally kept until such time as you may ask us to edit or delete 
+>> it, as described below. 
+>
+>
+> http://stackexchange.com/legal/privacy-policy
+>
+> Title: Stack Exchanges stores your information until you request it be 
+> deleted
+>
+> Topic: personal-data
+>
+> Summary: Stack Exchange keeps your information indefinitely unless that 
+> you request it be deleted.
+>
+> Score: 80 (mediocre)
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_276_13880233.1375721318995
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(68, 68, 68); font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line=
+-height: 19px; background-color: rgb(253, 253, 253);">Please note that some=
+ information may remain in our records even after you request deletion of y=
+our information as permitted by the Safe Harbor Principles.</span></blockqu=
+ote><div><br></div><div>So, I'm amending this point's summary:</div><div><b=
+r></div><div>Summary: Still, even after you ask Stack Exchange to delete yo=
+ur information, that information might remain in their records based on the=
+ Safe Harbor Principles, which comply with EU and Swiss privacy requirement=
+s.&nbsp;</div><br>On Monday, August 5, 2013 11:44:06 AM UTC-5, Ian McGowan =
+wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8=
+ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquote class=3D"gma=
+il_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-le=
+ft-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><span s=
+tyle=3D"color:rgb(68,68,68);font-family:'Helvetica Neue',Helvetica,Arial,sa=
+ns-serif;font-size:14px;line-height:19px;background-color:rgb(253,253,253)"=
+>All such electronic information is stored on restricted database servers, =
+and is generally kept until such time as you may ask us to edit or delete i=
+t, as described below.&nbsp;</span></blockquote><div><br></div><div><a href=
+=3D"http://stackexchange.com/legal/privacy-policy" target=3D"_blank">http:/=
+/stackexchange.com/<wbr>legal/privacy-policy</a></div><div><br></div><div>T=
+itle:&nbsp;Stack Exchanges stores your information until you request it be =
+deleted</div><div><br></div><div>Topic: personal-data</div><div><br></div><=
+div>Summary: Stack Exchange keeps your information indefinitely unless that=
+ you request it be deleted.</div><div><br></div><div>Score: 80 (mediocre)</=
+div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_276_13880233.1375721318995--

@@ -1,0 +1,193 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBQHHRKIAKGQEDOWLCLY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 9D7DC161747
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 22:53:23 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 97C3214225A
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 22:53:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id D2DOoK-yzmMA for <anything@michielbdejong.com>;
+	Wed,  7 Aug 2013 22:53:22 +0200 (CEST)
+Received: from mail-ob0-x23a.google.com (mail-ob0-x23a.google.com [IPv6:2607:f8b0:4003:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id BDCEB1434FD
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 22:53:21 +0200 (CEST)
+Received: by mail-ob0-f186.google.com with SMTP id er7sf626056obc.23
+        for <anything@michielbdejong.com>; Wed, 07 Aug 2013 13:53:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=nisG01VHILFj2sxs8UUcnk12tGuvo3hbvPnP2jO4rrI=;
+        b=sXfN5KFuvXor3/rvCBopO08UVhafhzX8KvI5OzqdN8XrwRghn8JCDgXi4cKEw0eqt6
+         Iga8s1E7It2+//Le/1DntZpWkxtauoUtETGP0XB9LKc1aoTU6rEEx0zyut5osbFRnsNX
+         XZuSl9F8KVzmYz1LY1iywoDaRp6baO1peBi6PwSaZe291E5ks7bW7HMNAX272gl3FuVl
+         MEWnfeLVbGV1jmlAKepbHY73gXWfZJBoxz/Vj+NTPRq7luluBcO1Bgf+1CNSgZeJpB3m
+         OCcCEoL06Kkaerxij+32UI7tbnunPl6sQXwqdPi61wU5obhQ9fOUtHV8LVz0CE5rOoDX
+         p0iw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=nisG01VHILFj2sxs8UUcnk12tGuvo3hbvPnP2jO4rrI=;
+        b=uZ4Zokk8wA4eEoduY5FpEKK55G8glRkqbQyfk+QtMAIVRPkzPcxd7F01Z6oeXWgd1n
+         7/TCZyFBvjQG522IacWMfFT+VA3AnCUiJJ2B67mzQuvQjUdpBhf8je3J58zoSISrbhzF
+         zeldLPgDDQTbRVlX3g6xbEi1YHn42ThvTLApf2osZRyxBizChXbzFXW6mbiTfuyLQ4Us
+         DTdSBiMq82Ln7kTasediHctch2SKxwi0TvQFc15nWVUrwi7ew32ZE+MwNO++iqKZqARP
+         lszRMeQRu4MDVvuZl3kNxkzdST52dshypwJwMcCtGqijSPzunZsuakljjAXTAXnU6F00
+         ZpOA==
+X-Received: by 10.49.35.225 with SMTP id l1mr159991qej.1.1375908800326;
+        Wed, 07 Aug 2013 13:53:20 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.35.10 with SMTP id d10ls866492qej.19.gmail; Wed, 07 Aug
+ 2013 13:53:20 -0700 (PDT)
+X-Received: by 10.49.95.233 with SMTP id dn9mr155733qeb.35.1375908800007;
+        Wed, 07 Aug 2013 13:53:20 -0700 (PDT)
+Date: Wed, 7 Aug 2013 13:53:19 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <abb63a3f-d19c-4b54-ac8f-133b20ccf535@googlegroups.com>
+In-Reply-To: <f914382c-61eb-43e8-ac60-6c5ed81b2dc0@googlegroups.com>
+References: <f914382c-61eb-43e8-ac60-6c5ed81b2dc0@googlegroups.com>
+Subject: [tosdr:2618] Re: [info] Choice of court is King County, WA
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_333_26288956.1375908799659"
+
+------=_Part_333_26288956.1375908799659
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: Court of law is King County, WA
+
+Topic: jurisdiction
+
+Summary: If you live in the US, the terms are governed under the=20
+jurisdiction of King County, WA.
+
+Score: 0
+
+On Sunday, May 12, 2013 8:44:43 AM UTC-5, Robin Monks wrote:
+>
+> The laws of the state or province where you live govern the interpretatio=
+n=20
+>> of this Contract, claims for breach of it, and all other claims (includi=
+ng=20
+>> claims for breach of contract, breach of warranty, consumer protection,=
+=20
+>> unfair competition, and tort claims), regardless of conflict of law=20
+>> principles. If you live in the United States, you and we irrevocably=20
+>> consent to the exclusive jurisdiction and venue of the state or federal=
+=20
+>> courts in King County, Washington, USA, for all disputes arising out of =
+or=20
+>> relating to the Microsoft Store, the Services, this Contract, or any=20
+>> product or service offered, that are heard in court (not arbitration and=
+=20
+>> not small claims court). =93State=94 means a State, the District of Colu=
+mbia,=20
+>> and any other United States territory or possession. =93The United State=
+s of=20
+>> America=94 includes all of them.
+>>
+>> =20
+>>
+>> From <
+>> http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSaleP=
+age/ThemeID.27659600/
+>> >=20
+>>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_333_26288956.1375908799659
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: Court of law is King County, WA<div><br></div><div>Topic: jurisdicti=
+on</div><div><br></div><div>Summary: If you live in the US, the terms are g=
+overned under the jurisdiction of King County, WA.</div><div><br></div><div=
+>Score: 0<br><br>On Sunday, May 12, 2013 8:44:43 AM UTC-5, Robin Monks wrot=
+e:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;b=
+order-left: 1px #ccc solid;padding-left: 1ex;"><blockquote class=3D"gmail_q=
+uote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-c=
+olor:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><p style=3D=
+"margin:0in;font-family:Calibri;font-size:11.0pt">The laws of the
+state or province where you live govern the interpretation of this Contract=
+,
+claims for breach of it, and all other claims (including claims for breach =
+of
+contract, breach of warranty, consumer protection, unfair competition, and =
+tort
+claims), regardless of conflict of law principles. If you live in the Unite=
+d
+States, you and we irrevocably consent to the exclusive jurisdiction and ve=
+nue
+of the state or federal courts in King County, Washington, USA, for all
+disputes arising out of or relating to the Microsoft Store, the Services, t=
+his
+Contract, or any product or service offered, that are heard in court (not
+arbitration and not small claims court). =93State=94 means a State, the Dis=
+trict of
+Columbia, and any other United States territory or possession. =93The Unite=
+d
+States of America=94 includes all of them.</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsO=
+fUseAndSalePage/ThemeID.27659600/" target=3D"_blank">http://www.microsoftst=
+ore.<wbr>com/store/msca/en_CA/<wbr>DisplayTermsOfUseAndSalePage/<wbr>ThemeI=
+D.27659600/</a>&gt;&nbsp;</p></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_333_26288956.1375908799659--

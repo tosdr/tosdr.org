@@ -1,0 +1,140 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB4OSS2QAKGQEJSRQX5Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 8145640F80
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 13:26:43 +0200 (CEST)
+Received: from mfilter40-d.gandi.net (mfilter40-d.gandi.net [217.70.178.171])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7D05811601F
+	for <anything@michielbdejong.com>; Tue,  2 Sep 2014 13:26:43 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter40-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter40-d.gandi.net (mfilter40-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id zN9LrYEBqKbD for <anything@michielbdejong.com>;
+	Tue,  2 Sep 2014 13:26:42 +0200 (CEST)
+Received: from mail-lb0-x23e.google.com (mail-lb0-x23e.google.com [IPv6:2a00:1450:4010:c04::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0CC60116373
+	for <michiel@michielbdejong.com>; Tue,  2 Sep 2014 13:26:42 +0200 (CEST)
+Received: by mail-lb0-f190.google.com with SMTP id u10sf688477lbd.17
+        for <michiel@michielbdejong.com>; Tue, 02 Sep 2014 04:26:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :organization:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=z147E72v8W9sEvuKGBNyPUsukSFi5lb9grftm1NNHfo=;
+        b=UxTwxVN3oRHdEKcCWLJwr4oaQsBhTeOi8zWclmKkC0Pjqd08AyIVGSP/rvQM9lUcxI
+         F9a/JXqt1zvSSpJ8+bMaWZLEED3DpQJViWGOx3lUouC1VJPV9cMcv29Vjsx1VvbQ7+oz
+         uAGcM+Vvo+8sVUtWgJbe5JETIIp/jSPzCUuh/ArB1JGuaigb1T9XkYmBblrrbqPNNuBg
+         sK5Y14xb/VxMP6MEfIGDeyMb1rks7HKpnCJxyoI0m0VHeC7ukVo2UrSwkYFi09iCxMvj
+         7ZrR4Otzo9JM14tzgRkfeplGY0d8g2esDsvK7Up9stOclED9A20zr8KsP9cOZqT4y0AG
+         Y3HQ==
+X-Received: by 10.180.108.111 with SMTP id hj15mr97629wib.5.1409657201566;
+        Tue, 02 Sep 2014 04:26:41 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.95.35 with SMTP id dh3ls527466wib.40.gmail; Tue, 02 Sep
+ 2014 04:26:41 -0700 (PDT)
+X-Received: by 10.180.73.79 with SMTP id j15mr607916wiv.4.1409657201119;
+        Tue, 02 Sep 2014 04:26:41 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d7si629403wiw.0.2014.09.02.04.26.41
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 02 Sep 2014 04:26:41 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id CFFC263B41B
+	for <tosdr@googlegroups.com>; Tue,  2 Sep 2014 13:26:40 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id mnvCUkiEr8aP for <tosdr@googlegroups.com>;
+	Tue,  2 Sep 2014 13:26:38 +0200 (CEST)
+Received: from localhost (p5DCA3D23.dip0.t-ipconnect.de [93.202.61.35])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 87EC963A5EA
+	for <tosdr@googlegroups.com>; Tue,  2 Sep 2014 13:26:36 +0200 (CEST)
+Date: Tue, 2 Sep 2014 12:12:15 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3161] Kik Messenger
+Message-ID: <20140902101215.GD1077@xps>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <CAANoxbC=qvRmHH7ptwmH2vUoRn+WtCCyupX1=7NMwJhuQPv=Gg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="wULyF7TL5taEdwHz"
+Content-Disposition: inline
+In-Reply-To: <CAANoxbC=qvRmHH7ptwmH2vUoRn+WtCCyupX1=7NMwJhuQPv=Gg@mail.gmail.com>
+Organization: Terms of Service, =?utf-8?B?RGlkbuKAmQ==?= =?utf-8?Q?t?= Read
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--wULyF7TL5taEdwHz
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-04-10 Thu 09:09, Lauren Lancaster <l.lancaster25@gmail.com>:
+> Hi Terms of Service; Didn't Read,
+>=20
+> I found some information on *Kik Messenger'*s Terms and Conditions at
+> http://kik.com/legal/
+> Here it is: *Kik Messenger (bad) has your permission to disclose your
+> personal information to a third party without your consent.*
+> This shortened version of their terms covers 4.5 and 4.6 in Disclosures &
+> Transfers in their Terms and Conditions under Privacy.
+> I think this is bad because you don't know where and to whom your
+> information could be handed away to and this places users at risk.
+>=20
+> Thanks!
+
+Hello Lauren,
+
+Could you maybe give us a quote from their terms? Thank you!
+
+Best,
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--wULyF7TL5taEdwHz
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUBZf/AAoJEI0CLJmz17eV4mcIAMXKGp/aB1tB7uCBJXUoaD0y
+LT5jp/lRkKygbtHiKSTCIDy7l+DWp7ms0oTpvvqgFD7TkRQwNvA17uTPNbQmKfjc
+ag/KL3HuaHTPn56SVQLCQUP7Xpo+/9IVbJ5GjEOUxtLMR0xrdD6kJe3EkOXWul5k
+EhHeiZgf9TzJTy/wk1xkavPXwbmE2VD/YoZtjEqUf/F2o/jS8T668L3FXs9N0I8b
+7vYHqTL1EHK0SGzhP8/TvKp4vEVoHngW2CaUXxKdAHVSIMxl+5e2LCZV1pa3cFe1
+fm04sBkrILE//3xaGN9weDXw+CnuFrBxUqBw6jEwer9TOgyl+jotUv/ExEuNoBE=
+=ew/a
+-----END PGP SIGNATURE-----
+
+--wULyF7TL5taEdwHz--

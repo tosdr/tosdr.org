@@ -1,0 +1,137 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBTVRQSIAKGQEO3C6GKQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 14EC2161744
+	for <anything@michielbdejong.com>; Tue,  6 Aug 2013 17:40:01 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 11A5F178DEE
+	for <anything@michielbdejong.com>; Tue,  6 Aug 2013 17:40:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id ZjRLT1wVzpPh for <anything@michielbdejong.com>;
+	Tue,  6 Aug 2013 17:39:59 +0200 (CEST)
+Received: from mail-gh0-x238.google.com (mail-gh0-x238.google.com [IPv6:2607:f8b0:4002:c05::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 72ACB178E96
+	for <michiel@michielbdejong.com>; Tue,  6 Aug 2013 17:39:59 +0200 (CEST)
+Received: by mail-gh0-f184.google.com with SMTP id f11sf167382ghb.11
+        for <michiel@michielbdejong.com>; Tue, 06 Aug 2013 08:39:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=SIbS2V8L/x9vju5orAnqQW7DwaRR4s4vaBs9DmfOB38=;
+        b=maTaNKQzz8y2b4sGLAEOPHig0amgRJJVcci0xWMJdEmSiQ7iyynsEabCA6C2OQn4Yj
+         IHYzBFmNrPPfQnvLo1Qr9GsUuWHcvOnz2TW1rvgWfwc8x+a1jNZFZlg+9lz5w2BGe7iH
+         rQrfHsE/yizZ0ykXRQTG+t+UfJnN1qFBoKAu/k6LVfpYiUJW0sJ3HY0Mgwlbax7rOwjk
+         raf4SyrisLyzkX76WlPUiPWs6kNh4IycWfgGpEtAvWhpjQ30iPzWtVttxYkScSJpoWl0
+         mRh6Q8H8IiG2KI+rELaXn4ny9DFWJTK1sQMSbWLau1wOIyr1cXu37sjX4YSP0yItlUjV
+         1kAQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=SIbS2V8L/x9vju5orAnqQW7DwaRR4s4vaBs9DmfOB38=;
+        b=swfaHiXASBQMI8WvXnYGtzlieMHcfIJ4P5xZV8hL01jHWVUVV/O7/fc9DJrJd9y5rm
+         sL54Qa6mG6E4jZYqllBe1gAC8GrkXdHcpZznt/NGth3DGzSli3tr0Ht9i+YpzlDhFTv/
+         rK8hJVaGsDWzJfKPa3/+/wNHO+bOPLqUAv+vN3NriVNydtoqqWACELE54JU+uSf6MN93
+         rrLx1Az6/Wwxwg9+1b3NNcyzIOk5NlE+g6ziSyWVr+rO3EQzii7en5tpmyonxDx0t4rx
+         oXZlOCaOcOnewexH02pUHy42xBMpUDnaSc33cOV2FUW9K89PIJjXxvYb3o5dKNy7gkt8
+         oXiA==
+X-Received: by 10.49.95.233 with SMTP id dn9mr54711qeb.35.1375803598306;
+        Tue, 06 Aug 2013 08:39:58 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.108.7 with SMTP id hg7ls247106qeb.95.gmail; Tue, 06 Aug
+ 2013 08:39:58 -0700 (PDT)
+X-Received: by 10.49.41.101 with SMTP id e5mr57083qel.7.1375803598023;
+        Tue, 06 Aug 2013 08:39:58 -0700 (PDT)
+Date: Tue, 6 Aug 2013 08:39:57 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <be4c8206-3e10-443a-bd1c-16c6db711478@googlegroups.com>
+Subject: [tosdr:2607] Flattr allows third-party cookies
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3463_26537830.1375803597721"
+
+------=_Part_3463_26537830.1375803597721
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> Some of our business partners, like any advertisers, may use cookies on 
+> the Flattr Site. We have no access to, or control over, these cookies.
+
+
+http://flattr.com/privacy
+
+Title: Flattr allows third-party cookies
+
+Topic: third-party
+
+Summary: Flattr allows their advertisers to use cookies on the Flattr site. 
+This allows these third parties to track you and collect information on 
+your browsing habits.
+
+Score: 80 (mediocre) 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_3463_26537830.1375803597721
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(51, 51, 51); font-fa=
+mily: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;">Some of our busi=
+ness partners, like any advertisers, may use cookies on the Flattr Site. We=
+ have no access to, or control over, these cookies.</span></blockquote><div=
+><br></div><div><a href=3D"http://flattr.com/privacy">http://flattr.com/pri=
+vacy</a></div><div><br></div><div>Title: Flattr allows third-party cookies<=
+/div><div><br></div><div>Topic: third-party</div><div><br></div><div>Summar=
+y: Flattr allows their advertisers to use cookies on the Flattr site. This =
+allows these third parties to track you and collect information on your bro=
+wsing habits.</div><div><br></div><div>Score: 80 (mediocre)&nbsp;</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_3463_26537830.1375803597721--

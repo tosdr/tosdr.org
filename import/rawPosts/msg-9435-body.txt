@@ -1,0 +1,218 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBTEVXWIQKGQE6IICL6Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 719C4161743
+	for <anything@michielbdejong.com>; Tue, 10 Sep 2013 18:37:39 +0200 (CEST)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6850E142218
+	for <anything@michielbdejong.com>; Tue, 10 Sep 2013 18:37:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nDIW8-72Tr3r for <anything@michielbdejong.com>;
+	Tue, 10 Sep 2013 18:37:37 +0200 (CEST)
+Received: from mail-wi0-x23a.google.com (mail-wi0-x23a.google.com [IPv6:2a00:1450:400c:c05::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6FCE714209D
+	for <anything@michielbdejong.com>; Tue, 10 Sep 2013 18:37:34 +0200 (CEST)
+Received: by mail-wi0-f186.google.com with SMTP id hj3sf105171wib.13
+        for <anything@michielbdejong.com>; Tue, 10 Sep 2013 09:37:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:mime-version:subject:date:in-reply-to:to:references:message-id
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=1dlenh0TKJC244Dx6zKISDXqT1JHAiaqDkv2OaSiNGk=;
+        b=vJ8+v714LoaMjTFqnmFplnu4HOQjkNycTMW7h+DGdA+5C9JWbxcbLA+Piva8bksOW8
+         FFOiiDa3x7AJmvAb5/bu8EHaEd3H4KqBSB3GhOPGRgRyOLqQujGgMouOiw7BRW1vnBn6
+         +pAg/gBaVGkqnC5xjMUfgOw7Z+mMZtRABOiFawt6OYie0d8OaT3r8qMctY04FADtN4Ud
+         n6TjyGQIf1Xz0OASqdhKA59JO0uBpC4+H6p97eJgr50RUOEijvBkUzKOY0QCoVSW8JPx
+         kci5fEfmpFKapTGGVyyv8li8ZF06IQUxy6Zmm3ZnBfjWe9ABak/cxv0WV5zGdiRgoTBj
+         ErCg==
+X-Received: by 10.180.92.40 with SMTP id cj8mr454685wib.0.1378831053305;
+        Tue, 10 Sep 2013 09:37:33 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.101.2 with SMTP id fc2ls969357wib.16.canary; Tue, 10 Sep
+ 2013 09:37:32 -0700 (PDT)
+X-Received: by 10.204.111.131 with SMTP id s3mr1095025bkp.4.1378831052704;
+        Tue, 10 Sep 2013 09:37:32 -0700 (PDT)
+Received: from mail-qe0-x235.google.com (mail-qe0-x235.google.com [2607:f8b0:400d:c02::235])
+        by gmr-mx.google.com with ESMTPS id jt16si1435215bkb.0.1969.12.31.16.00.00
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 10 Sep 2013 09:37:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c02::235 as permitted sender) client-ip=2607:f8b0:400d:c02::235;
+Received: by mail-qe0-x235.google.com with SMTP id jy17so2783893qeb.12
+        for <tosdr@googlegroups.com>; Tue, 10 Sep 2013 09:37:32 -0700 (PDT)
+X-Received: by 10.49.104.5 with SMTP id ga5mr1122894qeb.53.1378831052323;
+        Tue, 10 Sep 2013 09:37:32 -0700 (PDT)
+Received: from [192.168.1.104] ([99.144.112.246])
+        by mx.google.com with ESMTPSA id f14sm30567002qej.6.1969.12.31.16.00.00
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 10 Sep 2013 09:37:31 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2710] ToSBack: Policy Changes
+Date: Tue, 10 Sep 2013 11:37:27 -0500
+In-Reply-To: <522e9fb09406_4d1f484801a71829@dragon.mail>
+To: tosdr@googlegroups.com
+References: <522e9fb09406_4d1f484801a71829@dragon.mail>
+Message-Id: <EAC4FC78-89EC-4A17-A468-55AEC7BFD02A@gmail.com>
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c02::235
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) d=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=Apple-Mail-4--1055594445
+
+--Apple-Mail-4--1055594445
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=ISO-8859-1
+
+Apparently, now whenever you launch your Microsoft account (aka Windows Liv=
+e and Microsoft Passport) for the first time, you're then logged on wheneve=
+r you sign into the app whenever you're signed into Windows with your Micro=
+soft account on that same device. I don't like being signed into multiple a=
+pps as a result of signing into one. I feel that leaves you open to all kin=
+ds of third-party tracking and whatnot.
+
+There's also a section on using Skype on your mobile device and how the not=
+ification services may be provided by a third party. This third party "may =
+receive information about the caller, sender of the message and the content=
+ of the message as part of providing the service and may use the informatio=
+n in accordance with the terms and conditions and privacy policy for the se=
+rvice provider."
+
+This is bad. Why does the notification service even have the possibility to=
+ receive information about the content of any message sent to me? Scary.
+
+All of the other changes are formatting.
+
+-Ian
+
+
+On Sep 9, 2013, at 11:27 PM, ToSBack wrote:
+
+> skype.com: Terms of Use
+> skype.com: Privacy Policy
+> These were changed in last night's crawl. Please have a look at the commi=
+t at https://github.com/tosdr/tosback2/commit/a9014e247d76e0651e57f5762faad=
+1d654a8a75b to see the differences!
+>=20
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+--Apple-Mail-4--1055594445
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=ISO-8859-1
+
+<html><head></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode:=
+ space; -webkit-line-break: after-white-space; ">Apparently, now whenever y=
+ou launch your Microsoft account (aka Windows Live and Microsoft Passport) =
+for the first time, you're then logged on whenever you sign into the app wh=
+enever you're signed into Windows with your Microsoft account on that same =
+device. I don't like being signed into multiple apps as a result of signing=
+ into one. I feel that leaves you open to all kinds of third-party tracking=
+ and whatnot.<div><br></div><div>There's also a section on using Skype on y=
+our mobile device and how the notification services may be provided by a th=
+ird party. This third party "<span style=3D"color: rgb(51, 51, 51); font-fa=
+mily: Consolas, 'Liberation Mono', Courier, monospace; font-size: 13px; fon=
+t-style: normal; font-variant: normal; font-weight: normal; letter-spacing:=
+ normal; line-height: 18px; orphans: auto; text-align: start; text-indent: =
+0px; text-transform: none; white-space: nowrap; widows: auto; word-spacing:=
+ 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 238, 199);=
+ display: inline !important; float: none;">may&nbsp;receive&nbsp;informatio=
+n&nbsp;about&nbsp;the&nbsp;caller,&nbsp;sender&nbsp;of&nbsp;the&nbsp;messag=
+e&nbsp;and&nbsp;the&nbsp;content&nbsp;of&nbsp;the&nbsp;message&nbsp;as&nbsp=
+;part&nbsp;of&nbsp;providing&nbsp;the&nbsp;service&nbsp;and&nbsp;may&nbsp;u=
+se&nbsp;the&nbsp;information&nbsp;in&nbsp;accordance&nbsp;with&nbsp;the&nbs=
+p;terms&nbsp;and&nbsp;conditions&nbsp;and&nbsp;privacy&nbsp;policy&nbsp;for=
+&nbsp;the&nbsp;service&nbsp;provider."</span></div><div><font class=3D"Appl=
+e-style-span" color=3D"#333333" face=3D"Consolas, 'Liberation Mono', Courie=
+r, monospace"><span class=3D"Apple-style-span" style=3D"font-size: 13px; li=
+ne-height: 18px; white-space: nowrap;"><br></span></font></div><div><font c=
+lass=3D"Apple-style-span" color=3D"#333333" face=3D"Consolas, 'Liberation M=
+ono', Courier, monospace"><span class=3D"Apple-style-span" style=3D"font-si=
+ze: 13px; line-height: 18px; white-space: nowrap;">This is bad. Why does th=
+e notification service even have the possibility to receive information abo=
+ut the content of any message sent to me? Scary.</span></font></div><div><f=
+ont class=3D"Apple-style-span" color=3D"#333333" face=3D"Consolas, 'Liberat=
+ion Mono', Courier, monospace"><span class=3D"Apple-style-span" style=3D"fo=
+nt-size: 13px; line-height: 18px; white-space: nowrap;"><br></span></font><=
+/div><div><font class=3D"Apple-style-span" color=3D"#333333" face=3D"Consol=
+as, 'Liberation Mono', Courier, monospace"><span class=3D"Apple-style-span"=
+ style=3D"font-size: 13px; line-height: 18px; white-space: nowrap;">All of =
+the other changes are formatting.</span></font></div><div><font class=3D"Ap=
+ple-style-span" color=3D"#333333" face=3D"Consolas, 'Liberation Mono', Cour=
+ier, monospace"><span class=3D"Apple-style-span" style=3D"font-size: 13px; =
+line-height: 18px; white-space: nowrap;"><br></span></font></div><div><font=
+ class=3D"Apple-style-span" color=3D"#333333" face=3D"Consolas, 'Liberation=
+ Mono', Courier, monospace"><span class=3D"Apple-style-span" style=3D"font-=
+size: 13px; line-height: 18px; white-space: nowrap;">-Ian<br></span></font>=
+<div><br></div><div><br><div><div>On Sep 9, 2013, at 11:27 PM, ToSBack wrot=
+e:</div><br class=3D"Apple-interchange-newline"><blockquote type=3D"cite"><=
+div><a href=3D"http://skype.com">skype.com</a>: Terms of Use<br><a href=3D"=
+http://skype.com">skype.com</a>: Privacy Policy<br> These were changed in l=
+ast night's crawl. Please have a look at the commit at <a href=3D"https://g=
+ithub.com/tosdr/tosback2/commit/a9014e247d76e0651e57f5762faad1d654a8a75b">h=
+ttps://github.com/tosdr/tosback2/commit/a9014e247d76e0651e57f5762faad1d654a=
+8a75b</a> to see the differences!<br><br>-- <br><a href=3D"http://tosdr.org=
+">tosdr.org</a> | <a href=3D"http://twitter.com/tosdr">twitter.com/tosdr</a=
+> | <a href=3D"http://github.com/tosdr">github.com/tosdr</a><br>--- <br>You=
+ received this message because you are subscribed to the Google Groups "Ter=
+ms of Service; Didn't Read" group.<br>To unsubscribe from this group and st=
+op receiving emails from it, send an email to <a href=3D"mailto:tosdr+unsub=
+scribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>To post=
+ to this group, send email to <a href=3D"mailto:tosdr@googlegroups.com">tos=
+dr@googlegroups.com</a>.<br>Visit this group at <a href=3D"http://groups.go=
+ogle.com/group/tosdr">http://groups.google.com/group/tosdr</a>.<br>For more=
+ options, visit <a href=3D"https://groups.google.com/groups/opt_out">https:=
+//groups.google.com/groups/opt_out</a>.<br></div></blockquote></div><br></d=
+iv></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+--Apple-Mail-4--1055594445--
