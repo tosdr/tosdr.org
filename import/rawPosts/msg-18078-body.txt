@@ -1,0 +1,174 @@
+Return-Path: <tosdr+bncBD73Z4NJ44PRBCP62SMQKGQESBKI2PQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id A75E640F3B
+	for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A442D1164AA
+	for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:17 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id jymo22sAt-8J for <anything@michielbdejong.com>;
+	Fri, 28 Mar 2014 10:21:15 +0100 (CET)
+Received: from mail-wi0-x23e.google.com (mail-wi0-x23e.google.com [IPv6:2a00:1450:400c:c05::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8F2FB116481
+	for <anything@michielbdejong.com>; Fri, 28 Mar 2014 10:21:15 +0100 (CET)
+Received: by mail-wi0-f190.google.com with SMTP id z2sf29508wiv.7
+        for <anything@michielbdejong.com>; Fri, 28 Mar 2014 02:21:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=gFMcRZasvpM9x0lgAjUlk+x5LPsf3+a7DNa2MIp54eU=;
+        b=xviV7kTlu+CdnGtHiTDt/78Pbwyt+6DZ4fHAOwIOZn4raXaSXMe/ze9cGMl98EzBm/
+         Odm3PUxlNe7nAJ5glNlHwgviV5zsdMbz/cOwFOlhW1RUqkIqZ+B+ywzE1XXxkAwVyTnS
+         aZYTV7YBSVjirom45XunVbdlf1FofCH1tXdLzqqRFOXTYV7N/QbbMPXj5mVmyz8raiUr
+         HIu/S6hjt49gwo/ZaLXRloY0yWDmEO9O6+xa0CFDz8HSZXZqU8rdT9nRzWEkWSd5q6NQ
+         Z2WuwkycSa7r1/ALDlSXsuN0SqUnBahXRPSlcgmTApBHU9RH5EAEmoRngjYZIB4m0fWA
+         XWhg==
+X-Received: by 10.180.88.69 with SMTP id be5mr34478wib.3.1395998474480;
+        Fri, 28 Mar 2014 02:21:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.182.227 with SMTP id eh3ls60070wic.13.canary; Fri, 28 Mar
+ 2014 02:21:13 -0700 (PDT)
+X-Received: by 10.180.198.146 with SMTP id jc18mr4026094wic.4.1395998473588;
+        Fri, 28 Mar 2014 02:21:13 -0700 (PDT)
+Received: from mail-ee0-x242.google.com (mail-ee0-x242.google.com [2a00:1450:4013:c00::242])
+        by gmr-mx.google.com with ESMTPS id m49si470197eeu.0.2014.03.28.02.21.13
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 28 Mar 2014 02:21:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242 as permitted sender) client-ip=2a00:1450:4013:c00::242;
+Received: by mail-ee0-f66.google.com with SMTP id b57so1705783eek.9
+        for <tosdr@googlegroups.com>; Fri, 28 Mar 2014 02:21:13 -0700 (PDT)
+X-Received: by 10.14.206.137 with SMTP id l9mr8679256eeo.40.1395998473512;
+        Fri, 28 Mar 2014 02:21:13 -0700 (PDT)
+Received: from [192.168.0.46] (catv-142-232.tbwil.ch. [213.196.142.232])
+        by mx.google.com with ESMTPSA id e42sm10295723eev.32.2014.03.28.02.21.10
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 28 Mar 2014 02:21:11 -0700 (PDT)
+Message-ID: <53353F0B.4090904@gmail.com>
+Date: Fri, 28 Mar 2014 10:21:15 +0100
+From: Pascal Joller <pascal.joller@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: [tosdr:2975] Kilu.de Changes to TOS
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha1; boundary="------------ms020104090304070409090806"
+X-Original-Sender: pascal.joller@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of pascal.joller@gmail.com designates 2a00:1450:4013:c00::242
+ as permitted sender) smtp.mail=pascal.joller@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+This is a cryptographically signed message in MIME format.
+
+--------------ms020104090304070409090806
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+
+=A713 =C4nderung der Nutzungsbedingungen
+
+kilu.de beh=E4lt sich das Recht vor, =C4nderungen an den Nutzungsbedingun=
+gen=20
+vorzunehmen. kilu.de wird die Nutzer unverz=FCglich =FCber die =C4nderung=
+en=20
+informieren.
+
+- kilu, can change TOS at any time, but it will inform you imedeatly=20
+about it
+
+
+--------------ms020104090304070409090806
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIKTTCC
+BRowggQCoAMCAQICEG0Z6qcZT2ozIuYiMnqqcd4wDQYJKoZIhvcNAQEFBQAwga4xCzAJBgNV
+BAYTAlVTMQswCQYDVQQIEwJVVDEXMBUGA1UEBxMOU2FsdCBMYWtlIENpdHkxHjAcBgNVBAoT
+FVRoZSBVU0VSVFJVU1QgTmV0d29yazEhMB8GA1UECxMYaHR0cDovL3d3dy51c2VydHJ1c3Qu
+Y29tMTYwNAYDVQQDEy1VVE4tVVNFUkZpcnN0LUNsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+RW1haWwwHhcNMTEwNDI4MDAwMDAwWhcNMjAwNTMwMTA0ODM4WjCBkzELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UE
+ChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGlj
+YXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAJKEhFtLV5jUXi+LpOFAyKNTWF9mZfEyTvefMn1V0HhMVbdClOD5J3EHxcZppLkyxPFA
+GpDMJ1Zifxe1cWmu5SAb5MtjXmDKokH2auGj/7jfH0htZUOMKi4rYzh337EXrMLaggLW1DJq
+1GdvIBOPXDX65VSAr9hxCh03CgJQU2yVHakQFLSZlVkSMf8JotJM3FLb3uJAAVtIaN3FSrTg
+7SQfOq9xXwfjrL8UO7AlcWg99A/WF1hGFYE8aIuLgw9teiFX5jSw2zJ+40rhpVJyZCaRTqWS
+D//gsWD9Gm9oUZljjRqLpcxCm5t9ImPTqaD8zp6Q30QZ9FxbNboW86eb/8ECAwEAAaOCAUsw
+ggFHMB8GA1UdIwQYMBaAFImCZ33EnSZwAEu0UEh83j2uBG59MB0GA1UdDgQWBBR6E04AdFvG
+eGNkJ8Ev4qBbvHnFezAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADARBgNV
+HSAECjAIMAYGBFUdIAAwWAYDVR0fBFEwTzBNoEugSYZHaHR0cDovL2NybC51c2VydHJ1c3Qu
+Y29tL1VUTi1VU0VSRmlyc3QtQ2xpZW50QXV0aGVudGljYXRpb25hbmRFbWFpbC5jcmwwdAYI
+KwYBBQUHAQEEaDBmMD0GCCsGAQUFBzAChjFodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vVVRO
+QWRkVHJ1c3RDbGllbnRfQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2VydHJ1
+c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQCF1r54V1VtM39EUv5C1QaoAQOAivsNsv1Kv/av
+QUn1G1rF0q0bc24+6SZ85kyYwTAo38v7QjyhJT4KddbQPTmGZtGhm7VNm2+vKGwdr+XqdFqo
+2rHA8XV6L566k3nK/uKRHlZ0sviN0+BDchvtj/1gOSBH+4uvOmVIPJg9pSW/ve9g4EnlFsjr
+P0OD8ODuDcHTzTNfm9C9YGqzO/761Mk6PB/tm/+bSTO+Qik5g+4zaS6CnUVNqGnagBsePdIa
+XXxHmaWbCG0SmYbWXVcHG6cwvktJRLiQfsrReTjrtDP6oDpdJlieYVUYtCHVmdXgQ0BCML7q
+peeU0rD+83X5f27nMIIFKzCCBBOgAwIBAgIQZlMxEt42vTaHXZEsVX1Q0DANBgkqhkiG9w0B
+AQUFADCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
+TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTAeFw0xMzA2
+MjkwMDAwMDBaFw0xNDA2MjkyMzU5NTlaMCYxJDAiBgkqhkiG9w0BCQEWFXBhc2NhbC5qb2xs
+ZXJAZ214Lm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK54RO3+UaSnmH7p
+HHrEz8Evd2g/Sw1Q6wNUfm19vR1XV+e5oc6mERTYcPwdGIQkDhQdlfjBVSvaypfo5m9J62lP
+F9QZUuBK/rtSW8KudKKyQu1xWsBC7iymgKjXwCxSlSwTI5piLGSU1wwanlqMejhMyDJ/kk42
+nTTjAWPZ+cUreZw25XgG02MfzlLMM+1MO+GbmEWyTm21xGerQ2Boa5sfqIB/0gVy1tOb1b5Z
+3l9PWwNiCXEHW/dVZEpstJPyoae/4kZwgjQRUhOr8uaiW0Nt63gffVhSo6FAorNGCq86NoeV
+ROf+FPpuKABxCRDurzz7dAmFrW+DfVTKXXPcFmkCAwEAAaOCAeUwggHhMB8GA1UdIwQYMBaA
+FHoTTgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTdlikHIuzVMfAzFic5XeHyIzeUTTAO
+BgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYB
+BAGyMQEDBQIwEQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEB
+MCswKQYIKwYBBQUHAgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQ
+ME4wTKBKoEiGRmh0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRp
+Y2F0aW9uYW5kU2VjdXJlRW1haWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcw
+AoZGaHR0cDovL2NydC5jb21vZG9jYS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25h
+bmRTZWN1cmVFbWFpbENBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2Eu
+Y29tMCAGA1UdEQQZMBeBFXBhc2NhbC5qb2xsZXJAZ214Lm5ldDANBgkqhkiG9w0BAQUFAAOC
+AQEALsWDUq2SDrrWI+ltGven1ow7rRcpzOuZnogM5ed2gDkRq44gYePmK+AT78orRY82kOyl
+fCVKZgToPgcg16srJvt69s6uZIYvtGgMjyEfFHb/4pVSoXo3bzwt9iGdrQ6XUm4SucQYp1KL
+1PtIax9r2QA71ZKG4KuxiUula9N2o/feYaL0551HUpHXGSz/Mcc4QQgjyGFSOTW3KxmijU1Z
+LAI3//fDsRuoN2HtPHN35TWQxw3yZsYVpH9Ytc8YTd759671VZ2QBFtqvFg8oOwRcJCsS51x
+kauUlG2HgOcwZBng8CC318g1bN2cDKes10E/K/dUIc4TJXhSINAPsOdU7zGCBBkwggQVAgEB
+MIGoMIGTMQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD
+VQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09N
+T0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBAhBmUzES3ja9
+NoddkSxVfVDQMAkGBSsOAwIaBQCgggJFMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJ
+KoZIhvcNAQkFMQ8XDTE0MDMyODA5MjExNVowIwYJKoZIhvcNAQkEMRYEFGDxaZZ0aHZT6l6h
+RPoQ7eSapoFlMGwGCSqGSIb3DQEJDzFfMF0wCwYJYIZIAWUDBAEqMAsGCWCGSAFlAwQBAjAK
+BggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcNAwICAUAwBwYFKw4DAgcwDQYI
+KoZIhvcNAwICASgwgbkGCSsGAQQBgjcQBDGBqzCBqDCBkzELMAkGA1UEBhMCR0IxGzAZBgNV
+BAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09N
+T0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24g
+YW5kIFNlY3VyZSBFbWFpbCBDQQIQZlMxEt42vTaHXZEsVX1Q0DCBuwYLKoZIhvcNAQkQAgsx
+gauggagwgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYDVQQDEzBD
+T01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0ECEGZTMRLe
+Nr02h12RLFV9UNAwDQYJKoZIhvcNAQEBBQAEggEAGNrwyPMeAITLwJGimsGmx8qQ0kbM3b2g
+lsiXINGVT+G6ZEe6dWSuKZ8Sw4wDWbPGJcJbH03jDiACNX/9A93Kw2PFnRqPvqPpvzjndy/C
+c9IIyFX98hG5Xm4MoCxKG2TvG+JKco0FwwIYHwC0CXVwXswiOmQG/6N2byTaTTsqvGyok+fq
+uMTLx+PnwPNTfu8do35GJjfkaXSN7W/HEVrHlDW//2D4eRyllalhQ7zvTdwmxIJDSQsrUSUW
+vmVa15k6p6k5b1is6HRCie5parMfOHlWO+RrY7TWA6mE9uK84ASXK/6i9JkujpMypyzIi4AN
+IgTFp4FZe6uu/kGmgVD/JQAAAAAAAA==
+--------------ms020104090304070409090806--

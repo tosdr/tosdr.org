@@ -1,0 +1,153 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBBMS4SFQKGQESFC6DWA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 1052A161735
+	for <anything@michielbdejong.com>; Thu, 25 Apr 2013 12:44:25 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0DD5819F3C1
+	for <anything@michielbdejong.com>; Thu, 25 Apr 2013 12:44:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id o2iJ1dHw3uo0 for <anything@michielbdejong.com>;
+	Thu, 25 Apr 2013 12:44:23 +0200 (CEST)
+Received: from mail-gh0-f183.google.com (mail-gh0-f183.google.com [209.85.160.183])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 465B619F388
+	for <anything@michielbdejong.com>; Thu, 25 Apr 2013 12:44:23 +0200 (CEST)
+Received: by mail-gh0-f183.google.com with SMTP id r1sf932143ghr.20
+        for <anything@michielbdejong.com>; Thu, 25 Apr 2013 03:44:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=o6zAp1A+IuqokEp2FS6F+hMLYOhYFWTrgYmqji2yFos=;
+        b=gi44TjK7Qcyl8NZVIydk1+KgMv5g3gceq5RrBgZfcv1NQa2DHCvezNkYjhXZAnDZqS
+         1bzoYzxMKBbWhtUhnn3M6ktBB+tuRUwZta5fn6SAfMxzIpUzKMURkXiaaGpf2GPgQFyE
+         Ze3ficxlRS3LknG8RAlFSGHIvIqzJAW3ULr4j2g6vtXqKxoiIpD6C4cONcf87LjhBrJw
+         qBrZeO3Qwk9895I4Bi9QwK7QVlUJHMBLdGu2DHLCaai/Xup2jvJ4Yt7p+SHuDLgE25pt
+         YBfqW2vy8WVru9HYLyMinjnQibW45nBN07BjTu+64/vt9tIDZ1nXKadc1OnB7n86RrzZ
+         L17g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=o6zAp1A+IuqokEp2FS6F+hMLYOhYFWTrgYmqji2yFos=;
+        b=e/x13K/eH6qAJghzQZG3fIXAhZOnNnCyGUHGI9V9CnKhIWbHHTCBhx8edqSiudVz/o
+         sARSY0Tp80CC3CyjqM5S707DCbN8FznZoF9DNNaSqxjh/06tFDrpu2malPYa3FjyLscK
+         LBWCQRiKyAk9lxCJM226fqCWS7PfM7z272yW6KQv4vHLtoRp5XGjdai+aVf1nNDoiPFe
+         w68HfEDAnFGCFZ6eC6nKTDpSJnjRLv4KqT2DIC27l/C5Abj0EwjHpv0fxJGZ1szfUVZ9
+         Hlt9zFtItOrB/h58IVmvw9qkTp7REYGgFNdwVhkKp95Hh6VOJTExRcbgXpIje8WXvNaU
+         w1pQ==
+X-Received: by 10.49.121.200 with SMTP id lm8mr3446560qeb.5.1366886662122;
+        Thu, 25 Apr 2013 03:44:22 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.58.172 with SMTP id s12ls1356068qeq.18.gmail; Thu, 25 Apr
+ 2013 03:44:21 -0700 (PDT)
+X-Received: by 10.49.60.170 with SMTP id i10mr3471433qer.41.1366886661824;
+        Thu, 25 Apr 2013 03:44:21 -0700 (PDT)
+Date: Thu, 25 Apr 2013 03:44:21 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <b43fea7e-8159-4675-9268-643ba1a0df50@googlegroups.com>
+In-Reply-To: <4b2c035b-decd-47ad-b948-e3fb5128b58a@googlegroups.com>
+References: <4b2c035b-decd-47ad-b948-e3fb5128b58a@googlegroups.com>
+Subject: [tosdr:1760] Re: You may request copies and alternations to the
+ personal information Cloudant stores
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_370_24382572.1366886661553"
+
+------=_Part_370_24382572.1366886661553
+Content-Type: text/plain; charset=ISO-8859-1
+
+I don't have an account with Cloudant, but it seems a bit strange that you 
+have to email support in order to change/access any of your information. I 
+would assume that I would be able to access my own information firsthand 
+and make changes that way.
+
+Do you have an account, Robin? Maybe you can shed a little more light on 
+this for me.
+
+On Tuesday, December 11, 2012 3:56:04 PM UTC+1, Robin Monks wrote:
+>
+> If you have signed up for the Services, you may access, review, and make 
+>> changes to your Personal Information and/or your Billing Information by 
+>> sending an email to our support attendants at sup...@cloudant.com<javascript:>
+>> . 
+>
+>
+> /Robin 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_370_24382572.1366886661553
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I don't have an account with Cloudant, but it seems a bit strange that you =
+have to email support in order to change/access any of your information. I =
+would assume that I would be able to access my own information firsthand an=
+d make changes that way.<br><br>Do you have an account, Robin? Maybe you ca=
+n shed a little more light on this for me.<br><br>On Tuesday, December 11, =
+2012 3:56:04 PM UTC+1, Robin Monks wrote:<blockquote class=3D"gmail_quote" =
+style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-l=
+eft: 1ex;"><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.=
+8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-st=
+yle:solid;padding-left:1ex"><span style=3D"color:rgb(31,61,89);font-family:=
+'Droid Sans',sans-serif;font-size:15px;line-height:20px;background-color:rg=
+b(249,249,249)">If you have signed up for the Services, you may access, rev=
+iew, and make changes to your Personal Information and/or your Billing Info=
+rmation by sending an email to our support attendants at&nbsp;</span><a hre=
+f=3D"javascript:" style=3D"color:rgb(0,136,204);font-family:'Droid Sans',sa=
+ns-serif;font-size:15px;line-height:20px;background-color:rgb(249,249,249)"=
+ target=3D"_blank" gdf-obfuscated-mailto=3D"xIAiGYaMLIwJ">sup...@cloudant.c=
+om</a><span style=3D"color:rgb(31,61,89);font-family:'Droid Sans',sans-seri=
+f;font-size:15px;line-height:20px;background-color:rgb(249,249,249)">.&nbsp=
+;</span></blockquote><div><br></div><div>/Robin&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_370_24382572.1366886661553--

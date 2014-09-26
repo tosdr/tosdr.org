@@ -1,0 +1,170 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBMMNW6HAKGQED4HPSEI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E4B81161743
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:24:05 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E1DFC226072
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:24:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id L08Z6ZC44KVi for <anything@michielbdejong.com>;
+	Fri, 28 Jun 2013 19:24:04 +0200 (CEST)
+Received: from mail-pb0-x237.google.com (mail-pb0-x237.google.com [IPv6:2607:f8b0:400e:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0228C2260A4
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:24:03 +0200 (CEST)
+Received: by mail-pb0-f55.google.com with SMTP id ro2sf717761pbb.0
+        for <anything@michielbdejong.com>; Fri, 28 Jun 2013 10:24:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=orCF6DsodgENcHmLhbdCqnYf9XGjuf1wLBx6J3+dWes=;
+        b=FgDhegsTAzqTYonGwZeFfOVBUO0Q+FhCZEZob7zfziuvzhNqccOpQWvLE7Otn/iJwh
+         WCDTcjUrHrHrczx+Sf2HXqnZs+vnaqD/FxXZRfF/5y0ZGxW4/8Kbc0qXJtXN4d3OyuTW
+         8HicXqqsx1uWFU1ZVC2J9Hj3zyrpHTws32k4qWItUaFDZhV8cbrHBUEl4iA5T0H/DU9Y
+         /1p/KQiLDYU1PnFQZbdLDzpc1BNDgBgL3nc5mV98ETTcu6AJiW8D78+5cHn6d0Fw0kvh
+         smXznf9eiGGvbU0Cw3O3nn7Kk0CkY7xKz6l4ZM3SS0pVJun4zLxJ5RbPpR2yMuCWL3Rm
+         U0eQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=orCF6DsodgENcHmLhbdCqnYf9XGjuf1wLBx6J3+dWes=;
+        b=iq74C8/LpqTuml+xRUromOPoHOcqeBwkeh8/Laj51HDfaY5bVrluZsbg2dsejmQhYC
+         eXU54uTW67iaXhwv+co/UWxVcnIlbbJGWmZnLXJ0+m/pj8dkx4ltn/g0rzFQKBhEsbnW
+         eWjmDmzJYyzTWzmnbp5Sbk1N3QFdtxCIb/EuxSHKNpaj4X/o9bH0elkwQPJz9TYK6IG/
+         PUMV+58pKc7IFH2jhcWT5XOfrMEA3YQGy3bbprftFOHX58VnZI+xSY+YF8EBUw1de2j2
+         XEV5o0K0uy13riILwXAUYhx6y61GLQTlg5bWgfsDVzOyg1PK18i6dLyY8g/IqguAVXOJ
+         jJow==
+X-Received: by 10.49.25.36 with SMTP id z4mr406820qef.6.1372440241721;
+        Fri, 28 Jun 2013 10:24:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.15.131 with SMTP id x3ls1310652qec.76.gmail; Fri, 28 Jun
+ 2013 10:24:01 -0700 (PDT)
+X-Received: by 10.49.129.104 with SMTP id nv8mr396519qeb.27.1372440241221;
+        Fri, 28 Jun 2013 10:24:01 -0700 (PDT)
+Date: Fri, 28 Jun 2013 10:24:00 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <c1bb2007-80b5-43f8-aa3a-27484123e98b@googlegroups.com>
+In-Reply-To: <75fe62d8db577ba7d819bee44ec5b159@michielbdejong.com>
+References: <75fe62d8db577ba7d819bee44ec5b159@michielbdejong.com>
+Subject: [tosdr:2418] Re: [Bad] Amazon class action waiver
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_752_11746070.1372440240974"
+
+------=_Part_752_11746070.1372440240974
+Content-Type: text/plain; charset=ISO-8859-1
+
+This has already been mentioned at 
+https://groups.google.com/d/topic/tosdr/TGwFKDGaD7Y/discussion
+
+On Monday, March 4, 2013 11:06:56 PM UTC-6, anyt...@michielbdejong.com 
+wrote:
+>
+> "The arbitration will be conducted by the American Arbitration 
+> Association (AAA) under its rules" 
+>
+> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L176 
+>
+> Assuming the AAA is a fair organization, this seems reasonable, 
+> especially if you think about disputes as merchant-consumer disputes 
+> over the goods delivered in a specific sale. But then they continue: 
+>
+> "We each agree that any dispute resolution proceedings will be 
+> conducted only on an individual basis and not in a class, consolidated 
+> or representative action." 
+>
+> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L184 
+>
+> which sounds like the same class action waiver we saw in other 
+> services. they phrase it in a symmetric way, but it still seems 
+> equivalent to the other ones. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_752_11746070.1372440240974
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+This has already been mentioned at&nbsp;<a href=3D"https://groups.google.co=
+m/d/topic/tosdr/TGwFKDGaD7Y/discussion">https://groups.google.com/d/topic/t=
+osdr/TGwFKDGaD7Y/discussion</a><br><br>On Monday, March 4, 2013 11:06:56 PM=
+ UTC-6, anyt...@michielbdejong.com wrote:<blockquote class=3D"gmail_quote" =
+style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-l=
+eft: 1ex;">"The arbitration will be conducted by the American Arbitration=
+=20
+<br>Association (AAA) under its rules"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce=
+1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L176" target=
+=3D"_blank">https://github.com/tosdr/<wbr>tosback2/blob/<wbr>265e49bf24a910=
+76495ce1fddf279c<wbr>4638421a66/crawl/amazon.com/<wbr>Conditions%20of%20Use=
+.txt#L176</a>
+<br>
+<br>Assuming the AAA is a fair organization, this seems reasonable,=20
+<br>especially if you think about disputes as merchant-consumer disputes=20
+<br>over the goods delivered in a specific sale. But then they continue:
+<br>
+<br>"We each agree that any dispute resolution proceedings will be=20
+<br>conducted only on an individual basis and not in a class, consolidated=
+=20
+<br>or representative action."
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce=
+1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L184" target=
+=3D"_blank">https://github.com/tosdr/<wbr>tosback2/blob/<wbr>265e49bf24a910=
+76495ce1fddf279c<wbr>4638421a66/crawl/amazon.com/<wbr>Conditions%20of%20Use=
+.txt#L184</a>
+<br>
+<br>which sounds like the same class action waiver we saw in other=20
+<br>services. they phrase it in a symmetric way, but it still seems=20
+<br>equivalent to the other ones.
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_752_11746070.1372440240974--

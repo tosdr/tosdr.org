@@ -1,0 +1,138 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBP5WVSHAKGQE7S7YQDA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3A5F0161756
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:48:03 +0200 (CEST)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3658A14212B
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:48:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id eoD-uBn28eSI for <anything@michielbdejong.com>;
+	Wed, 26 Jun 2013 18:48:01 +0200 (CEST)
+Received: from mail-we0-x23a.google.com (mail-we0-x23a.google.com [IPv6:2a00:1450:400c:c03::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2AE12142303
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:48:01 +0200 (CEST)
+Received: by mail-we0-f186.google.com with SMTP id u55sf2367544wes.23
+        for <anything@michielbdejong.com>; Wed, 26 Jun 2013 09:48:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:content-type
+         :content-disposition:in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=MkAUUugeuoSMaXZdiXgRZvHLfIenK8Xopv0ddSKnkuE=;
+        b=X6INJImdiZ6gw+TsCFkVC0cn6kSLyyu/pxf/iK9GQPq7AKoIlcOHMr5/8rbKif/acu
+         HS/b6QTnuh6fp20VyLqvJa3W8QHLbpEFIAmxp8VrPUWogFwyo5D2cRAevEdd20zAx6of
+         kapIjdjK6Sz4B/mWHbls/wg/qyRJomNKvsMjPAcYZ2HCMv4X5RaSWlkt/xJkLMR6t2jx
+         pGDqwxwHuOvKuqPrqDOx0o2rsQ/Ij50UG4y9jYWruMdeQSnEHxqId9NBsYvraxVyip3L
+         dyxlftbCvkteqvdLTzhc6dtnR54rP8yoB4BvQmjsSyCeekttzLWfJ66hSgRX/cZUASEd
+         qKkA==
+X-Received: by 10.180.187.75 with SMTP id fq11mr606314wic.2.1372265279965;
+        Wed, 26 Jun 2013 09:47:59 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.13.205 with SMTP id j13ls1397699wic.5.canary; Wed, 26 Jun
+ 2013 09:47:58 -0700 (PDT)
+X-Received: by 10.14.47.77 with SMTP id s53mr4389970eeb.5.1372265278898;
+        Wed, 26 Jun 2013 09:47:58 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id ci6si5308912eeb.1.2013.06.26.09.47.58
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 26 Jun 2013 09:47:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 50BD963B563
+	for <tosdr@googlegroups.com>; Wed, 26 Jun 2013 18:47:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Wr4IoN6gPFte for <tosdr@googlegroups.com>;
+	Wed, 26 Jun 2013 18:47:46 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 769BC63B4CC
+	for <tosdr@googlegroups.com>; Wed, 26 Jun 2013 18:47:46 +0200 (CEST)
+Date: Wed, 26 Jun 2013 18:47:45 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2389] Re: [Good] Amazon allows you to leave the service
+Message-ID: <20130626164745.GA16369@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <b9a9f101-44c3-48eb-8d25-8dbfdb290030@googlegroups.com>
+ <00581c46-2db2-47ad-9241-544431130956@googlegroups.com>
+ <8fc449d7-2478-45a2-bcfb-776eb0e6de26@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="bg08WKrSYDhXBjb5"
+Content-Disposition: inline
+In-Reply-To: <8fc449d7-2478-45a2-bcfb-776eb0e6de26@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--bg08WKrSYDhXBjb5
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
++ 2013-05-21 Tue 14:44, Ian McGowan <irmcgowan@gmail.com>:
+
+> I don't like the idea that Amazon is in control of deleting my account,=
+=20
+> that I have to contact them in order to delete it. This is kind of strang=
+e=20
+> given that there are other services which make deleting your account a ve=
+ry=20
+> straightforward process, one that users can handle without having to=20
+> contact the service. I would actually mark this as "bad", personally.
+
+I'm having more and more doubts about whether we should mention
+these or not. As you pointed out, it's not in the terms.
+
+So far, I only mentioned services where it's *not* possible to
+delete the account. Here it's possible (even if cumbersome). It's
+already mentioned by accountkiller.com
+
+Best,
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--bg08WKrSYDhXBjb5
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRyxsxAAoJEI0CLJmz17eVN7IH/2CVHJrnUaYG+GMf3QYA362a
+vI7hvFj9N9uGAqF3h9euRJUVQ0WiBJYPcS6QkI0WxrS/lbht57KO1Wwi1A9AZomr
+wk49vrWRjulztFrG9O2mqC5PwLr++odVM8hHF4qe7Cw7wCz8sanj/YUwbGjS/Zk8
+wMFNr00OkNW2UxOSP7EWAqV1SCt4INEzzDdBJRh7lyE/Ewd7WlbNoGCHDfkEMOLj
+4gd6WM1ujdUtKJ3t0CifOgVNsRGKuyYJZpNlyRWOjjuUo3gWYE8bEHsKItRrBElH
+qF9WRwa5ZS+S2bYRHVIyVI78R8KBttnvpeS93sLtxM4M2HpU4UzX3w6BUtkMllU=
+=EOqW
+-----END PGP SIGNATURE-----
+
+--bg08WKrSYDhXBjb5--

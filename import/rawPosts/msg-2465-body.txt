@@ -1,0 +1,128 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBWVQ7KFQKGQE6A6O4TY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id C2573161743
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 17:57:17 +0200 (CEST)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C00DE1162F5
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 17:57:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Qf-9TXrZvx92 for <anything@michielbdejong.com>;
+	Mon, 29 Apr 2013 17:57:16 +0200 (CEST)
+Received: from mail-fa0-x237.google.com (mail-fa0-x237.google.com [IPv6:2a00:1450:4001:c02::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1C52111632A
+	for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 17:57:15 +0200 (CEST)
+Received: by mail-fa0-f55.google.com with SMTP id u1sf1481821fae.10
+        for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 08:57:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition;
+        bh=JkApyWHOtucvuDBeMx7g+M63fHt3jTjLFQdtebmH6Po=;
+        b=bERHVpARBD/IQOcwCB+KFcfAgLQNPe5/yZBUaKJ1r+iwyuYXHiXGu9CjaIhjEWAW3V
+         jsmfwjPl205nU8UAr9yrEBk5iDT9lIyCWUQWSzQ33wV3ddXgZMo3lA0/zA/RQCJ8J86W
+         wmtBtFNrDR4VNZ6Hovvtvv9aQexvAA75RCqsEMrcbHCWNm3IfYMhUIW9V5QlTzkKK5ft
+         XAzr7he2L+bTuCvuqySiTu0w1fzNrg8S+0nLK2OtH2O2uOBSVmMs92UPhQbllIqv/YeL
+         zuY/JVX5t5HQtr4LNv7eQzEvz/l2KWSFom4zCCuHUZdaK7JMqVTisNfIuzb0h16beqIt
+         IwEQ==
+X-Received: by 10.180.88.226 with SMTP id bj2mr907308wib.10.1367251034934;
+        Mon, 29 Apr 2013 08:57:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.198.112 with SMTP id jb16ls816087wic.2.canary; Mon, 29 Apr
+ 2013 08:57:14 -0700 (PDT)
+X-Received: by 10.15.99.76 with SMTP id bk52mr1630610eeb.0.1367251034451;
+        Mon, 29 Apr 2013 08:57:14 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si6730821eeu.1.2013.04.29.08.57.14
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 29 Apr 2013 08:57:14 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 2AB6E63A64A
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 17:57:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id QXnyu2pf4qB3 for <tosdr@googlegroups.com>;
+	Mon, 29 Apr 2013 17:57:11 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 72F1E63A5E5
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 17:57:10 +0200 (CEST)
+Date: Mon, 29 Apr 2013 17:57:01 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1828] Re: [good] Google notice of changes in the ToS
+Message-ID: <20130429155701.GC13057@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <1342535193.4043.54.camel@synclavier.lan>
+ <c22c61a1-9839-4f83-9e25-53fa3900928c@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <c22c61a1-9839-4f83-9e25-53fa3900928c@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le mar. 28/08/12, 13:44, Ian McGowan <irmcgowan@gmail.com>:
+> Posting changes on the ToS page seems a fairly passive way to notify users. 
+> I know for their recently combined policies they sent out an email to all 
+> Google account holders informing them of the upcoming changes (back in 
+> March). However, I've had an account for years and can't recall being 
+> notified of any previous changes (which, to be fair, doesn't mean I wasn't 
+> notified).
+> 
+> Still, although they suggest that users read the ToS page regularly, no one 
+> (except this group, probably, haha!) does. I would give this a more neutral 
+> rating rather than a full thumbs up. The 14 days to allow users to decide 
+> (if they're aware) on the changes is good, though.
+> 
+> Thoughts?
+
+Let's have a look at the global scale on "Changing the terms". It
+ranges from "we can change any time, without notifying you" to "we
+notify you by email and give you 6 weeks to make up your mind".
+
+So Google's current clause on how they change terms seem fairly on
+the green side to me. Although I agree it could be improved, but
+again right now it's 25/100 wich seems consistant with everything
+else. But it's true that we could adjust it a little bit. Let's do
+this when we have more points :-)
+
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

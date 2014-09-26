@@ -1,0 +1,165 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBHFMUSIAKGQE6I3IO3Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 115B5161743
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 19:06:41 +0200 (CEST)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0E2DD1781B6
+	for <anything@michielbdejong.com>; Mon, 12 Aug 2013 19:06:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id kLF806udHHvJ for <anything@michielbdejong.com>;
+	Mon, 12 Aug 2013 19:06:39 +0200 (CEST)
+Received: from mail-pa0-x237.google.com (mail-pa0-x237.google.com [IPv6:2607:f8b0:400e:c03::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 151F5178198
+	for <michiel@michielbdejong.com>; Mon, 12 Aug 2013 19:06:38 +0200 (CEST)
+Received: by mail-pa0-f55.google.com with SMTP id lf10sf1003140pab.10
+        for <michiel@michielbdejong.com>; Mon, 12 Aug 2013 10:06:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=F03vqdd5g7G2+WW+XtofmKlVbFQeG3h5LcoiKvZb9/g=;
+        b=o1RYddrCxFDhX85LzHScE/iHqkUBUBBaLPo0uOb/vcLByGdL9YhpUfvmrYNjBKvaBw
+         L7hnV49qoiB03DxsuCg4XucPkJiJC7iVGf3SZVqZ+q1dUxfpHvJniUqRGWYImCJqkYVt
+         G8T8xqLa9VW/C5hfFRXR5fVHZm6JV9HE41C/n9mVdVHf6Gp1u41Zl+uUeuY3qbDHUwJ0
+         8jNsiUKxaRpL7P2NFrAuHBlOgfmHD5qLpnH3qn75KY5IpOed4cTMxgSUzryXoPx6s1zH
+         QLqoGG7yLbFigSVXyQ+oW9azM+cLw6YnaJgIW8g4jSDM/xRZQN9qn5+5qThoLji5Va2B
+         sUng==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=F03vqdd5g7G2+WW+XtofmKlVbFQeG3h5LcoiKvZb9/g=;
+        b=f3CbEZkVq6vap2azjJqiMBtcnYjNGroSqQUlta96D3J+dApe7eWmUOSaB7J5kRBgSi
+         0g9N4YL0FIAH2jJ5ErfL82lCfJTt2m03YpU7fSwuX4JF2oc2Asi0TXwnz9f3H689qyhK
+         4rKU1U+3m+KI3tjQ9VzxkoI4oOScgSOLOH1zJBscPa0vY9kC1Hz9Qs+a25TI00CTFhhd
+         DYscdW5uTtIZ3LnTBPH1EL1mVSKnenJOPmMv816AQBJck4qqzrLGlsjql1dijkFQ1VN/
+         rz2+uS2zbGVlsfKL/ygyWNSIMzzXG3I6umGckpvCT8gNx084h7H4eFy8sWyD2F/2E/NL
+         Re9A==
+X-Received: by 10.49.30.8 with SMTP id o8mr2744qeh.36.1376327196998;
+        Mon, 12 Aug 2013 10:06:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.82.101 with SMTP id h5ls2361204qey.91.gmail; Mon, 12 Aug
+ 2013 10:06:36 -0700 (PDT)
+X-Received: by 10.49.122.2 with SMTP id lo2mr3429qeb.14.1376327196382;
+        Mon, 12 Aug 2013 10:06:36 -0700 (PDT)
+Date: Mon, 12 Aug 2013 10:06:36 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <15a14c76-df82-4d14-a03e-e83aa3350e69@googlegroups.com>
+In-Reply-To: <cdf3a50d-ef42-4054-a96e-d4d23a8dc508@googlegroups.com>
+References: <cdf3a50d-ef42-4054-a96e-d4d23a8dc508@googlegroups.com>
+Subject: [tosdr:2652] Re: Microsoft.com [?] You are not allowed to reproduce
+ Microsoft services you use
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1641_3234698.1376327196105"
+
+------=_Part_1641_3234698.1376327196105
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hmm. That does seem like it would be a very broad interpretation. I'm just 
+thinking, I'm sure there have been some people to used Word but also have 
+created word processors. I can't imagine that interpretation holding up in 
+court, although I'm certainly no lawyer.
+
+On Friday, May 10, 2013 12:40:35 PM UTC-5, Robin Monks wrote:
+>
+> Not sure if this is important; a broad definition would say if you used a 
+> Microsoft word processor and you make a word processor you broke this ToS. 
+>  Thoughts?
+>
+> Unless otherwise specified, the Services are for your personal and 
+>> non-commercial use. You may not modify, copy, distribute, transmit, 
+>> display, perform, reproduce, publish, license, create derivative works 
+>> from, transfer, or sell any information, software, products or services 
+>> obtained from the Services.
+>>
+>>  
+>>
+>> From <
+>> http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx
+>> > 
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1641_3234698.1376327196105
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hmm. That does seem like it would be a very broad interpre=
+tation. I'm just thinking, I'm sure there have been some people to used Wor=
+d but also have created word processors. I can't imagine that interpretatio=
+n holding up in court, although I'm certainly no lawyer.<br><br>On Friday, =
+May 10, 2013 12:40:35 PM UTC-5, Robin Monks wrote:<blockquote class=3D"gmai=
+l_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;=
+padding-left: 1ex;">Not sure if this is important; a broad definition would=
+ say if you used a Microsoft word processor and you make a word processor y=
+ou broke this ToS. &nbsp;Thoughts?<div><br></div><blockquote class=3D"gmail=
+_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left=
+-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><p style=
+=3D"margin:0in;font-family:Calibri;font-size:11.0pt">Unless otherwise
+specified, the Services are for your personal and non-commercial use. You m=
+ay
+not modify, copy, distribute, transmit, display, perform, reproduce, publis=
+h,
+license, create derivative works from, transfer, or sell any information,
+software, products or services obtained from the Services.</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoft.com/en-us/legal/intellectualproperty/co=
+pyright/default.aspx" target=3D"_blank">http://www.microsoft.com/en-<wbr>us=
+/legal/intellectualproperty/<wbr>copyright/default.aspx</a>&gt;&nbsp;</p></=
+blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1641_3234698.1376327196105--

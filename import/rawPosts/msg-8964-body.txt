@@ -1,0 +1,170 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB56W7WIAKGQEM7S75RQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id D887A161743
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 17:40:42 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D3D261780A3
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 17:40:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id a-TaXe0RgSU3 for <anything@michielbdejong.com>;
+	Thu, 29 Aug 2013 17:40:41 +0200 (CEST)
+Received: from mail-pa0-x239.google.com (mail-pa0-x239.google.com [IPv6:2607:f8b0:400e:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0DEF11780A9
+	for <anything@michielbdejong.com>; Thu, 29 Aug 2013 17:40:40 +0200 (CEST)
+Received: by mail-pa0-f57.google.com with SMTP id fz6sf282902pac.22
+        for <anything@michielbdejong.com>; Thu, 29 Aug 2013 08:40:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=PFkkI5fPj/dMdetA4ObgX2VKgMWr0tf4fbQsuoAF7ZE=;
+        b=kSFYzJYDOp0Abh2LPFoSvHwXn5AzJ3pkwFwO+OiTktrpSLC0SZIQDqy/zgzhWX0mJx
+         0iZAk1W4gUY6FzCUsSVHkViA5NbaviuWzt2OPBgsy/2/p7iQPZ0iiB+AuNJyvSjBD949
+         YfLk2cU/wZuF2QL0GnvvjNHS7F5nJ0WQOiKs+FrNHDq1x2EPM4aiXjVHOIFt9roxfnHH
+         58LunSu6WwO4v+Vpno1QyaQVSnQqAfWBwwaFBURLFeyuEyVCF63KbQZAUVMfchsQzWvI
+         zolCaJEl6NczQ8YHcbxZ0Pjz/hYSp/00WdwpAJ4LovHrlUY+AbLdckQIs13v4vCi3q2m
+         9kxQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=PFkkI5fPj/dMdetA4ObgX2VKgMWr0tf4fbQsuoAF7ZE=;
+        b=ckWkVHSB8m1fDSBHOWlLJlxq5j3igtFQJkjHyTXjrPD1S4wkypg2l0IUlyCA72cmAK
+         eq6zBNquHfNr1rNqzXxg0DikGFTE1iqyMoHaGI1hppruKFbAzAekZCImDo+O4EdYoxSr
+         w4r/Dme+MWaOcI4JTD49CmGVFH9VxBxUqe0PmlaGra8UZ7stAgjqBLYb8E0ngkL8t6W3
+         ZOEKfZrcM2Jfrebk0Af/73kAerVN4o5Qsb1W03ErZXKU67Ncdo5jBXttbbob2JecSfvG
+         uiHZbqZ4l41MZZ2aPrC8BQSVAbhWORjZSufQnU945CLesIBHfpvP0k6Ei4aRpq5IWBIp
+         6kww==
+X-Received: by 10.49.132.231 with SMTP id ox7mr58293qeb.35.1377790839362;
+        Thu, 29 Aug 2013 08:40:39 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.102 with SMTP id 6ls922201qed.34.gmail; Thu, 29 Aug 2013
+ 08:40:39 -0700 (PDT)
+X-Received: by 10.49.12.47 with SMTP id v15mr53773qeb.39.1377790839148;
+        Thu, 29 Aug 2013 08:40:39 -0700 (PDT)
+Date: Thu, 29 Aug 2013 08:40:38 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <35e7e606-1f0a-49b0-b453-65e49115892e@googlegroups.com>
+In-Reply-To: <e968a2c1-3b23-4268-a49e-7de42f3580dc@googlegroups.com>
+References: <e968a2c1-3b23-4268-a49e-7de42f3580dc@googlegroups.com>
+Subject: [tosdr:2686] Re: MyKolab.com is Open Source
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4164_10369390.1377790838935"
+
+------=_Part_4164_10369390.1377790838935
+Content-Type: text/plain; charset=ISO-8859-1
+
+Forgot the link to the terms: https://mykolab.com/tos
+
+On Thursday, August 29, 2013 10:36:13 AM UTC-5, Ian McGowan wrote:
+>
+> We provide the Service on software we have developed, participated in the 
+>> development in, as well as software that was developed by third parties. 
+>> All that software is *Open Source / Free Software* according to the 
+>> definitions of the Open Source Initiative (OS <http://opensource.org/>I)<http://opensource.org/> and 
+>> the Free Software Foundation (FSF) <http://www.fsf.org/>.
+>
+>
+> Title: MyKolab.com is open source
+>
+> Topic: data-export
+>
+> Summary: MyKolab.com provides their services of their software in open 
+> source format. This means that there is nothing stopping you from moving 
+> your data from MyKolab and running it on your own server.
+>
+> Score: 100 (good)
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_4164_10369390.1377790838935
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Forgot the link to the terms:&nbsp;<a href=3D"https://myko=
+lab.com/tos">https://mykolab.com/tos</a><br><br>On Thursday, August 29, 201=
+3 10:36:13 AM UTC-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" st=
+yle=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-lef=
+t: 1ex;"><div dir=3D"ltr"><blockquote class=3D"gmail_quote" style=3D"margin=
+:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204)=
+;border-left-style:solid;padding-left:1ex"><span style=3D"color:rgb(122,122=
+,122);font-family:'Open Sans','Lucida Grande','Lucida Sans Unicode','Segoe =
+UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;background-c=
+olor:rgb(232,232,232)">We provide the Service on software we have developed=
+, participated in the development in, as well as software that was develope=
+d by third parties. All that software is&nbsp;</span><strong style=3D"color=
+:rgb(122,122,122);font-family:'Open Sans','Lucida Grande','Lucida Sans Unic=
+ode','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;=
+background-color:rgb(232,232,232)">Open Source / Free Software</strong><spa=
+n style=3D"color:rgb(122,122,122);font-family:'Open Sans','Lucida Grande','=
+Lucida Sans Unicode','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;l=
+ine-height:21px;background-color:rgb(232,232,232)">&nbsp;according to the d=
+efinitions of the&nbsp;</span><a href=3D"http://opensource.org/" style=3D"c=
+olor:rgb(20,135,212);font-family:'Open Sans','Lucida Grande','Lucida Sans U=
+nicode','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:21=
+px;background-color:rgb(232,232,232)" target=3D"_blank">Open Source Initiat=
+ive (OS</a><a href=3D"http://opensource.org/" style=3D"color:rgb(20,135,212=
+);font-family:'Open Sans','Lucida Grande','Lucida Sans Unicode','Segoe UI',=
+Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;background-color=
+:rgb(232,232,232)" target=3D"_blank">I)</a><span style=3D"color:rgb(122,122=
+,122);font-family:'Open Sans','Lucida Grande','Lucida Sans Unicode','Segoe =
+UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;background-c=
+olor:rgb(232,232,232)">&nbsp;and the&nbsp;</span><a href=3D"http://www.fsf.=
+org/" style=3D"color:rgb(20,135,212);font-family:'Open Sans','Lucida Grande=
+','Lucida Sans Unicode','Segoe UI',Helvetica,Arial,sans-serif;font-size:14p=
+x;line-height:21px;background-color:rgb(232,232,232)" target=3D"_blank">Fre=
+e Software Foundation (FSF)</a><span style=3D"color:rgb(122,122,122);font-f=
+amily:'Open Sans','Lucida Grande','Lucida Sans Unicode','Segoe UI',Helvetic=
+a,Arial,sans-serif;font-size:14px;line-height:21px;background-color:rgb(232=
+,232,232)">.</span></blockquote><div><br></div><div>Title: MyKolab.com is o=
+pen source</div><div><br></div><div>Topic: data-export</div><div><br></div>=
+<div>Summary: MyKolab.com provides their services of their software in open=
+ source format. This means that there is nothing stopping you from moving y=
+our data from MyKolab and running it on your own server.</div><div><br></di=
+v><div>Score: 100 (good)</div></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_4164_10369390.1377790838935--

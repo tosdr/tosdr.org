@@ -1,0 +1,160 @@
+Return-Path: <tosdr+bncBDFPVJU7ZMJRBH6C4KGAKGQEMJEWOPI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 4659C161740
+	for <anything@michielbdejong.com>; Sun, 19 May 2013 11:53:42 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 438AC19F39E
+	for <anything@michielbdejong.com>; Sun, 19 May 2013 11:53:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id GKZPe5glimAO for <anything@michielbdejong.com>;
+	Sun, 19 May 2013 11:53:40 +0200 (CEST)
+Received: from mail-ee0-f57.google.com (mail-ee0-f57.google.com [74.125.83.57])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 256A019F3AE
+	for <michiel@michielbdejong.com>; Sun, 19 May 2013 11:53:36 +0200 (CEST)
+Received: by mail-ee0-f57.google.com with SMTP id b47sf943963eek.22
+        for <michiel@michielbdejong.com>; Sun, 19 May 2013 02:53:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:mime-version
+         :x-received:sender:in-reply-to:references:date:message-id:subject
+         :from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=JAIEY+5pRKEHUBfjRN/X4QbBkpxMlC3+5vsSZJ5jVRg=;
+        b=x/nT01tZIYrgH8f1HlryMKE92jATfpkHR+8m2PqoOJRA6kn1U80HgfL7NyluMW6Fd2
+         HOB+wIyejKefFBbxlgrmoSAYjooIEXYm/Ei2nceamyfpgiTXjro58RXT9AIqzra1FZpX
+         kfKC0MQn2Gfc/b2B+V98kYKBOZjb5hp0GroEJhCTynWMl3gkfTMaEMt8rvtV4j05bSk9
+         fxiSL/Pv1DDRmaEL35fLfpIGq8B9LkjX1/nIuE45JBzj4H9N3ezxT9gCBROHjL/e779k
+         Xbn4r3kCyho4GhvM1MiIWPH46oz7nk0Ax1wDWlDJ5x4PeF/L7HfdBDmFyNsExYIhcmH5
+         dSbg==
+X-Received: by 10.180.90.134 with SMTP id bw6mr234053wib.8.1368957215553;
+        Sun, 19 May 2013 02:53:35 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.108.135 with SMTP id hk7ls121239wib.54.gmail; Sun, 19 May
+ 2013 02:53:34 -0700 (PDT)
+X-Received: by 10.205.32.144 with SMTP id sk16mr6314220bkb.4.1368957214841;
+        Sun, 19 May 2013 02:53:34 -0700 (PDT)
+Received: from mail-lb0-f180.google.com (mail-lb0-f180.google.com [209.85.217.180])
+        by gmr-mx.google.com with ESMTPS id fc12si1566215bkc.1.2013.05.19.02.53.34
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sun, 19 May 2013 02:53:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suzanne.azmayesh@gmail.com designates 209.85.217.180 as permitted sender) client-ip=209.85.217.180;
+Received: by mail-lb0-f180.google.com with SMTP id r10so1965605lbi.25
+        for <tosdr@googlegroups.com>; Sun, 19 May 2013 02:53:34 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.152.8.231 with SMTP id u7mr26364524laa.27.1368957214559;
+ Sun, 19 May 2013 02:53:34 -0700 (PDT)
+Sender: tosdr@googlegroups.com
+Received: by 10.114.177.97 with HTTP; Sun, 19 May 2013 02:53:34 -0700 (PDT)
+In-Reply-To: <CADNfgRc19fxxkQJ0nm7DjqmgPozmfHQVrnhr7MrBx9XAEnxPdA@mail.gmail.com>
+References: <CADNfgRc19fxxkQJ0nm7DjqmgPozmfHQVrnhr7MrBx9XAEnxPdA@mail.gmail.com>
+Date: Sun, 19 May 2013 11:53:34 +0200
+Message-ID: <CADNfgRdSVyqUsxkev+z68u=Jq=a88RqraWpcP0Eas3F8YC+g-w@mail.gmail.com>
+Subject: [tosdr:2147] Fwd: Facebook stores your data
+From: Suzanne Azmayesh <suzanne@azmayesh.fr>
+To: tosdr@googlegroups.com
+X-Original-Sender: suzanne@azmayesh.fr
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of suzanne.azmayesh@gmail.com designates 209.85.217.180
+ as permitted sender) smtp.mail=suzanne.azmayesh@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=089e0158ad747c947104dd0f30d7
+
+--089e0158ad747c947104dd0f30d7
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title : Facebook stores your data
+
+Topic : Personal data
+
+Summary : The data are stored as long as it is necessary according to
+Facebook, until the account is deleted. Nevertheless, for certain
+categories of data that are not specified, Facebook tells about some
+specific data retention practices.
+
+Score suggested : mediocre, 20?
+
+Quotation from the site :
+We store data for as long as it is necessary to provide products and
+services to you and others, including those described above. Typically,
+information associated with your account will be kept until your account is
+deleted. For certain categories of data, we may also tell you about
+specific data retention practices.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--089e0158ad747c947104dd0f30d7
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><br><div dir=3D"ltr">Title : Fa=
+cebook stores your data<div><br></div><div>Topic : Personal data</div><div>=
+<br></div><div>Summary :=A0<span style=3D"color:rgb(35,35,35);font-family:&=
+#39;Lucida Grande&#39;;font-size:12px">The data are stored as long as it is=
+ necessary according to Facebook, until the account is deleted. Nevertheles=
+s, for certain categories of data that are not specified, Facebook tells ab=
+out some specific data retention practices.</span></div>
+
+<div><span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida Grande&#39;=
+;font-size:12px"><br></span></div><div><span style=3D"color:rgb(35,35,35);f=
+ont-family:&#39;Lucida Grande&#39;;font-size:12px">Score suggested : medioc=
+re, 20?</span></div>
+
+<div><span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida Grande&#39;=
+;font-size:12px"><br></span></div><div><span style=3D"color:rgb(35,35,35);f=
+ont-family:&#39;Lucida Grande&#39;;font-size:12px">Quotation from the site =
+:=A0</span></div>
+
+<div><span style=3D"color:rgb(102,102,102);font-family:&#39;lucida grande&#=
+39;,tahoma,verdana,arial,sans-serif;font-size:15px;line-height:20px;text-al=
+ign:left">We store data for as long as it is necessary to provide products =
+and services to you and others, including those described above. Typically,=
+ information associated with your account will be kept until your account i=
+s deleted. For certain categories of data, we may also tell you about speci=
+fic data retention practices.</span><span style=3D"color:rgb(35,35,35);font=
+-family:&#39;Lucida Grande&#39;;font-size:12px"><br>
+
+</span></div></div>
+</div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--089e0158ad747c947104dd0f30d7--

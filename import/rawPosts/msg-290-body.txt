@@ -1,0 +1,108 @@
+Return-Path: <tosdr+bncBCN23IMP34ARBEUF22EQKGQEXNWNQ5Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 769E6161733
+	for <anything@michielbdejong.com>; Tue,  5 Mar 2013 06:31:40 +0100 (CET)
+Received: from mfilter4-d.gandi.net (mfilter4-d.gandi.net [217.70.178.134])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 70DB614208B;
+	Tue,  5 Mar 2013 06:31:40 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter4-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter4-d.gandi.net (mfilter4-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id IS0K08y6oOsu; Tue,  5 Mar 2013 06:28:53 +0100 (CET)
+Received: from mail-we0-x23c.google.com (mail-we0-x23c.google.com [IPv6:2a00:1450:400c:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 712061420A3;
+	Tue,  5 Mar 2013 06:28:52 +0100 (CET)
+Received: by mail-we0-f188.google.com with SMTP id t44sf2335328wey.25
+        for <multiple recipients>; Mon, 04 Mar 2013 21:28:51 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:x-received:received-spf
+         :x-virus-scanned:x-policy:x-originating-ip:mime-version:date:from:to
+         :subject:message-id:x-sender:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=hfu6Q4AoH3obLr0N3MqDKhwwOYZXEmub8nIqlD6rm9I=;
+        b=MKx7JMdex1AC1Ra2pXeuiYEWRIsz/QJafddcac0RhWvRNjvpC+b81hckDHR85eCBM1
+         ie38Md/WME9vkOoAEOrB/spn84ofCr1KpgjAK6YHVsYlGzzqAnKpd9P/iDNvLV0FNsbi
+         Mbw/mzS+mJwo1i//UjspetI9uWYxhOiXA2GDspfjl3xRuIMZhEJT8GecPGt4LjAYiWZn
+         e+B5/lFtU4n/DBIqzyPiozWfuyC8jqKTZb/ghxxLd+eot/q/dcmhOjOo/Q0ktc32Mpgo
+         QXMqhXhu8ELrizNxUiTLrHolm0InQsGse52NfSe+xCtSsHtGN6JIg8YJWyHDp8ZXVi3M
+         Bizg==
+X-Received: by 10.180.97.168 with SMTP id eb8mr1024280wib.3.1362461331249;
+        Mon, 04 Mar 2013 21:28:51 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.86.70 with SMTP id n6ls683073wiz.54.canary; Mon, 04 Mar
+ 2013 21:28:49 -0800 (PST)
+X-Received: by 10.180.106.73 with SMTP id gs9mr2505232wib.2.1362461329948;
+        Mon, 04 Mar 2013 21:28:49 -0800 (PST)
+X-Received: by 10.180.106.73 with SMTP id gs9mr2505231wib.2.1362461329938;
+        Mon, 04 Mar 2013 21:28:49 -0800 (PST)
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by gmr-mx.google.com with ESMTP id k1si541053wia.0.2013.03.04.21.28.49;
+        Mon, 04 Mar 2013 21:28:49 -0800 (PST)
+Received-SPF: neutral (google.com: 217.70.183.196 is neither permitted nor denied by best guess record for domain of anything@michielbdejong.com) client-ip=217.70.183.196;
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 768B5172093
+	for <tosdr@googlegroups.com>; Tue,  5 Mar 2013 06:28:39 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from relay4-d.mail.gandi.net ([217.70.183.196])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id fSIUJ0H5Wmb7 for <tosdr@googlegroups.com>;
+	Tue,  5 Mar 2013 06:28:38 +0100 (CET)
+X-Policy: 10.58.1.143 is whitelisted
+X-Originating-IP: 10.58.1.143
+Received: from webmail.gandi.net (webmail3-d.mgt.gandi.net [10.58.1.143])
+	(Authenticated sender: anything@michielbdejong.com)
+	by relay4-d.mail.gandi.net (Postfix) with ESMTPA id 2024C172095
+	for <tosdr@googlegroups.com>; Tue,  5 Mar 2013 06:28:38 +0100 (CET)
+MIME-Version: 1.0
+Date: Tue, 05 Mar 2013 13:59:11 +0830
+From: anything@michielbdejong.com
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:1580] [Bad] you agree not to reverse-engineer Amazon's software
+Message-ID: <378d00353f7bd1b0beff7d0b3e338724@michielbdejong.com>
+X-Sender: anything@michielbdejong.com
+User-Agent: Roundcube Webmail/0.7.2
+X-Original-Sender: anything@michielbdejong.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 217.70.183.196 is neither permitted nor denied by best guess
+ record for domain of anything@michielbdejong.com) smtp.mail=anything@michielbdejong.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+
+"You may not, and you will not encourage, assist or authorize any other 
+person to copy, modify, reverse engineer, decompile or disassemble, or 
+otherwise tamper with, the Amazon Software, whether in whole or in part, 
+or create any derivative works from or of the Amazon Software."
+https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L259
+
+i feel that just as they have a right to publish software in 
+obfuscated, closed-source form, i as a user should have a right to try 
+to learn from it. if i click 'view source' to see which font they used 
+in a header then that is part of my natural right to explore my 
+environment.
+
+Curiosity is not a crime. :)
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

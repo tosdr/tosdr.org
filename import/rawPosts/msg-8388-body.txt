@@ -1,0 +1,136 @@
+Return-Path: <tosdr+bncBC6JPJGM6UOBBY4AV6IAKGQENQMGQIQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E489E161743
+	for <anything@michielbdejong.com>; Wed, 14 Aug 2013 19:37:45 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E1354116063
+	for <anything@michielbdejong.com>; Wed, 14 Aug 2013 19:37:45 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id PjATgJBEanZL for <anything@michielbdejong.com>;
+	Wed, 14 Aug 2013 19:37:44 +0200 (CEST)
+Received: from mail-qa0-x239.google.com (mail-qa0-x239.google.com [IPv6:2607:f8b0:400d:c00::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 34A1C116080
+	for <anything@michielbdejong.com>; Wed, 14 Aug 2013 19:37:41 +0200 (CEST)
+Received: by mail-qa0-f57.google.com with SMTP id bv4sf1562358qab.2
+        for <anything@michielbdejong.com>; Wed, 14 Aug 2013 10:37:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=rQrGwIwCRJd/EVTlUIbXS1Jo3x3ak/q0gvyi2wlZCD8=;
+        b=yepHMas6+jBQnym1TJzuUUu6dLU0yAhw9UUCtMvhU06UpxWZKO/FuTRW+Sn+WNRYwx
+         ekdZ1xDQmGHydPuFcApjh7Xmi5Jc0PCwmGdLl8lcfFb/qhNZ9gbogXuG/27ZY8S7aH3h
+         GiQNkriqvjeOfPM3nLALcM0kY6Y0DPkx8bxdJmR8ra7/u4cesE46T8r0gEHTN8lQbGvM
+         t4dygBIlxdAW66QlOpemT568piLmpHPXYe6/Xs1RYd2UFEc5xFmFihyfZtlydSg78Ztp
+         BjsdodapEI/X05/zTpzasxVYVxeJqJCOwgJjObpg73gVMgbutUMcr/ieMrbVt+Ta5irv
+         W5WA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=rQrGwIwCRJd/EVTlUIbXS1Jo3x3ak/q0gvyi2wlZCD8=;
+        b=ombfqADmupZiswE8O7gqoC8LnA01IWmnmE24dJUH5xmF89e66ZPbZb7V/gEcy2ouYT
+         IOkEOBbXTavOwLT3jiYsgzdU16cZy0acw5V04BkhTHKbUaU+Ev2gFP8RKoEZlR6q3e/X
+         0xUUJxHFhKtFveEgsJ7q89CwqZtTqWFthVFDHui9I+Y+RzyiAEI0xOSzGk33agIsYcAm
+         15iAI3/SA4BjYwgCf2yD9dlJP1CcIEF0T8OB/Ir+gflxO1O1nF2HqxR8Ved2yz4E5sHv
+         BtT7BJdT1e2qmJAuAX64tNQPZeLpIChgsXFA0zEGYcyj1qoJQi0+F25KSK20O6S4xjRe
+         klzQ==
+X-Received: by 10.50.98.38 with SMTP id ef6mr180408igb.0.1376501859866;
+        Wed, 14 Aug 2013 10:37:39 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.36.69 with SMTP id o5ls3761427igj.32.gmail; Wed, 14 Aug
+ 2013 10:37:38 -0700 (PDT)
+X-Received: by 10.50.80.78 with SMTP id p14mr225905igx.6.1376501858970;
+        Wed, 14 Aug 2013 10:37:38 -0700 (PDT)
+Date: Wed, 14 Aug 2013 10:37:37 -0700 (PDT)
+From: Tobi Lehman <tobi.lehman@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <9fc28cab-1a12-4865-815d-7a54a2a21d1f@googlegroups.com>
+In-Reply-To: <1a074172f573fce712b6739cbcec83ae@michielbdejong.com>
+References: <1a074172f573fce712b6739cbcec83ae@michielbdejong.com>
+Subject: [tosdr:2662] Re: [Bad] Google Fiber + 4 other ISPs ban running your
+ own "servers"
+MIME-Version: 1.0
+X-Original-Sender: tobi.lehman@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_259_26710334.1376501857940"
+
+------=_Part_259_26710334.1376501857940
+Content-Type: text/plain; charset=ISO-8859-1
+
+I just saw this yesterday, are there any known ISPs' that *don't *say 
+people can't run their own servers? This is really bad, in my opinion.
+
+On Tuesday, August 13, 2013 6:45:04 AM UTC-7, Michiel B. de Jong wrote:
+>
+>
+> https://www.eff.org/deeplinks/2013/08/google-fiber-continues-awful-isp-tradition-banning-servers 
+>
+> The ToS of Comcast XFINITY, Verizon, Cox, and AT&T are also quoted. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_259_26710334.1376501857940
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I just saw this yesterday, are there any known ISPs' that =
+<i>don't </i>say people can't run their own servers? This is really bad, in=
+ my opinion.<br><br>On Tuesday, August 13, 2013 6:45:04 AM UTC-7, Michiel B=
+. de Jong wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin=
+-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><a href=3D"htt=
+ps://www.eff.org/deeplinks/2013/08/google-fiber-continues-awful-isp-traditi=
+on-banning-servers" target=3D"_blank">https://www.eff.org/deeplinks/<wbr>20=
+13/08/google-fiber-<wbr>continues-awful-isp-tradition-<wbr>banning-servers<=
+/a>
+<br>
+<br>The ToS of Comcast XFINITY, Verizon, Cox, and AT&amp;T are also quoted.
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_259_26710334.1376501857940--

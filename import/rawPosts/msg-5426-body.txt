@@ -1,0 +1,132 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBANJ46GQKGQEN3JPQHQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id EFD3F161735
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:17:40 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EBA1A178074
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:17:40 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id bEn+fydQWuoQ for <anything@michielbdejong.com>;
+	Thu, 13 Jun 2013 16:17:39 +0200 (CEST)
+Received: from mail-ee0-x23c.google.com (mail-ee0-x23c.google.com [IPv6:2a00:1450:4013:c00::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0CBA21780B1
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:17:38 +0200 (CEST)
+Received: by mail-ee0-f60.google.com with SMTP id c41sf1224157eek.5
+        for <anything@michielbdejong.com>; Thu, 13 Jun 2013 07:17:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:mime-version:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=Tf72dyHpCxHYsAEvotkjuTVyA7YSUax8u5ihsjszRkg=;
+        b=g1c490r8v6/1UUXBMuwmCv/PQBwJXgFfa7WjCNzru4gVx6MdJCtDnWzb5urU2Ji+Ma
+         Yo7lGeOHO7ja1lDOxtjnc3PBSj2ccPP7h3wXDumbK8q5YyqrjgqZQ9jmlMRgTRtzu3e8
+         lp9hSMLqRUeMz0+hTayGfh4tXtIVebseTOx4DnuDLifX3vdlV8JYt04HR1uRn6MKRtQM
+         8d/aIGm785CSMe4I9Q1/Vz4ZjdiTN4DKCQl0WDk7CT3nfpFzf6a6M+Yty6H+I0rm8h5G
+         NeCxP46QUM6vX9j+Y6+bPgMGSdBZy3Ksrl0a5Qx0+SCAcGyBqjj3z4GdzBoKELECvUE2
+         rWKQ==
+X-Received: by 10.180.78.105 with SMTP id a9mr970729wix.2.1371133057713;
+        Thu, 13 Jun 2013 07:17:37 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.79.170 with SMTP id k10ls480154wix.42.canary; Thu, 13 Jun
+ 2013 07:17:36 -0700 (PDT)
+X-Received: by 10.15.75.201 with SMTP id l49mr1303921eey.3.1371133056833;
+        Thu, 13 Jun 2013 07:17:36 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id n49si4821675eeu.0.2013.06.13.07.17.36
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 13 Jun 2013 07:17:36 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 2640F63B67D
+	for <tosdr@googlegroups.com>; Thu, 13 Jun 2013 16:17:36 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id xJFZdqP9N5dT for <tosdr@googlegroups.com>;
+	Thu, 13 Jun 2013 16:17:30 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 0436163B680
+	for <tosdr@googlegroups.com>; Thu, 13 Jun 2013 16:17:29 +0200 (CEST)
+Date: Thu, 13 Jun 2013 16:17:29 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: [tosdr:2292] Vimeo : Termination for breach
+Message-ID: <20130613141729.GA29212@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+MIME-Version: 1.0
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+   =20
+http://vimeo.com/terms
+
+    TERMINATION FOR BREACH: Vimeo may suspend, disable, or delete
+    your account (or any part thereof) or block or remove any
+    content you submitted if Vimeo determines that you have
+    violated any provision of this Agreement or that your conduct
+    or content would tend to damage Vimeo's reputation and
+    goodwill. If Vimeo deletes your account for the foregoing
+    reasons, you may not re-register for the Vimeo Service. Vimeo
+    may block your email address and Internet protocol address to
+    prevent further registration.
+
+Please let me compare directly with YouTube's equivalent:
+
+     =AB YouTube reserves the right to decide whether Content
+     violates these Terms of Service for reasons other than
+     copyright infringement, such as, but not limited to,
+     pornography, obscenity, or excessive length. YouTube may at
+     any time, without prior notice and in its sole discretion,
+     remove such Content and/or terminate a user's account for
+     submitting such material in violation of these Terms of
+     Service. =BB
+
+
+They're about the same, except for the point that YouTube
+explicitly reserves the right to do so without prior notice.
+
+I wonder what we should make of this.
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

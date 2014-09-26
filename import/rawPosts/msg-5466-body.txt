@@ -1,0 +1,147 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBNN45CGQKGQEU6BM6CI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id B9115161740
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 21:32:08 +0200 (CEST)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B5D591163ED
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 21:32:08 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id IE9hvY3QG2FS for <anything@michielbdejong.com>;
+	Thu, 13 Jun 2013 21:32:07 +0200 (CEST)
+Received: from mail-vb0-x239.google.com (mail-vb0-x239.google.com [IPv6:2607:f8b0:400c:c02::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id EE83311641A
+	for <michiel@michielbdejong.com>; Thu, 13 Jun 2013 21:32:06 +0200 (CEST)
+Received: by mail-vb0-f57.google.com with SMTP id p14sf2341617vbm.12
+        for <michiel@michielbdejong.com>; Thu, 13 Jun 2013 12:32:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=R3PXo+QA8Zti4Vu97YtHxy6Pr/BZiNOtUsMZCUAu5is=;
+        b=JOBOgIY14vUNXc4mOexWSY6Gxfyz11pMOQ883IxIFzNGssHnOKPwMAwO/a3SrCn/Ef
+         YAwIRwi67G4CKT2SwI03XxiQdbhqzjeR+wPGzdBMMH7DsGkr5qR1+7G56Z2f3ZRVnnEF
+         oqnZyt+F7hA1ZaOKV2BwMU7NoOF3zFjhOOmafBj12b39ogD8PvR6GU0mI095wqZlHbyE
+         4A2YeMTQf6+z+k12PbGpXk8LODf754JYLoYOCBrpVMofYfPuowE1v8KzYiWpuj9zcodK
+         hqwwFZ8j33qr/EyHNh1XljJMWXyqmuchgqR3L7H6Veza3xeqgjm5lzwJFILbEl8axs1g
+         S14w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=R3PXo+QA8Zti4Vu97YtHxy6Pr/BZiNOtUsMZCUAu5is=;
+        b=LRRGlNHwNp+OZ0GQ7QMpB+j3afNLoLXoEF1KhS0mDXKFUHH8CACR/4Zc7eL6QBn2Hs
+         DOl3eNszoiXZNeOtJykNa6yexeBlZ7BXZWvr+4emsuMaKNG5WRj6PaQPYlaos3n4YI7n
+         gFyiz57I7LEzhlisteiXnCj+a9sJ4mEdNVRFaqsNPmssY0x5fUXxSkMjfLm7Or8F5vhZ
+         UZQ5OalsJSmyLAunBwlTVe0I7zUWjBE6yYfBCgv+BvQFV64L219HM8h4RnQ/2L/aRsXP
+         IT+jlGXl9nmI9HOSpHCuLWtZRnjx1sedV3Bap9wV+9JTYcGV4UxWGtMY485rY78RtVNM
+         eccA==
+X-Received: by 10.49.24.208 with SMTP id w16mr117231qef.37.1371151925817;
+        Thu, 13 Jun 2013 12:32:05 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.58.4 with SMTP id m4ls854083qeq.52.gmail; Thu, 13 Jun 2013
+ 12:32:05 -0700 (PDT)
+X-Received: by 10.49.71.173 with SMTP id w13mr118809qeu.21.1371151925334;
+        Thu, 13 Jun 2013 12:32:05 -0700 (PDT)
+Date: Thu, 13 Jun 2013 12:32:04 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <fea3f733-21c2-42f2-95ed-c92ed6a5caf0@googlegroups.com>
+Subject: [tosdr:2306] Yahoo! doesn't guarantee quality of service
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_151_16535953.1371151924593"
+
+------=_Part_151_16535953.1371151924593
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> YAHOO! AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, 
+> PARTNERS AND LICENSORS MAKE NO WARRANTY THAT (i) THE YAHOO! SERVICES OR 
+> SOFTWARE WILL MEET YOUR REQUIREMENTS; (ii) THE YAHOO! SERVICES OR SOFTWARE 
+> WILL BE UNINTERRUPTED, TIMELY, SECURE OR ERROR-FREE; (iii) THE RESULTS THAT 
+> MAY BE OBTAINED FROM THE USE OF THE YAHOO! SERVICES OR SOFTWARE WILL BE 
+> ACCURATE OR RELIABLE; (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, 
+> INFORMATION OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE 
+> YAHOO! SERVICES OR SOFTWARE WILL MEET YOUR EXPECTATIONS; AND (v) ANY ERRORS 
+> IN THE SOFTWARE WILL BE CORRECTED.
+
+
+http://info.yahoo.com/legal/us/yahoo/utos/terms/
+
+How are we handling these kinds of clauses? On the one hand I know I'd 
+personally like for a service to provide some guarantees, but understand 
+that realistically that's impossible, especially for such a large service 
+like Yahoo!. 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_151_16535953.1371151924593
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(51, 51, 51); font-fa=
+mily: arial, helvetica, clean, sans-serif; font-size: 14px; line-height: 17=
+px;">YAHOO! AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, =
+PARTNERS AND LICENSORS MAKE NO WARRANTY THAT (i) THE YAHOO! SERVICES OR SOF=
+TWARE WILL MEET YOUR REQUIREMENTS; (ii) THE YAHOO! SERVICES OR SOFTWARE WIL=
+L BE UNINTERRUPTED, TIMELY, SECURE OR ERROR-FREE; (iii) THE RESULTS THAT MA=
+Y BE OBTAINED FROM THE USE OF THE YAHOO! SERVICES OR SOFTWARE WILL BE ACCUR=
+ATE OR RELIABLE; (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION OR=
+ OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE YAHOO! SERVICES OR=
+ SOFTWARE WILL MEET YOUR EXPECTATIONS; AND (v) ANY ERRORS IN THE SOFTWARE W=
+ILL BE CORRECTED.</span></blockquote><div><br></div><div><a href=3D"http://=
+info.yahoo.com/legal/us/yahoo/utos/terms/">http://info.yahoo.com/legal/us/y=
+ahoo/utos/terms/</a></div><div><br></div><div>How are we handling these kin=
+ds of clauses? On the one hand I know I'd personally like for a service to =
+provide some guarantees, but understand that realistically that's impossibl=
+e, especially for such a large service like Yahoo!.&nbsp;</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_151_16535953.1371151924593--

@@ -1,0 +1,137 @@
+Return-Path: <tosdr+bncBCN23IMP34ARBC6U5SIAKGQERCRYSCQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 9BEFA161743
+	for <anything@michielbdejong.com>; Mon, 26 Aug 2013 12:12:33 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 97771142200
+	for <anything@michielbdejong.com>; Mon, 26 Aug 2013 12:12:33 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id WkW5kv6YqMF1 for <anything@michielbdejong.com>;
+	Mon, 26 Aug 2013 12:12:31 +0200 (CEST)
+Received: from mail-qe0-x237.google.com (mail-qe0-x237.google.com [IPv6:2607:f8b0:400d:c02::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 90EF7142216
+	for <michiel@michielbdejong.com>; Mon, 26 Aug 2013 12:12:28 +0200 (CEST)
+Received: by mail-qe0-f55.google.com with SMTP id 5sf920822qeb.20
+        for <michiel@michielbdejong.com>; Mon, 26 Aug 2013 03:12:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:from:to:subject:in-reply-to:references:message-id
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=UzUv66JCoPeW+li8h7WyKv1HZ4O+mkIU0ZVt5dY+3tI=;
+        b=WtkZbEQ6o9Wq6wU0dYi5mLW1bgLFPGdCIKB7BcM6ZB5qoOmLrZvDXlGLU0X7AwQwDq
+         V6hipf72x5YLnp8rpHno6272P0wJeUVOJC9ltoEbGPWDe4vgaNoDDOav4kuQuq5NzKW/
+         xM7lRyPvNaIXCF5VaXHLs01HCFJO+uqmasG5MiJibZFFfB+CH2N4DjjBoJqVfhLw0M8K
+         mGZ6DTWxjX2id7G8y6qmDgQ7k52F86UDiAQw5JIan+ZT7uCBoxfmpR+hEJHHHtovQtBV
+         3ttvocUUZNHjUhYGF67UiL0NFbzEBwoDDsd64MCDuP1prRyBUIM7CFdrAfjMtLCpVJSF
+         3rPA==
+X-Received: by 10.49.64.72 with SMTP id m8mr1272qes.20.1377511947561;
+        Mon, 26 Aug 2013 03:12:27 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.48.49 with SMTP id i17ls2288653qen.44.gmail; Mon, 26 Aug
+ 2013 03:12:27 -0700 (PDT)
+X-Received: by 10.236.111.73 with SMTP id v49mr4802717yhg.46.1377511947034;
+        Mon, 26 Aug 2013 03:12:27 -0700 (PDT)
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [217.70.183.197])
+        by gmr-mx.google.com with ESMTP id t6si2094964qcj.3.1969.12.31.16.00.00;
+        Mon, 26 Aug 2013 03:12:26 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.70.183.197 is neither permitted nor denied by best guess record for domain of anything@michielbdejong.com) client-ip=217.70.183.197;
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 6EBDE41C05D
+	for <tosdr@googlegroups.com>; Mon, 26 Aug 2013 12:12:16 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from relay5-d.mail.gandi.net ([217.70.183.197])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id cr8Mqh8XuT30 for <tosdr@googlegroups.com>;
+	Mon, 26 Aug 2013 12:12:15 +0200 (CEST)
+X-Originating-IP: 10.58.1.142
+Received: from webmail.gandi.net (unknown [10.58.1.142])
+	(Authenticated sender: anything@michielbdejong.com)
+	by relay5-d.mail.gandi.net (Postfix) with ESMTPA id 0EF6641C06A
+	for <tosdr@googlegroups.com>; Mon, 26 Aug 2013 12:12:14 +0200 (CEST)
+MIME-Version: 1.0
+Date: Mon, 26 Aug 2013 12:12:14 +0200
+From: "Michiel B. de Jong" <anything@michielbdejong.com>
+To: <tosdr@googlegroups.com>
+Subject: Re: [tosdr:2674] ToSBack: Policy Changes
+In-Reply-To: <59d87eddad36daee6b89d7eb13205074@michielbdejong.com>
+References: <5214432036461_2297408c01a971c@dragon.mail>
+ <59d87eddad36daee6b89d7eb13205074@michielbdejong.com>
+Message-ID: <344f957eb982a26dbac1a19e2b809284@michielbdejong.com>
+X-Sender: anything@michielbdejong.com
+User-Agent: Roundcube Webmail/0.7.2
+X-Original-Sender: anything@michielbdejong.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 217.70.183.197 is neither permitted nor denied by best guess
+ record for domain of anything@michielbdejong.com) smtp.mail=anything@michielbdejong.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+On 2013-08-22 05:52, Michiel B. de Jong wrote:
+> On 2013-08-21 06:33, ToSBack wrote:
+>> foursquare.com: Privacy Policy
+>>  These were changed in last night's crawl. Please have a look at the
+>> commit at
+>>=20
+>> https://github.com/tosdr/tosback2/commit/86fa557194864c9245ae153eada216b=
+d6add1762
+>> to see the differences!
+>
+> this seems significant:
+>=20
+> http://gigaom.com/2013/08/21/is-foursquares-dream-of-being-the-location-l=
+ayer-of-the-internet-coming-true/
+
+ok, two replies to this on Twitter claim that this did not actually=20
+change whether they claim the right to track you if you don't=20
+pro-actively activate Radar:
+
+https://twitter.com/chrisirmo/status/370612195895156737
+https://twitter.com/4sqSupport/status/370571058006351874
+
+The way i understood it is that 'background location' refers to a=20
+functionality of iPhone 4 and up, and so deactivating Radar would not=20
+necessarily deactivate it. See also=20
+http://stackoverflow.com/questions/7457956/iphone-deactivate-cllocationmana=
+ger-events-when-in-background-mode
+
+So this point is now in a 'disputed' state, and someone with access to=20
+an iPhone 4+ will have to try and find out what Foursquare's phrase "If=20
+you have =91background location=92 turned on..." actually means, and whethe=
+r=20
+users can be expected to understand that they should refrain from=20
+switching off background location if they don't want to be tracked by=20
+Foursquare.
+
+an important question is also whether you can turn 'background=20
+location' on and off on a per-app basis, or whether this is a=20
+device-wide setting.
+
+to be continued.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

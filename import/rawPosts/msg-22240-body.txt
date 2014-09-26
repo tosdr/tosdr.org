@@ -1,0 +1,196 @@
+Return-Path: <tosdr+bncBCYIVNHJ5EARBTU6UGQAKGQE67HXSNA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 34DF94091A
+	for <anything@michielbdejong.com>; Thu,  4 Sep 2014 13:39:00 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 33129226079
+	for <anything@michielbdejong.com>; Thu,  4 Sep 2014 13:39:00 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id lRemQWvRHOR2 for <anything@michielbdejong.com>;
+	Thu,  4 Sep 2014 13:38:58 +0200 (CEST)
+Received: from mail-vc0-x239.google.com (mail-vc0-x239.google.com [IPv6:2607:f8b0:400c:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 70CF4226069
+	for <anything@michielbdejong.com>; Thu,  4 Sep 2014 13:38:55 +0200 (CEST)
+Received: by mail-vc0-f185.google.com with SMTP id id10sf2048195vcb.22
+        for <anything@michielbdejong.com>; Thu, 04 Sep 2014 04:38:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=tgajVnEB1G0cs/CVIu8O9ggX8SAvI7SpAHHUktqhw3I=;
+        b=Y+rh2v0KT5M4TVpY/CH98wAUeGjws5It3uRzhMWKUl+BryVG3FnE4tKtYvOudF99E5
+         DojAVe5Vzc3FNDdn8sO3JnnB++ckcMfa4yk54zzqRO/8qJFR4PEJ3XRkHHiawJyqrQih
+         D+j2jivCiPbi3Rq6iNaTAHZhFw5gB6tUlh3IhlD9Anz/S30xp5rcHzflvsjSxG4rYwKu
+         UCPYJySAcLVO5q71FXBLE8htxFE/3jI+eOJOqy4UT3wuNi4IAd9ojKZVSov9j2dLLk2z
+         b89gYsnb8LWqS+fPDKHhf3caK7S4x/wabCLAENjrVHKtRO6tmi/FXM0ndT+hFFAmoLG5
+         2g3A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=tgajVnEB1G0cs/CVIu8O9ggX8SAvI7SpAHHUktqhw3I=;
+        b=uxTFo8QC9zPsw5z2aqhENwhjVXfsWKyPebt1vMBH2/nPkblYI9scRjenDsyVQ5wluA
+         +7VziZi/xgGo63IdhFaaitStEsneDLrkBcL+YFWoRzVd9Vr/BjPHz4kmF9tdLdZDNi/R
+         DH0TF1K+XDulUSQRw1fec19SAhi1N9PeNyxtSfZk+EDQgdN2iSDi14uJrlCxetV56RN1
+         fYJfRaaLcznlNAQAKjjBpA9iq0xEeFAlEuMN3swzxYk8Z8OFktRCJsjDGoW5AG8ij3aj
+         5K0KLjsGnS8XKP1Kv12VpGjAHDMsCU/Y5muHxzKoCPqF0O3nqtvFV9bSYKP0t85du7Fb
+         j62g==
+X-Received: by 10.140.36.234 with SMTP id p97mr26104qgp.14.1409830734216;
+        Thu, 04 Sep 2014 04:38:54 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.30.55 with SMTP id c52ls228389qgc.8.gmail; Thu, 04 Sep
+ 2014 04:38:53 -0700 (PDT)
+X-Received: by 10.140.25.162 with SMTP id 31mr38448qgt.9.1409830733872;
+        Thu, 04 Sep 2014 04:38:53 -0700 (PDT)
+Date: Thu, 4 Sep 2014 04:38:53 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Cc: aanmeldingen49@gmail.com, aanmeldingen49@gmail.com
+Message-Id: <7b86dfd0-f2c6-4c5c-ac20-30c68875ca2f@googlegroups.com>
+In-Reply-To: <20140903214124.GA6681@xps>
+References: <8ad3373e-8ed0-42b9-b894-b2d679e7e276@googlegroups.com>
+ <20140903214124.GA6681@xps>
+Subject: Re: [tosdr:3201] The new General Data Protection Regulation:
+ standarised information policies
+MIME-Version: 1.0
+X-Original-Sender: aanmeldingen49@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_224_783330472.1409830733419"
+
+------=_Part_224_783330472.1409830733419
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Op woensdag 3 september 2014 23:41:49 UTC+2 schreef Hugo Roy:
+>
+> As a matter of fact, I was invited in january 2013 to explain=20
+> at a hearing to the European Parliament what we have done with=20
+> ToS;DR.=20
+>
+> You should find some notes here,=20
+> http://tosdr.org/ep-hearing-201301.html=20
+>
+> Best,=20
+> Hugo=20
+>
+
+> --=20
+> Hugo Roy  =20
+> Project Lead, Terms of Service; Didn't Read <www.tosdr.org>  =20
+>  =20
+> Please use cryptography for email: see=20
+> https://emailselfdefense.fsf.org/en/=20
+> Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email : voir=20
+> https://emailselfdefense.fsf.org/fr/=20
+>
+
+
+Really? That is awesome! They must have based this article on your=20
+presentation then. Anyway, it's great to see that the EP is actually doing=
+=20
+something with the input they receive.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_224_783330472.1409830733419
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br>Op woensdag 3 september 2014 23:41:49 UTC+2 schree=
+f Hugo Roy:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left=
+: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">As a matter of fact=
+, I was invited in january 2013 to explain
+<br>at a hearing to the European Parliament what we have done with
+<br>ToS;DR.
+<br>
+<br>You should find some notes here,
+<br><a href=3D"http://tosdr.org/ep-hearing-201301.html" target=3D"_blank" o=
+nmousedown=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%2Ftosdr=
+.org%2Fep-hearing-201301.html\46sa\75D\46sntz\0751\46usg\75AFQjCNHRDFwTuZAX=
+9e2qF3DjlKxBLHshsA';return true;" onclick=3D"this.href=3D'http://www.google=
+.com/url?q\75http%3A%2F%2Ftosdr.org%2Fep-hearing-201301.html\46sa\75D\46snt=
+z\0751\46usg\75AFQjCNHRDFwTuZAX9e2qF3DjlKxBLHshsA';return true;">http://tos=
+dr.org/ep-hearing-<wbr>201301.html</a>
+<br>
+<br>Best,
+<br>Hugo
+<br></blockquote><div></div><blockquote class=3D"gmail_quote" style=3D"marg=
+in: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">
+<br>--=20
+<br>Hugo Roy &nbsp;
+<br>Project Lead, Terms of Service; Didn't Read &lt;<a href=3D"http://www.t=
+osdr.org" target=3D"_blank" onmousedown=3D"this.href=3D'http://www.google.c=
+om/url?q\75http%3A%2F%2Fwww.tosdr.org\46sa\75D\46sntz\0751\46usg\75AFQjCNHv=
+g72Qhiidfi8_f6rXqmD0_LzH9g';return true;" onclick=3D"this.href=3D'http://ww=
+w.google.com/url?q\75http%3A%2F%2Fwww.tosdr.org\46sa\75D\46sntz\0751\46usg\=
+75AFQjCNHvg72Qhiidfi8_f6rXqmD0_LzH9g';return true;">www.tosdr.org</a>&gt; &=
+nbsp;
+<br>&nbsp;
+<br>Please use cryptography for email: see <a href=3D"https://emailselfdefe=
+nse.fsf.org/en/" target=3D"_blank" onmousedown=3D"this.href=3D'https://www.=
+google.com/url?q\75https%3A%2F%2Femailselfdefense.fsf.org%2Fen%2F\46sa\75D\=
+46sntz\0751\46usg\75AFQjCNGrR_TaiBijspMgtpQNyUF5tl4SgQ';return true;" oncli=
+ck=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F%2Femailselfde=
+fense.fsf.org%2Fen%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNGrR_TaiBijspMgtpQN=
+yUF5tl4SgQ';return true;">https://emailselfdefense.fsf.<wbr>org/en/</a>
+<br>Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email&nbsp;: v=
+oir <a href=3D"https://emailselfdefense.fsf.org/fr/" target=3D"_blank" onmo=
+usedown=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F%2Femails=
+elfdefense.fsf.org%2Ffr%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNHBz1iWMr_XFXM=
+MzigmqLlD_R6AYA';return true;" onclick=3D"this.href=3D'https://www.google.c=
+om/url?q\75https%3A%2F%2Femailselfdefense.fsf.org%2Ffr%2F\46sa\75D\46sntz\0=
+751\46usg\75AFQjCNHBz1iWMr_XFXMMzigmqLlD_R6AYA';return true;">https://email=
+selfdefense.fsf.<wbr>org/fr/</a>
+<br></blockquote><div><br><br>Really? That is awesome! They must have based=
+ this article on your=20
+presentation then. Anyway, it's great to see that the EP is actually=20
+doing something with the input they receive.<br></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_224_783330472.1409830733419--

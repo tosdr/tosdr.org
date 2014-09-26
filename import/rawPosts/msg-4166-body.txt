@@ -1,0 +1,125 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBPEB6WGAKGQE7LXPBBY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A13CD16174B
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 00:03:47 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9EBFC226078
+	for <anything@michielbdejong.com>; Thu, 23 May 2013 00:03:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id T7D7b4q8mYdd for <anything@michielbdejong.com>;
+	Thu, 23 May 2013 00:03:45 +0200 (CEST)
+Received: from mail-we0-x23d.google.com (mail-we0-x23d.google.com [IPv6:2a00:1450:400c:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id BA9E1226083
+	for <michiel@michielbdejong.com>; Thu, 23 May 2013 00:03:42 +0200 (CEST)
+Received: by mail-we0-f189.google.com with SMTP id u57sf316304wes.16
+        for <michiel@michielbdejong.com>; Wed, 22 May 2013 15:03:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:in-reply-to:user-agent
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-disposition:content-transfer-encoding;
+        bh=cMCuenm6OPlnsC+v66ObMuMEOscQXMKNfgeY91oNKUE=;
+        b=hRqkIjMaY5a05jIFdH/Vgj0ZnEuOFPHF8ab62VvuI1Cyix0HZniHWZosIag4nulLvg
+         HSayFLgMeE7X5IC1pqLR0AIlCr2lXwp61rlflIGy362LgIQkGZS6flxYfgnpmrDfzZTK
+         jQnMryFxokggOPaaworCCg7HSGqxNKHbRCCcDA/NktyX18zzSWK+G1o4Y09yLMAWojSk
+         IM56QLO2C1Sr2HTK94eyNyL3X9jB1D0+ZTy8OuVhkD/bNljvYNNkacLlYNcxy2+MJYH1
+         lR24Mc1Zf64+/aXp2GSjPcOZsi3Em8ZjkadaSePcGiGoKNeVq+0zGwGfxgyrelbSSkoa
+         sCQQ==
+X-Received: by 10.180.9.66 with SMTP id x2mr1571784wia.4.1369260221388;
+        Wed, 22 May 2013 15:03:41 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.160.130 with SMTP id xk2ls683457wib.15.gmail; Wed, 22 May
+ 2013 15:03:39 -0700 (PDT)
+X-Received: by 10.15.42.72 with SMTP id t48mr10071445eev.7.1369260219709;
+        Wed, 22 May 2013 15:03:39 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id o5si2308162eew.0.2013.05.22.15.03.39
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 22 May 2013 15:03:39 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4E7C563A5F6
+	for <tosdr@googlegroups.com>; Thu, 23 May 2013 00:03:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id hN+wqHepdZR7 for <tosdr@googlegroups.com>;
+	Thu, 23 May 2013 00:03:36 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 8635563A5EB
+	for <tosdr@googlegroups.com>; Thu, 23 May 2013 00:03:36 +0200 (CEST)
+Date: Thu, 23 May 2013 00:03:35 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2207] [Info] Amazon Choice of law: Federal Arbitration
+ Act, federal laws and state of Washington
+Message-ID: <20130522220335.GD23285@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <fb3de5b6-b160-4324-ba02-32f5d066edda@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <fb3de5b6-b160-4324-ba02-32f5d066edda@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Le jeu. 23/08/12, 03:43, Sebasti=E1n Waisbrot <seppo0010@gmail.com>:
+> http://www.amazon.com/gp/help/customer/display.html/ref=3Dfooter_cou?ie=
+=3DUTF8&nodeId=3D508088
+>=20
+> > By visiting Amazon.com, you agree that the Federal Arbitration Act,=20
+> > applicable federal law, and the laws of the state of Washington, withou=
+t=20
+> > regard to principles of conflict of laws, will govern these Conditions =
+of=20
+> > Use and any dispute of any sort that might arise between you and Amazon=
+.
+>=20
+
+Thanks, that's interesting. What does that mean exactly that the
+applicable law is going to be the federal arbitration act? The way
+I read it, it does not necessarily means that any dispute is going
+to be subject to arbitration.
+
+Am I misreading this?
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

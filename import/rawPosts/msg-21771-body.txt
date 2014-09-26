@@ -1,0 +1,207 @@
+Return-Path: <tosdr+bncBDEM7TXF44ORBY7R7GPAKGQEC25OX3I@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D911F40914
+	for <anything@michielbdejong.com>; Sun,  3 Aug 2014 20:01:13 +0200 (CEST)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D6B46116023
+	for <anything@michielbdejong.com>; Sun,  3 Aug 2014 20:01:13 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Pfeda1qOTZM0 for <anything@michielbdejong.com>;
+	Sun,  3 Aug 2014 20:01:12 +0200 (CEST)
+Received: from mail-pa0-x237.google.com (mail-pa0-x237.google.com [IPv6:2607:f8b0:400e:c03::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D5019116032
+	for <anything@michielbdejong.com>; Sun,  3 Aug 2014 20:01:08 +0200 (CEST)
+Received: by mail-pa0-f55.google.com with SMTP id rd3sf1600949pab.10
+        for <anything@michielbdejong.com>; Sun, 03 Aug 2014 11:01:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=F7bdfqngVwDeOYDHoSp4l4+xqdZy9SLWLFx0AlPAlXg=;
+        b=qNai0+wKakmp4e8JNRfEVJvGieggErbAbn/nIkjAdceYJkVJ1arwXq6cODCW5tcPsg
+         iQJLou4zPBV6YeKAGcJ5LIEDMAGjuUaJXK7NT096pLXIYRZgC/Zzr3x9kf8DUu2zl89P
+         4L5FGaUphwVPyn8AD+a8NG2lKAtmRcYiX8syxw6mPQTT8HikvFenIGbCFnJs81Yu5MVo
+         Z9y2ntITrRJ674oZc3sTZ8GkInK73i2CMLc5TliS+pZYoDvoQtpbKnxJ4UVxIqgIy3Vl
+         r4nydi+Xn9hvBUo5+cZih3Dhjy4kP5n61xQAf+OgyWbYVjg6kO2IS/SAGiwMG3KUBiwG
+         l1bw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=F7bdfqngVwDeOYDHoSp4l4+xqdZy9SLWLFx0AlPAlXg=;
+        b=h/gM5+NpLv2QReLlFGGDUHPlJ/vPExx8ht6mrcor/6OJciUMz58B+jHYnex82ykSeD
+         3yDZ0i2lLKpMKWOtAHekIvCPMGAOOHfofUV5CSpcvGWfAoXfLOK+KUlcvJDUISKcYHQJ
+         O4kIGo3R988eMYiQ4M70JaiP2vZZQVLrXAqiG2YX19Wvsj0CaELhbjdGpOFO4gfvltiS
+         q9gMEwE8JsKBpNx/UWbt++ngfv/VKhcpIK6tla9KkAb1oCAucb0d/GDFbl+Os4K7bpfS
+         mZhNRLnKPri+nU/O9EHHtVBenB+HQPLHNKpZzRcsMcnvY+kf65uhH8hXzuS56adJSvHK
+         jNgA==
+X-Received: by 10.140.30.52 with SMTP id c49mr558qgc.7.1407088867214;
+        Sun, 03 Aug 2014 11:01:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.20.23 with SMTP id 23ls2000817qgi.26.gmail; Sun, 03 Aug
+ 2014 11:01:07 -0700 (PDT)
+X-Received: by 10.140.88.201 with SMTP id t67mr0qgd.25.1407088865952;
+        Sun, 03 Aug 2014 11:01:05 -0700 (PDT)
+Date: Sun, 3 Aug 2014 11:01:05 -0700 (PDT)
+From: JC Torpey <torpeyjc@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <905b15aa-d6f5-404d-8828-6d290dc23586@googlegroups.com>
+In-Reply-To: <d4133fe3-1350-4997-836d-230f26de67c0@googlegroups.com>
+References: <d4133fe3-1350-4997-836d-230f26de67c0@googlegroups.com>
+Subject: [tosdr:3120] Re: TOSDR: Why don't you make guidelines/templates for
+ writing ToS?
+MIME-Version: 1.0
+X-Original-Sender: torpeyjc@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_132_2076679035.1407088865533"
+
+------=_Part_132_2076679035.1407088865533
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+From the POV of a writer who's written dozens of TOS, Privacy Policies and=
+=20
+other contracts including various legal agreement types for websites,=20
+businesses and fellow freelancers I can say that writing them is even more=
+=20
+time consuming and difficult than reading them is.=20
+
+As such, I agree that there has to be a better way and I'd be more than=20
+happy to collaborate in a first go at a short, sweet and to the point TOS=
+=20
+template that website owners can use and modify for their individual needs.=
+=20
+I have experience with Wikip style licensing and contracts plus a few=20
+attorneys with whom I can collaborate to ensure the proper legalese is=20
+covered.=20
+
+I can dedicate a few hours a week to this or to other TOSDR projects (and=
+=20
+can start anytime after August 8) if anyone is interested in collaborating?=
+=20
+
+I think its high time we stop waiting for someone else to create the free=
+=20
+and open Internet that everyone really can use and get to work on it=20
+ourselves, don't you?=20
+
+~~ JC Torpey
+
+On Thursday, July 10, 2014 7:00:11 PM UTC-4, Bern=C3=A1t Kall=C3=B3 wrote:
+>
+> Hello!
+>
+> I'm so glad to see your movement!
+>
+> I have a suggestion (don't know if it has been posted already): Why don't=
+=20
+> you start writing guidelines for those who want to write legally correct=
+=20
+> but still human-readable ToS? I've seen your Legal page, and it's really=
+=20
+> nice. But if i have a service, how can i write something this short, whil=
+e=20
+> being sure that i won't get into trouble?
+>
+> What could be even cooler is to create ToS templates, like Creative=20
+> Commons did for licences. I mean, if i'm a developer of a service, i coul=
+d=20
+> assemble a ToS from little pieces, something like "tosdr-nw-nhc", which=
+=20
+> would mean No Warranties provided and No Harmful Content allowed. Of=20
+> course, usually there would be more pieces than just two. Then users woul=
+d=20
+> need to read the respective rules only once.
+>
+> What do you think?
+>
+> Cheers,
+> Bern=C3=A1t
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_132_2076679035.1407088865533
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">From the POV of a writer who's written dozens of TOS, Priv=
+acy Policies and other contracts including various legal agreement types fo=
+r=20
+websites, businesses and fellow freelancers I can say that writing them is =
+even
+ more time consuming and difficult than reading them is. <br><br>As such, I=
+ agree that there has to be a better way and I'd be more than happy to coll=
+aborate in a first go at a short, sweet=20
+and to the point TOS template that website owners can use and modify for th=
+eir individual needs. <br>I have experience with Wikip style licensing and =
+contracts plus a few attorneys with whom I can collaborate to ensure the pr=
+oper legalese is covered. <br><br>I can dedicate a few hours a week to this=
+ or to other TOSDR projects (and can start anytime after August 8) if anyon=
+e is interested in collaborating? <br><br>I think its high time we stop wai=
+ting for someone else to create the free and open Internet that everyone re=
+ally can use and get to work on it ourselves, don't you? <br><br>~~ JC Torp=
+ey<br><br>On Thursday, July 10, 2014 7:00:11 PM UTC-4, Bern=C3=A1t Kall=C3=
+=B3 wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left:=
+ 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div dir=3D"ltr">Hel=
+lo!<div><br></div><div>I'm so glad to see your movement!</div><div><br></di=
+v><div>I have a suggestion (don't know if it has been posted already): Why =
+don't you start writing guidelines for those who want to write legally corr=
+ect but still human-readable ToS? I've seen your Legal page, and it's reall=
+y nice. But if i have a service, how can i write something this short, whil=
+e being sure that i won't get into trouble?</div><div><br></div><div>What c=
+ould be even cooler is to create ToS templates, like Creative Commons did f=
+or licences. I mean, if i'm a developer of a service, i could assemble a To=
+S from little pieces, something like "tosdr-nw-nhc", which would mean No Wa=
+rranties provided and No Harmful Content allowed. Of course, usually there =
+would be more pieces than just two. Then users would need to read the respe=
+ctive rules only once.</div><div><br></div><div>What do you think?</div><di=
+v><br></div><div>Cheers,</div><div>Bern=C3=A1t</div></div></blockquote></di=
+v>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_132_2076679035.1407088865533--

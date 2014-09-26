@@ -1,0 +1,134 @@
+Return-Path: <tosdr+bncBC6JPJGM6UOBBZ7YXCKAKGQER3QTQLI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id EAFF4413A7
+	for <anything@michielbdejong.com>; Thu, 21 Nov 2013 18:01:30 +0100 (CET)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E44B214230F
+	for <anything@michielbdejong.com>; Thu, 21 Nov 2013 18:01:30 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yjNjBIzDen+k for <anything@michielbdejong.com>;
+	Thu, 21 Nov 2013 18:01:29 +0100 (CET)
+Received: from mail-vc0-x240.google.com (mail-vc0-x240.google.com [IPv6:2607:f8b0:400c:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E5BE114229E
+	for <michiel@michielbdejong.com>; Thu, 21 Nov 2013 18:01:28 +0100 (CET)
+Received: by mail-vc0-f192.google.com with SMTP id lc6sf3901vcb.9
+        for <michiel@michielbdejong.com>; Thu, 21 Nov 2013 09:01:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=BFxp/yq9UfSuUCB0Md1zKgVTwVjMaUg2Q5LdOxLmewU=;
+        b=BG3dr1GndYteUpHpxIb8yPLn6VpQjcV/7LdDg3AhgcQZ3oFVXTwKRZ2UTsk0mKrwVk
+         tElXvj8aqUVRG2EyjzQQ7VYSK+ED2OyH7sMbmBMVoUvaUvfLUlDOlUC69etsSbT42QbC
+         dFe+ElZb0fesLEysBBVhaLNkkgk1VpijQhygZPDZX/U3TU5pOoZYsxuEH1qbtvKqsTW8
+         Uf5LUSSVYeXsCVL7K7SJmXBq09ouJ5T5eXzEkj01dQdWp0qYc1mNuQ+uKeI7LdtfDw+A
+         G79N1AntUbpNGkDA3x1R33s+k2/CEtFxT/ossZOhtUYNlIpiTCAQ/YVLzMuQD8Efo5J8
+         SPuw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=BFxp/yq9UfSuUCB0Md1zKgVTwVjMaUg2Q5LdOxLmewU=;
+        b=1CInnTg15G4Qb2S3woQvtO23rLBH6SJ7W3g/a8bUZbqcpv8K9Z+17wmcR32XbDmRFS
+         98+5ASuquNCE45IqAnxS6fhlniMYU44GWatARsLa7iCZcTj9RTEd4r8wzDiwu5E9MVtg
+         XV2IlwGnx2jWdlK9ZFLCtDpVb1nv1q0VNtQJAKAaqdD6zlR+4oELq87y2I6az2QdgoVe
+         xS2wwRbe6ovLu50SkKqeRovBMAXakNZ2Dv2XDB5pYhlI7Ofg2VV/xvwdhagUitePPTAi
+         JMiZ1uwPh7hg9iwjKf1RFKI/01GuWLwDvK6guqW/gjxeA6HtNMniETSxj7o6dZzYe+sP
+         55vg==
+X-Received: by 10.182.44.163 with SMTP id f3mr35363obm.34.1385053287580;
+        Thu, 21 Nov 2013 09:01:27 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.131.169 with SMTP id on9ls295040obb.68.gmail; Thu, 21 Nov
+ 2013 09:01:27 -0800 (PST)
+X-Received: by 10.182.117.138 with SMTP id ke10mr2827obb.42.1385053287202;
+        Thu, 21 Nov 2013 09:01:27 -0800 (PST)
+Date: Thu, 21 Nov 2013 09:01:25 -0800 (PST)
+From: Tobi Lehman <tobi.lehman@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <d59baee2-91f6-424c-bbc5-952e6ee1d2f3@googlegroups.com>
+In-Reply-To: <03677a30-57ae-4fb3-b18e-919fa84caba9@googlegroups.com>
+References: <88839100-e6e5-4e8c-bf78-eb24ce312408@googlegroups.com>
+ <03677a30-57ae-4fb3-b18e-919fa84caba9@googlegroups.com>
+Subject: [tosdr:2808] Re: Ancestry.com reserves the right to change the
+ policies (no advance notice mentioned)
+MIME-Version: 1.0
+X-Original-Sender: tobi.lehman@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_8_16568235.1385053285626"
+
+------=_Part_8_16568235.1385053285626
+Content-Type: text/plain; charset=ISO-8859-1
+
+Yes, at the very least there should be a notice before the change goes into 
+effect, Google is good about doing this.
+
+On Thursday, November 21, 2013 8:30:18 AM UTC-8, Hannah Poteat wrote:
+>
+> You're right in that it is common, but it isn't okay. More and more courts 
+> are striking down terms of service agreements that claim the ability to 
+> unilaterally modify the contract without notice. That kind of provision 
+> creates what's called an illusory contract: it isn't a /real/ legal 
+> agreement, and it's totally unfair. Organizations that put this in their 
+> terms are ultimately only harming themselves.
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_8_16568235.1385053285626
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Yes, at the very least there should be a notice before the=
+ change goes into effect, Google is good about doing this.<br><br>On Thursd=
+ay, November 21, 2013 8:30:18 AM UTC-8, Hannah Poteat wrote:<blockquote cla=
+ss=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #=
+ccc solid;padding-left: 1ex;">You're right in that it is common, but it isn=
+'t okay. More and more courts are striking down terms of service agreements=
+ that claim the ability to unilaterally modify the contract without notice.=
+ That kind of provision creates what's called an illusory contract: it isn'=
+t a /real/ legal agreement, and it's totally unfair. Organizations that put=
+ this in their terms are ultimately only harming themselves.<p></p></blockq=
+uote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_8_16568235.1385053285626--

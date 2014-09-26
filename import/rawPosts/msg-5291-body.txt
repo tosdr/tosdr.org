@@ -1,0 +1,156 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBJP63WGQKGQEHSEGWNA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A2CB0161735
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:48:58 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9F9CB14206D
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:48:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id voppQLpKDhR2 for <anything@michielbdejong.com>;
+	Tue, 11 Jun 2013 21:48:57 +0200 (CEST)
+Received: from mail-pb0-x238.google.com (mail-pb0-x238.google.com [IPv6:2607:f8b0:400e:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2A7E11420BB
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:48:55 +0200 (CEST)
+Received: by mail-pb0-f56.google.com with SMTP id rp16sf1645251pbb.21
+        for <anything@michielbdejong.com>; Tue, 11 Jun 2013 12:48:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=taMWQpxG2RxKDnl7ELOTiSGPbBinuR0COOCbPRTVs5c=;
+        b=R+mCHUTjiMwHoQdOR6S6K8M7qOBAcZuGpx356He+jg/LSUqjIFaL3g+oyDOWXCFsHf
+         i+TIr5rHzHcAZr4qOeawrw/B0sRpfSIp2sIaim6eiwGD8Wc/ywnvSMUlzGBVkI5zth7W
+         2ma2rcrA/9QsCfMPG0v84Uj/Wn+3I/8+gm9ATqPFBJMwX/UOPifZfByg2HzJZb75DZng
+         nIJmkEKOYEEZjW5MevvvL4tvwTQfg0FqHBwhruS4d2P4tOM2RfHOw3Dkd1Q4JvRxRu8t
+         SzrETVJrqRvQPucT6TpZaTe/B8Ntn6yqKjpXoi4SxIlXGFkSQZeX/lOaH6TqFH1ow7VL
+         SfSw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=taMWQpxG2RxKDnl7ELOTiSGPbBinuR0COOCbPRTVs5c=;
+        b=pWwUMvv4Z6qmHrKD18V/kyNgg0+d5+n4cNvdMNM1cv8FbxlxYZU2Foc6aZ/Hsr6yNP
+         IV/llTxBuftDOL4Wey9Mqnc0sHhMwNol+zMFTC0zJPZS08kXTj14E+XdziFxg8oXZysX
+         oir9RnWxwj0zX1jqujasQKDbQe0OusXwI/mxrFwUfAk1+qVjDgmVgjjVrae+MAdPzv7B
+         kF019zXychk8sEZfG1i9AJeuNhl831DnO/iWUo4O6INBjK+sh9eF/hMUgr+f7Y6ZQaxp
+         K3sE3J+DYt5/iclLn+s6iT7g6zTlLczdOwOJXWzTWfPnNLKharkKlMFim7KHa5N8wJFg
+         iBkg==
+X-Received: by 10.49.27.138 with SMTP id t10mr922447qeg.31.1370980134183;
+        Tue, 11 Jun 2013 12:48:54 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.39.3 with SMTP id l3ls1084792qek.62.gmail; Tue, 11 Jun 2013
+ 12:48:53 -0700 (PDT)
+X-Received: by 10.49.116.132 with SMTP id jw4mr962214qeb.33.1370980133811;
+        Tue, 11 Jun 2013 12:48:53 -0700 (PDT)
+Date: Tue, 11 Jun 2013 12:48:53 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <963f4342-bb3d-46a2-acd2-a7e2716dc79a@googlegroups.com>
+In-Reply-To: <3d2a54f5-f847-4f90-a397-f2a14acf3810@googlegroups.com>
+References: <3d2a54f5-f847-4f90-a397-f2a14acf3810@googlegroups.com>
+Subject: [tosdr:2286] Re: [Info] Dropbox requires cookies
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_666_11577375.1370980133495"
+
+------=_Part_666_11577375.1370980133495
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I absolutely hate these clauses. Not that all cookies are bad, but if I=20
+can't use a service because I don't accept cookies, that always sounds a=20
+bit harsh to me.
+
+Title: Dropbox requires cookies
+
+Topic: Cookies
+
+Summary: Dropbox uses cookies. Although you can disable cookies in your=20
+browser, if you do so you may not be able to use all aspects of the=20
+Service. In fact, you cannot login with cookies disabled.
+
+Score: 30 (bad)
+
+On Thursday, August 23, 2012 10:32:48 AM UTC-5, Sebasti=E1n Waisbrot wrote:
+>
+> https://www.dropbox.com/privacy
+>
+>> If you do not accept cookies, however, you may not be able to use all=20
+>> aspects of the Service.
+>
+>
+> I can't login without cookies.
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_666_11577375.1370980133495
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I absolutely hate these clauses. Not that all cookies are bad, but if I can=
+'t use a service because I don't accept cookies, that always sounds a bit h=
+arsh to me.<div><br></div><div>Title: Dropbox requires cookies</div><div><b=
+r></div><div>Topic: Cookies</div><div><br></div><div>Summary: Dropbox uses =
+cookies. Although you can disable cookies in your browser, if you do so you=
+ may not be able to use all aspects of the Service. In fact, you cannot log=
+in with cookies disabled.</div><div><br></div><div>Score: 30 (bad)<br><br>O=
+n Thursday, August 23, 2012 10:32:48 AM UTC-5, Sebasti=E1n Waisbrot wrote:<=
+blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;bord=
+er-left: 1px #ccc solid;padding-left: 1ex;"><div><a href=3D"https://www.dro=
+pbox.com/privacy" target=3D"_blank">https://www.dropbox.com/<wbr>privacy</a=
+></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;=
+border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:=
+solid;padding-left:1ex">If you do not accept cookies, however, you may not =
+be able to use all aspects of the Service.</blockquote><div><br></div><div>=
+I can't login without cookies.</div><div><br></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_666_11577375.1370980133495--

@@ -1,0 +1,163 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB44H6GHAKGQEGXY4AEA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E8DFF161740
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 19:10:14 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E5C831780C8
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 19:10:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qfdMkn42Tron for <anything@michielbdejong.com>;
+	Tue,  9 Jul 2013 19:10:13 +0200 (CEST)
+Received: from mail-oa0-x23d.google.com (mail-oa0-x23d.google.com [IPv6:2607:f8b0:4003:c02::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 17501178159
+	for <michiel@michielbdejong.com>; Tue,  9 Jul 2013 19:10:12 +0200 (CEST)
+Received: by mail-oa0-f61.google.com with SMTP id i4sf1788018oah.26
+        for <michiel@michielbdejong.com>; Tue, 09 Jul 2013 10:10:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yew2Ubba9dhKUGOiLFNfOJ1IlbfRNjJxkdVd1EswpYc=;
+        b=cKg7nBQSlNryclet0op4rKHBCGeGkAkWqfVvg2hF7Qm/aeic2DvAgHDUMKtEp5WhUE
+         R6PH5EfPzcsmc/rq8rav+NPRdLqhMd9aspRndSfIDNpZCtA5L7+bXVJ4j571FI0pjzlr
+         tSiPfMOBdsbjyZ0OlC2TsrsOgwm+5jhqOolqaPvj7L/jJ6AF5TSi1mXgC+NnKlTWNMof
+         hYnVOrxqEQQg3wQwsn3BjSTJNmBoQ9jSbnZx41vpAUxh4g42OFSU/fy7B36UEDg87bG5
+         m3mG/OMGbPQYZJNei0oVMwaWBnuWo9fGC+6bTOmnwNM2X0u+f08VhQm6y6eA9k+TiDDD
+         kJVg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yew2Ubba9dhKUGOiLFNfOJ1IlbfRNjJxkdVd1EswpYc=;
+        b=V2H0DMEqTM/GaG5uKbZgfPl8e2d1UXUNhSQa9r601M7wqDK/42iXANu7eJRzd/kS6G
+         ZyqizPfepPAvxcNyBC+YV+7xZgjderwfktgQOpzH7qNdyICbQHs9vMfQdrGYHPoYqUvL
+         Up8xrjeJv24kok0dc69TacrBDqwzA9LyMCJNDGXeJNbLeFhPfFJexSD9YaCdaq43oHGm
+         YXznlbxqiuAUteVuKFg2ebj+0MJQJN3BvAgbYrpJQoM2jUcAqdDtf6cXC9xhvo8rv7zk
+         brGWzJanIysmjMMYZUPMd0xt4N0gshPHuEKclSJBM+ETU/X3MNmZZgMmupeXjBIT1Mnr
+         HiQw==
+X-Received: by 10.49.36.199 with SMTP id s7mr755288qej.17.1373389811654;
+        Tue, 09 Jul 2013 10:10:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.97.195 with SMTP id ec3ls2201955qeb.13.gmail; Tue, 09 Jul
+ 2013 10:10:11 -0700 (PDT)
+X-Received: by 10.49.64.136 with SMTP id o8mr751277qes.32.1373389811110;
+        Tue, 09 Jul 2013 10:10:11 -0700 (PDT)
+Date: Tue, 9 Jul 2013 10:10:10 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <d2d02659-fa94-43bf-893f-03cf1fefb882@googlegroups.com>
+In-Reply-To: <34c8a966-23b2-44e5-9211-94718c6830be@googlegroups.com>
+References: <bb228106-0049-4a81-897d-1c556fc9bdc6@googlegroups.com>
+ <34c8a966-23b2-44e5-9211-94718c6830be@googlegroups.com>
+Subject: [tosdr:2486] Re: [Good] Spotify warns of third party uses
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_542_3825576.1373389810828"
+
+------=_Part_542_3825576.1373389810828
+Content-Type: text/plain; charset=ISO-8859-1
+
+So maybe something more along these lines:
+
+Summary: Spotify takes precautions to prohibit third party applications 
+from attempting to identify you using information Spotify provides them. 
+Spotify also states that if you visit a third party application, that 
+application might then know your IP address. A third party applications 
+might also gain information about you if you drag and drop a playlist into 
+that application.
+
+
+On Sunday, May 5, 2013 8:00:20 AM UTC-5, Hugo Roy wrote:
+>
+> Currently, this is summarised like this:
+>
+>
+>    - *+* Spotify warns of third party uses Discussion<https://groups.google.com/d/topic/tosdr/U7B3ap8wM4s/discussion>
+>    
+>    Spotify takes precautions to prohibit third party applications from 
+>    attempting to identify you using information Spotify provides them. They 
+>    also inform you of the possible consequences should you allow this access.
+>    
+> Good. 30.
+>
+> I think we shold improve this summary to reflect the clause and 
+> precautions taken by Spotify. Especially, "we take precautions to prohibit 
+> Third Party Application providers from attempting to identify you" might 
+> reward a better score (not sure about that).
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_542_3825576.1373389810828
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+So maybe something more along these lines:<div><br></div><div>Summary: Spot=
+ify takes precautions to prohibit third party applications from attempting =
+to identify you using information Spotify provides them. Spotify also state=
+s that if you visit a third party application, that application might then =
+know your IP address. A third party applications might also gain informatio=
+n about you if you drag and drop a playlist into that application.</div><di=
+v><br></div><div><br>On Sunday, May 5, 2013 8:00:20 AM UTC-5, Hugo Roy wrot=
+e:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;b=
+order-left: 1px #ccc solid;padding-left: 1ex;">Currently, this is summarise=
+d like this:<br><br><ul><li><div><h5><span title=3D"good"><i>+</i></span> S=
+potify warns of third party uses <a href=3D"https://groups.google.com/d/top=
+ic/tosdr/U7B3ap8wM4s/discussion" target=3D"_blank">Discussion</a></h5><p>Sp=
+otify
+ takes precautions to prohibit third party applications from attempting=20
+to identify you using information Spotify provides them. They also=20
+inform you of the possible consequences should you allow this access.</p></=
+div></li></ul><p>Good. 30.<br></p><p>I think we shold improve this summary =
+to reflect the clause and precautions taken by Spotify. Especially, "we tak=
+e precautions to prohibit Third Party Application providers from attempting=
+ to identify you" might reward a better score (not sure about that).<br></p=
+><br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_542_3825576.1373389810828--

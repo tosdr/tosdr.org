@@ -1,0 +1,134 @@
+Return-Path: <tosdr+bncBCFJJRF5WYBBBRX5QKGAKGQEPATCGJI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 678AA161735
+	for <anything@michielbdejong.com>; Wed,  1 May 2013 09:05:49 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 64CE2178097
+	for <anything@michielbdejong.com>; Wed,  1 May 2013 09:05:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yo6Ypin7Z45T for <anything@michielbdejong.com>;
+	Wed,  1 May 2013 09:05:47 +0200 (CEST)
+Received: from mail-vb0-x23e.google.com (mail-vb0-x23e.google.com [IPv6:2607:f8b0:400c:c02::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 240C91780A8
+	for <anything@michielbdejong.com>; Wed,  1 May 2013 09:05:44 +0200 (CEST)
+Received: by mail-vb0-f62.google.com with SMTP id i3sf408136vbh.7
+        for <anything@michielbdejong.com>; Wed, 01 May 2013 00:05:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf
+         :x-ironport-anti-spam-filtered:x-ironport-anti-spam-result
+         :x-ironport-av:x-spam-status:x-spam-level:subject:from:to:cc
+         :in-reply-to:references:date:message-id:mime-version:x-mailer
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=o6d0ZdCnJiYJv2RLKm8g/BeoQDGe9j8m0YR57jTuA8c=;
+        b=Ncqq2e0rXDWfaNjyuyqZErcnypoPMiBB3ZM/0uwIE418/sJD3xp+zMN1Wvwr6PKpUI
+         wp+mjEJhZKEqRQOpsTr5O4m1FGJXQhDeXaGGW0Ij1yJ3SySKOq9a3JSA1FgwBv0z7Oq5
+         1BDxvqmvJ0zqISvCnelZihcdjuYVwZOH7uhMYfXy6WM+x1s8IoBnRKQuNkksbvXB2TXY
+         VxaIeNLxfFpc4OLhfZoRp+APQHlQPcoXcLjEreONkiuHk8Xx38JfHeD/UG38oV7QcOor
+         +N4UCtHzU60UsG0s3uEKGu2vatlp1McIropRw1+0DeyBWhB/saANkFa54Yg5tnwPhG7G
+         ZiVQ==
+X-Received: by 10.50.176.234 with SMTP id cl10mr115235igc.6.1367391942919;
+        Wed, 01 May 2013 00:05:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.119.69 with SMTP id ks5ls2999934igb.15.canary; Wed, 01 May
+ 2013 00:05:42 -0700 (PDT)
+X-Received: by 10.66.12.161 with SMTP id z1mr637020pab.11.1367391942343;
+        Wed, 01 May 2013 00:05:42 -0700 (PDT)
+Received: from iport-c1-out.ucsd.edu (iport-c1-out.ucsd.edu. [132.239.0.176])
+        by gmr-mx.google.com with ESMTPS id qo12si285726pbb.1.2013.05.01.00.05.41
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 01 May 2013 00:05:42 -0700 (PDT)
+Received-SPF: neutral (google.com: 132.239.0.176 is neither permitted nor denied by best guess record for domain of jesse@wefu.org) client-ip=132.239.0.176;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AhsFAKm9gFGE7/kU/2dsb2JhbABTgwc2gze7X34WdIIfAQEFIyYwEAsYAgImAgJXGYgMDK16hFqMKYEjjUMzBxaCJ4ETA4kXjzWEWostgwAt
+X-IronPort-AV: E=Sophos;i="4.87,587,1363158000"; 
+   d="scan'208";a="1031509715"
+Received: from smtp-tpcs.ucsd.edu ([132.239.249.20])
+  by iport-c1-out.ucsd.edu with ESMTP; 01 May 2013 00:05:41 -0700
+Received: from localhost (unknown [209.134.71.253])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by smtp-tpcs.ucsd.edu (Postfix) with ESMTPSA id 21DED7FCB8;
+	Wed,  1 May 2013 00:05:41 -0700 (PDT)
+Subject: Re: [tosdr:1911] Adding ~90 new entries to services/?
+From: Jesse Weinstein <jesse@wefu.org>
+To: tosdr@googlegroups.com
+Cc: jimm@tosdr.org
+In-Reply-To: <20130429102246.GA5204@synclavier.ampoliros.net>
+References: <1367104433.2659.46.camel@zareason>
+	 <20130429102246.GA5204@synclavier.ampoliros.net>
+Date: Wed, 01 May 2013 00:05:38 -0700
+Message-ID: <1367391938.2840.2.camel@zareason>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.3
+X-Original-Sender: jesse@wefu.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 132.239.0.176 is neither permitted nor denied by best guess
+ record for domain of jesse@wefu.org) smtp.mail=jesse@wefu.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+I'm trying to work with the TOSback efforts, but I'm confused by the two
+different versions (2 and 3) and some broken links to repositories:
+https://github.com/JimmStout/tosback2/tree/master/rules (from
+https://www.eff.org/deeplinks/2013/01/campus-party-hackathon-making-rule-contribution-tosback )
+
+I'm also running primarily on an old Ubuntu (Lucid, 10.04) which makes
+updating to Ruby 1.9.3 more challenging...
+
+Jimm -- can you (or someone else) point me to where the most current
+activity is?
+
+On Mon, 2013-04-29 at 12:22 +0200, Hugo Roy wrote:
+> Le sam. 27/04/13, 16:13, Jesse Weinstein <jesse@wefu.org>:
+> > I have a large number (~90) of URLs for Terms of Service documents (from
+> > http://tos-archive.wikispaces.com ), which I'd like to add to tos;dr. It
+> > seems like the proper format to do so would be as a gitHub pull-request
+> > which added new files to the services/ directory. Is this right? Is
+> > there another format that would be preferred?
+> 
+> Hi Jesse,
+> 
+> That's great. In the future, it should be easy to contribute new
+> URL, as Jimms is developing a web user interface for tosback3.
+> Meanwhile, I suggest you go to https://github.com/tosdr/tosback3
+> all technical details should be there for you to make a pull
+> request.
+> 
+> (Also, if you have some questions, Jimm has documented some of the
+> work in blog posts at http://jimmstout.com)
+> 
+> Thanks!
+> 
+> -- 
+> Hugo Roy, Project Lead
+> Terms of Service; Didn't Read | www.tosdr.org
+> 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

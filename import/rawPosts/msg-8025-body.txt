@@ -1,0 +1,197 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBMOKRKIAKGQEBURYNVA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 58575161747
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:51:17 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5531B22715C
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:51:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id uCZabdF6uf5K for <anything@michielbdejong.com>;
+	Wed,  7 Aug 2013 21:51:15 +0200 (CEST)
+Received: from mail-qc0-x238.google.com (mail-qc0-x238.google.com [IPv6:2607:f8b0:400d:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 74D1D2271CC
+	for <anything@michielbdejong.com>; Wed,  7 Aug 2013 21:51:15 +0200 (CEST)
+Received: by mail-qc0-f184.google.com with SMTP id e1sf606041qcx.1
+        for <anything@michielbdejong.com>; Wed, 07 Aug 2013 12:51:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=zizKQkF5Fwl5mjhWW0+DY7vGq5u1f8Ffi+nSaI1u2UA=;
+        b=EVD2xwKrfcy+8pa+vINDrfQM8Wy1EkK8+hG3pChEaKMtsOfG3aTmDkaD7uwJWow9qb
+         36IpktYXgl+RLqGLD9Nl7WsNvlJjiayLN9XG42/OU4ebInHO8hSIsu3np5lr1W2piLfb
+         gb5GPg/inN+S4nn51zY4J3FZrIr0cGEPOL5DfpRYxJfb/b06ihU+pmbeSx4WUDqmVt/M
+         JA+9Q2IVa1lxfsaarhgJ9Kr7XnHZFApaO3NwIBd2/Xp5SDWjN75QGgZ1jcEnSH4PgQQp
+         kvwS+Dw+8mrS1MTyJ08+ywVAKljlGEhwHsXkVvZV1SGPqBVL8Ffnpfb5B8822CWLEkzx
+         E4nQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=zizKQkF5Fwl5mjhWW0+DY7vGq5u1f8Ffi+nSaI1u2UA=;
+        b=ZL2MhD+pLy8c8+bbTvgHGoCjGv0O9ddsSoWvuPw9a1+uAn41m0rcB3gmw1oWmLP+FP
+         FD6q15DDkj2z7Qhaz1hJtYKTJ1QvlXYEOyDHyW2/QD78xA5mr8RmQgSs3LTvwugj1d/C
+         gKvEky8b6CuqJjQQnF+qkRdAp1csJ6qOQK1WZZoG0PmgrZU8WEFo7FBrym6bPwc77SFw
+         LI8YA/uTC9bLyWZjPquXLvAx21eEl2+PKSNyzLEJZc/Zwy/3k6tHmB3JMaygJyuYyhtU
+         CqsMGaBXrBE3DMy/3mLHdfRzrNFBI92zJx8r0sWGHwPspX2vUnzHaWvig6Tl9AIZUYgm
+         Xu7Q==
+X-Received: by 10.49.35.225 with SMTP id l1mr144875qej.1.1375905074048;
+        Wed, 07 Aug 2013 12:51:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.117.129 with SMTP id ke1ls783038qeb.88.gmail; Wed, 07 Aug
+ 2013 12:51:13 -0700 (PDT)
+X-Received: by 10.49.13.169 with SMTP id i9mr146190qec.18.1375905073812;
+        Wed, 07 Aug 2013 12:51:13 -0700 (PDT)
+Date: Wed, 7 Aug 2013 12:51:13 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <0ff34cce-669d-4c5c-9e0b-8ce56baa97ab@googlegroups.com>
+In-Reply-To: <04b8f1c4-690b-4b6b-90a4-ae2d98e61113@googlegroups.com>
+References: <a3163fd5-1c50-4001-866d-af898bca4bc0@googlegroups.com>
+ <04b8f1c4-690b-4b6b-90a4-ae2d98e61113@googlegroups.com>
+Subject: [tosdr:2616] Re: [bad] No promise to notify of requests for personal information
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2759_18615728.1375905073564"
+
+------=_Part_2759_18615728.1375905073564
+Content-Type: text/plain; charset=ISO-8859-1
+
+Summary: Although Microsoft states that they will only disclose your 
+personal information *for a limited number of reasons* (such as a lawful 
+request for your information), they make no mention that they will inform 
+you of this request. This places you at a disadvantage when it comes to 
+defending yourself against such a request.
+
+On Wednesday, August 7, 2013 2:48:32 PM UTC-5, Ian McGowan wrote:
+>
+> Title: Microsoft makes no promise to inform you of requests for your 
+> information
+>
+> Topic: law-gov
+>
+> Summary: Although Microsoft states that they will only disclose your 
+> personal information in a limited number of ways (such as a lawful request 
+> for your information), they make no mention that they will inform you of 
+> this request. This places you at a disadvantage when it comes to defending 
+> yourself against such a request.
+>
+> Score: 50 (mediocre)
+>
+> On Sunday, May 12, 2013 8:47:01 AM UTC-5, Robin Monks wrote:
+>>
+>> We may access or disclose information about you, including the content of 
+>>> your communications, in order to: (a) comply with the law or respond to 
+>>> lawful requests or legal process; (b) protect the rights or property of 
+>>> Microsoft or our customers, including the enforcement of our agreements or 
+>>> policies governing your use of the services; or (c) act on a good faith 
+>>> belief that such access or disclosure is necessary to protect the personal 
+>>> safety of Microsoft employees, customers or the public. We may also 
+>>> disclose personal information as otherwise permitted by law and as part of 
+>>> a corporate transaction such as a merger or sale of assets.
+>>>
+>>>  
+>>>
+>>> From <
+>>> http://www.microsoftstore.com/store/msca/en_CA/DisplayPrivacyPage/ThemeID.27659600/
+>>> > 
+>>>
+>>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2759_18615728.1375905073564
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Summary: Although Microsoft states that they will only disclose your person=
+al information <b>for a limited number of reasons</b> (such as a lawful req=
+uest for your information), they make no mention that they will inform you =
+of this request. This places you at a disadvantage when it comes to defendi=
+ng yourself against such a request.<br><br>On Wednesday, August 7, 2013 2:4=
+8:32 PM UTC-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D=
+"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex=
+;">Title: Microsoft makes no promise to inform you of requests for your inf=
+ormation<div><br></div><div>Topic: law-gov</div><div><br></div><div>Summary=
+: Although Microsoft states that they will only disclose your personal info=
+rmation in a limited number of ways (such as a lawful request for your info=
+rmation), they make no mention that they will inform you of this request. T=
+his places you at a disadvantage when it comes to defending yourself agains=
+t such a request.</div><div><br></div><div>Score: 50 (mediocre)<br><br>On S=
+unday, May 12, 2013 8:47:01 AM UTC-5, Robin Monks wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc s=
+olid;padding-left:1ex"><blockquote class=3D"gmail_quote" style=3D"margin:0p=
+x 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);bo=
+rder-left-style:solid;padding-left:1ex"><p style=3D"margin:0in;font-family:=
+Calibri;font-size:11.0pt">We may access or
+disclose information about you, including the content of your communication=
+s,
+in order to: (a) comply with the law or respond to lawful requests or legal
+process; (b) protect the rights or property of Microsoft or our customers,
+including the enforcement of our agreements or policies governing your use =
+of
+the services; or (c) act on a good faith belief that such access or disclos=
+ure
+is necessary to protect the personal safety of Microsoft employees, custome=
+rs
+or the public. We may also disclose personal information as otherwise permi=
+tted
+by law and as part of a corporate transaction such as a merger or sale of
+assets.</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayPrivac=
+yPage/ThemeID.27659600/" target=3D"_blank">http://www.microsoftstore.<wbr>c=
+om/store/msca/en_CA/<wbr>DisplayPrivacyPage/ThemeID.<wbr>27659600/</a>&gt;&=
+nbsp;</p></blockquote></blockquote></div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2759_18615728.1375905073564--
