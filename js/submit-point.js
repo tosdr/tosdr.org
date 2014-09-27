@@ -84,6 +84,8 @@ $(document).ready(function(){
 '          <button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
 '<!--          You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
+        '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.org/tos" />' +
+
         '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
 
 '          <select id="topics">' +
