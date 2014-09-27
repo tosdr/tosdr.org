@@ -49,16 +49,16 @@ $(document).ready(function(){
   }
 
   function showPersona(){
-    $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
+    $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in with your email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
     $('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
   }
 
   function showSigningIn(){
-    $('#submit-point-form').html('<div class="hero-unit signin"><p>(signing you in...)</p></div>');
+    $('#submit-point-form').html('<div class="hero-unit wait signin"><p>signing you in...</p></div>');
   }
 
   function showLoading(){
-    $('#submit-point-form').html('<div  class="wait-loading hero-unit"><p>(loading...)</p></div>');
+    $('#submit-point-form').html('<div class="wait loading hero-unit"><p>loading...</p></div>');
   }
 
   // This is ugly, too much html here
