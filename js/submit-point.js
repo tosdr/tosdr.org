@@ -64,6 +64,12 @@ $(document).ready(function(){
 
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
 
+'					<select id="topics">' +
+'						<option>Select a topic</option>' +
+'						<option>Scope of the copyright license</option>' +
+'						<option>Changes</option>' +
+'					</select>' +
+
                                 '<label for="summary">Can you summarise this clause? <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="This is the summary, the recap of what the clause in the terms do. It is usually a very difficult exercise. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
                             '</fieldset>' +
