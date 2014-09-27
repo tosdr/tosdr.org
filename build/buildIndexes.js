@@ -9,7 +9,7 @@ function writeOut(grunt) {
   grunt.file.write('index/services.json', prettyjson(service));
   grunt.log.writeln('wrote index/services.json');
 
-  grunt.file.write('js/servicesArr.js', 'var services = [\''+Object.keys(service).sort().join('\', \'')+'\'];\n');
+  grunt.file.write('js/servicesArr.js', 'var services = '+prettyjson(Object.keys(service))+';\n');
   grunt.log.writeln('wrote js/servicesArr.js');
 
   grunt.file.write('index/topics.json', prettyjson(topic));
