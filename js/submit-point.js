@@ -63,11 +63,7 @@ $(document).ready(function(){
   function showServiceFields() {
     var str = '';
     for(var i=0; i<numServices; i++) {
-      str += '          <select id="service'+i+'">' +
-'            <option>Select a service</option>' +
-'            <option>Facebook</option>' +
-'            <option>Google</option>' +
-'          </select>';
+      str += '          <input name="service'+i+'" data-provide="typeahead" autocomplete="off" data-source="'+services+'">';
     }
     $('#serviceFields').html(str);
   }
