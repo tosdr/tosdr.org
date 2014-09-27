@@ -58,7 +58,7 @@ $(document).ready(function(){
   }
 
   function showLoading(){
-    $('#submit-point-form').html('<p class="wait-loading">(loading...)</p>');
+    $('#submit-point-form').html('<div  class="wait-loading hero-unit"><p>(loading...)</p></div>');
   }
 
   // This is ugly, too much html here
@@ -94,7 +94,7 @@ $(document).ready(function(){
 
         '</fieldset>' +
         '<div class="form-actions">' +
-        '<button class="btn btn-primary" id="postPoint">Send</button>' +
+        '<button class="btn btn-primary btn-large" id="postPoint">Send</button>' +
         '<span class="help-user">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></span>' +
             
         '</div>' +
