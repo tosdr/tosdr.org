@@ -45,7 +45,7 @@ $(document).ready(function(){
         //
 
 	function showSubmitForm(email){
-		$('#form').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p>' +
+		$('#form').html('<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
                         '<form class="submitForm">' +
                             '' +
                             '<fieldset>' +
