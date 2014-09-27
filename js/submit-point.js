@@ -141,8 +141,8 @@ $(document).ready(function(){
 
   function showConfirmation(){
     $('#submit-point-form').html('<div class="hero-unit"><p>Your point has been submitted. Thank you! '
-        +'<a href="/submit-point.html">submit another one</a> or '
-        +'<a href="/pendingpoints.html">see the list</a>.</p></div>');
+        +'<a href="/submit-point.html">submit another one</a> <span class="hidden"> or '
+        +'<a href="/pendingpoints.html">see the list</a></span>.</p></div>');
     location = '#top';
   }
 
