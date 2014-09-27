@@ -73,12 +73,12 @@ function parseServiceFile(id, grunt) {
     for(var i in obj.tosback2) { 
       if(obj.tosback2[i].url) {
         service[id].links[i]=obj.tosback2[i];
-        service[id].alexa=obj.alexa;
-        service[id].class=(obj.tosdr?obj.tosdr.rated:false);
         console.log(id+' '+i+': '+obj.tosback2[i]);
       }
     }
   }
+	service[id].alexa=obj.alexa;
+	service[id].class=(obj.tosdr?obj.tosdr.rated:false);
 }
 
 //read all the points, and trigger the service files to be read
@@ -99,7 +99,7 @@ module.exports = function(grunt){
     
     writeOut(grunt);
   });
-}
+};
 
 //after this, we still need to call writeOut() to write all results to disk,
 //but the trouble is that since this code is all asynchronous, we don't know

@@ -1,0 +1,126 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBH5376FQKGQEGWCFM6Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id D601B161735
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 17:05:06 +0200 (CEST)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D2BD011608F
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 17:05:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id k7btf6BaqgSm for <anything@michielbdejong.com>;
+	Tue, 30 Apr 2013 17:05:05 +0200 (CEST)
+Received: from mail-bk0-x23f.google.com (mail-bk0-x23f.google.com [IPv6:2a00:1450:4008:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 396A61161D4
+	for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 17:05:05 +0200 (CEST)
+Received: by mail-bk0-f63.google.com with SMTP id e19sf177498bku.28
+        for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 08:05:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:cc:subject:message-id:mail-followup-to:references
+         :mime-version:in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=8w7LSZXHOTAHSh+97uoRYvWmsq2XtCqnXi7cmGXKmTA=;
+        b=dbrzkPNP7rFLNk9ugmvNd2tF0W92qnRbWJJZQiPQl6+xsRPg6mrssW/o/J7E09UJlw
+         +fNdsasUjLOBeBQijVy0Iq3d5WPcy8qljazhTuyFcEHqGlGjDilvVx4ZFISzEaj/2Idb
+         stHb0cNcWNdci+txRWLBkLrO8f8muQrACS78QP1w5EIb/dmO4fj7KZq+7CE0RyU8iEZ4
+         mJxS9UzXBJKaOnxQkhNtfbkdTI1opHuR8nHotgE3iaB1YKqUECEiE4GiRbzHvjW5jO+L
+         dwqrjmYSYM8QTVGNXyyyPu333cWIrWF9qyHT/PFqvEPec7WTVCKDuSiuLi5wYWpBKIBV
+         0mdw==
+X-Received: by 10.180.212.51 with SMTP id nh19mr1263888wic.21.1367334303969;
+        Tue, 30 Apr 2013 08:05:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.108.242 with SMTP id hn18ls1075615wib.36.canary; Tue, 30
+ Apr 2013 08:05:03 -0700 (PDT)
+X-Received: by 10.14.102.9 with SMTP id c9mr2452194eeg.1.1367334303425;
+        Tue, 30 Apr 2013 08:05:03 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si7906930eeu.1.2013.04.30.08.05.03
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 30 Apr 2013 08:05:03 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 2F15363B4B5;
+	Tue, 30 Apr 2013 17:05:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id EQEuStOIUz0K; Tue, 30 Apr 2013 17:04:55 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 555FD63AF69;
+	Tue, 30 Apr 2013 17:04:54 +0200 (CEST)
+Date: Tue, 30 Apr 2013 17:04:52 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Cc: Jan-Christoph Borchardt <jan@unhosted.org>
+Subject: =?ISO-8859-1?Q?Re=3A_=5Btosdr=3A1878=5D_Re=3A_=C4nderung_der_AGB_von_mitfahrge?=
+	=?ISO-8859-1?Q?legenheit=2Ede?=
+Message-ID: <20130430150452.GS9156@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com,
+	Jan-Christoph Borchardt <jan@unhosted.org>
+References: <6b2c7b3548680529f701ecd44dc917cc@michielbdejong.com>
+ <b9989a4c-7a4b-4af2-94b3-9d9122bce7e2@googlegroups.com>
+ <789197da880c7061b6666865c244597f@michielbdejong.com>
+MIME-Version: 1.0
+In-Reply-To: <789197da880c7061b6666865c244597f@michielbdejong.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Le sam. 16/03/13, 11:22, Michiel B. de Jong <anything@michielbdejong.com>:
+> On 2013-03-15 19:44, Jan-Christoph Borchardt wrote:
+> >Didn=92t read them fully yet. But in the first part they say (and also
+> >people see) that for the basic =BBgetting a ride=AB functionality you
+> >don=92t even need to sign up. I=92d say that=92s a good thing, the
+> >question is if it matters in the context of ToS;DR.
+> >
+>=20
+> yes i think that matters, because it means you don't go into a
+> lasting relationship with the service. often the user has no benefit
+> from such a relationship, yet services often want to build up a
+> loyal user base.
+
+Not having users to sign up and having them subject to terms are
+different topics.
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

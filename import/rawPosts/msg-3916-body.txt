@@ -1,0 +1,201 @@
+Return-Path: <tosdr+bncBDFPVJU7ZMJRBDGC4KGAKGQE53GDMZI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 14A2E161740
+	for <anything@michielbdejong.com>; Sun, 19 May 2013 11:53:23 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 10C51178092
+	for <anything@michielbdejong.com>; Sun, 19 May 2013 11:53:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 7kf0WnxnGY3e for <anything@michielbdejong.com>;
+	Sun, 19 May 2013 11:53:21 +0200 (CEST)
+Received: from mail-bk0-x23c.google.com (mail-bk0-x23c.google.com [IPv6:2a00:1450:4008:c01::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E834D178089
+	for <michiel@michielbdejong.com>; Sun, 19 May 2013 11:53:17 +0200 (CEST)
+Received: by mail-bk0-f60.google.com with SMTP id jc10sf75869bkc.15
+        for <michiel@michielbdejong.com>; Sun, 19 May 2013 02:53:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:mime-version
+         :x-received:sender:in-reply-to:references:date:message-id:subject
+         :from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=/HqoWEBAs3WYfGJ5uyOC7sQKqFSOI68lONfiUAEY4ro=;
+        b=f4bSx8NVdB47FfaatCRQqjOqLkrrort26s2ZqBl1U0KAj+CCgAHhTj+p+YsszP/UE1
+         zQ4/z0pHK+MToqRm+nRMWRaNdifJ0/7qzQ1PD1vMK3ys8PuIcMZTVeUt88oP5+VJSMap
+         Q7m9+gyUwHIc1G7ITee+5TPCHQuRZgKaRSipoFJEQFgVpnr6roxpA99ioY2QTelmOU64
+         9FmEowpqqb/HhE42JbnY7HcCK5uCWQ6Xz1KapHikg+ivftocZfyUYHClr++mf9m8NGA2
+         2UFTZMqQoyiDInTrDi2otT7Q7tmnYZtcgBZFHUo686IcHj2dWCpEjVH0GypxSelPjTJa
+         jQ0A==
+X-Received: by 10.180.78.233 with SMTP id e9mr233896wix.2.1368957196706;
+        Sun, 19 May 2013 02:53:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.181.11.230 with SMTP id el6ls531429wid.31.gmail; Sun, 19 May
+ 2013 02:53:16 -0700 (PDT)
+X-Received: by 10.205.32.144 with SMTP id sk16mr6314206bkb.4.1368957196068;
+        Sun, 19 May 2013 02:53:16 -0700 (PDT)
+Received: from mail-la0-x232.google.com (mail-la0-x232.google.com [2a00:1450:4010:c03::232])
+        by gmr-mx.google.com with ESMTPS id fc12si1566254bkc.1.2013.05.19.02.53.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sun, 19 May 2013 02:53:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suzanne.azmayesh@gmail.com designates 2a00:1450:4010:c03::232 as permitted sender) client-ip=2a00:1450:4010:c03::232;
+Received: by mail-la0-f50.google.com with SMTP id ed20so5443667lab.23
+        for <tosdr@googlegroups.com>; Sun, 19 May 2013 02:53:15 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.112.19.9 with SMTP id a9mr10441076lbe.80.1368957195723; Sun,
+ 19 May 2013 02:53:15 -0700 (PDT)
+Sender: tosdr@googlegroups.com
+Received: by 10.114.177.97 with HTTP; Sun, 19 May 2013 02:53:15 -0700 (PDT)
+In-Reply-To: <CADNfgReWBMeKde+ufDfnw02gp6=937Pj01H=QB-8Z0g2Z6CW1Q@mail.gmail.com>
+References: <CADNfgReWBMeKde+ufDfnw02gp6=937Pj01H=QB-8Z0g2Z6CW1Q@mail.gmail.com>
+Date: Sun, 19 May 2013 11:53:15 +0200
+Message-ID: <CADNfgRc1jm_c3AQ0txKRKgn96jVPp48Uf2bGRwmArVHM6Omu7w@mail.gmail.com>
+Subject: [tosdr:2146] Fwd: Facebook uses cookies
+From: Suzanne Azmayesh <suzanne@azmayesh.fr>
+To: tosdr@googlegroups.com
+X-Original-Sender: suzanne@azmayesh.fr
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of suzanne.azmayesh@gmail.com designates
+ 2a00:1450:4010:c03::232 as permitted sender) smtp.mail=suzanne.azmayesh@gmail.com;
+       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=14dae94734f35d28f704dd0f2ff7
+
+--14dae94734f35d28f704dd0f2ff7
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title : Facebook uses cookies
+
+Topic : cookies
+
+Summary : Facebook uses, pixels and local storage in order to gather
+information about you, your device, your browser cache, your use of
+Facebook.
+Facebook also uses cookies for adversing purposes.
+
+Score suggested : mediocre, 25?
+
+Quotation from the website :
+
+We use technologies like cookies, pixels, and local storage (like on your
+browser or device, which is similar to a cookie but holds more information)
+to provide and understand a range of products and services. Learn
+more<https://www.facebook.com/help/cookies>
+.
+We use these technologies to do things like:
+
+   - make Facebook easier or faster to use;
+   - enable features and store information about you (including on your
+   device or in your browser cache) and your use of Facebook;
+   - deliver, understand and improve advertising;
+   - monitor and understand the use of our products and services;
+   - to protect you, others and Facebook.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--14dae94734f35d28f704dd0f2ff7
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><br><div dir=3D"ltr">Title : Fa=
+cebook uses cookies<div><br></div><div>Topic : cookies</div><div><br></div>=
+<div>Summary :=A0<span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida=
+ Grande&#39;;font-size:12px">Facebook uses, pixels and local storage in ord=
+er to gather information about you, your device, your browser cache, your u=
+se of Facebook.</span><span style=3D"color:rgb(35,35,35);font-family:&#39;L=
+ucida Grande&#39;;font-size:12px">=A0</span></div>
+
+<div><span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida Grande&#39;=
+;font-size:12px">Facebook also uses cookies for adversing purposes.</span><=
+/div><div><br></div><div><span style=3D"color:rgb(35,35,35);font-family:&#3=
+9;Lucida Grande&#39;;font-size:12px">Score suggested : mediocre, 25?</span>=
+</div>
+
+<div><span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida Grande&#39;=
+;font-size:12px"><br></span></div><div><span style=3D"color:rgb(35,35,35);f=
+ont-family:&#39;Lucida Grande&#39;;font-size:12px">Quotation from the websi=
+te :=A0</span></div>
+
+<div><span style=3D"color:rgb(35,35,35);font-family:&#39;Lucida Grande&#39;=
+;font-size:12px"><br></span></div><div><div style=3D"margin-bottom:20px;fon=
+t-size:15px;line-height:20px;color:rgb(102,102,102);font-family:&#39;lucida=
+ grande&#39;,tahoma,verdana,arial,sans-serif;text-align:left">
+
+We use technologies like cookies, pixels, and local storage (like on your b=
+rowser or device, which is similar to a cookie but holds more information) =
+to provide and understand a range of products and services.=A0<a href=3D"ht=
+tps://www.facebook.com/help/cookies" style=3D"color:rgb(59,89,152);text-dec=
+oration:none" target=3D"_blank">Learn more</a>.</div>
+
+<div style=3D"margin-bottom:20px;font-size:15px;line-height:20px;color:rgb(=
+102,102,102);font-family:&#39;lucida grande&#39;,tahoma,verdana,arial,sans-=
+serif;text-align:left">We use these technologies to do things like:</div>
+
+<ul style=3D"list-style-type:square;margin:0px 0px 20px 12px;padding:0px;co=
+lor:rgb(59,89,152);font-family:&#39;lucida grande&#39;,tahoma,verdana,arial=
+,sans-serif;font-size:11px;line-height:14px;text-align:left"><li style=3D"b=
+order-width:0px">
+
+<div style=3D"color:rgb(51,51,51)"><div style=3D"margin-bottom:5px;font-siz=
+e:15px;line-height:20px;color:rgb(102,102,102)">make Facebook easier or fas=
+ter to use;</div></div></li><li style=3D"border-width:1px 0px 0px">
+<div style=3D"color:rgb(51,51,51)"><div style=3D"margin-bottom:5px;font-siz=
+e:15px;line-height:20px;color:rgb(102,102,102)">enable features and store i=
+nformation about you (including on your device or in your browser cache) an=
+d your use of Facebook;</div>
+
+</div></li><li style=3D"border-width:1px 0px 0px"><div style=3D"color:rgb(5=
+1,51,51)"><div style=3D"margin-bottom:5px;font-size:15px;line-height:20px;c=
+olor:rgb(102,102,102)">deliver, understand and improve advertising;</div>
+</div></li><li style=3D"border-width:1px 0px 0px"><div style=3D"color:rgb(5=
+1,51,51)"><div style=3D"margin-bottom:5px;font-size:15px;line-height:20px;c=
+olor:rgb(102,102,102)">monitor and understand the use of our products and s=
+ervices;</div>
+
+</div></li><li style=3D"border-width:1px 0px 0px"><div style=3D"color:rgb(5=
+1,51,51)"><div style=3D"margin-bottom:5px;font-size:15px;line-height:20px;c=
+olor:rgb(102,102,102)">to protect you, others and Facebook.</div>
+<div><br></div></div></li></ul></div></div>
+</div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--14dae94734f35d28f704dd0f2ff7--

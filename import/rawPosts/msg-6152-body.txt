@@ -1,0 +1,411 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBVEEW6HAKGQEMCA7ZTA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 09F35161747
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:05:30 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 06F49116407
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:05:30 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HLZGtJNFmg4Q for <anything@michielbdejong.com>;
+	Fri, 28 Jun 2013 19:05:29 +0200 (CEST)
+Received: from mail-qc0-x238.google.com (mail-qc0-x238.google.com [IPv6:2607:f8b0:400d:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 10303116080
+	for <michiel@michielbdejong.com>; Fri, 28 Jun 2013 19:05:25 +0200 (CEST)
+Received: by mail-qc0-f184.google.com with SMTP id b10sf697040qcw.1
+        for <michiel@michielbdejong.com>; Fri, 28 Jun 2013 10:05:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IO98PpTtEObBdL0Z3K/wUMYhF5qzNV5gg8qJ1oZOUco=;
+        b=njLABw/L7QUi6Rlhbplv8PZx8COUyUyUOy7k5G2ammT2PIVFPmKRufo/vesRnxVElr
+         e++peRIacmpYpfD80qrNvv9CC+F1mAzmbgLdV+jDYfvEMferSkaq5VzM0PbybwHvmRzD
+         6mTwJYjZFBJDeXbcyS2PCc9fwnBcmV/thlYyJlzf4tpAljjtg7RlZHL80jD5bbYsPegN
+         gKjO22oXFSNEx9x8ftrO9Yo73CkyL8mO3AX0e1pCnwiw7+LyyTljTB1X7sUNs7xmT0ug
+         +rTii4Sq30NbbEcfSSI9cdQNuQjb/6BFhqXUef2cAGDfnJ+eKm5t/I61FNVMQB6xmf9S
+         XXCw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IO98PpTtEObBdL0Z3K/wUMYhF5qzNV5gg8qJ1oZOUco=;
+        b=iFUC2yV/3GMNZ6Ym8FsPPzyFpdS1YRH8F47ZawwxajFdaGQ3fMLMaCiWxpzmVWHDa7
+         hJHWwENY9uGxCTeK4ydpeDlOWxACXTmeq2sibUkM1b7xClVBgl8X10kzD8lZUohlRcdv
+         yNGY6t0ye+g/4WczKWMFngxV/hXIUXCvlYuY7XUkOVQN8O/CzTxbrHRk0TCURf0c0AT7
+         g7dbMJm1BFJU+SMXSJvwpxDe8SVioP+3EJp5N1w2Rj1pY5ulsFXjy2LXMXuyq7DMJbZT
+         avzmPUk8QPZUaSKN+x6VMYWsagzz6CuE4tXQMZEHY591jfpSWYV6uJ+lgcQ5lkMWnBdc
+         mD1w==
+X-Received: by 10.49.4.136 with SMTP id k8mr404153qek.19.1372439124976;
+        Fri, 28 Jun 2013 10:05:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.25.164 with SMTP id d4ls1337334qeg.34.gmail; Fri, 28 Jun
+ 2013 10:05:24 -0700 (PDT)
+X-Received: by 10.49.13.71 with SMTP id f7mr370619qec.31.1372439124519;
+        Fri, 28 Jun 2013 10:05:24 -0700 (PDT)
+Date: Fri, 28 Jun 2013 10:05:24 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <16e889b2-d2b5-4450-8247-01fdc2fbe942@googlegroups.com>
+In-Reply-To: <49f30595-277b-48c0-993c-8eb2949d32e9@googlegroups.com>
+References: <783e0eaab12c004734ef24d98f956c7b@michielbdejong.com>
+ <20130522222440.GM23285@synclavier.ampoliros.net>
+ <b41d919e-0c19-4a5f-b63a-25b23bee2604@googlegroups.com>
+ <cc518f60-7654-4998-b43f-1cd33a4c6a0d@googlegroups.com>
+ <49f30595-277b-48c0-993c-8eb2949d32e9@googlegroups.com>
+Subject: Re: [tosdr:2416] [Info] Amazon Kindle Content is licensed, not sold,
+ to you by the Content Provider
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_972_28200795.1372439124148"
+
+------=_Part_972_28200795.1372439124148
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Here's what I'd propose for this point:
+
+Title: You only license, not own, Kindle content
+
+Topic: Suspension and censorship
+
+Summary: Although you may buy content for your Kindle, that price is=20
+actually just the price you pay to license that content. You don't own it.=
+=20
+A harsh example of this truth occurred in October 2012: Linn Nygaard=20
+purchased a Kindle in the UK and then returned to her home in Norway, and=
+=20
+continued to use her Kindle, buying books from Amazon's UK store. After=20
+working fine for some time, Nygaard's Kindle developed a technical problem,=
+=20
+and she called Amazon's customer service to get it replaced. Amazon then=20
+closed her account and deleted all her content, and would not even explain=
+=20
+to her why until her story got significant media attention -- once the bad=
+=20
+press started building up, Amazon reinstated her account and restored her=
+=20
+content.
+
+Score: 50 (alert)
+
+On Friday, June 28, 2013 11:56:36 AM UTC-5, Ian McGowan wrote:
+>
+> Don't worry about being wordy; I think all of this information is=20
+> incredibly helpful. I have a couple of points. First, based on their term=
+s,=20
+> I thought that a user's use of Amazon voided the right to be part of a=20
+> class action suit (re: your point about the 2009 class action suit). I wa=
+s=20
+> just wondering if you knew how that was possible.=20
+>
+> And secondly, even if the courts have upheld the license-but-not-own=20
+> ruling, I personally still feel this is a point worth mentioning to users=
+.=20
+> I imagine that most users wouldn't know the difference, and as we've seen=
+,=20
+> the difference is very important!
+>
+> On Friday, June 28, 2013 10:42:41 AM UTC-5, Hannah Poteat wrote:
+>>
+>> This, the license vs sale issue, has been a serious sticking point for=
+=20
+>> Kindle owners, and is a big problem in all digital goods. It has affecte=
+d=20
+>> Kindle owners several times already: in 2009, there was a class action=
+=20
+>> lawsuit<http://www.scribd.com/doc/17878326/Amazon-Complaint-Kindle-Ate-H=
+omework-on-1984>against Amazon on behalf of Kindle owners over Amazon's del=
+etion of George=20
+>> Orwell's *1984*. Amazon settled out of court<http://assets.bizjournals.c=
+om/cms_media/pdf/KindleCase1.pdf?site=3Dtechflash.com>,=20
+>> so we don't have a ruling that gives users any new rights. Under the ter=
+ms=20
+>> of the settlement, Amazon agreed that it would not remotely delete works=
+=20
+>> from Kindles unless the user agrees to the deletion; the user fails to p=
+ay=20
+>> for the book; a court or other regulatory order requires deletion; or=20
+>> deletion is necessary to protect consumers from malicious code.
+>>
+>> A year later, in December 2010, Amazon got into trouble *again* for dele=
+ting=20
+>> a whole bunch of erotica titles from its store<http://arstechnica.com/bu=
+siness/2010/12/amazons-latest-kindle-deletion-erotic-incest-themed-fiction/=
+>...and=20
+>> also deleting those titles from users' Kindle archives. When users=20
+>> protested, Amazon restored the titles to the Kindle archives for those=
+=20
+>> users who had already purchased them, and called it a "technical issue."
+>>
+>> Two years later, in October 2012, it happened again<http://boingboing.ne=
+t/2012/10/22/kindle-user-claims-amazon-dele.html>:=20
+>> Linn Nygaard purchased a Kindle in the UK and then returned to her home =
+in=20
+>> Norway, and continued to use her Kindle, buying books from Amazon's UK=
+=20
+>> store. After working fine for some time, Nygaard's Kindle developed a=20
+>> technical problem, and she called Amazon's customer service to get it=20
+>> replaced. Amazon then closed her account and deleted all her content, an=
+d=20
+>> would not even explain to her why until her story got significant media=
+=20
+>> attention -- once the bad press started building up, Amazon reinstated=
+=20
+>> her account and restored her content<http://digitaljournal.com/article/3=
+35484>
+>> .
+>>
+>> So...short version: Amazon has already been sued about this, and has=20
+>> promised in court that it would severely restrict its ability to delete=
+=20
+>> content on users' Kindles. *That hasn't stopped Amazon from deleting=20
+>> content on users' Kindles in ways not covered by the settlement.*
+>>
+>> The bigger issue, as I mentioned above, is the license vs. sale issue fo=
+r=20
+>> digital goods. Unfortunately, after 2010's *Vernor v. Autodesk* decision=
+,=20
+>> courts support this structure. It means that no, you don't generally own=
+=20
+>> the content you buy online. You don't own the copies of the songs you bu=
+y=20
+>> on iTunes. You don't own the copies of games you download off Steam. Tha=
+t's=20
+>> what your end user *license* agreement is telling you: you license them,=
+=20
+>> which basically means you're just borrowing them.
+>>
+>> In terms of ToS:DR, it's something you can flag if you want to, because=
+=20
+>> it's something people *should* care about...but it's how *everything* is=
+=20
+>> done. Digital content is almost always licensed, not sold -- to find cop=
+ies=20
+>> actually, explicitly *sold* online is the exception, rather than the=20
+>> rule. It's another of those situations where red-flagging *everything* w=
+ill=20
+>> end up giving the user less information, not more.
+>>
+>> Sorry for being super-wordy here.
+>>
+>> Hannah=20
+>>
+>> On Thursday, June 27, 2013 11:04:44 AM UTC-7, Ian McGowan wrote:
+>>>
+>>> How do we feel about this? I think it's a bit absurd to pay money for=
+=20
+>>> books (content) for my Kindle and still not own it. Hugo, didn't you po=
+st=20
+>>> an article where someone had their account closed and Kindle content=20
+>>> deleted without explanation?
+>>>
+>>> On Wednesday, May 22, 2013 5:24:40 PM UTC-5, Hugo Roy wrote:
+>>>>
+>>>> Le mar. 05/03/13, 17:39, anyt...@michielbdejong.com <
+>>>> anyt...@michielbdejong.com>:=20
+>>>> > "Kindle Content is licensed, not sold, to you by the Content=20
+>>>> Provider"=20
+>>>> >=20
+>>>> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4=
+638421a66/crawl/amazon.com/Amazon%20Kindle%20Store%20Terms%20of%20Use.txt#L=
+53=20
+>>>> >=20
+>>>> > i'm pretty sure this means something, just not sure what exactly. ;)=
+=20
+>>>> >=20
+>>>> > i guess for physical reading material it's the difference we all=20
+>>>> > understand between reading a newspaper in a cafe or library and=20
+>>>> > buying that same newspaper at a kiosk, but in the case of electronic=
+=20
+>>>> > content, how is this different in practice?=20
+>>>>
+>>>> Yes, that means you don't own anything.=20
+>>>>
+>>>> It would be like when you go to a physical library and they make=20
+>>>> you sign an agreement saying: "we're not selling this to you". So=20
+>>>> if you don't own it, you don't have property rights on it=85 Bad for=
+=20
+>>>> you.=20
+>>>>
+>>>> For instance, if I own something it means I can resell it second=20
+>>>> hands. Here, I can't.=20
+>>>>
+>>>> --=20
+>>>> Hugo Roy, Project Lead=20
+>>>> Terms of Service; Didn't Read | www.tosdr.org=20
+>>>>
+>>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_972_28200795.1372439124148
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Here's what I'd propose for this point:<div><br></div><div>Title: You only =
+license, not own, Kindle content</div><div><br></div><div>Topic: Suspension=
+ and censorship</div><div><br></div><div>Summary: Although you may buy cont=
+ent for your Kindle, that price is actually just the price you pay to licen=
+se that content. You don't own it. A harsh example of this truth occurred i=
+n October 2012: Linn Nygaard purchased a Kindle in the UK and then returned=
+ to her home in Norway, and continued to use her Kindle, buying books from =
+Amazon's UK store. After working fine for some time, Nygaard's Kindle devel=
+oped a technical problem, and she called Amazon's customer service to get i=
+t replaced. Amazon then closed her account and deleted all her content, and=
+ would not even explain to her why until her story got significant media at=
+tention -- once the bad press started building up, Amazon reinstated her ac=
+count and restored her content.</div><div><br></div><div>Score: 50 (alert)<=
+br><br>On Friday, June 28, 2013 11:56:36 AM UTC-5, Ian McGowan wrote:<block=
+quote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-le=
+ft: 1px #ccc solid;padding-left: 1ex;">Don't worry about being wordy; I thi=
+nk all of this information is incredibly helpful. I have a couple of points=
+. First, based on their terms, I thought that a user's use of Amazon voided=
+ the right to be part of a class action suit (re: your point about the 2009=
+ class action suit). I was just wondering if you knew how that was possible=
+.&nbsp;<div><br></div><div>And secondly, even if the courts have upheld the=
+ license-but-not-own ruling, I personally still feel this is a point worth =
+mentioning to users. I imagine that most users wouldn't know the difference=
+, and as we've seen, the difference is very important!<br><br>On Friday, Ju=
+ne 28, 2013 10:42:41 AM UTC-5, Hannah Poteat wrote:<blockquote class=3D"gma=
+il_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex">This, the license vs sale issue, has been a serious stickin=
+g point for Kindle owners, and is a big problem in all digital goods. It ha=
+s affected Kindle owners several times already: in 2009, there was a <a hre=
+f=3D"http://www.scribd.com/doc/17878326/Amazon-Complaint-Kindle-Ate-Homewor=
+k-on-1984" target=3D"_blank">class action lawsuit</a> against Amazon on beh=
+alf of Kindle owners over Amazon's deletion of George Orwell's <i>1984</i>.=
+ Amazon <a href=3D"http://assets.bizjournals.com/cms_media/pdf/KindleCase1.=
+pdf?site=3Dtechflash.com" target=3D"_blank">settled out of court</a>, so we=
+ don't have a ruling that gives users any new rights. Under the terms of th=
+e settlement, Amazon agreed that it would not remotely delete works from Ki=
+ndles unless the user agrees to the deletion; the user fails to pay for the=
+ book; a court or other regulatory order requires deletion; or deletion is =
+necessary to protect consumers from malicious code.<div><br></div><div>A ye=
+ar later, in December 2010, Amazon got into trouble <i>again</i>&nbsp;for <=
+a href=3D"http://arstechnica.com/business/2010/12/amazons-latest-kindle-del=
+etion-erotic-incest-themed-fiction/" target=3D"_blank">deleting a whole bun=
+ch of erotica titles from its store</a>...and also deleting those titles fr=
+om users' Kindle archives. When users protested, Amazon restored the titles=
+ to the Kindle archives for those users who had already purchased them, and=
+ called it a "technical issue."</div><div><br></div><div>Two years later, i=
+n October 2012, <a href=3D"http://boingboing.net/2012/10/22/kindle-user-cla=
+ims-amazon-dele.html" target=3D"_blank">it happened again</a>: Linn Nygaard=
+ purchased a Kindle in the UK and then returned to her home in Norway, and =
+continued to use her Kindle, buying books from Amazon's UK store. After wor=
+king fine for some time, Nygaard's Kindle developed a technical problem, an=
+d she called Amazon's customer service to get it replaced. Amazon then clos=
+ed her account and deleted all her content, and would not even explain to h=
+er why until her story got significant media attention -- once the bad pres=
+s started building up, Amazon <a href=3D"http://digitaljournal.com/article/=
+335484" target=3D"_blank">reinstated her account and restored her content</=
+a>.</div><div><br></div><div>So...short version: Amazon has already been su=
+ed about this, and has promised in court that it would severely restrict it=
+s ability to delete content on users' Kindles. <i>That hasn't stopped Amazo=
+n from deleting content on users' Kindles in ways not covered by the settle=
+ment.</i></div><div><br></div><div>The bigger issue, as I mentioned above, =
+is the license vs. sale issue for digital goods. Unfortunately, after 2010'=
+s <i>Vernor v. Autodesk</i>&nbsp;decision, courts support this structure. I=
+t means that no, you don't generally own the content you buy online. You do=
+n't own the copies of the songs you buy on iTunes. You don't own the copies=
+ of games you download off Steam. That's what your end user <i>license</i>&=
+nbsp;agreement is telling you:&nbsp;you license them, which basically means=
+ you're just borrowing them.</div><div><br></div><div>In terms of ToS:DR, i=
+t's something you can flag if you want to, because it's something people <i=
+>should</i>&nbsp;care about...but it's how <i>everything</i>&nbsp;is done. =
+Digital content is almost always licensed, not sold -- to find copies actua=
+lly, explicitly <i>sold</i>&nbsp;online is the exception, rather than the r=
+ule. It's another of those situations where red-flagging <i>everything</i>&=
+nbsp;will end up giving the user less information, not more.</div><div><br>=
+</div><div>Sorry for being super-wordy here.</div><div><br></div><div>Hanna=
+h&nbsp;<br><br>On Thursday, June 27, 2013 11:04:44 AM UTC-7, Ian McGowan wr=
+ote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;b=
+order-left:1px #ccc solid;padding-left:1ex">How do we feel about this? I th=
+ink it's a bit absurd to pay money for books (content) for my Kindle and st=
+ill not own it. Hugo, didn't you post an article where someone had their ac=
+count closed and Kindle content deleted without explanation?<br><br>On Wedn=
+esday, May 22, 2013 5:24:40 PM UTC-5, Hugo Roy wrote:<blockquote class=3D"g=
+mail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;=
+padding-left:1ex">Le mar. 05/03/13, 17:39, <a>anyt...@michielbdejong.com</a=
+> &lt;<a>anyt...@michielbdejong.com</a>&gt;:
+<br>&gt; "Kindle Content is licensed, not sold, to you by the Content Provi=
+der"
+<br>&gt; <a href=3D"https://github.com/tosdr/tosback2/blob/265e49bf24a91076=
+495ce1fddf279c4638421a66/crawl/amazon.com/Amazon%20Kindle%20Store%20Terms%2=
+0of%20Use.txt#L53" target=3D"_blank">https://github.com/tosdr/<wbr>tosback2=
+/blob/<wbr>265e49bf24a91076495ce1fddf279c<wbr>4638421a66/crawl/amazon.com/<=
+wbr>Amazon%20Kindle%20Store%<wbr>20Terms%20of%20Use.txt#L53</a>
+<br>&gt;=20
+<br>&gt; i'm pretty sure this means something, just not sure what exactly. =
+;)
+<br>&gt;=20
+<br>&gt; i guess for physical reading material it's the difference we all
+<br>&gt; understand between reading a newspaper in a cafe or library and
+<br>&gt; buying that same newspaper at a kiosk, but in the case of electron=
+ic
+<br>&gt; content, how is this different in practice?
+<br>
+<br>Yes, that means you don't own anything.
+<br>
+<br>It would be like when you go to a physical library and they make
+<br>you sign an agreement saying: "we're not selling this to you". So
+<br>if you don't own it, you don't have property rights on it=85 Bad for
+<br>you.
+<br>
+<br>For instance, if I own something it means I can resell it second
+<br>hands. Here, I can't.
+<br>
+<br>--=20
+<br>Hugo Roy, Project Lead
+<br>Terms of Service; Didn't Read | <a href=3D"http://www.tosdr.org" target=
+=3D"_blank">www.tosdr.org</a>
+<br></blockquote></blockquote></div></blockquote></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_972_28200795.1372439124148--

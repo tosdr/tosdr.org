@@ -1,0 +1,106 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBLVQ46GQKGQEWEAXTIY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 95C7716174B
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:33:26 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 934D619F3D9
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:33:26 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id IPUlEYjsABDK for <anything@michielbdejong.com>;
+	Thu, 13 Jun 2013 16:33:24 +0200 (CEST)
+Received: from mail-lb0-f192.google.com (mail-lb0-f192.google.com [209.85.217.192])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4BEA219F3AA
+	for <anything@michielbdejong.com>; Thu, 13 Jun 2013 16:33:20 +0200 (CEST)
+Received: by mail-lb0-f192.google.com with SMTP id y6sf1530463lbh.9
+        for <anything@michielbdejong.com>; Thu, 13 Jun 2013 07:33:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:mime-version:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition;
+        bh=LfGOWhcjL3D5VzM8XY31csnJ3s3PO1Pz2dv0HSZW24s=;
+        b=Z/1dQF+y8RFx4dBhqYcNX7rEe00XRQkbkWcPx5nwSkS///mTEAftGfmWQeeN1GlOQO
+         Y+HbQ8wd8s5dfKEkSuEgHpD88RINcI5niieE59/Vds9Lvt6FA43HFo0cJM+BxMJvCAFI
+         TSyy0N4uVtd8AzZVY7rD/ARnuFRw3iQpM8pB202kagYZ0Vy/cBP/E+05FauFpuLZPEDH
+         iyJ5+ZMqlrk+dNwnGnwMuVrlyBixgBHYnC/tGDh526QQqrT+oUDKBRkOnQehBfjTrYCU
+         fzc1TredcZsGt6rh3C3GdhItOOfkVCGtgXjM4OgyK/mCiK0i5dc8vi5oxODI4nmhFIvu
+         /61A==
+X-Received: by 10.180.93.136 with SMTP id cu8mr967576wib.9.1371133998512;
+        Thu, 13 Jun 2013 07:33:18 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.36.231 with SMTP id t7ls478953wij.32.canary; Thu, 13 Jun
+ 2013 07:33:18 -0700 (PDT)
+X-Received: by 10.15.25.1 with SMTP id k1mr911775eeu.6.1371133998057;
+        Thu, 13 Jun 2013 07:33:18 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id ci6si3701920eeb.1.2013.06.13.07.33.18
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 13 Jun 2013 07:33:18 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id A5CC663B67F
+	for <tosdr@googlegroups.com>; Thu, 13 Jun 2013 16:33:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 8TS-gGlq36VK for <tosdr@googlegroups.com>;
+	Thu, 13 Jun 2013 16:33:15 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 28B4E63B681
+	for <tosdr@googlegroups.com>; Thu, 13 Jun 2013 16:33:12 +0200 (CEST)
+Date: Thu, 13 Jun 2013 16:33:11 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: =?windows-1252?Q?=5Btosdr=3A2297=5D_Vimeo=3A_You_are_responsible=85?=
+Message-ID: <20130613143311.GF29212@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+MIME-Version: 1.0
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+http://vimeo.com/terms
+
+    ACCOUNT SECURITY: You are responsible for all activity that
+    occurs under your account, including any activity by
+    unauthorized users. 
+
+
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

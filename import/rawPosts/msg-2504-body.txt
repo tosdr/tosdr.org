@@ -1,0 +1,146 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBQNE7OFQKGQE2CXTAAY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CA9A7161735
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 22:04:23 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C605C22607A
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 22:04:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id vriUu6T4aUQg for <anything@michielbdejong.com>;
+	Mon, 29 Apr 2013 22:04:22 +0200 (CEST)
+Received: from mail-oa0-f60.google.com (mail-oa0-f60.google.com [209.85.219.60])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 04DC22260A2
+	for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 22:04:21 +0200 (CEST)
+Received: by mail-oa0-f60.google.com with SMTP id h1sf2244473oag.15
+        for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 13:04:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=uhAUDm57thjueD9JN/J3dTH+xtlcp8bjgvXi8H3ozxc=;
+        b=DiodkvDXcLxVqGA06g2WsHBbcuCJKj84avVv9Js360zFK5XeBxg9X2kxD5XzjDRCXv
+         yodnICqly4fb4TKKSVmsBrWYOdbHNFDsQVTWHlXQAltiaqHJC/c58LWZwrgOeXKO4YYA
+         vxeimHv5+IXi7HQkFjUNtJ+HcV95lMTLIHm37qxGUoRtsaZ2NENKFXTes4BLjAjgERKn
+         oUNxMm9IqTe9riIBqfR0jWKMviZZ0yRM+/uk+yeekLfrZxhP70ITG8SQm9S4Pr9pO5lb
+         n6T5eKq5aR6YwRReT1wKjXubaL1Hca7Nf6W6sRdvNtc2TVI9AmwTj5+1JDChMsQmVYO9
+         LKQA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=uhAUDm57thjueD9JN/J3dTH+xtlcp8bjgvXi8H3ozxc=;
+        b=AXEw8H8yyV96P+ILjfCbGaCWF0nC4diyXBkdKtAaKnWeNvibGMzPSjEjejXfeplS/g
+         v3oSjZj0t8Ft1MiSST2xyyOPIC1gL2lR9w49IAvshoRAcA76SoeRjNYD/6Kd2eTny89k
+         opNDFhn9NWLCIjNh+mhpnYf3RzSHwMj78v6NxD/mlKK9jEBk8UC+5CZnvrPJzewUIIkd
+         KHqFDx2ne79GOxO6wPk7krrBhmI2U0/+TzN3DAllrEfKrtg4rFEw1oIZ8/SiY8lxu+PS
+         Ce4prBMEYyUqoLcBQyQu1fxlwvKklqdZ3jwvGOc+NOUkVf2dSLnQWNh5B6o0o/i6LDlj
+         y6CQ==
+X-Received: by 10.49.95.137 with SMTP id dk9mr1575915qeb.34.1367265860567;
+        Mon, 29 Apr 2013 13:04:20 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.47.16 with SMTP id z16ls2795436qem.26.gmail; Mon, 29 Apr
+ 2013 13:04:17 -0700 (PDT)
+X-Received: by 10.49.130.7 with SMTP id oa7mr4658962qeb.12.1367265857704;
+        Mon, 29 Apr 2013 13:04:17 -0700 (PDT)
+Date: Mon, 29 Apr 2013 13:04:16 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <2f25116c-534a-4d31-a162-3f2f4423e17b@googlegroups.com>
+In-Reply-To: <dc582780-c630-4181-b2b9-0e519985c6f8@googlegroups.com>
+References: <dc582780-c630-4181-b2b9-0e519985c6f8@googlegroups.com>
+Subject: [tosdr:1846] Re: Cloudant will provide some integration assistance at
+ no cost.
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_78_16957914.1367265856987"
+
+------=_Part_78_16957914.1367265856987
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.
+
+On Tuesday, December 11, 2012 3:51:06 PM UTC+1, Robin Monks wrote:
+>
+> During the Term, Cloudant shall, upon Subscriber=92s request, provide=20
+>> Subscriber some number of hours (as stated in the applicable order form)=
+ of=20
+>> integration coding consulting at no cost ("*Integration Consulting=20
+>> Services*").=20
+>
+>
+> /Robin=20
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_78_16957914.1367265856987
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This has been curated.<br><br>On Tuesday, December 11, 2012 3:51:06 PM UTC+=
+1, Robin Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;m=
+argin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-widt=
+h:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-le=
+ft:1ex"><span style=3D"color:rgb(31,61,89);font-family:'Droid Sans',sans-se=
+rif;font-size:15px;line-height:20px;background-color:rgb(249,249,249)">Duri=
+ng the Term, Cloudant shall, upon Subscriber=92s request, provide Subscribe=
+r some number of hours (as stated in the applicable order form) of integrat=
+ion coding consulting at no cost ("</span><u style=3D"color:rgb(31,61,89);f=
+ont-family:'Droid Sans',sans-serif;font-size:15px;line-height:20px;backgrou=
+nd-color:rgb(249,249,249)">Integration Consulting Services</u><span style=
+=3D"color:rgb(31,61,89);font-family:'Droid Sans',sans-serif;font-size:15px;=
+line-height:20px;background-color:rgb(249,249,249)">").&nbsp;</span></block=
+quote><div><br></div><div>/Robin&nbsp;</div></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_78_16957914.1367265856987--

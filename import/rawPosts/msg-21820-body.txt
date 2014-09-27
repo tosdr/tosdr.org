@@ -1,0 +1,100 @@
+Return-Path: <tosdr+bncBCWNT3HMRMGBBC6GSCPQKGQEP3ZSDZI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 00A9C40916
+	for <anything@michielbdejong.com>; Fri,  8 Aug 2014 03:08:34 +0200 (CEST)
+Received: from mfilter38-d.gandi.net (mfilter38-d.gandi.net [217.70.178.169])
+	by spool.mail.gandi.net (Postfix) with ESMTP id F28B7178219
+	for <anything@michielbdejong.com>; Fri,  8 Aug 2014 03:08:33 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter38-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter38-d.gandi.net (mfilter38-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nLc6YXzR6qlJ for <anything@michielbdejong.com>;
+	Fri,  8 Aug 2014 03:08:32 +0200 (CEST)
+Received: from mail-pd0-x23a.google.com (mail-pd0-x23a.google.com [IPv6:2607:f8b0:400e:c02::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5196C178210
+	for <anything@michielbdejong.com>; Fri,  8 Aug 2014 03:08:29 +0200 (CEST)
+Received: by mail-pd0-f186.google.com with SMTP id z10sf1003727pdj.13
+        for <anything@michielbdejong.com>; Thu, 07 Aug 2014 18:08:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=CQq0FCCYOfDr2EwGVdjwY13qyy1i01tXjt7gea3zZn8=;
+        b=QgN+9bCQC9j9tgOA8Wau/W3Q8zi3Qq0mK/kYG7Z0Vr5NnqHQDVmTPke/wrpnHClBT0
+         ZPfYYjLaupzp2G+rc6COxPmj3j605TRn+qBSjoZD1ZNhMEsKtTMDU1NNFR419p8ho9bl
+         pGjbNxktmDmVMUyFIykciH9wlvgKcKlOHBLqCrJ9ztD81QZTxJDoJacr5WFPFnEpYO4c
+         Q1RfypRxWvfeALPcE3WNogKH82UwAFpRDFHSLB03xi44/kfNSboy42YqkrmgfWo1jk3P
+         V4aziUlZ6RV0lep2QCtqcNpgh/GlG/aVc8o+Lj8p5UgzPJEl7UR5+L0SZoGdB12ZUxLs
+         NXEA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=CQq0FCCYOfDr2EwGVdjwY13qyy1i01tXjt7gea3zZn8=;
+        b=E3IVGdfCmZBsgB4/cQmrrD83HsQcAgKFs2+QDgRKWXUxifUPFscmjxCAF8vt1YCjpZ
+         cbMaP6s6j8Yty1xmgDsys4sGMfieByzJAE652mmkbjFUJQ9O6nDiFfEY9OkFSEUdJpPp
+         7tO6iq56vGOPQ+5nD4Y7Udlc4LgBaFlP0OJRuoQwQND0cEBEtOuoOfvIsGuECDsQm66x
+         8BksSC1JzRF6TF9W8hJTC/FHmVTmV7n+RZkiksKfuKIuzvX0iHa9aolS2zRo/R63UdSF
+         GWmOTAfRGjCXXBQFyPnrTj3H0GtHmLp1rxKjQAvmMI5h8tTLahaaVyLDB1NNER0O8ql/
+         CDlw==
+X-Received: by 10.183.1.34 with SMTP id bd2mr204069obd.6.1407460107572;
+        Thu, 07 Aug 2014 18:08:27 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.2.6 with SMTP id 6ls282163obq.81.gmail; Thu, 07 Aug 2014
+ 18:08:27 -0700 (PDT)
+X-Received: by 10.182.110.167 with SMTP id ib7mr184936obb.8.1407460107257;
+        Thu, 07 Aug 2014 18:08:27 -0700 (PDT)
+Date: Thu, 7 Aug 2014 18:08:26 -0700 (PDT)
+From: mike.catanzaro@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <daf2f882-3a8d-46db-8778-d94bfb41304d@googlegroups.com>
+Subject: [tosdr:3129] [bad] Skype may prohibit users from posting links to the
+ Skype website
+MIME-Version: 1.0
+X-Original-Sender: mike.catanzaro@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+From http://www.skype.com/en/legal/tou/
+
+5.13 Linking You may link to the Skype Website from another website owned b=
+y you, provided you do so in a way that is fair and legal and does not dama=
+ge our reputation or take advantage of it. You must not establish a link in=
+ such a way as to suggest any form of association, approval or endorsement =
+by Skype where none exists. You may not frame the Site on any other site. S=
+kype may revoke the permission to link to the Skype Websites at any time at=
+ its sole discretion and will notify you in this respect.
+
+Note that since this message is posted on Google Groups, which is not my ow=
+n website, it's not a violation of their terms of service, even though I'm =
+posting the link above with the intention to damage Skype's reputation. But=
+ bloggers beware: if you have a Skype account want to write about Skype's T=
+oS, you'd best not include a link. :)
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

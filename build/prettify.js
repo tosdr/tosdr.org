@@ -48,7 +48,7 @@ function process(dir, grunt){
 
 module.exports = function(grunt){
   grunt.task.registerTask('prettify', 'Make the JSON files consistent', function(){
-    ['cases','points', 'topics', 'services', 'index'].forEach(function(folder){
+    ['points', 'topics', 'services', 'index', 'cases', 'posts'].forEach(function(folder){
       process(folder, grunt);
     });
   });

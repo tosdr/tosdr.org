@@ -1,0 +1,109 @@
+Return-Path: <tosdr+bncBCO3DYOV6MIRBGEL7CNQKGQEAKLKCRA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 654B640F4B
+	for <anything@michielbdejong.com>; Thu, 22 May 2014 16:11:39 +0200 (CEST)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3C59C142C08
+	for <anything@michielbdejong.com>; Thu, 22 May 2014 16:11:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id SfuZFvTHq5UR for <anything@michielbdejong.com>;
+	Thu, 22 May 2014 16:11:37 +0200 (CEST)
+Received: from mail-ie0-x23c.google.com (mail-ie0-x23c.google.com [IPv6:2607:f8b0:4001:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9DEDF142B98
+	for <anything@michielbdejong.com>; Thu, 22 May 2014 16:11:37 +0200 (CEST)
+Received: by mail-ie0-f188.google.com with SMTP id rd18sf884289iec.15
+        for <anything@michielbdejong.com>; Thu, 22 May 2014 07:11:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1VSgl6PXx+MQoOhtrsugZlTie5SVewo6ihF7RNMA600=;
+        b=HIWVaPni5QnTYzxjMaxFXUSuDhvouRrm6eARWuqgx8focy3U2yP3DD2QSsQMtch2hT
+         3RK4uzhublR6/y/0gIWMWotP0QuFj8ejCAxjKWXGOudzKvSeNYjCHRpUMS5JhhwsXlFf
+         xkdr/w/h8+PxiHVdezctXWReOGxevaUEXpdU5lyibqwRnUZ3USmXEkj2ldlOr49U55GU
+         S40Z8QAjty5tQwqvJzIfoGNGEHAR/gfcgRw9MrIyNh3EtA0ZLjiwz4C9nMVgBrafGsZh
+         zxZD8jS5f85oKQKexJyMMDvqPVbw6fupgDBhAlIJe6HptybRqcKGbsdLHNNL7vsIY3Cq
+         jgLA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1VSgl6PXx+MQoOhtrsugZlTie5SVewo6ihF7RNMA600=;
+        b=dpbVrLCL2jXNOexCN6Tm4KIoJ2BwU8zyudn+DpQHKhyFyqIReSMedY/37LuDf2appd
+         M6i+SgpuVG0z7H8MWu82QIZ23tQEg1foSLNvjiQqVnRKbROnLknBl3s63tdOGaRJxuEu
+         8Jbd91ljufCe+yZGBLtukSbJOR8jFNyK/fAFuPnSEtB7e8DaRiRkUQtKmxtA/oEHoDiP
+         MA/g38Qsh7YO/Jh+3wxtaZtkAl5SQ5sFGhIrkQliFhCUyTBn/mahNUpdvoejG0hn3wi+
+         p7/bOvM2kU6SSjOvEKJ7EOgFjThLlDh5s/zxUY1iCfC0FtrUmlxiZbbdNic1GthxG2cO
+         37wQ==
+X-Received: by 10.50.120.1 with SMTP id ky1mr477670igb.7.1400767896516;
+        Thu, 22 May 2014 07:11:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.238.131 with SMTP id vk3ls3595667igc.23.canary; Thu, 22 May
+ 2014 07:11:36 -0700 (PDT)
+X-Received: by 10.50.178.146 with SMTP id cy18mr265119igc.17.1400767896139;
+        Thu, 22 May 2014 07:11:36 -0700 (PDT)
+Date: Thu, 22 May 2014 07:11:35 -0700 (PDT)
+From: alexbuzzbee@gmail.com
+To: tosdr@googlegroups.com
+Cc: alexbuzzbee@gmail.com
+Message-Id: <5d1b411b-8634-4b5d-868b-ce431f9ab673@googlegroups.com>
+In-Reply-To: <CAGTawzMzS14YuEp0AKpTZLCZ8uoKJdg=epFEC_xFVLJURew+FA@mail.gmail.com>
+References: <CAGTawzMzS14YuEp0AKpTZLCZ8uoKJdg=epFEC_xFVLJURew+FA@mail.gmail.com>
+Subject: [tosdr:3026] Re: You should do Mozilla's Privacy Policy.
+MIME-Version: 1.0
+X-Original-Sender: alexbuzzbee@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+
+If we store your personal information with information that is non-personal, we will consider the combination as personal information.
+
+They can't mix your information with other information and then use it for whatever they want.
+
+When you give us information, we will use it in the ways for which you've given us permission. Generally, we use your information to help us provide and improve our products and services for you.
+
+If you tell them not to do something, they won't do it.
+
+On Monday, May 19, 2014 8:34:22 AM UTC-4, Alex Martin wrote:
+> http://www.mozilla.org/en-US/privacy/
+> 
+> QUOTE: We are committed to being transparent and open.
+> VERDICT: I think that's good.
+> 
+> 
+> 
+> 
+> -- 
+> 
+> 
+> DATE: 2014/05/19 LDS (Logical Dating System: YYYY/MM/DD)
+> 
+> 
+> 
+> Best,Alex Martin
+> Webmaster: http://www.programmingwave.com
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

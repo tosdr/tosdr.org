@@ -1,0 +1,156 @@
+Return-Path: <tosdr+bncBAABBL7PTKQAKGQEYXDFZWY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id E0BCE4091A
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 08:39:49 +0200 (CEST)
+Received: from mfilter36-d.gandi.net (mfilter36-d.gandi.net [217.70.178.167])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DE49217806F
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 08:39:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter36-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter36-d.gandi.net (mfilter36-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id JqFB3Ph8O+Sh for <anything@michielbdejong.com>;
+	Wed,  3 Sep 2014 08:39:48 +0200 (CEST)
+Received: from mail-ie0-x23a.google.com (mail-ie0-x23a.google.com [IPv6:2607:f8b0:4001:c03::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1C1A31780A0
+	for <anything@michielbdejong.com>; Wed,  3 Sep 2014 08:39:44 +0200 (CEST)
+Received: by mail-ie0-f186.google.com with SMTP id x19sf1857388ier.13
+        for <anything@michielbdejong.com>; Tue, 02 Sep 2014 23:39:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=OSZIBvguVkM+Gzqh7U3rbz+siKy9oCVuQplOTU1PZkc=;
+        b=ki70vyg2Ofzo4I8e7VgahNZz6RnTdkxa4SMm6FpNoS9j2YE8FO2ehv8MQl4tGGhbjx
+         BBZ1ixYT9F1JOLImTe0vYk78deO7yHMQvFzSjGNWfhZBUuDU5KzEoFYmwhXfJ8mu48cw
+         xaTP+F+2udtoleOzlCIFmvz9i5cnMvJ4RODrvfTr+rn90thOfq02FIAePDdwAyr1PWcP
+         /Tg0WbuQkl59PyGUC/TfQrrBb2YeunQLsK+yvuVJ8PP6uzdHWeYEGZ555JxVbfRx9fXs
+         Tw6PTZOA0PLeIKtePP5Nzhsd6zFSDn6w1hF1RzoR65CgWbcKpFn6GDF1IH4DCZmB6HCA
+         fbJw==
+X-Received: by 10.50.115.74 with SMTP id jm10mr561723igb.12.1409726383749;
+        Tue, 02 Sep 2014 23:39:43 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.41.69 with SMTP id d5ls3016728igl.26.gmail; Tue, 02 Sep
+ 2014 23:39:43 -0700 (PDT)
+X-Received: by 10.42.235.132 with SMTP id kg4mr23351132icb.22.1409726383224;
+        Tue, 02 Sep 2014 23:39:43 -0700 (PDT)
+Received: from st11p00mm-asmtp004.mac.com (st11p00mm-asmtpout004.mac.com. [17.172.81.3])
+        by gmr-mx.google.com with ESMTPS id bb4si789370pdb.1.2014.09.02.23.39.43
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-MD5 bits=128/128);
+        Tue, 02 Sep 2014 23:39:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of felixphew@icloud.com designates 17.172.81.3 as permitted sender) client-ip=17.172.81.3;
+Received: from Felixs-MacBook-Pro.local
+ (c211-30-51-180.frank3.vic.optusnet.com.au [211.30.51.180])
+ by st11p00mm-asmtp004.mac.com
+ (Oracle Communications Messaging Server 7u4-27.10(7.0.4.27.9) 64bit (built Jun
+  6 2014)) with ESMTPSA id <0NBB00HXZBT2NN40@st11p00mm-asmtp004.mac.com> for
+ tosdr@googlegroups.com; Wed, 03 Sep 2014 06:39:14 +0000 (GMT)
+X-Proofpoint-Virus-Version: vendor=fsecure
+ engine=2.50.10432:5.12.52,1.0.27,0.0.0000
+ definitions=2014-09-03_04:2014-09-02,2014-09-03,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=4 phishscore=0 adultscore=0 bulkscore=0 classifier=spam adjust=0
+ reason=mlx scancount=1 engine=7.0.1-1402240000 definitions=main-1409030080
+Message-id: <5406B780.2010003@icloud.com>
+Date: Wed, 03 Sep 2014 16:38:56 +1000
+From: Felix Friedlander <felixphew@icloud.com>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:33.0)
+ Gecko/20100101 Thunderbird/33.0a2
+MIME-version: 1.0
+To: tosdr@googlegroups.com
+Subject: Fwd: Re: [tosdr:3189] StackExchange [bad] permanently retains all
+ rights to your information
+References: <20140902215401.GA4294@xps>
+In-reply-to: <20140902215401.GA4294@xps>
+X-Forwarded-Message-Id: <20140902215401.GA4294@xps>
+Content-type: multipart/signed; micalg=pgp-sha512;
+ protocol="application/pgp-signature";
+ boundary=L7dwceGn5mKLBsSuTbLLj4pTn9Gn7RFLf
+X-Original-Sender: felixphew@icloud.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of felixphew@icloud.com designates 17.172.81.3 as
+ permitted sender) smtp.mail=felixphew@icloud.com;       dmarc=pass (p=NONE
+ dis=NONE) header.from=icloud.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--L7dwceGn5mKLBsSuTbLLj4pTn9Gn7RFLf
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Sorry, this was meant to be public, but it somehow ended up as a private
+email conversation.
+So, in short: StackExchange's open license is good, but *they* own the
+licensing rights to your contributions, not you. Both of these points
+should be mentioned.
+
+
+-------- Forwarded Message --------
+Subject: Re: [tosdr:2960] StackExchange [bad] permanently retains all
+rights to your information
+Date: Tue, 02 Sep 2014 23:54:01 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: Felix Friedlander <felixphew@icloud.com>
+
+=E2=86=AA 2014-09-02 Tue 23:12, Felix Friedlander <felixphew@icloud.com>:=
+
+> It's not the licence I'm  worried about - CC BY-SA is great in my
+> opinion. It's the fact that it's licensed to *them*, not *you*. All in
+> all, I think StackExchange is great, its licences included, however thi=
+s
+> is the sort of information people go to your website to find out. I jus=
+t
+> though it was worth including.
+
+Yes, but since it=E2=80=99s CC BY-SA they must also distribute to other
+users under the same license. Or am I missing something?
+
+PS: could you please continue this discussion on the public group?
+Thanks
+
+--=20
+Hugo Roy
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org>
+
+Please use cryptography for email: see https://emailselfdefense.fsf.org/e=
+n/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email : voir
+https://emailselfdefense.fsf.org/fr/
+
+
+
+
+--L7dwceGn5mKLBsSuTbLLj4pTn9Gn7RFLf
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+iQEcBAEBCgAGBQJUBreFAAoJEBCwfQ+DQNrUiWYH/29XV5bbGj9eWS90gAJjUIlf
+VxdkGY32PW9JmvPVU81DW5czw5DWsMqwXTJ9urdfTmwq7j+68uKe7FWyAuGQfUmg
+1hpXFlHwu7N5eX+pi0/q6g5pskhCB7uAPqvSMvnx2D6sJAIji37MMgD6Cwyp1iVd
+Jv4cdEO4KaMUH0HzrzZxoxlBxA5z2pyM+irguMKdNR/dLe5OAdmblwVj0kMsUWkA
+gvixmaW+r2GRJQkDfezjHyjwmIJ/4Z2tg/3pDJuSongU0AEZYbgl4BgcABrKwQ/P
+oBkr7XTvylwW/qwi1BUIa7ArTWIo9o2+bSZjibss4VI2oL1rcVcVt4yWg8nB0wM=
+=SEB5
+-----END PGP SIGNATURE-----
+
+--L7dwceGn5mKLBsSuTbLLj4pTn9Gn7RFLf--

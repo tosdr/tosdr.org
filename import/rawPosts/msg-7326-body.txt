@@ -1,0 +1,273 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBD6GX6HQKGQEESZOS2Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id ACEFD161755
+	for <anything@michielbdejong.com>; Wed, 24 Jul 2013 16:22:14 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A9B1B178094
+	for <anything@michielbdejong.com>; Wed, 24 Jul 2013 16:22:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id cDPOVpqR8don for <anything@michielbdejong.com>;
+	Wed, 24 Jul 2013 16:22:13 +0200 (CEST)
+Received: from mail-qc0-x237.google.com (mail-qc0-x237.google.com [IPv6:2607:f8b0:400d:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A8BD31780B3
+	for <michiel@michielbdejong.com>; Wed, 24 Jul 2013 16:22:12 +0200 (CEST)
+Received: by mail-qc0-f183.google.com with SMTP id a10sf180911qcx.0
+        for <michiel@michielbdejong.com>; Wed, 24 Jul 2013 07:22:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=kM/18JN4eeRxozVK4bdehPW8B5ROZxncnMpzjZdT2SE=;
+        b=rXyNaBUG7q4FHkt0Re8sZ4r/DQg1WERG3IHF8Wk30wf86ZZyZC2PngTs+bBt5p9J5+
+         aBkw9Ru1gIVt+RcvMPLARaflOzy08PxuCGWYVMjxiud0EURrPsbv/ppLu/0hRQ7ezb3w
+         fLK4gLhm4g/W/LF7KDHWf3je0QTmLRyXmPgLovV1zHD73sJuo8qV7oz07XNkry5HY1+e
+         Y6bN4dNBCNanFZ/OegfNS3o5xu9GViiHqx0l7p2q9KUUUbWq6vAQ5GPiXEQgfM0MWuDF
+         iXzSvWw4cCIISEDdW8OZTuLfes8Kz/bfqizq5+w/mbGDWXMxSZ7bi8EMB5+IkZ1ifLhJ
+         XoLw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=kM/18JN4eeRxozVK4bdehPW8B5ROZxncnMpzjZdT2SE=;
+        b=Bv7x+pPS+t5x0ea/9KiHESsspd82n15UH4tCzRpgcHNnPJTimWyxG9R6fd+FT4hP33
+         chmNP/GCRSlfTcNStgvetFhwDEtAuCurdjTWMpITWOqsU3hdaSwOfQEURDk/FMwkIm2W
+         dz4N3qeQTnSbl2YxgDhy0HAhUAY4tSo8Sd0axtDkenJqo7G9zr6NhV7oSok8OmCtTXW/
+         z6mvDcnvtvTiL2/cK1BTmtV31Oxtyq0U3DAvgD9wIKjfJEuCtBKu1N8r9nY1gsEDDJ6f
+         UY0d1QSDavYjShnK1J6qBbnALXoTv7z93YP3Ila9CBd0Y/VNhZdQZn+tT5XUDKO2lg9g
+         fyUA==
+X-Received: by 10.50.28.78 with SMTP id z14mr286026igg.5.1374675728765;
+        Wed, 24 Jul 2013 07:22:08 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.164.231 with SMTP id yt7ls2586157igb.7.canary; Wed, 24 Jul
+ 2013 07:22:07 -0700 (PDT)
+X-Received: by 10.50.22.9 with SMTP id z9mr285130ige.6.1374675727250;
+        Wed, 24 Jul 2013 07:22:07 -0700 (PDT)
+Date: Wed, 24 Jul 2013 07:22:06 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: longacre@me.com
+Message-Id: <bf966e36-e6b6-44ef-a51b-497cb486dc0f@googlegroups.com>
+In-Reply-To: <9671B269-EBB2-4004-A439-16E51657CD46@me.com>
+References: <9671B269-EBB2-4004-A439-16E51657CD46@me.com>
+Subject: [tosdr:2533] Re: Evernote TOS
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7_18650539.1374675726557"
+
+------=_Part_7_18650539.1374675726557
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hi Josh,
+
+Firstly, thanks for your contribution. It's always great to have more=20
+people involved in this!
+
+Secondly, for future reference, we prefer you to limit your contributions=
+=20
+to one topic per thread. This makes it easier to discuss specific points in=
+=20
+depth and makes it easier for the curators to find and analyze specific=20
+data points that are then posted to the website. Also, for each point you=
+=20
+make (say, about binding arbitration) if you can quote the actual TOS,=20
+that's preferred. We have a lot of contributors, including a few lawyers,=
+=20
+who can then make better-informed points with the actual wording of the=20
+document. Your inclusion of Evernote's "looking at your notes" quote is=20
+exactly what I mean.
+
+Thanks again!
+
+Best,
+Ian
+
+On Friday, July 19, 2013 10:24:22 PM UTC-5, Josh A wrote:
+>
+> My review of Evernote TOS:
+>
+> Looks like Evernote - http://evernote.com/legal/tos.php - has decent TOS.=
+=20
+>  I=92d give them a green light.
+>
+> -They do their best not to look at what you upload.  No data mining.
+> -Other than IP issues, all disputes are restricted binding arbitration,=
+=20
+> and there=92s a no-class-action clause.  Don=92t know if it=92s enforceab=
+le, but=20
+> it=92s there.
+> -They don=92t take responsibility for third-party services.  No big surpr=
+ise.
+>
+> Privacy page - http://evernote.com/legal/privacy.php
+>
+> -Information pulled from your computer includes email and account name (a=
+s=20
+> entered to make an account), your IP address (to localize), hardware and=
+=20
+> software. =20
+> -There=92s a whole page on cookies - http://evernote.com/legal/cookies.ph=
+p -=20
+> which describes their use of cookies for their own functional purposes, *
+> marketing*, and some social media interaction (facebook, google+, etc=85.=
+)
+>
+> -Includes very straightforward paragraph re: looking at your notes:
+>
+> Does Evernote Review My Notes?
+>
+> As a rule, Evernote employees do not monitor or view your personal=20
+> information or Content stored in the Service, but it may be viewed if we=
+=20
+> believe our Terms of Service have been violated and confirmation is=20
+> required, if we need to do so in order to respond to your requests for us=
+er=20
+> support, or we otherwise determine that we have an obligation to review i=
+t=20
+> as described in our Terms of Service <http://evernote.com/legal/tos.php>.=
+=20
+> Your Notes also may be viewed where necessary to protect the rights,=20
+> property or personal safety of Evernote and its users, or in order to=20
+> comply with our legal obligations, such as responding to warrants, court=
+=20
+> orders or other legal process.
+>
+>
+> -Clear listing on http://evernote.com/privacy/data_usage.php of how the=
+=20
+> software accesses data on various devices, and why.
+>
+> -Also, a nice page on how to remove your account here=20
+> http://evernote.com/contact/support/kb/#/article/23403793
+>
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_7_18650539.1374675726557
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hi Josh,<div><br></div><div>Firstly, thanks for your contribution. It's alw=
+ays great to have more people involved in this!</div><div><br></div><div>Se=
+condly, for future reference, we prefer you to limit your contributions to =
+one topic per thread. This makes it easier to discuss specific points in de=
+pth and makes it easier for the curators to find and analyze specific data =
+points that are then posted to the website. Also, for each point you make (=
+say, about binding arbitration) if you can quote the actual TOS, that's pre=
+ferred. We have a lot of contributors, including a few lawyers, who can the=
+n make better-informed points with the actual wording of the document. Your=
+ inclusion of Evernote's "looking at your notes" quote is exactly what I me=
+an.</div><div><br></div><div>Thanks again!</div><div><br></div><div>Best,</=
+div><div>Ian</div><div><br>On Friday, July 19, 2013 10:24:22 PM UTC-5, Josh=
+ A wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: =
+0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div style=3D"word-wr=
+ap:break-word"><div>My review of Evernote TOS:</div><div><br></div>Looks li=
+ke Evernote -&nbsp;<a href=3D"http://evernote.com/legal/tos.php" target=3D"=
+_blank">http://evernote.com/legal/<wbr>tos.php</a>&nbsp;- has decent TOS. &=
+nbsp;I=92d give them a green light.<div><br></div><div>-They do their best =
+not to look at what you upload. &nbsp;No data mining.</div><div>-Other than=
+ IP issues, all disputes are restricted binding arbitration, and there=92s =
+a no-class-action clause. &nbsp;Don=92t know if it=92s enforceable, but it=
+=92s there.</div><div>-They don=92t take responsibility for third-party ser=
+vices. &nbsp;No big surprise.</div><div><br></div><div>Privacy page -&nbsp;=
+<a href=3D"http://evernote.com/legal/privacy.php" target=3D"_blank">http://=
+evernote.com/legal/<wbr>privacy.php</a></div><div><br></div><div>-Informati=
+on pulled from your computer includes email and account name (as entered to=
+ make an account), your IP address (to localize), hardware and software. &n=
+bsp;</div><div>-There=92s a whole page on cookies -&nbsp;<a href=3D"http://=
+evernote.com/legal/cookies.php" target=3D"_blank">http://evernote.com/legal=
+/<wbr>cookies.php</a>&nbsp;- which describes their use of cookies for their=
+ own functional purposes, <b>marketing</b>, and some social media interacti=
+on (facebook, google+, etc=85.)</div><div><br></div><div>-Includes very str=
+aightforward paragraph re: looking at your notes:</div><blockquote style=3D=
+"margin:0 0 0 40px;border:none;padding:0px"><div><h3 style=3D"margin-top:1e=
+m;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;paddin=
+g-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border=
+-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-style=
+:initial;border-color:initial;outline-width:0px;outline-style:initial;outli=
+ne-color:initial;font-size:1.3em;vertical-align:baseline;background-color:r=
+gb(238,238,238);font-family:webfont_bold,Verdana,arial,helvetica,sans-serif=
+;line-height:1.5;color:rgb(95,95,95);font-weight:normal;font-style:normal;f=
+ont-variant:normal;letter-spacing:normal;text-align:-webkit-auto;text-inden=
+t:0px;text-transform:none;white-space:normal;word-spacing:0px">Does Evernot=
+e Review My Notes?</h3></div><div><p style=3D"margin-top:0px;margin-right:0=
+px;margin-bottom:1em;margin-left:0px;padding-top:0px;padding-right:0px;padd=
+ing-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px=
+;border-bottom-width:0px;border-left-width:0px;border-style:initial;border-=
+color:initial;outline-width:0px;outline-style:initial;outline-color:initial=
+;font-size:12px;vertical-align:baseline;background-color:rgb(238,238,238);f=
+ont-family:Verdana,helvetica,arial,sans-serif;line-height:18px;color:rgb(64=
+,64,64);font-style:normal;font-variant:normal;font-weight:normal;letter-spa=
+cing:normal;text-align:-webkit-auto;text-indent:0px;text-transform:none;whi=
+te-space:normal;word-spacing:0px">As a rule, Evernote employees do not moni=
+tor or view your personal information or Content stored in the Service, but=
+ it may be viewed if we believe our Terms of Service have been violated and=
+ confirmation is required, if we need to do so in order to respond to your =
+requests for user support, or we otherwise determine that we have an obliga=
+tion to review it as described in our&nbsp;<a href=3D"http://evernote.com/l=
+egal/tos.php" style=3D"margin:0px;padding:0px;border:0px;outline:0px;font-s=
+ize:12px;vertical-align:baseline;background-color:transparent;color:rgb(105=
+,170,53);text-decoration:none;background-repeat:initial initial" target=3D"=
+_blank">Terms of Service</a>. Your Notes also may be viewed where necessary=
+ to protect the rights, property or personal safety of Evernote and its use=
+rs, or in order to comply with our legal obligations, such as responding to=
+ warrants, court orders or other legal process.</p></div></blockquote><div>=
+<br></div><div>-Clear listing on&nbsp;<a href=3D"http://evernote.com/privac=
+y/data_usage.php" target=3D"_blank">http://evernote.com/<wbr>privacy/data_u=
+sage.php</a>&nbsp;of how the software accesses data on various devices, and=
+ why.</div><div><br></div><div>-Also, a nice page on how to remove your acc=
+ount here&nbsp;<a href=3D"http://evernote.com/contact/support/kb/#/article/=
+23403793" target=3D"_blank">http://evernote.com/<wbr>contact/support/kb/#/a=
+rticle/<wbr>23403793</a></div><div><br></div><div><br></div></div></blockqu=
+ote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_7_18650539.1374675726557--

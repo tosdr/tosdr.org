@@ -1,0 +1,137 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBDNG76FQKGQE2MH4WRY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id C79D9161735
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 16:20:00 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C2C921420DE
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 16:20:00 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id i3hKVyeiX37J for <anything@michielbdejong.com>;
+	Tue, 30 Apr 2013 16:19:59 +0200 (CEST)
+Received: from mail-bk0-x23a.google.com (mail-bk0-x23a.google.com [IPv6:2a00:1450:4008:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 30B321420CE
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 16:19:59 +0200 (CEST)
+Received: by mail-bk0-f58.google.com with SMTP id ji1sf158876bkc.13
+        for <anything@michielbdejong.com>; Tue, 30 Apr 2013 07:19:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=5X5CR+8yiWbyLW8DV9boIw3OyS3m3TbE+euLYBv5EwE=;
+        b=QI6VjfFaf1gChsaxW7J61fSP8ZBPkYmrZmv3YuWbRtnxn5FmXbKPdKi7O9CZqkK1Ym
+         alO1BNjarXkzMDYNwDOuU9c+zK+hkB4QVGlJhpC1VedCntXV4uHTK43lSx5Z1Z0NMdSy
+         NS/JCNM4472p0GW0IeLj1JRkLJmsYmxpTwVEneJXQ3zlZ6mzEFFf2NhQ9iVgUedTYn0M
+         8BcsagduayoPor+/iTaqz2MOw1Z0mCEKZqpjKP9DjuNyIf03UZNmP6sSgpQd/Q+yOLz3
+         S565Jwy9SbWufr8TonkGqVSQJ7LYt0p9K19u4WHBuQZoE3tPemX4l6qhsDc2VxkLMGzc
+         yJYw==
+X-Received: by 10.180.183.38 with SMTP id ej6mr1225664wic.19.1367331597599;
+        Tue, 30 Apr 2013 07:19:57 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.20.239 with SMTP id q15ls1060455wie.29.canary; Tue, 30 Apr
+ 2013 07:19:54 -0700 (PDT)
+X-Received: by 10.15.67.206 with SMTP id u54mr55636165eex.6.1367331594062;
+        Tue, 30 Apr 2013 07:19:54 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si7860786eeu.1.2013.04.30.07.19.52
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 30 Apr 2013 07:19:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 44D2A63B431
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 16:19:52 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id zMZaCfHLZjy2 for <tosdr@googlegroups.com>;
+	Tue, 30 Apr 2013 16:19:49 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id E2A3163AF69
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 16:19:48 +0200 (CEST)
+Date: Tue, 30 Apr 2013 16:19:46 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1858] Grammarly will make reasonable efforts to notify you
+ of changes to its service
+Message-ID: <20130430141946.GC9156@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <672aa045-26f9-409d-970a-3932f1b0b626@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <672aa045-26f9-409d-970a-3932f1b0b626@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Le lun. 10/12/12, 18:58, Robin Monks <devlinks@gmail.com>:
+> Grammarly reserves the right at any time to (I) change any information, s=
+pecifications, features and/or functions of the Site, Services and/or Softw=
+are, (II) suspend or discontinue any or all of the Services, including the =
+availability of any feature, database, or content, and/or (III) impose limi=
+ts on certain features and Services or restrict access to parts or all of t=
+he Services, in each case with or without prior notice and without any liab=
+ility. Grammarly will use its commercially reasonable efforts to notify you=
+ of changes to the Services and/or Software that, in Grammarly=92s reasonab=
+le opinion, have the effect of materially and adversely diminishing the fun=
+ctionality of the Services to which you have subscribed.
+>=20
+
+This one's a bit complex.
+
+I distinguish different things:
+
+ - Grammarly modifies or stops providing a service or a feature
+ - Grammarly suspends availability of data or content
+ - Grammarly imposes new limits
+
+In each case it may without notice, without liability.
+
+Grammarly will use its =93commercially reasonable efforts=94 to notify
+you of changes that in their =93reasonable opinion=94 materially or
+adversely diminish functionality of the services.
+
+So it's contradictory. But I've got to say it looks like it's not=20
+very obligating to them.
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

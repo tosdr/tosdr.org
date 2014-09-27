@@ -1,0 +1,71 @@
+Return-Path: <sebastiankippe@gmail.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7B14E161731
+	for <anything@michielbdejong.com>; Sun, 10 Mar 2013 14:22:06 +0100 (CET)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 769EA19F37F
+	for <anything@michielbdejong.com>; Sun, 10 Mar 2013 14:22:06 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Ghr9jcyfIth8 for <anything@michielbdejong.com>;
+	Sun, 10 Mar 2013 14:22:05 +0100 (CET)
+Received: from mail-qe0-f63.google.com (mail-qe0-f63.google.com [209.85.128.63])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id EBB8C19F39A
+	for <anything@michielbdejong.com>; Sun, 10 Mar 2013 14:22:04 +0100 (CET)
+Received: by mail-qe0-f63.google.com with SMTP id q19so1297039qeb.18
+        for <anything@michielbdejong.com>; Sun, 10 Mar 2013 06:22:03 -0700 (PDT)
+X-Received: by 10.49.71.50 with SMTP id r18mr566357qeu.26.1362921723442;
+        Sun, 10 Mar 2013 06:22:03 -0700 (PDT)
+X-Google-Doc-Id: f5ada3f40bfd8fa8
+X-Google-Web-Client: true
+Date: Sun, 10 Mar 2013 06:22:03 -0700 (PDT)
+From: sebastiankippe@gmail.com
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <8e5842fb-2b00-48d3-b8da-1337f870008a@googlegroups.com>
+In-Reply-To: <10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com>
+References: <10d4eaee5b8ecc4b1a0ab19295391837@michielbdejong.com>
+Subject: Re: who wants to help create an html form on tosdr.org?
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1087_25279908.1362921723224"
+X-Google-Token: EPuR8okFeQlg90_zAD40
+X-Google-IP: 77.98.165.25
+
+------=_Part_1087_25279908.1362921723224
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I don't see how all of this makes it so much easier, when looking at work i=
+nvolved and new problems/bottlenecks. Also, you're asking for someone to bu=
+ild a specific solution instead of getting feedback on the whole concept fi=
+rst.
+
+Here's what I would propose =E2=80=93 no server or SSH or manual work neede=
+d, all transparent (and manageable by anyone, no credentials needed):
+
+* Build a form for creating a new point
+* Validate the input with a JSON schema you create for your JSON formats
+* Show output JSON to copy to GitHub
+* Link to the according create-a-new-file form on GitHub and say to paste t=
+here and hit save (maybe this step needs more thinking about UX)
+* User hits save on GitHub and automatically forks and creates a pull reque=
+st with just one hit on the save button. No Git skills needed.
+
+I thought about this for adding JSON data to an app I created for Hacker Be=
+ach, and I think it would be possible to make this a convenient workflow. T=
+he best thing: You can discuss everything in the pull request, make line co=
+mments, have notifications, etc. It's so much better than having it uncateg=
+orized in a mailing list and detached from the actual content that's going =
+to be merged. Also, everyone else can fork a proposed change and improve an=
+d make another PR, if needed. And the reviewer has everything in one place.
+
+If this sounds remotely possible or interesting, you should probably consid=
+er rethinking your concept before implementing something that may be even m=
+ore complicated instead of easier than now.
+
+Cheers,
+Basti
+------=_Part_1087_25279908.1362921723224--

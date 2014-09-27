@@ -1,0 +1,148 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBSMU5KFQKGQES3PKAII@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E2D34161735
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 16:08:16 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E00EF1420AB
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 16:08:16 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id T906a4gkOQZu for <anything@michielbdejong.com>;
+	Fri, 26 Apr 2013 16:08:15 +0200 (CEST)
+Received: from mail-we0-x23b.google.com (mail-we0-x23b.google.com [IPv6:2a00:1450:400c:c03::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 326981420CE
+	for <anything@michielbdejong.com>; Fri, 26 Apr 2013 16:08:12 +0200 (CEST)
+Received: by mail-we0-f187.google.com with SMTP id o7sf867998wea.24
+        for <anything@michielbdejong.com>; Fri, 26 Apr 2013 07:08:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-received
+         :mime-version:subject:from:in-reply-to:date:message-id:references:to
+         :x-mailer:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=UMBxRa6N35wE9Uqm0w/5IlQbqQAXlZF8pfckpX+CYzQ=;
+        b=IfdUy6V7579lYaGlswaP/iD1dEUZ+76Uk7y19PX9dg/5bQ8r1+8VtLAskJPmLA+z1c
+         CBbrx8gkW7PrCmdfCxdwHdFjt+cur/A/EaqbfgzcDCXI4r++b5Lsp+bMAfYN5AZyIkKn
+         hnXkrPhJ9lUnWvaCfUgECMuP9a7k68PToAsxiRWrRqu7xZu4EFIUUedIbox/PQwyrySn
+         tLRyNCVkoPW/hJeU3CkZL5ZShxhvqa+5PWc345sozuwS5lExR2WKkWUfT77zLGMgfres
+         bNTM51wxpUemy6J0Mf5D8dWjyoSVcLocDQyBw0I2OlYec+P6BMA4ug5dOrvPjrxY5Uhs
+         v2Pg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:received-spf:x-received
+         :mime-version:subject:from:in-reply-to:date:message-id:references:to
+         :x-mailer:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=UMBxRa6N35wE9Uqm0w/5IlQbqQAXlZF8pfckpX+CYzQ=;
+        b=RpTJTz42Rpx/fuRTgpWUiNVxTclA9Mv4eEjQ1et1ZKfgb5uAk5GlDU1Ir4VGEpRl1Q
+         qw7d4tegVS6aZopPiC7x3rv/nCM8cBKNF+2nHv0KQem7fD+qT8cT1nRwOeAzA2jwAC8S
+         wwhBFq77e82YxRxhaC3mzzYonqly00whhLmGVeri/zkqVwkkZ9rGDow714FY+F5iC/4j
+         DkIahOj7lRzlJkqlZWCA4G4g2EoXxCb7Q+1iaj6IJE6YNShb7MqsLXf0ws5N+9XTq5jO
+         u/KVo0u+F5FepqOCq3P6hVzG/1HkY/OnXEl6+PlCA40ASyza9BcXKVhNQiRtZ1DX2dfC
+         YUKA==
+X-Received: by 10.180.198.44 with SMTP id iz12mr177786wic.18.1366985290126;
+        Fri, 26 Apr 2013 07:08:10 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.105.166 with SMTP id gn6ls135077wib.14.canary; Fri, 26 Apr
+ 2013 07:08:09 -0700 (PDT)
+X-Received: by 10.180.10.230 with SMTP id l6mr1650466wib.3.1366985289605;
+        Fri, 26 Apr 2013 07:08:09 -0700 (PDT)
+Received: from mail-wi0-x229.google.com (mail-wi0-x229.google.com [2a00:1450:400c:c05::229])
+        by gmr-mx.google.com with ESMTPS id bu10si101398wib.2.2013.04.26.07.08.09
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 26 Apr 2013 07:08:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:400c:c05::229 as permitted sender) client-ip=2a00:1450:400c:c05::229;
+Received: by mail-wi0-f169.google.com with SMTP id h11so762275wiv.4
+        for <tosdr@googlegroups.com>; Fri, 26 Apr 2013 07:08:09 -0700 (PDT)
+X-Received: by 10.180.185.179 with SMTP id fd19mr4338208wic.1.1366985289489;
+        Fri, 26 Apr 2013 07:08:09 -0700 (PDT)
+Received: from [192.168.1.5] (85.136.138.170.dyn.user.ono.com. [85.136.138.170])
+        by mx.google.com with ESMTPSA id o3sm4139673wia.2.2013.04.26.07.08.07
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 26 Apr 2013 07:08:07 -0700 (PDT)
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:1762] empty terms of services
+From: Ian McGowan <irmcgowan@gmail.com>
+In-Reply-To: <ee09dfd218b4790014efb71e96d31099@michielbdejong.com>
+Date: Fri, 26 Apr 2013 16:08:05 +0200
+Message-Id: <CBC78250-D2E7-457C-9203-16FF420144A6@gmail.com>
+References: <474a47de-da93-4a39-927b-14d127301e57@googlegroups.com> <ee09dfd218b4790014efb71e96d31099@michielbdejong.com>
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:400c:c05::229
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I agree with Michiel here. Although most ToS agreements are just spelling o=
+ut restrictions of use, not having any could be both a good and bad thing. =
+Users could run rampant with your service in a way you didn't intend, that =
+is also harmful to other users, for example. I don't think that would be a =
+good thing.
+
+On Apr 26, 2013, at 4:04 PM, Michiel B. de Jong wrote:
+
+> On 2013-04-26 15:58, Alessandro Cosentino wrote:
+>> I am new to this list and the question might be out of the scope. It's
+>> a question that I asked Jan-Christoph, but he didn't have an answer.
+>> He suggested me to post the question on this list. Please flag it if
+>> it's off-topic.
+>>=20
+>> Suppose I start a web service, say a social network, or a blog
+>> platform (I don't have a real example in mind).
+>> Now suppose I am too lazy to write a terms of service page, so I leave
+>> it empty.
+>> I consider this a "default" case. What would be the rating of tos;dr
+>> in for my service?
+>=20
+> i would guess you would probably end up in class A or B. Most things peop=
+le write in their ToS are restrictions on the user's rights, although somet=
+imes there are some commitments in there (positive points). So if you're th=
+e "default" case, then you would end up pretty high in the rankings, but no=
+t necessarily the very best one.
+>=20
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> --- You received this message because you are subscribed to the Google Gr=
+oups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>=20
+>=20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

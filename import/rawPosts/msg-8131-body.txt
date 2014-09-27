@@ -1,0 +1,196 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB3W4SSIAKGQEPZSS7SY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id EA04D161768
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 20:01:25 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E7675226A78
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 20:01:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id GfM9ky4pte8L for <anything@michielbdejong.com>;
+	Fri,  9 Aug 2013 20:01:24 +0200 (CEST)
+Received: from mail-pb0-x237.google.com (mail-pb0-x237.google.com [IPv6:2607:f8b0:400e:c01::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id ED742226A8E
+	for <michiel@michielbdejong.com>; Fri,  9 Aug 2013 20:01:20 +0200 (CEST)
+Received: by mail-pb0-f55.google.com with SMTP id ro12sf1271939pbb.10
+        for <michiel@michielbdejong.com>; Fri, 09 Aug 2013 11:01:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1ovwOhLq8kghjBcfMmMm303Enooqw2HYBrUhn9mgNvs=;
+        b=oU9aEFjxrryhKXZUuVWrfuAJNvsxd1lMVl2NGQxkRLztAvv3kHFhSvu5Vg88jpAYJ8
+         C3Up0hBnFoOWWN1ieElTYaEuGnyuIuCYkuu9mAT9BrFDaEG0vsJwUTvAWwKrKeos+X8g
+         cNHD9oDwPW3FXwCn1MbrUiZzdnoiOc63UyTb5R7Z6O5lvUTbLSI+pZqRbi1g1okXpGar
+         lJHP4L0M5L+n/8cQIqbe5TWBpXJPMf0m4FLPl5BXo2T96PsoAS7JPdb0TfsmDEi7YRFu
+         hrOOnV6kA1Ml3Baxksqmrvoo142WGJum1J0dKaxRD4V9o313OE5KOLcxAJ0PG6s4B/0a
+         gG+w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1ovwOhLq8kghjBcfMmMm303Enooqw2HYBrUhn9mgNvs=;
+        b=VvxGURcJJzuuUdi2OhKr5XgRA7F7Dx4Nd+dOgTiaTy313P9kuHCR0U2S74NCeDePwu
+         wnig0zUlkjsqa5YjNbpCDUQ3YW0U8/XaY8nAxkvnnZQlUIyFQsBR7+U16EYOo9qj7FEM
+         dWK29X6SbEJpqr/VXxFCCMHIHirw0QAgx4zaFYeqjnXYuz6vM3hFIZ20X0t+o9dd4jkP
+         KJAK0tYhYizO/x/pLrKPj6YVMGZca0jlXy/Xz195U/cymRfNpN5kXMYROf/tVMyZUTv6
+         BZ4NwbrHMzzblKNExRNC88ZY1bDSJECShUKlxEpRVdlxA/SLQfAlHAhnmExxt453hA6z
+         f54w==
+X-Received: by 10.49.116.243 with SMTP id jz19mr416492qeb.6.1376071278872;
+        Fri, 09 Aug 2013 11:01:18 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.82.202 with SMTP id k10ls1596669qey.10.gmail; Fri, 09 Aug
+ 2013 11:01:18 -0700 (PDT)
+X-Received: by 10.49.122.2 with SMTP id lo2mr403422qeb.14.1376071278387;
+        Fri, 09 Aug 2013 11:01:18 -0700 (PDT)
+Date: Fri, 9 Aug 2013 11:01:18 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <fc6ca3dc-1ed4-4edd-a02f-94e4f2a33023@googlegroups.com>
+In-Reply-To: <5e613a3c-1f8a-4851-abc2-5ad621ab382a@googlegroups.com>
+References: <5e613a3c-1f8a-4851-abc2-5ad621ab382a@googlegroups.com>
+Subject: [tosdr:2631] Re: [good]Unedited documentation may be used in a
+ classroom or for non-commercial use without permission
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_332_7817049.1376071278109"
+
+------=_Part_332_7817049.1376071278109
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+While this is certainly nice of them, I don't really see how relevant it is=
+=20
+to tosdr.
+
+On Sunday, May 12, 2013 8:25:10 AM UTC-5, Robin Monks wrote:
+>
+> Permission to use Documents (such as white papers, press releases,=20
+>> datasheets and FAQs) from the Microsoft Store and Services is granted,=
+=20
+>> provided that (1) the following copyright notice: "=A9 2012 Microsoft=20
+>> Corporation. All rights reserved." appears in all copies and that both t=
+he=20
+>> copyright notice and this permission notice appear, (2) use of such=20
+>> Documents from the Microsoft Store or Services is for informational and=
+=20
+>> non-commercial or personal use only and will not be copied or posted on =
+any=20
+>> network computer or broadcast in any media, unless permitted by exemptio=
+ns=20
+>> under applicable copyright laws, and (3) no modifications of any Documen=
+ts=20
+>> are made. Accredited educational institutions, such as primary and=20
+>> secondary institutions, universities, private/public colleges, and=20
+>> community colleges, may download and reproduce the Documents for=20
+>> distribution in the classroom. Distribution outside the classroom requir=
+es=20
+>> Microsoft=92s express written permission. Use for any other purpose is=
+=20
+>> expressly prohibited by law, and may result in severe civil and criminal=
+=20
+>> penalties. Violators will be prosecuted to the maximum extent possible.
+>> =20
+>> From <
+>> http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSaleP=
+age/ThemeID.27659600/
+>> >
+>> =20
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_332_7817049.1376071278109
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">While this is certainly nice of them, I don't really see h=
+ow relevant it is to tosdr.<br><br>On Sunday, May 12, 2013 8:25:10 AM UTC-5=
+, Robin Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;ma=
+rgin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width=
+:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-lef=
+t:1ex">Permission to use
+Documents (such as white papers, press releases, datasheets and FAQs) from =
+the
+Microsoft Store and Services is granted, provided that (1) the following
+copyright notice: "=A9 2012 Microsoft Corporation. All rights
+reserved." appears in all copies and that both the copyright notice and
+this permission notice appear, (2) use of such Documents from the Microsoft
+Store or Services is for informational and non-commercial or personal use o=
+nly
+and will not be copied or posted on any network computer or broadcast in an=
+y
+media, unless permitted by exemptions under applicable copyright laws, and =
+(3)
+no modifications of any Documents are made. Accredited educational
+institutions, such as primary and secondary institutions, universities, pri=
+vate/public
+colleges, and community colleges, may download and reproduce the Documents =
+for
+distribution in the classroom. Distribution outside the classroom requires
+Microsoft=92s express written permission. Use for any other purpose is expr=
+essly
+prohibited by law, and may result in severe civil and criminal penalties.
+Violators will be prosecuted to the maximum extent possible.<br>&nbsp;<br>F=
+rom
+&lt;<a href=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsO=
+fUseAndSalePage/ThemeID.27659600/" target=3D"_blank">http://www.microsoftst=
+ore.<wbr>com/store/msca/en_CA/<wbr>DisplayTermsOfUseAndSalePage/<wbr>ThemeI=
+D.27659600/</a>&gt;<br>
+&nbsp;</blockquote>
+
+
+
+
+
+</blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_332_7817049.1376071278109--

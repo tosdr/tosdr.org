@@ -1,0 +1,207 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB2645WGAKGQEII4ED7I@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CE8A0161743
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 14:54:07 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id CBA72116328
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 14:54:07 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 9JyhnvDi4x24 for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 14:54:06 +0200 (CEST)
+Received: from mail-pb0-x23d.google.com (mail-pb0-x23d.google.com [IPv6:2607:f8b0:400e:c01::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A62A61162AF
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 14:54:05 +0200 (CEST)
+Received: by mail-pb0-f61.google.com with SMTP id jt11sf189263pbb.26
+        for <anything@michielbdejong.com>; Tue, 21 May 2013 05:54:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IfwrePRBX3IMDVsj0BcWAZBwTe/kZtcPGdNZuFnMHR8=;
+        b=U5NV0Q85+XOz8hOFvCg9RF58FUsrLxUIZY8/NA/gHD7oarosf6ajU3XjoKCg3iF2kU
+         QHJhwmGq5saRnc5EPOz5UUbx2AyHgwdPbA54COoSq4ChlxH6SUg5MQTSjEkjbtP/Ji27
+         ezH2I5z2pGTBPiReyOGM85OwdWvogLo/+7AWD/xvgLqXmSlLexjA1AJq7gJvd5lHwvdf
+         aD4OmRTimDE/ZncsA2vccTeQzlQLWxTQ4bJw8nhuLkJ+j69DxLqQ2pNQ6g8V/5zEMcj+
+         6d676u6p9pUlPzuvXO0J+X0QBU0ZDNaCtENnyzxKl4t0WPnSEeW1TpYOdQMnX9MTg+4v
+         bIZg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IfwrePRBX3IMDVsj0BcWAZBwTe/kZtcPGdNZuFnMHR8=;
+        b=VFd1pRurI7dhr4r4zFpGwLCqZpkqAeobPudgpEE9wSnQCfEk1XBIxzFAouKCpp+FYz
+         xwQNe/ZOVfhHJUOjTj5f5RXBysMNKn6Ke/QSlHOqCmHj3AAvw8lYevYTBIjFBlfieyTl
+         iYA6SNkqQc+lfa3Ho36SRIODnC8ov73UfskbNEESNhyLx9RAy3rhzObtgjhgBvKOwhaV
+         VqUygbPgk3SvTfXubhqXHJe30NJzXPZiMqGLvCxjkuEo2dLseNjlwcjakQVpBcVZarjm
+         qG2qQCzQbbhPrV5Q1HSDC5wOXgF5Wy7/SqByijqO7tnnVc0fBF2CPwqhOEzUkHXgUEnU
+         EDuQ==
+X-Received: by 10.49.64.196 with SMTP id q4mr93816qes.2.1369140843339;
+        Tue, 21 May 2013 05:54:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.121.137 with SMTP id lk9ls275281qeb.68.gmail; Tue, 21 May
+ 2013 05:54:02 -0700 (PDT)
+X-Received: by 10.49.72.130 with SMTP id d2mr98386qev.42.1369140842972;
+        Tue, 21 May 2013 05:54:02 -0700 (PDT)
+Date: Tue, 21 May 2013 05:54:02 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <550c241e-ca1f-4a40-a53d-f8dcbabd9ea2@googlegroups.com>
+In-Reply-To: <8c2448979f2dc39ccf1c37ca0ad57bac@michielbdejong.com>
+References: <8c2448979f2dc39ccf1c37ca0ad57bac@michielbdejong.com>
+Subject: [tosdr:2177] Re: [Bad] Amazon smartphone app will track your
+ movements, and fake "opt-out" suggested
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3_19794227.1369140842764"
+
+------=_Part_3_19794227.1369140842764
+Content-Type: text/plain; charset=ISO-8859-1
+
+For my iPhone, I can control which apps use geolocation or not, as these 
+screenshots provided by Amazon show (although I don't have the Amazon app, 
+nor do I want it, actually). Are you suggesting that they by-pass that 
+entirely and my phone would send them data anyway?
+
+For example, I have the Facebook app, but don't have location services on 
+for it because it's none of their business.
+
+On Tuesday, March 5, 2013 8:29:45 AM UTC+1, anyt...@michielbdejong.com 
+wrote:
+>
+> "we may receive information about your location and your mobile device, 
+> including a unique identifier for your device" 
+>
+> https://github.com/tosdr/tosback2/blob/master/crawl/amazon.com/Amazon.com%20Privacy%20Notice.txt#L37 
+>
+> If you follow their advice, they show you how to turn of location 
+> services entirely on your smartphone. 
+> They even provide screenshots of how to do this on an Android or 
+> iPhone, in the phone-wide settings: 
+>
+> http://www.amazon.com/gp/help/customer/display.html/ref=hp_468496_turnofflbs?nodeId=200903520 
+>
+> For a Kindle, or if Amazon is the only app on your phone, it makes 
+> sense to turn off geolocation entirely. 
+> But of course this is not realistic for a smartphone! You also use 
+> geolocation for other things like maps, gps, foursquare, 
+> etcetera. Suggesting that if you don't want Amazon to trace your 
+> movements you should switch off your phone's geolocation 
+> altogether is an insulting way to answer a reasonable concern. It 
+> suggests that a way to opt out exists, whereas the elephant 
+> in the room there is that in reality this option is only a theoretical 
+> one for the vast majority of smartphone users. 
+>
+> They should just own up and say "you get the app, we get your data. 
+> That's the deal we offer you, take it or leave it." 
+>
+> They should either make it opt-in ("would you like this app to submit 
+> your uniquely identifiable location data to Amazon?"), 
+> or opt-out (with a setting inside the app), or honestly tell us that 
+> providing such privacy options to their users is not 
+> considered a priority by their stockholders. Linking to screenshots of 
+> the device-wide settings is insulting. 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_3_19794227.1369140842764
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+For my iPhone, I can control which apps use geolocation or not, as these sc=
+reenshots provided by Amazon show (although I don't have the Amazon app, no=
+r do I want it, actually). Are you suggesting that they by-pass that entire=
+ly and my phone would send them data anyway?<div><br></div><div>For example=
+, I have the Facebook app, but don't have location services on for it becau=
+se it's none of their business.<br><br>On Tuesday, March 5, 2013 8:29:45 AM=
+ UTC+1, anyt...@michielbdejong.com wrote:<blockquote class=3D"gmail_quote" =
+style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-l=
+eft: 1ex;">"we may receive information about your location and your mobile =
+device,=20
+<br>including a unique identifier for your device"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/master/crawl/amazon.c=
+om/Amazon.com%20Privacy%20Notice.txt#L37" target=3D"_blank">https://github.=
+com/tosdr/<wbr>tosback2/blob/master/crawl/<wbr>amazon.com/Amazon.com%<wbr>2=
+0Privacy%20Notice.txt#L37</a>
+<br>
+<br>If you follow their advice, they show you how to turn of location=20
+<br>services entirely on your smartphone.
+<br>They even provide screenshots of how to do this on an Android or=20
+<br>iPhone, in the phone-wide settings:
+<br><a href=3D"http://www.amazon.com/gp/help/customer/display.html/ref=3Dhp=
+_468496_turnofflbs?nodeId=3D200903520" target=3D"_blank">http://www.amazon.=
+com/gp/help/<wbr>customer/display.html/ref=3Dhp_<wbr>468496_turnofflbs?node=
+Id=3D<wbr>200903520</a>
+<br>
+<br>For a Kindle, or if Amazon is the only app on your phone, it makes=20
+<br>sense to turn off geolocation entirely.
+<br>But of course this is not realistic for a smartphone! You also use=20
+<br>geolocation for other things like maps, gps, foursquare,
+<br>etcetera. Suggesting that if you don't want Amazon to trace your=20
+<br>movements you should switch off your phone's geolocation
+<br>altogether is an insulting way to answer a reasonable concern. It=20
+<br>suggests that a way to opt out exists, whereas the elephant
+<br>in the room there is that in reality this option is only a theoretical=
+=20
+<br>one for the vast majority of smartphone users.
+<br>
+<br>They should just own up and say "you get the app, we get your data.=20
+<br>That's the deal we offer you, take it or leave it."
+<br>
+<br>They should either make it opt-in ("would you like this app to submit=
+=20
+<br>your uniquely identifiable location data to Amazon?"),
+<br>or opt-out (with a setting inside the app), or honestly tell us that=20
+<br>providing such privacy options to their users is not
+<br>considered a priority by their stockholders. Linking to screenshots of=
+=20
+<br>the device-wide settings is insulting.
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_3_19794227.1369140842764--

@@ -1,0 +1,154 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBPEM62HAKGQEGDTG2UA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id C5E12161761
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:05:19 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C279F11640D
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:05:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Ao1h4dYOX4ru for <anything@michielbdejong.com>;
+	Wed, 10 Jul 2013 18:05:18 +0200 (CEST)
+Received: from mail-gg0-x23c.google.com (mail-gg0-x23c.google.com [IPv6:2607:f8b0:4002:c02::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D405211640A
+	for <anything@michielbdejong.com>; Wed, 10 Jul 2013 18:05:17 +0200 (CEST)
+Received: by mail-gg0-f188.google.com with SMTP id h4sf2108575ggn.15
+        for <anything@michielbdejong.com>; Wed, 10 Jul 2013 09:05:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=NPGYlQ/jyTZHh693Zd2U5Y7U5lwdxSem1Jiz4pnBgJQ=;
+        b=hJu9PcbuZ4cf6gA0kQ4nbThsPkgRjAxtVqdIkHj/vo+g2lNttxlv5CfwGFoplhF7x9
+         IGjc9SEuB6tDWibSi4Cu4FDpxd1xPTNNPCzFZKhtdsys8BUkaaBY7MIh76BwcTdf9eU2
+         g1819y3aqxghuCFClb4/pYa/LBRghVzXkL4lqBsvu/tOFpKSqeePW+C0RG4oHFHEJAJ+
+         R/d5coX0uSW/9bWfeRg749t78KcTHk79MHi80rNzKqvpG9df95LKzkc8olg9eBkBWHye
+         Ht0vnJa3zqCbpno8XJi1XxJviCX2D9+ucKxNKYVD3EGyts1g0BhoEdu3V0QNnFiuCs6r
+         +zpw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=NPGYlQ/jyTZHh693Zd2U5Y7U5lwdxSem1Jiz4pnBgJQ=;
+        b=YNDjTxMGK1XFURF5e/JRo7dKZ3vkPFoyqF46dAQ0f9FxH9RPqXO6zszOuxW4VQwpJz
+         J2eLlCnQeJJHtameGS8TFuj3J2ByAUrnBQ6npGM2jNmxBTfE+yEK5lXAhNAOEBcbfvI5
+         deIGV9Rnoj1N1822EIr8jXPeXOmHUGb6Z5igB+3gh8L/stZBXPN1tT+lgsSxk+UupxTC
+         qrNdmsgPWtKPs75uCjnEJkyc5FRFTLY/HGAVsnEPSMFyDrB/Nidv87THg2vdgY5V8lJr
+         H/uBtcA0YI2OrStMSALlyxG97es+tJouzN1JuCXUyvWvyvIxyjWv7AdH8/3qXGyGSKtK
+         BqDw==
+X-Received: by 10.49.35.109 with SMTP id g13mr938537qej.1.1373472316694;
+        Wed, 10 Jul 2013 09:05:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.47.110 with SMTP id c14ls2846075qen.71.gmail; Wed, 10 Jul
+ 2013 09:05:16 -0700 (PDT)
+X-Received: by 10.49.97.7 with SMTP id dw7mr932431qeb.16.1373472316386;
+        Wed, 10 Jul 2013 09:05:16 -0700 (PDT)
+Date: Wed, 10 Jul 2013 09:05:16 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <0974a44b-6be4-4932-9b80-2b5682db668c@googlegroups.com>
+In-Reply-To: <95ebadbc-d60d-4f8b-b203-7ca9a870c6d7@googlegroups.com>
+References: <a9b5f72a-b501-41d5-b74e-7e402b1c1b4c@googlegroups.com>
+ <95ebadbc-d60d-4f8b-b203-7ca9a870c6d7@googlegroups.com>
+Subject: [tosdr:2498] Re: [Info] Spotify's TOS is only translated into a few languages
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_501_12139312.1373472316164"
+
+------=_Part_501_12139312.1373472316164
+Content-Type: text/plain; charset=ISO-8859-1
+
+I'm not sure how terribly related this is. I might be wrong, but as far as 
+I know, English, French, German, and/or Spanish are spoken in any of the 
+available countries you can select. If that's the case, then pointing this 
+out doesn't really seem important.
+
+On Wednesday, April 24, 2013 6:37:36 AM UTC-5, Ian McGowan wrote:
+>
+> This has been curated.
+>
+> On Tuesday, April 23, 2013 1:52:59 PM UTC+2, Ian McGowan wrote:
+>>
+>> Although Spotify allows users to choose their country (Andorra, 
+>> Australia, Austria, Belgium, Denmark, Finland, France, Germany, Ireland, 
+>> Liechtenstein, Luxembourg, Monaco, Netherlands, New Zealand, Norway, Spain, 
+>> Sweden, Switzerland, United Kingdom, United States), the terms themselves 
+>> are only available in English, French, German, and Spanish.
+>>
+>> https://www.spotify.com/us/legal/end-user-agreement/
+>>
+>> My guess is that Spotify isn't available in Asia? If that's the case, 
+>> this makes sense.
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_501_12139312.1373472316164
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I'm not sure how terribly related this is. I might be wrong, but as far as =
+I know, English, French, German, and/or Spanish are spoken in any of the av=
+ailable countries you can select. If that's the case, then pointing this ou=
+t doesn't really seem important.<br><br>On Wednesday, April 24, 2013 6:37:3=
+6 AM UTC-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"ma=
+rgin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">=
+This has been curated.<br><br>On Tuesday, April 23, 2013 1:52:59 PM UTC+2, =
+Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margi=
+n-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Although Spotify =
+allows users to choose their country (Andorra, Australia, Austria, Belgium,=
+ Denmark, Finland, France, Germany, Ireland, Liechtenstein, Luxembourg, Mon=
+aco, Netherlands, New Zealand, Norway, Spain, Sweden, Switzerland, United K=
+ingdom, United States), the terms themselves are only available in English,=
+ French, German, and Spanish.<br><br><a href=3D"https://www.spotify.com/us/=
+legal/end-user-agreement/" target=3D"_blank">https://www.spotify.com/us/<wb=
+r>legal/end-user-agreement/</a><br><div><br></div><div>My guess is that Spo=
+tify isn't available in Asia? If that's the case, this makes sense.</div></=
+blockquote></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_501_12139312.1373472316164--

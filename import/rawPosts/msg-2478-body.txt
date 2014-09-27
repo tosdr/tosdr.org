@@ -1,0 +1,138 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBCOR7KFQKGQEURPZ67Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool5-d.mgt.gandi.net [10.0.21.136])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7E829161735
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 19:06:24 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7B24A2A808A
+	for <anything@michielbdejong.com>; Mon, 29 Apr 2013 19:06:24 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.136])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id aKlZxDDVC1mY for <anything@michielbdejong.com>;
+	Mon, 29 Apr 2013 19:06:22 +0200 (CEST)
+Received: from mail-lb0-f191.google.com (mail-lb0-f191.google.com [209.85.217.191])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A6C992A8093
+	for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 19:06:19 +0200 (CEST)
+Received: by mail-lb0-f191.google.com with SMTP id t11sf88355lbd.28
+        for <michiel@michielbdejong.com>; Mon, 29 Apr 2013 10:06:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=cMxRi3aPLs9y1yHftlf/aldMUw6hRaEsM1b8PG9HBFQ=;
+        b=woglLL+UbVBmJBAXyEnBjuxZWYgSz/cFh1pZ+buDSGNMU9Xedr7V/sLwpXRkiaY5Sg
+         M26SODLtCmTYiA9QWuscJrpQ1kb4qWtuB7kbg12cJhdSkxx+b7n8QIJpIJwJdxIq77ny
+         0p6bsHAT/nSeisw/OI8U/pYbbkmo9nr00UBv1HFNqptkcp+ijy0yRXvIraGFQo7FI41N
+         2pSX1fdui3u7FD56rezzbRpbqSxhrA27YyJ4jFYuFt1h0SvXTZFVQIB5puMcH1Dtyw2n
+         ZtBJidB0A71E923XB6qF6oOmhMPbrTcaZwbeiqFZjsZ+uSJUhqipePAWuZyqEMM+DxDZ
+         CXcw==
+X-Received: by 10.180.104.73 with SMTP id gc9mr859037wib.9.1367255178022;
+        Mon, 29 Apr 2013 10:06:18 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.181.12.75 with SMTP id eo11ls827224wid.18.gmail; Mon, 29 Apr
+ 2013 10:06:17 -0700 (PDT)
+X-Received: by 10.15.99.76 with SMTP id bk52mr1906924eeb.0.1367255177489;
+        Mon, 29 Apr 2013 10:06:17 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d43si6797181eeu.1.2013.04.29.10.06.17
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 29 Apr 2013 10:06:17 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 0639C63B4C5
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 19:06:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sOVz6+444-Xs for <tosdr@googlegroups.com>;
+	Mon, 29 Apr 2013 19:06:14 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 42B2F63A608
+	for <tosdr@googlegroups.com>; Mon, 29 Apr 2013 19:06:13 +0200 (CEST)
+Date: Mon, 29 Apr 2013 19:06:05 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1834] Re: [Bad] Google keeps your Searches forever
+Message-ID: <20130429170605.GG13057@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <CA+aD3u35SjE2GwjaH6hyu2Wy4JXKQjx1u+iWm4h9Y=PgW0zUTw@mail.gmail.com>
+ <51670e88-2ff8-4c83-ba09-62c2a2d63a52@googlegroups.com>
+ <CAArouPymeunYyM2vOd2P6smSjpAxZa-YDHKvahjXKqus55bp0A@mail.gmail.com>
+ <20130429161149.GE13057@synclavier.ampoliros.net>
+ <1367253896.26690.140661224281189.3E188976@webmail.messagingengine.com>
+MIME-Version: 1.0
+In-Reply-To: <1367253896.26690.140661224281189.3E188976@webmail.messagingengine.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+I agree that making the data "anonymous" is most of the time not
+enough for that data to stop being able to trace back to a user.
+But we're still trying to find that information. I have done a lot
+of navigation on Google's website right now. I have found nothing
+at all on time limits to logs.
+
+So I created a new point -(will appear on the website later, it's
+in a working branch right now) that reads:
+
+
+ -  Google keeps your searches and other identifiable user
+    information for an undefined period of time
+
+    Google collects a lot of information about the services you
+    use and how you use them, including when you visit a website
+    using a Google service for advertisement. In the past, Google
+    stated in their Privacy Policy: *=93We strike a reasonable
+    balance between the competing pressures we face, such as the
+    privacy of our users, the security of our systems and the need
+    for innovation. We believe anonymizing IP addresses after 9
+    months and cookies in our search engine logs after 18 months
+    strikes the right balance=94.* Today, these limitations of time
+    are gone, or we haven't been able to find them. So we must
+    conclude that Google has decided to stop trying to find the
+    right balance between privacy of users and their own needs.
+
+What do you think?
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

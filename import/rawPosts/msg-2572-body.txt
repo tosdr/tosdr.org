@@ -1,0 +1,109 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBXNM76FQKGQEDESIV6Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id AE3D2161735
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 16:34:08 +0200 (CEST)
+Received: from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145])
+	by spool.mail.gandi.net (Postfix) with ESMTP id AB73E116324
+	for <anything@michielbdejong.com>; Tue, 30 Apr 2013 16:34:08 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter17-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id TtSu8HPv9CvC for <anything@michielbdejong.com>;
+	Tue, 30 Apr 2013 16:34:07 +0200 (CEST)
+Received: from mail-fa0-x238.google.com (mail-fa0-x238.google.com [IPv6:2a00:1450:4001:c02::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E52E91162FB
+	for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 16:34:06 +0200 (CEST)
+Received: by mail-fa0-f56.google.com with SMTP id s1sf150132fas.1
+        for <michiel@michielbdejong.com>; Tue, 30 Apr 2013 07:34:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition;
+        bh=Au/KkcdvYdofIyuQBwzw6K4E8sPrzimwa/AxLaJjrQ4=;
+        b=qzttd7F7SfPGPECKCZ1w8U4tMuQxuV4ZhOBHw6IwirDjh1e+muf+dqvtCVdI6GxX56
+         imAT34/9Jc6xAcoaT0TcblxB3+Cq6Xip/VMfSUb5/B57Pe5JYvcyNnaABKbMc8GG6hb3
+         j6VRoFMviG6HgPpfjlKK38cR9GIAUieIG2GbmEWEg+U+aDy0eopLlkVbi1l+nRYu1xgL
+         Q6rWLDnWMc8Njlb2hpMUeoXeN5lUGYNMhEQ0XL2TuvlcSGLunwBGdfuWzqPiFnPxkrN4
+         aDHdWD6p4psp4VHEjfSq4M/xtfPkKPwLKzuTXzi+E2lVbi5wLWZ46Od0qHP2gcwzsITB
+         PQoA==
+X-Received: by 10.180.105.229 with SMTP id gp5mr1241793wib.20.1367332445670;
+        Tue, 30 Apr 2013 07:34:05 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.109.136 with SMTP id hs8ls155465wib.37.gmail; Tue, 30 Apr
+ 2013 07:34:05 -0700 (PDT)
+X-Received: by 10.15.67.206 with SMTP id u54mr55700053eex.6.1367332445016;
+        Tue, 30 Apr 2013 07:34:05 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id j6si7879137eew.0.2013.04.30.07.34.04
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 30 Apr 2013 07:34:05 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id C78CB63B4B5
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 16:34:04 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id os4+GW7j98mf for <tosdr@googlegroups.com>;
+	Tue, 30 Apr 2013 16:33:56 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:8af2:69f0:6057:7aed:f9e9:6406])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 7C14A63B445
+	for <tosdr@googlegroups.com>; Tue, 30 Apr 2013 16:33:53 +0200 (CEST)
+Date: Tue, 30 Apr 2013 16:33:51 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1864] Re: Grammarly can delete your account at any time
+ for any reason (including exceeding usage limits).
+Message-ID: <20130430143351.GI9156@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <8632a3db-ece1-4e09-8cd1-7f7245dd0728@googlegroups.com>
+ <82716383-c8d9-4db7-98ac-d0bcbbb6b9c0@googlegroups.com>
+MIME-Version: 1.0
+In-Reply-To: <82716383-c8d9-4db7-98ac-d0bcbbb6b9c0@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+
+Le mar. 11/12/12, 07:43, Ian McGowan <irmcgowan@gmail.com>:
+> This has been curated and will appear on the website soon.
+
+
+This is quite important, but it's missing too.
+-- 
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,172 @@
+Return-Path: <tosdr+bncBCA6TEFYRQPRBOGC4WHQKGQEHJ5RAEY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id DAF81161735
+	for <anything@michielbdejong.com>; Wed, 31 Jul 2013 21:10:52 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D7A9911659B
+	for <anything@michielbdejong.com>; Wed, 31 Jul 2013 21:10:52 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KzPjaFyVIGLF for <anything@michielbdejong.com>;
+	Wed, 31 Jul 2013 21:10:51 +0200 (CEST)
+Received: from mail-ve0-x23a.google.com (mail-ve0-x23a.google.com [IPv6:2607:f8b0:400c:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id B3B3C1165AD
+	for <michiel@michielbdejong.com>; Wed, 31 Jul 2013 21:10:50 +0200 (CEST)
+Received: by mail-ve0-f186.google.com with SMTP id cy12sf269395veb.23
+        for <michiel@michielbdejong.com>; Wed, 31 Jul 2013 12:10:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-proofpoint-virus-version:x-proofpoint-spam-details
+         :from:subject:message-id:date:to:mime-version:x-mailer
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=CXug1/Dm1U9wqXqDSb7FX/GSM3gIAP6mEQELHwifTB8=;
+        b=K/U+7ihxAbGaOpT6upBXP6Ja1XqMDhPMzwfdqXoUCZn6vqnzzc/ikPAxAO5nrwPL+k
+         DpM6OhY8Ti5w/WSg4z/qkvDevxdqk6e+Egd4uhqL9HT4xgcUEX6cnEzmgwZgSUU2XuMy
+         CYm3Y5uIR/tFcUA4cOEL9uo2EbXciwmuBLEDfeQIrJpq60PpOArtoGWskGr9X5vqkVwV
+         izaqxyeE2VWBm/BJDGUHnwpq3esG7ii023FqKa7z5BhLWxP+pzX3SqkhbAkOgf5C55yY
+         LTqnWuG72bEMzdkqKm2u85aRVa7LJwE681+upBO1pSVZMYkBGmwBKEp04oR3UBEB5OFx
+         /O8Q==
+X-Received: by 10.50.11.69 with SMTP id o5mr584506igb.13.1375297849259;
+        Wed, 31 Jul 2013 12:10:49 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.97.70 with SMTP id dy6ls3043573igb.3.canary; Wed, 31 Jul
+ 2013 12:10:48 -0700 (PDT)
+X-Received: by 10.66.250.196 with SMTP id ze4mr17383298pac.29.1375297848351;
+        Wed, 31 Jul 2013 12:10:48 -0700 (PDT)
+Received: from st11p01mm-asmtp005.mac.com (st11p01mm-asmtpout005.mac.com. [17.172.204.240])
+        by gmr-mx.google.com with ESMTP id px10si407238pbb.2.2013.07.31.12.10.48
+        for <tosdr@googlegroups.com>;
+        Wed, 31 Jul 2013 12:10:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of c_surmeli@icloud.com designates 17.172.204.240 as permitted sender) client-ip=17.172.204.240;
+Received: from [192.168.1.104] (unknown [151.250.198.46])
+ by st11p01mm-asmtp005.mac.com
+ (Oracle Communications Messaging Server 7u4-24.01(7.0.4.24.0) 64bit (built Jan
+  3 2012)) with ESMTPSA id <0MQT00AH9ELV7P40@st11p01mm-asmtp005.mac.com> for
+ tosdr@googlegroups.com; Wed, 31 Jul 2013 19:10:47 +0000 (GMT)
+X-Proofpoint-Virus-Version: vendor=fsecure
+ engine=2.50.10432:5.10.8794,1.0.431,0.0.0000
+ definitions=2013-07-31_07:2013-07-31,2013-07-31,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ ipscore=0 suspectscore=1 phishscore=0 bulkscore=0 adultscore=0 classifier=spam
+ adjust=0 reason=mlx scancount=1 engine=6.0.2-1305010000
+ definitions=main-1307310140
+From: =?iso-8859-1?Q?Can_S=FCrmeli?= <c_surmeli@icloud.com>
+Subject: [tosdr:2580] Aggrement of NX Pay
+Message-id: <8713D517-F048-4877-A8A5-207BD73C93E3@icloud.com>
+Date: Wed, 31 Jul 2013 22:10:43 +0300
+To: tosdr@googlegroups.com
+MIME-version: 1.0 (Mac OS X Mail 6.5 \(1508\))
+X-Mailer: Apple Mail (2.1508)
+X-Original-Sender: c_surmeli@icloud.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of c_surmeli@icloud.com designates 17.172.204.240 as
+ permitted sender) smtp.mail=c_surmeli@icloud.com;       dmarc=pass (p=NONE
+ dis=NONE) d=icloud.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-type: multipart/alternative;
+ boundary="Apple-Mail=_EDDF1DAA-B33E-4798-B8FF-10452CAF9C05"
+
+--Apple-Mail=_EDDF1DAA-B33E-4798-B8FF-10452CAF9C05
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hey guys.
+
+Could you please verify the following agreement.
+
+https://www.nxpay.com/client/legal/legal_20120820.jsp
+
+I would really appreciate it since it's of NX Pay which they run a payment service.
+
+Best regards.
+---
+CAN | cansurmeli.com
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--Apple-Mail=_EDDF1DAA-B33E-4798-B8FF-10452CAF9C05
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=ISO-8859-1
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html charset=
+=3Dus-ascii"></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode=
+: space; -webkit-line-break: after-white-space; ">Hey guys.<div><br></div><=
+div>Could you please verify the following agreement.</div><div><br></div><d=
+iv><a href=3D"https://www.nxpay.com/client/legal/legal_20120820.jsp">https:=
+//www.nxpay.com/client/legal/legal_20120820.jsp</a></div><div><br></div><di=
+v>I would really appreciate it since it's of NX Pay which they run a paymen=
+t service.</div><div><br></div><div>Best regards.</div><div><div apple-cont=
+ent-edited=3D"true">
+<div style=3D"color: rgb(0, 0, 0); font-family: 'Avenir Next'; font-size: m=
+edium; font-style: normal; font-variant: normal; font-weight: normal; lette=
+r-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-aut=
+o; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; =
+word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-widt=
+h: 0px; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break=
+: after-white-space; "><div style=3D"color: rgb(0, 0, 0); font-family: 'Ave=
+nir Next'; font-size: medium; font-style: normal; font-variant: normal; fon=
+t-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; =
+text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-spa=
+ce: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -=
+webkit-text-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp-mode: sp=
+ace; -webkit-line-break: after-white-space; "><div style=3D"color: rgb(0, 0=
+, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-v=
+ariant: normal; font-weight: normal; letter-spacing: normal; line-height: n=
+ormal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transfo=
+rm: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-s=
+ize-adjust: auto; -webkit-text-stroke-width: 0px; word-wrap: break-word; -w=
+ebkit-nbsp-mode: space; -webkit-line-break: after-white-space; "><div style=
+=3D"color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-v=
+ariant: normal; font-weight: normal; letter-spacing: normal; line-height: n=
+ormal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transfo=
+rm: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-s=
+ize-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; word-w=
+rap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-=
+space; "><span style=3D"font-family: 'Avenir Next'; ">---</span><br style=
+=3D"font-family: 'Avenir Next'; "><span style=3D"font-family: 'Avenir Next'=
+; ">CAN | <a href=3D"http://cansurmeli.com">cansurmeli.com</a></span></div>=
+</div></div></div>
+</div>
+<br></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--Apple-Mail=_EDDF1DAA-B33E-4798-B8FF-10452CAF9C05--

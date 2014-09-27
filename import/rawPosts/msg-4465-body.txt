@@ -1,0 +1,125 @@
+Return-Path: <tosdr+bncBDW7JVVULIIPJEUZRUCRUBH2Y62YW@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3380E161735
+	for <anything@michielbdejong.com>; Wed, 29 May 2013 20:31:23 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 308B9178084
+	for <anything@michielbdejong.com>; Wed, 29 May 2013 20:31:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id mqbBt0lxLIpO for <anything@michielbdejong.com>;
+	Wed, 29 May 2013 20:31:21 +0200 (CEST)
+Received: from mail-wi0-x23c.google.com (mail-wi0-x23c.google.com [IPv6:2a00:1450:400c:c05::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 88AA9178089
+	for <michiel@michielbdejong.com>; Wed, 29 May 2013 20:31:18 +0200 (CEST)
+Received: by mail-wi0-f188.google.com with SMTP id hm9sf1073505wib.25
+        for <michiel@michielbdejong.com>; Wed, 29 May 2013 11:31:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:mime-version:in-reply-to:references:date:message-id
+         :subject:from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=8xuWOa+KAClMALLNgrK4qZDlf6w/0OCvGxZu8r8kyqA=;
+        b=HrBDeh2sf+HWbet4bVSwf8HRThgI5+xAhBBbbHZHcs3zcNi16yFOZlBTdY9FnyXW3/
+         YJKOFywJAemTtDRf7B2L84rJb+tL9Q35glgo5nQXnRCMjerifcn2ckK5LBC1tTYVm7gH
+         nrGHCAORYbQB7EcFA/3DShBK6a47ixPcgDHnJFh0TZzgmOosnhtiJ//Bu1h40X0Y3i2X
+         r/hTBfeRlTwmdxpc7dCKn8EXwB8OjUytgskOGx/6sPWaLo6XVsXz2UfqKmU02Hh4gUOV
+         LFCu2eQzjsDRMMHnir5NMjEzMNoP9v1QRsXqxIO1mjEiuoP6uxy/5vbk/5W6UXPYWHFX
+         xawA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:mime-version:in-reply-to:references:date:message-id
+         :subject:from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=8xuWOa+KAClMALLNgrK4qZDlf6w/0OCvGxZu8r8kyqA=;
+        b=NXNA9Q3DHs1D+yiZoJjS5xGOO95TJ8/ZzBDHJloaEw05/UFzCVUcIt9G6k/hUtFE5k
+         UbJ979L7u6idLuv38IFsue1/LTBfhQxZaBDiaqhAo/NvEJAl/0HbeYI4/wn3rAH/hv5i
+         vAMu3WMjJ9w9BLOHxdepZ8noRNSd5JjZACJgIUCYBS+H9cdhcMa6J37KM4BFa3QhBFKn
+         fr/7QkxsUNaWE2pjwX6+MiRyOlq89bICFsjOnQjSy7t8+1B5FeF3bL5jya0n0XQ7mySC
+         Rc0B/RIVtntQBYjucQ0f/95D94bCmDAFo2+PeQhQCRQ4ubNx4w/+Bz4Ee7C+QE/ckGCC
+         e4zg==
+X-Received: by 10.180.126.33 with SMTP id mv1mr458381wib.12.1369852277438;
+        Wed, 29 May 2013 11:31:17 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.181.12.84 with SMTP id eo20ls5283wid.13.gmail; Wed, 29 May
+ 2013 11:31:16 -0700 (PDT)
+X-Received: by 10.15.42.72 with SMTP id t48mr4628453eev.7.1369852276352;
+        Wed, 29 May 2013 11:31:16 -0700 (PDT)
+Received: from mail-ea0-x22d.google.com (mail-ea0-x22d.google.com [2a00:1450:4013:c01::22d])
+        by gmr-mx.google.com with ESMTPS id bj52si9205147eeb.1.2013.05.29.11.31.16
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 29 May 2013 11:31:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of eric.jain@gmail.com designates 2a00:1450:4013:c01::22d as permitted sender) client-ip=2a00:1450:4013:c01::22d;
+Received: by mail-ea0-x22d.google.com with SMTP id n15so5537971ead.4
+        for <tosdr@googlegroups.com>; Wed, 29 May 2013 11:31:16 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.14.182.196 with SMTP id o44mr5449895eem.76.1369852276261;
+ Wed, 29 May 2013 11:31:16 -0700 (PDT)
+Received: by 10.223.161.213 with HTTP; Wed, 29 May 2013 11:31:15 -0700 (PDT)
+In-Reply-To: <20130529110529.GA4304@synclavier.ampoliros.net>
+References: <d7e5959c-ca1f-4f10-b5e0-9f55f0da07db@googlegroups.com>
+	<b3f542f8-7ba7-4e93-898e-d06f5b7e3d73@googlegroups.com>
+	<20130529110529.GA4304@synclavier.ampoliros.net>
+Date: Wed, 29 May 2013 11:31:15 -0700
+Message-ID: <CAHte5+JXVGipimdjiM4xWD2jCY0ycBcxgsnVEKTbwpJYgC_tWQ@mail.gmail.com>
+Subject: Re: [tosdr:2253] Re: Should I contribute?
+From: Eric Jain <eric.jain@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: eric.jain@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of eric.jain@gmail.com designates 2a00:1450:4013:c01::22d
+ as permitted sender) smtp.mail=eric.jain@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Wed, May 29, 2013 at 4:05 AM, Hugo Roy <hugo@tosdr.org> wrote:
+> Can you explain a bit more where your frustration comes from using
+> http://tosdr.org/topics.html ? This shouldn't frustrate
+> contributors like you, so there' something wrong that we need to
+> fix. However if you don't give us more details on what's bothering
+> you exactly, we can't improve it.
+
+I need more specific guidelines, so that if we both review the same
+service, we end up with the same result. Without that kind of
+guidance, I find it much harder to do a review, and the resulting lack
+of consistency makes ToS:DR less useful for comparing services.
+
+Some of the topics are clear enough, e.g. "What is the jurisdiction,
+what laws govern the terms?" (but why "Jurisdiction in California",
+"Court of law is California" and "Choice of law: California"?). Other
+topics are too vague, and sometimes it's not obvious to me what topic
+a clause belongs to.
+
+
+> We'll include your contributions ourselves if you decide not to
+> post them to the mailing-list.
+
+Please do! I'm just too lazy to create 50 posts and follow up on each of them...
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

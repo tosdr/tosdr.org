@@ -1,0 +1,161 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBJXS3WGQKGQEUN5JL7A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool5-d.mgt.gandi.net [10.0.21.136])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id EB4AC161740
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:23:21 +0200 (CEST)
+Received: from mfilter22-d.gandi.net (mfilter22-d.gandi.net [217.70.178.150])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E919A2A809D
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 21:23:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter22-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.136])
+	by mfilter22-d.gandi.net (mfilter22-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id XvigBacWgBpo for <anything@michielbdejong.com>;
+	Tue, 11 Jun 2013 21:23:20 +0200 (CEST)
+Received: from mail-ye0-f184.google.com (mail-ye0-f184.google.com [209.85.213.184])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1E32D2A80A6
+	for <michiel@michielbdejong.com>; Tue, 11 Jun 2013 21:23:19 +0200 (CEST)
+Received: by mail-ye0-f184.google.com with SMTP id m1sf1753118yen.21
+        for <michiel@michielbdejong.com>; Tue, 11 Jun 2013 12:23:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=lc/wdXNuarRQ07L/mN/gxvVKMN+pHzIwMwdXzqF32iQ=;
+        b=LrgUx7RRR/1RWAW8Eji4Uq0RepOaCoW36eGZ0VRBO+1AR2sgpM78zOhNLIgdzAZAXS
+         49JliPhZYlgusJ4Gq8KcVawu2BclN3F0sadc/mc07xjD+doWv3Iz5Vx6vB9XL0/sGM52
+         598BwhvqA+urKBnlt2RVBgexgsuI32+6ANm2VORDDfQ6XQSf6vEe/wey94RnnK81nj/H
+         0rNFoiUzYLkLdQEZDbpV3SRD1hySKqkWst8C4yW0iAHbsEgjw1SXEhRcLqru3/nXljxa
+         KxqOnKiQkl335nBPMxHj6jxOfmKAH6uw6qyGW5rUcHUfuWx0VJEakE4INI+2fREZO4xP
+         bGoQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=lc/wdXNuarRQ07L/mN/gxvVKMN+pHzIwMwdXzqF32iQ=;
+        b=ArhxbKv00SDFvKJK7G74fTLARbQmhzbm7sRumX+2Lt57MivEF9O4OnNRHvt40pkhoU
+         hUpaYTd/gl5BQStW3b4Lu/T7/2PC5jrfqhMq+nNFMY8vFgEfZMLKj6uAEp60tDtzw/Nl
+         5LXCdYb+2lVD0w4AffLZ4QIHrfCvxXqNc1BmprGcNhinALFylYi2s7FNOrT+tzGJj4LU
+         qGKBydN22SVP6kLq7BJudroWQVJrAFtFXhFRgkll0x/4/DLGpZ9qp/380JA8W2gvIsg/
+         WhoH14qSp3JTcBkNDswHw3JMyOXKoJOfwUvtDcP/NhHYtB7qL/UK8cGXPiE9TBK/9+G0
+         TCoA==
+X-Received: by 10.49.61.137 with SMTP id p9mr909381qer.40.1370978598843;
+        Tue, 11 Jun 2013 12:23:18 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.122.102 with SMTP id lr6ls2256260qeb.13.gmail; Tue, 11 Jun
+ 2013 12:23:18 -0700 (PDT)
+X-Received: by 10.49.87.232 with SMTP id bb8mr959397qeb.28.1370978598023;
+        Tue, 11 Jun 2013 12:23:18 -0700 (PDT)
+Date: Tue, 11 Jun 2013 12:23:17 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <291115cd-f61e-49f4-8fc4-d33dea009858@googlegroups.com>
+In-Reply-To: <b9bcaf0f-2791-4f5e-a120-8c204dc120ea@googlegroups.com>
+References: <d7a5c460-8d4b-446f-a78b-3aad054f5862@googlegroups.com>
+ <b9bcaf0f-2791-4f5e-a120-8c204dc120ea@googlegroups.com>
+Subject: [tosdr:2283] Re: [Good] Dropbox allows you to retain full control of
+ your copyright
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_534_7252193.1370978597601"
+
+------=_Part_534_7252193.1370978597601
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: You retain full control of your copyright
+
+Topic: Ownership
+
+Summary: Dropbox doesn't claim any ownership of your copyright. The=20
+copyright only grants them the limited rights to run their service.
+
+Score: 40 (good)
+
+On Friday, November 30, 2012 9:45:02 AM UTC-6, Ian McGowan wrote:
+>
+> This point has been curated and will appear on the website soon.
+>
+> On Thursday, August 23, 2012 5:18:04 PM UTC+2, Sebasti=E1n Waisbrot wrote=
+:
+>>
+>> https://www.dropbox.com/terms
+>>
+>>> You retain full ownership to your stuff. We don=92t claim any ownership=
+ to=20
+>>> any of it. These Terms do not grant us any rights to your stuff or=20
+>>> intellectual property except for the limited rights that are needed to =
+run=20
+>>> the Services, as explained below.
+>>
+>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_534_7252193.1370978597601
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Title: You retain full control of your copyright<div><br></div><div>Topic: =
+Ownership</div><div><br></div><div>Summary: Dropbox doesn't claim any owner=
+ship of your copyright. The copyright only grants them the limited rights t=
+o run their service.</div><div><br></div><div>Score: 40 (good)<br><br>On Fr=
+iday, November 30, 2012 9:45:02 AM UTC-6, Ian McGowan wrote:<blockquote cla=
+ss=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #=
+ccc solid;padding-left: 1ex;">This point has been curated and will appear o=
+n the website soon.<br><br>On Thursday, August 23, 2012 5:18:04 PM UTC+2, S=
+ebasti=E1n Waisbrot wrote:<blockquote class=3D"gmail_quote" style=3D"margin=
+:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"><div><a h=
+ref=3D"https://www.dropbox.com/terms" target=3D"_blank">https://www.dropbox=
+.com/terms</a></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0=
+px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);borde=
+r-left-style:solid;padding-left:1ex">You retain full ownership to your stuf=
+f. We don=92t claim any ownership to any of it. These Terms do not grant us=
+ any rights to your stuff or intellectual property except for the limited r=
+ights that are needed to run the Services, as explained below.</blockquote>=
+</blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_534_7252193.1370978597601--

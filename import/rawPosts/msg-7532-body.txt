@@ -1,0 +1,125 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBWFCZKHQKGQEDSQVRUA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 92ACC16175B
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 17:10:19 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 8FE461421AA
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 17:10:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 6eyv95Gsc9dx for <anything@michielbdejong.com>;
+	Fri, 26 Jul 2013 17:10:17 +0200 (CEST)
+Received: from mail-vb0-x23d.google.com (mail-vb0-x23d.google.com [IPv6:2607:f8b0:400c:c02::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A510614205F
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 17:10:17 +0200 (CEST)
+Received: by mail-vb0-f61.google.com with SMTP id x13sf356960vbb.26
+        for <anything@michielbdejong.com>; Fri, 26 Jul 2013 08:10:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:mime-version:subject:from:in-reply-to:date:message-id
+         :references:to:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ySZ+EqCglOWWAp9zqgr8aAdfdJhQZUMWVe0OYiNRUrM=;
+        b=CSxSip1OwLKxp2q4ic/qvipeFMmFSbqAhVMlyWQ79YNbhALXgvaL1UVaZJAReFp4vT
+         TiHUlCTRZ+Gi0eQBRtNy9iHrpPVnQBHCvJ4zuDdI888qOXIR1CT++jNH3gpRl8oOCStg
+         xxfDBzmkixb48pMZsgYC8zhEwRr8ArRSea0ngZSv06f0kOugM10ExgprTS2vVhKNvjqD
+         aBNPjVNeJaFNgL1cCCeuehv/C2X518Nzc+0GTPL7mzc/IreoSB++ons6A+Qb9XbIyjDQ
+         Vk5pI1V50SzsQK+n0KNZIyZYWx/CseDPSEfNVpGuc6BarinsG0zQnp9wrclQWRugPyEq
+         hidQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:mime-version:subject:from:in-reply-to:date:message-id
+         :references:to:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ySZ+EqCglOWWAp9zqgr8aAdfdJhQZUMWVe0OYiNRUrM=;
+        b=wAeFDc0If/wYQSIh0/sZjmEtLtYBky/eo+Zut6TdHhDRpePb8hoJf+pqdrofWNEmiG
+         xmz0MX/QbmtjKTKp61aCa2yLL5ooMJ6h97ZSYTy/6Ct8YZbYGQO6fDNe2RWYtY89ir+J
+         HeIFZ4XeoBuiaeuUkeFVUtsJEb4E9PvhstIe2fxjsLAKiqMy+sh9Tr8Trg5yEdzb1uDF
+         eQrN1HL4RFyR9hBbIu1pe5U0L5+YsRVWkSD/sUI6GrYYmN+ke4tjChXvyfuTBviVfYRU
+         nye1b5BB9Jk3UwufeJSdG5p5NUn01X608i9FTY2yrtGNkwY/5S/0kaqKN//0UeQd/Su9
+         h6IQ==
+X-Received: by 10.49.41.101 with SMTP id e5mr750762qel.7.1374851416417;
+        Fri, 26 Jul 2013 08:10:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.132.99 with SMTP id ot3ls1083697qeb.40.gmail; Fri, 26 Jul
+ 2013 08:10:16 -0700 (PDT)
+X-Received: by 10.236.226.6 with SMTP id a6mr26125428yhq.35.1374851416082;
+        Fri, 26 Jul 2013 08:10:16 -0700 (PDT)
+Received: from mail-yh0-x232.google.com (mail-yh0-x232.google.com [2607:f8b0:4002:c01::232])
+        by gmr-mx.google.com with ESMTPS id e64si8393399yhj.1.2013.07.26.08.10.16
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 26 Jul 2013 08:10:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:4002:c01::232 as permitted sender) client-ip=2607:f8b0:4002:c01::232;
+Received: by mail-yh0-f50.google.com with SMTP id a41so1039732yho.9
+        for <tosdr@googlegroups.com>; Fri, 26 Jul 2013 08:10:16 -0700 (PDT)
+X-Received: by 10.236.47.40 with SMTP id s28mr21463215yhb.12.1374851415952;
+        Fri, 26 Jul 2013 08:10:15 -0700 (PDT)
+Received: from [192.168.1.104] (adsl-108-71-196-134.dsl.stl2mo.sbcglobal.net. [108.71.196.134])
+        by mx.google.com with ESMTPSA id b50sm65024243yhl.1.2013.07.26.08.10.12
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 26 Jul 2013 08:10:14 -0700 (PDT)
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2568] ToSBack: Policy Changes
+From: Ian McGowan <irmcgowan@gmail.com>
+In-Reply-To: <51f28eb91cbcd_45794e3780e1563c@dragon.mail>
+Date: Fri, 26 Jul 2013 10:10:10 -0500
+Message-Id: <F4619948-3DD2-4E44-A7C6-694C0F21B2D6@gmail.com>
+References: <51f28eb91cbcd_45794e3780e1563c@dragon.mail>
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:4002:c01::232
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Having looked at these, Amazon's changes are merely formatting changes. There's nothing changed in the content.
+
+As for AT&T, that service hasn't been completely curated, yet. There are only two data points on tosdr, so these changes will be taken into account when I or someone else reviews that service.
+
+On Jul 26, 2013, at 9:59 AM, ToSBack wrote:
+
+> amazon.com: Amazon App Suite Legal Notices
+> att.com: Wireless Plan Terms
+> These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/92084d1704a3f2836bec45d52be7f898755065f7 to see the differences!
+> 
+> -- 
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> --- 
+> You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> 
+> 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

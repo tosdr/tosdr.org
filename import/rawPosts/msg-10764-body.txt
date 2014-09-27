@@ -1,0 +1,215 @@
+Return-Path: <tosdr+bncBCN23IMP34ARBLPQ5CJAKGQEF5KUSMQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id E98A140E83
+	for <anything@michielbdejong.com>; Sun, 13 Oct 2013 08:05:39 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E5E43178088
+	for <anything@michielbdejong.com>; Sun, 13 Oct 2013 08:05:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KZbDLxckHr0J for <anything@michielbdejong.com>;
+	Sun, 13 Oct 2013 08:05:37 +0200 (CEST)
+Received: from mail-qa0-x240.google.com (mail-qa0-x240.google.com [IPv6:2607:f8b0:400d:c00::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 98C2417808A
+	for <anything@michielbdejong.com>; Sun, 13 Oct 2013 08:05:34 +0200 (CEST)
+Received: by mail-qa0-f64.google.com with SMTP id i13sf553729qae.9
+        for <anything@michielbdejong.com>; Sat, 12 Oct 2013 23:05:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=pP864svLV4QvjrCpkLiCl3AWVp6cAK3buS321gmRikE=;
+        b=DzKBRDmr+nz5Yjj5UGscMIvvINtmrM6rX7d9vvykz49tY91d091BOmF2cCQ4L+cXAF
+         XyT5A+W/OzUmv8XImOAr1sxeTPZVk1OTUyLQ0KVL9PXM88F98l3Ie/kd9+AE5BmqbAwf
+         k9lupIImSJdA8Q4H/p7J1LId4gezb1H/cZ4NsNUM3JDYX0ZeMI43IX41f53Gv2vQOCrn
+         Eqq23aVf6xa0veM/4P25dfIddTsnSLFq0Z9jCXNNQCwBopGidZylBAIa5MEsrOLNmjza
+         ByExBFfXHfl+UPYqmOnQCi4JpFEumByCDYbbNABgJpyihyUi3F9MTzknCrProBSvctV9
+         c+NQ==
+X-Received: by 10.49.116.145 with SMTP id jw17mr4479qeb.25.1381644333693;
+        Sat, 12 Oct 2013 23:05:33 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.37.72 with SMTP id w8ls1650083qej.59.gmail; Sat, 12 Oct
+ 2013 23:05:33 -0700 (PDT)
+X-Received: by 10.58.134.110 with SMTP id pj14mr226477veb.14.1381644333413;
+        Sat, 12 Oct 2013 23:05:33 -0700 (PDT)
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by gmr-mx.google.com with ESMTPS id bc1si1443528qcb.1.1969.12.31.16.00.00
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 12 Oct 2013 23:05:33 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:4b98:c:538::195 is neither permitted nor denied by best guess record for domain of anything@michielbdejong.com) client-ip=2001:4b98:c:538::195;
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id DF6BAA8085
+	for <tosdr@googlegroups.com>; Sun, 13 Oct 2013 08:05:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from relay3-d.mail.gandi.net ([217.70.183.195])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id n+nsuoTWxWaZ for <tosdr@googlegroups.com>;
+	Sun, 13 Oct 2013 08:05:30 +0200 (CEST)
+X-Originating-IP: 88.253.118.213
+Received: from [192.168.2.32] (unknown [88.253.118.213])
+	(Authenticated sender: anything@michielbdejong.com)
+	by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id 058EFA80B8
+	for <tosdr@googlegroups.com>; Sun, 13 Oct 2013 08:05:29 +0200 (CEST)
+Message-ID: <525A3827.2070208@michielbdejong.com>
+Date: Sun, 13 Oct 2013 09:05:27 +0300
+From: "Michiel B. de Jong" <anything@michielbdejong.com>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2750] Google TOS changes
+References: <38c0033e-fea2-4471-b6bf-26d750a9ea89@googlegroups.com>
+In-Reply-To: <38c0033e-fea2-4471-b6bf-26d750a9ea89@googlegroups.com>
+X-Enigmail-Version: 1.5.2
+Content-Type: multipart/signed; micalg=pgp-sha1;
+ protocol="application/pgp-signature";
+ boundary="5dqOqN716ic0V9Jqmvn75rlEp0LqXMAxx"
+X-Original-Sender: anything@michielbdejong.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:4b98:c:538::195 is neither permitted nor denied by best
+ guess record for domain of anything@michielbdejong.com) smtp.mail=anything@michielbdejong.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--5dqOqN716ic0V9Jqmvn75rlEp0LqXMAxx
+Content-Type: multipart/alternative;
+ boundary="------------040802090208080104000400"
+
+This is a multi-part message in MIME format.
+--------------040802090208080104000400
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+yes! just saw this about it as well:
+http://9to5google.com/2013/10/11/your-name-and-face-photo-can-be-used-in-=
+google-ads-from-11th-november-unless-you-opt-out/
+
+we should add that as a "blocker" probably, which would make them go
+from class C to class D.
+
+and i think facebook also does this, so we should add the same point
+there, then.
+
+On 10/12/2013 05:50 AM, Sam wrote:
+> Google is updating their Terms of Service and the new version will
+> take effect on November 11. The changes focus on how they will display
+> more user information in content & ads.
+>
+> The changes are summarized at google.com/policies/terms/changes
+> <https://www.google.com/policies/terms/changes/> and the full updated
+> version is available at google.com/policies/terms/update
+> <https://www.google.com/policies/terms/update/>.
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---
+> You received this message because you are subscribed to the Google
+> Groups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send
+> an email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+
+
+--------------040802090208080104000400
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <meta content=3D"text/html; charset=3DISO-8859-1"
+      http-equiv=3D"Content-Type">
+  </head>
+  <body bgcolor=3D"#FFFFFF" text=3D"#000000">
+    yes! just saw this about it as well:
+<a class=3D"moz-txt-link-freetext" href=3D"http://9to5google.com/2013/10/=
+11/your-name-and-face-photo-can-be-used-in-google-ads-from-11th-november-=
+unless-you-opt-out/">http://9to5google.com/2013/10/11/your-name-and-face-=
+photo-can-be-used-in-google-ads-from-11th-november-unless-you-opt-out/</a=
+><br>
+    <br>
+    we should add that as a "blocker" probably, which would make them go
+    from class C to class D.<br>
+    <br>
+    and i think facebook also does this, so we should add the same point
+    there, then.<br>
+    <br>
+    <div class=3D"moz-cite-prefix">On 10/12/2013 05:50 AM, Sam wrote:<br>=
+
+    </div>
+    <blockquote
+      cite=3D"mid:38c0033e-fea2-4471-b6bf-26d750a9ea89@googlegroups.com"
+      type=3D"cite">
+      <div dir=3D"ltr">Google is updating their Terms of Service and
+        the&nbsp;new version will take effect on November 11. The changes=
+
+        focus on how they will display more user information in content
+        &amp; ads.
+        <div><br>
+        </div>
+        <div>The changes are summarized at <a moz-do-not-send=3D"true"
+            href=3D"https://www.google.com/policies/terms/changes/">googl=
+e.com/policies/terms/changes</a>&nbsp;and
+          the full updated version is available at <a
+            moz-do-not-send=3D"true"
+            href=3D"https://www.google.com/policies/terms/update/">google=
+=2Ecom/policies/terms/update</a>.</div>
+      </div>
+      -- <br>
+      tosdr.org | twitter.com/tosdr | github.com/tosdr<br>
+      --- <br>
+      You received this message because you are subscribed to the Google
+      Groups "Terms of Service; Didn't Read" group.<br>
+      To unsubscribe from this group and stop receiving emails from it,
+      send an email to <a class=3D"moz-txt-link-abbreviated" href=3D"mail=
+to:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com=
+</a>.<br>
+      To post to this group, send email to <a class=3D"moz-txt-link-abbre=
+viated" href=3D"mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a>=
+=2E<br>
+      Visit this group at <a moz-do-not-send=3D"true"
+        href=3D"http://groups.google.com/group/tosdr">http://groups.googl=
+e.com/group/tosdr</a>.<br>
+      For more options, visit <a moz-do-not-send=3D"true"
+        href=3D"https://groups.google.com/groups/opt_out">https://groups.=
+google.com/groups/opt_out</a>.<br>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------040802090208080104000400--
+
+--5dqOqN716ic0V9Jqmvn75rlEp0LqXMAxx
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+Comment: Using GnuPG with Thunderbird - http://www.enigmail.net/
+
+iQEcBAEBAgAGBQJSWjgnAAoJECkN6BsJ/OOET8kH/jcGTXDKwpsEVMDu391yEmOt
+rPtwCTvl0hHZ6kvlVDMFHQqnGkhojVtLv9YUmAQiQX/UBdMKfWhAIN9n1/u2eQlc
+kT+NhwbScwDSaMTPV5CyUYT8AFgH1e0+GDUe2CpWGk93HLBG2sEDC8pFtpOZboX8
+MxU4LoK04TSzbXssFB67fF0L2N4n9sv/PK6ocBAnkO5XS16VYC3fIa5FhEVBvIP6
+zd+8bijvWGezd2TjaB3DjTYjjF7Ws+LJ9gHeRF3gvxS1N6TJEfrhngeVbE13vnEw
+ogK+1agj7C3B5F7pOunJTi9p1oAzwUqfGRmJRupmiyLPW4fMsBps0FMdIAE510Q=
+=AYxb
+-----END PGP SIGNATURE-----
+
+--5dqOqN716ic0V9Jqmvn75rlEp0LqXMAxx--

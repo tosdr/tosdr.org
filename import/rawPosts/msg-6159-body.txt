@@ -1,0 +1,151 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB3M2W6HAKGQEWC4LEJQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CD1A8161743
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:52:48 +0200 (CEST)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C997D178082
+	for <anything@michielbdejong.com>; Fri, 28 Jun 2013 19:52:48 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id ZnBtpMeEngdn for <anything@michielbdejong.com>;
+	Fri, 28 Jun 2013 19:52:47 +0200 (CEST)
+Received: from mail-ye0-x23f.google.com (mail-ye0-x23f.google.com [IPv6:2607:f8b0:4002:c04::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2DDE2178068
+	for <michiel@michielbdejong.com>; Fri, 28 Jun 2013 19:52:47 +0200 (CEST)
+Received: by mail-ye0-f191.google.com with SMTP id g12sf361530yee.8
+        for <michiel@michielbdejong.com>; Fri, 28 Jun 2013 10:52:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=UV1OS9dS+/ktP39H7aSpQECdFDqnBtqYjKsLNL95rGc=;
+        b=mTYIyYihlOJ1B0mHDH6kVa8wmbTAYz5aSlWgSF2RypSkhBkLT8CmQCDasYP2Sej1BN
+         T3N3d6dtpZSyuC1Pk80ldU+M5Nz/7pfB2hL9SPdQ3jE9jqIhqqf3ZIKH78qkNe3VS9Ix
+         YGkfimVsdj40ZIe1X99TU0F/s9+OByJhzBUg1qOsQuMoFoQTLyyhWbjPjxrxcP6OFKXe
+         oEPb4ACw6hYpZ1D6cTvL9pioyuTITbEItYRNL8vM8nbRuntUIH6jvXgIzTkRTTEdsQyR
+         Ehx1AqSjZOhw68/QNnvsMLABBjtA4jb+Ak7+VKV3AxgKsI9P6/A1aM4cSaVC2w8sh4CK
+         yRow==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=UV1OS9dS+/ktP39H7aSpQECdFDqnBtqYjKsLNL95rGc=;
+        b=TO5H8AZ6BRdEhZTTYUqUKxBO3jIlrO7RDw5bQdaLQsCB0swjr90uySaTL3d6VImT5H
+         yxVYHTddyw9HYsx2XR0p6Eoy4H/GxeDOxv2kT3J85uQv77NGR6S0fS1gsj+l5wvQsLGQ
+         ltTY3KHHpajcGZB7agqYq+u9PdkWp7Kxmt2C4yGZvFWQyV3GkiXoQ+hXkyBK8m9+GBGa
+         cPD6hKajpVQGp8O+FFRaORZglm4beA1SCOt0XizVu1GrLxgW9lW8X5G4mB/SObzjFsQu
+         8iCY+UG4kV29I66zSUxH5smPL7NJ3UkVecqI4WD9pxJKVOq/NfQGdnUWc10LHDtBOEpz
+         /twg==
+X-Received: by 10.49.12.141 with SMTP id y13mr373242qeb.41.1372441966046;
+        Fri, 28 Jun 2013 10:52:46 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.48.49 with SMTP id i17ls1303941qen.45.gmail; Fri, 28 Jun
+ 2013 10:52:45 -0700 (PDT)
+X-Received: by 10.49.58.242 with SMTP id u18mr371706qeq.23.1372441965603;
+        Fri, 28 Jun 2013 10:52:45 -0700 (PDT)
+Date: Fri, 28 Jun 2013 10:52:45 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <bc28507b-1555-4b70-a275-38557e7afddf@googlegroups.com>
+In-Reply-To: <4e26a4acfe376fc397bd647b8e5f5054@michielbdejong.com>
+References: <4e26a4acfe376fc397bd647b8e5f5054@michielbdejong.com>
+Subject: [tosdr:2419] Re: [Info] you will indemnify Amazon for all claims
+ resulting from content you supply
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_419_32516853.1372441965285"
+
+------=_Part_419_32516853.1372441965285
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title: You indemnify Amazon
+
+Topic: Governance
+
+Summary: You will indemnify Amazon for all claims resulting from content 
+you supply.
+
+Score: 50 (mediocre)
+
+On Monday, March 4, 2013 10:40:14 PM UTC-6, anyt...@michielbdejong.com 
+wrote:
+>
+> "you will indemnify Amazon for all claims resulting from content you 
+> supply" 
+>
+> https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L90 
+>
+> i think we've seen this on for other services, just mentioning the 
+> Amazon one here to make sure we rate it consistently across the board 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_419_32516853.1372441965285
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: You indemnify Amazon<div><br></div><div>Topic: Governance</div><div>=
+<br></div><div>Summary: You will indemnify Amazon for all claims resulting =
+from content you supply.</div><div><br></div><div>Score: 50 (mediocre)<br><=
+br>On Monday, March 4, 2013 10:40:14 PM UTC-6, anyt...@michielbdejong.com w=
+rote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8e=
+x;border-left: 1px #ccc solid;padding-left: 1ex;">"you will indemnify Amazo=
+n for all claims resulting from content you=20
+<br>supply"
+<br><a href=3D"https://github.com/tosdr/tosback2/blob/265e49bf24a91076495ce=
+1fddf279c4638421a66/crawl/amazon.com/Conditions%20of%20Use.txt#L90" target=
+=3D"_blank">https://github.com/tosdr/<wbr>tosback2/blob/<wbr>265e49bf24a910=
+76495ce1fddf279c<wbr>4638421a66/crawl/amazon.com/<wbr>Conditions%20of%20Use=
+.txt#L90</a>
+<br>
+<br>i think we've seen this on for other services, just mentioning the=20
+<br>Amazon one here to make sure we rate it consistently across the board
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_419_32516853.1372441965285--

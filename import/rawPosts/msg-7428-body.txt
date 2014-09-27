@@ -1,0 +1,124 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBA7QYWHQKGQEJ7UWG2I@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CC6CB161755
+	for <anything@michielbdejong.com>; Thu, 25 Jul 2013 21:10:01 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C9E7211608E
+	for <anything@michielbdejong.com>; Thu, 25 Jul 2013 21:10:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id fAXHZ3boCwYy for <anything@michielbdejong.com>;
+	Thu, 25 Jul 2013 21:10:00 +0200 (CEST)
+Received: from mail-qe0-x23c.google.com (mail-qe0-x23c.google.com [IPv6:2607:f8b0:400d:c02::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2EE3E116442
+	for <michiel@michielbdejong.com>; Thu, 25 Jul 2013 21:09:57 +0200 (CEST)
+Received: by mail-qe0-f60.google.com with SMTP id 2sf329002qea.25
+        for <michiel@michielbdejong.com>; Thu, 25 Jul 2013 12:09:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=DtEiYwJW28dnvNTDN0JlMr0hE3U/4Kcp8HYcncXWs7I=;
+        b=mNHDuDXLni0DH6OzGfUI++lE73xlfV/E4OqHv5VKX3h2CbngcPiTnd+KI7pFc8zrAi
+         SXq7Hrfq12GbtQsvxPUbzDserW8juHdk8RTr2pcI38CionRbgFsNrR88ghsQDibiztA+
+         UYDgVtk3IqpOpNhJPUvG9hMqdg+c+gw0Am8E3706feB7JbMcJgaDunO5k3QrB3IjthM8
+         UzCcBH2Vo36/mStIfLeVVkOMtKE/t5LC3axnuH3zgCTXIsVS+jGd7CDAPMyLh0fGJbKm
+         1Kunhi6f/GctQ80dxq2rDFQ3+qaj+Ve/ecEcVTxPdKlWzQ7Sj951VdkjjODaywVEzsyA
+         AJtw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=DtEiYwJW28dnvNTDN0JlMr0hE3U/4Kcp8HYcncXWs7I=;
+        b=ybRglz21Y0e4EhZFIm9BlU/bnsDWTVQU0iCemdW9IBklIFdXAJqv/4ohYUHVVf/pIO
+         j/Z3RAeUqgGuUPzoi07elEb5HYmyjksSME7u+0gyOHzUYT1KWJPkEje5NpOLoJlNof2m
+         sr7tgFg7G6vnsqPjmBcgEzIfrj41lLTKQZB0eq4IM/8lWUQe3KL+RqehkGxfpOz5Opld
+         ncQ2kRcLYdpqDVm8IsBi7RYjuFMldH3jSPL0cXelpImMkaW7j2vXBmrI6RCMYfbE63fn
+         5KqYF43T0CXP9+NU9TBxfWUP+Hyaz30lROrGhM7CS4wMZBV5rqfWy3a9QEEXEqYsaK/3
+         1Obw==
+X-Received: by 10.49.36.199 with SMTP id s7mr1645106qej.17.1374779396029;
+        Thu, 25 Jul 2013 12:09:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.236 with SMTP id 12ls735475qeh.36.gmail; Thu, 25 Jul 2013
+ 12:09:55 -0700 (PDT)
+X-Received: by 10.49.1.6 with SMTP id 6mr967131qei.8.1374779395559;
+        Thu, 25 Jul 2013 12:09:55 -0700 (PDT)
+Date: Thu, 25 Jul 2013 12:09:55 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <168e749d-0847-4720-b890-7aa4b35c8b50@googlegroups.com>
+In-Reply-To: <8350d3f7-9131-4262-9ac9-4f128905a1c4@googlegroups.com>
+References: <b870af85-e8d4-47e6-8a72-41d5d9a1af74@googlegroups.com>
+ <8350d3f7-9131-4262-9ac9-4f128905a1c4@googlegroups.com>
+Subject: [tosdr:2550] Re: Flattr emails are opt-out
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_169_14510482.1374779395142"
+
+------=_Part_169_14510482.1374779395142
+Content-Type: text/plain; charset=ISO-8859-1
+
+I agree. I don't think this is necessary to mention on the site.
+
+On Wednesday, May 8, 2013 11:02:32 AM UTC-5, Hugo Roy wrote:
+>
+> I think this is quite standard, and it's still possible to opt out.
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_169_14510482.1374779395142
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I agree. I don't think this is necessary to mention on the site.<br><br>On =
+Wednesday, May 8, 2013 11:02:32 AM UTC-5, Hugo Roy wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #cc=
+c solid;padding-left: 1ex;">I think this is quite standard, and it's still =
+possible to opt out.<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_169_14510482.1374779395142--
