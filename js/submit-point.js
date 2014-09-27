@@ -36,7 +36,7 @@ $(document).ready(function(){
 	});
 
 	function showPersona(){
-		$('#form').html('<p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p>');
+		$('#form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
 		$('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
 	}
 	
