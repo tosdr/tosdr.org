@@ -23,7 +23,7 @@ générales d’utilisation (« Terms of Service »);
 # Objet de l’Association
 
 L’Association a pour objet de soutenir le développement du projet
-«Terms of Service; Didn’t Read» <http://tosdr.org> notamment par la
+«Terms of Service; Didn’t Read» <https://tosdr.org> notamment par la
 gestion de financements et de droits d’auteur, droits de marque et
 autres droits relatifs au projet.
 
