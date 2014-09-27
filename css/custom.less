@@ -465,17 +465,13 @@ img.avatar {
 
 /*ToSDR form*/
 
-#submit-point-form {
-    min-height: 400px;
-}
-
-.tosdr-form legend {
-margin-top:2em;
-}
-
-#submit-point-form .hero-unit {
-    text-align: center;
-    background: transparent;
+.tosdr-form {
+    legend {
+        margin-top:2em;
+    }
+    label {
+        margin-top: 1em;
+    }
 }
 
 .tosdr-form .hero-unit.wait-loading {
@@ -484,6 +480,30 @@ margin-top:2em;
 
 .tosdr-form .form-actions .help-user {
     padding: 0.5em 1em;
+}
+
+
+#submit-point-form {
+    min-height: 400px;
+
+    .hero-unit {
+        text-align: center;
+        background: transparent;
+    }
+
+    #titleField {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+
+        @media (min-width: 450px) {
+            width: 400px;
+        }
+    }
+
+    #summaryField {
+        min-height: 100px;
+    }
 }
 
 /*Blog*/
