@@ -51,6 +51,14 @@ $(document).ready(function(){
                                 '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
                                 '<label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label>' +
                                 '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
+
+'					<label id="services">Service(s) to which the point applies</label>' +
+'					<input type="text" placeholder="facebook">' +
+'					<input type="text" placeholder="twitter">' +
+'					<button class="btn btn-inline" type="button">Add one</button>' +
+'<!--					You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
+'
+
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
                                 '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea>' +
                             '</fieldset>' +
