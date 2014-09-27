@@ -7,7 +7,6 @@
 var assertionUrl = 'https://3pp.io:4343/persona';
 var postPointUrl = 'https://3pp.io:4343/post/point';
 var serviceListUrl = 'https://tosdr.org/index/services.json';
-var addServiceField;
 
 $(document).ready(function(){
   var loggedInUser = null;
@@ -62,13 +61,11 @@ $(document).ready(function(){
 
   var numServices = 1;
   function showServiceFields() {
-    var str = '          <input type="text" placeholder="service">';
-    console.log('showing', str);
+    var str = '';
+    for(var i=0; i<numServices; i++) {
+      str += '<input type="text" placeholder="service">';
+    }
     $('#serviceFields').html(str);
-  }
-  addServiceField = function() {
-    numServices++;
-    showServiceFields;
   }
   function showSubmitForm(email){
     $('#submit-point-form').html('<form class="submitForm">' +
@@ -86,7 +83,7 @@ $(document).ready(function(){
 
 '          <label id="services">Service(s) to which the point applies</label>' +
 '                                       <span id="serviceFields"></span>' +
-'          <button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
+'          <button class="btn btn-inline" type="button" id="addServiceField">Add one</button>' +
 '<!--          You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
         '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
@@ -107,6 +104,10 @@ $(document).ready(function(){
         '</div>' +
         '</form>');
     showServiceFields();
+    $('#addServiceField').click(function() {
+      numServices++;
+      showServiceFields();
+    });
     var response = $.get(serviceListUrl, 'json');
     response.done(function(services){
       services = $.map(services, function(value, key){
