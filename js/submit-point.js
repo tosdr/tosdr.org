@@ -7,6 +7,7 @@
 var assertionUrl = 'https://3pp.io:4343/persona';
 var postPointUrl = 'https://3pp.io:4343/post/point';
 var serviceListUrl = 'https://tosdr.org/index/services.json';
+var addServiceField;
 
 $(document).ready(function(){
   var loggedInUser = null;
@@ -42,12 +43,6 @@ $(document).ready(function(){
     onlogout: logout
   });
 
-  var numServices = 1;
-  function showServiceFields() {
-    var str = '          <input type="text" placeholder="service">';
-    $('.serviceFields').html(str);
-  }
-
   function showPersona(){
     $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
     $('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
@@ -65,6 +60,16 @@ $(document).ready(function(){
   //
   //
 
+  var numServices = 1;
+  function showServiceFields() {
+    var str = '          <input type="text" placeholder="service">';
+    console.log('showing', str);
+    $('#serviceFields').html(str);
+  }
+  addServiceField = function() {
+    numServices++;
+    showServiceFields;
+  }
   function showSubmitForm(email){
     $('#submit-point-form').html('<form class="submitForm">' +
         '' +
@@ -73,7 +78,6 @@ $(document).ready(function(){
 
         '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
-        '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
 '          <label id="services">Service(s) to which the point applies</label>' +
 '                                       <span id="serviceFields"></span>' +
