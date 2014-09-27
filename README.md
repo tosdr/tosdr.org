@@ -52,7 +52,7 @@ These scripts are what I (Michiel) currently use for curating points after impor
 Develop other applications
 ==========================
 
-API: http://www.tosdr.org/api.html 
+API: https://www.tosdr.org/api.html 
 
 Also have a look at other apps, like the browser extensions: https://github.com/tosdr
 
