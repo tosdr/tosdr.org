@@ -9,7 +9,7 @@ module.exports = function(grunt){
 			for (j = 0; j < obj.points.length; j++) {
 				obj.pointsData[obj.points[j]] = grunt.file.readJSON('points/'+obj.points[j]+'.json');
 			}
-			grunt.file.write('api/1/digest/'+i+'.json', JSON.stringify(obj));
+			grunt.file.write('api/1/service/'+i+'.json', JSON.stringify(obj));
 		}
   });
 };
