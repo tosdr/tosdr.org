@@ -41,7 +41,7 @@ $(document).ready(function(){
 	function showCommentForms(email){
         $('#pendingpoints .comments').each(function(){
             var pointId = $(this).attr('id').substr(9);
-            $(this).find('.leaveComment').html('<form class="commentForm"><fieldset><div class="control-group"><textarea name="comment" required class="input-xxlarge"></textarea></div><div class="form-actions"><button class="btn btn-primary" id="postComment">Send</button><span class="help-user">Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></span></div></fieldset></form>')
+            $(this).find('.leaveComment').html('<form class="commentForm"><fieldset><label for="comment">Comment</label><textarea name="comment" required class="input-xxlarge"></textarea><div class="form-actions"><button class="btn btn-primary" id="postComment">Send</button><span class="help-user">Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></span></div></fieldset></form>')
             .find('.commentForm').submit(function(e){
                 var response = $.ajax(postCommentUrl, {data: {comment: $('#comments-' + pointId + ' .leaveComment textarea').val(), pointId: pointId}, type: 'POST', xhrFields: {withCredentials: true}});
                 response.done(showConfirmation);
