@@ -35,6 +35,12 @@ $(document).ready(function(){
 		onlogout: logout
 	});
 
+        var numServices = 1;
+        function showServiceFields() {
+            var str = '					<input type="text" placeholder="service">';
+            $('.serviceFields').html(str);
+        }
+
 	function showPersona(){
 		$('#form').html('<p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p>');
 		$('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
@@ -53,9 +59,8 @@ $(document).ready(function(){
                                 '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
 '					<label id="services">Service(s) to which the point applies</label>' +
-'					<input type="text" placeholder="facebook">' +
-'					<input type="text" placeholder="twitter">' +
-'					<button class="btn btn-inline" type="button">Add one</button>' +
+'                                       <span id="serviceFields"></span>' +
+'					<button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
 '<!--					You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
@@ -65,7 +70,7 @@ $(document).ready(function(){
                                 '<button class="btn btn-primary" id="postPoint">Send</button>' +
                             '</div>' +
                         '</form>');
-		
+		showServiceFields();
         var response = $.get(serviceListUrl, 'json');
         response.done(function(services){
             services = $.map(services, function(value, key){
