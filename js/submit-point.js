@@ -75,7 +75,7 @@ $(document).ready(function(){
 
         '<label class="radio inline good"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline neutral"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline bad"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline blocker"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
 
-        '<label for="summary">Please summarise this clause <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="What the clause in the terms does. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
+        '<label for="summary">Please summarise this clause <a href="#FIXME" target="_blank" class="markdownparser hidden until the feature is made">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="What the clause in the terms does. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
         '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
