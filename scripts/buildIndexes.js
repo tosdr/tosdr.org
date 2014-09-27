@@ -97,12 +97,13 @@ function parseServiceFile(id) {
       for(var i in obj.tosback2) { 
         if(obj.tosback2[i].url) {
           service[id].links[i]=obj.tosback2[i];
-          service[id].alexa=obj.alexa;
-          service[id].class=(obj.tosdr?obj.tosdr.rated:false);
           console.log(id+' '+i+': '+obj.tosback2[i]);
         }
       }
     }
+    service[id].alexa=obj.alexa;
+    service[id].twitter=obj.twitter;
+    service[id].class=(obj.tosdr?obj.tosdr.rated:false);
     pending--;
     // "last person to leave switch off the lights please",
     // or in this case, save everything to disk:
