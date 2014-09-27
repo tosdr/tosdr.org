@@ -23,7 +23,8 @@ $(document).ready(function(){
 		if (loadTimer) {
 			clearTimeout(loadTimer);
 			loadTimer = null;
-		}
+                }
+                showSigningIn();
 		var response = $.ajax(assertionUrl + '/verify', {data: {assertion: assertion}, type: 'POST', xhrFields: {withCredentials: true}});
 		response.done(login);
 		response.fail(function(){
@@ -50,6 +51,10 @@ $(document).ready(function(){
 	function showPersona(){
 		$('#form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
 		$('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
+	}
+
+	function showSigningIn(){
+		$('#form').html('<div class="hero-unit signin"><p>(signing you in...)</p></div>');
 	}
 
 	function showLoading(){
