@@ -89,9 +89,12 @@ $(document).ready(function(){
         '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
 
         '<label for="topics">Topic</label>' +
-
-'          <input type="text" name="topic" data-provide="typeahead" autocomplete="off" data-source='
-               +JSON.stringify(topics).replace('"', '\"')+'>' +
+'          <select id="topics" name="topic">' +
+'            <option>Select a topic</option>' +
+'            <option>'+
+  topics.join('</option><option>')+
+'            </option>' +
+'          </select>' +
 
         '</fieldset>' +
         '<div class="form-actions">' +
