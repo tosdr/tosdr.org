@@ -115,7 +115,8 @@ $(document).ready(function(){
         '<span class="help-user">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></span>' +
             
         '</div>' +
-        '</form>');
+        '</form>' +
+        '<p>Your contribution will be published under <a href="legal.html">a Creative Commons BY-SA license</a>.</p>');
     showServiceFields();
     $('#addServiceField').click(function() {
       numServices++;
