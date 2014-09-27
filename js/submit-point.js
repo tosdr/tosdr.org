@@ -63,7 +63,7 @@ $(document).ready(function(){
   function showServiceFields() {
     var str = '';
     for(var i=0; i<numServices; i++) {
-      str += '          <input type="text" name="service'+i+'" data-provide="typeahead" autocomplete="off" data-source='
+      str += '          <input type="text" id="service'+i+'" data-provide="typeahead" autocomplete="off" data-source='
           +JSON.stringify(services).replace('"', '\"')+'>';
     }
     console.log(str);
@@ -89,7 +89,7 @@ $(document).ready(function(){
         '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
 
         '<label for="topics">Topic</label>' +
-'          <select id="topics" name="topic">' +
+'          <select id="topic">' +
 '            <option>Select a topic</option>' +
 '            <option>'+
   topics.join('</option><option>')+
@@ -118,7 +118,7 @@ $(document).ready(function(){
     });
 
     $('.submitForm').submit(function(e){
-      var response = $.ajax(postPointUrl, {data: {title: $('#titleField').val(), point: $('input[name=point]:checked', '.submitForm').val(), services: $('#servicesField').val(), summary: $('#summaryField').val()}, type: 'POST', xhrFields: {withCredentials: true}});
+      var response = $.ajax(postPointUrl, {data: {title: $('#titleField').val(), point: $('input[name=point]:checked', '.submitForm').val(), services: $('#service0').val(), topic: $('#topic').val(), summary: $('#summaryField').val()}, type: 'POST', xhrFields: {withCredentials: true}});
       response.done(showConfirmation);
       response.fail(showError);
       e.preventDefault();
