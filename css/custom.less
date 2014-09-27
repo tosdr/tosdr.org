@@ -465,25 +465,72 @@ img.avatar {
 
 /*ToSDR form*/
 
-#submit-point-form {
-    min-height: 400px;
+.tosdr-form {
+    legend {
+        margin-top:2em;
+    }
+    label {
+        margin-top: 1em;
+    }
+    .btn-inline {
+        margin-top: 0.25em;
+    }
 }
 
-.tosdr-form legend {
-margin-top:2em;
+.tosdr-form .wait p {
+    margin: auto;
+    background: url('/img/loading.gif') bottom center no-repeat;
+    min-width: 32px;
+    min-height: 60px;
 }
-
-#submit-point-form .hero-unit {
-    text-align: center;
-    background: transparent;
-}
-
-.tosdr-form .hero-unit.wait-loading {
-    /*TODO do not show text and have a nice loading gif instead*/
+.tosdr-form .wait.loading {
+    color: transparent;
 }
 
 .tosdr-form .form-actions .help-user {
     padding: 0.5em 1em;
+}
+
+
+#submit-point-form {
+    min-height: 400px;
+
+    .hero-unit {
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #titleField {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+
+        @media (min-width: 450px) {
+            width: 400px;
+        }
+    }
+
+    #summaryField {
+        min-height: 100px;
+    }
+    
+    .radio.inline {
+        font-weight: 500;
+    }
+
+    .radio.good {
+        color: #79B752;
+    }
+    .radio.neutral {
+        color: #999999;
+    }
+    .radio.bad {
+        color: #D66F2C;
+    }
+    .radio.blocker {
+        color: #C43C35;
+    }
+
 }
 
 /*Blog*/

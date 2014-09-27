@@ -44,16 +44,16 @@ $(document).ready(function(){
   });
 
   function showPersona(){
-    $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
+    $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in with your email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
     $('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
   }
 
   function showSigningIn(){
-    $('#submit-point-form').html('<div class="hero-unit signin"><p>(signing you in...)</p></div>');
+    $('#submit-point-form').html('<div class="hero-unit wait signin"><p>signing you in...</p></div>');
   }
 
   function showLoading(){
-    $('#submit-point-form').html('<div  class="wait-loading hero-unit"><p>(loading...)</p></div>');
+    $('#submit-point-form').html('<div class="wait loading hero-unit"><p>loading...</p></div>');
   }
 
   // This is ugly, too much html here
@@ -78,13 +78,18 @@ $(document).ready(function(){
 
         '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
+        '<label class="radio inline good"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline neutral"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline bad"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline blocker"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
+
+        '<label for="summary">Please summarise this clause <a href="#FIXME" target="_blank" class="markdownparser hidden until the feature is made">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="What the clause in the terms does. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
+
+        '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
 '          <label id="services">Service(s) to which the point applies</label>' +
 '                                       <span id="serviceFields"></span>' +
 '          <button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
 '<!--          You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
-        '<label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
+        '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
 
         '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
 
@@ -93,8 +98,6 @@ $(document).ready(function(){
 '            <option>Scope of the copyright license</option>' +
 '            <option>Changes</option>' +
 '          </select>' +
-
-        '<label for="summary">Can you summarise this clause? <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="This is the summary, the recap of what the clause in the terms do. It is usually a very difficult exercise. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
         '</fieldset>' +
         '<div class="form-actions">' +
