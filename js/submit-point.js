@@ -58,7 +58,7 @@ $(document).ready(function(){
 	}
 
 	function showLoading(){
-		$('#form').html('<p>(loading...)</p>');
+		$('#form').html('<p class="wait-loading">(loading...)</p>');
 	}
 
 				// This is ugly, too much html here
@@ -70,8 +70,6 @@ $(document).ready(function(){
                             '' +
                             '<fieldset>' +
                                 '<legend>Submit a point about a clause</legend>' +
-                                
-                                '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
                         
                                 '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
@@ -97,6 +95,8 @@ $(document).ready(function(){
 														'</fieldset>' +
 														'<div class="form-actions">' +
 																'<button class="btn btn-primary" id="postPoint">Send</button>' +
+                                
+                    '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
 														'</div>' +
 												'</form>');
 		showServiceFields();
