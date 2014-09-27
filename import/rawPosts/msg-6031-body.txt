@@ -1,0 +1,122 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBWN3VSHAKGQEPXLDXDQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7E030161757
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:59:09 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7AF1211649F
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:59:09 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id cmRVwxdSAmGz for <anything@michielbdejong.com>;
+	Wed, 26 Jun 2013 18:59:07 +0200 (CEST)
+Received: from mail-wi0-x23b.google.com (mail-wi0-x23b.google.com [IPv6:2a00:1450:400c:c05::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5EA85116538
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 18:59:07 +0200 (CEST)
+Received: by mail-wi0-f187.google.com with SMTP id hn3sf444011wib.24
+        for <anything@michielbdejong.com>; Wed, 26 Jun 2013 09:59:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:cc:subject:message-id
+         :mail-followup-to:references:mime-version:content-type
+         :content-disposition:in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=tN6RhnpOTvfirHY86hLngksUvHgy0+B1a4tQA4AC/L0=;
+        b=Kfg5qzqhrzksY45eX7eSL4/XsCPI2BVITjCTa940RmiK5wCQkvWXGTF6oM50z2ZXFa
+         wF1Tgs7dZcaay511Hmjx5k0YBVAXhHWKqRsJ2mRNVBY24nJTD5uHDELYdQp8bNoYzSLt
+         96X8QT6v759p91BzEJEZPY4UzASTIeiDBtStaDXro6LgXh1elyVrGffTe8TtEmmJs7Qy
+         bt1ljt19bv5tv+xX7utV2kFw16N8i6nwHrcQCfot4YlUh1DsXTWtzz4gNlXVLlocMfFu
+         9uyYW/m1Zn110+Z4Wus7XS6iFxMA7N8HgPpx6MzeP0mHwFoZui0NS3pfdJMs8OODykVx
+         VtsQ==
+X-Received: by 10.181.12.19 with SMTP id em19mr610358wid.13.1372265946207;
+        Wed, 26 Jun 2013 09:59:06 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.183.137 with SMTP id em9ls700837wic.45.canary; Wed, 26 Jun
+ 2013 09:59:05 -0700 (PDT)
+X-Received: by 10.15.10.130 with SMTP id g2mr4433189eet.2.1372265945005;
+        Wed, 26 Jun 2013 09:59:05 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id ci6si5313784eeb.1.2013.06.26.09.59.04
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 26 Jun 2013 09:59:05 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4705E63B588;
+	Wed, 26 Jun 2013 18:58:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id nInScodOwJIN; Wed, 26 Jun 2013 18:58:55 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id CF97963B563;
+	Wed, 26 Jun 2013 18:58:54 +0200 (CEST)
+Date: Wed, 26 Jun 2013 18:58:53 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Cc: =?iso-8859-1?Q?Sebasti=E1n?= Waisbrot <seppo0010@gmail.com>
+Subject: Re: [tosdr:2390] [Bad] Amazon tracks you
+Message-ID: <20130626165853.GB16369@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com,
+	=?iso-8859-1?Q?Sebasti=E1n?= Waisbrot <seppo0010@gmail.com>
+References: <9b3059b2-4af3-41f2-bd83-6ba8e1d2dcf1@googlegroups.com>
+ <20130522221034.GF23285@synclavier.ampoliros.net>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="RASg3xLB4tUQ4RcS"
+Content-Disposition: inline
+In-Reply-To: <20130522221034.GF23285@synclavier.ampoliros.net>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--RASg3xLB4tUQ4RcS
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+I don't find any information about the purpose or for how long
+they keep that either.
+
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--RASg3xLB4tUQ4RcS
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRyx3NAAoJEI0CLJmz17eV1m8IANs+CayxWI+4SydRTYQahcNq
+dY9pNpGYcxvXQ3/mZuvPs1rWbemvHMRSwzGIZJEADeu5ZHO9xFglqi7pA7iwkZ0A
+mc52nUeDD1ldA+pRJ6atjcRxhWx7jhMGoJu5QG1T4cFo6XJBC1RgNWwomXuuf9F5
+1TqtrtHa9defmDZeot8uJ0YqbkcYyD/zlyQ6DL3AVxgcimLGGnlS14nEVqP7OMV4
+1LNT77/2y4snOWfaziNMKQE7GQ/psnIkAlXds1igUIYAcWn+Bv2oLDXoGgi3lKTu
+sNELpVrp2XVEOnZv8kMrwlKwhSomSyNAOvMPjlDqtd+1RuMb9IfMOMxMH8B7Uzs=
+=xAdQ
+-----END PGP SIGNATURE-----
+
+--RASg3xLB4tUQ4RcS--

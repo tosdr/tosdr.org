@@ -1,0 +1,178 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBB4H36CHAKGQEUZDDN2Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A93DC161740
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 18:44:35 +0200 (CEST)
+Received: from mfilter9-d.gandi.net (mfilter9-d.gandi.net [217.70.178.138])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9DB0414221E
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 18:44:35 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter9-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter9-d.gandi.net (mfilter9-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HOLa38cKl3b4 for <anything@michielbdejong.com>;
+	Tue,  9 Jul 2013 18:44:34 +0200 (CEST)
+Received: from mail-vb0-x23a.google.com (mail-vb0-x23a.google.com [IPv6:2607:f8b0:400c:c02::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 83D9D1421B3
+	for <anything@michielbdejong.com>; Tue,  9 Jul 2013 18:44:33 +0200 (CEST)
+Received: by mail-vb0-f58.google.com with SMTP id p12sf1844259vbe.3
+        for <anything@michielbdejong.com>; Tue, 09 Jul 2013 09:44:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=oTf0eQFCdXFF666IoyyzcAqfYa2wwQA6fMda38+wwjw=;
+        b=DyYbwzFtGxXVNfNKMtpWNswyU1ukfWsWqWmkJv4VEr5qk2zJTADfQ3WrIRs7IXb4su
+         UPryUDblsSkOhEjRtMmuP+lxpxUNHcitR0qyNZdT5WSulAwZz5x+ew6T6GS1vshb+Qe9
+         nQq9l5pd+bJYXmvtZelvBo5Trdc/DD3djfJ9QzbMp8ttFTXvgDH34P/Nfewt4m9frNgg
+         FPSOiy1VIqHmovUBO1guc/trvqPNDIwBkxd2U09lzrtjk4kMYT4Cyqqf9rzp7fQ20fWa
+         EE8/cJKn+DfZNedmY7qdFQGNqY+FCEToaTxWHGR9Db+fkcKkZggMCzlAevPbj5gCKoq7
+         pp+A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=oTf0eQFCdXFF666IoyyzcAqfYa2wwQA6fMda38+wwjw=;
+        b=HlB/lMgAAomhbyzs26VgrZ23mBmsneevEcFgogtyFjifZ+Jgn1FOSZwXYD2ySpX2m9
+         3vm0x5xEk0kY7xBL//0NuOd/ZAi7nLhvLPtcVge/gJyvOfDpPvxolMXS0ygNfGwlzTma
+         S/jK1b/ha8URrWmvG6r5XIsAlofHNu2z5Ag41OYdaBHRUGp/x6jKGKj7gC1ESFS2tH8T
+         O1vhbwvWzxny/h0KDBABKXUTtuekn7MLA5HgPW+LEgjxskjwWP2Qfu0FJtuPY4hAo415
+         v8ncAspfJr0xqbp3YVSKIrDLSaWCX9ROFp05+Z702f7BpxGw3MMbtRxX+iaQz9Jlrx6B
+         Jffg==
+X-Received: by 10.49.4.201 with SMTP id m9mr784105qem.15.1373388272289;
+        Tue, 09 Jul 2013 09:44:32 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.74.34 with SMTP id q2ls2225852qev.66.gmail; Tue, 09 Jul
+ 2013 09:44:32 -0700 (PDT)
+X-Received: by 10.49.30.105 with SMTP id r9mr759402qeh.4.1373388271997;
+        Tue, 09 Jul 2013 09:44:31 -0700 (PDT)
+Date: Tue, 9 Jul 2013 09:44:31 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <37456bd1-cbb2-469e-a9d2-ed34e4319f56@googlegroups.com>
+In-Reply-To: <8c59c49a-d937-4403-b940-99b04ec6ee2d@googlegroups.com>
+References: <8c59c49a-d937-4403-b940-99b04ec6ee2d@googlegroups.com>
+Subject: [tosdr:2483] Re: Tumblr Limitation of Liability
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7590_21896322.1373388271709"
+
+------=_Part_7590_21896322.1373388271709
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title: Tumblr limits liability 
+
+Topic: governance
+
+Summary: You can't hold Tumblr liable for damages of any kind, or loss of 
+profits, revenue, or data.
+
+Score: 10 (mediocre)  
+
+On Wednesday, May 8, 2013 6:15:00 AM UTC-5, Ian McGowan wrote:
+>
+> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TUMBLR, ITS DIRECTORS, 
+>> OFFICERS, SHAREHOLDERS, EMPLOYEES, REPRESENTATIVES, CONSULTANTS, AGENTS, 
+>> SUPPLIERS, AND/OR DISTRIBUTORS SHALL NOT BE LIABLE FOR: (A) ANY INDIRECT, 
+>> INCIDENTAL, EXEMPLARY PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND 
+>> WHATSOEVER; (B) LOSS OF: PROFITS, REVENUE, DATA, USE, GOOD-WILL, OR OTHER 
+>> INTANGIBLE LOSSES; (C) DAMAGES RELATING TO YOUR ACCESS TO, USE OF, OR 
+>> INABILITY TO ACCESS OR USE THE SERVICES; (D) DAMAGES RELATING TO ANY 
+>> CONDUCT OR CONTENT OF ANY THIRD PARTY OR SUBSCRIBER USING THE SERVICES, 
+>> INCLUDING WITHOUT LIMITATION, DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OR 
+>> CONTENT; AND/OR (E) DAMAGES IN ANY MANNER RELATING TO ANY CONTENT.
+>
+>
+> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE TOTAL LIABILITY OF 
+>> TUMBLR AND ITS DIRECTORS, OFFICERS, SHAREHOLDERS, EMPLOYEES, 
+>> REPRESENTATIVES, CONSULTANTS, AGENTS, SUPPLIERS, AND/OR DISTRIBUTORS, FOR 
+>> ANY CLAIM UNDER THIS AGREEMENT, INCLUDING FOR ANY IMPLIED WARRANTIES, IS 
+>> LIMITED TO THE GREATER OF FIFTY DOLLARS (US$50.00) OR THE AMOUNT YOU PAID 
+>> US TO USE THE APPLICABLE SERVICE(S).
+>
+>
+> http://www.tumblr.com/policy/en/terms_of_service 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_7590_21896322.1373388271709
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Tumblr limits liability&nbsp;<div><br></div><div>Topic: governance</=
+div><div><br></div><div>Summary: You can't hold Tumblr liable for damages o=
+f any kind, or loss of profits, revenue, or data.</div><div><br></div><div>=
+Score: 10 (mediocre) &nbsp;<br><br>On Wednesday, May 8, 2013 6:15:00 AM UTC=
+-5, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;=
+margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-wid=
+th:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-l=
+eft:1ex"><span style=3D"color:rgb(68,68,68);font-family:'Helvetica Neue',He=
+lvetica,sans-serif;font-size:15px;line-height:22px;text-transform:uppercase=
+">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TUMBLR, ITS DIRECTORS,=
+ OFFICERS, SHAREHOLDERS, EMPLOYEES, REPRESENTATIVES, CONSULTANTS, AGENTS, S=
+UPPLIERS, AND/OR DISTRIBUTORS SHALL NOT BE LIABLE FOR: (A) ANY INDIRECT, IN=
+CIDENTAL, EXEMPLARY PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEV=
+ER; (B) LOSS OF: PROFITS, REVENUE, DATA, USE, GOOD-WILL, OR OTHER INTANGIBL=
+E LOSSES; (C) DAMAGES RELATING TO YOUR ACCESS TO, USE OF, OR INABILITY TO A=
+CCESS OR USE THE SERVICES; (D) DAMAGES RELATING TO ANY CONDUCT OR CONTENT O=
+F ANY THIRD PARTY OR SUBSCRIBER USING THE SERVICES, INCLUDING WITHOUT LIMIT=
+ATION, DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OR CONTENT; AND/OR (E) DAMA=
+GES IN ANY MANNER RELATING TO ANY CONTENT.</span></blockquote><div><br></di=
+v><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;borde=
+r-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid=
+;padding-left:1ex"><span style=3D"color:rgb(68,68,68);font-family:'Helvetic=
+a Neue',Helvetica,sans-serif;font-size:15px;line-height:22px;text-transform=
+:uppercase">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE TOTAL LI=
+ABILITY OF TUMBLR AND ITS DIRECTORS, OFFICERS, SHAREHOLDERS, EMPLOYEES, REP=
+RESENTATIVES, CONSULTANTS, AGENTS, SUPPLIERS, AND/OR DISTRIBUTORS, FOR ANY =
+CLAIM UNDER THIS AGREEMENT, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITE=
+D TO THE GREATER OF FIFTY DOLLARS (US$50.00) OR THE AMOUNT YOU PAID US TO U=
+SE THE APPLICABLE SERVICE(S).</span></blockquote><div><br></div><div><a hre=
+f=3D"http://www.tumblr.com/policy/en/terms_of_service" target=3D"_blank">ht=
+tp://www.tumblr.com/policy/<wbr>en/terms_of_service</a>&nbsp;</div></blockq=
+uote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_7590_21896322.1373388271709--

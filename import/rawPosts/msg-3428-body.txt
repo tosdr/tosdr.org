@@ -1,0 +1,159 @@
+Return-Path: <tosdr+bncBDFPVJU7ZMJRB2GLXWGAKGQEVUZBEQQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7AC64161735
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 11:50:35 +0200 (CEST)
+Received: from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 775AE14208D
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 11:50:35 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter12-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nqDmpukJpNR2 for <anything@michielbdejong.com>;
+	Sun, 12 May 2013 11:50:34 +0200 (CEST)
+Received: from mail-wi0-x239.google.com (mail-wi0-x239.google.com [IPv6:2a00:1450:400c:c05::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C724A142088
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 11:50:33 +0200 (CEST)
+Received: by mail-wi0-f185.google.com with SMTP id hr7sf382048wib.22
+        for <anything@michielbdejong.com>; Sun, 12 May 2013 02:50:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:mime-version
+         :x-received:sender:in-reply-to:references:date:message-id:subject
+         :from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=xdg3wMy7dnF4PlwbZc6OrbSWZGCXKO8KH6DmqFSnwc8=;
+        b=zGic1+Z26P30UGWM3yeQLPk7XvxgoXed9biScB1BCLCmw+WkpxwIA4SlccphLMZOyM
+         My7Wa9j5hbY+Ind0NiMl9hshjfsA1UbFbNkGY6jmmrsCKGR3QPcb0+KCP+asgZZ/7MOm
+         I69uAwChTMQmarbyRKzlgJHaGB/ZZlC4moQCtX3TINGdUVKSY8WuP2/b/2+Jf+JtBCzF
+         1bLj9qFxhSHlfTEiy2B2ZC3ceiUB+q5Tef3y8nqZVbCCxHykpFNG9kvh6rWZMUNJg4kv
+         hNRfTvyQJZ+PGVosuRSNkDnPK4uhs2/vQEvOyQKejB6USr7BCIcFyEN1HPHlo+qtkkU4
+         xbQw==
+X-Received: by 10.180.78.105 with SMTP id a9mr623391wix.2.1368352232748;
+        Sun, 12 May 2013 02:50:32 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.107.10 with SMTP id gy10ls24149wib.9.gmail; Sun, 12 May
+ 2013 02:50:32 -0700 (PDT)
+X-Received: by 10.204.228.202 with SMTP id jf10mr3992287bkb.2.1368352232134;
+        Sun, 12 May 2013 02:50:32 -0700 (PDT)
+Received: from mail-la0-x232.google.com (mail-la0-x232.google.com [2a00:1450:4010:c03::232])
+        by gmr-mx.google.com with ESMTPS id jh7si673897bkb.3.2013.05.12.02.50.32
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sun, 12 May 2013 02:50:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suzanne.azmayesh@gmail.com designates 2a00:1450:4010:c03::232 as permitted sender) client-ip=2a00:1450:4010:c03::232;
+Received: by mail-la0-f50.google.com with SMTP id dz20so1348105lab.23
+        for <tosdr@googlegroups.com>; Sun, 12 May 2013 02:50:31 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.152.120.231 with SMTP id lf7mr10892642lab.40.1368352231784;
+ Sun, 12 May 2013 02:50:31 -0700 (PDT)
+Sender: tosdr@googlegroups.com
+Received: by 10.114.177.97 with HTTP; Sun, 12 May 2013 02:50:31 -0700 (PDT)
+In-Reply-To: <CADNfgRf4-wkrVL7zMn1sTs7tCxwcw0kTCweXkLyXFKVoLO10+w@mail.gmail.com>
+References: <CADNfgRf4-wkrVL7zMn1sTs7tCxwcw0kTCweXkLyXFKVoLO10+w@mail.gmail.com>
+Date: Sun, 12 May 2013 11:50:31 +0200
+Message-ID: <CADNfgRdZ7KaEJnTQ_nBXWpzfcuvm=_D_i1ZRx7+1+DD1oOqoug@mail.gmail.com>
+Subject: [tosdr:2080] Re: Prescription on youtube?
+From: Suzanne Azmayesh <suzanne@azmayesh.fr>
+To: tosdr@googlegroups.com
+X-Original-Sender: suzanne@azmayesh.fr
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of suzanne.azmayesh@gmail.com designates
+ 2a00:1450:4010:c03::232 as permitted sender) smtp.mail=suzanne.azmayesh@gmail.com;
+       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=089e0122aefeb4078304dc8254fe
+
+--089e0122aefeb4078304dc8254fe
+Content-Type: text/plain; charset=ISO-8859-1
+
+Title : You are limited in your possibilities to start an action against
+Youtube
+
+Topic : User choice
+
+Summary : Any action against Youtube must begin within one year after the
+cause of action accrues. If not, the cause of the action is considered as
+permanently barred.
+
+Score : Mediocre, 20
+
+
+2013/5/7 Suzanne Azmayesh <suzanne@azmayesh.fr>
+
+> YOU AND YOUTUBE AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED
+> TO THE SERVICES  *MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF
+> ACTION ACCRUES*. OTHERWISE, SUCH CAUSE OF ACTION IS *PERMANENTLY BARRED*.
+>
+>
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--089e0122aefeb4078304dc8254fe
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Title : You are limited in your possibilities to start an =
+action against Youtube<div><br></div><div style>Topic : User choice</div><d=
+iv style><br></div><div style>Summary : Any action against Youtube must beg=
+in within one year after the cause of action accrues. If not, the cause of =
+the action is considered as permanently barred.=A0</div>
+<div style><br></div><div style>Score : Mediocre, 20</div></div><div class=
+=3D"gmail_extra"><br><br><div class=3D"gmail_quote">2013/5/7 Suzanne Azmaye=
+sh <span dir=3D"ltr">&lt;<a href=3D"mailto:suzanne@azmayesh.fr" target=3D"_=
+blank">suzanne@azmayesh.fr</a>&gt;</span><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr"><p style=3D"margin:0px 0px =
+14.1px;font-size:24px;font-family:Helvetica;color:rgb(255,255,255)"></p><p =
+style=3D"margin:0px 0px 14.1px;font-size:18px;font-family:Arial;color:rgb(5=
+1,50,51)">
+YOU AND YOUTUBE AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO=
+ THE SERVICES=A0 <b>MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF AC=
+TION ACCRUES</b>. OTHERWISE, SUCH CAUSE OF ACTION IS <span style=3D"text-de=
+coration:underline"><b><i>PERMANENTLY BARRED</i></b></span>.=A0</p>
+
+<p style=3D"margin:0px 0px 14.1px;font-size:18px;font-family:Arial;color:rg=
+b(51,50,51)"><br></p><p style=3D"margin:0px 0px 14.1px;font-size:18px;font-=
+family:Arial;color:rgb(51,50,51)"><br></p><p></p></div>
+</blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--089e0122aefeb4078304dc8254fe--

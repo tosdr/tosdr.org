@@ -1,0 +1,135 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBEGI5KGAKGQEMQU4UIA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id E3554161740
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:46 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DF55F1780BE
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Y7h9TD6A0MAn for <anything@michielbdejong.com>;
+	Tue, 21 May 2013 00:30:45 +0200 (CEST)
+Received: from mail-fa0-x239.google.com (mail-fa0-x239.google.com [IPv6:2a00:1450:4001:c02::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 045021780AF
+	for <anything@michielbdejong.com>; Tue, 21 May 2013 00:30:41 +0200 (CEST)
+Received: by mail-fa0-f57.google.com with SMTP id m1sf666509fam.12
+        for <anything@michielbdejong.com>; Mon, 20 May 2013 15:30:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:x-virus-scanned:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-disposition
+         :content-transfer-encoding;
+        bh=gW5M+GOq4i5psPkObfLaXQTvaFyHQ5tXGgfp1jZfP9M=;
+        b=LFBK3F5PpEJy4Ly4tXSUK1cHfyFyLe5WmxR1gqp4n4YeW7tZeZAjfkU4VaDIRxF440
+         QOcWY15H7Vieexj/1H6j21MNg+BdCG7f9t1p6s4zdMMSmFDFeehkWPibjunCEj6WM6jf
+         Gchdy6pF11kS96O4zX7auvhQJUdDbpUYQ1NuDuJdU454eEdXCi4Uc5PbgLkNqrM13REG
+         nRP0RQOietTRcVYW1RlYw7HBRfy1NYV4cFaCXFqaUcctgQFqlJZuYyHuJtUAHilKUjUH
+         FKeRXDhj31hvTeJVcsHbMMOGSYlm0LeSVOL6FPF1CHoH5LgM2FaxdqMUiZoFV6fSXEX6
+         sveg==
+X-Received: by 10.180.96.193 with SMTP id du1mr776175wib.7.1369089040660;
+        Mon, 20 May 2013 15:30:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.83.6 with SMTP id m6ls820221wiy.23.canary; Mon, 20 May
+ 2013 15:30:40 -0700 (PDT)
+X-Received: by 10.15.100.195 with SMTP id bn43mr61786930eeb.0.1369089040070;
+        Mon, 20 May 2013 15:30:40 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id bj52si7229023eeb.1.2013.05.20.15.30.40
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 20 May 2013 15:30:40 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 078C663B683
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 00:30:37 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ii9NNrHC55TJ for <tosdr@googlegroups.com>;
+	Tue, 21 May 2013 00:30:25 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DEB2263B4CB
+	for <tosdr@googlegroups.com>; Tue, 21 May 2013 00:30:24 +0200 (CEST)
+Date: Tue, 21 May 2013 00:30:22 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2160] Fwd: Facebook stores your data
+Message-ID: <20130520223022.GC3759@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <CADNfgRc19fxxkQJ0nm7DjqmgPozmfHQVrnhr7MrBx9XAEnxPdA@mail.gmail.com>
+ <CADNfgRdSVyqUsxkev+z68u=Jq=a88RqraWpcP0Eas3F8YC+g-w@mail.gmail.com>
+MIME-Version: 1.0
+In-Reply-To: <CADNfgRdSVyqUsxkev+z68u=Jq=a88RqraWpcP0Eas3F8YC+g-w@mail.gmail.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Le dim. 19/05/13, 11:53, Suzanne Azmayesh <suzanne@azmayesh.fr>:
+> Title : Facebook stores your data
+>=20
+> Topic : Personal data
+>=20
+> Summary : The data are stored as long as it is necessary according to
+> Facebook, until the account is deleted. Nevertheless, for certain
+> categories of data that are not specified, Facebook tells about some
+> specific data retention practices.
+>=20
+> Score suggested : mediocre, 20?
+>=20
+> Quotation from the site :
+> We store data for as long as it is necessary to provide products and
+> services to you and others, including those described above. Typically,
+> information associated with your account will be kept until your account =
+is
+> deleted. For certain categories of data, we may also tell you about
+> specific data retention practices.
+
+So, what's the concern here exactly? It seems normal that Facebook
+would host your data when you use their service especially since
+they do it =93for as long as it is necessary to provide products and
+services to you and others=94
+
+The problematic bit can be "and others". We need to research this
+further.
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,130 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB3PUUWHAKGQEBNOYSFY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 4643B16174D
+	for <anything@michielbdejong.com>; Tue, 25 Jun 2013 13:10:10 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 436431163FF
+	for <anything@michielbdejong.com>; Tue, 25 Jun 2013 13:10:10 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id j9NhqToHcHcU for <anything@michielbdejong.com>;
+	Tue, 25 Jun 2013 13:09:38 +0200 (CEST)
+Received: from mail-ea0-x23f.google.com (mail-ea0-x23f.google.com [IPv6:2a00:1450:4013:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 760D3116402
+	for <michiel@michielbdejong.com>; Tue, 25 Jun 2013 13:09:35 +0200 (CEST)
+Received: by mail-ea0-f191.google.com with SMTP id l15sf2094749eak.18
+        for <michiel@michielbdejong.com>; Tue, 25 Jun 2013 04:09:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:content-type
+         :content-disposition:in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=tJWK1HzgMMh0JSMys/csDmiQ1e5fEiwJveyhlyu51/U=;
+        b=FltTWQfiB4eZnpgPqz3oy8N6FTwKGVGEgY0NSNVe9CKjVw5m1A2agWksKFPnVN9s1v
+         7DEUXLwg15ahHrj0cd5eHyGipPWE2pFb+YL7fI3t9nWDfb5tQdY9OkBEqssoL1TRZ9Ul
+         Ts62ty5K9celn01lb3JDAGdJAsCRinyq7kj/tgIIspay/ruUfzdPffLjSUFTrU05ak6K
+         TeXSNEElBQZolinCfp2RmhaASP4kJf+vYwKnUkHpRdlqF2jtVNb6h8HICplZL163XHCS
+         3hHmAJeYigifz3crkB4g3EM6/uykhgJFudnmEYFWL05cGnEA5/n6hMKSS33anAe/XjQf
+         lj+Q==
+X-Received: by 10.180.211.6 with SMTP id my6mr391396wic.1.1372158574247;
+        Tue, 25 Jun 2013 04:09:34 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.79.5 with SMTP id f5ls1058384wix.36.gmail; Tue, 25 Jun
+ 2013 04:09:33 -0700 (PDT)
+X-Received: by 10.15.35.194 with SMTP id g42mr34889991eev.4.1372158573695;
+        Tue, 25 Jun 2013 04:09:33 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id bk51si4152435eeb.0.2013.06.25.04.09.33
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 25 Jun 2013 04:09:33 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 6910463A5E5
+	for <tosdr@googlegroups.com>; Tue, 25 Jun 2013 13:09:33 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id VPBtUuwnueEh for <tosdr@googlegroups.com>;
+	Tue, 25 Jun 2013 13:09:21 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 6847263A5CF
+	for <tosdr@googlegroups.com>; Tue, 25 Jun 2013 13:09:21 +0200 (CEST)
+Date: Tue, 25 Jun 2013 13:09:20 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2335] transparency reports
+Message-ID: <20130625110920.GI23321@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <2616cf8bffbca244140804a7c6ae0779@michielbdejong.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="Kc9HNjpzOXVc7FFU"
+Content-Disposition: inline
+In-Reply-To: <2616cf8bffbca244140804a7c6ae0779@michielbdejong.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--Kc9HNjpzOXVc7FFU
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
++ 2013-03-10 Sun 16:01, Michiel B. de Jong <anything@michielbdejong.com>:
+
+> "Google has provided the reports since 2010. Since then, Twitter and
+> LinkedIn, among others, have moved toward offering regular reports
+> -- but not Microsoft."
+>=20
+> http://www.deccanherald.com/content/316250/microsoft-inherits-sticky-data=
+-issues.html
+>=20
+> something we should reflect in our reviews of all of the services
+> mentioned there, probably.
+
+I am not sure whether we should focus on that or not.
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--Kc9HNjpzOXVc7FFU
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRyXpgAAoJEI0CLJmz17eVQJMIAJdeRsOWveaRaLT4JhMYHUng
+VGN+NBwjUq5uuYkzYSsq831de38vKbfzpuraHrdD+G88pRhcqo9F6n3IaPiVch2Y
+M7O6X6ciY/1OfD9VUJRZ0ZRcNtwS3e/Pn5SVLufRXmU0q2h1peLscdM1yoW0OMuZ
+vL3vD1IY+Qf8HWcjwYHWpL97ehgEbg/ZHAacrs/3yM7zqcFxtCfnjDqQB4SGqaxx
+pIYyzHYV7RRS5yPyhdVIx+ZcizRqRe3JO6Mwkhg7ayE/V9SWkwS8p+49vl2waa03
+GHtJSG36nc94CvHb+hv2uGKxOUj66rEGQMULvkgpMH1UdbizH7StgxMbcHD098Y=
+=4kb5
+-----END PGP SIGNATURE-----
+
+--Kc9HNjpzOXVc7FFU--

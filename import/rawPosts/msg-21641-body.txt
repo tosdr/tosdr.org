@@ -1,0 +1,104 @@
+Return-Path: <tosdr+bncBC36PSWWREARBQ4HYKPAKGQEKY3GCWQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id F143640F78
+	for <anything@michielbdejong.com>; Thu, 24 Jul 2014 05:55:50 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EF1BD178083
+	for <anything@michielbdejong.com>; Thu, 24 Jul 2014 05:55:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id lqhyZtBfVdCu for <anything@michielbdejong.com>;
+	Thu, 24 Jul 2014 05:55:49 +0200 (CEST)
+Received: from mail-vc0-x240.google.com (mail-vc0-x240.google.com [IPv6:2607:f8b0:400c:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 21964178086
+	for <michiel@michielbdejong.com>; Thu, 24 Jul 2014 05:55:49 +0200 (CEST)
+Received: by mail-vc0-f192.google.com with SMTP id hu12sf588757vcb.29
+        for <michiel@michielbdejong.com>; Wed, 23 Jul 2014 20:55:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=92vFkKCwlDOhowx19A/t1vFKLF7mXmdFAJpVCheINlQ=;
+        b=Ed3x4ZOtBl1q9T6xHsoegmypN8OJX2csirWXjGzCbVfX9lgZHT5A53p+eY92kU3uhH
+         +kzFy3l/q8fS2llTZbTqirQ+u0Zxef09wd/IVb4KfPh2H62NZ2tcABK9hv18M8XkjfnJ
+         jkIx1rPZ2LJPQFGtZmkDz6HAmsqR/UyFAAnvVZ/BrA66U+0uEQH7PeRqsxGLxQ6XV59B
+         IJTYlR7xpj+rCW+F1lu6XmGQ4R0vH5Gq6C+E2JDhfMHOl2AbdbMtSezmG9LRz+ly/Md7
+         tVmNvGFAhlJsqBzFZuPRjsfzDXqei553rVEm749clzMUfaNKJRzgjYV8nvRG2ORtq5kd
+         0MzQ==
+X-Received: by 10.182.56.228 with SMTP id d4mr46928obq.5.1406174147932;
+        Wed, 23 Jul 2014 20:55:47 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.104.232 with SMTP id gh8ls197415obb.26.gmail; Wed, 23 Jul
+ 2014 20:55:47 -0700 (PDT)
+X-Received: by 10.182.45.161 with SMTP id o1mr3069536obm.2.1406174147283;
+        Wed, 23 Jul 2014 20:55:47 -0700 (PDT)
+Received: from mx1.riseup.net (mx1.riseup.net. [198.252.153.129])
+        by gmr-mx.google.com with ESMTPS id hz3si717348pbb.2.2014.07.23.20.55.47
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 23 Jul 2014 20:55:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of stef20@riseup.net designates 198.252.153.129 as permitted sender) client-ip=198.252.153.129;
+Received: from fruiteater.riseup.net (fruiteater-pn.riseup.net [10.0.1.74])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client CN "*.riseup.net", Issuer "Gandi Standard SSL CA" (not verified))
+	by mx1.riseup.net (Postfix) with ESMTPS id A97875339A
+	for <tosdr@googlegroups.com>; Wed, 23 Jul 2014 20:55:46 -0700 (PDT)
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+	(Authenticated sender: stef20@fruiteater.riseup.net)
+	with ESMTPSA id 47128DAC
+Message-ID: <53D0838C.5000709@riseup.net>
+Date: Wed, 23 Jul 2014 23:54:52 -0400
+From: Stef <stef20@riseup.net>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: [tosdr:3106] OpenStreetMaps
+X-Virus-Scanned: clamav-milter 0.98.1 at mx1
+X-Virus-Status: Clean
+X-Original-Sender: stef20@riseup.net
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of stef20@riseup.net designates 198.252.153.129 as
+ permitted sender) smtp.mail=stef20@riseup.net;       dkim=pass (test mode) header.i=@riseup.net
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+
+https://wiki.openstreetmap.org/wiki/Privacy_Policy
+
+Good points:
+
+- Don't share your email address with third party and don't show your 
+adress to the public.
+
+- Protect the personal data
+
+- I not dectect cookies (need verify for sure)
+
+- All the data are on creative common licence
+    (Creative Commons Attribution-ShareAlike 2.0 license)
+
+-- 
+. ><> Stef R. <><
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

@@ -1,0 +1,199 @@
+Return-Path: <tosdr+bncBD6JPR4QZEBRB3V7QKPQKGQECT2FQLI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 5F45340910
+	for <anything@michielbdejong.com>; Tue,  5 Aug 2014 11:12:21 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5D16911602E
+	for <anything@michielbdejong.com>; Tue,  5 Aug 2014 11:12:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id GS8b+iNRcT6B for <anything@michielbdejong.com>;
+	Tue,  5 Aug 2014 11:12:19 +0200 (CEST)
+Received: from mail-yk0-x23e.google.com (mail-yk0-x23e.google.com [IPv6:2607:f8b0:4002:c07::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5D40C116435
+	for <michiel@michielbdejong.com>; Tue,  5 Aug 2014 11:12:16 +0200 (CEST)
+Received: by mail-yk0-f190.google.com with SMTP id 79sf154213ykr.7
+        for <michiel@michielbdejong.com>; Tue, 05 Aug 2014 02:12:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=oElrH7Y1J4q1j7iKjMI9/diQQhpi8buL3iSEKtOAEqw=;
+        b=MuR1S2JKnF5Bm0491NJKA/jLSqQQzaJVt0i70C+cVuapTirgmuG2ojJEdg+Fahb23x
+         gUVz/4bcVi0s+5nYEX+a9T5S/pqrpxLasxZ5CwDYHBQRwdvVRN9A+RIe/g+UB7OnBk6j
+         a7LMGJ3yR6C7sljqyTAuTyBo6z7CLvXDa/UUHTxh0GzibZOUiYEctjl1hen1fHIC7UIg
+         TEBpH3nCfZ3Ai/m0ZXyjNN46k3knc33iKRMEIhiaVwm1b/yapCEIqM8QQ41ueMrUiSYn
+         FhZJR+EzE6YSoE6a5A8zXgAeFzul77dt/hYPFuoHb17ttTlc+bYPxdv3rt6NKfJN3XwD
+         UL1g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=oElrH7Y1J4q1j7iKjMI9/diQQhpi8buL3iSEKtOAEqw=;
+        b=VitBZIxgRXJwPI9U323mpEN7QbZJXjFRRySbOAytz+HE6h7GR7gJ13o+p1CuQtAMZB
+         p8KXN1DijBYJBFSZX9vnfVq5ol9EHm8edLlYZ5FRM2W0+uYcHT31fQh7LRT1FX/NjXU7
+         P1T/S+uLiKNQ7DXS9wfW7EG6Zi+CJBLPVzGKaflvpI/VBlNhVXollEtpXeFuWjiPk8KD
+         nfN1YQ4dYbRRDCLJFG/aKtiZIdV6whoEaDNKqKfU3DKfMWbMpxpPKC7VK2fM9usns3il
+         UW5ywkkayWFOZH+XPvUlpGQ+rp6e7XICpm3z/DOl4u5Wjo4cpQFkP55xVGzyEjnwPeNu
+         SDNA==
+X-Received: by 10.50.73.74 with SMTP id j10mr564451igv.12.1407229935221;
+        Tue, 05 Aug 2014 02:12:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.154.101 with SMTP id vn5ls399194igb.14.gmail; Tue, 05 Aug
+ 2014 02:12:14 -0700 (PDT)
+X-Received: by 10.67.3.225 with SMTP id bz1mr1390057pad.16.1407229934406;
+        Tue, 05 Aug 2014 02:12:14 -0700 (PDT)
+Received: from mail-qa0-f54.google.com (mail-qa0-f54.google.com [209.85.216.54])
+        by gmr-mx.google.com with ESMTPS id w2si136398qcl.3.2014.08.05.02.12.14
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 05 Aug 2014 02:12:14 -0700 (PDT)
+Received-SPF: none (google.com: eliomondello@mondosol.com does not designate permitted sender hosts) client-ip=209.85.216.54;
+Received: by mail-qa0-f54.google.com with SMTP id k15so629653qaq.13
+        for <tosdr@googlegroups.com>; Tue, 05 Aug 2014 02:12:14 -0700 (PDT)
+X-Gm-Message-State: ALoCoQlQUE7q8uGvwm+7SZ07aX0s+bH1z8FPfnijVLHYM2NbHIIZOUsn6GczKpdtQOEc733zPWW5
+MIME-Version: 1.0
+X-Received: by 10.140.19.230 with SMTP id 93mr3273814qgh.46.1407229934108;
+ Tue, 05 Aug 2014 02:12:14 -0700 (PDT)
+Received: by 10.140.85.36 with HTTP; Tue, 5 Aug 2014 02:12:14 -0700 (PDT)
+Date: Tue, 5 Aug 2014 11:12:14 +0200
+Message-ID: <CAGf=qxp-pP8t6OhqXV+FTF64v+N6vKzu2jNZHtc0pNVe=2J98g@mail.gmail.com>
+Subject: [tosdr:3125] How is our terms and condition?
+From: Elio Mondello <eliomondello@mondosol.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: eliomondello@mondosol.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: eliomondello@mondosol.com does not designate permitted sender
+ hosts) smtp.mail=eliomondello@mondosol.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; boundary=001a11355c2e572d0e04ffde40b2
+
+--001a11355c2e572d0e04ffde40b2
+Content-Type: text/plain; charset=UTF-8
+
+Hi
+I have download the plugin on Firefox and writing to you like it says on
+the plugin to ask for your opinion on our tems and condition at this link
+http://www.mondosol.com/terms-privacy/
+
+Many thanks for your help. We wish to have a much better terms and
+condition experience for our users.
+
+Elio Mondello <http://www.eliomondello.com>
+
+Ceo and co-founder of Mondelio <http://www.mondelio.org>& Mondosol
+<http://www.mondosol.com>
+
+
+Book an appointmet
+
+[image: Book an appintment with me] <https://eliomondello.appointlet.com>
+
+Skype: mondosol
+
++44 (0)20 3286 6625 (UK)
++1 (858) 633 0466 (US)
+
+
+*Facebook* <http://www.facebook.com/eliomondelloanza>, *Twitter*
+<http://twitter.com/Mondosol>, *LinkedIn*
+<http://www.linkedin.com/in/eliomondello>, *+Elio
+<https://plus.google.com/u/1/102449641139022188864/about>*
+*YouTube* <http://www.youtube.com/TheMondosol>, *Google+
+<http://plus.google.com/106923620124595038913>*
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a11355c2e572d0e04ffde40b2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div>Hi <br></div>I have download the plugin on Firef=
+ox and writing to you like it says on the plugin to ask for your opinion on=
+ our tems and condition at this link <a href=3D"http://www.mondosol.com/ter=
+ms-privacy/">http://www.mondosol.com/terms-privacy/</a><br>
+<br></div>Many thanks for your help. We wish to have a much better terms an=
+d condition experience for our users.<br clear=3D"all"><div><div><div><div>=
+<div dir=3D"ltr"><span style=3D"font-size:16px"><p style=3D"margin:0px;font=
+-size:13px">
+<font face=3D"Arial, sans-serif"><a href=3D"http://www.eliomondello.com" ta=
+rget=3D"_blank">Elio Mondello</a></font></p><p style=3D"margin:0px;font-siz=
+e:13px"><font face=3D"Arial, sans-serif">Ceo and co-founder of=C2=A0<a href=
+=3D"http://www.mondelio.org" target=3D"_blank">Mondelio </a>&amp;=C2=A0<a h=
+ref=3D"http://www.mondosol.com" target=3D"_blank">Mondosol</a></font></p>
+<p style=3D"margin:0px;font-size:13px"><font face=3D"Arial, sans-serif"><br=
+></font></p><p style=3D"margin:0px;font-size:medium"><font face=3D"Arial, s=
+ans-serif"><span style=3D"font-size:13px"><span style=3D"color:rgb(102,102,=
+153)">Book an appointmet</span></span></font></p>
+<p style=3D"margin:0px;font-size:medium"><font face=3D"Arial, sans-serif"><=
+span style=3D"font-size:13px"><a href=3D"https://eliomondello.appointlet.co=
+m" target=3D"_blank"><span style=3D"color:rgb(102,102,153)"><img alt=3D" Bo=
+ok an appintment with me" src=3D"http://dje0x8zlxc38k.cloudfront.net/button=
+s/booknow-yellow.png"></span></a><br>
+</span></font></p><p style=3D"margin:0px;font-size:medium"><font face=3D"Ar=
+ial, sans-serif"><span style=3D"font-size:13px"><font color=3D"#666699">Sky=
+pe: </font>mondosol</span></font></p><p style=3D"margin:0px;font-size:mediu=
+m"><span style=3D"font-size:13px">+44 (0)20 3286 6625 (UK)</span></p>
+</span>+1 (858) 633 0466 (US)<span style=3D"font-size:16px"><p style=3D"mar=
+gin:0px;font-size:medium"><font face=3D"Arial, sans-serif"><span style=3D"f=
+ont-size:13px"><br></span></font></p><p style=3D"margin:0px;font-size:mediu=
+m"><a href=3D"http://www.facebook.com/eliomondelloanza" style=3D"color:rgb(=
+17,85,204)" target=3D"_blank"><small><b>Facebook</b></small></a>,=C2=A0<a h=
+ref=3D"http://twitter.com/Mondosol" style=3D"color:rgb(17,85,204)" target=
+=3D"_blank"><small><b>Twitter</b></small></a>,=C2=A0<a href=3D"http://www.l=
+inkedin.com/in/eliomondello" style=3D"color:rgb(17,85,204)" target=3D"_blan=
+k"><small><b>LinkedIn</b></small></a>,=C2=A0<b style=3D"color:rgb(17,85,204=
+);font-size:13px"><a href=3D"https://plus.google.com/u/1/102449641139022188=
+864/about" style=3D"color:rgb(17,85,204)" target=3D"_blank">+Elio</a></b><b=
+r>
+<a href=3D"http://www.youtube.com/TheMondosol" style=3D"color:rgb(17,85,204=
+)" target=3D"_blank"><small><b>YouTube</b></small></a>,=C2=A0<small style=
+=3D"color:rgb(17,85,204)"><b><a href=3D"http://plus.google.com/106923620124=
+595038913" style=3D"color:rgb(17,85,204)" target=3D"_blank">Google+</a></b>=
+</small></p>
+<div><small style=3D"color:rgb(17,85,204)"><br></small></div></span></div><=
+/div>
+</div></div></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a11355c2e572d0e04ffde40b2--

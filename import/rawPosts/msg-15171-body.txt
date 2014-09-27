@@ -1,0 +1,111 @@
+Return-Path: <tosdr+bncBCCZL2G36YCRBG7NSCLQKGQEIQEHKAY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 06C5A41431
+	for <anything@michielbdejong.com>; Sat, 25 Jan 2014 23:11:43 +0100 (CET)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 02E1217809E
+	for <anything@michielbdejong.com>; Sat, 25 Jan 2014 23:11:43 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id YO6YTvsjH7TA for <anything@michielbdejong.com>;
+	Sat, 25 Jan 2014 23:11:41 +0100 (CET)
+Received: from mail-ig0-x23e.google.com (mail-ig0-x23e.google.com [IPv6:2607:f8b0:4001:c05::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4D3091780B1
+	for <anything@michielbdejong.com>; Sat, 25 Jan 2014 23:11:41 +0100 (CET)
+Received: by mail-ig0-f190.google.com with SMTP id hl1sf478295igb.7
+        for <anything@michielbdejong.com>; Sat, 25 Jan 2014 14:11:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=m8Rrf0slKPVSvckRsqMQOf1/mJEwIvinRXREvD46QF4=;
+        b=q9L1RFhrLRxKrQ5OYDs8hImCj4WCBaBZBpGmzxr9B9UKYPOHW+DodMFIRuD04DK61I
+         EfxSUOTuKG/SpsVbBezrO0EzXibN4ZILBSHFOxhtCCIOa9cfLoU7sb1wPagxe2sahDME
+         SKtqQrd545MCxeg86M3A2JaRBd8IzKs2m+m6F4Cmr641YtOm6MWA+M6JGRuBEGeVSqSw
+         ifIi9+ypyMOtlhaAbhwnU2fUm2DX1jsTQqdX27pcXPY/dK3mbSh+/b65YTltkgkNIEES
+         fhKk0dgZnux/BUIUUCCbP0HrtFaFpfkHBvLfXi4UTid3A5sfT3CuHNR/4jLmwCsualcg
+         Ezog==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=m8Rrf0slKPVSvckRsqMQOf1/mJEwIvinRXREvD46QF4=;
+        b=hOAXUpauFLQNnv++irmXthrlSRWFHA7CscXPu3KliVnBg3dazrqWJFGSf/7rr3+rzO
+         D2ou1W1v0viPmlBKPf4d4gH9XE6J7i7gXXHWjxHhlR3BeWy6Dd0qQ/AG7IQwOCPVJnUb
+         dFKxTTrdqK3H0z4cPYqzLfmswAqckFfr8NQu5tfcdH3nPlJQRqptnqjnj35RFRm5Y8L6
+         rpCt/MNOL16zCwWf0eOifL/Hp3X9UlEfT3Y/TocPRW7sKj5EXlMIEJ6Bb2rmcBSfITWB
+         NUvEt4UJ1EvLhppvG+qG/ypLZ+PYFWEoXq9RMRoope6Dt6sWfqZT1Dk74j9LdyrH2Eqd
+         ItjQ==
+X-Received: by 10.140.96.37 with SMTP id j34mr4359qge.34.1390687899882;
+        Sat, 25 Jan 2014 14:11:39 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.35.208 with SMTP id n74ls1041580qgn.65.gmail; Sat, 25 Jan
+ 2014 14:11:39 -0800 (PST)
+X-Received: by 10.140.105.54 with SMTP id b51mr6637qgf.29.1390687899680;
+        Sat, 25 Jan 2014 14:11:39 -0800 (PST)
+Date: Sat, 25 Jan 2014 14:11:39 -0800 (PST)
+From: kissaki0@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <485ea1d0-f238-4bc7-be31-f0a309a90bd2@googlegroups.com>
+Subject: [tosdr:2915] Twitch [Info] Ads served by third parties
+MIME-Version: 1.0
+X-Original-Sender: kissaki0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Twitch.tv
+http://www.twitch.tv/user/legal?page=3Dprivacy_policy
+
+> Twitch may allow advertisers, third-party advertising networks and third-=
+party advertising serving companies to serve advertisements directly to you=
+ within the Twitch Service and other Twitch sites, services and software. B=
+y serving these advertisements directly to you, these companies can set the=
+ir own cookies on your computer and trigger their own Web beacons and other=
+ tracking technologies to measure the effectiveness of their advertisements=
+, and to collect and track information such as demographic information, inf=
+erred interests, aggregated information, and activity to assist them in per=
+sonalizing the advertising content delivered to you. Twitch does not provid=
+e your personally identifiable information to these third-party ad servers =
+or ad networks without your consent. However, please note that if an advert=
+iser asks Twitch to show an advertisement to a certain audience (for exampl=
+e, males age 15 to 18) or audience segment (for example, males age 15 to 18=
+ who have participated in certain promotions) and you respond to that adver=
+tisement, the advertiser or ad-server may conclude that you fit the descrip=
+tion of the audience that they were trying to reach.=20
+
+Advertisments can be served through third parties. These third parties do n=
+ot receive data from twitch directly, only the request to serve an advert. =
+These third parties may track you. The request to serve may be targeted to =
+a specific age-group potentially allowing the third party to categorize you=
+.
+
+
+[Good] The description of notice of twitch is very good and specific.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

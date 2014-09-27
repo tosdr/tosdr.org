@@ -1,0 +1,206 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBAV276HQKGQETZ2J74A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 622A7161747
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 19:12:37 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5E5C91783E8
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 19:12:37 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 2gefQLztBEKo for <anything@michielbdejong.com>;
+	Mon,  5 Aug 2013 19:12:35 +0200 (CEST)
+Received: from mail-vb0-x240.google.com (mail-vb0-x240.google.com [IPv6:2607:f8b0:400c:c02::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8DB431787DC
+	for <anything@michielbdejong.com>; Mon,  5 Aug 2013 19:12:35 +0200 (CEST)
+Received: by mail-vb0-f64.google.com with SMTP id p13sf1243699vbe.9
+        for <anything@michielbdejong.com>; Mon, 05 Aug 2013 10:12:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=149EF0HqTNQTYe+Aph8k9THjEtpOwd6SgHCbDNk4Fzk=;
+        b=ySeOzo33sKs9akvNsAv+pmvabNbsMurXf8z/VM56JKRzd2LxQrg+AJwL/rLcnHL1kN
+         K2Y1lDXx1KIZLNsf8rbfc0pRLjXBeK5RD4Oz1co+TweWSrqJddQzlMylEHndj2szI9r9
+         54rL999B0h2pqHTrRHVJrzLzM8BZP8qbHZuQXu3kXuypIbP3LJYKD2Tl8ytE/HEjRPKl
+         UIpWKiD1pkvMtqZYQUr7YclqvuGY5/IYo6moszeHLHPrd664S1qHOHG2Q9XcIPI2+NbT
+         LgzbvGjtXHuIoW9IMpHh6YdjkG6dKJdusaK1mLNKnQAwx+lokZVLIwTUks92MGMj8gNf
+         2BHg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=149EF0HqTNQTYe+Aph8k9THjEtpOwd6SgHCbDNk4Fzk=;
+        b=QvxEnaLyBMome0lDb5itx7KE52C34b5RSU0x8WtzS775mLZTYiesyvYVDI/3IO++RJ
+         84u1syjR+SC9nImgldjsDFcMugi5SOE6VvCQomM/Sq9rzKUNpgktQtPweNAbgOJDRr/M
+         8iSTYA3FwHs6kqdBeEBmMKf3FPU5ablVFeMbLgTsH811vX3t6L6QnJyJob7hru2oihKX
+         2K07FaJs4tRNwV8mVN6uuG7TQknbZLzUI/nBHPPcHrVMk+WTz+WO2bfHpVC3LO4ypm+l
+         /JaXJNWwO6d1wPrsHVaXKI+ZU+PEGEzHJoxzfWPO4Y6aHEWWSaYvbr1rA4oOlc8y11gd
+         eH0A==
+X-Received: by 10.49.127.177 with SMTP id nh17mr569121qeb.30.1375722754410;
+        Mon, 05 Aug 2013 10:12:34 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.73.193 with SMTP id n1ls2788192qev.50.gmail; Mon, 05 Aug
+ 2013 10:12:34 -0700 (PDT)
+X-Received: by 10.49.96.72 with SMTP id dq8mr542593qeb.40.1375722754221;
+        Mon, 05 Aug 2013 10:12:34 -0700 (PDT)
+Date: Mon, 5 Aug 2013 10:12:33 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <7063dea2-c9f7-4140-9916-ef1cf52d8d93@googlegroups.com>
+In-Reply-To: <225b244a-f660-4079-9fe7-f0b1f1fc4ead@googlegroups.com>
+References: <1349369655.4304.25.camel@synclavier.lan>
+ <f01228fe-48ce-40b4-8c6d-caaef9f3eb7b@googlegroups.com>
+ <225b244a-f660-4079-9fe7-f0b1f1fc4ead@googlegroups.com>
+Subject: [tosdr:2602] Re: Pseudonyms allowed
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2570_26315324.1375722753935"
+
+------=_Part_2570_26315324.1375722753935
+Content-Type: text/plain; charset=ISO-8859-1
+
+Flattr:
+https://groups.google.com/d/topic/tosdr/m7EFecJtBM0/discussion
+
+On Monday, August 5, 2013 11:01:28 AM UTC-5, Ian McGowan wrote:
+>
+> Stack Exchange:
+> https://groups.google.com/d/topic/tosdr/yZbMDp3Nc9s/discussion
+>
+> On Wednesday, June 26, 2013 10:47:32 AM UTC-5, Ian McGowan wrote:
+>>
+>> Wikipedia:
+>> https://groups.google.com/d/topic/tosdr/j1gHRYEKpXM/discussion
+>>
+>> On Thursday, October 4, 2012 11:54:24 AM UTC-5, Hugo Roy wrote:
+>>>
+>>> Hi, 
+>>>
+>>> This is a unified point where you can express yourself using a pseudonym 
+>>> and you don't have to provide your legal name. 
+>>>         [good] 
+>>>         You do not have to provide your legal name (except for paid 
+>>>         accounts for billing purposes) and you can use the service with 
+>>>         a pseudonym. 
+>>>         
+>>> This point supersedes: 
+>>>       * Soundcloud 
+>>>         https://groups.google.com/d/topic/tosdr/Fnwu9Z5crGE/discussion 
+>>>       * Steam https://groups.google.com/d/topic/tosdr/rhykox7XUfs 
+>>>       * 500px 
+>>>         https://groups.google.com/d/topic/tosdr/x2OybdCClW0/discussion 
+>>>       * App.net 
+>>>         https://groups.google.com/d/topic/tosdr/OqIkAS2uwmE-3/discussion 
+>>> -- 
+>>> Hugo Roy 
+>>>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org 
+>>>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41 
+>>>                                  mobile DE: +49 151 143 56 563 
+>>>
+>>>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2570_26315324.1375722753935
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Flattr:<div><a href=3D"https://groups.google.com/d/topic/tosdr/m7EFecJtBM0/=
+discussion">https://groups.google.com/d/topic/tosdr/m7EFecJtBM0/discussion<=
+/a><br><br>On Monday, August 5, 2013 11:01:28 AM UTC-5, Ian McGowan wrote:<=
+blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;bord=
+er-left: 1px #ccc solid;padding-left: 1ex;">Stack Exchange:<div><a href=3D"=
+https://groups.google.com/d/topic/tosdr/yZbMDp3Nc9s/discussion" target=3D"_=
+blank">https://groups.google.com/d/<wbr>topic/tosdr/yZbMDp3Nc9s/<wbr>discus=
+sion</a><br><br>On Wednesday, June 26, 2013 10:47:32 AM UTC-5, Ian McGowan =
+wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex=
+;border-left:1px #ccc solid;padding-left:1ex">Wikipedia:<div><a href=3D"htt=
+ps://groups.google.com/d/topic/tosdr/j1gHRYEKpXM/discussion" target=3D"_bla=
+nk">https://groups.google.com/d/<wbr>topic/tosdr/j1gHRYEKpXM/<wbr>discussio=
+n</a><br><br>On Thursday, October 4, 2012 11:54:24 AM UTC-5, Hugo Roy wrote=
+:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;bord=
+er-left:1px #ccc solid;padding-left:1ex">Hi,
+<br>
+<br>This is a unified point where you can express yourself using a pseudony=
+m
+<br>and you don't have to provide your legal name.
+<br>&nbsp; &nbsp; &nbsp; &nbsp; [good]
+<br>&nbsp; &nbsp; &nbsp; &nbsp; You do not have to provide your legal name =
+(except for paid
+<br>&nbsp; &nbsp; &nbsp; &nbsp; accounts for billing purposes) and you can =
+use the service with
+<br>&nbsp; &nbsp; &nbsp; &nbsp; a pseudonym.
+<br>&nbsp; &nbsp; &nbsp; &nbsp;=20
+<br>This point supersedes:
+<br>&nbsp; &nbsp; &nbsp; * Soundcloud
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/topi=
+c/tosdr/Fnwu9Z5crGE/discussion" target=3D"_blank">https://groups.google.com=
+/d/<wbr>topic/tosdr/Fnwu9Z5crGE/<wbr>discussion</a>
+<br>&nbsp; &nbsp; &nbsp; * Steam <a href=3D"https://groups.google.com/d/top=
+ic/tosdr/rhykox7XUfs" target=3D"_blank">https://groups.google.com/d/<wbr>to=
+pic/tosdr/rhykox7XUfs</a>
+<br>&nbsp; &nbsp; &nbsp; * 500px
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/topi=
+c/tosdr/x2OybdCClW0/discussion" target=3D"_blank">https://groups.google.com=
+/d/<wbr>topic/tosdr/x2OybdCClW0/<wbr>discussion</a>
+<br>&nbsp; &nbsp; &nbsp; * App.net
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/topi=
+c/tosdr/OqIkAS2uwmE-3/discussion" target=3D"_blank">https://groups.google.c=
+om/d/<wbr>topic/tosdr/OqIkAS2uwmE-3/<wbr>discussion</a>=20
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp; chat: <a>hu...@jab=
+ber.fsfe.org</a>
+<br>&nbsp; <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> &nbsp; &nbsp; &nbsp; &nbsp; mobile: +336 08 74 13 41
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mobile DE: +49 151 143 56 56=
+3
+<br>
+<br></blockquote></div></blockquote></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2570_26315324.1375722753935--

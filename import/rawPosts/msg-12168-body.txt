@@ -1,0 +1,203 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBUVNRWKAKGQEYPP4QQQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 25F0D413A7
+	for <anything@michielbdejong.com>; Wed, 13 Nov 2013 11:39:19 +0100 (CET)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2287F1780AA
+	for <anything@michielbdejong.com>; Wed, 13 Nov 2013 11:39:19 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id oHvNw+0bfX+K for <anything@michielbdejong.com>;
+	Wed, 13 Nov 2013 11:39:17 +0100 (CET)
+Received: from mail-vc0-x23c.google.com (mail-vc0-x23c.google.com [IPv6:2607:f8b0:400c:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6A29C1780CC
+	for <michiel@michielbdejong.com>; Wed, 13 Nov 2013 11:39:17 +0100 (CET)
+Received: by mail-vc0-f188.google.com with SMTP id hu8sf48602vcb.25
+        for <michiel@michielbdejong.com>; Wed, 13 Nov 2013 02:39:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=oLdeKoIJC1mslg+GaoxsVpUgBtnVGXk7+Q9Z3pTcwEk=;
+        b=WuKFc4d/bVbp4bvVJGxZQ0CZO2yCkNVUl6UzCxPactnulf2sEBv05LIsJCNZyhdES6
+         otg78W8t7n7o59y3yIjz8FEmSc7vA/2cx/s1k2CmueRPokUpcQjne7D+KtkbmUDhk4ow
+         F4oEy55JpgMYFfAh/dUGskLvEfvqRwUs1wkkivYbrc1yiNyYrTde/0IaxyxKOaVj2Ykr
+         tFtm+yCNRjt3R3nrt9zEHttbQIUvzSPkafrba4VWqxlmnvCiTDGXXMbcMYoyPjLE41F2
+         ERm6UOpJtlDETqN9wiU2eIqfkPUy+A+cw6SgHe/BMF7zlsCEyMTANTqQjX6mjU11VgQK
+         wuyw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=oLdeKoIJC1mslg+GaoxsVpUgBtnVGXk7+Q9Z3pTcwEk=;
+        b=gKEL3w1W+xr4gF10lbThDCyQBaBFvIe/jqcnXvpK1MyLh4QNnLgu00dlFCtmcSFmRF
+         l5u5lIKPL+2dSrc0TzlA2m6dhZo4ALaHuxpMVWq9ufGfF9JbLiyNHynbZbJ8nFGPCMBD
+         hSn1YBI2IJ0bOzYNxACz6QIK3eT2NlFOOZUcm+07il5Ldg0j80PiSod27X1G8vz37whZ
+         k51Ji6Rg/0X92iVzj2LcESk0WOnv9slYlEXOV2QX4Obx0RV1TNDOtqXN4Dx4m2k+Qk6f
+         E916vHinWyaVFXdb4fg75Jcu9bbgbwgGcDgn2m8zc9XkY4k/6HDZY+VebAOEgAOZqh1g
+         7Peg==
+X-Received: by 10.50.73.99 with SMTP id k3mr472654igv.9.1384339156443;
+        Wed, 13 Nov 2013 02:39:16 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.29.110 with SMTP id j14ls3256694igh.34.canary; Wed, 13 Nov
+ 2013 02:39:14 -0800 (PST)
+X-Received: by 10.50.20.6 with SMTP id j6mr473580ige.15.1384339154644;
+        Wed, 13 Nov 2013 02:39:14 -0800 (PST)
+Date: Wed, 13 Nov 2013 02:39:13 -0800 (PST)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Cc: an_dz_@hotmail.com
+Message-Id: <eb67c8c3-fd6b-4add-b13c-96b59602e2fc@googlegroups.com>
+In-Reply-To: <COL401-EAS2028F7D7F8802C61C014602DEF90@phx.gbl>
+References: <COL401-EAS2028F7D7F8802C61C014602DEF90@phx.gbl>
+Subject: [tosdr:2794] Re: Weebly [Info?/Bad?] If you share your theme you
+ waive your right over it
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3623_28962661.1384339153835"
+
+------=_Part_3623_28962661.1384339153835
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Ah, I see you already noticed this.=20
+
+As I posted elsewhere: you're not just waiving your right to it. You're=20
+giving Weebly an *exclusive* license to it *as well as the code and any=20
+associated media assets* (such as images). Exclusive means that nobody gets=
+=20
+to use it without Weebly's permission, *including you*. And that's=20
+irrevocable (you can't take it back), and perpetual (it lasts forever).=20
+
+Funny: they're not asking for the right to publicly display these themes or=
+=20
+distribute them. Those seem like an important right to claim for themes for=
+=20
+websites. As it's written, Weebly would get to make copies of themes, alter=
+=20
+them, and make its own themes that are based on your themes, but Weebly=20
+wouldn't be able to put the themes up on a public web server at all.
+
+Poor contract drafting.
+
+
+On Tuesday, November 12, 2013 5:08:46 PM UTC-8, An_dz Zanga wrote:
+>
+> http://www.weebly.com/terms-of-service/=20
+> Under terms 14. Themes
+>
+> =93If you choose, you may contribute website themes ("Custom Themes") to =
+the=20
+> Service for use by other users. You hereby grant and agree to grant us an=
+=20
+> exclusive, perpetual, sublicensable, worldwide, irrevocable, royalty-free=
+=20
+> right and license to use, copy, modify, and create derivative works of an=
+y=20
+> Custom Themes contributed by You to the Service, including the HTML code=
+=20
+> and media assets therefor.=94
+>
+>
+> If you choose to share your custom theme you waive all your right over th=
+e=20
+> theme.
+>
+> Andr=E9 - An_dz
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+------=_Part_3623_28962661.1384339153835
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Ah, I see you already noticed this.&nbsp;<div><br></div><d=
+iv>As I posted elsewhere: you're not just waiving your right to it. You're =
+giving Weebly an <i style=3D"font-weight: bold;">exclusive</i>&nbsp;license=
+ to it <i>as well as the code and any associated media assets</i>&nbsp;(suc=
+h as images). Exclusive means that nobody gets to use it without Weebly's p=
+ermission, <i>including you</i>. And that's irrevocable (you can't take it =
+back), and perpetual (it lasts forever).&nbsp;</div><div><br></div><div>Fun=
+ny: they're not asking for the right to publicly display these themes or di=
+stribute them. Those seem like an important right to claim for themes for w=
+ebsites. As it's written, Weebly would get to make copies of themes, alter =
+them, and make its own themes that are based on your themes, but Weebly wou=
+ldn't be able to put the themes up on a public web server at all.</div><div=
+><br></div><div>Poor contract drafting.</div><div><br><br>On Tuesday, Novem=
+ber 12, 2013 5:08:46 PM UTC-8, An_dz Zanga wrote:<blockquote class=3D"gmail=
+_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;p=
+adding-left: 1ex;"><div><div dir=3D"ltr" style=3D"font-family:Calibri,'Sego=
+e UI',Meiryo,'Microsoft YaHei UI','Microsoft JhengHei UI','Malgun Gothic','=
+Khmer UI','Nirmala UI',Tunga,'Lao UI',Ebrima,sans-serif;font-size:12pt"><di=
+v><a href=3D"http://www.weebly.com/terms-of-service/" target=3D"_blank"><fo=
+nt face=3D"Calibri" style=3D"font-size:12pt">http://www.weebly.com/terms-<w=
+br>of-service/</font></a><font face=3D"Calibri" style=3D"font-size:12pt"> <=
+/font></div><div><div><h3 style=3D"font:bold 18px/normal ProximaNova;margin=
+:15px auto 0px;padding:0px;border:0px black;text-transform:none;text-indent=
+:0px;letter-spacing:normal;word-spacing:0px;vertical-align:baseline;white-s=
+pace:normal"><font face=3D"Calibri" style=3D"font-size:12pt"><font color=3D=
+"#2a2a2a">Under terms 14. Themes</font></font></h3><p style=3D"font:16px/24=
+px ProximaNova;margin:0px;padding:0px;border:0px black;text-transform:none;=
+text-indent:0px;letter-spacing:normal;word-spacing:0px;vertical-align:basel=
+ine;white-space:normal"><font color=3D"#2a2a2a" face=3D"Calibri" style=3D"f=
+ont-size:12pt">=93If you choose, you may contribute website themes ("Custom=
+ Themes") to the Service for use by other users. You hereby grant and agree=
+ to grant us an exclusive, perpetual, sublicensable, worldwide, irrevocable=
+, royalty-free right and license to use, copy, modify, and create derivativ=
+e works of any Custom Themes contributed by You to the Service, including t=
+he HTML code and media assets therefor.=94</font></p><p style=3D"font:16px/=
+24px ProximaNova;margin:0px;padding:0px;border:0px black;text-transform:non=
+e;text-indent:0px;letter-spacing:normal;word-spacing:0px;vertical-align:bas=
+eline;white-space:normal"><font color=3D"#2a2a2a" face=3D"Calibri"></font><=
+br></p><p style=3D"font:16px/24px ProximaNova;margin:0px;padding:0px;border=
+:0px black;text-transform:none;text-indent:0px;letter-spacing:normal;word-s=
+pacing:0px;vertical-align:baseline;white-space:normal"><font color=3D"#2a2a=
+2a" face=3D"Calibri">If you choose to share your custom theme you waive all=
+ your right over the theme.</font></p></div><div><br></div><div><font face=
+=3D"Calibri" style=3D"font-size:12pt">Andr=E9 - An_dz</font><br></div></div=
+><font face=3D"Calibri"></font></div></div></blockquote></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+------=_Part_3623_28962661.1384339153835--

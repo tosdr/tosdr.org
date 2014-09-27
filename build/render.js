@@ -146,6 +146,22 @@ function isEmpty(map) {
   }
   return true;
 }
+function getTweetLink(obj, name) {
+  var text, action;
+  if (!obj.twitter || !obj.tosdr || !obj.tosdr.rated) {
+    return '';
+  }
+  if (obj.tosdr.rated === 'A') {
+    text = ' Congratulations on your A rating on https://tosdr.org/#'+name+' - thanks for caring!';
+    action = 'Congratulate ';
+  } else {
+    text = ' Your class '+obj.tosdr.rated+' rating at https://tosdr.org/#'+name+' worries me, can you comment?';
+    action = 'Discuss with ';
+  }
+  return ' <a class="tweet" href="https://twitter.com/intent/tweet/?text='+encodeURIComponent(obj.twitter+text)
+      +'">'+action+obj.twitter+'</a>';
+}
+
 function renderPopup(name, obj, points, links) {
   //the popup is actually a popin, it is what you see when you click 'expand' for one of the services on index.html.
   //this is how we generate the html for them:
@@ -166,7 +182,9 @@ function renderPopup(name, obj, points, links) {
     + '<small class="service-url">Share review <input class="share-link" type="text" value="http://tosdr.org/#' + name + '" readonly /></small>'
     + '</h3></div>\n';
   var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">'
-    + (verdict ? 'Class ' + verdict : 'No Class Yet') + '</label><p>' + ratingText + '</p></div>\n';
+    + (verdict ? 'Class ' + verdict : 'No Class Yet') + '</label><p>' + ratingText
+    + getTweetLink(obj, name)
+    + '</p></div>\n';
   var renderables = [];
   //sort the data points by importance:
   for (var i in points) {

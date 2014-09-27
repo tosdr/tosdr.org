@@ -1,0 +1,109 @@
+Return-Path: <tosdr+bncBAABBGGH2OHQKGQE3G6V3NQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 252FD161743
+	for <anything@michielbdejong.com>; Sun, 28 Jul 2013 11:25:49 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2242A178065
+	for <anything@michielbdejong.com>; Sun, 28 Jul 2013 11:25:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id L2oFLliLJy1x for <anything@michielbdejong.com>;
+	Sun, 28 Jul 2013 11:25:47 +0200 (CEST)
+Received: from mail-la0-x240.google.com (mail-la0-x240.google.com [IPv6:2a00:1450:4010:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E896B178084
+	for <michiel@michielbdejong.com>; Sun, 28 Jul 2013 11:25:46 +0200 (CEST)
+Received: by mail-la0-f64.google.com with SMTP id er20sf454976lab.19
+        for <michiel@michielbdejong.com>; Sun, 28 Jul 2013 02:25:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:x-beenthere:message-id:date:from:user-agent:mime-version:to
+         :subject:x-enigmail-version:x-df-sender:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=k/5CUQeVGjk6JHGpJ7t8q9R57GDIZogG9+KUk30YiUs=;
+        b=Jj1NkC+Peb4+pcPbp+xWmNV3o3/KNc4W+s2/ZcKhAocyGhWI3HZPRQeN62YF2Jjd6o
+         ihCdm+he+omTL5g/NhyujqusffRWNhtuWflW76mrC5/F4Q+c213WhOZkgK/pi3sQuXxj
+         s1ccfG9AB7ePBX0n+1Yn3OJtYslCeeysU13Kgm2YVOmQXWuxufjgLLDnBJE0b024pRR5
+         3zplyNIfkUThc2ycSzJ0AXKJ9an25JOKlBumCBp09SF3sUz2yA6oFPFJ250RuyOHhTaI
+         OJOu6S/h3j3xFddHwJTXH8FpdUeOqAygkR2UhRqeNuRTshR4Rz0aE1nphS+k2awWWD3A
+         4W6Q==
+X-Received: by 10.180.21.227 with SMTP id y3mr144040wie.15.1375003545185;
+        Sun, 28 Jul 2013 02:25:45 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.14.103 with SMTP id o7ls400955wic.44.canary; Sun, 28 Jul
+ 2013 02:25:44 -0700 (PDT)
+X-Received: by 10.14.47.77 with SMTP id s53mr53480864eeb.5.1375003544289;
+        Sun, 28 Jul 2013 02:25:44 -0700 (PDT)
+Received: from smtprelay04.ispgateway.de (smtprelay04.ispgateway.de. [80.67.31.38])
+        by gmr-mx.google.com with ESMTPS id bk51si8567294eeb.0.2013.07.28.02.25.44
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sun, 28 Jul 2013 02:25:44 -0700 (PDT)
+Received-SPF: neutral (google.com: 80.67.31.38 is neither permitted nor denied by best guess record for domain of drommert@drommert.net) client-ip=80.67.31.38;
+Received: from [217.23.15.245] (helo=[10.8.10.38])
+	by smtprelay04.ispgateway.de with esmtpsa (TLSv1:AES256-SHA:256)
+	(Exim 4.68)
+	(envelope-from <drommert@drommert.net>)
+	id 1V3NEV-0003lw-UK
+	for tosdr@googlegroups.com; Sun, 28 Jul 2013 11:25:44 +0200
+Message-ID: <51F4E397.70504@drommert.net>
+Date: Sun, 28 Jul 2013 11:25:43 +0200
+From: Drommert <drommert@drommert.net>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:17.0) Gecko/20130623 Thunderbird/17.0.7
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: =?ISO-8859-1?B?W3Rvc2RyOjI1NzRdIFBheVBhbCAoRXVyb3BlKSBTLuAuci5sLiBldCBDaWU=?=
+X-Enigmail-Version: 1.5.2
+X-Df-Sender: ZHJvbW1lcnRAZHJvbW1lcnQubmV0
+X-Original-Sender: drommert@drommert.net
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 80.67.31.38 is neither permitted nor denied by best guess record
+ for domain of drommert@drommert.net) smtp.mail=drommert@drommert.net
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+PayPal Europe stores a lot of transaction data including personal
+information indefinitely, when one party of of a transaction isn't a
+registered PayPal customer. The "Privacy Policy for PayPal Services" says:
+
+"When a registered PayPal user either sends a payment to, or requests a
+payment from, an individual who is not a registered PayPal user, we will
+retain the information that the registered PayPal user submits to us,
+including, for example, the other party's email address, Skype ID (if
+applicable), phone number and/or name, for the benefit of the registered
+PayPal user who is attempting to contact the other party, so that the
+registered PayPal user can see a complete record of his or her
+transactions, including uncompleted transactions. Although this
+information is stored indefinitely, we will not market to the
+non-registered person in any way at any time."
+
+(https://cms.paypal.com/uk/cgi-bin/marketingweb?cmd=_render-content&content_ID=ua/Privacy_full&locale.x=en_GB)
+
+Regards,
+Juergen
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

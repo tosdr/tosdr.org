@@ -1,0 +1,178 @@
+Return-Path: <tosdr+bncBCY35NMWTYJBBTF2RCGAKGQEZLKD7YY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id B0FAB161735
+	for <anything@michielbdejong.com>; Thu,  2 May 2013 10:01:53 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id AE1D217809A
+	for <anything@michielbdejong.com>; Thu,  2 May 2013 10:01:53 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Gymhp9xOyA9f for <anything@michielbdejong.com>;
+	Thu,  2 May 2013 10:01:22 +0200 (CEST)
+Received: from mail-ye0-f190.google.com (mail-ye0-f190.google.com [209.85.213.190])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id AD11417806F
+	for <anything@michielbdejong.com>; Thu,  2 May 2013 10:01:18 +0200 (CEST)
+Received: by mail-ye0-f190.google.com with SMTP id q5sf103200yen.17
+        for <anything@michielbdejong.com>; Thu, 02 May 2013 01:01:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=3czl+luRvqbefdLFJF9oHJk+2so/AlltfQZolKqR1u4=;
+        b=NV+s2/lbk/eTAu+yMm9whk67NZuFP4DycyC0CPf9yezj3rhrwjXpHGAUO84iouG80v
+         +kjkMIRy95KB+g67l5Hpe4KxF1AZ/AmtpGjhS3Ovfo75JTOivwFRznFLrILwqJ5aj/re
+         BWBcAUYmYOWNNHqlh9fYyHaPMNRqDePr5OjYLTrVMvRfjsc6vmWwm6VIDcoWMGXhRuU7
+         K+2/gfnDjY8NSAZWcOmSdY/4aNwCnsVfDQIebnZ7TRVQ6M8iAjywnVyW2trSvGHWIZH9
+         4Db87Mo3cqI4CkKZ2e5O/n1enlHoqb2s8vyagS7j1/zCc1sRB9Zm6rffVrC9sgwHs/iZ
+         AECg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=3czl+luRvqbefdLFJF9oHJk+2so/AlltfQZolKqR1u4=;
+        b=OfsAK1JxXAk2WRqj+ML//gBko96AfCefKwK5ejwQkudWSh/Tx0ddykhKVIfktrEiGK
+         8DWV9rVrvHmNumtXj2E9xTKFo4PrIOU+JDdn7SdKgk8UYGuONNXz5UOaKsDSXZPCN1oy
+         QcP7dlIyNmu3QRM5UQwxoEVy7R55CyQsxOJn6gfHO9d8ptkLAd4LglU8Wy3i7OHzpjJE
+         96QqlrmaOgW3y6BB/CR9VHe1eIOLYjTWNW7IjmnbXZ8oPfPxn6P6Kt7C9EWHihLt9jgf
+         DEDmmlPGTXI7J2VcyUAV4lsw3lw3iyFHMcJmlFZNoogPysf1c0LCbpnY51JSprKqZ4gg
+         lH2g==
+X-Received: by 10.49.30.168 with SMTP id t8mr457988qeh.8.1367481677399;
+        Thu, 02 May 2013 01:01:17 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.163 with SMTP id 3ls1153406qef.58.gmail; Thu, 02 May 2013
+ 01:01:16 -0700 (PDT)
+X-Received: by 10.49.82.100 with SMTP id h4mr455686qey.17.1367481676462;
+        Thu, 02 May 2013 01:01:16 -0700 (PDT)
+Date: Thu, 2 May 2013 01:01:16 -0700 (PDT)
+From: =?UTF-8?Q?Simon_Mangelr=C3=B8d?= <simonsluis@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <81ebef5f-edad-409f-bd64-433dec548d54@googlegroups.com>
+Subject: [tosdr:1916] [Bad] PATH makes it very hard deleting your account by
+ "hiding" this option
+MIME-Version: 1.0
+X-Original-Sender: simonsluis@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3265_1242939.1367481676150"
+
+------=_Part_3265_1242939.1367481676150
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Link: https://path.com/privacyAccessing and Modifying Your Information
+
+If you have an account, you can access and modify the personal information=
+=20
+you provided us that is associated with your account. You may "opt out" of=
+=20
+receiving marketing or promotional emails from us by changing your account=
+=20
+preferences or by following the instructions in those emails. If you opt=20
+out of these messages, you will still receive emails from us, about your=20
+account, our services and other pertinent information related to our=20
+services. These communications are considered part of the service and your=
+=20
+account, which you cannot opt-out from receiving.
+
+You can deactivate your account by selecting the =93deactivate=94 link.=20
+Deactivating your account lets you remove your profile without permanently=
+=20
+deleting it. When you deactivate your account, other users will no longer=
+=20
+see your profile or information (but your information is saved, in case you=
+=20
+want to reactivate your account at some point in the future). If you want=
+=20
+to delete your information and your account, pleasecontact us<http://servic=
+e.path.com/customer/portal/emails/new> with=20
+a request that we delete your account and information. We will take steps=
+=20
+to delete your information as soon as is practicable, but some information=
+=20
+may remain in archived/backup copies for our records and as otherwise=20
+required by law.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_3265_1242939.1367481676150
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<h2 style=3D"margin-top: 2em; margin-bottom: 1em; font-weight: bold; font-s=
+ize: 19px; line-height: 1.3; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; color: rgb(79, 79, 79);">Link:&nbsp;<a href=3D"https://path.=
+com/privacy" style=3D"font-family: Arial, Helvetica, sans-serif; font-size:=
+ 13px;">https://path.com/privacy</a></h2><h2 style=3D"margin-top: 2em; marg=
+in-bottom: 1em; font-weight: bold; font-size: 19px; line-height: 1.3; font-=
+family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgb(79, 79, =
+79);">Accessing and Modifying Your Information</h2><p style=3D"font-size: 1=
+5px; line-height: 1.466; font-family: 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif; color: rgb(79, 79, 79);">If you have an account, you can access =
+and modify the personal information you provided us that is associated with=
+ your account. You may "opt out" of receiving marketing or promotional emai=
+ls from us by changing your account preferences or by following the instruc=
+tions in those emails. If you opt out of these messages, you will still rec=
+eive emails from us, about your account, our services and other pertinent i=
+nformation related to our services. These communications are considered par=
+t of the service and your account, which you cannot opt-out from receiving.=
+</p><p style=3D"font-size: 15px; line-height: 1.466; font-family: 'Helvetic=
+a Neue', Helvetica, Arial, sans-serif; color: rgb(79, 79, 79);">You can dea=
+ctivate your account by selecting the =93deactivate=94 link. Deactivating y=
+our account lets you remove your profile without permanently deleting it. W=
+hen you deactivate your account, other users will no longer see your profil=
+e or information (but your information is saved, in case you want to reacti=
+vate your account at some point in the future). If you want to delete your =
+information and your account, please<a href=3D"http://service.path.com/cust=
+omer/portal/emails/new" style=3D"border-bottom-width: 1px; border-bottom-st=
+yle: solid; border-bottom-color: rgb(255, 206, 202); line-height: 1; font-f=
+amily: inherit; color: rgb(228, 31, 17);">contact us</a>&nbsp;with a reques=
+t that we delete your account and information. We will take steps to delete=
+ your information as soon as is practicable, but some information may remai=
+n in archived/backup copies for our records and as otherwise required by la=
+w.</p>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_3265_1242939.1367481676150--

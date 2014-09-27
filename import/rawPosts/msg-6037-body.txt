@@ -1,0 +1,141 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBIOLVSHAKGQEBNBOYYY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 2336E161757
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 19:32:22 +0200 (CEST)
+Received: from mfilter4-d.gandi.net (mfilter4-d.gandi.net [217.70.178.134])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1F5D517812E
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 19:32:22 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter4-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter4-d.gandi.net (mfilter4-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 871rdaRUzceb for <anything@michielbdejong.com>;
+	Wed, 26 Jun 2013 19:32:20 +0200 (CEST)
+Received: from mail-pa0-x239.google.com (mail-pa0-x239.google.com [IPv6:2607:f8b0:400e:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0EA9E178181
+	for <michiel@michielbdejong.com>; Wed, 26 Jun 2013 19:32:19 +0200 (CEST)
+Received: by mail-pa0-f57.google.com with SMTP id lf11sf4616090pab.12
+        for <michiel@michielbdejong.com>; Wed, 26 Jun 2013 10:32:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:mime-version:subject:from:in-reply-to:date:message-id
+         :references:to:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=NL9O7BgM0/Gg3+VnyicDvkFg2g97J1KfBUOPkvgO+5w=;
+        b=cdtZAm0qzaFDrR2FJUIJ62RYOy5SSD64q7iM5zhcMPhGmbcClQ71Dl4B3mzg/4Gz7E
+         aUnbEGxJdl0kiBO87tnXnn7cmwvkiNYkSRxLCQPhIcsphEL+kRdgPC5Sp9Kkk/nCB2/j
+         c1wELcn0caJoKzisQrreIngAInkAMDtQ7ZVvvTiYAObPN+q+1PEAoUXwybJ3g3z2qAZ4
+         esv2CrG+ODGk/co/8ZrDOXEIJFKrk/RNSJ8BsC2siX+cobBNx0F9zWSysshjB9r7zlhI
+         ZP768YfOHUd8WnOqY6S1vvEMlTrWEROgkUWCCsi8ilEHAqDxSkPE+0z1PUn0rRIZOSNB
+         lunQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:mime-version:subject:from:in-reply-to:date:message-id
+         :references:to:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=NL9O7BgM0/Gg3+VnyicDvkFg2g97J1KfBUOPkvgO+5w=;
+        b=L/o5TQ9AKUpmspugKzq+gnZv4vVCIrlu13+mLyz67ClUVH0xxcAx0JP+nGMpuyJ3Pi
+         9nn+IqIAIWUODa/3sM9kys2/IAdBZlgk4fYURz2iSJnVrqs8FgQFA52RZlqJnXDD9S34
+         GUXdG/hfJUXW0WMqNyFAwVp43kT2smhfqHmgj47ORHzY5wHORm8flrDipTw63A0CjOsp
+         sbtHQ4sjBa3sm8B5TICp/SmMB2pR4Q+gzBleUopwSaxYdiZnLPKLwR8Cke14trZKuk5o
+         H2BLUXixJzwqHQWrbYMp/Bdq8l6VW2n+sVwu859BlXmbWdqw9RYK1cXsDaxMfbgMXYSt
+         Bzmg==
+X-Received: by 10.49.36.199 with SMTP id s7mr132610qej.17.1372267937784;
+        Wed, 26 Jun 2013 10:32:17 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.85.232 with SMTP id k8ls476145qez.55.gmail; Wed, 26 Jun
+ 2013 10:32:17 -0700 (PDT)
+X-Received: by 10.224.174.145 with SMTP id t17mr4702225qaz.4.1372267937188;
+        Wed, 26 Jun 2013 10:32:17 -0700 (PDT)
+Received: from mail-qa0-x22b.google.com (mail-qa0-x22b.google.com [2607:f8b0:400d:c00::22b])
+        by gmr-mx.google.com with ESMTPS id r1si3540677qch.3.2013.06.26.10.32.17
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 26 Jun 2013 10:32:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c00::22b as permitted sender) client-ip=2607:f8b0:400d:c00::22b;
+Received: by mail-qa0-f43.google.com with SMTP id d13so1781453qak.2
+        for <tosdr@googlegroups.com>; Wed, 26 Jun 2013 10:32:17 -0700 (PDT)
+X-Received: by 10.224.182.136 with SMTP id cc8mr7022538qab.10.1372267937111;
+        Wed, 26 Jun 2013 10:32:17 -0700 (PDT)
+Received: from [192.168.1.104] ([99.191.178.184])
+        by mx.google.com with ESMTPSA id gn4sm34604444qab.8.2013.06.26.10.32.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 26 Jun 2013 10:32:15 -0700 (PDT)
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2392] Re: [Good] Amazon allows you to leave the service
+From: Ian McGowan <irmcgowan@gmail.com>
+In-Reply-To: <20130626164745.GA16369@synclavier.ampoliros.net>
+Date: Wed, 26 Jun 2013 12:32:13 -0500
+Message-Id: <2D00BAE9-BC05-4C82-B978-199A1CC53DED@gmail.com>
+References: <b9a9f101-44c3-48eb-8d25-8dbfdb290030@googlegroups.com> <00581c46-2db2-47ad-9241-544431130956@googlegroups.com> <8fc449d7-2478-45a2-bcfb-776eb0e6de26@googlegroups.com> <20130626164745.GA16369@synclavier.ampoliros.net>
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c00::22b
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I think it's assumed that users can delete their accounts to services, and =
+so if it's possible to do so (as one would expect) it's not worth mentionin=
+g. Only if it isn't possible should we point it out. Even if it's cumbersom=
+e to delete an account, users who wish to do so can do that successfully (f=
+or most services).
+
+On Jun 26, 2013, at 11:47 AM, Hugo Roy wrote:
+
+> + 2013-05-21 Tue 14:44, Ian McGowan <irmcgowan@gmail.com>:
+>=20
+>> I don't like the idea that Amazon is in control of deleting my account,=
+=20
+>> that I have to contact them in order to delete it. This is kind of stran=
+ge=20
+>> given that there are other services which make deleting your account a v=
+ery=20
+>> straightforward process, one that users can handle without having to=20
+>> contact the service. I would actually mark this as "bad", personally.
+>=20
+> I'm having more and more doubts about whether we should mention
+> these or not. As you pointed out, it's not in the terms.
+>=20
+> So far, I only mentioned services where it's *not* possible to
+> delete the account. Here it's possible (even if cumbersome). It's
+> already mentioned by accountkiller.com
+>=20
+> Best,
+>=20
+> --=20
+> Hugo Roy, Project Lead
+> Terms of Service; Didn't Read | www.tosdr.org
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

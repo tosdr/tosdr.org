@@ -69,6 +69,11 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
+            src: 'import/posts/*',
+            dest: 'posts/'
+          },
+          {
+            expand: true,
             src: 'import/index/*',
             dest: 'index/'
           }
@@ -92,7 +97,7 @@ module.exports = function (grunt) {
   // Load the scripts from the build directory
   grunt.loadTasks('build');
   
-  grunt.registerTask('render', ['concurrent:fix', 'buildIndexes', 'prettify', 'copy:data']);
+  grunt.registerTask('render', ['concurrent:fix', 'buildIndexes', 'prettify', 'copy:data', 'generateApiFiles']);
     
   grunt.registerTask('build', [
     'render',

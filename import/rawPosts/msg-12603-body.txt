@@ -1,0 +1,91 @@
+Return-Path: <tosdr+bncBDB4JK7A2IPRBD7PXCKAKGQEVJVECLA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 15BDF412BE
+	for <anything@michielbdejong.com>; Thu, 21 Nov 2013 17:40:51 +0100 (CET)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 11716178084
+	for <anything@michielbdejong.com>; Thu, 21 Nov 2013 17:40:51 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 0Ml4Q5f7GUrx for <anything@michielbdejong.com>;
+	Thu, 21 Nov 2013 17:40:49 +0100 (CET)
+Received: from mail-yh0-x23d.google.com (mail-yh0-x23d.google.com [IPv6:2607:f8b0:4002:c01::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 7153017811D
+	for <anything@michielbdejong.com>; Thu, 21 Nov 2013 17:40:49 +0100 (CET)
+Received: by mail-yh0-f61.google.com with SMTP id z6sf520033yhz.16
+        for <anything@michielbdejong.com>; Thu, 21 Nov 2013 08:40:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=2pMrPR8bf09AFrtFfSqX2kOP4VEYcdwhobRFsxawmow=;
+        b=CR8thVBToIvfXcn9DfQGpWgV2a9tgKwcGkqaqDw+4DIMpwaHrwK72LdQGH/Qz4JyVs
+         wn5WJ0ASQy7w/jIzZ4ovOhpYq0bbPH79PK8WAveOvowlzRSDfFumXRCJtfUBh9+vsqhd
+         XoAGygYmijuE81RR6I9RXq+R5LXDyCqNQoQ8YWltrrKfnwjGIUCMPaTkffosIKJlfVZu
+         wHXDx/hrWIBNxHu6sxfid2bTPEZBzJpAn2gGeHrLQgrz0IqcYSIJ4GCirZkpIfeu2T9+
+         Eopr/q1as8QFsphGpDCbfEYZlHPnrJdRHmExzAvrlBzYdHSb/yrVoIczwaItQ45Pu4RM
+         PN3g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=2pMrPR8bf09AFrtFfSqX2kOP4VEYcdwhobRFsxawmow=;
+        b=UKVsFYPo+fA+eTu7Dk0kYaUrgQggf/tLJojUKKVXHfbS2gtI92V0rjU2NpCaFk/1BG
+         Gn0Ki5+8kfT0zoqu4+8CStYmMQyYeh8WJJmpBFwtZVeVlkuiattKhK+1FPJvP5ztJTkl
+         rndykKm6MtfYPxcvPFbJju06lHrtvoLyQh0nFAzHxdZWBnEE9WLBVEdV3dSLZaTHhoQA
+         HgR3kWXqavw5nqVx/DtpZMicTQ/4pbargFedKpXwSoY66iYQAUOyhgrusQ6nRebzfIY4
+         nFfY34Y6ErdCp++X47KeFfS8jl/0IL8soBVwxENOg1lO1I3gNQwegLEH3lBlQGeSXius
+         kc2g==
+X-Received: by 10.182.33.4 with SMTP id n4mr97640obi.9.1385052048025;
+        Thu, 21 Nov 2013 08:40:48 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.251.161 with SMTP id zl1ls258087obc.47.gmail; Thu, 21 Nov
+ 2013 08:40:47 -0800 (PST)
+X-Received: by 10.182.118.170 with SMTP id kn10mr97244obb.20.1385052047266;
+        Thu, 21 Nov 2013 08:40:47 -0800 (PST)
+Date: Thu, 21 Nov 2013 08:40:45 -0800 (PST)
+From: Hannah Poteat <hpoteat0@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <b93d43bd-382f-4ec0-bec4-f58d9fccff1f@googlegroups.com>
+In-Reply-To: <fa471ed3-c168-4365-82a7-a6ff88159972@googlegroups.com>
+References: <fa471ed3-c168-4365-82a7-a6ff88159972@googlegroups.com>
+Subject: [tosdr:2807] Ancestry.com account can be cancelled based on a belief
+MIME-Version: 1.0
+X-Original-Sender: hpoteat0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+That's standard. No service I know of requires hard evidence that a user is=
+ in breach of the Terms of Service. If they did, service providers would ba=
+sically have to take users to court in order to terminate their accounts. T=
+hat'd be an unsustainably heavy burden. Generally, online services are priv=
+ate companies, and it's okay for them to state that they can deny service t=
+o anyone they think is being disruptive.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

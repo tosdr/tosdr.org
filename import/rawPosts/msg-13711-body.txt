@@ -1,0 +1,169 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBJELYKKQKGQEI4RGR7Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D711A413A8
+	for <anything@michielbdejong.com>; Tue, 17 Dec 2013 18:11:07 +0100 (CET)
+Received: from mfilter28-d.gandi.net (mfilter28-d.gandi.net [217.70.178.159])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D4619178139
+	for <anything@michielbdejong.com>; Tue, 17 Dec 2013 18:11:07 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter28-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter28-d.gandi.net (mfilter28-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LP9LKPrSiHFo for <anything@michielbdejong.com>;
+	Tue, 17 Dec 2013 18:11:06 +0100 (CET)
+Received: from mail-bk0-x23f.google.com (mail-bk0-x23f.google.com [IPv6:2a00:1450:4008:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3A0E41780B3
+	for <michiel@michielbdejong.com>; Tue, 17 Dec 2013 18:11:02 +0100 (CET)
+Received: by mail-bk0-f63.google.com with SMTP id w11sf685958bkz.28
+        for <michiel@michielbdejong.com>; Tue, 17 Dec 2013 09:11:01 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=Fa9TIr2pnHWv0iyZKXFCnhPVV79+xt4Mz+eMYu6FtTM=;
+        b=DO+AQXwZwCMZxknR316NmFT5AJE7OPwGM6x+HQmEiJ4t33hy5pxu/XQecNG+OjGqx1
+         /yMfOIkg3fpbGqv2L0uThf0xnD2YjEcm0s1Gte5leEdmgeIOm+MB22vWiQvTJRHUrBKE
+         FVydaUT0d+CKXtf81FvKgLGfuO4GbwVWvQ2cUwkAulg9wGY2hju89aOgTMLk7az1cbUC
+         4rZKZVoaOOOKpaqsOkXeiJIgamL8AvbZhvre1GEKpqKSEqH2AaxsU4/VJDAKsPqU7Ac1
+         atpQRYFZRhWyTPHBs5l3SMl/JGim4JCxl4D1g8hS0y6Gu1Wy70aoQCvuUvSSA61ZkTm3
+         bR2Q==
+X-Received: by 10.180.206.164 with SMTP id lp4mr36069wic.2.1387300260961;
+        Tue, 17 Dec 2013 09:11:00 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.92.198 with SMTP id co6ls752650wib.31.gmail; Tue, 17 Dec
+ 2013 09:11:00 -0800 (PST)
+X-Received: by 10.180.36.165 with SMTP id r5mr2409243wij.0.1387300259980;
+        Tue, 17 Dec 2013 09:10:59 -0800 (PST)
+Received: from mail-lb0-x232.google.com (mail-lb0-x232.google.com [2a00:1450:4010:c04::232])
+        by gmr-mx.google.com with ESMTPS id pc4si1844011bkb.0.2013.12.17.09.10.59
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 17 Dec 2013 09:10:59 -0800 (PST)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:4010:c04::232 as permitted sender) client-ip=2a00:1450:4010:c04::232;
+Received: by mail-lb0-f178.google.com with SMTP id c11so1551558lbj.37
+        for <tosdr@googlegroups.com>; Tue, 17 Dec 2013 09:10:59 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.152.6.201 with SMTP id d9mr9835640laa.25.1387300259612; Tue,
+ 17 Dec 2013 09:10:59 -0800 (PST)
+Received: by 10.152.6.194 with HTTP; Tue, 17 Dec 2013 09:10:59 -0800 (PST)
+In-Reply-To: <52a7f7916c942_185a4717826371ab@dragon.mail>
+References: <52a7f7916c942_185a4717826371ab@dragon.mail>
+Date: Tue, 17 Dec 2013 11:10:59 -0600
+Message-ID: <CAADHZvwxwGfu85kTxboRb=LeOSXLvUODt3Fr8XPc=wRNBhLXww@mail.gmail.com>
+Subject: Re: [tosdr:2854] ToSBack: Policy Changes
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2a00:1450:4010:c04::232
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=089e013d1a942bf77904edbe0305
+
+--089e013d1a942bf77904edbe0305
+Content-Type: text/plain; charset=ISO-8859-1
+
+The only changes here relate to which languages the page is available
+in (*cesky
+vs cestina*).
+
+Ian
+
+
+On Tue, Dec 10, 2013 at 11:26 PM, ToSBack <tosback@tosdr.org> wrote:
+
+> wikimediafoundation.org: Terms of Use
+> wikipedia.org: Terms of Use
+>  These were changed in last night's crawl. Please have a look at the
+> commit at
+> https://github.com/tosdr/tosback2/commit/62eec63c92fda885f8fddc91f96ac3e0acf43688to see the differences!
+>
+> --
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+--089e013d1a942bf77904edbe0305
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">The only changes here relate to which languages the page i=
+s available in (<i>cesky vs cestina</i>).<div><br></div><div>Ian</div></div=
+><div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">On Tue, Dec =
+10, 2013 at 11:26 PM, ToSBack <span dir=3D"ltr">&lt;<a href=3D"mailto:tosba=
+ck@tosdr.org" target=3D"_blank">tosback@tosdr.org</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><a href=3D"http://wikimediafoundation.org" t=
+arget=3D"_blank">wikimediafoundation.org</a>: Terms of Use<br>
+<a href=3D"http://wikipedia.org" target=3D"_blank">wikipedia.org</a>: Terms=
+ of Use<br>
+=A0These were changed in last night&#39;s crawl. Please have a look at the =
+commit at <a href=3D"https://github.com/tosdr/tosback2/commit/62eec63c92fda=
+885f8fddc91f96ac3e0acf43688" target=3D"_blank">https://github.com/tosdr/tos=
+back2/commit/62eec63c92fda885f8fddc91f96ac3e0acf43688</a> to see the differ=
+ences!<br>
+
+<span class=3D"HOEnZb"><font color=3D"#888888"><br>
+--<br>
+<a href=3D"http://tosdr.org" target=3D"_blank">tosdr.org</a> | <a href=3D"h=
+ttp://twitter.com/tosdr" target=3D"_blank">twitter.com/tosdr</a> | <a href=
+=3D"http://github.com/tosdr" target=3D"_blank">github.com/tosdr</a><br>
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr%2Bunsubscribe@googlegroups.com">tosdr+unsub=
+scribe@googlegroups.com</a>.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr" target=
+=3D"_blank">http://groups.google.com/group/tosdr</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+</font></span></blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+--089e013d1a942bf77904edbe0305--

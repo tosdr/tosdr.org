@@ -1,0 +1,149 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBP4B5OHAKGQE6KZGM7A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id F2B5D161743
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 15:38:10 +0200 (CEST)
+Received: from mfilter9-d.gandi.net (mfilter9-d.gandi.net [217.70.178.138])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EDA4114223C
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 15:38:10 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter9-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter9-d.gandi.net (mfilter9-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id mtT2xgfJIobU for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 15:38:09 +0200 (CEST)
+Received: from mail-ye0-x23e.google.com (mail-ye0-x23e.google.com [IPv6:2607:f8b0:4002:c04::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C7D7F142209
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 15:38:08 +0200 (CEST)
+Received: by mail-ye0-f190.google.com with SMTP id m14sf1380935yen.7
+        for <anything@michielbdejong.com>; Mon, 08 Jul 2013 06:38:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=DKUhar2AX88AH7PiYfhXvLidJWccBEf5KHNWfd6W4/M=;
+        b=KF9lqDX+Zc/XJy8oqJLWseHscnTqo6uV4I2ibAZylo02tQFXw8kPJhG9apCTXXxy/r
+         U0eX0BG2Cr+PF4Drw4fgRDRZzAuILc8AKpzvy6IEDHmHw5zl+9F2miTq5Nbi/mLn8Hmn
+         4dOhY9HsUKVYNZL4oga34SQJ3RANFM8yvDWLfyITryUchwBC0wR4jrproLyIXW2+LJwQ
+         VbLrKc5ZWSRH+DpaaMRxLKOF4h7G0FflNRFf8s8/uc5nB71P/4o3DVabXkQQZ6dvzRNR
+         xdKP+jGWo1VLAoI3uvEck48nf2jnztN7/ijdN97txUiGpfumTAfKnERfaw9ABMPpCDII
+         K2zw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=DKUhar2AX88AH7PiYfhXvLidJWccBEf5KHNWfd6W4/M=;
+        b=hL6RS+L8qo09lqvG1Vd4O2ghyBppOO7tY2URFPjq4/2s4eJGjBkdcyj85+Up15jk9C
+         rHIqbLWwMSURTtcpDJILRLZ5z1/t1kSsn6ojOQ6HttQmRA29BnkdmbG2UG437+T9aEUc
+         EQM7/0kfY3ss0Y8bxgxigtXfNKlSWf6jqA0IUK1Q03B4UZezfdF4HBK6xGD6dPHnKlMQ
+         NEK/F8R1APmeqA29txyjA1nsFPgdEIQzxVifwet2yspjVdSakI8G5SNeQjAPMIAo7Lr6
+         j2KNnNGJ0uLJebMNnhUYoIsCjK8qbqtWqk/LbSKrGMmABKYtenRAcToX/p8RzxjNMz7L
+         leww==
+X-Received: by 10.49.1.112 with SMTP id 16mr506366qel.20.1373290687653;
+        Mon, 08 Jul 2013 06:38:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.98.67 with SMTP id eg3ls1809748qeb.28.gmail; Mon, 08 Jul
+ 2013 06:38:07 -0700 (PDT)
+X-Received: by 10.49.116.2 with SMTP id js2mr518766qeb.8.1373290687248;
+        Mon, 08 Jul 2013 06:38:07 -0700 (PDT)
+Date: Mon, 8 Jul 2013 06:38:07 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <9f0d492d-e264-46d5-88d6-49c9f182589d@googlegroups.com>
+In-Reply-To: <383fb8fb-2862-4db5-92cd-2c1cf002f988@googlegroups.com>
+References: <01c15244-73c3-4f11-8f30-e44752e5f082@googlegroups.com>
+ <383fb8fb-2862-4db5-92cd-2c1cf002f988@googlegroups.com>
+Subject: [tosdr:2450] Re: Apple.com has an age restriction of 13 years
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_11_33129739.1373290687022"
+
+------=_Part_11_33129739.1373290687022
+Content-Type: text/plain; charset=ISO-8859-1
+
+Based on how we're reviewing services now, we've decided that these age 
+clauses aren't particularly relevant to what we're doing at TOSDR.
+
+On Friday, December 7, 2012 10:20:40 AM UTC-6, Ian McGowan wrote:
+>
+> This has been noted and will be on the website soon.
+>
+> On Tuesday, December 4, 2012 2:00:13 PM UTC+1, Robin Monks wrote:
+>>
+>> We do not knowingly collect personal information from children under 13. 
+>>> If we learn that we have collected the personal information of a child 
+>>> under 13 we will take steps to delete the information as soon as possible.
+>>
+>> https://www.apple.com/privacy/
+>>
+>> /Robin 
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_11_33129739.1373290687022
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Based on how we're reviewing services now, we've decided that these age cla=
+uses aren't particularly relevant to what we're doing at TOSDR.<br><br>On F=
+riday, December 7, 2012 10:20:40 AM UTC-6, Ian McGowan wrote:<blockquote cl=
+ass=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px =
+#ccc solid;padding-left: 1ex;">This has been noted and will be on the websi=
+te soon.<br><br>On Tuesday, December 4, 2012 2:00:13 PM UTC+1, Robin Monks =
+wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex=
+;border-left:1px #ccc solid;padding-left:1ex"><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-co=
+lor:rgb(204,204,204);border-left-style:solid;padding-left:1ex"><span style=
+=3D"color:rgb(51,51,51);font-family:'Lucida Grande','Lucida Sans Unicode',H=
+elvetica,Arial,Verdana,sans-serif;font-size:12px;line-height:18px">We do no=
+t knowingly collect personal information from children under 13. If we lear=
+n that we have collected the personal information of a child under 13 we wi=
+ll take steps to delete the information as soon as possible.</span></blockq=
+uote><div><a href=3D"https://www.apple.com/privacy/" target=3D"_blank">http=
+s://www.apple.com/privacy/</a></div><div><br></div><div>/Robin&nbsp;</div><=
+/blockquote></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_11_33129739.1373290687022--

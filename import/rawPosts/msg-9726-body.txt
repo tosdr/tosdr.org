@@ -1,0 +1,104 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBZ6J3SIQKGQETSDJU4Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 512E316174A
+	for <anything@michielbdejong.com>; Mon, 16 Sep 2013 17:34:06 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4E2EE116448
+	for <anything@michielbdejong.com>; Mon, 16 Sep 2013 17:34:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id muRb9fY4Wdu6 for <anything@michielbdejong.com>;
+	Mon, 16 Sep 2013 17:34:04 +0200 (CEST)
+Received: from mail-ve0-x23f.google.com (mail-ve0-x23f.google.com [IPv6:2607:f8b0:400c:c01::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 7C7421160E2
+	for <michiel@michielbdejong.com>; Mon, 16 Sep 2013 17:34:01 +0200 (CEST)
+Received: by mail-ve0-f191.google.com with SMTP id c14sf1336205vea.8
+        for <michiel@michielbdejong.com>; Mon, 16 Sep 2013 08:34:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:subject:from:in-reply-to:date:message-id:references:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=IOUxtt3nTrdkO1TBphiu0emfxPQjsPw1G7+JOjDfqiQ=;
+        b=IlE8eyDV95Q+aHBO9wr7QyJwqCX+4h8fU72h7iavC124qoGZT8mrijo1+m4cCN4EoV
+         5KZ+towMq2saTGunGWrvxNcehSi0OW28JFiLS/a7GsrCvqbxUol7XEtZaip/Zg+xIz3S
+         RomilvlxY5sy/78wq0FUAuqOwRSeeDzuJaKTRCXMRmlKdY173v5r0qqz9OdEBBz4YyQ0
+         F/81PtYHAIThwEhDtBgeLsiCw2ty4iYL1PaCbxAhSot6bNmNlvZeqeyvCm2HIoyYYyL2
+         impX57GW1PFGm1wlq5d2T3dRo7jRxiKDiG2K9DExIIW7/jGl6oKtAWcqHmelPV0kMcA1
+         bt/A==
+X-Received: by 10.49.16.106 with SMTP id f10mr96154qed.11.1379345640464;
+        Mon, 16 Sep 2013 08:34:00 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.116.228 with SMTP id jz4ls2438640qeb.51.gmail; Mon, 16 Sep
+ 2013 08:33:59 -0700 (PDT)
+X-Received: by 10.58.155.227 with SMTP id vz3mr1961891veb.12.1379345639483;
+        Mon, 16 Sep 2013 08:33:59 -0700 (PDT)
+Received: from mail-ve0-x22f.google.com (mail-ve0-x22f.google.com [2607:f8b0:400c:c01::22f])
+        by gmr-mx.google.com with ESMTPS id ee5si1215537vdb.1.1969.12.31.16.00.00
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 16 Sep 2013 08:33:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400c:c01::22f as permitted sender) client-ip=2607:f8b0:400c:c01::22f;
+Received: by mail-ve0-f175.google.com with SMTP id jy13so3133618veb.34
+        for <tosdr@googlegroups.com>; Mon, 16 Sep 2013 08:33:59 -0700 (PDT)
+X-Received: by 10.220.186.202 with SMTP id ct10mr28051614vcb.14.1379345639375;
+        Mon, 16 Sep 2013 08:33:59 -0700 (PDT)
+Received: from [192.168.1.104] (adsl-108-71-196-159.dsl.stl2mo.sbcglobal.net. [108.71.196.159])
+        by mx.google.com with ESMTPSA id p5sm19409471vek.1.1969.12.31.16.00.00
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 16 Sep 2013 08:33:58 -0700 (PDT)
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2718] ToSBack: Policy Changes
+From: Ian McGowan <irmcgowan@gmail.com>
+In-Reply-To: <5233e58779294_229f430d8164232c@dragon.mail>
+Date: Mon, 16 Sep 2013 10:33:53 -0500
+Message-Id: <B91480A0-A13A-405A-84E6-716D64C7C83F@gmail.com>
+References: <5233e58779294_229f430d8164232c@dragon.mail>
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400c:c01::22f
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+The additions/deletions to this section aren't highlighted at all. Any reason for that? Makes it much more difficult to draw any conclusions about the update...
+
+-Ian
+
+On Sep 13, 2013, at 11:26 PM, ToSBack wrote:
+
+> amazon.com: Third Party Licenses
+> These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/ca89ff9e1dcbf8ab60fba74483ed6cc16754767a to see the differences!
+> 
+> -- 
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> --- 
+> You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

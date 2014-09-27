@@ -1,0 +1,227 @@
+Return-Path: <tosdr+bncBAABBZ6SRCHQKGQEIUKOITY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 3C2A516174D
+	for <anything@michielbdejong.com>; Sun, 14 Jul 2013 06:30:39 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 229CF22609D
+	for <anything@michielbdejong.com>; Sun, 14 Jul 2013 06:30:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 0hqSllZz8PlP for <anything@michielbdejong.com>;
+	Sun, 14 Jul 2013 06:30:37 +0200 (CEST)
+Received: from mail-oa0-x23e.google.com (mail-oa0-x23e.google.com [IPv6:2607:f8b0:4003:c02::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id CF4DC226084
+	for <anything@michielbdejong.com>; Sun, 14 Jul 2013 06:30:33 +0200 (CEST)
+Received: by mail-oa0-f62.google.com with SMTP id m1sf3265759oag.27
+        for <anything@michielbdejong.com>; Sat, 13 Jul 2013 21:30:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version:x-sg-eid
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=j4jFOTTngomUfAn0yK68k4tjyr8NKuSy8g4PJIn3RrM=;
+        b=wy/H5AnLu+8Ur37O3i1rSrx2eJwWLUdagwQiPogcIQgGVCwnyYIvxWxavEeXcnQIdg
+         XxTjvpN2PN2jg2ZvrwdRNuaxI8q/zFiQTAtHz5qSnh1EGChwRkaWq00wIfM2w+oJgNyE
+         NbImZSzwh96URcaa77jxdC6ziqNT30dwnO3hjNcfk3nuxZkj7dUzDnJeb4eEjCZiITZU
+         SCRzJ5pCLbQudyBQiPe4x/ItwE0UVlEfnCs3Wl9JQDSwhGlhvo0Mx3LJvt5JdEF+sYZf
+         +CjiQcXoXMnClbp77bdumWH/i6elfvMzIUzNllqKnNKP6STJ4xrD76Q0bfcfG6mr9l6J
+         Ejcw==
+X-Received: by 10.50.124.66 with SMTP id mg2mr532299igb.16.1373776232233;
+        Sat, 13 Jul 2013 21:30:32 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.2.70 with SMTP id 6ls1121706igs.24.gmail; Sat, 13 Jul 2013
+ 21:30:31 -0700 (PDT)
+X-Received: by 10.42.60.17 with SMTP id o17mr33748060ich.29.1373776231783;
+        Sat, 13 Jul 2013 21:30:31 -0700 (PDT)
+Received: from o17.shared.sendgrid.net (o17.shared.sendgrid.net. [74.63.231.250])
+        by gmr-mx.google.com with SMTP id vn1si987230igb.1.2013.07.13.21.30.31
+        for <tosdr@googlegroups.com>;
+        Sat, 13 Jul 2013 21:30:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 74.63.231.250 as permitted sender) client-ip=74.63.231.250;
+Received: by 10.4.35.248 with SMTP id mf60.17045.51E229643
+        Sun, 14 Jul 2013 04:30:28 +0000 (UTC)
+Received: from mi12.sendgrid.net ([UNAVAILABLE]. [10.60.208.25])
+	by 10.60.208.6:2500 (trex/4.8.23);
+	Sun, 14 Jul 2013 04:30:29 GMT
+Received: from tosdr.org (unknown [162.211.64.106])
+	by mi12 (SG) with ESMTP id 13fdb71b23d.846.340ec1
+	for <tosdr@googlegroups.com>; Sat, 13 Jul 2013 23:30:28 -0500 (CST)
+Date: Sun, 14 Jul 2013 00:30:28 -0400
+From: ToSBack <tosback@tosdr.org>
+To: tosdr@googlegroups.com
+Message-ID: <51e2296492453_740f479f40671983@dragon.mail>
+Subject: [tosdr:2509] ToSBack: Policy Changes
+Mime-Version: 1.0
+X-SG-EID: QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYsOo9kTvTfoqxzZ3EeYf019IZ6JU41bE37T1nZO30FYiRQ+yv9/QO55RypLFPK5TKpfJgJnkKaNQXDY8y3BeDZB
+X-Original-Sender: tosback@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info
+ designates 74.63.231.250 as permitted sender) smtp.mail=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info;
+       dkim=pass header.i=@sendgrid.me
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+rapidshare.com: Terms of Use
+netflix.com: Terms of Use
+netflix.com: Privacy Policy
+spideroak.com: Terms of Use
+spideroak.com: Privacy Policy
+cloudant.com: Privacy
+cloudant.com: Terms of Service
+whatsapp.com: Terms of Service and Privacy
+blizzard.com: Terms of Use
+blizzard.com: Privacy Policy
+skype.com: Terms of Use
+skype.com: Group Video Calling Fair Usage Policy
+skype.com: Fair Usage Policy for Subscriptions
+skype.com: Fair Usage Policy for US Minute Bundles
+skype.com: Privacy Policy
+skype.com: Etiquette
+skype.com: Skype Emergency Calling
+skype.com: Trademark Guidelines
+skype.com: Business Terms of Use
+skype.com: Business Terms of Use (USA)
+foursquare.com: Terms of Use
+foursquare.com: Privacy Policy
+vbulletin.com: Terms and Conditions
+freeforums.org: Privacy Policy
+envato.com: Terms and Conditions
+app.net: Terms of Service
+google.com: Privacy Policy
+google.com: Terms of Service
+bit.ly: Terms of Service
+soundcloud.com: Privacy Policy
+soundcloud.com: Terms of Service
+gravatar.com: Privacy Policy
+twitpic.com: Privacy Policy
+twitpic.com: Terms of Service
+grammarly.com: Terms of Service and License Agreement
+yahoo.com: Terms of Service
+yahoo.com: Privacy Policy
+ebuddy.com: Terms of Use
+ebuddy.com: Privacy Policy
+flattr.com: Terms of Use
+flattr.com: Privacy Policy
+myspace.com: Privacy Policy
+myspace.com: Terms of Service
+evernote.com: Privacy Policy
+evernote.com: Terms of Service
+tumblr.com: Privacy Policy
+tumblr.com: Terms of Service
+youtube.com: Privacy Policy
+youtube.com: Terms of Service
+habbo.com: Terms of Service
+habbo.com: Privacy Policy
+facebook.com: Data Use Policy
+facebook.com: Terms of Service
+videobb.com: Terms and Conditions
+videobb.com: Privacy Policy
+faranow.com: Privacy Policy
+faranow.com: Terms of Service
+500px.com: Terms of Service
+bearshare.com: Terms and Conditions
+olx.com: Terms of Use
+allrecipes.com: Privacy Policy
+allrecipes.com: Terms and Conditions
+ifttt.com: Terms of Use
+phpbb.com: Terms of Use
+phpbb.com: Privacy Policy
+disqus.com: Terms of Service
+disqus.com: Privacy Policy
+zoosk.com: Privacy Policy
+spotify.com: Privacy Policy
+spotify.com: Terms and Conditions (Mobile)
+spotify.com: Terms and Conditions (Premium)
+spotify.com: Terms and Conditions (Unlimited)
+spotify.com: Terms and Conditions of Use
+wordfeud.com: Terms of Service
+wordfeud.com: Privacy Policy
+wordpress.com: Terms Of Service
+wordpress.com: Privacy Policy
+lastpass.com: Terms of Service
+lastpass.com: Privacy Statement
+steampowered.com: Privacy Policy Agreement
+steampowered.com: Steam Subscriber Agreement
+twitter.com: Privacy Policy
+twitter.com: Terms of Service
+delicious.com: Privacy Policy
+delicious.com: Terms of Service
+runescape.com: Terms and Conditions
+runescape.com: Privacy Policy
+microsoftstore.com: Privacy Policy
+microsoftstore.com: Terms of Service
+linkedin.com: Privacy Policy
+linkedin.com: Terms of Service
+microsoft.com: Privacy Policy
+microsoft.com: Terms of Service
+amazon.com: Conditions of Use
+amazon.com: Kindle for Android Legal Notices
+amazon.com: Kindle for PC Legal Notices
+amazon.com: Kindle for Mac Legal Notices
+amazon.com: Kindle Cloud Reader Legal Notices
+amazon.com: Kindle for Windows 8 Legal Notices
+amazon.com: Amazon App Suite Legal Notices
+amazon.com: Interest-Based Ads
+amazon.com: Third Party Licenses
+hypster.com: Terms of Service
+apple.com: Privacy Policy
+apple.com: Application-Based Services Terms of Use
+apple.com: iChat Account Terms of Service
+apple.com: Game Center Terms and Conditions
+apple.com: Apple Support Communities Use Agreement
+apple.com: Website Terms of Service
+apple.com: iCloud Terms of Service
+apple.com: iTunes Terms of Service
+xing.com: Privacy Policy
+xing.com: Terms and Conditions
+flickr.com: Privacy Policy
+flickr.com: Terms of Service
+flickr.com: Community Guidelines
+verizon.com: Privacy Policy
+verizon.com: Terms of Service
+minecraft.net: Terms and Conditions
+duckduckgo.com: Privacy Policy
+att.com: Privacy Policy
+att.com: Internet Terms of Service
+att.com: Wireless Plan Terms
+couchsurfing.org: Terms of Use
+couchsurfing.org: Privacy Policy
+seenthis.net: Intellectual Property
+comcast.com: Privacy Statement
+comcast.com: Customer Privacy Policy
+comcast.com: Acceptable Use Policy for Xfinity Internet
+comcast.com: Residential Subscriber Agreement
+github.com: Terms of Service
+nabble.com: Terms of Service
+dropbox.com: Privacy Policy
+wikipedia.org: Privacy Policy
+wikipedia.org: Terms of Use
+comcast.net: Web Services Privacy Policy
+comcast.net: Web Terms of Service
+comcast.net: Software License Agreement
+ These were changed in last night's crawl. Please have a look at the commit called 'changes for reviewed docs' at https://github.com/tosdr/tosback2/commits/master to see the differences!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
