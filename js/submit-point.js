@@ -94,8 +94,8 @@ $(document).ready(function(){
 
         '</fieldset>' +
         '<div class="form-actions">' +
-        '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
         '<button class="btn btn-primary" id="postPoint">Send</button>' +
+        '<span class="help-user">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></span>' +
             
         '</div>' +
         '</form>');
