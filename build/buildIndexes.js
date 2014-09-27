@@ -14,6 +14,9 @@ function writeOut(grunt) {
 
   grunt.file.write('index/topics.json', prettyjson(topic));
   grunt.log.writeln('wrote index/topics.json');
+
+  grunt.file.write('js/topicsArr.js', 'var topics = '+prettyjson(Object.keys(topic))+';\n');
+  grunt.log.writeln('wrote js/topicsArr.js');
 }
 function addToServices(services, point) {
   //console.log('adding point "'+point+'" to services:');
