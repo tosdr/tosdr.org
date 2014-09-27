@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs'),
+  prettyjson = require('./prettyjson');
 
 module.exports = function(grunt){
   grunt.task.registerTask('generateApiFiles', 'Generate API files', function(){
@@ -9,7 +10,7 @@ module.exports = function(grunt){
 			for (j = 0; j < obj.points.length; j++) {
 				obj.pointsData[obj.points[j]] = grunt.file.readJSON('points/'+obj.points[j]+'.json');
 			}
-			grunt.file.write('api/1/service/'+i+'.json', JSON.stringify(obj));
+			grunt.file.write('api/1/service/'+i+'.json', prettyjson.stringify(obj));
 		}
   });
 };
