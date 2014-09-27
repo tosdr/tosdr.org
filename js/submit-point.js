@@ -143,6 +143,7 @@ $(document).ready(function(){
     $('#submit-point-form').html('<div class="hero-unit"><p>Your point has been submitted. Thank you! '
         +'<a href="/submit-point.html">submit another one</a> or '
         +'<a href="/pendingpoints.html">see the list</a>.</p></div>');
+    location = '#top';
   }
 
   function showError(){
