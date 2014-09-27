@@ -73,7 +73,7 @@ $(document).ready(function(){
 
         '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
-        '<label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
+        '<label class="radio inline good"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline neutral"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline bad"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline blocker"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
 
         '<label for="summary">Please summarise this clause <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="What the clause in the terms does. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
@@ -84,7 +84,7 @@ $(document).ready(function(){
 '          <button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
 '<!--          You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
-        '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.org/tos" />' +
+        '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
 
         '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
 
