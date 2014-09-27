@@ -63,7 +63,11 @@ $(document).ready(function(){
   function showServiceFields() {
     var str = '';
     for(var i=0; i<numServices; i++) {
-      str += '<input type="text" placeholder="service">';
+      str += '          <select id="service'+i+'">' +
+'            <option>Select a service</option>' +
+'            <option>Facebook</option>' +
+'            <option>Google</option>' +
+'          </select>';
     }
     $('#serviceFields').html(str);
   }
@@ -79,8 +83,6 @@ $(document).ready(function(){
 
         '<label for="summary">Please summarise this clause <a href="#FIXME" target="_blank" class="markdownparser hidden until the feature is made">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="What the clause in the terms does. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
-        '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
-
 '          <label id="services">Service(s) to which the point applies</label>' +
 '                                       <span id="serviceFields"></span>' +
 '          <button class="btn btn-inline" type="button" id="addServiceField">Add one</button>' +
@@ -88,7 +90,7 @@ $(document).ready(function(){
 
         '<label for="source">Source</label><input type="url" id="sourceField" name="source" placeholder="http://www.example.com/tos" />' +
 
-        '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
+        '<label for="topics">Topic</label>' +
 
 '          <select id="topics">' +
 '            <option>Select a topic</option>' +
