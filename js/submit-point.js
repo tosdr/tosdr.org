@@ -57,7 +57,6 @@ $(document).ready(function(){
 '					<input type="text" placeholder="twitter">' +
 '					<button class="btn btn-inline" type="button">Add one</button>' +
 '<!--					You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
-'
 
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
                                 '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea>' +
