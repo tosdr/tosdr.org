@@ -100,7 +100,7 @@ $(document).ready(function(){
                     $('#pendingpoints .comments-' + point.id + ' .leaveComment').before('<p id="currentAddition" class="comment"></p>');
                     var commentContent = $('#currentAddition').text(comment.content);
                     if (commentContent) {
-                      commentContent.prepend('<img src="https://secure.gravatar.com/avatar/' + comment.author.replace(/[^a-f0-9]/gi, '') + '?d=retro&r=g" class="avatar" style="margin: 1em;" />').removeAttr('id');
+                      commentContent.prepend('<img src="https://secure.gravatar.com/avatar/' + comment.author.replace(/[^a-f0-9]/gi, '') + '?d=retro&r=g" class="avatar" />').removeAttr('id');
                     }
                 });
             });
