@@ -2,7 +2,7 @@
 
 var pendingpointsListUrl = 'https://3pp.io:4343/get/pendingpoints';
 var assertionUrl = 'https://3pp.io:4343/persona';
-var postCommentUrl = 'https://3pp.io:4343/post/comment';
+var postCommentUrl = 'https://3pp.io:4343/post/point';
 
 $(document).ready(function(){
     var loggedInUser = null;
