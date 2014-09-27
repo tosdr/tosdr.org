@@ -6,10 +6,12 @@
 var prettyjson = require('../scripts/prettyjson');
 var service = {}, topic = {};
 function writeOut(grunt) {
-  //console.log(service);
   grunt.file.write('index/services.json', prettyjson(service));
   grunt.log.writeln('wrote index/services.json');
-  //console.log(topic);
+
+  grunt.file.write('js/servicesArr.js', 'var services = [\''+Object.keys(service).join('\', \'')+'\'];\n');
+  grunt.log.writeln('wrote js/servicesArr.js');
+
   grunt.file.write('index/topics.json', prettyjson(topic));
   grunt.log.writeln('wrote index/topics.json');
 }
