@@ -52,8 +52,11 @@ $(document).ready(function(){
                                 '<label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label>' +
                                 '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
-                                '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea></div><button class="btn btn-primary" id="postPoint">Send</button>' +
+                                '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea>' +
                             '</fieldset>' +
+                            '<div class="form-actions">' +
+                                '<button class="btn btn-primary" id="postPoint">Send</button>' +
+                            '</div>' +
                         '</form>');
 		
         var response = $.get(serviceListUrl, 'json');
