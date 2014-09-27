@@ -47,9 +47,11 @@ $(document).ready(function(){
 	function showSubmitForm(email){
 		$('#form').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p>' +
                         '<form class="submitForm">' +
+                            '' +
                             '<fieldset>' +
+                                '<legend>Submit a point about a clause</legend>' +
                                 '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
-                                '<label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label>' +
+
                                 '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
 '					<label id="services">Service(s) to which the point applies</label>' +
@@ -58,8 +60,12 @@ $(document).ready(function(){
 '					<button class="btn btn-inline" type="button">Add one</button>' +
 '<!--					You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
+                                '<label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
+
                                 '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
-                                '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea>' +
+
+                                '<label for="summary">Can you summarise this clause? <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="This is the summary, the recap of what the clause in the terms do. It is usually a very difficult exercise. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
+
                             '</fieldset>' +
                             '<div class="form-actions">' +
                                 '<button class="btn btn-primary" id="postPoint">Send</button>' +
