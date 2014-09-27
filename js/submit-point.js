@@ -49,16 +49,16 @@ $(document).ready(function(){
   }
 
   function showPersona(){
-    $('#form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
+    $('#submit-point-form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
     $('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
   }
 
   function showSigningIn(){
-    $('#form').html('<div class="hero-unit signin"><p>(signing you in...)</p></div>');
+    $('#submit-point-form').html('<div class="hero-unit signin"><p>(signing you in...)</p></div>');
   }
 
   function showLoading(){
-    $('#form').html('<p class="wait-loading">(loading...)</p>');
+    $('#submit-point-form').html('<p class="wait-loading">(loading...)</p>');
   }
 
   // This is ugly, too much html here
@@ -66,7 +66,7 @@ $(document).ready(function(){
   //
 
   function showSubmitForm(email){
-    $('#form').html('<form class="submitForm">' +
+    $('#submit-point-form').html('<form class="submitForm">' +
         '' +
         '<fieldset>' +
         '<legend>Submit a point about a clause</legend>' +
@@ -119,13 +119,13 @@ $(document).ready(function(){
   }
 
   function showConfirmation(){
-    $('#form').html('Your point has been submitted. Thank you! '
+    $('#submit-point-form').html('Your point has been submitted. Thank you! '
         +'<a href="/submit-point.html">submit another one</a> or '
         +'<a href="/pendingpoints.html">see the list</a>.');
   }
 
   function showError(){
-    $('#form').prepend('<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button>Something went wrong saving your point, did you fill in all the fields?</div>');
+    $('#submit-point-form').prepend('<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button>Something went wrong saving your point, did you fill in all the fields?</div>');
   }
   showLoading();
 });
