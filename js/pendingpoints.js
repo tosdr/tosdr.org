@@ -43,7 +43,7 @@ $(document).ready(function(){
             var pointId = $(this).attr('id').substr(9);
             $(this).find('.leaveComment').html('<p>Commenting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p><form class="commentForm"><fieldset><div class="control-group"><textarea name="comment" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postComment">Send</button></div></fieldset></form>')
             .find('.commentForm').submit(function(e){
-                var response = $.ajax(postCommentUrl, {data: {comment: $('#comments-' + pointId + ' .leaveComment textarea').val(), pointId: pointId}, type: 'POST', xhrFields: {withCredentials: true}});
+                var response = $.ajax(postCommentUrl, {data: {summary: $('#comments-' + pointId + ' .leaveComment textarea').val(), pointId: pointId}, type: 'POST', xhrFields: {withCredentials: true}});
                 response.done(showConfirmation);
                 response.fail(showError);
                 e.preventDefault();
