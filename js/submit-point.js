@@ -23,8 +23,8 @@ $(document).ready(function(){
     if (loadTimer) {
       clearTimeout(loadTimer);
       loadTimer = null;
-                }
-                showSigningIn();
+    }
+    showSigningIn();
     var response = $.ajax(assertionUrl + '/verify', {data: {assertion: assertion}, type: 'POST', xhrFields: {withCredentials: true}});
     response.done(login);
     response.fail(function(){
@@ -42,11 +42,11 @@ $(document).ready(function(){
     onlogout: logout
   });
 
-        var numServices = 1;
-        function showServiceFields() {
-            var str = '          <input type="text" placeholder="service">';
-            $('.serviceFields').html(str);
-        }
+  var numServices = 1;
+  function showServiceFields() {
+    var str = '          <input type="text" placeholder="service">';
+    $('.serviceFields').html(str);
+  }
 
   function showPersona(){
     $('#form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
@@ -61,28 +61,28 @@ $(document).ready(function(){
     $('#form').html('<p class="wait-loading">(loading...)</p>');
   }
 
-        // This is ugly, too much html here
-        //
-        //
+  // This is ugly, too much html here
+  //
+  //
 
   function showSubmitForm(email){
     $('#form').html('<form class="submitForm">' +
-                            '' +
-                            '<fieldset>' +
-                                '<legend>Submit a point about a clause</legend>' +
-                        
-                                '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
+        '' +
+        '<fieldset>' +
+        '<legend>Submit a point about a clause</legend>' +
 
-                                '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
+        '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
+
+        '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
 '          <label id="services">Service(s) to which the point applies</label>' +
 '                                       <span id="serviceFields"></span>' +
 '          <button class="btn btn-inline" type="button" onclick="addServiceField();">Add one</button>' +
 '<!--          You need to suggest services which have a file in services/ if a user types a service which does not exist in the database, redirect him or her to the service form-->' +
 
-                                '<label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
+        '<label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
 
-                                '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
+        '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
 
 '          <select id="topics">' +
 '            <option>Select a topic</option>' +
@@ -90,15 +90,15 @@ $(document).ready(function(){
 '            <option>Changes</option>' +
 '          </select>' +
 
-                                '<label for="summary">Can you summarise this clause? <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="This is the summary, the recap of what the clause in the terms do. It is usually a very difficult exercise. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
+        '<label for="summary">Can you summarise this clause? <a href="#FIXME" target="_blank" class="markdownparser">Parsed as Markdown</a></label><textarea name="summary" id="summaryField" required class="input-xxlarge" placeholder="This is the summary, the recap of what the clause in the terms do. It is usually a very difficult exercise. Try not to make more than 5 sentences, but sometimes more is needed. Be creative. Feel free to include some quotes from the terms directly. It is very important that it is easy to understand and written in plain English."></textarea>' +
 
-                            '</fieldset>' +
-                            '<div class="form-actions">' +
-                                '<button class="btn btn-primary" id="postPoint">Send</button>' +
-                                
-                    '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
-                            '</div>' +
-                        '</form>');
+        '</fieldset>' +
+        '<div class="form-actions">' +
+        '<button class="btn btn-primary" id="postPoint">Send</button>' +
+
+        '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
+        '</div>' +
+        '</form>');
     showServiceFields();
     var response = $.get(serviceListUrl, 'json');
     response.done(function(services){
@@ -120,8 +120,8 @@ $(document).ready(function(){
 
   function showConfirmation(){
     $('#form').html('Your point has been submitted. Thank you! '
-                   +'<a href="/submit-point.html">submit another one</a> or '
-                   +'<a href="/pendingpoints.html">see the list</a>.');
+        +'<a href="/submit-point.html">submit another one</a> or '
+        +'<a href="/pendingpoints.html">see the list</a>.');
   }
 
   function showError(){
