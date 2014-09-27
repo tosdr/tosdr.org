@@ -90,11 +90,8 @@ $(document).ready(function(){
 
         '<label for="topics">Topic</label>' +
 
-'          <select id="topics">' +
-'            <option>Select a topic</option>' +
-'            <option>Scope of the copyright license</option>' +
-'            <option>Changes</option>' +
-'          </select>' +
+'          <input type="text" name="topic" data-provide="typeahead" autocomplete="off" data-source='
+               +JSON.stringify(topics).replace('"', '\"')+'>' +
 
         '</fieldset>' +
         '<div class="form-actions">' +
