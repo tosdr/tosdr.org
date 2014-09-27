@@ -94,10 +94,6 @@ $(document).ready(function(){
 
         '</fieldset>' +
         '<div class="form-actions">' +
-        '<button class="btn btn-primary" id="postPoint">Send</button>' +
-
-        '</fieldset>' +
-        '<div class="form-actions">' +
         '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
         '<button class="btn btn-primary" id="postPoint">Send</button>' +
             
