@@ -1,8 +1,8 @@
 'use strict';
 
-var pendingpointsListUrl = 'http://3pp.io:4343/get/pendingpoints';
-var assertionUrl = 'http://3pp.io:4343/persona';
-var postCommentUrl = 'http://3pp.io:4343/post/comment';
+var pendingpointsListUrl = 'https://3pp.io:4343/get/pendingpoints';
+var assertionUrl = 'https://3pp.io:4343/persona';
+var postCommentUrl = 'https://3pp.io:4343/post/comment';
 
 $(document).ready(function(){
     var loggedInUser = null;
@@ -98,7 +98,10 @@ $(document).ready(function(){
 
                 $.each(point.comments, function(index, comment){
                     $('#pendingpoints .comments-' + point.id + ' .leaveComment').before('<p id="currentAddition" class="comment"></p>');
-                    $('#currentAddition').text(comment.content).prepend('<img src="https://secure.gravatar.com/avatar/' + comment.author.replace(/[^a-f0-9]/gi, '') + '?d=retro&r=g" class="avatar" style="margin: 1em;" />').removeAttr('id');
+                    var commentContent = $('#currentAddition').text(comment.content);
+                    if (commentContent) {
+                      commentContent.prepend('<img src="https://secure.gravatar.com/avatar/' + comment.author.replace(/[^a-f0-9]/gi, '') + '?d=retro&r=g" class="avatar" style="margin: 1em;" />').removeAttr('id');
+                    }
                 });
             });
             showPersona();

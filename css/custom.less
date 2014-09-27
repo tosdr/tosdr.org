@@ -131,6 +131,9 @@ button.close {padding:2px 6px 6px;}
 	min-height:40px;
 }
 
+.tosdr-rating .tweet {
+}
+
 .point .label.context { 
 	font-weight:400;
 	background-color: rgba(0,136,204,0.1);
@@ -264,6 +267,14 @@ margin-left: .6em;
 padding:0 1em;
 }
 
+
+/* Service Cards! */
+
+.tosdr-card {
+    .service-rating {
+        margin-left: 1em;
+    }
+}
 
 /*Topics Listing*/
 
@@ -462,10 +473,79 @@ img.avatar {
 
 /*ToSDR form*/
 
-.tosdr-form legend {
-margin-top:2em;
+.tosdr-form {
+    legend {
+        margin-top:2em;
+    }
+    label {
+        margin-top: 1em;
+    }
 }
 
+.tosdr-form .wait p {
+    margin: auto;
+    background: url('/img/loading.gif') bottom center no-repeat;
+    min-width: 32px;
+    min-height: 60px;
+}
+.tosdr-form .wait.loading {
+    color: transparent;
+}
+
+.tosdr-form .form-actions .help-user {
+    padding: 0.5em 1em;
+}
+
+
+#submit-point-form {
+    min-height: 400px;
+
+    .hero-unit {
+        text-align: center;
+        background-color: transparent;
+    }
+
+    .thirdtos {
+        margin-top: 6em;
+        font-size: 0.8em;
+    }
+
+    #titleField {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+
+        @media (min-width: 450px) {
+            width: 400px;
+        }
+    }
+
+    #summaryField {
+        min-height: 100px;
+    }
+    
+    .radio.inline {
+        font-weight: 500;
+    }
+
+    .radio.good {
+        color: #79B752;
+    }
+    .radio.neutral {
+        color: #999999;
+    }
+    .radio.bad {
+        color: #D66F2C;
+    }
+    .radio.blocker {
+        color: #C43C35;
+    }
+
+    #serviceFields input, #sourceField[type="url"] {
+        font-family: @monoFontFamily;
+    }
+    
+}
 
 /*Blog*/
 

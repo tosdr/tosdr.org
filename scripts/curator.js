@@ -18,7 +18,7 @@ function savePoint(filename) {
 }
 
 function displayPoint(res, filename, reason, data) {
-  res.write('<li> <!-- <a href="#upvote" class="arrow-upvote btn btn-small"><img src="http://tosdr.org/img/grayarrow.gif" alt="" /></a> -->'
+  res.write('<li> <!-- <a href="#upvote" class="arrow-upvote btn btn-small"><img src="https://tosdr.org/img/grayarrow.gif" alt="" /></a> -->'
     + '<a href="?' + filename + '" class="btn btn-small">Make a point</a>  <a target="_blank" href="'
     + data.discussion + '">' + data.title + '</a> <a onclick="dismiss(\'' + filename
     + '\');" class="pull-right" style="color:gray;">Dismiss</a></li>');
