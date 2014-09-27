@@ -63,7 +63,7 @@ $(document).ready(function(){
   function showServiceFields() {
     var str = '';
     for(var i=0; i<numServices; i++) {
-      str += '          <input name="service'+i+'" data-provide="typeahead" autocomplete="off" data-source='
+      str += '          <input type="text" name="service'+i+'" data-provide="typeahead" autocomplete="off" data-source='
           +JSON.stringify(services).replace('"', '\"')+'>';
     }
     console.log(str);
