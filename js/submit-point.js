@@ -45,11 +45,13 @@ $(document).ready(function(){
         //
 
 	function showSubmitForm(email){
-		$('#form').html('<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
-                        '<form class="submitForm">' +
+		$('#form').html('<form class="submitForm">' +
                             '' +
                             '<fieldset>' +
                                 '<legend>Submit a point about a clause</legend>' +
+                                
+                                '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
+                        
                                 '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
                                 '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
