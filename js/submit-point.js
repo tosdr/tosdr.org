@@ -48,7 +48,7 @@ $(document).ready(function(){
 				}
 
 	function showPersona(){
-		$('#form').html('<p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p>');
+		$('#form').html('<div class="hero-unit signin"><p>To submit a point, please sign in — you can use an existing email address.</p><p><img class="signinButton" src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" alt="Sign in" /></p></div>');
 		$('.signinButton').click(function(){ navigator.id.request(); }).css('cursor', 'pointer');
 	}
 
@@ -61,12 +61,14 @@ $(document).ready(function(){
 				//
 
 	function showSubmitForm(email){
-		$('#form').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p>' +
-												'<form class="submitForm">' +
-														'' +
-														'<fieldset>' +
-																'<legend>Submit a point about a clause</legend>' +
-																'<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
+		$('#form').html('<form class="submitForm">' +
+                            '' +
+                            '<fieldset>' +
+                                '<legend>Submit a point about a clause</legend>' +
+                                
+                                '<p class="help-block">Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address? Log out!)</a></p>' +
+                        
+                                '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
 
 																'<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
 
