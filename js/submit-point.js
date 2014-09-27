@@ -140,9 +140,9 @@ $(document).ready(function(){
   }
 
   function showConfirmation(){
-    $('#submit-point-form').html('Your point has been submitted. Thank you! '
+    $('#submit-point-form').html('<div class="hero-unit"><p>Your point has been submitted. Thank you! '
         +'<a href="/submit-point.html">submit another one</a> or '
-        +'<a href="/pendingpoints.html">see the list</a>.');
+        +'<a href="/pendingpoints.html">see the list</a>.</p></div>');
   }
 
   function showError(){
