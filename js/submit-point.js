@@ -48,11 +48,11 @@ $(document).ready(function(){
 		$('#form').html('<p>Submitting as ' + email + ' <a href="" class="signoutButton">(Not your email address?)</a></p>' +
                         '<form class="submitForm">' +
                             '<fieldset>' +
-                                '<div class="control-group"><label for="title">Title</label><input type="text" id="titleField" name="title" required /></div>' +
-                                '<div class="control-group"><label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label></div>' +
-                                '<div class="control-group"><label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" /></div>' +
-                                '<div class="control-group"><label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" /></div>' +
-                                '<div class="control-group"><label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea></div><div class="control-group"><button class="btn btn-primary" id="postPoint">Send</button></div>' +
+                                '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
+                                '<label class="radio inline"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline"><input type="radio" name="point" id="pointGood" value="good" />Good</label>' +
+                                '<label for="services">Service(s)</label><input id="servicesField" name="services" required class="input-large" />' +
+                                '<label for="topics">Topic</label><input id="topicsField" name="topics" required class="input-large" />' +
+                                '<label for="summary">Can you summarise this clause?</label><textarea name="summary" id="summaryField" required class="input-xxlarge"></textarea></div><button class="btn btn-primary" id="postPoint">Send</button>' +
                             '</fieldset>' +
                         '</form>');
 		
