@@ -88,7 +88,7 @@ $(document).ready(function(){
         '<fieldset>' +
         '<legend>Submit a point about a clause</legend>' +
 
-        '<label for="title">Title</label><input type="text" id="titleField" name="title" required />' +
+        '<label for="title">Title</label><input type="text" id="titleField" name="title" required placeholder="e.g. “This service tracks you on other websites” or “Broad copyright license on your content”" />' +
 
         '<label class="radio inline good"><input type="radio" name="point" id="pointGood" value="good" />Good</label><label class="radio inline neutral"><input type="radio" name="point" id="pointNeutral" value="neutral" />Neutral</label><label class="radio inline bad"><input type="radio" required name="point" id="pointBad" value="bad" />Bad</label><label class="radio inline blocker"><input type="radio" name="point" id="pointBlocker" value="blocker" />Blocker</label>' +
 
