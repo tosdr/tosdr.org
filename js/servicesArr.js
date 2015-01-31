@@ -31,6 +31,7 @@ var services = [
   "ifttt",
   "informe",
   "instagram",
+  "kolabnow",
   "lastpass",
   "microsoft",
   "microsoft-store",
