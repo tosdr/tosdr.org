@@ -79,7 +79,6 @@ $(function () {
 
   if (location.hash.length > 1) {
     var hash = location.hash.substring(1);
-
     if (hash.indexOf("=") != -1) {
       var splits = hash.split("=");
       if (splits.length == 2 && splits[0] == "search" && splits[1].length > 0) {
@@ -90,10 +89,40 @@ $(function () {
         $('html, body').animate({
           scrollTop: $("#services").offset().top
         }, 1000);
-      }
+      } 
     } else {
       showModal(hash);
     }
   }
+  
+  function getURLParam(oTarget, sVar) {
+    return decodeURI(oTarget.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURI(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+  }
+  
+  if (getURLParam(window.location, 'service') !== '') {
+    // allows for service permalink with explicit GET parameter
+    var serviceName = getURLParam(window.location, 'service');
+    showModal(serviceName);
+    
+  } else if (getURLParam(window.location, 'servicePoint') !== '') {
+    
+    // allows for directly referencing a service's point in URL
+      // ex.: https://tosdr.org/?servicePoint=google__lU-QhFXMOcU 
+      // GET parameters syntax: /?servicePoint=<serviceName>__<pointId>
+    var servicePoint = getURLParam(window.location, 'servicePoint')
+    if (servicePoint.indexOf('__') != -1 && servicePoint.split('__')[0].length > 0 && servicePoint.split('__')[1].length > 0 ) {
+      var serviceName = servicePoint.split('__')[0];
+      var pointId = servicePoint.split('__')[1];
+      var serviceMatchBool = showModal(serviceName);
+      if (serviceMatchBool){
+        var subtractFromOffset = $(".modal-header").outerHeight() + $("#modal_" + serviceName).offset().top + 25
+        var offset = $("#popup-point-" + serviceName + "-" + pointId).offset().top;
+        $('#modal_' + serviceName + ' .modal-body').animate({
+          scrollTop: offset - subtractFromOffset
+        }, 1000)
+      }
+    } 
+  }
+  
 });
 
