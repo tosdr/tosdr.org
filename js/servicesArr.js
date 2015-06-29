@@ -36,7 +36,6 @@ var services = [
   "microsoft",
   "microsoft-store",
   "mint.com",
-  "mykolab-com",
   "nabble",
   "netflix",
   "olx",
