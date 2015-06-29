@@ -33,7 +33,7 @@ var services = [
   "informe",
   "instagram",
   "jagex",
-  "kippt.com",
+  "kippt",
   "kolabnow",
   "lastpass",
   "microsoft",
