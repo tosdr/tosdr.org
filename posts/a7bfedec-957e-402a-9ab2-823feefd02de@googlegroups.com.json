@@ -1,0 +1,76 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "laurenthai@gmail.com",
+      "name": "Lauren Thai"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@googlegroups.com; dkim=pass header.i=@gmail.com; spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBXOA6G4AKGQELWNLRRQ@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBXOA6G4AKGQELWNLRRQ@googlegroups.com; dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+    "content-type": "multipart/mixed; boundary=\"----=_Part_143_518715060.1461477468677\"",
+    "date": "Sat, 23 Apr 2016 22:57:48 -0700 (PDT)",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": [
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=sender:date:from:to:message-id:subject:mime-version :x-original-sender:reply-to:precedence:mailing-list:list-id :x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=oI+jaDSC0RODtBxRl2mT43swEBFSy2bFXDBYgLNhabk=; b=U9T0vvA545bcOS58hmb4cFGIO225V96h1pMzsRWT23MpooGhCrlbTu6n8aD+CyHcvI FMEjLXYqdf6RxY1gtDhhjc+knOHG5W6640+QJ8dCfgnUeliq2ha6OH67qpVnUpm7xiA8 +lZiaJGIw3/YMdStoU/hQeYkqVSS9G81ZrBQta7rBjKYYv8UXN6SgJ7eNd2J+WE3GTty CvmwPzxq/cI3VtTKHvZinehLhxkfsSvXOcC2gBopW9a9WLjpkwEg/UAQitDYqBuD6PNH 9z6cj/rY69wrud42qEhdCC2ANb6/t/hQgWV8Npz198sJa019snaTYc7L+U6/YnXbUsLj Ecsg==",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group :list-post:list-help:list-archive:list-subscribe:list-unsubscribe; bh=oI+jaDSC0RODtBxRl2mT43swEBFSy2bFXDBYgLNhabk=; b=RhCWLUYorDHF9lTw1JUm+BG1E49Phyo2HtrZpSmnbq97sb7LxntSIGWcqYP/hbu5tJ X4rYIrPfn/v3Q7npUGmuqmZMi1KcffbTKHP7wFFNMfcSpibCffeAGyWUnUGowONOrok0 dMrOphZt07+OHMqrc9JPg+Nne6HEQkZN/9tjdetD8+awMZIX7XF+0SeUHlDc4SwDF82I XqFXFCW2gyOCQTImdPSBOIv9r7lMayvNR18ZoVnuIpw/+vIl3c4RsAWTlJsch81p0JHc 1E8PfC9JrFKecgulXmKLL+umo62VxH8+yKwKU6iPAwKcwc8SeO7u5TAPHF5kZaDmbmOY w5Sg=="
+    ],
+    "from": "Lauren Thai <laurenthai@gmail.com>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<a7bfedec-957e-402a-9ab2-823feefd02de@googlegroups.com>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.107.17.79 with SMTP id z76csp310394ioi; Sat, 23 Apr 2016 22:57:56 -0700 (PDT)",
+      "from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196]) by mx.google.com with ESMTPS id h10si1429443pfd.171.2016.04.23.22.57.55 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 23 Apr 2016 22:57:56 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135]) by relay4-d.mail.gandi.net (Postfix) with ESMTP id EE72B1720B8 for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:52 +0200 (CEST)",
+      "from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161]) by spool.mail.gandi.net (Postfix) with ESMTP id DF6FD1421DA for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:52 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135]) by mfilter30-d.gandi.net (mfilter30-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id Ly8mx5CXb23N for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:51 +0200 (CEST)",
+      "from mail-yw0-x238.google.com (mail-yw0-x238.google.com [IPv6:2607:f8b0:4002:c05::238]) by spool.mail.gandi.net (Postfix) with ESMTPS id 9AEFD142040 for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 07:57:50 +0200 (CEST)",
+      "by mail-yw0-x238.google.com with SMTP id k18sf43883992ywe.1 for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 22:57:50 -0700 (PDT)",
+      "by 10.182.48.7 with SMTP id h7ls387290obn.81.gmail; Sat, 23 Apr 2016 22:57:49 -0700 (PDT)"
+    ],
+    "received-spf": "softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBXOA6G4AKGQELWNLRRQ@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;",
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBD5MX4XJ4UBBBXOA6G4AKGQELWNLRRQ@googlegroups.com>",
+    "sender": "tosdr@googlegroups.com",
+    "subject": "[tosdr:3870] [Good] Pinterest offers security tips and link for you to notify them of any account compromises.",
+    "to": "\"Terms of Service; Didn't Read\" <tosdr@googlegroups.com>",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "AOPr4FXWQ3TMzycbbDDt2/4E2OFR13sw3EVFMjYFE5bOl0fDbtWheDOWMHJDiajrL+ulfg==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=sender:x-gm-message-state:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=oI+jaDSC0RODtBxRl2mT43swEBFSy2bFXDBYgLNhabk=; b=RM1TT9jSAheCXgrlkfPMG0zCBZMvgmxIr6Dl5pPdVNyIWBUbk+IU30dhTSpGenFMwd 8ZV0HOvXRCB8a1PbCajaEotUMg3V/F6MCk+BuvD1bx9Fgw76H8kWxohfR9YzyDI3hvCV 3BuQVBEYtdOWnxxfKlF+Q41m/mWZyQCXSPfSUGnix980Z5dF8wtDcaAq+ExSEq+i5uuF ozt6ohJqVHGH3Bf6B0pDchxAxxw/Gw/XGiqDbEdNCd6ERasgGlcPrpSQX1BL3l/unyI6 82wI7NjWdx5gPhFP7fh685MjqqbqG2lZgqJ5/WPGO68sYVCyiCxDupLHlKnMbymMXtJK RLqw==",
+    "x-google-group-id": "966240515290",
+    "x-original-sender": "laurenthai@gmail.com",
+    "x-received": [
+      "by 10.66.172.165 with SMTP id bd5mr40346494pac.128.1461477476048; Sat, 23 Apr 2016 22:57:56 -0700 (PDT)",
+      "by 10.157.47.135 with SMTP id r7mr308782otb.5.1461477469633; Sat, 23 Apr 2016 22:57:49 -0700 (PDT)",
+      "by 10.157.3.52 with SMTP id 49mr307778otv.19.1461477469278; Sat, 23 Apr 2016 22:57:49 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter30-d.gandi.net"
+  },
+  "html": "<div dir=\"ltr\"><font color=\"#000000\" face=\"Times New Roman\" size=\"3\">\n\n</font><h2 style=\"margin: 10pt 0in 0pt;\"><a href=\"https://about.pinterest.com/en/terms-service\"><strong><font color=\"#0088cc\" face=\"Cambria\" size=\"2\">https://about.pinterest.com/en/terms-service</font></strong></a></h2><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><h2 style=\"margin: 10pt 0in 0pt;\"><span style=\"mso-bidi-font-family: Arial;\"><strong><font color=\"#4f81bd\" face=\"Cambria\" size=\"2\">4. Security</font></strong></span></h2><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><div><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\">&quot;We care about the security of our users. While we\nwork to protect the security of your content and account, Pinterest cannot\nguarantee that unauthorized third parties will not be able to defeat our\nsecurity measures. Please notify us immediately of any compromise or\nunauthorized use of your account.&quot;</font></span></div><div><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\"><br></font></span></div><font size=\"2\"><font color=\"#000000\" face=\"Times New Roman\">\n\n</font><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><a href=\"https://help.pinterest.com/en/articles/account-security-and-hacked-accounts\"><font color=\"#0088cc\">https://help.pinterest.com/en/articles/account-security-and-hacked-accounts</font></a></span></font></div>\n\n<p></p>\n\n-- <br />\n[!!] Please see <a href=\"https://edit.tosdr.org\">https://edit.tosdr.org</a> -- this is where new contributions should be submitted and discussed<br />\n&nbsp;<br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to <a href=\"mailto:tosdr+unsubscribe@googlegroups.com\">tosdr+unsubscribe@googlegroups.com</a>.<br />\nTo post to this group, send email to <a href=\"mailto:tosdr@googlegroups.com\">tosdr@googlegroups.com</a>.<br />\nVisit this group at <a href=\"https://groups.google.com/group/tosdr\">https://groups.google.com/group/tosdr</a>.<br />\nTo view this discussion on the web visit <a href=\"https://groups.google.com/d/msgid/tosdr/a7bfedec-957e-402a-9ab2-823feefd02de%40googlegroups.com?utm_medium=email&utm_source=footer\">https://groups.google.com/d/msgid/tosdr/a7bfedec-957e-402a-9ab2-823feefd02de%40googlegroups.com</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/d/optout\">https://groups.google.com/d/optout</a>.<br />\n",
+  "messageId": "a7bfedec-957e-402a-9ab2-823feefd02de@googlegroups.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "[Good] Pinterest offers security tips and link for you to notify them of any account compromises.",
+  "text": " *https://about.pinterest.com/en/terms-service* \n<https://about.pinterest.com/en/terms-service> *4. Security* \n\"We care about the security of our users. While we work to protect the \nsecurity of your content and account, Pinterest cannot guarantee that \nunauthorized third parties will not be able to defeat our security \nmeasures. Please notify us immediately of any compromise or unauthorized \nuse of your account.\"\n\nhttps://help.pinterest.com/en/articles/account-security-and-hacked-accounts\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/a7bfedec-957e-402a-9ab2-823feefd02de%40googlegroups.com.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": "Terms of Service; Didn't Read"
+    }
+  ]
+}

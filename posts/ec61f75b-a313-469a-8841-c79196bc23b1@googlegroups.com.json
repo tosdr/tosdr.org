@@ -1,0 +1,76 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "laurenthai@gmail.com",
+      "name": "Lauren Thai"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@googlegroups.com; dkim=pass header.i=@gmail.com; spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBLWA6G4AKGQEO3TPRRA@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBLWA6G4AKGQEO3TPRRA@googlegroups.com; dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+    "content-type": "multipart/mixed; boundary=\"----=_Part_4367_506460441.1461477421873\"",
+    "date": "Sat, 23 Apr 2016 22:57:01 -0700 (PDT)",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": [
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=sender:date:from:to:message-id:subject:mime-version :x-original-sender:reply-to:precedence:mailing-list:list-id :x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=oU/uWnsgQCVQG63SIqDsUhYpldswpzI2dY2zK6KRkmg=; b=HXt+YquSqfG8r98mIS9vZiNNlE+iPW5dhOyh9lUdXZ3GguvgWJUVG1lhIZ0Nhxpok0 Ug2rqC4CxqvssXGMgNW+0jLGdL4A1BxJem4Q+g7UJ7yYXYBZrolKScpFmp+zZniIncgN 9WjQrIBABFWZZvOomgUEpg8X7U+YkFxVR2hIYKWCKRwB4GkAxdd8mVG1o15Rsp+7fRNT WG0fwJz+uvtKmX3Fpxuh04IOZVKlxb/KI97fpy8tOgkjV1/dpSfKwzULJ+lb7MLO1PLr xn5a1I9ADxWqKus70ZybAhv/gz4GjIh3sZ0FNq3XMmbEb+d+N5PLiN2z5xE39ofcZuvC nGEg==",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group :list-post:list-help:list-archive:list-subscribe:list-unsubscribe; bh=oU/uWnsgQCVQG63SIqDsUhYpldswpzI2dY2zK6KRkmg=; b=wU9qODtJGSW3iBPvF9/A9+FURmZMoeBen9x5Vvr+dVB2NR2lGx2KZbeFms1FCoST2L hSHKYXzXBNaiYQZ1lZ3oWgWwdm/dAfpvp0Lo5j/8p5GwnpB6bYaIhR0FIAf5M47Nj7tB Zfq7zjrbFDNU/vlitEWMZnIYXJG9eMHFiB/TxrzJ5n8ZynmBh/b/T9txTTy1IlD7NoM0 ndOns3CtbUjeRsvdN6DJcMHx076pHpqEBPPMEPXUfPiw7ZnjHGOUpgpuosEnBjgsh7kf UtawMdF8WdyHVibUBazfZPFXlKlgX71ukT+kdTMuXMgDZ4AXxmvp0kE6DouOxqKvvh4V MlLA=="
+    ],
+    "from": "Lauren Thai <laurenthai@gmail.com>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<ec61f75b-a313-469a-8841-c79196bc23b1@googlegroups.com>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.107.17.79 with SMTP id z76csp310223ioi; Sat, 23 Apr 2016 22:57:09 -0700 (PDT)",
+      "from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198]) by mx.google.com with ESMTPS id mj3si11893725igc.103.2016.04.23.22.57.08 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 23 Apr 2016 22:57:09 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133]) by relay6-d.mail.gandi.net (Postfix) with ESMTP id 51DA6FB88B for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:06 +0200 (CEST)",
+      "from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153]) by spool.mail.gandi.net (Postfix) with ESMTP id 44E48178044 for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:06 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133]) by mfilter25-d.gandi.net (mfilter25-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id Nr7MZkPgWgii for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:57:04 +0200 (CEST)",
+      "from mail-pa0-x240.google.com (mail-pa0-x240.google.com [IPv6:2607:f8b0:400e:c03::240]) by spool.mail.gandi.net (Postfix) with ESMTPS id 23B1617805A for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 07:57:04 +0200 (CEST)",
+      "by mail-pa0-x240.google.com with SMTP id zy2sf31298455pac.0 for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 22:57:04 -0700 (PDT)",
+      "by 10.157.9.106 with SMTP id 97ls382472otp.32.gmail; Sat, 23 Apr 2016 22:57:02 -0700 (PDT)"
+    ],
+    "received-spf": "softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBLWA6G4AKGQEO3TPRRA@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;",
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBD5MX4XJ4UBBBLWA6G4AKGQEO3TPRRA@googlegroups.com>",
+    "sender": "tosdr@googlegroups.com",
+    "subject": "[tosdr:3870] [Good] Pinterest respects copyrights.",
+    "to": "\"Terms of Service; Didn't Read\" <tosdr@googlegroups.com>",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "AOPr4FVN6gbvaVb2iway6SQ4NGfIpTEuu5WWOung0oWU2bcut4Fc89LoMDK1h2e32Va+Vw==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=sender:x-gm-message-state:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=oU/uWnsgQCVQG63SIqDsUhYpldswpzI2dY2zK6KRkmg=; b=btit6MDJdHoRvkFUl4hPWPJw/Gj2U5QUxO2haPdzaDb61nEuetaBbLJRZK0Xer/yC8 CDLqKRyE+sieaZmENM4vhFQdTQ9U+sWH/zlSqLaE5XWikDws+5SiPZt+yKh5ZpDLMFVA 3ZCYckBaVvCa2iuU+2+vGpT43MLIXoMuzz93DSY/SAPqkVUWYj9eJtbuCnTN3vDwMsaQ SNcxjr9j3sBktYrrGtjNFmPhjixAKErRh8q8Txz78am8Qxc3UlzwsOTmJNFB6oRcrk4T 3mo9EnQIGNqEuJLT9ybGzp0LLpTYKG4cSgLV1n3FqzEppsrzQLUgvRIQMEsJyJIrwvrr hJjw==",
+    "x-google-group-id": "966240515290",
+    "x-original-sender": "laurenthai@gmail.com",
+    "x-received": [
+      "by 10.107.141.201 with SMTP id p192mr8607624iod.173.1461477429623; Sat, 23 Apr 2016 22:57:09 -0700 (PDT)",
+      "by 10.157.59.34 with SMTP id z31mr26054otb.16.1461477422880; Sat, 23 Apr 2016 22:57:02 -0700 (PDT)",
+      "by 10.157.26.120 with SMTP id u53mr309862otu.18.1461477422371; Sat, 23 Apr 2016 22:57:02 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter25-d.gandi.net"
+  },
+  "html": "<div dir=\"ltr\"><font color=\"#000000\" face=\"Times New Roman\" size=\"3\"><strong>\n\n</strong></font><h2 style=\"margin: 10pt 0in 0pt;\"><span style=\"font-size: 7pt; mso-bidi-font-family: Arial;\"><font color=\"#4f81bd\" face=\"Cambria\"><font color=\"#000000\" face=\"Times New Roman\" size=\"3\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><a href=\"https://about.pinterest.com/en/terms-service\"><font color=\"#0088cc\" face=\"Calibri\" size=\"2\">https://about.pinterest.com/en/terms-service</font></a></p><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font></font></span></h2><h2 style=\"margin: 10pt 0in 0pt;\"><span style=\"mso-bidi-font-family: Arial;\"><strong><font color=\"#4f81bd\" face=\"Cambria\" size=\"2\">3. Copyright\nPolicy</font></strong></span></h2><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><div><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\">“Pinterest has adopted and implemented the\nPinterest </font><a href=\"https://about.pinterest.com/en/copyright\"><span style=\"mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-theme-font: major-fareast;\"><font color=\"#0088cc\" size=\"2\">Copyright\nPolicy</font></span></a><font color=\"#000000\" size=\"2\"> in accordance with the Digital Millennium Copyright Act.&quot;</font></span></div><div><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\"><br></font></span></div><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><a href=\"https://about.pinterest.com/en/copyright\"><font color=\"#0088cc\" face=\"Calibri\" size=\"2\">https://about.pinterest.com/en/copyright</font></a></p><font color=\"#000000\" face=\"Times New Roman\" size=\"3\">\n\n</font></div>\n\n<p></p>\n\n-- <br />\n[!!] Please see <a href=\"https://edit.tosdr.org\">https://edit.tosdr.org</a> -- this is where new contributions should be submitted and discussed<br />\n&nbsp;<br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to <a href=\"mailto:tosdr+unsubscribe@googlegroups.com\">tosdr+unsubscribe@googlegroups.com</a>.<br />\nTo post to this group, send email to <a href=\"mailto:tosdr@googlegroups.com\">tosdr@googlegroups.com</a>.<br />\nVisit this group at <a href=\"https://groups.google.com/group/tosdr\">https://groups.google.com/group/tosdr</a>.<br />\nTo view this discussion on the web visit <a href=\"https://groups.google.com/d/msgid/tosdr/ec61f75b-a313-469a-8841-c79196bc23b1%40googlegroups.com?utm_medium=email&utm_source=footer\">https://groups.google.com/d/msgid/tosdr/ec61f75b-a313-469a-8841-c79196bc23b1%40googlegroups.com</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/d/optout\">https://groups.google.com/d/optout</a>.<br />\n",
+  "messageId": "ec61f75b-a313-469a-8841-c79196bc23b1@googlegroups.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "[Good] Pinterest respects copyrights.",
+  "text": " \n\nhttps://about.pinterest.com/en/terms-service\n*3. Copyright Policy* \n“Pinterest has adopted and implemented the Pinterest Copyright Policy \n<https://about.pinterest.com/en/copyright> in accordance with the Digital \nMillennium Copyright Act.\"\n\nhttps://about.pinterest.com/en/copyright\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/ec61f75b-a313-469a-8841-c79196bc23b1%40googlegroups.com.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": "Terms of Service; Didn't Read"
+    }
+  ]
+}

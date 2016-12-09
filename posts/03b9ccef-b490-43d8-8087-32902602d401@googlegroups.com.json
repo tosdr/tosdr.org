@@ -1,0 +1,76 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "laurenthai@gmail.com",
+      "name": "Lauren Thai"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@googlegroups.com; dkim=pass header.i=@gmail.com; spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBYOB6G4AKGQEH6CKCOA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBYOB6G4AKGQEH6CKCOA@googlegroups.com; dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+    "content-type": "multipart/mixed; boundary=\"----=_Part_4230_116527720.1461477600972\"",
+    "date": "Sat, 23 Apr 2016 23:00:00 -0700 (PDT)",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": [
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=sender:date:from:to:message-id:subject:mime-version :x-original-sender:reply-to:precedence:mailing-list:list-id :x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=MIpCN4Mfg382QxpPC32w8tdDOMSWSTf1CAe6V72MNfg=; b=QPpH1XRkbZoaCLerrYC+MV7HmtZ2pgFmfJCI1OqXbvMqXfiH2B/OKpYgyix58wMKMm 1sUEM8UrXQhQOYunDeEKufH56sIuAc6CIW+5+1NZN982xrSqVENiqUdVVod/JjQUqVkS GJ9ttzewaOj89de1xUa55bftJvzoTnDHtw1g87vdRszE4r2g9BmLBcnvEAoqcs3pkvOc 9O7GSIE3YYDaIlY9p4I0g7rRwPajeHShD2/USBkqmaGR7wk5+loaHiJ/KBQLgLcxUHTW DNpWyizZiCOox+1fo+1cd3YDTuqqcFiCQh+Pr3/zBV8qlKcffwG54AxMhNjsO7sLWQa3 MIfA==",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group :list-post:list-help:list-archive:list-subscribe:list-unsubscribe; bh=MIpCN4Mfg382QxpPC32w8tdDOMSWSTf1CAe6V72MNfg=; b=sZRSGUPzmZWKgt6EWS7uhaoen8AOPjpV5a6pTwftZhsVgx373dUAgChei+835u6Zk5 s+1z7byVw/X+OtMPl5IgcSzCeUbyKEQUhnsxf+LiQpBKHa8ohCYx12N9j4eYf6G1TkwE X7dBr1MnZuosWEVoAHePTXFZs0I8gDEWm4OSiXonzO1O6xtt58eKI/8qCRg+FjMTckTb GZZJgJbwFhmn0HmjtTAE6j5g9NxsKItsj1+SyzxmOkwUMAEmqqFcisXmO39fdgRifPgL cT8xw4I7E2m6ot2KGCRWKBJAuJNxvIomOxzIfgzKBpnswv8Y8+cjkUc8BTWxALf0y0qD ooWQ=="
+    ],
+    "from": "Lauren Thai <laurenthai@gmail.com>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<03b9ccef-b490-43d8-8087-32902602d401@googlegroups.com>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.107.17.79 with SMTP id z76csp310914ioi; Sat, 23 Apr 2016 23:00:09 -0700 (PDT)",
+      "from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197]) by mx.google.com with ESMTPS id g130si7030439ioa.170.2016.04.23.23.00.08 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 23 Apr 2016 23:00:09 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131]) by relay5-d.mail.gandi.net (Postfix) with ESMTP id EA74C41C0A2 for <michiel@unhosted.org>; Sun, 24 Apr 2016 08:00:05 +0200 (CEST)",
+      "from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152]) by spool.mail.gandi.net (Postfix) with ESMTP id DECAB226045 for <michiel@unhosted.org>; Sun, 24 Apr 2016 08:00:05 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131]) by mfilter24-d.gandi.net (mfilter24-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id SLHQ3YGvsqFB for <michiel@unhosted.org>; Sun, 24 Apr 2016 08:00:03 +0200 (CEST)",
+      "from mail-pf0-x23c.google.com (mail-pf0-x23c.google.com [IPv6:2607:f8b0:400e:c00::23c]) by spool.mail.gandi.net (Postfix) with ESMTPS id 0C10922604D for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 08:00:03 +0200 (CEST)",
+      "by mail-pf0-x23c.google.com with SMTP id g132sf20011489pfb.0 for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 23:00:02 -0700 (PDT)",
+      "by 10.157.14.103 with SMTP id n36ls365314otd.10.gmail; Sat, 23 Apr 2016 23:00:01 -0700 (PDT)"
+    ],
+    "received-spf": "softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBYOB6G4AKGQEH6CKCOA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;",
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBD5MX4XJ4UBBBYOB6G4AKGQEH6CKCOA@googlegroups.com>",
+    "sender": "tosdr@googlegroups.com",
+    "subject": "[tosdr:3874] [Good] Pinterest will notify you of material revisions to TOS.",
+    "to": "\"Terms of Service; Didn't Read\" <tosdr@googlegroups.com>",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "AOPr4FUApXTZbEGzWx6Fj/6Bq9JU8KpDxusE2cVIf3btpXqPOJrcQdeNxdWBMx1GnvJpdw==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=sender:x-gm-message-state:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=MIpCN4Mfg382QxpPC32w8tdDOMSWSTf1CAe6V72MNfg=; b=fYVFUCOEhP0wyLNsdl8hBdT20+brdLM0cEHJ2V4o4WIFqHpCPLy0TvSnsrfqxYmeWt 1V6h0ZKuCx0oKZ4XUeUzR1fqUW5wJ+hXD6UVQSecIqc+LGNX+hUCxNUFTA1ICLTadoF0 AbwW3hQgGbdk8IESfp35sSxrMTA6for9Z6e1RhKsfurLKof1Q5AzTvfVsWKCEUdKMMXF gJ0ng8BDMzkPC+Vb3EGDJpyk30SBoJipjtq8qAgtKc9Fi2qHbwyD4RDVaSKt0LSHo3oL 6VRLHbTTYs5rmOrpAa7hApzRlVFZFH5KWXmNWpUlf6eHMI9UdzAfQ6XHW+PXWsyBevWF 0XNA==",
+    "x-google-group-id": "966240515290",
+    "x-original-sender": "laurenthai@gmail.com",
+    "x-received": [
+      "by 10.107.59.75 with SMTP id i72mr29491401ioa.108.1461477609012; Sat, 23 Apr 2016 23:00:09 -0700 (PDT)",
+      "by 10.182.19.129 with SMTP id f1mr308522obe.20.1461477601929; Sat, 23 Apr 2016 23:00:01 -0700 (PDT)",
+      "by 10.157.5.74 with SMTP id 68mr168959otw.2.1461477601502; Sat, 23 Apr 2016 23:00:01 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter24-d.gandi.net"
+  },
+  "html": "<div dir=\"ltr\"><font color=\"#000000\" face=\"Times New Roman\" size=\"3\"><strong>\n\n</strong></font><div style=\"margin: 0in 0in 0pt;\"><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; font-size: 7pt; mso-bidi-font-family: Arial;\"><font color=\"#000000\"><font face=\"Times New Roman\" size=\"3\">\n\n</font><h2 style=\"margin: 10pt 0in 0pt;\"><a href=\"https://about.pinterest.com/en/terms-service\"><strong><font color=\"#0088cc\" face=\"Cambria\" size=\"2\">https://about.pinterest.com/en/terms-service</font></strong></a></h2><font face=\"Times New Roman\" size=\"2\">\n\n</font></font></span></div><div style=\"margin: 0in 0in 0pt;\"><strong><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\"><br></font></span></strong></div><div style=\"margin: 0in 0in 0pt;\"><strong><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font color=\"#000000\" size=\"2\">“More simply put</font></span></strong><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"><font size=\"2\"><font color=\"#000000\">:<br></font><font color=\"#000000\">\n</font><span style=\"color: rgb(51, 51, 51);\">If we&#39;re making a big change to the terms, we&#39;ll\nlet you know.”</span></font></span></div><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><h2 style=\"margin: 10pt 0in 0pt;\"><span style=\"mso-bidi-font-family: Arial;\"><strong><font color=\"#4f81bd\" face=\"Cambria\" size=\"2\">12. General Terms</font></strong></span></h2><font color=\"#000000\" face=\"Times New Roman\" size=\"2\">\n\n</font><p><font color=\"#000000\"><font size=\"2\"><strong><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\">“Notification Procedures and changes to these\nTerms.</span></strong><span style=\"font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;\"> Pinterest reserves the right to determine the\nform and means of providing notifications to you, and you agree to receive\nlegal notices electronically if we so choose. We may revise these Terms from\ntime to time and the most current version will always be posted on our website.\nIf a revision, in our sole discretion, is material we will notify you. By\ncontinuing to access or use the Products after revisions become effective, you\nagree to be bound by the revised Terms. If you do not agree to the new terms,\nplease stop using the Products.”</span></font></font></p><font color=\"#000000\" face=\"Times New Roman\" size=\"3\">\n\n</font></div>\n\n<p></p>\n\n-- <br />\n[!!] Please see <a href=\"https://edit.tosdr.org\">https://edit.tosdr.org</a> -- this is where new contributions should be submitted and discussed<br />\n&nbsp;<br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to <a href=\"mailto:tosdr+unsubscribe@googlegroups.com\">tosdr+unsubscribe@googlegroups.com</a>.<br />\nTo post to this group, send email to <a href=\"mailto:tosdr@googlegroups.com\">tosdr@googlegroups.com</a>.<br />\nVisit this group at <a href=\"https://groups.google.com/group/tosdr\">https://groups.google.com/group/tosdr</a>.<br />\nTo view this discussion on the web visit <a href=\"https://groups.google.com/d/msgid/tosdr/03b9ccef-b490-43d8-8087-32902602d401%40googlegroups.com?utm_medium=email&utm_source=footer\">https://groups.google.com/d/msgid/tosdr/03b9ccef-b490-43d8-8087-32902602d401%40googlegroups.com</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/d/optout\">https://groups.google.com/d/optout</a>.<br />\n",
+  "messageId": "03b9ccef-b490-43d8-8087-32902602d401@googlegroups.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "[Good] Pinterest will notify you of material revisions to TOS.",
+  "text": " *https://about.pinterest.com/en/terms-service* \n<https://about.pinterest.com/en/terms-service> \n\n*“More simply put*:\nIf we're making a big change to the terms, we'll let you know.”\n*12. General Terms* \n\n*“Notification Procedures and changes to these Terms.* Pinterest reserves \nthe right to determine the form and means of providing notifications to \nyou, and you agree to receive legal notices electronically if we so choose. \nWe may revise these Terms from time to time and the most current version \nwill always be posted on our website. If a revision, in our sole \ndiscretion, is material we will notify you. By continuing to access or use \nthe Products after revisions become effective, you agree to be bound by the \nrevised Terms. If you do not agree to the new terms, please stop using the \nProducts.”\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/03b9ccef-b490-43d8-8087-32902602d401%40googlegroups.com.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": "Terms of Service; Didn't Read"
+    }
+  ]
+}

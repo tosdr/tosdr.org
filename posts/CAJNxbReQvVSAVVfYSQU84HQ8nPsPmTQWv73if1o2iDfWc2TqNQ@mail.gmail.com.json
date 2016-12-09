@@ -1,0 +1,81 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "BSheff@umich.edu",
+      "name": "Bob Sheff"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@gmail.com; spf=softfail (google.com: domain of transitioning tosdr+bncbcvplyo45ygrbuotxk5qkgqenuy5awq@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) smtp.mailfrom=tosdr+bncBCVPLYO45YGRBUOTXK5QKGQENUY5AWQ@googlegroups.com; dmarc=fail (p=NONE dis=NONE) header.from=umich.edu",
+    "content-type": "multipart/alternative; boundary=001a11440182b423b805361c56e3",
+    "date": "Sat, 25 Jun 2016 11:56:45 -0400",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=mime-version:sender:from:date:message-id:subject:to :x-original-sender:x-original-authentication-results:reply-to :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post :list-help:list-archive:list-subscribe:list-unsubscribe; bh=jbYnjmNdNro/vNRWAL8k3lNKFF19861J2rANOH1L6sM=; b=kKN5JnxwQQS4oAikYOFjm/HoePe4t0K0hJcskiBedQbyUazX7ov1++7cma+k+d7Nin n8zB0pqm+NSOiscCBXGyXRWFmZcLgA9FMccVzaX8YIzYPr4v+J0c7XX+IZP4O9kKFSEA F0RaR7lPIy2YX5XI85U/3IbykB2/BnehfsN0lHN68GfT6K9XXWJ1bfRywHyHqoz68Xn8 YWK/4VFy8McV/VWB5UGPBsrC/8VVzW5SZyuAbR2Gk+jsy7BmcP+tKoN+Il6x/hgYXAcJ Z2QxamMTnFFl/Rdv9wE3M7LSO04t3R6X11J6y4exw7GBTPHXvfQGdzM/KeluQSk9IIr0 n45Q==",
+    "from": "Bob Sheff <BSheff@umich.edu>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<CAJNxbReQvVSAVVfYSQU84HQ8nPsPmTQWv73if1o2iDfWc2TqNQ@mail.gmail.com>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.31.97.69 with SMTP id v66csp361751vkb; Sat, 25 Jun 2016 08:57:13 -0700 (PDT)",
+      "from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [2001:4b98:c:538::194]) by mx.google.com with ESMTPS id b66si14436735pfg.52.2016.06.25.08.57.12 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 25 Jun 2016 08:57:13 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by relay2-d.mail.gandi.net (Postfix) with ESMTP id B6BF0C5A5A for <michiel@unhosted.org>; Sat, 25 Jun 2016 17:57:09 +0200 (CEST)",
+      "from mfilter42-d.gandi.net (mfilter42-d.gandi.net [217.70.178.172]) by spool.mail.gandi.net (Postfix) with ESMTP id AAF3E116151 for <michiel@unhosted.org>; Sat, 25 Jun 2016 17:57:09 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134]) by mfilter42-d.gandi.net (mfilter42-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id 4KkuO3EcVsYH for <michiel@unhosted.org>; Sat, 25 Jun 2016 17:57:07 +0200 (CEST)",
+      "from mail-oi0-x238.google.com (mail-oi0-x238.google.com [IPv6:2607:f8b0:4003:c06::238]) by spool.mail.gandi.net (Postfix) with ESMTPS id 629F9116152 for <michiel@michielbdejong.com>; Sat, 25 Jun 2016 17:57:07 +0200 (CEST)",
+      "by mail-oi0-x238.google.com with SMTP id w141sf29060550oia.1 for <michiel@michielbdejong.com>; Sat, 25 Jun 2016 08:57:07 -0700 (PDT)",
+      "by 10.107.6.101 with SMTP id 98ls3599813iog.4.gmail; Sat, 25 Jun 2016 08:57:05 -0700 (PDT)",
+      "from mail-it0-x22c.google.com (mail-it0-x22c.google.com. [2607:f8b0:4001:c0b::22c]) by gmr-mx.google.com with ESMTPS id e5si103639ith.1.2016.06.25.08.57.05 for <tosdr@googlegroups.com> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 25 Jun 2016 08:57:05 -0700 (PDT)",
+      "by mail-it0-x22c.google.com with SMTP id a5so36983896ita.1 for <tosdr@googlegroups.com>; Sat, 25 Jun 2016 08:57:05 -0700 (PDT)",
+      "by 10.79.8.195 with HTTP; Sat, 25 Jun 2016 08:56:45 -0700 (PDT)"
+    ],
+    "received-spf": [
+      "softfail (google.com: domain of transitioning tosdr+bncbcvplyo45ygrbuotxk5qkgqenuy5awq@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) client-ip=2001:4b98:c:538::194;",
+      "pass (google.com: domain of bsheff2@gmail.com designates 2607:f8b0:4001:c0b::22c as permitted sender) client-ip=2607:f8b0:4001:c0b::22c;"
+    ],
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBCVPLYO45YGRBUOTXK5QKGQENUY5AWQ@googlegroups.com>",
+    "sender": "bsheff2@gmail.com",
+    "subject": "[tosdr:3907] please rate this",
+    "to": "tosdr@googlegroups.com",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "ALyK8tLH+qoJFECtB7zd8wsDhK+Vrv/cJexDLNi2KcaH0b9tadyWAd7E1njZJLIXyHrpbw==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=x-gm-message-state:mime-version:sender:from:date:message-id:subject :to:x-original-sender:x-original-authentication-results:reply-to :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post :list-help:list-archive:list-subscribe:list-unsubscribe; bh=jbYnjmNdNro/vNRWAL8k3lNKFF19861J2rANOH1L6sM=; b=fK7zZAxMnV6JZt3NVKwYC944j7kZ9CNwUfwmYtxloy5j4LmyYtbDP4OLuV3kUztu4D gA8eMfzR3R52aO6GZDz/PsPK8NaNeau5rTjwGTKoZZSM4WYc9MZH3t04j0ijCjhW6BBw jCHe3QQWchoG/vSlqEoKqh+VJz8YCApFF5jLKljx17Nj7wD/FGRigILZusDa12uETTUt BzD0Vo3PBzzRp77yTmksIbXNirmmBSe1TWTkYutapiKQCCLy7xqTX/kofPC2ZaqyKEVa ESjqv6+OSMGtoGj6aFSartLUyJPF3BMNFUNRXiZ6Omy+7wavnWXrSZsKl+ihUpsc04SB JNjw==",
+    "x-google-group-id": "966240515290",
+    "x-original-authentication-results": "gmr-mx.google.com;       dkim=pass header.i=@gmail.com;       spf=pass (google.com: domain of bsheff2@gmail.com designates 2607:f8b0:4001:c0b::22c as permitted sender) smtp.mailfrom=bsheff2@gmail.com; dmarc=fail (p=NONE dis=NONE) header.from=umich.edu",
+    "x-original-sender": "bsheff2@gmail.com",
+    "x-received": [
+      "by 10.98.72.80 with SMTP id v77mr17577397pfa.133.1466870233304; Sat, 25 Jun 2016 08:57:13 -0700 (PDT)",
+      "by 10.36.242.65 with SMTP id j62mr101019ith.8.1466870225839; Sat, 25 Jun 2016 08:57:05 -0700 (PDT)",
+      "by 10.107.152.203 with SMTP id a194mr10813396ioe.27.1466870225411; Sat, 25 Jun 2016 08:57:05 -0700 (PDT)",
+      "by 10.36.25.83 with SMTP id b80mr2584765itb.29.1466870225181; Sat, 25 Jun 2016 08:57:05 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter42-d.gandi.net"
+  },
+  "html": "<div dir=\"ltr\"><a href=\"https://www1.drf.com/drfbets/terms-and-conditions.html\">https://www1.drf.com/drfbets/terms-and-conditions.html</a><br clear=\"all\"><br>-- <br><div class=\"gmail_signature\" data-smartmail=\"gmail_signature\">Robert Sheff<br>BSheff@UMich.edu<br>Independent Consultant<br>Computers, Antique Clocks, and SportsCars<br>Everything should be as simple as possible, but not simpler-A.Einstein</div>\n</div>\n\n<p></p>\n\n-- <br />\n[!!] Please see <a href=\"https://edit.tosdr.org\">https://edit.tosdr.org</a> -- this is where new contributions should be submitted and discussed<br />\n&nbsp;<br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to <a href=\"mailto:tosdr+unsubscribe@googlegroups.com\">tosdr+unsubscribe@googlegroups.com</a>.<br />\nTo post to this group, send email to <a href=\"mailto:tosdr@googlegroups.com\">tosdr@googlegroups.com</a>.<br />\nVisit this group at <a href=\"https://groups.google.com/group/tosdr\">https://groups.google.com/group/tosdr</a>.<br />\nTo view this discussion on the web visit <a href=\"https://groups.google.com/d/msgid/tosdr/CAJNxbReQvVSAVVfYSQU84HQ8nPsPmTQWv73if1o2iDfWc2TqNQ%40mail.gmail.com?utm_medium=email&utm_source=footer\">https://groups.google.com/d/msgid/tosdr/CAJNxbReQvVSAVVfYSQU84HQ8nPsPmTQWv73if1o2iDfWc2TqNQ%40mail.gmail.com</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/d/optout\">https://groups.google.com/d/optout</a>.<br />\n",
+  "messageId": "CAJNxbReQvVSAVVfYSQU84HQ8nPsPmTQWv73if1o2iDfWc2TqNQ@mail.gmail.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "please rate this",
+  "text": "https://www1.drf.com/drfbets/terms-and-conditions.html\n\n-- \nRobert Sheff\nBSheff@UMich.edu\nIndependent Consultant\nComputers, Antique Clocks, and SportsCars\nEverything should be as simple as possible, but not simpler-A.Einstein\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/CAJNxbReQvVSAVVfYSQU84HQ8nPsPmTQWv73if1o2iDfWc2TqNQ%40mail.gmail.com.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ]
+}

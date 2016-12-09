@@ -1,0 +1,81 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "matthew@mdavis.xyz",
+      "name": "Matthew Davis"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@googlegroups.com; spf=softfail (google.com: domain of transitioning tosdr+bncbaabbhhm7s6akgqe2nx4h2q@googlegroups.com does not designate 217.70.183.197 as permitted sender) smtp.mailfrom=tosdr+bncBAABBHHM7S6AKGQE2NX4H2Q@googlegroups.com",
+    "content-transfer-encoding": "quoted-printable",
+    "content-type": "text/plain; charset=UTF-8",
+    "date": "Mon, 01 Aug 2016 21:44:20 +1000",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=sender:message-id:subject:from:to:date:mime-version :content-transfer-encoding:x-original-sender :x-original-authentication-results:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=lbEe1DvFaA41wB6Q2W5vHt83VtCLoeavOvK/OAf7kiQ=; b=FjniQOn/r7wt2uPlmY+AAB+GFgwWCDCWPojb9fjcSeCau4ScAmMIwkll7QD/6kY8fz yzR6PI4nIuytE5yjl9TC6EIPkdTagEy9Xbl+zW+JBt0SY1NKy+oCj+WHdArj8nQy2Bn2 aDKLrNARSa1YrEKnUMc9ckKUXdh0mj4JZugcwaQJPmpkvMEZKkn9s3eLHsNQzn1nYdgy 1ub+B9osaAqZE6zOSxYb6k5VHAu7TMNqXhBs8xjBIck9k8cwscpWx33n04EYD32nD5Pf aPfQmtO4KtLERGTy3VHrNWN72gYOvog0WP0QZpkroEBKyxipRz7XH6emd/u3F/EYqVRq G3tQ==",
+    "from": "Matthew Davis <matthew@mdavis.xyz>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<1470051860.3832.10.camel@mdavis.xyz>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.31.147.213 with SMTP id v204csp2528010vkd; Mon, 1 Aug 2016 04:44:35 -0700 (PDT)",
+      "from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [217.70.183.197]) by mx.google.com with ESMTPS id j97si27346866ioi.205.2016.08.01.04.44.34 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Mon, 01 Aug 2016 04:44:35 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134]) by relay5-d.mail.gandi.net (Postfix) with ESMTP id 9639641C07D for <michiel@unhosted.org>; Mon,  1 Aug 2016 13:44:31 +0200 (CEST)",
+      "from mfilter37-d.gandi.net (mfilter37-d.gandi.net [217.70.178.168]) by spool.mail.gandi.net (Postfix) with ESMTP id 65D5D116151 for <michiel@unhosted.org>; Mon,  1 Aug 2016 13:44:31 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134]) by mfilter37-d.gandi.net (mfilter37-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id Coyy5Jv7iiLg for <michiel@unhosted.org>; Mon,  1 Aug 2016 13:44:29 +0200 (CEST)",
+      "from mail-lf0-x23f.google.com (mail-lf0-x23f.google.com [IPv6:2a00:1450:4010:c07::23f]) by spool.mail.gandi.net (Postfix) with ESMTPS id B1748116228 for <michiel@michielbdejong.com>; Mon,  1 Aug 2016 13:44:29 +0200 (CEST)",
+      "by mail-lf0-x23f.google.com with SMTP id l89sf53593530lfi.1 for <michiel@michielbdejong.com>; Mon, 01 Aug 2016 04:44:29 -0700 (PDT)",
+      "by 10.46.1.101 with SMTP id 98ls561284ljb.5.gmail; Mon, 01 Aug 2016 04:44:28 -0700 (PDT)",
+      "from aibo.runbox.com (aibo.runbox.com. [91.220.196.211]) by gmr-mx.google.com with ESMTPS id y7si833825wmd.0.2016.08.01.04.44.28 for <tosdr@googlegroups.com> (version=TLS1 cipher=AES128-SHA bits=128/128); Mon, 01 Aug 2016 04:44:28 -0700 (PDT)",
+      "from [10.9.9.212] (helo=mailfront12.runbox.com) by bars.runbox.com with esmtp (Exim 4.71) (envelope-from <matthew@mdavis.xyz>) id 1bUBdz-0001Dg-Nx for tosdr@googlegroups.com; Mon, 01 Aug 2016 13:44:27 +0200",
+      "from e4.35.01a8.ip4.static.sl-reverse.com ([168.1.53.228] helo=kira) by mailfront12.runbox.com with esmtpsa  (uid:864590 )  (TLS1.2:RSA_AES_128_CBC_SHA1:128) (Exim 4.82) id 1bUBdw-0000C5-2i for tosdr@googlegroups.com; Mon, 01 Aug 2016 13:44:24 +0200"
+    ],
+    "received-spf": [
+      "softfail (google.com: domain of transitioning tosdr+bncbaabbhhm7s6akgqe2nx4h2q@googlegroups.com does not designate 217.70.183.197 as permitted sender) client-ip=217.70.183.197;",
+      "fail (google.com: domain of matthew@mdavis.xyz does not designate 91.220.196.211 as permitted sender) client-ip=91.220.196.211;"
+    ],
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBAABBHHM7S6AKGQE2NX4H2Q@googlegroups.com>",
+    "sender": "tosdr@googlegroups.com",
+    "subject": "[tosdr:3930] Tinder - change of terms",
+    "to": "tosdr@googlegroups.com",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "AEkoouumFZrKp7jcg8fXV0nYdOUOihWfw6R1uJpvfcAtHdcmQt1PYlgAGgvmlPgz2qRI4w==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=sender:x-gm-message-state:message-id:subject:from:to:date :mime-version:content-transfer-encoding:x-original-sender :x-original-authentication-results:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=lbEe1DvFaA41wB6Q2W5vHt83VtCLoeavOvK/OAf7kiQ=; b=MrQsMrRUzQskEZq5AkOk/p/Oz8jvjqIsVeaf4iIg7pelTZo39ZoNtZPW8QF4hRjvDs eo8DcAtdPD2SrexXlFLgO3h7Sl04DhPbpL1v0c7xhr972pOguWPe4PhbdRzE+hyOhjhz aAFcIrzQi/4q4e8TS5pMDBVHfHzHEDTeZU1TUFU2jnG+WlXSaepeuWkkNa78fs8rMS+W 0LSrl0gyvexNPpqWyZZq4CWY1irh7CZ6LkYmQwVr4EjjXsZg2GxUX0PUeEc6DVF3DLjb e5PZgR9m6ojGWwryDUW+p3uVmbPF51K6hj7BPvu8cKMWTz+u6dhFuBrkh8G78cZrmnbz Gtjw==",
+    "x-google-group-id": "966240515290",
+    "x-mailer": "Evolution 3.18.5.2-0ubuntu3",
+    "x-original-authentication-results": "gmr-mx.google.com;       spf=fail (google.com: domain of matthew@mdavis.xyz does not designate 91.220.196.211 as permitted sender) smtp.mailfrom=matthew@mdavis.xyz",
+    "x-original-sender": "matthew@mdavis.xyz",
+    "x-received": [
+      "by 10.107.130.39 with SMTP id e39mr53643435iod.66.1470051875149; Mon, 01 Aug 2016 04:44:35 -0700 (PDT)",
+      "by 10.25.32.81 with SMTP id g78mr216610lfg.13.1470051869221; Mon, 01 Aug 2016 04:44:29 -0700 (PDT)",
+      "by 10.46.9.150 with SMTP id 144mr7831154ljj.0.1470051868661; Mon, 01 Aug 2016 04:44:28 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter37-d.gandi.net"
+  },
+  "messageId": "1470051860.3832.10.camel@mdavis.xyz",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "Tinder - change of terms",
+  "text": "Hi.\n\nTinder (https://www.gotinder.com/privacy) has not been rated for the addon yet.\n\nI'd like it noted that they only notify users of changes to the privacy policy if they are 'material\nchanges'. 'Material changes' is not defined.\nAll changes are instant. Consent to the changes is assumed.\n\n> If we make any material changes to this Privacy Policy, we will notify you of the changes by\nreasonable means, which could include notifications through the Services or via email. Please review\nthe changes carefully. Your continued use of the Services following the posting of changes to this\npolicy will mean you consent to and accept those changes. \n\n\nRegards\nMatt\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/1470051860.3832.10.camel%40mdavis.xyz.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ]
+}
