@@ -1,0 +1,76 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "laurenthai@gmail.com",
+      "name": "Lauren Thai"
+    }
+  ],
+  "headers": {
+    "authentication-results": "mx.google.com; dkim=pass header.i=@googlegroups.com; dkim=pass header.i=@gmail.com; spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBB5OG6C4AKGQEHBOK3PI@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBB5OG6C4AKGQEHBOK3PI@googlegroups.com; dmarc=pass (p=NONE dis=NONE) header.from=gmail.com",
+    "content-type": "multipart/mixed; boundary=\"----=_Part_4200_1199698936.1461461876531\"",
+    "date": "Sat, 23 Apr 2016 18:37:56 -0700 (PDT)",
+    "delivered-to": "michiel@unhosted.org",
+    "dkim-signature": [
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com; s=20120806; h=sender:date:from:to:message-id:subject:mime-version :x-original-sender:reply-to:precedence:mailing-list:list-id :x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=J7/ISvUEYC6DwbUqrG7RT0hRrytCjwBQUemywGk1i/k=; b=fjbiooJcUVlhu7EzziBPA/cXp9WanhDji1NHasH9l9fQ9D6fCjfN4ujLYa8uw+ZtIF 8BHRY9zfkNaT9kA3e5kRXXY1BmFydzU6KFb2997ZlCnEoQ8F4d+dyd/HD0VO/AxR/AYl IP60Ooxca1pz5XUACpvWdEnnXxuBriYrU7e8uJq+7AdniryPUjg4eeBMX3X06sgiclKP 0UWNJwmnsr+ZRN7ChEs+y+Sc4sTzWjiVnG4QF1CRZwKbj0uwD9dmmvKLtm1PqxI4In4q F0pGyMjBmXpNy8FZMr3rTk7tKOxU77g9eJn/SPvoZT3/T2ohmcPQQRJdloJQQTBh+NJd oeFA==",
+      "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=date:from:to:message-id:subject:mime-version:x-original-sender :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group :list-post:list-help:list-archive:list-subscribe:list-unsubscribe; bh=J7/ISvUEYC6DwbUqrG7RT0hRrytCjwBQUemywGk1i/k=; b=l5P+E4UVUP/RJCljNv5YD+HDpgu0Ql7ECuaiU2dgmYsls9oZVQSggSO5NSsLsiBTEy 1nmqokDGtupVP6qcDA5KOWyLfUZ5Ev1+Af67p6JFj9DVLm6uK/r9F4JnPr8btjBQAy8n 99CbKpJ5i2b/JjV1w7fMrzgPAJhAwr3eAZKF9Nubfwz+TExR5URevfIr0kRWjA8c2/KD /3LLft6CagVjAZeSaYy0Qi3d5eMjpdqwaw4u8wIBXuiIBXF54CUH/fejC0wW2rQWR5GW 5eP/eqkyjbfc+Oack9/Iz6PsocHGLYiib9IG2Z/+YdrkwRrN8KXjII4+/PWQP/6uPtPG P90A=="
+    ],
+    "from": "Lauren Thai <laurenthai@gmail.com>",
+    "list-archive": "<https://groups.google.com/group/tosdr",
+    "list-help": "<https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>",
+    "list-id": "<tosdr.googlegroups.com>",
+    "list-post": "<https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>",
+    "list-subscribe": "<https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>",
+    "list-unsubscribe": "<mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>, <https://groups.google.com/group/tosdr/subscribe>",
+    "mailing-list": "list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com",
+    "message-id": "<2c8ea1d7-3cd0-4e8c-8167-46703ad07d16@googlegroups.com>",
+    "mime-version": "1.0",
+    "precedence": "list",
+    "received": [
+      "by 10.107.17.79 with SMTP id z76csp248526ioi; Sat, 23 Apr 2016 18:38:03 -0700 (PDT)",
+      "from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196]) by mx.google.com with ESMTPS id y12si4443737pfi.207.2016.04.23.18.38.03 for <michiel@unhosted.org> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 23 Apr 2016 18:38:03 -0700 (PDT)",
+      "from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131]) by relay4-d.mail.gandi.net (Postfix) with ESMTP id 739A817209C for <michiel@unhosted.org>; Sun, 24 Apr 2016 03:38:00 +0200 (CEST)",
+      "from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148]) by spool.mail.gandi.net (Postfix) with ESMTP id 68CDD226049 for <michiel@unhosted.org>; Sun, 24 Apr 2016 03:38:00 +0200 (CEST)",
+      "from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131]) by mfilter20-d.gandi.net (mfilter20-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024) with ESMTP id fmeLay4Tf3YF for <michiel@unhosted.org>; Sun, 24 Apr 2016 03:37:58 +0200 (CEST)",
+      "from mail-ig0-x23d.google.com (mail-ig0-x23d.google.com [IPv6:2607:f8b0:4001:c05::23d]) by spool.mail.gandi.net (Postfix) with ESMTPS id 40D07226045 for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 03:37:58 +0200 (CEST)",
+      "by mail-ig0-x23d.google.com with SMTP id sq19sf10835170igc.1 for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 18:37:58 -0700 (PDT)",
+      "by 10.182.48.7 with SMTP id h7ls379684obn.81.gmail; Sat, 23 Apr 2016 18:37:57 -0700 (PDT)"
+    ],
+    "received-spf": "softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBB5OG6C4AKGQEHBOK3PI@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;",
+    "reply-to": "tosdr@googlegroups.com",
+    "return-path": "<tosdr+bncBD5MX4XJ4UBBB5OG6C4AKGQEHBOK3PI@googlegroups.com>",
+    "sender": "tosdr@googlegroups.com",
+    "subject": "[tosdr:3848] [Bad] Tinder controls virtual items that you paid for.",
+    "to": "\"Terms of Service; Didn't Read\" <tosdr@googlegroups.com>",
+    "x-beenthere": "tosdr@googlegroups.com",
+    "x-gm-message-state": "AOPr4FXs9Cvmlo7XrQvtAbvOHCOHDQUBdQ1eGf6SXogjtqKIrcS/nmvSbpqTdY58b0lETw==",
+    "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=sender:x-gm-message-state:date:from:to:message-id:subject :mime-version:x-original-sender:reply-to:precedence:mailing-list :list-id:x-spam-checked-in-group:list-post:list-help:list-archive :list-subscribe:list-unsubscribe; bh=J7/ISvUEYC6DwbUqrG7RT0hRrytCjwBQUemywGk1i/k=; b=coqPrnKjB7sHRiY+gOt7ysq4KzrjL/Z4lHsGAmRrTb1Yhf1nCesH55RfJ6X7VvFIjf dQ6VLzDda9YBt1UgXYYcosPJ3YzIqSb5wjh7wINaILrZ2SZFqRbPVjq7b7lEBsfpsk0z bA3wWJOAHvEIvY0RCbVr0eHJxK0e/LfhOmO9zISu7E3GGB4v5CQducBXjIKae+F9gdLF /B0TXEJZOSsQvom6DbUuU+iAJtXsbmoWEytivE8MXiBjh0COKqxr1gdQ9Ax64xt/WkHP 6kS1XaypEhYEam425ws+MHYheKHsKeUN5nQnQxBk1NooAmCuOK8ukInei+0KBEUdA3zu jRKA==",
+    "x-google-group-id": "966240515290",
+    "x-original-sender": "laurenthai@gmail.com",
+    "x-received": [
+      "by 10.98.9.219 with SMTP id 88mr39687332pfj.0.1461461883786; Sat, 23 Apr 2016 18:38:03 -0700 (PDT)",
+      "by 10.157.3.52 with SMTP id 49mr305652otv.19.1461461877433; Sat, 23 Apr 2016 18:37:57 -0700 (PDT)",
+      "by 10.182.14.74 with SMTP id n10mr10015obc.12.1461461877068; Sat, 23 Apr 2016 18:37:57 -0700 (PDT)"
+    ],
+    "x-spam-checked-in-group": "tosdr@googlegroups.com",
+    "x-virus-scanned": "Debian amavisd-new at mfilter20-d.gandi.net"
+  },
+  "html": "<div dir=\"ltr\"><div><font size=\"2\"><font color=\"#000000\"><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\">Tinder controls and can </span></font><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\">eliminate at any time, with or without notice</span><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#000000\"> virtual items that you paid for.</font></span></font></div><div><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#000000\" size=\"2\"><br></font></span></div><div><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#0088cc\" size=\"2\"><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><a href=\"https://www.gotinder.com/terms\">https://www.gotinder.com/terms</a></span></font></span></div><div><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#0088cc\" size=\"2\"><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><br></span></font></span></div><div><span style=\"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#0088cc\"><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; font-size: 6pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"><font color=\"#000000\" size=\"2\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><font size=\"2\"><font color=\"#000000\" face=\"Calibri\">12(b) </font><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;\">Virtual\nItems</span></font></p><font color=\"#000000\" size=\"2\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><font size=\"2\"><font color=\"#000000\" face=\"Calibri\">“</font><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;\">Tinder may\nmanage, regulate, control, modify or eliminate Virtual Items at any time, with\nor without notice...</span></font></p><font color=\"#000000\" size=\"2\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;\"><font size=\"2\">... You agree\nto pay all fees and applicable taxes incurred by you or anyone using your\nTinder account...</font></span></p><font color=\"#000000\" size=\"2\">\n\n</font><p style=\"margin: 0in 0in 0pt;\"><font size=\"2\"><span style=\"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;\">... YOU\nACKNOWLEDGE THAT TINDER IS NOT REQUIRED TO PROVIDE A REFUND FOR ANY REASON...</span><span style=\"color: rgb(52, 52, 52); mso-bidi-font-family: Arial; mso-ascii-font-family: proxima-nova; mso-hansi-font-family: proxima-nova;\"><font face=\"Calibri\">”</font></span></font></p><font color=\"#000000\" size=\"3\">\n\n</font></span></font></span></div></div>\n\n<p></p>\n\n-- <br />\n[!!] Please see <a href=\"https://edit.tosdr.org\">https://edit.tosdr.org</a> -- this is where new contributions should be submitted and discussed<br />\n&nbsp;<br />\ntosdr.org | twitter.com/tosdr | github.com/tosdr<br />\n--- <br />\nYou received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />\nTo unsubscribe from this group and stop receiving emails from it, send an email to <a href=\"mailto:tosdr+unsubscribe@googlegroups.com\">tosdr+unsubscribe@googlegroups.com</a>.<br />\nTo post to this group, send email to <a href=\"mailto:tosdr@googlegroups.com\">tosdr@googlegroups.com</a>.<br />\nVisit this group at <a href=\"https://groups.google.com/group/tosdr\">https://groups.google.com/group/tosdr</a>.<br />\nTo view this discussion on the web visit <a href=\"https://groups.google.com/d/msgid/tosdr/2c8ea1d7-3cd0-4e8c-8167-46703ad07d16%40googlegroups.com?utm_medium=email&utm_source=footer\">https://groups.google.com/d/msgid/tosdr/2c8ea1d7-3cd0-4e8c-8167-46703ad07d16%40googlegroups.com</a>.<br />\nFor more options, visit <a href=\"https://groups.google.com/d/optout\">https://groups.google.com/d/optout</a>.<br />\n",
+  "messageId": "2c8ea1d7-3cd0-4e8c-8167-46703ad07d16@googlegroups.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "replyTo": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ],
+  "subject": "[Bad] Tinder controls virtual items that you paid for.",
+  "text": "Tinder controls and can eliminate at any time, with or without notice \nvirtual items that you paid for.\n\nhttps://www.gotinder.com/terms\n\n12(b) Virtual Items\n\n“Tinder may manage, regulate, control, modify or eliminate Virtual Items at \nany time, with or without notice...\n\n... You agree to pay all fees and applicable taxes incurred by you or \nanyone using your Tinder account...\n\n... YOU ACKNOWLEDGE THAT TINDER IS NOT REQUIRED TO PROVIDE A REFUND FOR ANY \nREASON...”\n\n-- \n[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed\n\ntosdr.org | twitter.com/tosdr | github.com/tosdr\n--- \nYou received this message because you are subscribed to the Google Groups \"Terms of Service; Didn't Read\" group.\nTo unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.\nTo post to this group, send email to tosdr@googlegroups.com.\nVisit this group at https://groups.google.com/group/tosdr.\nTo view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/2c8ea1d7-3cd0-4e8c-8167-46703ad07d16%40googlegroups.com.\nFor more options, visit https://groups.google.com/d/optout.\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": "Terms of Service; Didn't Read"
+    }
+  ]
+}

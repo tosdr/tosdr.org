@@ -1,0 +1,41 @@
+{
+  "date": {},
+  "from": [
+    {
+      "address": "michiel@unhosted.org",
+      "name": "Michiel de Jong"
+    }
+  ],
+  "headers": {
+    "content-transfer-encoding": "quoted-printable",
+    "content-type": "text/plain; charset=windows-1252",
+    "date": "Fri, 22 Jun 2012 09:04:35 +0200",
+    "delivered-to": "michiel@unhosted.org",
+    "from": "Michiel de Jong <michiel@unhosted.org>",
+    "in-reply-to": "<CABQMFTRaDy7mt-9aH+AzOSfOBnsr+MiPFxDNtJwpnm9BR-_Nig@mail.gmail.com>",
+    "message-id": "<CA+aD3u1PBOi5y-6jAcHFxNHnzZy4yOzwoyUUikAy=tKgMHB_oQ@mail.gmail.com>",
+    "mime-version": "1.0",
+    "received": "by 10.142.10.4 with HTTP; Fri, 22 Jun 2012 00:04:35 -0700 (PDT)",
+    "references": "<CABQMFTRaDy7mt-9aH+AzOSfOBnsr+MiPFxDNtJwpnm9BR-_Nig@mail.gmail.com>",
+    "subject": "Re: [Good] Facebook educate their users about how to be safe, [Bad] doesn’t use https by default",
+    "to": "tosdr@googlegroups.com",
+    "x-originating-ip": "[89.247.124.21]"
+  },
+  "inReplyTo": [
+    "CABQMFTRaDy7mt-9aH+AzOSfOBnsr+MiPFxDNtJwpnm9BR-_Nig@mail.gmail.com"
+  ],
+  "messageId": "CA+aD3u1PBOi5y-6jAcHFxNHnzZy4yOzwoyUUikAy=tKgMHB_oQ@mail.gmail.com",
+  "priority": "normal",
+  "receivedDate": {},
+  "references": [
+    "CABQMFTRaDy7mt-9aH+AzOSfOBnsr+MiPFxDNtJwpnm9BR-_Nig@mail.gmail.com"
+  ],
+  "subject": "Re: [Good] Facebook educate their users about how to be safe, [Bad] doesn’t use https by default",
+  "text": "On Thu, Jun 21, 2012 at 7:18 PM, Jan-Christoph Borchardt\n<hey@jancborchardt.net> wrote:\n> These user-facing safety tips are cool and all, but apparently\n> Facebook still doesn’t use https – you have to enable »safe browsing«.\n> For a communication platform this big that’s downright irresponsible.\n> Sure, many people might read those tips (and forget them also) but it\n> seems like a pacifier compared to no https and tracking and all that.\n>\n\nabout the https issue, here's their statement from 18 months ago:\n\n\"There are a few things you should keep in mind before deciding to\nenable HTTPS. Encrypted pages take longer to load, so you may notice\nthat Facebook is slower using HTTPS. In addition, some Facebook\nfeatures, including many third-party applications, are not currently\nsupported in HTTPS. We'll be working hard to resolve these remaining\nissues. We are rolling this out slowly over the next few weeks, but\nyou will be able to turn this feature on in your Account Settings\nsoon. We hope to offer HTTPS as a default whenever you are using\nFacebook sometime in the future.\"\n\nhttp://www.facebook.com/blog/blog.php?post=486790652130\n\nthat post also mentions the 'faces of your friends' feature, which i\nthink is really original.\n\nanyway, 18 months is a long time. i found this article as well from\nMay 2011, saying third-party content will be required https by October\n2011, and facebook would be 100% https by the end of 2011 (this\nevidently didn't happen)\n\nhttp://news.softpedia.com/news/Facebook-to-Have-Default-HTTPS-by-the-End-of-the-Year-Hopefully-202070.shtml\nhttp://news.softpedia.com/news/Softpedia-Exclusive-Interview-Facebook-Chief-Security-Officer-Joe-Sullivan-201935.shtml\nhttp://developers.facebook.com/blog/post/497/\n\nafter that, i can find no further trail.\n\nof the services that have been rated so far, when i visit the\nfollowing pages (this may depend on my specific account there and\nwhether i'm logged in or not; also, not for all services it's equally\nrelevant, and their flagship .com website may not even be part of\ntheir main service, but still...), i get https:\n\n- diaspora\n- dropbox\n- flattr\n- foursquare\n- loopt\n- gmail\n- google search\n- paypal\n- spideroak\n- twitter\n\nwhen i visit the following pages, i get no https:\n\n- amazon (! - this changes once you click 'checkout', but still, the\ninformation of what you are browsing and buying is not protected from\nMitM attacks there)\n- apple\n- at&t\n- comcast\n- delicious\n- duckduckgo\n- facebook (even while logged in!)\n- identi.ca (even while logged in!)\n- linkedin (even while logged in!)\n- microsoft\n- myspace\n- openstreetmap\n- seenthis (sorry, Hugo! :)\n- skype (although their p2p protocol is encrypted. having said that,\nbeing on skype means you can be tracked geographically by anyone who\nknows your skype handle, we should actually make that a separate data\npoint!)\n- sonic\n- verizon\n- wikipedia (not sure what to think of that)\n- wordpress\n- yahoo\n\nlast weekend, i was the most striking example of a non-https site:\nhttp://www.citybikewien.at/ requires you to put in your creditcard\ndetails over a non-http connection (even though the post is https,\nthis is still an exploitable vulnerability). the awesome bike scheme\nof Vienna is worth it, and in the end, the credit card company and not\nthe consumer will pay for creditcard fraud, but still, it's obviously\nlaughably unacceptable. :)\n\n\n> (Right, by the way – what about storing info/passwords not encrypted,\n> that should be a data point right?)\n\nyou are referring to linkedin? it's hard to track this, but yeah.\n\n>\n>\n> On Thu, Jun 21, 2012 at 2:59 AM, Michiel de Jong <michiel@unhosted.org> wrote:\n>> i just got prompted by facebook (during normal use) to 'read these\n>> security tips' http://www.facebook.com/about/security?mp=2\n>>\n>> I've seen several other websites do this (airbnb, wg-gesucht, tuenti,\n>> ing bank, gmail), and for some services it's more relevant than for\n>> others, but i think it's important from a consumer rights point of\n>> view that a service takes reasonable efforts to make the service safer\n>> to use for consumers.\n>>\n>> even if the service is aimed at tech savvy users, it should at the\n>> very least warn people when they choose a weak password (the little\n>> strength meter), and if there is valuable data, two-factor passwords,\n>> https, and other security measures should be a consumer right i think.\n>>\n>> if a service puts users at risk of oversharing (no, i won't shut up\n>> about it ;) or scams, i would say it is the duty of the service to\n>> warn about this.\n>>\n>> of course more \"be safer online\" education is needed if a service is\n>> aimed at non-technical people and especially minors.\n>>\n>> so i think facebook did not do this very well in the past, but is\n>> doing a good job at it now.\n>>\n>> --\n>> You received this message because you are subscribed to the Google Groups \"Terms of Service; Didn&#39;t Read\" group.\n>> To post to this group, send email to tosdr@googlegroups.com.\n>> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.\n>> For more options, visit https://groups.google.com/groups/opt_out.\n>>\n>>\n>\n> --\n> You received this message because you are subscribed to the Google Groups \"Terms of Service; Didn&#39;t Read\" group.\n> To post to this group, send email to tosdr@googlegroups.com.\n> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.\n> For more options, visit https://groups.google.com/groups/opt_out.\n>\n>\n",
+  "to": [
+    {
+      "address": "tosdr@googlegroups.com",
+      "name": ""
+    }
+  ]
+}
