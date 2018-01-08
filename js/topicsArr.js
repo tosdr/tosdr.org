@@ -6,7 +6,6 @@ var topics = [
   "cookies",
   "copyright-scope",
   "data-export",
-  "device-access",
   "governance",
   "guarantee",
   "jurisdiction-law",
