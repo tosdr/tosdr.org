@@ -1,1 +1,3 @@
-var topics = [];
+var topics = [
+  "personal-data"
+];
