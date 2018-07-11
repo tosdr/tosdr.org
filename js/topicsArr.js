@@ -13,7 +13,6 @@ var topics = [
   "law-gov",
   "leave",
   "logs-length",
-  "meta",
   "ownership",
   "personal information",
   "personal-data",

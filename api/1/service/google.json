@@ -28,6 +28,7 @@
     "1088",
     "1104",
     "1598",
+    "4251",
     "603",
     "612",
     "617",
@@ -63,7 +64,7 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "they may stop providing the service at any time",
+        "case": "They may stop providing the service at any time",
         "point": "bad",
         "score": 40,
         "tldr": "“Google may also stop providing Services to you, or add or create new limits to our Services at any time.” Google has no obligation from the terms to give you notice in advance or to give a reason for that termination"
@@ -90,9 +91,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "they can use your content for all their existing and future services",
-        "point": "bad",
-        "privacyRelated": true,
+        "case": "This service can use your content for all their existing and future services",
+        "point": "",
         "score": 60,
         "tldr": "The content you post on a particular Google service can be used by Google on other services you may not be aware of."
       }
@@ -124,8 +124,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "third-party access without a warrant",
-        "point": "bad",
+        "case": "This service can share your personal information to third parties ",
+        "point": "",
         "score": 50,
         "tldr": "Google can share your personal information with other parties. For sensitive information (medical, racial, ethnic, political, religious or sexuality) Google requires “opt-in”. Google can also share or publish aggregated data that does not identify a person"
       }
@@ -146,8 +146,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "your content stays licensed",
-        "point": "bad",
+        "case": "This service retains rights to your content even after you stop using your account",
+        "point": "",
         "score": 25,
         "tldr": "The license that you grant to Google on content you upload to their services will continue even if you stop using the services. While this makes sense for some services (e.g. Google Maps) this applies by default to all Google services. Otherwise you need to check each service for ways to remove content and for specific clauses that restrict the license in time."
       }
@@ -168,9 +168,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "tracks you on other websites",
-        "point": "bad",
-        "privacyRelated": true,
+        "case": "This service tracks you on other websites",
+        "point": "",
         "score": 60,
         "tldr": "This service uses cookies to track you even if you are not interacting with them directly. Amazon for instance, use <a href=\"http://www.amazon.com/gp/help/customer/display.html/ref=hp_468496_cookies?nodeId=468496&amp;#cookies\">cookies</a> to track your device and serve targeted advertisements on other websites (Amazon associates, websites using Amazon Checkout). They “obtain certain types of information when your Web browser accesses Amazon.com or advertisements and other content served by or on behalf of Amazon.com on other Web sites”."
       }
@@ -196,8 +195,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "user is notified a week or more in advance",
-        "point": "good",
+        "case": "When the service wants to change its terms, users are notified a week or more in advance.",
+        "point": "",
         "score": 30,
         "tldr": "Google “will post notice of modifications to these terms on this page. [They] will post notice of modified additional terms in the applicable Service. Changes will not apply retroactively and will become effective no sooner than fourteen days after they are posted.” As far as changes to the privacy policy goes: “We will not reduce your rights under this Privacy Policy without your explicit consent.” and if changes are significant Google will email you for some services. "
       }
@@ -225,9 +224,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "logs are kept forever",
-        "point": "bad",
-        "privacyRelated": true,
+        "case": "This service keeps user logs for an undefined period of time",
+        "point": "",
         "score": 100,
         "tldr": "Google collects a lot of information about the services you use and how you use them, including when you visit a website using a Google service for advertisement. In the past, Google stated in their Privacy Policy: <em>“We strike a reasonable balance between the competing pressures we face, such as the privacy of our users, the security of our systems and the need for innovation. We believe anonymizing IP addresses after 9 months and cookies in our search engine logs after 18 months strikes the right balance”</em>. Today, these limitations of time are gone from the Privacy Policy, although <a href=\"http://support.google.com/accounts/bin/answer.py?hl=en&answer=162743\">some pages</a> still acknowledge this. So we must conclude that Google has decided to stop trying to find the right balance between privacy of users and their own needs."
       }
@@ -258,8 +256,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "archives provided",
-        "point": "good",
+        "case": "This service provides archives of their terms of service so that changes can be viewed over time",
+        "point": "",
         "score": 50,
         "tldr": "At http://www.google.com/intl/en/policies/terms/archive/ you can see at least one previous versions of Google's terms"
       }
@@ -289,8 +287,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "they provide a way to export your data",
-        "point": "good",
+        "case": "This service provides a way for you to export your data",
+        "point": "",
         "score": 30,
         "tldr": "Google gives you reasonable advance notice when a service is discontinued and “a chance to get information out of that Service.”"
       }
@@ -347,8 +345,8 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "limited for purpose across broad platform",
-        "point": "good",
+        "case": "The copyright license that users grant this service is limited to the parties that make up the service's broader platform.",
+        "point": "",
         "score": 40,
         "tldr": "The copyright license you grant is “for the limited purpose of operating, promoting, and improving” existing and new Google Services. However, please note that the license does not end if you stop using the Google services."
       }
@@ -368,6 +366,24 @@
         "privacyRelated": true,
         "score": "50",
         "tldr": "\"We collect device-specific information (such as your hardware model, operating system version, unique device identifiers, and mobile network information including phone number). Google may associate your device identifiers or phone number with your Google Account.\""
+      }
+    },
+    "4251": {
+      "id": "4251",
+      "quoteDoc": "",
+      "quoteText": "",
+      "services": [
+        "google"
+      ],
+      "title": "personal data is given to third parties",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "personal data is given to third parties",
+        "point": "bad",
+        "privacyRelated": true,
+        "score": 10,
+        "tldr": "\"Activity on third-party sites and apps that use our services\""
       }
     }
   },
