@@ -75,6 +75,7 @@ var services = [
   "w3schools",
   "whatsapp",
   "wikipedia",
+  "windowslogicproductions",
   "wordfeud",
   "wordpress-com",
   "world-of-warcraft",
