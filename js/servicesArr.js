@@ -57,6 +57,7 @@ var services = [
   "roblox",
   "runescape",
   "seenthis",
+  "signal",
   "skycloud",
   "skype",
   "slither-io",
