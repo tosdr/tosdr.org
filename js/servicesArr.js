@@ -65,7 +65,6 @@ var services = [
   "netflix",
   "osmand",
   "owncube",
-  "paypal",
   "phpbb",
   "protonmail",
   "quora",
@@ -73,7 +72,6 @@ var services = [
   "rapidshare",
   "researchgate",
   "roblox",
-  "runescape",
   "searchencrypt",
   "seenthis",
   "signal",
@@ -109,6 +107,5 @@ var services = [
   "world-of-warcraft",
   "xing",
   "yahoo",
-  "youtube",
-  "zoosk"
+  "youtube"
 ];
