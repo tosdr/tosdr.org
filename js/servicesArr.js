@@ -41,6 +41,7 @@ var services = [
   "hackernews",
   "historielærer-dk",
   "imgur",
+  "instagram",
   "itch-io",
   "jagex",
   "kolabnow",
