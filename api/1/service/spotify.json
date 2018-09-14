@@ -25,8 +25,10 @@
   },
   "points": [
     "1082",
+    "1143",
     "642",
-    "877"
+    "877",
+    "905"
   ],
   "pointsData": {
     "642": {
@@ -95,6 +97,41 @@
         "tldr": "If you participate in a Special Promotion (sweepstakes, contests, surveys), Spotify may ask for certain personal information in addition to what they already have. They may then combine that information with your current file."
       }
     },
+    "905": {
+      "discussion": "https://groups.google.com/d/topic/tosdr/EWDvg3nJjrg/discussion",
+      "id": "905",
+      "meta": {
+        "author": "Ian McGowan",
+        "contributors": [
+          "Jil Larner <jil.larner@fsfe.org>"
+        ],
+        "license-for-this-file": "This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, .USA",
+        "spec-version": "1.1"
+      },
+      "needModeration": false,
+      "quoteDoc": "Terms and Conditions of Use",
+      "quoteEnd": 7548,
+      "quoteStart": 6981,
+      "quoteText": "IF YOU DO NOT WANT TO CONTINUE TO BE CHARGED ON A RECURRING MONTHLY BASIS, YOU MUST CANCEL THE APPLICABLE PAID SUBSCRIPTION THROUGH YOUR SPOTIFY ACCOUNT’S SUBSCRIPTION PAGE OR TERMINATE YOUR SPOTIFY ACCOUNT BEFORE THE END OF THE RECURRING MONTHLY PERIOD.\nPAID SUBSCRIPTIONS CANNOT BE TERMINATED BEFORE THE END OF THE PERIOD FOR WHICH YOU HAVE ALREADY PAID, AND EXCEPT AS EXPRESSLY PROVIDED IN THESE TERMS, SPOTIFY WILL NOT REFUND ANY FEES THAT YOU HAVE ALREADY PAID.\nTHE LIMITATION SECTION SETS FORTH ADDITIONAL TERMS REGARDING CANCELLATION OF YOUR PAID SUBSCRIPTION.",
+      "services": [
+        "spotify"
+      ],
+      "slug": "EWDvg3nJjrg",
+      "source": {
+        "terms": "https://www.spotify.com/us/legal/end-user-agreement/"
+      },
+      "title": "Spotify doesn't provide refunds",
+      "topics": [
+        "guarantee"
+      ],
+      "tosdr": {
+        "binding": true,
+        "case": "no refund policy",
+        "point": "neutral",
+        "score": 50,
+        "tldr": "Spotify does not offer refunds upon termination of their services, either by you or Spotify."
+      }
+    },
     "1082": {
       "discussion": "https://groups.google.com/d/topic/tosdr/RXRw6w-rc5o/discussion",
       "id": "1082",
@@ -120,10 +157,32 @@
       ],
       "tosdr": {
         "binding": true,
-        "case": "The terms for this service are translated into only a few languages",
+        "case": "The terms for this service are translated into different languages",
         "point": "neutral",
         "score": 0,
         "tldr": "Although Spotify allows users to choose their country (Andorra, Australia, Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Liechtenstein, Luxembourg, Monaco, Netherlands, New Zealand, Norway, Spain, Sweden, Switzerland, United Kingdom, United States), the terms themselves are only available in English, French, German, and Spanish."
+      }
+    },
+    "1143": {
+      "id": "1143",
+      "needModeration": false,
+      "quoteDoc": "Privacy Policy",
+      "quoteEnd": 11746,
+      "quoteStart": 11323,
+      "quoteText": "Technical Data which may include URL information, cookie data, your IP address, the types of devices you are using to access or connect to the Spotify Service, unique device IDs, device attributes, network connection type (e.g.\nWiFi, 3G, LTE, Bluetooth) and provider, network and device performance, browser type, language, information enabling digital rights management, operating system, and Spotify application version.\n",
+      "services": [
+        "spotify"
+      ],
+      "slug": "1143",
+      "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+        "point": "bad",
+        "privacyRelated": true,
+        "score": 50,
+        "tldr": "\"All the information we collect is related to providing the Spotify service and its features.\"\r\n\r\nand\r\n\r\n\"Technical and sensor information necessary to operate Spotify. This includes the type of browser and device you use, data from the touchscreen, and information from your device’s accelerometer and gyroscope sensors. This enables you to control Spotify and allows us to do simple things like rotate videos and recommend music based on whether you’re sitting still or running.\" (so no device fingerprinting for the purpose of advertising, like a lot of other services do)."
       }
     }
   },
