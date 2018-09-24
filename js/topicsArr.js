@@ -10,7 +10,6 @@ var topics = [
   "law-gov",
   "leave",
   "ownership",
-  "personal-data",
   "readability",
   "refunds",
   "scope of the copyright license",

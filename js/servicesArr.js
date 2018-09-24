@@ -88,6 +88,7 @@ var services = [
   "soundcloud",
   "spigotmc",
   "spotify",
+  "sprint",
   "stackoverflow",
   "steam",
   "tapas",
