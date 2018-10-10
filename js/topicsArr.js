@@ -4,6 +4,7 @@ var topics = [
   "changes-notice",
   "cookies",
   "copyright-scope",
+  "device-access",
   "governance",
   "guarantee",
   "jurisdiction-law",

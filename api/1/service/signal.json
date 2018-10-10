@@ -17,7 +17,8 @@
     "4419",
     "4421",
     "4422",
-    "4438"
+    "4438",
+    "4440"
   ],
   "pointsData": {
     "4411": {
@@ -187,7 +188,7 @@
         "binding": true,
         "case": "This service does not track you",
         "point": "good",
-        "score": 80,
+        "score": 100,
         "tldr": "The transparency report states: \"We’ve designed the Signal service to minimize the data we retain about Signal users, so the only information we can produce in response to a request like this is the date and time a user registered with Signal and the last date of a user’s connectivity to the Signal service.\""
       }
     },
@@ -209,6 +210,26 @@
         "point": "good",
         "score": 20,
         "tldr": "The terms state: \"You may optionally add other information to your account, such as a profile name and profile picture. This information is end-to-end encrypted.\" The profile name is therefore not visible to Signal (and hence they cannot determine what it should say). The terms also otherwise do not mention restrictions on the name you choose."
+      }
+    },
+    "4440": {
+      "id": "4440",
+      "needModeration": false,
+      "quoteDoc": "Grand jury subpoena for Signal user data, Eastern District of Virginia",
+      "quoteEnd": 1100,
+      "quoteStart": 425,
+      "quoteText": "the only information we can produce in response to a request like this is the date and time a user registered with Signal and the last date of a user’s connectivity to the Signal service.</p>\n<p>Notably, things we <em>don’t</em> have stored include anything about a user’s contacts (such as the contacts themselves, a hash of the contacts, any other derivative contact information), anything about a user’s groups (such as how many groups a user is in, which groups a user is in, the membership lists of a user’s groups), or any records of who a user has been communicating with.</p>\n<p>All message contents are end-to-end encrypted, so we don’t have that information either.",
+      "services": [
+        "signal"
+      ],
+      "title": "Only necessary user logs are kept by the service to ensure quality",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "Only necessary user logs are kept by the service to ensure quality",
+        "point": "good",
+        "score": 50,
+        "tldr": "\"We’ve designed the Signal service to minimize the data we retain about Signal users, so the only information we can produce in response to a request like this is the date and time a user registered with Signal and the last date of a user’s connectivity to the Signal service.\""
       }
     }
   },
