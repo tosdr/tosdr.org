@@ -1,6 +1,7 @@
 var topics = [
   "business-transfer",
   "changes",
+  "changes-involvement",
   "changes-notice",
   "cookies",
   "copyright-scope",
@@ -11,6 +12,7 @@ var topics = [
   "law-gov",
   "leave",
   "ownership",
+  "payment%22%2C+%22changes",
   "readability",
   "refunds",
   "scope of the copyright license",

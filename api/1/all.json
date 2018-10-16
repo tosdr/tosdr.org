@@ -1,6 +1,6 @@
 {
   "tosdr/api/version": 1,
-  "tosdr/data/version": 1539167131440,
+  "tosdr/data/version": 1539672744453,
   "tosdr/review/500px.com": {
     "documents": [
       {
@@ -1142,7 +1142,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "Even though the Do Not Track (DNT) header was not implemented perfectly, services should not track users whose browsers send a DNT header.",
         "discussion": "https://edit.tosdr.org/points/2463",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       },
       {
@@ -1554,7 +1554,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "This website does not support “Do Not Track” requests.\r\nTo determine whether any of the third-party services it uses honor the “Do Not Track” requests, please read their privacy policies.",
         "discussion": "https://edit.tosdr.org/points/4566",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       }
     ],
@@ -1616,6 +1616,14 @@
     "name": "DuckDuckGo",
     "points": [
       {
+        "id": "1090",
+        "title": "No Tracking",
+        "description": "DuckDuckGo doesn't save <em>your</em> searches and doesn't send your searches to other sites. No personal information is saved either. No cookies are used by default, but cookies can be saved on your computer for some features (e.g. settings). “We also save searches, but again, not in a personally identifiable way, as we do not store IP addresses or unique User agent strings. We use aggregate, non-personal search data to improve things like misspellings.”",
+        "discussion": "https://edit.tosdr.org/points/1090",
+        "point": "good",
+        "score": 100
+      },
+      {
         "id": "4474",
         "title": "Conditions may change, but your continued acceptance is not inferred from an earlier acceptance flow",
         "description": "I think this is the correct case: although they mark updates, they do not contact the user. (Which makes sense because they don't have contact details, but still.) Also, the changes take effect immediately.",
@@ -1649,7 +1657,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "eBay does not respond to Do Not Track signals, but provides a notice for their use of Cookies (http://pages.ebay.com/help/account/cookies-web-beacons.html)",
         "discussion": "https://edit.tosdr.org/points/1535",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       },
       {
@@ -1761,12 +1769,21 @@
     "name": "Facebook",
     "points": [
       {
+        "id": "4598",
+        "title": "Your identity is used in ads that are shown to other users",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4598",
+        "point": "blocker",
+        "score": 90,
+        "privacyRelated": true
+      },
+      {
         "id": "1059",
         "title": "App required for this service requires broad device permissions",
         "description": "When installing the Facebook app on an Android phone, it allows access to the audio record path and to take pictures with the camera. This allows the application at any time to collect images the camera is seeing.",
         "discussion": "https://edit.tosdr.org/points/1059",
         "point": "bad",
-        "score": 60,
+        "score": 80,
         "privacyRelated": true
       },
       {
@@ -1790,15 +1807,6 @@
         "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
         "description": "Collects all data you send (username, email, credit card number...), any kind of info other put about you as well. Plus all info about your device: \"Attributes such as the operating system, hardware version, device settings, file and software names and types, battery and signal strength, and device identifiers. Device locations, including specific geographic locations, such as through GPS, Bluetooth, or WiFi signals. Connection information such as the name of your mobile operator or ISP, browser type, language and time zone, mobile phone number and IP address.\"",
         "discussion": "https://edit.tosdr.org/points/1831",
-        "point": "bad",
-        "score": 50,
-        "privacyRelated": true
-      },
-      {
-        "id": "4598",
-        "title": "Your identity is used in ads that are shown to other users",
-        "description": "Generated through the annotate view",
-        "discussion": "https://edit.tosdr.org/points/4598",
         "point": "bad",
         "score": 50,
         "privacyRelated": true
@@ -1938,7 +1946,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "Generated through the annotate view",
         "discussion": "https://edit.tosdr.org/points/4618",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       },
       {
@@ -2158,6 +2166,28 @@
     ],
     "rated": false,
     "slug": "gitlab"
+  },
+  "tosdr/review/goodreads.com": {
+    "documents": [
+      {
+        "name": "Privacy Policy",
+        "url": "http://www.goodreads.com/about/privacy"
+      }
+    ],
+    "logo": "https://tosdr.org/logo/goodreads.png",
+    "name": "goodreads",
+    "points": [
+      {
+        "id": "1766",
+        "title": "\"Goodreads does not notify you when they change their Privacy Policy.\"",
+        "description": "If we change our privacy policies and procedures, we will post those changes on our website to keep you aware of what information we collect, how we use it and under what circumstances we may disclose it. Changes to this Privacy Policy are effective when they are posted on this page. ",
+        "discussion": "https://edit.tosdr.org/points/1766",
+        "point": "neutral",
+        "score": 0
+      }
+    ],
+    "rated": false,
+    "slug": "goodreads"
   },
   "tosdr/review/goodtodo.com": {
     "documents": [],
@@ -2936,6 +2966,14 @@
     "name": "Grammarly",
     "points": [
       {
+        "id": "1481",
+        "title": " Terms may be changed any time at their discretion, without notice to the user ",
+        "description": "This is very vaguely defined and can basically mean \"We post it somewhere and it will count as notification\". I doubt this can be counted as \"notification\".",
+        "discussion": "https://edit.tosdr.org/points/1481",
+        "point": "bad",
+        "score": 70
+      },
+      {
         "id": "1093",
         "title": "Grammarly does not notify users before being involved in a merger, sale, or acquisition",
         "description": "Grammarly does not inform users before being involved in a merger, sale, or acquisition. They do, however, notify users via email and post a notice on their site regarding any choices you may have regarding your personal information.",
@@ -3191,6 +3229,14 @@
         "discussion": "https://edit.tosdr.org/points/941",
         "point": "bad",
         "score": 70
+      },
+      {
+        "id": "1091",
+        "title": "To use IFTTT you must be an individual and 18 years old",
+        "description": "IFTTT is not meant to be used by users who are younger than 18, without the supervision of a parent or guardian. ",
+        "discussion": "https://edit.tosdr.org/points/1091",
+        "point": "neutral",
+        "score": 15
       }
     ],
     "rated": false,
@@ -3368,6 +3414,31 @@
     "rated": false,
     "slug": "jagex"
   },
+  "tosdr/review/jetbrains.com": {
+    "documents": [],
+    "logo": "https://tosdr.org/logo/jetbrains.png",
+    "name": "JetBrains",
+    "points": [
+      {
+        "id": "4789",
+        "title": " Terms may be changed any time at their discretion, without notice to the user ",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4789",
+        "point": "bad",
+        "score": 70
+      },
+      {
+        "id": "4790",
+        "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4790",
+        "point": "bad",
+        "score": 60
+      }
+    ],
+    "rated": false,
+    "slug": "jetbrains"
+  },
   "tosdr/review/jobvite": {
     "documents": [],
     "logo": "https://tosdr.org/logo/jobvite.png",
@@ -3384,6 +3455,34 @@
     ],
     "rated": false,
     "slug": "jobvite"
+  },
+  "tosdr/review/jstor.org": {
+    "see": "jstor.org"
+  },
+  "tosdr/review/kink.com": {
+    "documents": [],
+    "logo": "https://tosdr.org/logo/kink-com.png",
+    "name": "Kink.com",
+    "points": [
+      {
+        "id": "4786",
+        "title": "Users cannot scrape the website of the service",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4786",
+        "point": "bad",
+        "score": 20
+      },
+      {
+        "id": "4787",
+        "title": "This service prohibits users sending chain letters, junk mail, spam or any unsolicited messages",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4787",
+        "point": "neutral",
+        "score": 15
+      }
+    ],
+    "rated": false,
+    "slug": "kink-com"
   },
   "tosdr/review/kolab.org": {
     "see": "kolabnow.com"
@@ -3867,7 +3966,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "Generated through the annotate view",
         "discussion": "https://edit.tosdr.org/points/4723",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       },
       {
@@ -3877,6 +3976,14 @@
         "discussion": "https://edit.tosdr.org/points/4726",
         "point": "bad",
         "score": 60
+      },
+      {
+        "id": "4756",
+        "title": "You wave your right to a class action.",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4756",
+        "point": "bad",
+        "score": 50
       },
       {
         "id": "4724",
@@ -3895,12 +4002,60 @@
         "score": 50
       },
       {
+        "id": "4752",
+        "title": "The service does not guarantee that software errors will be corrected",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4752",
+        "point": "bad",
+        "score": 50
+      },
+      {
+        "id": "4753",
+        "title": "Users are responsible for any risks, damages, or losses they may incur by downloading materials",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4753",
+        "point": "neutral",
+        "score": 50
+      },
+      {
+        "id": "4751",
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4751",
+        "point": "bad",
+        "score": 30
+      },
+      {
         "id": "4689",
         "title": "The service allows you to use pseudonyms",
         "description": "Generated through the annotate view",
         "discussion": "https://edit.tosdr.org/points/4689",
         "point": "good",
         "score": 20
+      },
+      {
+        "id": "4750",
+        "title": "The service is provided 'as is' and to be used at the users' sole risk",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4750",
+        "point": "bad",
+        "score": 20
+      },
+      {
+        "id": "4747",
+        "title": "This service is only available to users of a certain age",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4747",
+        "point": "neutral",
+        "score": 15
+      },
+      {
+        "id": "4754",
+        "title": "The service does not guarantee accuracy or reliability of the information provided",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4754",
+        "point": "bad",
+        "score": 10
       },
       {
         "id": "4688",
@@ -4728,11 +4883,43 @@
     "name": "SpigotMC",
     "points": [
       {
+        "id": "4746",
+        "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4746",
+        "point": "bad",
+        "score": 60
+      },
+      {
+        "id": "4441",
+        "title": "The copyright license that users grant to the service is limited for the purposes of that same service, and not third parties.",
+        "description": "Extract from the Terms of Service: 'You are granting us with a non-exclusive, permanent, irrevocable, unlimited license to use, publish, or re-publish your Content in connection with the Service.' Apart from the permance and irrevocability of the license all points are necessary as the website, among other things, acts as a distribution platform for the software of users.",
+        "discussion": "https://edit.tosdr.org/points/4441",
+        "point": "good",
+        "score": 50
+      },
+      {
         "id": "4442",
         "title": "This service provides archives of their terms of service so that changes can be viewed over time",
         "description": "Whole ToS and Rules history can be found via the source link.",
         "discussion": "https://edit.tosdr.org/points/4442",
         "point": "good",
+        "score": 50
+      },
+      {
+        "id": "4573",
+        "title": "The service can delete specific content without prior notice and without a reason",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4573",
+        "point": "blocker",
+        "score": 50
+      },
+      {
+        "id": "4745",
+        "title": "There is a date of the last update of the terms",
+        "description": "See the source link in the lower left corner at the end of the terms.",
+        "discussion": "https://edit.tosdr.org/points/4745",
+        "point": "neutral",
         "score": 50
       },
       {
@@ -4752,11 +4939,27 @@
         "score": 15
       },
       {
+        "id": "4730",
+        "title": "Prohibits the posting of pornographic content",
+        "description": "Generated through the annotate view",
+        "discussion": "https://edit.tosdr.org/points/4730",
+        "point": "neutral",
+        "score": 15
+      },
+      {
         "id": "4443",
         "title": "Users agree not to submit illegal content",
         "description": "The ToS states that 'You agree to not use the Service to submit or link to any Content which is defamatory, abusive, hateful, threatening, spam or spam-like, likely to offend, contains adult or objectionable content, contains personal information of others, risks copyright infringement, encourages unlawful activity, or otherwise violates any laws.'",
         "discussion": "https://edit.tosdr.org/points/4443",
         "point": "neutral",
+        "score": 10
+      },
+      {
+        "id": "4743",
+        "title": "You can choose the copyright license",
+        "description": "As Spigot is a forum and marketplace you can choose the copyright license you want to publish your software with. Open-Source projects are handled just like closed-source ones.",
+        "discussion": "https://edit.tosdr.org/points/4743",
+        "point": "good",
         "score": 10
       }
     ],
@@ -4821,6 +5024,14 @@
         "discussion": "https://edit.tosdr.org/points/905",
         "point": "neutral",
         "score": 50
+      },
+      {
+        "id": "1012",
+        "title": "Spotify gives no guarantee for quality of service",
+        "description": "There is no guarantee of quality of service. If the service is not delivered to your expectations, you still pay for it to the extent of applicable law.",
+        "discussion": "https://edit.tosdr.org/points/1012",
+        "point": "bad",
+        "score": 20
       },
       {
         "id": "1082",
@@ -5174,7 +5385,7 @@
         "title": "This service ignores the Do Not Track (DNT) header and tracks users anyway even if they set this header.",
         "description": "Even though the Do Not Track (DNT) header was not implemented perfectly, services should not track users whose browsers send a DNT header.",
         "discussion": "https://edit.tosdr.org/points/4354",
-        "point": "blocker",
+        "point": "bad",
         "score": 60
       },
       {
@@ -5186,7 +5397,7 @@
         "score": 15
       }
     ],
-    "rated": "D",
+    "rated": "B",
     "slug": "trello"
   },
   "tosdr/review/tumblr.com": {
