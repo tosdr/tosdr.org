@@ -70,6 +70,7 @@ var services = [
   "mastodon-social",
   "mega",
   "microsoft",
+  "mint.com",
   "mullvad",
   "musicbrainz",
   "musik-sammler",

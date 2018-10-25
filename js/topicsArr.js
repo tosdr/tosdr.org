@@ -13,6 +13,7 @@ var topics = [
   "leave",
   "ownership",
   "payment%22%2C+%22changes",
+  "personal-data",
   "readability",
   "refunds",
   "scope of the copyright license",
