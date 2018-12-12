@@ -45,6 +45,7 @@ var services = [
   "foxnews",
   "freecodecamp",
   "fwg1240",
+  "getrentback",
   "github",
   "gitlab",
   "goodreads",
