@@ -70,6 +70,7 @@ var services = [
   "kink-com",
   "kolabnow",
   "lastpass",
+  "liamrosenfeld-com",
   "librarything",
   "mastodon-social",
   "mega",
