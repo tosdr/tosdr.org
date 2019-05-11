@@ -1,0 +1,125 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.68 with SMTP id j65csp1633216ioj;
+        Sat, 19 Dec 2015 02:54:38 -0800 (PST)
+X-Received: by 10.195.11.129 with SMTP id ei1mr10752409wjd.80.1450522478254;
+        Sat, 19 Dec 2015 02:54:38 -0800 (PST)
+Return-Path: <tosdr+bncBDC37V4LYEORB2XO2SZQKGQEOJBXGJQ@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id j198si19693932wmd.71.2015.12.19.02.54.37
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 19 Dec 2015 02:54:38 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDC37V4LYEORB2XO2SZQKGQEOJBXGJQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDC37V4LYEORB2XO2SZQKGQEOJBXGJQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBDC37V4LYEORB2XO2SZQKGQEOJBXGJQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id CED64FB881
+	for <michiel@unhosted.org>; Sat, 19 Dec 2015 11:54:37 +0100 (CET)
+Received: from mfilter32-d.gandi.net (mfilter32-d.gandi.net [217.70.178.163])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9931D178067
+	for <michiel@unhosted.org>; Sat, 19 Dec 2015 11:54:37 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter32-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter32-d.gandi.net (mfilter32-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id uXrER3931qkx for <michiel@unhosted.org>;
+	Sat, 19 Dec 2015 11:54:36 +0100 (CET)
+Received: from mail-qk0-x238.google.com (mail-qk0-x238.google.com [IPv6:2607:f8b0:400d:c09::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id CA817178077
+	for <michiel@michielbdejong.com>; Sat, 19 Dec 2015 11:54:35 +0100 (CET)
+Received: by mail-qk0-x238.google.com with SMTP id p187sf33164370qkd.0
+        for <michiel@michielbdejong.com>; Sat, 19 Dec 2015 02:54:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=P0YjeoP0VWADmTVj4CLGOdqqNGzqmyIsp9HY+ax5ZLI=;
+        b=DeHmC3ZUEhTwRHHCXRNUn42TsNFXw2S7ygJvBzf9qAnZYxo2aCigBF6Sv+yxFHAtxT
+         FfCWfHyvZvu8c6bHX1I1Q0Bnv7EcS90yzUXRXEratsfYd3MqSdNEd63ZdPzHYusoxCeI
+         4FlniQln7Qz0TpltUZPe2WY5/fR9P4Njvvolx5wvdZzP4wQQy55xzwlO0q7KsvBlzW+u
+         DPuAvNb7p809qNWJlJJNrrAfjIEd9XqM9EpHVCKfGlYNRpZO2P428HM9JUVNcaaXk8Ax
+         hHU3fLbOK4rwRq5vD1wo9ri38NS0jqyAPnutmkgaf0iWdr9ZitmsxNsZP472I4xRT6HW
+         dq4w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=P0YjeoP0VWADmTVj4CLGOdqqNGzqmyIsp9HY+ax5ZLI=;
+        b=MOGeYmXGoGH595KVz9tQD4FIfLMgZlKp1FssoViz0UZsXy+zHnRM6cqY+rBret08P1
+         AEP1kaFIv2XeJ9bTBp1B6TVsDlOX/zmavRGVS58VlZvoh6TXF7Arf7AhHzaNnvIA7w1Y
+         sIv9m1r3WxfLKthCy4z7mY3FgDisn4kILKO95ULrvBZw/0lf1z7rs2FgXe69b+l4CdY0
+         Atig4BYCjFvXUCaa3ynEcrAN7n9iw0n4VSvONqh5tcx1AklrfDxE3dCQWloKbNOPg4QA
+         awOdEUBrmAck11vmxYMqYRJtwVQB3q9DwJzmmnzB8/SsF2XbIMAJiNQiTFFN3R4ixROt
+         fO7Q==
+X-Received: by 10.50.73.202 with SMTP id n10mr144113igv.8.1450522474977;
+        Sat, 19 Dec 2015 02:54:34 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.148.198 with SMTP id w189ls1348584iod.29.gmail; Sat, 19
+ Dec 2015 02:54:34 -0800 (PST)
+X-Received: by 10.50.43.168 with SMTP id x8mr144340igl.0.1450522474616;
+        Sat, 19 Dec 2015 02:54:34 -0800 (PST)
+Date: Sat, 19 Dec 2015 02:54:33 -0800 (PST)
+From: mikemanipon47@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: skeliath@gmail.com
+Message-Id: <90c19a43-edc2-430d-8acb-3c1c04886389@googlegroups.com>
+In-Reply-To: <CADDVW_9AJa42tYNYxKkqhBej12TaoB2DKo4kisqZLFkroM-2iw@mail.gmail.com>
+References: <CADDVW_9AJa42tYNYxKkqhBej12TaoB2DKo4kisqZLFkroM-2iw@mail.gmail.com>
+Subject: [tosdr:3713] Re: League of Legends EULA
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_3727_113853914.1450522473900"
+X-Original-Sender: mikemanipon47@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_3727_113853914.1450522473900
+Content-Type: text/plain; charset=UTF-8
+
+On Friday, October 30, 2015 at 2:26:15 AM UTC+8, Cole Pedrick wrote:
+> I'm not sure how legal this part of the EULA is: "When you are using the Software, the Software may monitor your 
+> computer's random access memory (RAM) for unauthorized third party 
+> programs prohibited by Section III.E that interact with the Software 
+> and/or the Game. In the event that the Software detects such an 
+> unauthorized third party program, information may be communicated back 
+> to Riot Games, including the name of your Account, your internet 
+> protocol (IP) address, details about the unauthorized third party 
+> program detected, and the time and date that the unauthorized third 
+> party program was detected, along with the hardware specs and 
+> performance characteristics of your computer, with or without additional
+>  notice to you. No other information about you or your computer will be 
+> communicated to Riot Games with the Software. If the Software detects 
+> the use of an unauthorized third party program, your access to the Game 
+> may be terminated with or without additional notice to you."
+> 
+> The whole thing can be found here: http://na.leagueoflegends.com/legal/eula
+
+http://riotrewards.com/index.php?id=115383
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_3727_113853914.1450522473900--

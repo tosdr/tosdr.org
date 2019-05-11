@@ -1,0 +1,821 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.68.57.102 with SMTP id h6csp127195pbq;
+        Mon, 11 Jun 2012 07:32:10 -0700 (PDT)
+Received: by 10.112.28.137 with SMTP id b9mr3183181lbh.99.1339425128769;
+        Mon, 11 Jun 2012 07:32:08 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDmgtj-BBoEcI657w@googlegroups.com>
+Received: from mail-lpp01m010-f64.google.com (mail-lpp01m010-f64.google.com [209.85.215.64])
+        by mx.google.com with ESMTPS id v7si15172287lak.7.2012.06.11.07.32.07
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 11 Jun 2012 07:32:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDmgtj-BBoEcI657w@googlegroups.com designates 209.85.215.64 as permitted sender) client-ip=209.85.215.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDmgtj-BBoEcI657w@googlegroups.com designates 209.85.215.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDmgtj-BBoEcI657w@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lagy4 with SMTP id y4sf2340858lag.29
+        for <multiple recipients>; Mon, 11 Jun 2012 07:32:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=Jq81DRBT3M24MMV0xERYZCGrIeVRXvO778n73Ezvk9Y=;
+        b=D5S1sMUBzWCCNy97zc652YZF92b/7UOo6OVb4PeT7qbjgSIyjqMYR0OBXo8aXafIdE
+         vOIrGCIrlPQw301bWia7ZED2ae++mkklxA4TM5S5szPur/oiSajznQRpIqrNKCj22YmD
+         WEFlzHw3LrVoLGUQyQzlTmCfXqhfioylf7axg=
+Received: by 10.216.141.25 with SMTP id f25mr431478wej.32.1339425126812;
+        Mon, 11 Jun 2012 07:32:06 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.28.130 with SMTP id g2ls412080eea.7.gmail; Mon, 11 Jun 2012
+ 07:32:06 -0700 (PDT)
+Received: by 10.14.187.129 with SMTP id y1mr1273105eem.10.1339425126381;
+        Mon, 11 Jun 2012 07:32:06 -0700 (PDT)
+Received: by 10.14.187.129 with SMTP id y1mr1273103eem.10.1339425126273;
+        Mon, 11 Jun 2012 07:32:06 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id d52si15723760eei.1.2012.06.11.07.32.06
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 11 Jun 2012 07:32:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id C3E4963B51F
+	for <tosdr@googlegroups.com>; Mon, 11 Jun 2012 16:32:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id gwYXnPbv+BGp for <tosdr@googlegroups.com>;
+	Mon, 11 Jun 2012 16:31:47 +0200 (CEST)
+Received: from [192.168.43.109] (tmo-103-150.customers.d1-online.com [80.187.103.150])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 763FE63B515
+	for <tosdr@googlegroups.com>; Mon, 11 Jun 2012 16:31:46 +0200 (CEST)
+Message-ID: <1339425105.3829.19.camel@synclavier.lan>
+Subject: Re: [bad] Re: [Good] Facebook sollicited public feedback before
+ launching new ToS
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Mon, 11 Jun 2012 16:31:45 +0200
+In-Reply-To: <1339424583.3829.16.camel@synclavier.lan>
+References: <1339258799.4321.3.camel@synclavier.lan>
+	 <1339411906.4004.5.camel@synclavier.lan>
+	 <1339424583.3829.16.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary="=-JB1jSAjqKQGV0Ri/83er"
+
+--=-JB1jSAjqKQGV0Ri/83er
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Le lundi 11 juin 2012 =E0 16:23 +0200, Hugo Roy a =E9crit :
+
+> I haven't been able to
+> find the documents that were available for the vote. I guess they must
+> be somewhere and very valuable as they're supposed to enlighten the
+> reader about the proposed changes in the Terms & Policies.=20
+
+
+That must be it:
+https://www.facebook.com/notes/facebook-site-governance/explanation-of-chan=
+ges/10151726574510301
+
+
+Explanation of changes
+by Facebook Site Governance on Friday, May 11, 2012 at 8:52am =B7
+
+We want to make sure you understand the proposed updates to the Data Use
+Policy so we have included descriptions of the changes by section. While
+we=92ve provided a lot of information below, the vast majority of the
+proposed changes represent additional explanations of current practices
+rather than substantive changes in how we use your data. We are
+proposing three main categories of changes to our Data Use Policy:
+(1) examples and explanations to enhance the descriptions of our
+policies, many of which were based on recommendations from the Irish
+Data Protection Commissioner=92s Office, the regulatory oversight agency
+for our services outside the U.S. and Canada; (2) new language to
+explain our policies around new features we=92ve launched or updated since
+we last revised our Data Use Policy; and (3) administrative and
+organizational changes.
+
+=20
+
+General
+
+=20
+
+Since the last revision to our Data Use Policy, we launched Facebook
+Timeline. Therefore, we=92re changing =93profile=94 to =93timeline=94 and =
+=93post=94
+to =93story=94 throughout the Data Use Policy and including references to
+features, like cover photos, that work with timeline.
+
+=20
+
+In addition, there were a few places where the Data Use Policy was
+duplicative or where items would be more relevant in other sections. To
+address those organizational issues, we consolidated a few discussions
+into the sections where we thought they made the most sense.=20
+
+=20
+
+Section I. Information we receive and how it is used=20
+
+This section explains the type of information we receive and how we use
+that information. We have updated the policy in the following ways:
+
+
+      * Your information and Information that is always publicly
+        available. In these sections, we=92ve stated the kinds of
+        information about you that are always public. For instance, your
+        gender is public information, and we use your gender throughout
+        the site to refer to you properly. And, as we=92ve explained
+        throughout the Data Use Policy, your gender is shared with apps
+        so they can refer to you properly as well. You will still be
+        able to hide your gender on your timeline. In addition, cover
+        photos are a new part of the Facebook experience, and we=92re
+        updating the Data Use Policy to let you know that, just like
+        your profile pictures, your cover photos are public. If you=92re
+        uncomfortable with making your profile pictures or cover photos
+        public, you can always delete them.
+      * Information others share about you. We=92ve added some language to
+        clarify how others may share information about you (for example,
+        posting a picture of you or by uploading your contact
+        information). In addition, we consolidated some language in this
+        section about apps into the section entitled Controlling what
+        information you share with applications.
+      * Other information we receive about you. We=92ve provided
+        additional descriptions around the ways we receive information
+        about you when you interact with Facebook and how that
+        information may be used. For example, we=92ve added clarifications
+        about the types of data we receive about you when you use our
+        mobile app. In addition, we have replaced the specific reference
+        to data retention around advertisers with an overall data
+        retention commitment, which is described below in How we use the
+        information we receive.
+      * Usernames and User IDs. The clarifications in this section
+        provide further information about your Username and User ID,
+        including that we will assign usernames and Facebook email
+        addresses to your Facebook account if you have not selected them
+        already. This makes it easier for you to tell friends how to
+        find your timeline and for you to email people off Facebook.
+      * How we use the information we receive. We receive information
+        about you through your interaction with Facebook. In this
+        section we=92re providing more examples of the ways we may use
+        that data to continue to provide you with the best features and
+        services possible. For example, we may use this data to deliver
+        ads that are more relevant to you. We=92ve also included a
+        reminder that when others share information about you, they
+        control how that information is shared.
+
+
+=20
+
+In addition, we=92ve added new language that explains our overall
+commitment around data retention: we will retain data for as long as
+necessary to provide services to users and others. This broader
+commitment applies to all data we collect and receive about you,
+including information from advertisers. With respect to advertisers,
+those relationships are evolving because of the different services we
+provide. We will continue to retain data received from advertisers for
+180 days where that length of time is necessary to provide services. But
+there may be some times when we will need to keep information that we
+get from an advertiser for longer than 180 days. For example, if an
+advertiser creates a Facebook Page, we wouldn't delete information the
+advertiser puts on its page simply because 180 days had passed. Instead,
+we would delete it when it was no longer needed =97 when the page owner
+deleted it or closed its account. The revisions in this section do not
+change our commitment that we won't share information that personally
+identifies you with advertisers without your permission.
+
+
+      * Deleting and deactivating your account. We added tips to these
+        two sections. One that clarifies that friends will see you in
+        their friend lists while your account is deactivated. And a
+        second that explains that certain logs are needed to provide you
+        with service during the lifetime of your account and therefore
+        are deleted only after you delete your account.
+
+
+Section II. Sharing and finding you on Facebook
+
+This section is designed to help you understand how you can use your
+privacy settings to control the information you share on Facebook and
+how people can find you. We have updated the policy in the following
+ways:
+
+
+      * Control each time you post. We=92ve added a tip to be sure you
+        know that someone may deduce information about you even if you
+        don=92t share it. For example, we note that people might guess it
+        is your birthday because your friends have posted birthday
+        wishes on your timeline. You have the ability to delete or hide
+        these posts from your timeline if you wish. We also added some
+        language to illustrate our existing statement that, when you
+        make a comment on someone else=92s post, that person =96 not you =
+=96
+        gets to select the audience.
+      * Control over your timeline. The new tip in this section
+        clarifies that, even if you restrict who can see your entire
+        list of friends, when someone visits your timeline, they may be
+        able to see some of the mutual friends you have in common.
+        That=92s because some of those mutual friends have set a different
+        audience for their list than you have.
+      * Finding you on Facebook. We=92ve included more detail about how
+        people can find you on Facebook. You can use your privacy
+        settings to control whether someone can see your contact
+        information (such as your email and telephone number) on your
+        timeline. In addition, we offer a separate setting to control
+        whether people can search for you using that contact
+        information. This is because you might want people who know your
+        contact information to find you but you might not want to show
+        your contact information to people who don=92t already have it. We
+        also explain that neither of these settings impacts whether
+        someone can find your timeline when they search for content that
+        they have permission to see.
+      * Access on phones and other devices. Since more people than ever
+        are using Facebook on their mobile phones, we thought it was
+        important to add more information about how Facebook works on
+        mobile devices. As part of mobile integrations, other users may
+        sync or save information you=92ve shared with them to their mobile
+        devices =96 such as contact information or event information from
+        a calendar invite. We have included a tip to remind you that you
+        should only share information with people you trust because they
+        may be able to store or re-share that information, including by
+        syncing it with a mobile device.
+      * Activity log. With the launch of timeline, we also launched an
+        exciting new control tool, Activity Log, which gives you one
+        place to see the things you=92ve posted to Facebook. From your
+        Activity Log, you can change the visibility of your posts or
+        control whether they show up in your timeline. Only you can see
+        your Activity Log.
+      * Links and Tags. We added new language in this section to explain
+        further how tags function. Simple URL references to someone=92s
+        Facebook timeline are links, not tags. Tags are a special type
+        of link that add you and your friends to the audience of the
+        post and add content to your timeline. You can choose whether
+        the story you=92ve been tagged in appears on your timeline and
+        which audience sees it through the many tools Facebook provides
+        to control tagging. For example in your privacy settings you can
+        turn on timeline review, which allows you to review posts and
+        photos you're tagged in before they go on your timeline.
+      * Groups. The new language clarifies how you can join Groups and
+        be added to subgroups. It reflects our launch of Groups for
+        Schools, which are special groups that are only open to people
+        who have a confirmed email address for a particular school. For
+        example, you can join the University of Florida group if you go
+        to school there and have a confirmed @ufl.edu email address.
+        Groups for Schools have subgroups within them =96 for instance, a
+        subgroup for your English class. If you=92re in the University of
+        Florida group, then anyone in that group (even if they aren=92t
+        your friend on Facebook) can invite you to a University of
+        Florida subgroup.
+      * About Pages. We=92ve added a tip to this section to make sure you
+        know that Page administrators receive aggregate information on
+        how their customers or fans are interacting with their Pages. In
+        addition, similar to timeline, Page administrators may know
+        you=92ve made a connection to their Page if you =93like=94 their Pa=
+ge
+        or post a comment.
+
+
+Section III. Other websites and applications
+
+This section provides information about features like social plugins and
+the ways in which your information is shared with applications and
+websites you and your friends use. We have updated the policy in the
+following ways:
+
+
+      * Controlling what information you share with applications. We=92ve
+        added language here to clarify the type of information apps
+        receive when you install them. We describe the limited
+        categories of information that Facebook tells apps when you
+        first visit them. If an app wants additional information, they
+        must get your permission. If you do this, the app can access,
+        store and update that information. Once you haven=92t used the app
+        for a while, however, that app won=92t be able to continue
+        updating this additional information until you give it
+        permission again. In addition, we=92ve added a tip to remind you
+        that apps have their own policies around how they handle the
+        data they receive and that you should contact an app directly if
+        you want your information deleted.
+      * Controlling what is shared when the people you share with use
+        applications. You can use the =93Apps and Websites=94 privacy
+        setting to control the information others share about you with
+        the apps they use, except for public information about you or
+        your list of friends.
+      * Logging in to another site using Facebook. Through Facebook
+        Platform you can log into other applications and websites using
+        your Facebook account. We added language to this section to
+        remind you that we provide the site with your User ID when you
+        login, just like when you connect with any other application. In
+        addition, we have clarified that we use a technology called
+        "hashing" that is designed to protect your email address when
+        you use Facebook to login to another website. This technology
+        offers a similar level of protection to encryption. We scramble
+        your email address and then instruct the other website to
+        scramble it in the same way. If the scrambled versions match, we
+        can identify your account without needing to send your email
+        address to the other website.
+      * About social plugins. Social plugins are tools that other
+        websites can use to provide you with personalized and social
+        experiences. When you interact with social plugins, you can
+        share your experiences off Facebook with your friends and others
+        on Facebook. We have launched new social plugins since we last
+        updated the Data Use Policy, so we want to provide you with
+        additional information on how plugins operate. We have not
+        changed the information we collect through plugins or our policy
+        about how we use that information. For more information, see our
+        Help Center
+        (https://www.facebook.com/help/social-plugin-privacy).
+      * About instant personalization. We=92ve added language to explain
+        that, in addition to websites, apps may also use instant
+        personalization (including those on Pages on Facebook).
+
+
+Section IV. How Advertising and Sponsored Stories work
+
+These sections explain how we serve you ads and sponsored stories and
+our use of cookies. We have updated the policy in the following ways:
+
+
+      * Personalized ads. We=92re providing more details about how we
+        serve you personalized ads, including the information we use to
+        serve you ads and make them more relevant to you. We use
+        cookies, pixels or similar technologies to measure and
+        understand the performance of our ads, to serve other ads and to
+        generally make our ads more effective. We want to be sure you
+        understand how cookies work, so we have added more information
+        about them in the Data Use Policy and added a link to our Help
+        Center (https://www.facebook.com/help/?page=3D176591669064814).
+        We=92re also clarifying our existing disclosure that we might show
+        ads off Facebook to explain that, if we showed these ads, they
+        may or may not include social context (such as whether your
+        friends have =93liked=94 a particular business).
+      * Ads and social context, Sponsored stories and Facebook content.
+        We added tips into these sections to clarify that your =93Show my
+        social actions in Facebook Ads=94 setting only controls ads with
+        social context. This setting doesn=92t impact Sponsored Stories,
+        which are different from Facebook ads.
+
+
+Section V. Cookies, pixels, and other system technologies
+
+We are moving the section on Minors and Safety to Section VI. We have
+not made any changes to the content of this section.
+
+We=92ve moved up and added to the section on Cookies. The new proposed
+Section V is calledCookies, pixels, and other system technologies. Since
+cookies are a very commonly used technology, we want to provide you with
+more detail on how Facebook uses cookies and similar technologies. We
+also include a tip in this section reminding you that you can remove or
+block cookies and similar technologies.
+
+Section VI. Some other things you need to know
+
+
+      * Safe harbor. As part of our participation in the Safe Harbor
+        program, we added contact information for TRUSTe, a global
+        privacy management solutions provider through which we agree to
+        resolve any disputes.
+      * Contact us with questions or disputes. We added contact info for
+        questions or complaints about the Data Use Policy.
+      * Responding to legal requests and preventing harm. The new
+        language in this section further explains the legal obligations
+        and other circumstances in which we may access, preserve or
+        share your information in a way that is different from how we
+        normally handle it.
+      * Access requests. This section reflects our belief that you
+        should have access to your personal data on Facebook. We=92ve
+        updated this language to reflect a recently launched expansion
+        to Download Your Information, a tool that allows you access to
+        an expanded archive of your Facebook account history.
+      * Memorializing accounts. The revisions to this section reflect
+        new features like timeline and the fact that requests to access
+        or close a deceased person=92s Facebook account are subject to
+        legal or procedural requirements.
+      * Service Providers. Like other companies, we sometimes use
+        outside service providers to help improve the services we offer,
+        such as by processing payments. We=92ve added language to this
+        section to elaborate on how we use service providers.
+      * Security and bugs. We have systems in place that attempt to keep
+        Facebook operating bug-free and safe. Additionally, we have a
+        White Hat Bug Bounty Program where people can responsibly
+        disclose bugs on our site so that they can be escalated for
+        immediate review. The new language in this section is a reminder
+        that no system is perfect.
+      * Information for users outside the United States and Canada. We
+        added contact information for our international headquarters,
+        Facebook Ireland Limited, which provides services to users
+        outside the U.S. and Canada.
+      * Your California Privacy Rights. We added this section as another
+        way for California residents to get information on how to
+        contact us.=20
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+
+
+--=-JB1jSAjqKQGV0Ri/83er
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 TRANSITIONAL//EN">
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; CHARSET=3DUTF-8">
+  <META NAME=3D"GENERATOR" CONTENT=3D"GtkHTML/4.2.2">
+</HEAD>
+<BODY>
+Le lundi 11 juin 2012 &#224; 16:23 +0200, Hugo Roy a &#233;crit&nbsp;:<BR>
+<BLOCKQUOTE TYPE=3DCITE>
+    <TT><FONT COLOR=3D"#2e3436">I haven't been able to</FONT></TT><BR>
+    <TT><FONT COLOR=3D"#2e3436">find the documents that were available for =
+the vote. I guess they must</FONT></TT><BR>
+    <TT><FONT COLOR=3D"#2e3436">be somewhere and very valuable as they're s=
+upposed to enlighten the</FONT></TT><BR>
+    <TT><FONT COLOR=3D"#2e3436">reader about the proposed changes in the Te=
+rms &amp; Policies.</FONT></TT> <BR>
+</BLOCKQUOTE>
+<BR>
+That must be it:<BR>
+<A HREF=3D"https://www.facebook.com/notes/facebook-site-governance/explanat=
+ion-of-changes/10151726574510301">https://www.facebook.com/notes/facebook-s=
+ite-governance/explanation-of-changes/10151726574510301</A><BR>
+<BR>
+<BR>
+<H2>
+<B><FONT SIZE=3D"5">Explanation of changes</FONT></B>
+</H2>
+<FONT COLOR=3D"#bebebe">by&nbsp;<A HREF=3D"http://www.facebook.com/fbsitego=
+vernance">Facebook Site Governance</A>&nbsp;on Friday, May 11, 2012 at 8:52=
+am &#183;</FONT>
+<BR>
+We want to make sure you understand the proposed updates to the Data Use Po=
+licy so we have included descriptions of the changes by section. While we&#=
+8217;ve provided a lot of information below, the vast majority of the propo=
+sed changes represent additional explanations of current practices rather t=
+han substantive changes in how we use your data. We are proposing three mai=
+n categories of changes to our Data Use Policy: (1)&nbsp;<B>examples and ex=
+planations&nbsp;</B>to enhance the descriptions of our policies<B>,&nbsp;</=
+B>many of which were based on recommendations from the Irish Data Protectio=
+n Commissioner&#8217;s Office, the regulatory oversight agency for our serv=
+ices outside the U.S. and Canada; (2) new language to explain our policies =
+around&nbsp;<B>new features</B>&nbsp;we&#8217;ve launched or updated since =
+we last revised our Data Use Policy; and (3)&nbsp;<B>administrative and org=
+anizational</B>&nbsp;changes.<BR>
+<BR>
+<B>&nbsp;</B><BR>
+<BR>
+<B>General</B><BR>
+<BR>
+<B>&nbsp;</B><BR>
+<BR>
+Since the last revision to our Data Use Policy, we launched Facebook Timeli=
+ne. Therefore, we&#8217;re changing &#8220;profile&#8221; to &#8220;timelin=
+e&#8221; and &#8220;post&#8221; to &#8220;story&#8221; throughout the Data =
+Use Policy and including references to features, like cover photos, that wo=
+rk with timeline.<BR>
+<BR>
+&nbsp;<BR>
+<BR>
+In addition, there were a few places where the Data Use Policy was duplicat=
+ive or where items would be more relevant in other sections. To address tho=
+se organizational issues, we consolidated a few discussions into the sectio=
+ns where we thought they made the most sense.<B>&nbsp;</B><BR>
+<BR>
+<B>&nbsp;</B><BR>
+<BR>
+<B>Section I. Information we receive and how it is used&nbsp;</B><BR>
+<BR>
+This section explains the type of information we receive and how we use tha=
+t information. We have updated the policy in the following ways:<BR>
+<BR>
+<UL>
+    <LI><I>Your information</I><B>&nbsp;</B>and&nbsp;<I>Information that is=
+ always publicly available</I>. In these sections, we&#8217;ve stated the k=
+inds of information about you that are always public. For instance, your ge=
+nder is public information, and we use your gender throughout the site to r=
+efer to you properly. And, as we&#8217;ve explained throughout the Data Use=
+ Policy, your gender is shared with apps so they can refer to you properly =
+as well. You will still be able to hide your gender on your timeline. In ad=
+dition, cover photos are a new part of the Facebook experience, and we&#821=
+7;re updating the Data Use Policy to let you know that, just like your prof=
+ile pictures, your cover photos are public. If you&#8217;re uncomfortable w=
+ith making your profile pictures or cover photos public, you can always del=
+ete them.
+    <LI><I>Information others share about you.&nbsp;</I>We&#8217;ve added s=
+ome language to clarify how others may share information about you (for exa=
+mple, posting a picture of you or by uploading your contact information). I=
+n addition<I>,&nbsp;</I>we consolidated some language in this section about=
+ apps into the section entitled&nbsp;<I>Controlling what information you sh=
+are with applications</I>.
+    <LI><I>Other information we receive about you.</I><B>&nbsp;</B>We&#8217=
+;ve provided additional descriptions around the ways we receive information=
+ about you when you interact with Facebook and how that information may be =
+used. For example, we&#8217;ve added clarifications about the types of data=
+ we receive about you when you use our mobile app. In addition, we have rep=
+laced the specific reference to data retention around advertisers with an o=
+verall data retention commitment, which is described below in&nbsp;<I>How w=
+e use the information we receive.</I>
+    <LI><I>Usernames and User IDs</I>. The clarifications in this section p=
+rovide further information about your Username and User ID, including that =
+we will assign usernames and Facebook email addresses to your Facebook acco=
+unt if you have not selected them already. This makes it easier for you to =
+tell friends how to find your timeline and for you to email people off Face=
+book.
+    <LI><I>How we use the information we receive</I>. We receive informatio=
+n about you through your interaction with Facebook. In this section we&#821=
+7;re providing more examples of the ways we may use that data to continue t=
+o provide you with the best features and services possible. For example, we=
+ may use this data to deliver ads that are more relevant to you. We&#8217;v=
+e also included a reminder that when others share information about you, th=
+ey control how that information is shared.
+</UL>
+<BR>
+&nbsp;<BR>
+<BR>
+In addition, we&#8217;ve added new language that explains our overall commi=
+tment around data retention: we will retain data for as long as necessary t=
+o provide services to users and others. This broader commitment applies to =
+all data we collect and receive about you, including information from adver=
+tisers. With respect to advertisers, those relationships are evolving becau=
+se of the different services we provide. We will continue to retain data re=
+ceived from advertisers for 180 days where that length of time is necessary=
+ to provide services. But there may be some times when we will need to keep=
+ information that we get from an advertiser for longer than 180 days. For e=
+xample, if an advertiser creates a Facebook Page, we wouldn't delete inform=
+ation the advertiser puts on its page simply because 180 days had passed. I=
+nstead, we would delete it when it was no longer needed &#8212; when the pa=
+ge owner deleted it or closed its account. The revisions in this section do=
+ not change our commitment that we won't share information that personally =
+identifies you with advertisers without your permission.<BR>
+<BR>
+<UL>
+    <LI><I>Deleting and deactivating your account</I>. We added tips to the=
+se two sections. One that clarifies that friends will see you in their frie=
+nd lists while your account is deactivated. And a second that explains that=
+ certain logs are needed to provide you with service during the lifetime of=
+ your account and therefore are deleted only after you delete your account.
+</UL>
+<BR>
+<B>Section II. Sharing and finding you on Facebook</B><BR>
+<BR>
+This section is designed to help you understand how you can use your privac=
+y settings to control the information you share on Facebook and how people =
+can find you. We have updated the policy in the following ways:<BR>
+<BR>
+<UL>
+    <LI><I>Control each time you post</I>. We&#8217;ve added a tip to be su=
+re you know that someone may deduce information about you even if you don&#=
+8217;t share it. For example, we note that people might guess it is your bi=
+rthday because your friends have posted birthday wishes on your timeline. Y=
+ou have the ability to delete or hide these posts from your timeline if you=
+ wish. We also added some language to illustrate our existing statement tha=
+t, when you make a comment on someone else&#8217;s post, that person &#8211=
+; not you &#8211; gets to select the audience.
+    <LI><I>Control over your timeline</I>. The new tip in this section clar=
+ifies that, even if you restrict who can see your entire list of friends, w=
+hen someone visits your timeline, they may be able to see some of the mutua=
+l friends you have in common. That&#8217;s because some of those mutual fri=
+ends have set a different audience for their list than you have.
+    <LI><I>Finding you on Facebook</I>. We&#8217;ve included more detail ab=
+out how people can find you on Facebook. You can use your privacy settings =
+to control whether someone can see your contact information (such as your e=
+mail and telephone number) on your timeline. In addition, we offer a separa=
+te setting to control whether people can search for you using that contact =
+information. This is because you might want people who know your contact in=
+formation to find you but you might not want to show your contact informati=
+on to people who don&#8217;t already have it. We also explain that neither =
+of these settings impacts whether someone can find your timeline when they =
+search for content that they have permission to see.
+    <LI><I>Access on phones and other devices.</I>&nbsp;Since more people t=
+han ever are using Facebook on their mobile phones, we thought it was impor=
+tant to add more information about how Facebook works on mobile devices. As=
+ part of mobile integrations, other users may sync or save information you&=
+#8217;ve shared with them to their mobile devices &#8211; such as contact i=
+nformation or event information from a calendar invite. We have included a =
+tip to remind you that you should only share information with people you tr=
+ust because they may be able to store or re-share that information, includi=
+ng by syncing it with a mobile device.
+    <LI><I>Activity log</I>. With the launch of timeline, we also launched =
+an exciting new control tool, Activity Log, which gives you one place to se=
+e the things you&#8217;ve posted to Facebook. From your Activity Log, you c=
+an change the visibility of your posts or control whether they show up in y=
+our timeline. Only you can see your Activity Log.
+    <LI><I>Links and Tags</I>. We added new language in this section to exp=
+lain further how tags function. Simple URL references to someone&#8217;s Fa=
+cebook timeline are links, not tags. Tags are a special type of link that a=
+dd you and your friends to the audience of the post and add content to your=
+ timeline. You can choose whether the story you&#8217;ve been tagged in app=
+ears on your timeline and which audience sees it through the many tools Fac=
+ebook provides to control tagging. For example in your privacy settings you=
+ can turn on timeline review, which allows you&nbsp;to review posts and pho=
+tos you're tagged in before they go on your timeline.
+    <LI><I>Groups</I>. The new language clarifies how you can join Groups a=
+nd be added to subgroups. It reflects our launch of Groups for Schools, whi=
+ch are special groups that are only open to people who have a confirmed ema=
+il address for a particular school. For example, you can join the Universit=
+y of Florida group if you go to school there and have a confirmed @ufl.edu =
+email address. Groups for Schools have subgroups within them &#8211; for in=
+stance, a subgroup for your English class. If you&#8217;re in the Universit=
+y of Florida group, then anyone in that group (even if they aren&#8217;t yo=
+ur friend on Facebook) can invite you to a University of Florida subgroup.
+    <LI><I>About Pages</I>. We&#8217;ve added a tip to this section to make=
+ sure you know that Page administrators receive aggregate information on ho=
+w their customers or fans are interacting with their Pages. In addition, si=
+milar to timeline, Page administrators may know you&#8217;ve made a connect=
+ion to their Page if you &#8220;like&#8221; their Page or post a comment.
+</UL>
+<BR>
+<B>Section III. Other websites and applications</B><BR>
+<BR>
+This section provides information about features like social plugins and th=
+e ways in which your information is shared with applications and websites y=
+ou and your friends use. We have updated the policy in the following ways:<=
+BR>
+<BR>
+<UL>
+    <LI><I>Controlling what information you share with applications</I>. We=
+&#8217;ve added language here to clarify the type of information apps recei=
+ve when you install them. We describe the limited categories of information=
+ that Facebook tells apps when you first visit them. If an app wants additi=
+onal information, they must get your permission. If you do this, the app ca=
+n access, store and update that information. Once you haven&#8217;t used th=
+e app for a while, however, that app won&#8217;t be able to continue updati=
+ng this additional information until you give it permission again. In addit=
+ion, we&#8217;ve added a tip to remind you that apps have their own policie=
+s around how they handle the data they receive and that you should contact =
+an app directly if you want your information deleted.
+    <LI><I>Controlling what is shared when the people you share with use ap=
+plications</I>. You can use the &#8220;Apps and Websites&#8221; privacy set=
+ting to control the information others share about you with the apps they u=
+se, except for public information about you or your list of friends.
+    <LI><I>Logging in to another site using Facebook.&nbsp;</I>Through Face=
+book Platform you can log into other applications and websites using your F=
+acebook account. We added language to this section to remind you that we pr=
+ovide the site with your User ID when you login, just like when you connect=
+ with any other application. In addition, we have clarified that we use a t=
+echnology called &quot;hashing&quot; that is designed to protect your email=
+ address when you use Facebook to login to another website. This technology=
+ offers a similar level of protection to encryption. We scramble your email=
+ address and then instruct the other website to scramble it in the same way=
+.&nbsp;If the scrambled versions match, we can identify your account withou=
+t needing to send your email address to the other website.
+    <LI><I>About social plugins</I>. Social plugins are tools that other we=
+bsites can use to provide you with personalized and social experiences. Whe=
+n you interact with social plugins, you can share your experiences off Face=
+book with your friends and others on Facebook. We have launched new social =
+plugins since we last updated the Data Use Policy, so we want to provide yo=
+u with additional information on how plugins operate. We have not changed t=
+he information we collect through plugins or our policy about how we use th=
+at information. For more information, see our Help Center (https://www.face=
+book.com/help/social-plugin-privacy).
+    <LI><I>About instant personalization</I>. We&#8217;ve added language to=
+ explain that, in addition to websites, apps may also use instant personali=
+zation (including those on Pages on Facebook).
+</UL>
+<BR>
+<B>Section IV. How Advertising and Sponsored Stories work</B><BR>
+<BR>
+These sections explain how we serve you ads and sponsored stories and our u=
+se of cookies. We have updated the policy in the following ways:<BR>
+<BR>
+<UL>
+    <LI><I>Personalized ads</I>. We&#8217;re providing more details about h=
+ow we serve you personalized ads, including the information we use to serve=
+ you ads and make them more relevant to you. We use cookies, pixels or simi=
+lar technologies to measure and understand the performance of our ads, to s=
+erve other ads and to generally make our ads more effective. We want to be =
+sure you understand how cookies work, so we have added more information abo=
+ut them in the Data Use Policy and added a link to our Help Center (https:/=
+/www.facebook.com/help/?page=3D176591669064814). We&#8217;re also clarifyin=
+g our existing disclosure that we might show ads off Facebook to explain th=
+at, if we showed these ads, they may or may not include social context (suc=
+h as whether your friends have &#8220;liked&#8221; a particular business).
+    <LI><I>Ads and social context, Sponsored stories</I>&nbsp;and&nbsp;<I>F=
+acebook content</I>. We added tips into these sections to clarify that your=
+ &#8220;Show my social actions in Facebook Ads&#8221; setting only controls=
+ ads with social context. This setting doesn&#8217;t impact Sponsored Stori=
+es, which are different from Facebook ads.
+</UL>
+<BR>
+<B>Section V. Cookies, pixels, and other system technologies</B><BR>
+<BR>
+We are moving the section on&nbsp;<I>Minors and Safety</I>&nbsp;to Section =
+VI. We have not made any changes to the content of this section.<BR>
+<BR>
+We&#8217;ve moved up and added to the section on&nbsp;<I>Cookies</I>. The n=
+ew proposed Section V is called<I>Cookies, pixels, and other system technol=
+ogies.&nbsp;</I>Since cookies are a very commonly used technology, we want =
+to provide you with more detail on how Facebook uses cookies and similar te=
+chnologies. We also include a tip in this section reminding you that you ca=
+n remove or block cookies and similar technologies.<BR>
+<BR>
+<B>Section VI. Some other things you need to know</B><BR>
+<BR>
+<UL>
+    <LI><I>Safe harbor</I>. As part of our participation in the Safe Harbor=
+ program, we added contact information for TRUSTe, a global privacy managem=
+ent solutions provider through which we agree to resolve any disputes.
+    <LI><I>Contact us with questions or disputes</I>. We added contact info=
+ for questions or complaints about the Data Use Policy.
+    <LI><I>Responding to legal requests and preventing harm</I>. The new la=
+nguage in this section further explains the legal obligations and other cir=
+cumstances in which we may access, preserve or share your information in a =
+way that is different from how we normally handle it.
+    <LI><I>Access requests</I>. This section reflects our belief that you s=
+hould have access to your personal data on Facebook. We&#8217;ve updated th=
+is language to reflect a recently launched expansion to Download Your Infor=
+mation, a tool that allows you access to an&nbsp;expanded archive of your F=
+acebook account history.
+    <LI><I>Memorializing accounts</I>. The revisions to this section reflec=
+t new features like timeline and the fact that requests to access or close =
+a deceased person&#8217;s Facebook account are subject to legal or procedur=
+al requirements.
+    <LI><I>Service Providers</I>. Like other companies, we sometimes use ou=
+tside service providers to help improve the services we offer, such as by p=
+rocessing payments. We&#8217;ve added language to this section to elaborate=
+ on how we use service providers.
+    <LI><I>Security and bugs</I>.<B>&nbsp;</B>We have&nbsp;systems&nbsp;in =
+place&nbsp;that attempt&nbsp;to keep Facebook operating bug-free and safe. =
+Additionally, we have a White Hat Bug Bounty Program where people can respo=
+nsibly disclose bugs on our site so that they can be escalated for immediat=
+e review. The new language in this section is a reminder that no system is =
+perfect.
+    <LI><I>Information for users outside the United States and Canada</I>. =
+We added contact information for our international headquarters, Facebook I=
+reland Limited, which provides services to users outside the U.S. and Canad=
+a.
+    <LI><I>Your California Privacy Rights</I>. We added this section as ano=
+ther way for California residents to get information on how to contact us.&=
+nbsp;
+</UL>
+<BR>
+<TABLE CELLSPACING=3D"0" CELLPADDING=3D"0" WIDTH=3D"100%">
+<TR>
+<TD>
+<PRE>
+--=20
+Hugo Roy=20
+&nbsp; French Coordinator, FSFE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chat: <=
+A HREF=3D"mailto:hugo@jabber.fsfe.org">hugo@jabber.fsfe.org</A>
+&nbsp; <A HREF=3D"http://www.fsfe.org/about/roy">www.fsfe.org/about/roy</A>=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mobile: +336 08 74 13 41
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mobile DE: +49 151 143 56 563
+</PRE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.<br />
+
+
+
+--=-JB1jSAjqKQGV0Ri/83er--
+

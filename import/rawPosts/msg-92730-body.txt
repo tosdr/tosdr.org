@@ -1,0 +1,64 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp235154qek;
+        Wed, 12 Sep 2012 07:34:30 -0700 (PDT)
+Received: by 10.42.35.82 with SMTP id p18mr25383296icd.15.1347460470015;
+        Wed, 12 Sep 2012 07:34:30 -0700 (PDT)
+Return-Path: <jan@unhosted.org>
+Received: from mail-ie0-f174.google.com (mail-ie0-f174.google.com [209.85.223.174])
+        by mx.google.com with ESMTPS id pa3si8214465igc.22.2012.09.12.07.34.29
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 12 Sep 2012 07:34:29 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.223.174 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.223.174;
+Authentication-Results: mx.google.com; spf=neutral (google.com: 209.85.223.174 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Received: by ieje11 with SMTP id e11so3374592iej.5
+        for <michiel@unhosted.org>; Wed, 12 Sep 2012 07:34:29 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:sender:x-originating-ip:from:date:x-google-sender-auth
+         :message-id:subject:to:cc:content-type:content-transfer-encoding
+         :x-gm-message-state;
+        bh=mmzWegkyH1WgQzXtJukexMZRBE5SDBOjSL95Bqci0gw=;
+        b=SnC7CEXvejI4fcjTLRMG04i2O0ChcuvWhIuuTc2LEAcV61SkKHyCfRJl88T76gDbJx
+         0Tb5jP4k9QbYRgMlc5/dzBU6/WhMiyPqGGaumoEWaU1z1HJZWss2t9mAVM+ZKxOB4F0J
+         FVFHU8o0qyrpGB71k/MHK7+u0s9St5/yYy7NSJsFelEvZ7fIvTUfn2qWaa9cK5L/Vc3Y
+         CVtCZzan9yRGtrNR96Rd0IEre+N7fpuTqwobaU5ZjuJUpFxhpCbpKkoSOFhhMjBs7AOV
+         xVzRejH4Zh359lTEm5dR5BGGdsdY12pDtpjeRxqHUiJMMvkgsKicT0neRYAltTzqk5rK
+         lmHA==
+Received: by 10.50.7.164 with SMTP id k4mr21493123iga.38.1347460469471; Wed,
+ 12 Sep 2012 07:34:29 -0700 (PDT)
+MIME-Version: 1.0
+Sender: jan@unhosted.org
+Received: by 10.64.53.100 with HTTP; Wed, 12 Sep 2012 07:34:08 -0700 (PDT)
+X-Originating-IP: [178.19.209.38]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Wed, 12 Sep 2012 16:34:08 +0200
+X-Google-Sender-Auth: UnYoZyoXULNIHyBs5Vw1Va4kpbM
+Message-ID: <CABQMFTSndOVgCsK3uWwTN+6NqyMTeXKJqD3MEFsaCt=QWRBVzA@mail.gmail.com>
+Subject: moving ToS;DR repositories
+To: Unhosted <unhosted@googlegroups.com>, 
+	=?windows-1252?Q?Terms_of_Service=2C_Didn=92t_Read?= <tosdr@googlegroups.com>
+Cc: Michiel de Jong <michiel@unhosted.org>, Hugo Roy <hugo@hugoroy.eu>, 
+	Abdullah Diaa <abdullah.diaa@gmail.com>, Marco Stahl <shybyte@googlemail.com>, 
+	Martin Stadler <martin@siarp.de>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+X-Gm-Message-State: ALoCoQniZB4zKTjLnO0iMU9qRSlpJNRj8zT23b7GelqxzkIF6yDdx50qbuY03kbBB6cXsjcHW7Zl
+
+It=92s getting a bit crowded in the unhosted web apps Github
+organization, so I just got http://github.com/didnotread
+
+I=92ll transfer ownership of all ToS;DR repos to that organization. I
+already added Michiel, Hugo, Abdullah, Marco, Martin and me. Let me
+know if I forgot anyone.
+The move WILL break existing links to the /unhosted/ToS-DR repo, but
+better sooner than later.
+
+I also took the opportunity to rename the repos to more readable ones:
+https://github.com/didnotread/didnotread.org
+https://github.com/didnotread/didnotread-firefox
+https://github.com/didnotread/didnotread-chrome
+(Martin works on didnotread-safari :)
+
+Just as a notice, you either need to edit your .git/config or reclone
+from the new organization after the move is done. All merges and local
+changes will still work.

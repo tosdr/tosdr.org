@@ -1,0 +1,183 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.147.213 with SMTP id v204csp37908vkd;
+        Tue, 26 Jul 2016 18:19:53 -0700 (PDT)
+X-Received: by 10.36.90.79 with SMTP id v76mr28499656ita.16.1469582393856;
+        Tue, 26 Jul 2016 18:19:53 -0700 (PDT)
+Return-Path: <tosdr+bncBDWPBIND4EOBBMUY4C6AKGQEOOHTB6Q@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id a5si3817893itc.23.2016.07.26.18.19.53
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 26 Jul 2016 18:19:53 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbdwpbind4eobbmuy4c6akgqeoohtb6q@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbdwpbind4eobbmuy4c6akgqeoohtb6q@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBDWPBIND4EOBBMUY4C6AKGQEOOHTB6Q@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 5CD2CFB88B
+	for <michiel@unhosted.org>; Wed, 27 Jul 2016 03:19:50 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 50BBE178059
+	for <michiel@unhosted.org>; Wed, 27 Jul 2016 03:19:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LbjShsbGc3Uo for <michiel@unhosted.org>;
+	Wed, 27 Jul 2016 03:19:48 +0200 (CEST)
+Received: from mail-pf0-x23c.google.com (mail-pf0-x23c.google.com [IPv6:2607:f8b0:400e:c00::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1F47E178043
+	for <michiel@michielbdejong.com>; Wed, 27 Jul 2016 03:19:48 +0200 (CEST)
+Received: by mail-pf0-x23c.google.com with SMTP id 63sf13845091pfx.1
+        for <michiel@michielbdejong.com>; Tue, 26 Jul 2016 18:19:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=etsJym3Wd8wzuOYA2Jz6iuvdzumJjyPNijIQAuIzKbM=;
+        b=tqwstGIdHN7YAxRFAtP/od0coc0dN933wingKCEQcc/k8GBriN89pZ+5tfUFVeByHU
+         CgHhnsQIGviHUNRum4QFoMsyxK1Y+VDAYyRabN8qkcJUiIHEcDt9Z/cVEs2TSnmfKxYk
+         4Eo4VWyIU45aefX+mPbVHUfhGVfItneDQww+3gmfHlwRlPPZCdH4+/Q1g5NvSCQG7UMW
+         i6NF8l6flCMWL272vGTjIH2jQPsLNT9/I1JrZDQ14zHgNmz/5T7+hdrnkQx1xjY4GfV6
+         zdQ6Zxo79EO6G9ss5wSMke1fu1sdlwl0vFQ7xzPoZADOWtGb34wTT2OmkzqtS+hAq9lL
+         V1nw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=etsJym3Wd8wzuOYA2Jz6iuvdzumJjyPNijIQAuIzKbM=;
+        b=hgzrfot9N2EYPfAIl/uwPe9sdoBRai+JheyAUHtbBfilGYbfSC/owKHUkQPouu9//n
+         pcPY4d4a+ah9dTd1MJn/uLLyphDNUWYBG8fncNw6X4Yx+CGFpX/7bCAdLLg/w9xoQB+m
+         IF/6gaNH7ID6XiobXhN4GwFzL6uHC7dw8SMJXNFhVSEcLgEGLTOSJOw+L8eBfDBF0BJl
+         V/TDgLLsNq5csNi/73tI0/nbQRXp+bKA3pQB6GU4BlIL4o6ug53f70GYUfnqGCBxdqlu
+         RDk35gKeF70f1UGXdBt7QcsgR73+aJtvMuJk7OP4GrOhxkRtrAN9skgR4VpQDwifDxTk
+         zo4w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:in-reply-to
+         :references:subject:mime-version:x-original-sender:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=etsJym3Wd8wzuOYA2Jz6iuvdzumJjyPNijIQAuIzKbM=;
+        b=c8wgDmrCogN864ywAeoOyiiZLvBpDzeOW+cmPwk0O8ho0GIkZrT3vdSJOJRXE/3EdH
+         9XfOW+vUZqRCN+6d4CDcDfiybeLHgWI6qUN3C/1i6JDvelzkQu4aC3TOyXG8R7SquqSl
+         OSt4m6VhwzU4klM7Y66bRQmX4bx6weeaV+pwxuGszgjXioW2GV1NcfyN0ZvhduntrvV9
+         tFAvk8zB5fjFqhiaO+OLGiYulFi7SXc0rZ7UbyNFFBL08P2bddy9HctTi7PTTmGU7qQc
+         CWkugfx4ynRmgi1Ckgw0l7tI5Wvd+sMUVvQBgpXgVQesZcRiUR44/lAEYFVdS4k3P03c
+         Sb9Q==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkoousThlPy10Ghy3pkDCjvJPZnQ6YE/FGEZ0IJAYibzKZUPO8cNdib6VkJWRsw99mUjQ==
+X-Received: by 10.157.16.85 with SMTP id o21mr1451482oto.0.1469582386762;
+        Tue, 26 Jul 2016 18:19:46 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.29.106 with SMTP id m97ls293902otm.10.gmail; Tue, 26 Jul
+ 2016 18:19:46 -0700 (PDT)
+X-Received: by 10.157.21.74 with SMTP id z10mr1448997otz.18.1469582386461;
+        Tue, 26 Jul 2016 18:19:46 -0700 (PDT)
+Date: Tue, 26 Jul 2016 18:19:45 -0700 (PDT)
+From: MB <mbacts12@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <fdff70b9-93d1-4165-b04b-6214f0ba35b8@googlegroups.com>
+In-Reply-To: <CA+aD3u1hmqv_rp8Cxzw5EkOU4J7t38BTN7oM7zwck3K-ixgY7w@mail.gmail.com>
+References: <CA+aD3u1hmqv_rp8Cxzw5EkOU4J7t38BTN7oM7zwck3K-ixgY7w@mail.gmail.com>
+Subject: [tosdr:3925] Re: [bad] AirBnb binding arbitration
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_5099_700771692.1469582385881"
+X-Original-Sender: mbacts12@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_5099_700771692.1469582385881
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5100_1644128122.1469582385881"
+
+------=_Part_5100_1644128122.1469582385881
+Content-Type: text/plain; charset=UTF-8
+
+Great succinct summary.
+
+On Sunday, May 22, 2016 at 9:51:50 AM UTC-4, Michiel de Jong wrote:
+>
+> See http://boingboing.net/2016/05/20/airbnb-stealth-updates-terms-o.html 
+> for a discussion.
+>
+> Cheers,
+> Michiel.
+>
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/fdff70b9-93d1-4165-b04b-6214f0ba35b8%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_5100_1644128122.1469582385881
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Great succinct summary.<br><br>On Sunday, May 22, 2016 at =
+9:51:50 AM UTC-4, Michiel de Jong wrote:<blockquote class=3D"gmail_quote" s=
+tyle=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-le=
+ft: 1ex;"><div dir=3D"ltr"><div><div>See <a href=3D"http://boingboing.net/2=
+016/05/20/airbnb-stealth-updates-terms-o.html" target=3D"_blank" rel=3D"nof=
+ollow" onmousedown=3D"this.href=3D&#39;http://www.google.com/url?q\x3dhttp%=
+3A%2F%2Fboingboing.net%2F2016%2F05%2F20%2Fairbnb-stealth-updates-terms-o.ht=
+ml\x26sa\x3dD\x26sntz\x3d1\x26usg\x3dAFQjCNHcm0HrcK4iSedC5T7w4Odm-hbssA&#39=
+;;return true;" onclick=3D"this.href=3D&#39;http://www.google.com/url?q\x3d=
+http%3A%2F%2Fboingboing.net%2F2016%2F05%2F20%2Fairbnb-stealth-updates-terms=
+-o.html\x26sa\x3dD\x26sntz\x3d1\x26usg\x3dAFQjCNHcm0HrcK4iSedC5T7w4Odm-hbss=
+A&#39;;return true;">http://boingboing.net/2016/05/<wbr>20/airbnb-stealth-u=
+pdates-<wbr>terms-o.html</a> for a discussion.<br><br></div>Cheers,<br></di=
+v>Michiel.<br></div>
+</blockquote></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/fdff70b9-93d1-4165-b04b-6214f0ba35b8%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/fdff70b9-93d1-4165-b04b-6214f0ba35b8%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_5100_1644128122.1469582385881--
+
+------=_Part_5099_700771692.1469582385881--

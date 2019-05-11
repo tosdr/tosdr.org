@@ -1,0 +1,156 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp288qek;
+        Wed, 29 Aug 2012 05:25:57 -0700 (PDT)
+Received: by 10.180.81.193 with SMTP id c1mr40055369wiy.12.1346243157248;
+        Wed, 29 Aug 2012 05:25:57 -0700 (PDT)
+Return-Path: <tosdr+bncCIqqu6foDhDPlPiBBRoEv9VpEA@googlegroups.com>
+Received: from mail-we0-f192.google.com (mail-we0-f192.google.com [74.125.82.192])
+        by mx.google.com with ESMTPS id l20si32598309wef.104.2012.08.29.05.25.51
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 29 Aug 2012 05:25:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCIqqu6foDhDPlPiBBRoEv9VpEA@googlegroups.com designates 74.125.82.192 as permitted sender) client-ip=74.125.82.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCIqqu6foDhDPlPiBBRoEv9VpEA@googlegroups.com designates 74.125.82.192 as permitted sender) smtp.mail=tosdr+bncCIqqu6foDhDPlPiBBRoEv9VpEA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by weyx56 with SMTP id x56sf221263wey.29
+        for <multiple recipients>; Wed, 29 Aug 2012 05:25:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:date:from
+         :organization:user-agent:mime-version:to:subject:references
+         :in-reply-to:x-enigmail-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=snKppwjZkIdVA7l8nKQpQbkafjp3FT2b+vzgzFIRuzw=;
+        b=nNieCHuN2q9V2cwmkMd8uyuibH2BsXZN6+1DrzttCSkFPHk9QxHhqdf2APlq2Q+tw/
+         u33ieHJe7sONhd9xgWGBEcmww2Y4Z9e658XtzMWJeJsRaCkECadW7qVib1kJtLpDeFs1
+         ahIYjf2DCCA3UTBVvKbAeub+NgJv3sj6cOE/+0kzZsq8cKlcUibbPoPTzdyvhuS1syRQ
+         FKJ5LRdM6FNMnxdxG5Za4jlpWJSvBbdr7KeMcTIC23v2tpk0LAhcWUjp8NvAzBjlyY9t
+         Wu3edVCxYaVJDHAGJycw04c909E9SGTXsQuvXdR39s3BHTMViWeSjCMorBB7WpRqDIag
+         S+Mw==
+Received: by 10.216.91.10 with SMTP id g10mr26180wef.16.1346243151696;
+        Wed, 29 Aug 2012 05:25:51 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.194.70 with SMTP id l46ls483234een.9.gmail; Wed, 29 Aug
+ 2012 05:25:50 -0700 (PDT)
+Received: by 10.14.178.1 with SMTP id e1mr1348956eem.7.1346243150950;
+        Wed, 29 Aug 2012 05:25:50 -0700 (PDT)
+Received: by 10.14.178.1 with SMTP id e1mr1348955eem.7.1346243150909;
+        Wed, 29 Aug 2012 05:25:50 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d5si33215938eep.0.2012.08.29.05.25.50
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 29 Aug 2012 05:25:50 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of eal@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 9053F63A617
+	for <tosdr@googlegroups.com>; Wed, 29 Aug 2012 14:25:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ObDa6ZCB5Sn3 for <tosdr@googlegroups.com>;
+	Wed, 29 Aug 2012 14:25:47 +0200 (CEST)
+Received: from [192.168.141.151] (p54BD2FB0.dip.t-dialin.net [84.189.47.176])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: eal)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id B7C8663A611
+	for <tosdr@googlegroups.com>; Wed, 29 Aug 2012 14:25:47 +0200 (CEST)
+Message-ID: <503E0A4B.2010005@fsfe.org>
+Date: Wed, 29 Aug 2012 14:25:47 +0200
+From: Erik Albers <eal@fsfe.org>
+Organization: Free Software Foundation Europe
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:14.0) Gecko/20120714 Thunderbird/14.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:720] [Bad] WhatsApp requires access to your contact list
+References: <d14c28dc-3d2a-4d1e-b236-a15b18c8ebbc@googlegroups.com> <1346158188.19155.119.camel@synclavier.lan>
+In-Reply-To: <1346158188.19155.119.camel@synclavier.lan>
+X-Enigmail-Version: 1.4.4
+X-Original-Sender: eal@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of eal@fsfe.org) smtp.mail=eal@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 08/28/2012 02:49 PM, Hugo Roy wrote:
+> Le jeudi 23 ao=FBt 2012 =E0 09:48 -0700, Sebasti=E1n Waisbrot a =E9crit :
+>> http://www.whatsapp.com/legal/
+>>=20
+>>> You expressly acknowledge and agree that in order to provide
+>>> the Service, WhatsApp may periodically access your contact list
+>>> and/or address book on your mobile device to find and keep
+>>> track of mobile phone numbers of other users of the Service.
+>>=20
+>>=20
+>> Not so bad considering this other section:
+>>=20
+>>> We do not collect names, addresses or email addresses, just
+>>> mobile phone numbers.
+>>=20
+>=20
+> I don't really understand how it works. How would they keep track
+> of mobile phone numbers of other users of the service by accessing
+> users' address books if they don't have any other data than
+> username and mobilephone? Or does whatsapp automatically add in
+> your adressbook who's another user?
+exactly. they check your phone book, see which numbers are using
+whatsapp and then they show in your whatsapp all the users that are
+using whatsapp and are in your phonebook.
+the name shown in whatsapp then is the same name as you have saved the
+contact in your own phone book (as they claim not to collect names and
+so on).
+
+
+- --=20
+Erik Albers | Free Software Foundation Europe (FSFE)
+Campaigning & Community
+info/contact: http://fsfe.org/about/albers/albers.en.html
+
+		Free as in Freedom!
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Mozilla - http://www.enigmail.net/
+
+iQIcBAEBAgAGBQJQPgpLAAoJEBho/C6GOdyBgBwP/2vMx/ZBvP7g0lSFmtObpsoS
+erFIrXP+SGC3bNfVu8S+JCxDviXHfOHhAGG+SFXFL83HlDPwcixZ3z656l2ZpXGg
+Yfp4yp4OyZXbTRSatl9E/yn3VpRkKnOIlcTeJmeVWeMnUoDX3sEfu0I+97NFj21O
+2ZUrAA87lf2t94uioZtdPGNtKWb/pr0BaS4Q4Cq4l2moSrQpoatAQxqy4fFAxuwS
+zj2vT1ztHspir6llRrzxYFgFWQOKyEYsa4k29YhH9aSRtsVMq9xBeSm442pLGIDn
+JUUmQ5hL4DEvstJ0IuvzoeQVVb02RcKZbQovrR53C8RwMxM3r4u7M6YmYLTzqJMX
+Ypnl+5MTXP4x4Uke7tC9S2Eou6hr+QzphUsyLlSxYntB9zNBMIozJHMfzOAlLxh0
+ciA+eChKWYvX4SSMAX8/taDPQ2rZS7fdnbo8DUbagIa0RTIduT+3+iqr51PRXfW5
+oetLlm0tDKDwqtGPuijnHddwjFvlbB+DZw9k7GOhgrMDsGkeIE1U7Tq7YS0Q+OST
+qXmTYk/ct2g0QxX+02Ib9torZ1EZF2Xg6AzsK7QL/xh8meM3o7YS1hA3a9VcKMN5
+VtiOxqo+1i7R1Eu+ha2jbDpaQiFrMhR3TiIkuvm4MXgXwLn5glqBfLq2OypvjOdF
+VWRkVQie852iPXKofCVH
+=3DbBcK
+-----END PGP SIGNATURE-----
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

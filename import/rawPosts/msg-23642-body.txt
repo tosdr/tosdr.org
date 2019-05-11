@@ -1,0 +1,473 @@
+Return-Path: <tosdr+bncBCSOP3VIZIIBBIPTXOSAKGQE7PXYVWQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2281040F85
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 16:09:28 +0100 (CET)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1FAB6142261
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 16:09:28 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KoPnbJqWQmpa for <anything@michielbdejong.com>;
+	Mon, 15 Dec 2014 16:09:26 +0100 (CET)
+Received: from mail-oi0-x240.google.com (mail-oi0-x240.google.com [IPv6:2607:f8b0:4003:c06::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0660514229B
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 16:09:23 +0100 (CET)
+Received: by mail-oi0-f64.google.com with SMTP id e131sf1771172oig.19
+        for <anything@michielbdejong.com>; Mon, 15 Dec 2014 07:09:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=fr9qEN9FVVAmERPKDeNESjhzXS08I6/YCaOLXqhWejM=;
+        b=hLNy3gfz2gpbpj/lOfpqn4MssaGzvY2WQPnDpGxUDN8u8DVnM0PR2RW+k48ZLcvqOz
+         JuDQT196W4SEMFdAgsWjBKVGmC0kfpVdeSZJvVbJp1cuvlo7O5zk9Qp3bV9BYdmeP+gt
+         HPaLmuotgzOFh4crtKbwUQgr7Wf6IUcvCxCkeB88XTtfFqK2rZNMunH5Lt1OJuDGRDSr
+         fH6JZ7GgiYL9mP++9KPBGKy4O9Y6mNu9aPqVt9FANmnXkpAMpDxCikBzkL50D+TXXKoV
+         p+8LoIQa/VyBHmJAOcH2yyv00kq09XI1aLMTSeKfBxQK3v4hSUouOWPD5GYPc205dNUs
+         KAhg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=fr9qEN9FVVAmERPKDeNESjhzXS08I6/YCaOLXqhWejM=;
+        b=Qd5+9v87bGSi30+pRSUZEyQlNh9jOyJ18yWmCuxueR37wA8Yegpn88RK3FyrEuM/6m
+         SWq+AC0R36x1tRo5iJROadj7FQVYtNiuk9OdQfj/1aLX78bmC/+27S/UF3stN7suFn/G
+         6sYYg8dFgk6RGcj193QTdumEJ1otQGzr6hhvPu8/5PGi4bcXDxMiZmEnGQkM5i7K90O6
+         AwVpPk3uiP5mc7/pOtfmmYgXfVqT+GvUhrheEByOP/yKKLecZ3gXm/+PJCN/UVrGdDNC
+         p4Cr78e+jK4kiN1Spnu/xmVnmTn6KFMGtu/C5ELSjg6pA/JQUiRzmi/iXe1lDfZiJefJ
+         OhWA==
+X-Received: by 10.50.127.232 with SMTP id nj8mr95840igb.0.1418656162015;
+        Mon, 15 Dec 2014 07:09:22 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.43.194 with SMTP id y2ls1027865igl.24.gmail; Mon, 15 Dec
+ 2014 07:09:21 -0800 (PST)
+X-Received: by 10.50.108.45 with SMTP id hh13mr288818igb.7.1418656161603;
+        Mon, 15 Dec 2014 07:09:21 -0800 (PST)
+Date: Mon, 15 Dec 2014 07:09:20 -0800 (PST)
+From: puneetdin@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <f560e198-a569-4651-a573-34bd59080db3@googlegroups.com>
+In-Reply-To: <bbb6fa55-cbf1-43c9-b75e-e21efcf77dbc@googlegroups.com>
+References: <bbb6fa55-cbf1-43c9-b75e-e21efcf77dbc@googlegroups.com>
+Subject: [tosdr:3356] Re: Netflix ToU & PP
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_662_1507129244.1418656160743"
+X-Original-Sender: puneetdin@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_662_1507129244.1418656160743
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Friday, 10 August 2012 16:13:03 UTC+5:30, Pantsburgh  wrote:
+> Netflix ToU & PP
+>=20
+>=20
+>=20
+>=20
+>=20
+> Netflix also has a
+> DVD Terms & Conditions for DVD subscribers. I read this and
+> there wasn't anything interesting in it =E2=80=93 just an explanation of
+> how the DVD service works.
+>=20
+>=20
+>=20
+>=20
+>=20
+> [1] ToU and PP pages are
+> organized and formatted well. Index at the top with links to #anchors
+> down the page. The pages are long, but the index helps alleviate that
+> a lot.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Privacy Policy
+>=20
+> https://account.netflix.com/PrivacyPolicy
+>=20
+>=20
+>=20
+>=20
+>=20
+> [2] (not sure if this is bad, maybe just a notification?)
+> Non-personal info can be disclosed in any way. This is the same as
+> Steam.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Non-personal information is
+> information that does not permit direct association with you. We may
+> collect, use, transfer and disclose non-personal information for any
+> purpose.=20
+>=20
+>=20
+> ...
+>=20
+> We also provide analysis of our
+> users in the aggregate or otherwise in anonymous form to prospective
+> partners, advertisers and other third parties.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [3] (bad) Personal info used for
+> service, and also for 1st party advertising on behalf of
+> 3rd parties.
+>=20
+>=20
+>=20
+>=20
+>=20
+> We keep track of your interactions
+> with us and collect information related to you and your use of our
+> service, including but not limited to your online activity, title
+> selections, reviews and ratings, payment history and correspondence
+> as well as Internet protocol addresses, device types, unique device
+> data, such as device identifiers, operating systems, any instant
+> watching of movies, TV shows and related activity. We use this
+> information for such purposes as (list of stuff necessary for running
+> the service).=20
+>=20
+>=20
+> ...
+>=20
+> From time to time, we may partner
+> with companies whose products we believe will interest our members.
+> In conjunction with these partners, we may send promotional
+> announcements and/or serve web-based advertisements on their behalf,
+> as permitted by law. You can go to the "Manage mailing
+> preferences" link on the "Your Account" page and
+> request that your name be excluded from marketing emails or postal
+> mail.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [4] (bad) Netflix discloses personal
+> info if requested (not court ordered) by law enforcement, with no
+> notifications.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Netflix also reserves the right to
+> disclose personal information if we reasonably believe that access,
+> use, preservation or disclosure of such information is reasonably
+> necessary to (a) satisfy any applicable law, regulation, legal
+> process, or enforceable governmental request, (b) enforce applicable
+> terms of use, including investigation of potential violations
+> thereof, (c) detect, prevent, or otherwise address illegal or
+> suspected illegal activities, security or technical issues, or (d)
+> protect against harm to the rights, property or safety of Netflix,
+> its users or the public as required or permitted by law. In
+> connection with any reorganization, restructuring, merger or sale, or
+> other transferring of assets we reserve the right to transfer
+> information, including personal information, provided that the
+> receiving party agrees to respect your personal information in a
+> manner that is consistent with our privacy policy.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [5] (note) 18 year old
+> requirement.
+>=20
+>=20
+>=20
+>=20
+>=20
+> You must be 18 years of age or older
+> to subscribe to the Netflix service. In certain jurisdictions, the
+> age of majority may be older than 18, in which case, you must satisfy
+> that age in order to become a member. While individuals under the age
+> of 18 may utilize the service, they may do so only with the
+> involvement, supervision, and approval of a parent or legal guardian,
+> and subject to our Terms
+> of Use .=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [6] (good) Users can request access
+> and deletion of personal info.
+>=20
+>=20
+>=20
+>=20
+>=20
+> With respect to your personal
+> information, you can request access and that we correct or delete
+> this personal information by emailing your request to
+> pri...@netflix.com.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [7] (bad) Cookies required. This
+> is probably more of a functional issue than a privacy issue.
+>=20
+>=20
+>=20
+>=20
+>=20
+> The Help portion of the toolbar on
+> most browsers will tell you how to prevent your browser from
+> accepting new cookies, how to have the browser notify you when you
+> receive a new cookie, or how to disable cookies altogether. If your
+> browser is set to not accept any cookies, you will not be able to use
+> the Netflix service or website.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [8] (bad?) Netflix uses 3rd
+> party advertisers that use tracking cookies to target ads.
+>=20
+>=20
+>=20
+>=20
+>=20
+> We use third-party advertising
+> companies to serve ads. These companies may use information about
+> your visits to this and other Web sites in order to provide
+> advertisements about goods and services of interest to you. If you
+> would like more information about this practice and to know your
+> choices about not having this information used by these companies
+> click
+> here .=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [9] (bad) No liability for
+> improper access to your personal information.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Unfortunately, no security system
+> can be guaranteed to be 100% secure. Accordingly, we cannot guarantee
+> the security of your information and cannot assume liability for
+> improper access to it.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [10] (bad) No notifications
+> about policy changes. Agreeing to the PP and ToU also means you agree
+> to any changes in the future.
+>=20
+>=20
+>=20
+>=20
+>=20
+> As we update and expand our
+> services, we may make changes to this policy. You should check back
+> for updates to this policy from time to time. You acknowledge that
+> your assent to the Terms
+> of Use and Privacy Policy subsequent to any changes made
+> following your initial consent as well as, your use of the Netflix
+> website or continued use of our service after our posting of changes
+> to this policy, means that you agree to be bound by such changes. The
+> most current version of this Privacy Policy can be reviewed by
+> visiting our website and clicking on "Privacy Policy"
+> located at the bottom of the pages of the Netflix website. The most
+> current version of the Privacy Policy will supersede all previous
+> versions. We will post prior version(s) on our website when the
+> Privacy Policy is updated. You can see changes from previous versions
+> of the Privacy Policy by visiting our website and clicking
+> here.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> Terms of Use
+>=20
+> https://account.netflix.com/TermsOfUse
+>=20
+>=20
+>=20
+>=20
+>=20
+> [10] (bad) Notifications about
+> ToU changes not required.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Netflix reserves the right, from
+> time to time, with or without notice to you, to change these Terms of
+> Use, including the Privacy Policy and EULA, in our sole and absolute
+> discretion.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [11] (good) Can cancel at any
+> time.
+>=20
+>=20
+>=20
+>=20
+>=20
+> You may cancel your Netflix
+> membership at any time. WE DO NOT PROVIDE REFUNDS OR CREDITS FOR ANY
+> PARTIAL-MONTH MEMBERSHIP PERIODS OR UNWATCHED MOVIES OR TV SHOWS.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [12] (bad) Netflix can terminate
+> your account for any reason without notice.
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> We reserve the right to terminate or
+> restrict your use of our service, without notice, for any or no
+> reason whatsoever.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [13] (bad) Netflix has an
+> unlimited license to user generated content or feedback without
+> attribution. In the context of the service this is not a big deal to
+> me personally. Netflix isn't a place I go to share photos or interact soc=
+ially.
+>=20
+>=20
+>=20
+>=20
+>=20
+> Netflix is free to use any comments,
+> information, ideas, concepts, reviews, or techniques or any other
+> material contained in any communication you may send to us
+> ("Feedback"), including responses to questionnaires or
+> through postings to the Netflix service, including the Netflix
+> website and user interfaces, without further compensation,
+> acknowledgement or payment to you for any purpose whatsoever
+> including, but not limited to, developing, manufacturing and
+> marketing products and creating, modifying or improving the Netflix
+> service. Furthermore, by posting any Feedback on our site, submitting
+> Feedback to us, or in responding to questionnaires, you grant us a
+> perpetual, worldwide, non-exclusive, royalty-free irrevocable
+> license, including the right to sublicense such right, and right to
+> display, use, reproduce or modify the Feedback submitted in any
+> media, software or technology of any kind now existing or developed
+> in the future.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> [14] (bad) Lawsuit and class
+> action waiver. Arbitration agreement. Survives termination of ToU
+> agreement.
+>=20
+>=20
+>=20
+>=20
+>=20
+> You and Netflix agree that any
+> dispute, claim or controversy arising out of or relating in any way
+> to the Netflix service, including our website, user interfaces, these
+> Terms of Use and this Arbitration Agreement, shall be determined by
+> binding arbitration instead of in courts of general jurisdiction.
+> Arbitration is more informal than a lawsuit in court. Arbitration
+> uses a neutral arbitrator instead of a judge or jury, allows for more
+> limited discovery than in court, and is subject to very limited
+> review by courts. Arbitrators can award the same damages and relief
+> that a court can award. You agree that, by agreeing to these Terms of
+> Use, the U.S. Federal Arbitration Act governs the interpretation and
+> enforcement of this provision, and that you and Netflix are each
+> waiving the right to a trial by jury or to participate in a class
+> action. This arbitration provision shall survive termination of this
+> Agreement and the termination of your Netflix membership.=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+> YOU AND NETFLIX AGREE THAT EACH MAY
+> BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL
+> CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED
+> CLASS OR REPRESENTATIVE PROCEEDING.
+
+I dont see a problem if an alternate legal remedy is provided in the clause=
+, they are not absolutely waiving your right to legal action but are just n=
+avigating through other mechanisms to provide legal redressal which actuall=
+y is appreciated to be a more efficient-cost wise,time wise method of deliv=
+ering justice. Even the courts have discouraged litigation when alternate r=
+emedies exist.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_662_1507129244.1418656160743--

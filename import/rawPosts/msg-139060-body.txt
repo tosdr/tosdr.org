@@ -1,0 +1,190 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.68 with SMTP id j65csp1518553ioj;
+        Fri, 18 Dec 2015 21:19:44 -0800 (PST)
+X-Received: by 10.194.206.69 with SMTP id lm5mr7429001wjc.84.1450502383940;
+        Fri, 18 Dec 2015 21:19:43 -0800 (PST)
+Return-Path: <tosdr+bncBDFMDPOL7MKRB3GR2OZQKGQEGDECLDI@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by mx.google.com with ESMTPS id n10si31209490wjb.164.2015.12.18.21.19.43
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Dec 2015 21:19:43 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDFMDPOL7MKRB3GR2OZQKGQEGDECLDI@googlegroups.com does not designate 217.70.183.195 as permitted sender) client-ip=217.70.183.195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDFMDPOL7MKRB3GR2OZQKGQEGDECLDI@googlegroups.com does not designate 217.70.183.195 as permitted sender) smtp.mailfrom=tosdr+bncBDFMDPOL7MKRB3GR2OZQKGQEGDECLDI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=hotmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id AF872A80C7
+	for <michiel@unhosted.org>; Sat, 19 Dec 2015 06:19:43 +0100 (CET)
+Received: from mfilter33-d.gandi.net (mfilter33-d.gandi.net [217.70.178.164])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 9C2E722607B
+	for <michiel@unhosted.org>; Sat, 19 Dec 2015 06:19:43 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter33-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter33-d.gandi.net (mfilter33-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id HIf1IOVddING for <michiel@unhosted.org>;
+	Sat, 19 Dec 2015 06:19:42 +0100 (CET)
+Received: from mail-pa0-x23d.google.com (mail-pa0-x23d.google.com [IPv6:2607:f8b0:400e:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C980422606C
+	for <michiel@michielbdejong.com>; Sat, 19 Dec 2015 06:19:41 +0100 (CET)
+Received: by mail-pa0-x23d.google.com with SMTP id kj5sf22301487pab.1
+        for <michiel@michielbdejong.com>; Fri, 18 Dec 2015 21:19:41 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:mime-version:to:from:subject:date:importance
+         :content-type:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=uH4rx9XeRXbY9JS9YUAe5OZ5MnBfuBq29yL0WTAPBu4=;
+        b=qMFSWviaaT4o2dVAhvRzOMzkYfkUG2M2oOePLZ+LhhooTzae++oD+9hY7THfpmhPR7
+         6gNthidPQUl2cn8w/fwfyy1/s1ZDPSqg+ZUS2nEhkiXnAXmbtKVia+TdNVCbD78g2Q25
+         8tMS7xV7AEmvrfMmKe3pLjaYwqo3RYe43e8v3Tu77cwbNMxHffgS27UOY0j0TB7wlT15
+         TNoqOC6M5pYF9wj4SlIWtubi9EKsVTM4vs8encAonza9FXgimEpn7DAsK0dvfUlgaED9
+         KnHhGT4CSnAymbkJ21gXViy78dfr3UzIASUlkolK0Cb5JsuPj1HYa+FEkKowIBRGK9HP
+         qZSw==
+X-Received: by 10.182.225.199 with SMTP id rm7mr78229obc.6.1450502380582;
+        Fri, 18 Dec 2015 21:19:40 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.113.131 with SMTP id iy3ls1026740obb.93.gmail; Fri, 18 Dec
+ 2015 21:19:39 -0800 (PST)
+X-Received: by 10.182.97.38 with SMTP id dx6mr6417845obb.29.1450502379967;
+        Fri, 18 Dec 2015 21:19:39 -0800 (PST)
+Received: from SNT004-OMC2S5.hotmail.com (snt004-omc2s5.hotmail.com. [65.55.90.80])
+        by gmr-mx.google.com with ESMTPS id u184si306396ywf.0.2015.12.18.21.19.39
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 18 Dec 2015 21:19:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of thegpking@hotmail.com designates 65.55.90.80 as permitted sender) client-ip=65.55.90.80;
+Received: from SNT406-EAS386 ([65.55.90.73]) by SNT004-OMC2S5.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Fri, 18 Dec 2015 21:19:39 -0800
+X-TMN: [/VzZ0rYgENpHw+sUwRbyJBLkbR2Np0XM]
+X-Originating-Email: [thegpking@hotmail.com]
+Message-ID: <SNT406-EAS3866D590ACF57FE225ECC32AAE20@phx.gbl>
+MIME-Version: 1.0
+To: " tosdr@googlegroups.com" <tosdr@googlegroups.com>
+From: The GP King <thegpking@hotmail.com>
+Subject: [tosdr:3712] 
+Date: Sat, 19 Dec 2015 00:19:40 -0500
+Importance: normal
+X-Priority: 3
+Content-Type: multipart/alternative;
+	boundary="_5BAC2036-6274-4958-9C43-2A818BF5B7D4_"
+X-OriginalArrivalTime: 19 Dec 2015 05:19:39.0501 (UTC) FILETIME=[DC0119D0:01D13A1C]
+X-Original-Sender: thegpking@hotmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of thegpking@hotmail.com designates 65.55.90.80 as
+ permitted sender) smtp.mailfrom=thegpking@hotmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=hotmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--_5BAC2036-6274-4958-9C43-2A818BF5B7D4_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+
+http://www.dell.com/support/incidents/us/en/19/ProductSelector?fkey=3DChatT=
+argetedControllerAction&dsdOnlineVal=3Dfalse
+
+Need to know if it isntalls bloatware / adware / malware etc. on my compute=
+r. It=E2=80=99s too long to read and it=E2=80=99s like Chinese to me and I=
+=E2=80=99m actually Chinese.=20
+
+Thankz.
+Sent from Mail for Windows 10
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--_5BAC2036-6274-4958-9C43-2A818BF5B7D4_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta ht=
+tp-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><meta name=
+=3DGenerator content=3D"Microsoft Word 15 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-US link=3Dblue vlink=3D"#954F72"><div cla=
+ss=3DWordSection1><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoN=
+ormal><a href=3D"http://www.dell.com/support/incidents/us/en/19/ProductSele=
+ctor?fkey=3DChatTargetedControllerAction&amp;dsdOnlineVal=3Dfalse">http://w=
+ww.dell.com/support/incidents/us/en/19/ProductSelector?fkey=3DChatTargetedC=
+ontrollerAction&amp;dsdOnlineVal=3Dfalse</a></p><p class=3DMsoNormal><o:p>&=
+nbsp;</o:p></p><p class=3DMsoNormal>Need to know if it isntalls bloatware /=
+ adware / malware etc. on my computer. It=E2=80=99s too long to read and it=
+=E2=80=99s like Chinese to me and I=E2=80=99m actually Chinese. </p><p clas=
+s=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Thankz.</p><p class=
+=3DMsoNormal style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>S=
+ent from <a href=3D"http://go.microsoft.com/fwlink/?LinkId=3D550986">Mail</=
+a> for Windows 10</p><p class=3DMsoNormal><span style=3D'font-size:12.0pt;f=
+ont-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p></div></bod=
+y></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--_5BAC2036-6274-4958-9C43-2A818BF5B7D4_--

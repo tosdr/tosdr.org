@@ -1,0 +1,15 @@
+{
+  "id": "1162",
+  "services": [
+    "firefox-accounts"
+  ],
+  "slug": "1162",
+  "title": "They track you with Web analytics, but seem to respect your browser's Do Not Track preference.",
+  "topics": [
+
+  ],
+  "tosdr": {
+    "binding": true,
+    "tldr": "From the privacy policy:  \"We use 'online data tools' such as cookies, clear GIFs and web beacons to provide the functionality of our products and services. For example, cookies assist with user sign-in and authentication. We also use these same tools to collect data to improve our products and services. For example, we use cookies to provide web analytics.\"\r\n\r\nRegardless, they do respect your browser's tracking preference.  If your browser sends the DNT request header with a preference of 1, Firefox Accounts does not load its \"metrics\" code, which I've verified personally by changing the DNT request header and reloading the page.  However, to be confusing, they do not reply with the tracking status response header (\"Tk\") in any case."
+  }
+}

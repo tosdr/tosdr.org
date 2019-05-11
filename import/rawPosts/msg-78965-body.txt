@@ -1,0 +1,101 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp113059wfj;
+        Tue, 3 Jul 2012 02:06:22 -0700 (PDT)
+Received: by 10.205.126.15 with SMTP id gu15mr8716038bkc.134.1341306382119;
+        Tue, 03 Jul 2012 02:06:22 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCM7Mr_BBoEvoDOhg@googlegroups.com>
+Received: from mail-bk0-f64.google.com (mail-bk0-f64.google.com [209.85.214.64])
+        by mx.google.com with ESMTPS id hw3si6307944bkc.149.2012.07.03.02.06.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 03 Jul 2012 02:06:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCM7Mr_BBoEvoDOhg@googlegroups.com designates 209.85.214.64 as permitted sender) client-ip=209.85.214.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCM7Mr_BBoEvoDOhg@googlegroups.com designates 209.85.214.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCM7Mr_BBoEvoDOhg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by bkty8 with SMTP id y8sf4773980bkt.29
+        for <multiple recipients>; Tue, 03 Jul 2012 02:06:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=krTa+6gIYlO0DrqAqW1nHMxubQ60FyHjBQ9Itjj3MxY=;
+        b=6aUkN0XYp46X3dMh3RxPDDUmdTOk4ktCTjl54mYFU35GwOZhwyPUBNjYk7iaqm9K7w
+         wDCpDqD6NmMe7BFhYtuUAV92hg1176I2K84+TAEPWp7H1ELZxIxmONdIY83Bd0zKoR7T
+         W7hW0c+ahQud3yNob+D0u9cyFrUYLTXKAz4GM=
+Received: by 10.216.237.89 with SMTP id x67mr113998weq.11.1341306380585;
+        Tue, 03 Jul 2012 02:06:20 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.97.10 with SMTP id dw10ls5105494wib.0.gmail; Tue, 03 Jul
+ 2012 02:06:20 -0700 (PDT)
+Received: by 10.216.237.83 with SMTP id x61mr344885weq.8.1341306380098;
+        Tue, 03 Jul 2012 02:06:20 -0700 (PDT)
+Received: by 10.216.237.83 with SMTP id x61mr344884weq.8.1341306380080;
+        Tue, 03 Jul 2012 02:06:20 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id cx9si631952wib.0.2012.07.03.02.06.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 03 Jul 2012 02:06:20 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 9CD5C63B511
+	for <tosdr@googlegroups.com>; Tue,  3 Jul 2012 11:06:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id jNNlQBuF1Zu8 for <tosdr@googlegroups.com>;
+	Tue,  3 Jul 2012 11:06:13 +0200 (CEST)
+Received: from [192.168.141.184] (p54BD5645.dip.t-dialin.net [84.189.86.69])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DE9DA63B501
+	for <tosdr@googlegroups.com>; Tue,  3 Jul 2012 11:06:12 +0200 (CEST)
+Message-ID: <1341306371.3832.6.camel@synclavier.lan>
+Subject: should we have a twitter button on the website?
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 03 Jul 2012 11:06:11 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Twitter buttons https://twitter.com/about/resources/buttons now offer an
+opt-out directly in the widget of tracking. (information about twitter's
+tracking: https://support.twitter.com/articles/20169421# and see our
+thread https://groups.google.com/forum/#!topic/tosdr/X6_GxyBSVnE )
+
+I suppose we should not use the Twitter button, because this would
+damage our neutrality a little bit, plus it would mean by default we
+would impose twitter's button terms to our users even though they might
+consider that these terms are unacceptable for them. OTOH Twitter is a
+very useful tool to spread a message but I don't think this outweigh our
+first concern.
+-- 
+Hugo Roy 
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+-- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+

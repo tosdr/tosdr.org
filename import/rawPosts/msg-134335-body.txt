@@ -1,0 +1,130 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.181.81 with SMTP id e78csp772172iof;
+        Fri, 31 Jul 2015 18:31:47 -0700 (PDT)
+X-Received: by 10.180.20.198 with SMTP id p6mr12305710wie.38.1438392706659;
+        Fri, 31 Jul 2015 18:31:46 -0700 (PDT)
+Return-Path: <tosdr+bncBC7OJ5M2QMPBB6GC6CWQKGQENLNNSRI@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id un9si12215592wjc.60.2015.07.31.18.31.45
+        for <michiel@unhosted.org>
+        (version=TLS1 cipher=RC4-SHA bits=128/128);
+        Fri, 31 Jul 2015 18:31:46 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC7OJ5M2QMPBB6GC6CWQKGQENLNNSRI@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC7OJ5M2QMPBB6GC6CWQKGQENLNNSRI@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mail=tosdr+bncBC7OJ5M2QMPBB6GC6CWQKGQENLNNSRI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id C0D9641C056
+	for <michiel@unhosted.org>; Sat,  1 Aug 2015 03:31:45 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id ADEB311601D
+	for <michiel@unhosted.org>; Sat,  1 Aug 2015 03:31:45 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 3LIon_obO904 for <michiel@unhosted.org>;
+	Sat,  1 Aug 2015 03:31:41 +0200 (CEST)
+Received: from mail-yk0-x240.google.com (mail-yk0-x240.google.com [IPv6:2607:f8b0:4002:c07::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3657C116024
+	for <michiel@michielbdejong.com>; Sat,  1 Aug 2015 03:31:38 +0200 (CEST)
+Received: by ykax123 with SMTP id x123sf19881066yka.1
+        for <michiel@michielbdejong.com>; Fri, 31 Jul 2015 18:31:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=YIwshNXaYGCk/g1FYuPdU6vza09e0q0YJ6fCWpfn5Sw=;
+        b=iI6CLorildQMtdH4zeRcEQFApCiHxuISXsg2V40Dxy9D4qwskr5MLX1HX9pogI9hzx
+         mXi1leeM5ZluM2BAzK6TjwxPHv4ZYbAEQhWJFy80l9Ag9USb7wv7ktO/SQBG3Y1+o5H3
+         AwCrr7XyyWI2bIJeNzUnabioEjXz1XwXQHk0y510s1LXFJWSYd1KQCG6VXFCaPnTKl96
+         gp2+gdjn2HQ8KW0Ue9fptc0sGchtG3SehUJEEjG4Ip9UhWbQO4KiU1QvHlASpdec7lz1
+         naomREDqZmrNHcVRKqRi7tZnPvnxyExjmE444AcxNyGwqtS02vv77HZwjUGkr20w/3Qk
+         pr+w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=YIwshNXaYGCk/g1FYuPdU6vza09e0q0YJ6fCWpfn5Sw=;
+        b=EWRBJYDgb8+lGi6F0YfLuPucWFENMJZe089PJrrvIKPWRzzS3dggH+9mePPYt2Izqv
+         EkFnwaFWHfzLWG2TrPcTgGoAWT9T1MCBlhW3ouub3nV6xJc0H8EMNO6KTqYjC9n7KlVu
+         FdN4HLhrhyMALj5YCV68PQ3XK9osYd7S5wDt61QFCw5N+zBQ534zcBLdZwgWA8ZX/utZ
+         tJ5AMf7RO8vOgNzFZSU8uRGmr7KwCngLq9ZgiZHr0J6t5FoZxTxJIHxxLZ8d7IWtNvtX
+         re3wxuIu6sIKGCLbaooC9t8UFRVDWX7WgfLozMnztNYFmFcu5jY3aszGd151oTKi7YuP
+         rZ+g==
+X-Received: by 10.182.19.165 with SMTP id g5mr29422obe.10.1438392697219;
+        Fri, 31 Jul 2015 18:31:37 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.121.226 with SMTP id ln2ls646319obb.18.gmail; Fri, 31 Jul
+ 2015 18:31:36 -0700 (PDT)
+X-Received: by 10.182.112.132 with SMTP id iq4mr29878obb.31.1438392696082;
+        Fri, 31 Jul 2015 18:31:36 -0700 (PDT)
+Date: Fri, 31 Jul 2015 18:31:35 -0700 (PDT)
+From: wourghk@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: palpants@gmail.com, akcay.e@gmail.com
+Message-Id: <9991198d-455c-4413-b083-a76ab37c9cb2@googlegroups.com>
+In-Reply-To: <fd0b75e5-435d-4586-8ae3-d818a41877fc@googlegroups.com>
+References: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+ <fd0b75e5-435d-4586-8ae3-d818a41877fc@googlegroups.com>
+Subject: [tosdr:3574] Re: Steam Subscriber Agreement & Privacy Policy
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_81_1600022185.1438392695418"
+X-Original-Sender: wourghk@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_81_1600022185.1438392695418
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Friday, July 31, 2015 at 2:06:31 PM UTC-6, akc...@gmail.com wrote:
+> Now they have a no-questions-asked refund policy up to two hours of gamep=
+lay and 14 days after purchase. They have reservations against abuse, but t=
+hey do not consider refunding a game because it got a discount after you bo=
+ught it abuse of the refund policy. It's really good if you ask me.
+
+Unfortunately, they also say this:
+"Please note that in some cases, Steam will be unable to give refunds for s=
+ome third party DLC"
+Example: those who purchased a specific GTA V bundle with DLC were unable t=
+o return the product for a refund later, as it was bundled with "some third=
+ party DLC" unbeknownst to the customer.
+
+In other words, the developer can bar customers from receiving refunds by b=
+undling all copies of their titles with a DLC product that meets the necess=
+ary requirements, and they don't even have to inform the buyer.
+
+Refunds also do not apply to movies.
+
+Valve has a ways to go on this, but they're headed in the right direction.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_81_1600022185.1438392695418--

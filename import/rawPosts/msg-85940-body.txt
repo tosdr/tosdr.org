@@ -1,0 +1,195 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.11.16 with SMTP id 16csp156655wfk;
+        Fri, 10 Aug 2012 10:47:39 -0700 (PDT)
+Received: by 10.100.244.7 with SMTP id r7mr1150908anh.23.1344620858653;
+        Fri, 10 Aug 2012 10:47:38 -0700 (PDT)
+Return-Path: <tosdr+bncCLuoq4CJBhC5kpWBBRoEr6hPvg@googlegroups.com>
+Received: from mail-yx0-f192.google.com (mail-yx0-f192.google.com [209.85.213.192])
+        by mx.google.com with ESMTPS id d45si4650189yhe.131.2012.08.10.10.47.38
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 10 Aug 2012 10:47:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLuoq4CJBhC5kpWBBRoEr6hPvg@googlegroups.com designates 209.85.213.192 as permitted sender) client-ip=209.85.213.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLuoq4CJBhC5kpWBBRoEr6hPvg@googlegroups.com designates 209.85.213.192 as permitted sender) smtp.mail=tosdr+bncCLuoq4CJBhC5kpWBBRoEr6hPvg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by yenl1 with SMTP id l1sf1746155yen.29
+        for <michiel@unhosted.org>; Fri, 10 Aug 2012 10:47:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:x-proofpoint-virus-version
+         :x-proofpoint-spam-details:references:in-reply-to:message-id:cc
+         :x-mailer:from:subject:date:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-transfer-encoding
+         :content-type;
+        bh=V4dS6WvQJTtG6MPKYvFFi+Ozw8WjHu8/obuRBjYm3Mw=;
+        b=uCcVCwOnTpTQjNQyMy4xVCX8XhXNmRFj5u1TwSYcqq9FjmNycsHkdIS4SxhoxYfN4r
+         ipf50k2hsirB5Emrmdn2IKLHISZt5ZGXLTRh8aTq8YqGQQ4YJuy6BotAiaZVquqRlehT
+         aClpMau6ubEXyTaQilOjOkC+5BrOm03RwVpDY=
+Received: by 10.68.232.230 with SMTP id tr6mr826785pbc.16.1344620857626;
+        Fri, 10 Aug 2012 10:47:37 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.201.168 with SMTP id kb8ls8199650pbc.2.gmail; Fri, 10 Aug
+ 2012 10:47:37 -0700 (PDT)
+Received: by 10.66.83.74 with SMTP id o10mr58137pay.33.1344620857240;
+        Fri, 10 Aug 2012 10:47:37 -0700 (PDT)
+Received: by 10.66.83.74 with SMTP id o10mr58136pay.33.1344620857222;
+        Fri, 10 Aug 2012 10:47:37 -0700 (PDT)
+Received: from nk11p00mm-asmtpout010.mac.com (nk11p00mm-asmtp010.mac.com. [17.158.161.9])
+        by gmr-mx.google.com with ESMTP id vo7si542245pbc.1.2012.08.10.10.47.37;
+        Fri, 10 Aug 2012 10:47:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of reneelloyd@me.com designates 17.158.161.9 as permitted sender) client-ip=17.158.161.9;
+MIME-version: 1.0
+Received: from [10.174.92.42]
+ (mobile-198-228-204-241.mycingular.net [198.228.204.241])
+ by nk11p00mm-asmtp010.mac.com
+ (Oracle Communications Messaging Server 7u4-23.01(7.0.4.23.0) 64bit (built Aug
+ 10 2011)) with ESMTPSA id <0M8J005QCW39LI70@nk11p00mm-asmtp010.mac.com> for
+ tosdr@googlegroups.com; Fri, 10 Aug 2012 17:47:37 +0000 (GMT)
+X-Proofpoint-Virus-Version: vendor=fsecure
+ engine=2.50.10432:5.7.7855,1.0.260,0.0.0000
+ definitions=2012-08-10_06:2012-08-10,2012-08-10,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ ipscore=0 suspectscore=40 phishscore=0 bulkscore=0 adultscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=6.0.2-1203120001
+ definitions=main-1208100187
+References: <CALpzJPrSfuWUR=vdhT1RhhEEoYnxA+0OB2Xjx6o5Y=KwX6p=5A@mail.gmail.com>
+ <CA+aD3u158pYPLecViW+doqbrdbm1R8HN59OeQiyH-w_GVsX8EQ@mail.gmail.com>
+In-reply-to: <CA+aD3u158pYPLecViW+doqbrdbm1R8HN59OeQiyH-w_GVsX8EQ@mail.gmail.com>
+Message-id: <9D9E6857-F8DA-40B7-826B-6BCF04773BF7@me.com>
+Cc: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+X-Mailer: iPhone Mail (9B206)
+From: Renee Lloyd <reneelloyd@me.com>
+Subject: Re: [tosdr:311] Re: [bad] delicious new terms 2. no right to leave
+ the service
+Date: Fri, 10 Aug 2012 13:47:27 -0400
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+X-Original-Sender: reneelloyd@me.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of reneelloyd@me.com designates 17.158.161.9 as permitted sender) smtp.mail=reneelloyd@me.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-transfer-encoding: quoted-printable
+Content-type: text/plain; charset=ISO-8859-1
+
+Adding to Michiel's point:  retaining a license to use 'for legitimate busi=
+ness purpose' in a business to business transaction would elicit immediate =
+'red flags' because the language is vague and very broad.  In that context =
+a discussion and revision would take place to more accurately reflect how t=
+hat information is to be used.  In the case of TOS such language is particu=
+larly problematic because:
+1.  This is business to customer context where the drafter really ought to =
+consider the fact that terms ordinarily not acceptable to business are quit=
+e likely to be problematic for non-business;
+2.   It's a contract of adhesion (non-negotiable take it or leave it agreem=
+ent) so no opportunity to raise concerns, clarification and revise.
+
+As pointed out below, providing transparency at a minimum with respect to u=
+se is a good starting point.  I expect that as this project develops organi=
+zations seeking to provide more open and balanced models will be willing to=
+ limit their future use of content, perhaps even committing to its return a=
+nd destruction when customer requests. =20
+
+
+
+Renee Lloyd
+Sent from my iPhone
+
+On Aug 9, 2012, at 5:44 PM, Michiel de Jong <michiel@unhosted.org> wrote:
+
+> On Thu, Aug 9, 2012 at 11:03 PM, Tim Dierks <tim@dierks.org> wrote:
+>> On Wednesday, June 20, 2012 12:53:04 PM UTC-4, Hugo Roy wrote:
+>>> http://www.delicious.com/help/terms
+>>>=20
+>>>    You may remove your Member Content from the Service at any time by
+>>> specifically marking it for deletion or terminating your Account.  If y=
+ou
+>>> choose to remove your Member Content or to terminate your Account, your
+>>> Member Content will be removed from our systems in a commercially reaso=
+nable
+>>> amount time (e.g., time enough to allow our services to update), provid=
+ed,
+>>> however, we may retain an archived copy as required by law or for legit=
+imate
+>>> business purposes. In addition, in certain instances, copies of your Me=
+mber
+>>> Content may continue to exist in published or recorded form when it has=
+ been
+>>> retransmitted, redistributed, or otherwise licensed to others as
+>>> contemplated in these Terms. So, for example, if you remove a comment o=
+r a
+>>> collection of bookmarks associated with your Account, such content may
+>>> continue to appear in other places if someone makes a copy before you r=
+emove
+>>> it from the Service. (e.g., as indexed by a search engine or a web arch=
+ive).
+>>>=20
+>>> Aherm. At least, it's not for illegitimate or illegal business purposes=
+!
+>>=20
+>> I'm curious; why such negative treatment of this term? As far as I know,
+>> it's difficult-to-infeasible to eradicate all user content from a large
+>> distributed service, particularly one that backs up to tape. This TOS ma=
+y
+>> only recognize that fact. I'd be very surprised if many other large serv=
+ices
+>> can actually claim to have eradicated all user data when the user leaves=
+ the
+>> service, and they shouldn't get a free ride just because they elide that
+>> from their TOS.
+>>=20
+>> - Tim
+>=20
+> yes, that's true, and the 'time enough to allow our services to
+> update' sounds fair to me. but this phrase is still funny:
+>=20
+>>> we may retain an archived copy [...] for legitimate business purposes
+>=20
+> maybe 'archived' implies that it's on a backup tape but not accessible
+> through the production environment? what are business purposes? if
+> they actively retain a copy for a specific purpose then that's not the
+> same technical difficulties in the deletion of the data.
+>=20
+> they could have written something like 'your data will still be on our
+> archive system, but will not be accessible anymore by anybody in any
+> way except employees of ours who signed an NDA doing server admin
+> tasks, and law enforcement officers with a warrant'.
+>=20
+> how do you interpret the term 'legitimate business purposes'? Maybe we
+> should contact their support department and ask them for clarification
+> about this clause
+>=20
+> --=20
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>=20
+>=20
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

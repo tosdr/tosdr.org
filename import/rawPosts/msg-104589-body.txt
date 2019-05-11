@@ -1,0 +1,167 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp215001vec;
+        Sat, 8 Dec 2012 06:44:17 -0800 (PST)
+Received: by 10.236.84.194 with SMTP id s42mr12891448yhe.17.1354977856947;
+        Sat, 08 Dec 2012 06:44:16 -0800 (PST)
+Return-Path: <tosdr+bncBDLZX5PJWMBBBQFERWDAKGQE2LWXXGQ@googlegroups.com>
+Received: from mail-ye0-f188.google.com (mail-ye0-f188.google.com [209.85.213.188])
+        by mx.google.com with ESMTPS id e8si17443669yhd.70.2012.12.08.06.44.16
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 08 Dec 2012 06:44:16 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBQFERWDAKGQE2LWXXGQ@googlegroups.com designates 209.85.213.188 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBQFERWDAKGQE2LWXXGQ@googlegroups.com designates 209.85.213.188 as permitted sender) smtp.mail=tosdr+bncBDLZX5PJWMBBBQFERWDAKGQE2LWXXGQ@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-ye0-f188.google.com with SMTP id l1sf853798yen.5
+        for <michiel@unhosted.org>; Sat, 08 Dec 2012 06:44:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=BWhyfGkmjU9EUC0QUskqF4yLd+s5T4cD1tNwPI4kfd0=;
+        b=GbUb+jErG6e6EhlW/jUiBwM0dvMMznjXf9xtnxmu9sFPkPs3d28miftv5RL+1xM8Oe
+         06spzkR2vAKlvgE+pxfV3aiImHtezhkPz9yTD9hEaL6vuXNj1gn+JuGJD4FU+1krsAlq
+         vFdLejdY0d3b4kP9WJzIvQ07xm5wrY6oTu756fH0ihMcUgYre+F2FYAYaAjng47zR9E+
+         udp4fwRipZ8BkOBnVgYfTQj34b/K9dDvlvXoZf2ViX/o/NdSCWW3YKi3lkLqjgJEP+bC
+         2A29B1gVi5mujRFqq8ZP9SFVTLEiFHulLwULOammLMCjhhGyy52Gc8Ltnw8ZpwCVLw7X
+         OitA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=BWhyfGkmjU9EUC0QUskqF4yLd+s5T4cD1tNwPI4kfd0=;
+        b=Ef+ljBXm0Wz5Ccx9jeNidJ7LvR5SRWz7Fmjm7jROjuwT/6rocO/K9Zm2kCVl99zTrz
+         wGuKHHbXX/U5VShcF9tFk8BkR0/I5iBSq8SDZwk49LgfLZ94MJi0/GIKVJ7jXuG42ed5
+         /VOaF2I94qrUaFebX2E+MDBjq9tNVMALAO3OA4IBzeaR/gXwoqA8uiZTQ40el21S+QCo
+         UHvvYSShDuNdidIi8r3DYLigv0MmGWMgc4TIh4KezhUhE34wHVDFqiVPg5+DHdomm9V4
+         DTS0HcFGWf9NzH/c5Qf1Q4sHSKyGOT7yEhWZzcfjcMeMTxZd1eB/B5Tf3RDvYHR9lu99
+         XbpA==
+Received: by 10.49.24.14 with SMTP id q14mr2041416qef.17.1354977856519;
+        Sat, 08 Dec 2012 06:44:16 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.19 with SMTP id 19ls2721663qea.55.gmail; Sat, 08 Dec 2012
+ 06:44:16 -0800 (PST)
+Received: by 10.49.84.167 with SMTP id a7mr2022967qez.11.1354977856042;
+        Sat, 08 Dec 2012 06:44:16 -0800 (PST)
+Date: Sat, 8 Dec 2012 06:44:15 -0800 (PST)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <1aafda57-d5ff-4ce0-b0d2-45d233387749@googlegroups.com>
+In-Reply-To: <df7b1bd8-f4f2-4847-a6c0-9bd14eec74fa@googlegroups.com>
+References: <df7b1bd8-f4f2-4847-a6c0-9bd14eec74fa@googlegroups.com>
+Subject: [tosdr:1285] Re: [ENVATO] Uses temporary session cookies
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_357_15715677.1354977855829"
+
+------=_Part_357_15715677.1354977855829
+Content-Type: text/plain; charset=ISO-8859-1
+
+I've just tried to confirm their claim that the session cookie is 
+destroyed, and they are in fact. So I'm marking this as a good point.
+
+On Tuesday, December 4, 2012 7:57:35 PM UTC+1, Robin Monks wrote:
+>
+> From the Privacy Policy:
+>
+>> The Site uses session cookies, which are used only during a browsing 
+>> session, and expire when you quit your browser. Upon closing your browser, 
+>> the session cookie set by this Site is destroyed and no personal 
+>> information is maintained which might identify you should you visit our 
+>> Site at a later date.
+>>
+> This should likely be tested and verified. 
+>
+> /Robin 
+>
+> Applies to all of the following domains:
+> http://activeden.net/legal/user
+> http://audiojungle.net/legal/user
+> http://codecanyon.net/legal/user
+> http://graphicriver.net/legal/user
+> http://themeforest.net/legal/user
+> http://videohive.net/legal/user
+> http://3docean.net/legal/user
+> http://marketplace.tutsplus.com/legal/user
+> http://photodune.net/legal/user
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_357_15715677.1354977855829
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I've just tried to confirm their claim that the session cookie is destroyed=
+, and they are in fact. So I'm marking this as a good point.<br><br>On Tues=
+day, December 4, 2012 7:57:35 PM UTC+1, Robin Monks wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #cc=
+c solid;padding-left: 1ex;">From the Privacy Policy:<div><blockquote class=
+=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;bo=
+rder-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">=
+<p><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:115%;color:#4=
+44444;background:#d2d1d0">The Site uses session cookies, which are used
+only during a browsing session, and expire when you quit your browser. Upon
+closing your browser, the session cookie set by this Site is destroyed and =
+no
+personal information is maintained which might identify you should you visi=
+t
+our Site at a later date.</span></p></blockquote><div>This should likely be=
+ tested and verified.&nbsp;</div><div><div><div><div><br></div><div>/Robin&=
+nbsp;</div><div><br></div>Applies to all of the following domains:<br><a hr=
+ef=3D"http://activeden.net/legal/user" target=3D"_blank">http://activeden.n=
+et/legal/<wbr>user</a><br><a href=3D"http://audiojungle.net/legal/user" tar=
+get=3D"_blank">http://audiojungle.net/legal/<wbr>user</a><br><a href=3D"htt=
+p://codecanyon.net/legal/user" target=3D"_blank">http://codecanyon.net/lega=
+l/<wbr>user</a><br><a href=3D"http://graphicriver.net/legal/user" target=3D=
+"_blank">http://graphicriver.net/legal/<wbr>user</a><br><a href=3D"http://t=
+hemeforest.net/legal/user" target=3D"_blank">http://themeforest.net/legal/<=
+wbr>user</a><br><a href=3D"http://videohive.net/legal/user" target=3D"_blan=
+k">http://videohive.net/legal/<wbr>user</a><br><a href=3D"http://3docean.ne=
+t/legal/user" target=3D"_blank">http://3docean.net/legal/user</a><br><a hre=
+f=3D"http://marketplace.tutsplus.com/legal/user" target=3D"_blank">http://m=
+arketplace.tutsplus.<wbr>com/legal/user</a><br><div><a href=3D"http://photo=
+dune.net/legal/user" target=3D"_blank">http://photodune.net/legal/<wbr>user=
+</a></div></div></div></div></div></blockquote>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_357_15715677.1354977855829--

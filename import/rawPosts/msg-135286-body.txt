@@ -1,0 +1,205 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp1313384iou;
+        Sun, 30 Aug 2015 23:31:37 -0700 (PDT)
+X-Received: by 10.194.19.195 with SMTP id h3mr16784051wje.10.1441002697903;
+        Sun, 30 Aug 2015 23:31:37 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBQ7JR6XQKGQERKWH4IY@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id hv8si19298073wib.93.2015.08.30.23.31.37
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sun, 30 Aug 2015 23:31:37 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBQ7JR6XQKGQERKWH4IY@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBQ7JR6XQKGQERKWH4IY@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBC3IF2OJ4QORBQ7JR6XQKGQERKWH4IY@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 9041141C05D
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 08:31:37 +0200 (CEST)
+Received: from mfilter35-d.gandi.net (mfilter35-d.gandi.net [217.70.178.166])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7D12A11644E
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 08:31:37 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter35-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter35-d.gandi.net (mfilter35-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id AEeGM6QORLTp for <michiel@unhosted.org>;
+	Mon, 31 Aug 2015 08:31:35 +0200 (CEST)
+Received: from mail-wi0-x238.google.com (mail-wi0-x238.google.com [IPv6:2a00:1450:400c:c05::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 142FF116024
+	for <michiel@michielbdejong.com>; Mon, 31 Aug 2015 08:31:32 +0200 (CEST)
+Received: by wizs10 with SMTP id s10sf1617716wiz.0
+        for <michiel@michielbdejong.com>; Sun, 30 Aug 2015 23:31:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=QnQT16Ix2bPajpJ/TWjfoXTeq5DM+GKvkoxQ0X9pfu4=;
+        b=hkmdwZZNHw7NKBqroy1gg8mKI1RtccOcZAsUGWSCNX1eAOQSE/7CmOiRAIimWgAQqZ
+         V47KCOT/UlttIdGP8MX/6zkClOv1oiUOpFMcVNBdgqvtV03sxZXlvMsH1x11n7KNOIAN
+         tvLix2i5hD6tk+g1n+ZDNYac0EkZo13hVNRHCh4x7W4+5IDJ4KWR0IkX5aSU1Aq69Q2u
+         nVPugpwh6gDVMLYR1hZTJ3CIRPHKKlFygUnTMdJacN3oiu5RjzH2LQ6/JXmeV0ZUEowr
+         b49FGtRs9wi04ueFa9VX1SufW/0UmDb0aEp2EAEQGS9otJMClJmV58jc5sRQGeK4O1ab
+         5o6Q==
+X-Received: by 10.152.25.138 with SMTP id c10mr117278lag.5.1441002691972;
+        Sun, 30 Aug 2015 23:31:31 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.20.202 with SMTP id p10ls391727lae.95.gmail; Sun, 30 Aug
+ 2015 23:31:30 -0700 (PDT)
+X-Received: by 10.112.99.37 with SMTP id en5mr5828116lbb.7.1441002690876;
+        Sun, 30 Aug 2015 23:31:30 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id hm7si749813wib.0.2015.08.30.23.31.30
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=RC4-SHA bits=128/128);
+        Sun, 30 Aug 2015 23:31:30 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4D9F763ABE3
+	for <tosdr@googlegroups.com>; Mon, 31 Aug 2015 08:31:36 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id IbSmVcEA3XIz for <tosdr@googlegroups.com>;
+	Mon, 31 Aug 2015 08:31:32 +0200 (CEST)
+Received: from localhost (f052023053.adsl.alicedsl.de [78.52.23.53])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 3264563A696
+	for <tosdr@googlegroups.com>; Mon, 31 Aug 2015 08:31:32 +0200 (CEST)
+Date: Mon, 31 Aug 2015 08:31:23 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3611] Re: No pseudonyms allowed
+Message-ID: <20150831063123.GA7690@xps.localdomain>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <1349368558.4304.22.camel@synclavier.lan>
+ <64d3ca44-95de-4257-8000-c425f6286760@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="ew6BAiZeqk4r7MaW"
+Content-Disposition: inline
+In-Reply-To: <64d3ca44-95de-4257-8000-c425f6286760@googlegroups.com>
+User-Agent: Mutt/1.5.23.1 (2014-03-12)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mailfrom=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--ew6BAiZeqk4r7MaW
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2015-08-29 Sat 19:46, askebisgaard@gmail.com <askebisgaard@gmail.=
+com>:
+>=20
+> I don't think "no pseudonyms allowed" are necessarily an overall bad
+> thing, neither a non-obvious thing.
+
+Yes, it depends on the context. We're not saying that not allowing
+pseudonyms in all circumstances is a bad thing.=20
+
+> From a quick glance at Facebook, it's pretty clear that pseudonyms
+> are almost exclusively used by fake profiles and spampots.
+
+I do not use Facebook, but I have read elsewhere that this is
+absolutely not the case. In any event, the behaviour of spambot isn't
+a good standard to judge whether the rule is good or not, spambots are
+just designed to abuse rules anyway.
+
+> I understand how pseudonyms can protect some people, who would like free =
+speech, but cannot for whatever reason.
+
+And this is an important issue for Facebook, considering that it's
+probably the most general and large platform allowing people to
+publish on the web today.
+
+> But disallowing pseudonyms also allow you to know that what they say is s=
+omething they're not afraid to take responsibility for. When you talk with =
+someone on Facebook, you can be far more sure, that you're talking to a per=
+son who is who he says he is, and thus, you avoid some parts of "trolling",=
+ i.e. pretending to be someone you're not, in the effort to trick people.
+
+I do not think that disallowing pseudoyms is really working in
+Facebook to protect against trolling. Does it?
+
+In any case, for the reason stated above, I don't think that this
+alone is enough to dismiss the fact that disallowing pseudonyms harm
+the freedom to speak of some people and that it's too important to
+ignore.
+
+
+> That can still happen on Facebook, of course, but I think it's enough to =
+not make it a conclusively negative thing.
+
+I suppose we disagree. I'm interested in knowing what others would
+think here, but I want to also make clear that ToS;DR is also biased
+in favour of users=E2=80=99 rights online, and raising awareness regarding
+what's in the terms. Now, considering the amount of legitimate users
+who want to use pseudonyms in Facebook and considering the amount of
+these users who actually *do* use pseudonyms: I think they're entitled
+to know that unfortunately Facebook does not allow pseudos in their
+terms (when we checked--has this changed? The ToS have changed so the
+analysis is out of date at the moment).=20
+
+> And it's clearly possible to find places to by anynomous elsewhere, and s=
+till reach a big audience. After all, the vast majority of sites allow pseu=
+donyms, including social media sites.
+
+I don't think there's anything quite as large as Facebook for this.
+
+
+Thanks for your input,
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read https://www.tosdr.org
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--ew6BAiZeqk4r7MaW
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEcBAEBCgAGBQJV4/S5AAoJEI0CLJmz17eVcFQH/2K1fozt+PJdAN9l+5NaV4jF
+dB1MHGYo/gtC1yWdfAR04PD73KMp/tGeGNYr6VsS2SVc2tETBewWO5UBCBhpk1oL
+Qy+2QHdnTJCs6+vCvnY07h9Zt5FpKtcsEl44tVUT0MygotXxSxcMdwYHqc4HEANo
+KULpCPVLyLaw17nu2b+eyzvknKZq+pOsunlY6ZddMC8YGFgaDbv4ntx2TBMOwR/U
+iKP1z+wZuLOEqRgGGvTZstsxf1Dsh4q6E5VHkVBMfZPXHwZKn+ysr7gekCPCmH7h
+mB90EFuRRmqYdLxXDcLNhULl8cBpvE9zT6QMmkHe+MOtHcf+ToZBck8yaQDWqGk=
+=Fn8p
+-----END PGP SIGNATURE-----
+
+--ew6BAiZeqk4r7MaW--

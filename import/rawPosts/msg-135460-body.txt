@@ -1,0 +1,338 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp143070iou;
+        Fri, 4 Sep 2015 14:27:22 -0700 (PDT)
+X-Received: by 10.180.12.145 with SMTP id y17mr10485836wib.87.1441402042276;
+        Fri, 04 Sep 2015 14:27:22 -0700 (PDT)
+Return-Path: <tosdr+bncBCD4JLPUV4NRBMUZVCXQKGQEZT7X2UA@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id jf19si6550776wic.78.2015.09.04.14.27.21
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 04 Sep 2015 14:27:22 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCD4JLPUV4NRBMUZVCXQKGQEZT7X2UA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCD4JLPUV4NRBMUZVCXQKGQEZT7X2UA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBCD4JLPUV4NRBMUZVCXQKGQEZT7X2UA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 6A9F041C05D
+	for <michiel@unhosted.org>; Fri,  4 Sep 2015 23:27:21 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5BEAF14225E
+	for <michiel@unhosted.org>; Fri,  4 Sep 2015 23:27:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id QvU-OzLVopL9 for <michiel@unhosted.org>;
+	Fri,  4 Sep 2015 23:27:18 +0200 (CEST)
+Received: from mail-yk0-x239.google.com (mail-yk0-x239.google.com [IPv6:2607:f8b0:4002:c07::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9773A142245
+	for <michiel@michielbdejong.com>; Fri,  4 Sep 2015 23:27:15 +0200 (CEST)
+Received: by ykaf83 with SMTP id f83sf7827298yka.0
+        for <michiel@michielbdejong.com>; Fri, 04 Sep 2015 14:27:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:date:message-id:mime-version:content-type
+         :thread-index:content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=AtkTYAO1Ss8KvsPmNBIoxu5xIHv87HtsTjLdJsY8nCw=;
+        b=PtO8Gy93AVZPLL0w9vo1RlRblH2QzvZ6EdFmLOvwL4yc9Ib6fnUJiM/wzQzDMNGI0Z
+         zyYdvp9E59q7HCq1ca9DCCYFO0ucxdBDa98bq9PTeA+UqQnvbYJkZXxoxp2GSX/b/WnR
+         y5t3iRHVulpNOdCRm/UgMfHe43a8N0FW00dGsyedsR+OGl2Qvlyi5t9mLJIuVv9RKG/v
+         J4qXdgIZaVSourbpzM5k3Ng4AHvcnvx6YEb0B338hI7J4MulF7kA4s8NcCv23ULv/Tl4
+         IV/spyiIKvGu+YsYuP96XpxoCM/i0co0kMQVEe64WfOJETpzCVr66sy5QWr4PRt1OCA+
+         keow==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:mime-version
+         :content-type:thread-index:content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=AtkTYAO1Ss8KvsPmNBIoxu5xIHv87HtsTjLdJsY8nCw=;
+        b=ZfoEJAnbferQualMnTNPFviJy+/UUTa36EKKJ28IFtDFghtqIy4z5mdGWp/rWJJ9W9
+         I8rkeRoPoDicluB/y36S4TRSXGlkP9wG5R6PSM/WQhR4DnXr6YWin2qPiLuk3CNoUgol
+         94x8hBZ9w5H3afBUgKltp2um4okY5ITnr0ZhoD3wJTeQnyPGtBdRczcy2gAkxWXlRfAF
+         3vZsY346er5wRt6wwdi2w9hTi+xNS4/64Twx6qmVMsjQTmTTt02YzMm1n+27B028RDFE
+         dAPfoG1UoUdfAgpjBNKt43UYkyoHjAgU95vPBLkUa33owGHArE9MsKggDRDrHWZ/VV3/
+         m5JA==
+X-Received: by 10.140.83.164 with SMTP id j33mr61186qgd.40.1441402034669;
+        Fri, 04 Sep 2015 14:27:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.39.209 with SMTP id v75ls1548951qgv.98.gmail; Fri, 04 Sep
+ 2015 14:27:14 -0700 (PDT)
+X-Received: by 10.13.223.129 with SMTP id i123mr4787108ywe.33.1441402034032;
+        Fri, 04 Sep 2015 14:27:14 -0700 (PDT)
+Received: from mail-pa0-f48.google.com (mail-pa0-f48.google.com. [209.85.220.48])
+        by gmr-mx.google.com with ESMTPS id ff6si321404pac.2.2015.09.04.14.27.13
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 04 Sep 2015 14:27:13 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.48 is neither permitted nor denied by best guess record for domain of taimy@b2belist.com) client-ip=209.85.220.48;
+Received: by mail-pa0-f48.google.com with SMTP id wi10so35029896pac.3
+        for <tosdr@googlegroups.com>; Fri, 04 Sep 2015 14:27:13 -0700 (PDT)
+X-Gm-Message-State: ALoCoQlyRwwEKLe/ZT55Z8z9Lf/ZFHqCC2vKku0SMox0CDFPeOvkk6kThDsJAWuiRp609BThijjU
+X-Received: by 10.68.194.170 with SMTP id hx10mr12706696pbc.64.1441402033901;
+        Fri, 04 Sep 2015 14:27:13 -0700 (PDT)
+Received: from WSB16 ([125.99.249.3])
+        by smtp.gmail.com with ESMTPSA id iv2sm3551903pbd.88.2015.09.04.14.27.12
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 04 Sep 2015 14:27:13 -0700 (PDT)
+From: Taimy <taimy@b2belist.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:3621] IT solution
+Date: Sat, 5 Sep 2015 02:59:36 +0530
+Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAABzB+1Tj6E9EmaX+3teJHxbCgAAAEAAAAA4sdhv+6h1JshgadvjLq/cBAAAAAA==@b2belist.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_405B_01D0E786.E8026790"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AdDnWMjviSkG71yoQt2DRoDa5vsZbQ==
+Content-Language: en-us
+x-cr-hashedpuzzle: AGpZ AvJ8 BRL8 CLaH Cvhf Cwwv ELQm Ef7y E57y GP/q HQ/o HsQ3 I3Ow I6k6 JC+h LLpM;1;dABvAHMAZAByAEAAZwBvAG8AZwBsAGUAZwByAG8AdQBwAHMALgBjAG8AbQA=;Sosha1_v1;7;{83CE57A3-BEA0-455E-9229-D575CB42F25A};dABhAGkAbQB5AEAAYgAyAGIAZQBsAGkAcwB0AC4AYwBvAG0A;Fri, 04 Sep 2015 21:29:30 GMT;SQBUACAAcwBvAGwAdQB0AGkAbwBuAA==
+x-cr-puzzleid: {83CE57A3-BEA0-455E-9229-D575CB42F25A}
+X-Original-Sender: taimy@b2belist.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 209.85.220.48 is neither permitted nor denied by best guess
+ record for domain of taimy@b2belist.com) smtp.mailfrom=taimy@b2belist.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_405B_01D0E786.E8026790
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+ 
+
+Hope you are doing well.
+
+ 
+
+We have compiled the most recent and comprehensive contact base of
+Technology Users. The contact base includes users of over 11,000
+technologies, with key decision makers and designated executives.
+
+ 
+
+Technologies: Acoustics, Applied linguistics, Computer science, Digital
+signal processing, Phonetics and phonology, Telecommunication, Sage
+software, Microsoft, Oracle, SAP, Cisco, VMware, SAGE, e-clinical works,
+Senior Software Developers, Web Designers, IT Auditors, Software Providers,
+Senior Business Consultant ERP & CRM, Digital Engagement Director, Digital
+Marketing, Information Technology Planning/Buying, Business
+Development/Sales/Design/Development/Creative, Global Digital Services
+Director, Project Director/Manager, Digital Advertising Operations Director,
+Digital Innovation Global Director etc.
+
+Kindly provide the below requirements to assist you further:
+
+Technology Name  :            _____________
+
+Target geography  :            _____________
+
+Target job title      :             _____________??
+
+ 
+
+Note: Once you give above information, we will get back to you more
+information such as counts, pricing and small sample file just for your
+review.
+
+ 
+
+Looking forward to hear from you.
+
+Regards, 
+
+Taimy williams
+
+Marketing Executive.
+
+----------------------------------------------------------------------------
+---------------------
+
+If you do not wish to receive future emails from us, please reply as 'leave
+out'
+
+ 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_NextPart_000_405B_01D0E786.E8026790
+Content-Type: text/html; charset=UTF-8
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=us-ascii">
+<meta name=Generator content="Microsoft Word 12 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoNormal>Hi,<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Hope you are doing well.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We have compiled the most recent and comprehensive contact
+base of <b>Technology Users</b><b>. The contact base includes users of over
+11,000 technologies, with </b>key decision makers and designated executives.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b><u>Technologies:</u></b> Acoustics, Applied linguistics, <span
+style='background:yellow;mso-highlight:yellow'>Computer science, Digital signal
+processing</span>, Phonetics and phonology, <span style='background:yellow;
+mso-highlight:yellow'>Telecommunication</span>, Sage software, <span
+style='background:yellow;mso-highlight:yellow'>Microsoft, Oracle</span>, <span
+style='background:yellow;mso-highlight:yellow'>SAP, Cisco</span>, VMware, SAGE,
+<span style='color:black'>e-clinical works, </span><span style='color:black;
+background:yellow;mso-highlight:yellow'>Senior Software Developers</span><span
+style='color:black'>,&nbsp;<span style='background:yellow;mso-highlight:yellow'>Web
+Designers</span>, IT Auditors, Software Providers,&nbsp; Senior Business
+Consultant <span style='background:yellow;mso-highlight:yellow'>ERP &amp; CRM</span>,
+Digital Engagement Director, <span style='background:yellow;mso-highlight:yellow'>Digital
+Marketing</span>,&nbsp;<span style='background:yellow;mso-highlight:yellow'>Information
+Technology Planning</span>/Buying, Business
+Development/Sales/Design/Development/Creative, <span style='background:yellow;
+mso-highlight:yellow'>Global Digital Services</span> Director, Project
+Director/Manager, Digital Advertising Operations Director, <span
+style='background:yellow;mso-highlight:yellow'>Digital Innovation Global
+Director</span>&nbsp;etc.</span><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Kindly
+provide the below requirements to assist you further:<span style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal>Technology Name&nbsp; :<span style='color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_____________<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'>Target geography&nbsp;
+:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_____________<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'>Target job
+title&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_____________??<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:black'>Note: Once you give above
+information, we will get back to you more information such as <span
+style='background:yellow;mso-highlight:yellow'>counts, pricing and small sample</span>
+file just for your review.</span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-family:"Cambria","serif";color:black'>Looking
+forward to hear from you.<br>
+<br>
+Regards, <o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Cambria","serif";color:black'>Taimy
+williams<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-family:"Cambria","serif";color:black'>Marketing
+Executive</span></i></b><span style='font-family:"Cambria","serif";color:black'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>-------------------------------------------------------------------------------------------------<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:#948A54'>If you do not
+wish to receive future emails from us, please reply as 'leave out'</span></i><span
+style='font-size:11.5pt;color:#948A54'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an email to <a href="mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href="mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr">http://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href="https://groups.google.com/d/optout">https://groups.google.com/d/optout</a>.<br />
+
+------=_NextPart_000_405B_01D0E786.E8026790--
+

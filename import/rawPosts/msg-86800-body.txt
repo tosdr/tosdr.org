@@ -1,0 +1,397 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp105233qed;
+        Tue, 14 Aug 2012 20:12:21 -0700 (PDT)
+Received: by 10.236.117.168 with SMTP id j28mr17514483yhh.88.1345000340949;
+        Tue, 14 Aug 2012 20:12:20 -0700 (PDT)
+Return-Path: <tosdr+bncCMHn_uyuDxCTp6yBBRoE89oflA@googlegroups.com>
+Received: from mail-yw0-f64.google.com (mail-yw0-f64.google.com [209.85.213.64])
+        by mx.google.com with ESMTPS id a3si96632anl.19.2012.08.14.20.12.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 14 Aug 2012 20:12:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCMHn_uyuDxCTp6yBBRoE89oflA@googlegroups.com designates 209.85.213.64 as permitted sender) client-ip=209.85.213.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCMHn_uyuDxCTp6yBBRoE89oflA@googlegroups.com designates 209.85.213.64 as permitted sender) smtp.mail=tosdr+bncCMHn_uyuDxCTp6yBBRoE89oflA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by yhnn12 with SMTP id n12sf965762yhn.29
+        for <multiple recipients>; Tue, 14 Aug 2012 20:12:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=iZMwbFXx0hT0i/4xzzvYQJA+QvH75kXpf2Jj1Bbtiy0=;
+        b=OdCnsCHI/VEu/dI9606ORqQuw+GNbAa7CMOkOHJdJM7H3ZSocTCx4YtxOpIDsinMpA
+         /13ESMfJaTwMwTEWOLM+2ztQXuhIukK96j+bKq1aqbhN7nMIg+mVDFi9KDXbuwpX+PmY
+         WKF0aIJDci4IahZu0mwZ7LoYaAue8nA4kHfDk=
+Received: by 10.68.129.69 with SMTP id nu5mr535784pbb.17.1345000339706;
+        Tue, 14 Aug 2012 20:12:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.211.228 with SMTP id nf4ls2194102pbc.4.gmail; Tue, 14 Aug
+ 2012 20:12:19 -0700 (PDT)
+Received: by 10.68.129.69 with SMTP id nu5mr535783pbb.17.1345000339281;
+        Tue, 14 Aug 2012 20:12:19 -0700 (PDT)
+Date: Tue, 14 Aug 2012 20:12:17 -0700 (PDT)
+From: Jeremiah Cohick <jlcohick@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <83dbacc2-a006-4564-a3e7-d6ebfe5eaa66@googlegroups.com>
+Subject: [tosdr:429] The tragedy of hotel Wi-Fi ToS
+MIME-Version: 1.0
+X-Original-Sender: jlcohick@gmail.com
+X-Original-Authentication-Results: ls.google.com; spf=pass (google.com: domain of
+ jlcohick@gmail.com designates internal as permitted sender)
+ smtp.mail=jlcohick@gmail.com; dkim=pass
+ header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_17_4010487.1345000337043"
+
+------=_Part_17_4010487.1345000337043
+Content-Type: text/plain; charset=ISO-8859-1
+
+I recently spent a few nights at Fountaingrove Inn in Santa Rosa, CA, USA 
+<http://fountaingroveinn.com>. The tragically slow speed of the Wi-Fi gave 
+me time to scan the ToS on the annoying "connect to the internet" redirect 
+that I typically ignore when connecting to public Wi-Fi. I was particularly 
+appalled by the "high volume usage" condition, and sections 1.6, 2.1, 
+2.1.3, 2.5. 
+
+I propose ratings for hotel (or public) Wi-Fi that include:
+- Presence of DNS hijacking to force a connection screen, which makes me 
+disable DNSCrypt and OpenDNS to connect
+- JavaScript or HTML injection 
+<http://justinsomnia.org/2012/04/hotel-wifi-javascript-injection/>
+- Port blocks, such as SMTP
+- Morality clauses that trump expression
+
+Fountaingrove Inn's terms of service below, unmodified:
+-------------------------------------------------------
+
+Terms of Service
+
+Wi-Fi Terms And Conditions 
+
+You may only use Wi-Fi supplied by the Fountaingrove Inn - Santa Rosa by 
+accepting the following Terms And Conditions. By using the supplied Wi-Fi 
+it will be taken that you have read And agreed to the following terms and 
+conditions. 
+
+Free Wi-Fi access is only intended to be available for the accessing of 
+emails and low volume use of the internet. If you undertake high volume 
+usage, e.g. download files -either individually or in total- in excess of 
+10MB, we reserve the right to apply usage charges.
+
+Fountaingrove Inn - Santa Rosa
+
+Public Wi-Fi Access Terms and Conditions
+
+This agreement sets out the terms and conditions on which wireless internet 
+access -the Service- is provided free of charge to you, a guest of 
+Fountaingrove Inn Santa Rosa -us- in consideration for your custom. Usage 
+of which confirms your agreement to these terms and conditions and your 
+agreement to allow us to send to you by e-mail our promotional and 
+marketing material, 
+
+1. Extent of the Service
+
+1.1 We do not recommend in particular the use of any websites -or other 
+internet related services- -Internet Services- and your use of Internet 
+Services is carried out entirely at your own risk. 
+
+1.2 We have no responsibility for, or control over, the Internet Services 
+you access and do not guarantee that any services are error or virus free.
+
+1.3 We have no responsibility for, or control over, the information you 
+transmit or receive via the Service. 
+
+1.4 Save for the purposes of network diagnostics we do not examine the use 
+to which you put the Service or the nature of the information you send or 
+receive. 
+
+1.5 We do not guarantee,
+
+1.5.1 the availability of the Service,
+
+1.5.2 the speed at which information may be transmitted or received via the 
+Service
+
+1.5.3 that the Service will be compatible with your equipment or any 
+software which you use.
+
+1.6 We do not guarantee the security of the information which you may 
+transmit or receive using the Service or located on any equipment utilizing 
+the Service and you accept that it is your responsibility to protect your 
+information and have adequate security -in terms of equipment and 
+procedures- to ensure the security, integrity and confidentiality of your 
+information and data. 
+
+1.7 We reserve the right at all times to withdraw the Service, change the 
+specifications or manner of use of the Service, to change access codes, 
+usernames, passwords or other security information necessary to access the 
+service. 
+
+2. Your Use of the Service
+
+2.1 You must not use the Service to access Internet Services, or send or 
+receive e-mails, which,
+
+2.1.1 are defamatory, threatening, intimidatory or which could be classed 
+as harassment
+
+2.1.2 contain obscene, profane or abusive language or material
+
+2.1.3 contain pornographic material -that is text, pictures, films, video 
+clips of a sexually explicit or arousing 
+nature
+
+2.1.4 contain offensive or derogatory images regarding sex, race, religion, 
+color, origin, age, physical or mental disability, medical condition or 
+sexual orientation
+
+2.1.5 contain material which infringe third party's rights -including 
+intellectual property rights 
+
+2.1.6 in our reasonable opinion may adversely affect the manner in which we 
+carry out our business
+
+2.1.7 are otherwise unlawful or inappropriate
+
+2.2 Music, video, pictures, text and other content on the internet are 
+copyright works and you should not download, alter, e-mail or otherwise use 
+such content unless certain that the owner of such works has authorized its 
+use by you.
+
+2.3 We may terminate or temporarily suspend the Service if we reasonably 
+believe that you are in breach of any provisions of this agreement 
+including but not limited to clauses 2.1 to 2.2 above. 
+
+2.4 We recommend that you do not use the service to transmit or receive any 
+confidential information or data and should you choose to do so you do so 
+at your own risk. 
+
+2.5 The Service is intended for consumer use only. In the event that you 
+use the Service for commercial purposes we would specifically refer you to 
+clause 5.2 below. 
+
+3. Criminal Activity
+
+3.1 You must not use the Service to engage in any activity which 
+constitutes or is capable of constituting a criminal offence, either in the 
+United States or in any state throughout the world.
+
+3.2 You agree and acknowledge that we may be required to provide assistance 
+and information to law enforcement, governmental agencies and other 
+authorities. 
+
+3.3 You agree and acknowledge that we may keep a log of the Internet 
+Protocol -IP- addresses of any devices which access the Service, the times 
+when they have accessed the Service and the activity associated with that 
+IP address
+
+3.4 You further agree we are entitled to co-operate with law enforcement 
+authorities and rights-holders in the investigation of any suspected or 
+alleged illegal activity by you which may include, but is not limited to, 
+disclosure of such information as we have -whether pursuant to clause 3.3 
+or otherwise-, and are entitled to provide by law, to law enforcement 
+authorities or rights-holders.
+
+4. Our Use of your Information
+
+4.1 Subject to clauses 3.3 and 3.4 above we confirm that we shall use the 
+contact details you provide to us solely for the purposes of contacting you 
+with marketing information, updates, promotions and special offers relating 
+to our business.
+
+5. Other Terms
+
+5.1 You agree to compensate us fully for any claims or legal action made or 
+threatened against us by someone else because you have used the service in 
+breach of these terms and conditions, and in particular clause 2.1 to 2.3 
+and 3.1 above. 
+
+5.2 Whilst we do not seek to limit our responsibility for fraudulent 
+misrepresentation or if you are injured or die as a result of our 
+negligence we have no responsibility -to the extent permitted by law- to 
+compensate you -whether or not we are negligent- for any direct financial 
+loss, loss of profit, revenue, time, anticipated savings or profit or 
+revenue, opportunity, data, use, business, wasted expenditure, business 
+interruption, loss arising from disclosure of confidential information, 
+loss arising from or in connection with use of the service or inability to 
+use or access the service or a failure, suspension or withdrawal of all or 
+part of the service at any time or damage to physical property or for any 
+other similar direct loss that may arise in relation to this agreement 
+whether or not we were advised in advance of the possibility of such loss 
+or damage.
+
+5.3 We agree that neither this agreement does not allow either party to act 
+as, or hold themselves out as, acting as an agent of the other party and 
+that that the terms of this agreement are not enforceable by a third party 
+under the Contracts.
+
+I confirm that I accept these terms and conditions as the basis of my use 
+of the wireless internet access provided.
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_17_4010487.1345000337043
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>I recently spent a few nights at Fountaingrove Inn in Santa Rosa, CA, =
+USA &lt;http://fountaingroveinn.com&gt;. The tragically slow speed of the W=
+i-Fi gave me time to scan the ToS on the annoying "connect to the internet"=
+ redirect that I typically ignore when connecting to public Wi-Fi. I was pa=
+rticularly appalled by the "high volume usage" condition, and sections 1.6,=
+ 2.1, 2.1.3, 2.5.&nbsp;</div><div><br></div><div>I propose ratings for hote=
+l (or public) Wi-Fi that include:</div><div>- Presence of DNS hijacking to =
+force a connection screen, which makes me disable DNSCrypt and OpenDNS to c=
+onnect</div><div>- JavaScript or HTML injection &lt;http://justinsomnia.org=
+/2012/04/hotel-wifi-javascript-injection/&gt;</div><div>- Port blocks, such=
+ as SMTP</div><div>- Morality clauses that trump expression</div><div><br><=
+/div><div>Fountaingrove Inn's terms of service below, unmodified:</div><div=
+>-------------------------------------------------------</div><div><br></di=
+v><div>Terms of Service</div><div><br></div><div>Wi-Fi Terms And Conditions=
+&nbsp;</div><div><br></div><div>You may only use Wi-Fi supplied by the Foun=
+taingrove Inn - Santa Rosa by accepting the following Terms And Conditions.=
+ By using the supplied Wi-Fi it will be taken that you have read And agreed=
+ to the following terms and conditions.&nbsp;</div><div><br></div><div>Free=
+ Wi-Fi access is only intended to be available for the accessing of emails =
+and low volume use of the internet. If you undertake high volume usage, e.g=
+. download files -either individually or in total- in excess of 10MB, we re=
+serve the right to apply usage charges.</div><div><br></div><div>Fountaingr=
+ove Inn - Santa Rosa</div><div><br></div><div>Public Wi-Fi Access Terms and=
+ Conditions</div><div><br></div><div>This agreement sets out the terms and =
+conditions on which wireless internet access -the Service- is provided free=
+ of charge to you, a guest of Fountaingrove Inn Santa Rosa -us- in consider=
+ation for your custom. Usage of which confirms your agreement to these term=
+s and conditions and your agreement to allow us to send to you by e-mail ou=
+r promotional and marketing material,&nbsp;</div><div><br></div><div>1. Ext=
+ent of the Service</div><div><br></div><div>1.1 We do not recommend in part=
+icular the use of any websites -or other internet related services- -Intern=
+et Services- and your use of Internet Services is carried out entirely at y=
+our own risk.&nbsp;</div><div><br></div><div>1.2 We have no responsibility =
+for, or control over, the Internet Services you access and do not guarantee=
+ that any services are error or virus free.</div><div><br></div><div>1.3 We=
+ have no responsibility for, or control over, the information you transmit =
+or receive via the Service.&nbsp;</div><div><br></div><div>1.4 Save for the=
+ purposes of network diagnostics we do not examine the use to which you put=
+ the Service or the nature of the information you send or receive.&nbsp;</d=
+iv><div><br></div><div>1.5 We do not guarantee,</div><div><br></div><div>1.=
+5.1 the availability of the Service,</div><div><br></div><div>1.5.2 the spe=
+ed at which information may be transmitted or received via the Service</div=
+><div><br></div><div>1.5.3 that the Service will be compatible with your eq=
+uipment or any software which you use.</div><div><br></div><div>1.6 We do n=
+ot guarantee the security of the information which you may transmit or rece=
+ive using the Service or located on any equipment utilizing the Service and=
+ you accept that it is your responsibility to protect your information and =
+have adequate security -in terms of equipment and procedures- to ensure the=
+ security, integrity and confidentiality of your information and data.&nbsp=
+;</div><div><br></div><div>1.7 We reserve the right at all times to withdra=
+w the Service, change the specifications or manner of use of the Service, t=
+o change access codes, usernames, passwords or other security information n=
+ecessary to access the service.&nbsp;</div><div><br></div><div>2. Your Use =
+of the Service</div><div><br></div><div>2.1 You must not use the Service to=
+ access Internet Services, or send or receive e-mails, which,</div><div><br=
+></div><div>2.1.1 are defamatory, threatening, intimidatory or which could =
+be classed as harassment</div><div><br></div><div>2.1.2 contain obscene, pr=
+ofane or abusive language or material</div><div><br></div><div>2.1.3 contai=
+n pornographic material -that is text, pictures, films, video clips of a se=
+xually explicit or arousing&nbsp;</div><div>nature</div><div><br></div><div=
+>2.1.4 contain offensive or derogatory images regarding sex, race, religion=
+, color, origin, age, physical or mental disability, medical condition or s=
+exual orientation</div><div><br></div><div>2.1.5 contain material which inf=
+ringe third party's rights -including intellectual property rights&nbsp;</d=
+iv><div><br></div><div>2.1.6 in our reasonable opinion may adversely affect=
+ the manner in which we carry out our business</div><div><br></div><div>2.1=
+.7 are otherwise unlawful or inappropriate</div><div><br></div><div>2.2 Mus=
+ic, video, pictures, text and other content on the internet are copyright w=
+orks and you should not download, alter, e-mail or otherwise use such conte=
+nt unless certain that the owner of such works has authorized its use by yo=
+u.</div><div><br></div><div>2.3 We may terminate or temporarily suspend the=
+ Service if we reasonably believe that you are in breach of any provisions =
+of this agreement including but not limited to clauses 2.1 to 2.2 above.&nb=
+sp;</div><div><br></div><div>2.4 We recommend that you do not use the servi=
+ce to transmit or receive any confidential information or data and should y=
+ou choose to do so you do so at your own risk.&nbsp;</div><div><br></div><d=
+iv>2.5 The Service is intended for consumer use only. In the event that you=
+ use the Service for commercial purposes we would specifically refer you to=
+ clause 5.2 below.&nbsp;</div><div><br></div><div>3. Criminal Activity</div=
+><div><br></div><div>3.1 You must not use the Service to engage in any acti=
+vity which constitutes or is capable of constituting a criminal offence, ei=
+ther in the United States or in any state throughout the world.</div><div><=
+br></div><div>3.2 You agree and acknowledge that we may be required to prov=
+ide assistance and information to law enforcement, governmental agencies an=
+d other authorities.&nbsp;</div><div><br></div><div>3.3 You agree and ackno=
+wledge that we may keep a log of the Internet Protocol -IP- addresses of an=
+y devices which access the Service, the times when they have accessed the S=
+ervice and the activity associated with that IP address</div><div><br></div=
+><div>3.4 You further agree we are entitled to co-operate with law enforcem=
+ent authorities and rights-holders in the investigation of any suspected or=
+ alleged illegal activity by you which may include, but is not limited to, =
+disclosure of such information as we have -whether pursuant to clause 3.3 o=
+r otherwise-, and are entitled to provide by law, to law enforcement author=
+ities or rights-holders.</div><div><br></div><div>4. Our Use of your Inform=
+ation</div><div><br></div><div>4.1 Subject to clauses 3.3 and 3.4 above we =
+confirm that we shall use the contact details you provide to us solely for =
+the purposes of contacting you with marketing information, updates, promoti=
+ons and special offers relating to our business.</div><div><br></div><div>5=
+. Other Terms</div><div><br></div><div>5.1 You agree to compensate us fully=
+ for any claims or legal action made or threatened against us by someone el=
+se because you have used the service in breach of these terms and condition=
+s, and in particular clause 2.1 to 2.3 and 3.1 above.&nbsp;</div><div><br><=
+/div><div>5.2 Whilst we do not seek to limit our responsibility for fraudul=
+ent misrepresentation or if you are injured or die as a result of our negli=
+gence we have no responsibility -to the extent permitted by law- to compens=
+ate you -whether or not we are negligent- for any direct financial loss, lo=
+ss of profit, revenue, time, anticipated savings or profit or revenue, oppo=
+rtunity, data, use, business, wasted expenditure, business interruption, lo=
+ss arising from disclosure of confidential information, loss arising from o=
+r in connection with use of the service or inability to use or access the s=
+ervice or a failure, suspension or withdrawal of all or part of the service=
+ at any time or damage to physical property or for any other similar direct=
+ loss that may arise in relation to this agreement whether or not we were a=
+dvised in advance of the possibility of such loss or damage.</div><div><br>=
+</div><div>5.3 We agree that neither this agreement does not allow either p=
+arty to act as, or hold themselves out as, acting as an agent of the other =
+party and that that the terms of this agreement are not enforceable by a th=
+ird party under the Contracts.</div><div><br></div><div>I confirm that I ac=
+cept these terms and conditions as the basis of my use of the wireless inte=
+rnet access provided.</div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_17_4010487.1345000337043--

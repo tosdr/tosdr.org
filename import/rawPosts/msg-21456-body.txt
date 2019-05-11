@@ -1,0 +1,101 @@
+Return-Path: <tosdr+bncBCR6N7PCVIJRBWFD6COQKGQEPK77R4Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 436EF40FAA
+	for <anything@michielbdejong.com>; Tue,  8 Jul 2014 17:45:01 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 40FE81164B8
+	for <anything@michielbdejong.com>; Tue,  8 Jul 2014 17:45:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id WM3IVkEmDpHy for <anything@michielbdejong.com>;
+	Tue,  8 Jul 2014 17:44:59 +0200 (CEST)
+Received: from mail-vc0-x23e.google.com (mail-vc0-x23e.google.com [IPv6:2607:f8b0:400c:c03::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 36FAF1164FC
+	for <anything@michielbdejong.com>; Tue,  8 Jul 2014 17:44:58 +0200 (CEST)
+Received: by mail-vc0-f190.google.com with SMTP id ij19sf1642397vcb.17
+        for <anything@michielbdejong.com>; Tue, 08 Jul 2014 08:44:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:from:subject:message-id:date:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=el+hlwQ9C+7NjK4ZaMsvkEd6H8EPojb/f9wSyh/xYpQ=;
+        b=GZYETlpCeXMGP6dPkhW+/lu+2DXdjGKSDr2yxwChLQcT+Qhoc/bZUVxtKKW2AFNyLR
+         2q0oG+srQji2ofKSMA58zXW07DcE58Rkj6h58dnqjad8rmoGxmIUa1PpxO4tRe5oPK+N
+         x5SNErFO8kEHV18wNOUnwvb6VaFjiMEB8NdOYCV4lIItRXgXJdMOf2uZ3tetDlxK1rzO
+         O8MoetNt5iZiKV/X8CRTFDTRFR1vxjX6tNRXQzSCY4jPrPlMFARP6A1Z4YPIZW9dwTLz
+         vfle5pja9gbWQDYfqhROj9ZhRL4yR5n15o2rj4P5c2DSB8dJNQQEY48Drr6bYFMg5O2F
+         g01w==
+X-Received: by 10.140.28.71 with SMTP id 65mr61086qgy.15.1404834264868;
+        Tue, 08 Jul 2014 08:44:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.96.6 with SMTP id j6ls2322041qge.89.gmail; Tue, 08 Jul
+ 2014 08:44:24 -0700 (PDT)
+X-Received: by 10.58.6.210 with SMTP id d18mr17126553vea.10.1404834264507;
+        Tue, 08 Jul 2014 08:44:24 -0700 (PDT)
+Received: from nk11p03mm-asmtp002.mac.com (nk11p03mm-asmtpout002.mac.com. [17.158.232.237])
+        by gmr-mx.google.com with ESMTPS id rs4si312049pac.2.2014.07.08.08.44.24
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-MD5 bits=128/128);
+        Tue, 08 Jul 2014 08:44:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kyosaku@mac.com designates 17.158.232.237 as permitted sender) client-ip=17.158.232.237;
+MIME-version: 1.0
+Received: from [10.0.1.27]
+ (66-190-176-21.static.jcsn.tn.charter.com [66.190.176.21])
+ by nk11p03mm-asmtp002.mac.com
+ (Oracle Communications Messaging Server 7u4-27.10(7.0.4.27.9) 64bit (built Jun
+  6 2014)) with ESMTPSA id <0N8E00I60H1PFS80@nk11p03mm-asmtp002.mac.com> for
+ tosdr@googlegroups.com; Tue, 08 Jul 2014 15:44:15 +0000 (GMT)
+From: Gerald Jesch <kyosaku@mac.com>
+Subject: [tosdr:3084] TOSDR Not working
+Message-id: <CB17535C-7CD5-4D5A-A312-399F79856C9A@mac.com>
+Date: Tue, 08 Jul 2014 10:44:12 -0500
+To: tosdr@googlegroups.com
+X-Mailer: Apple Mail (2.1878.6)
+X-MANTSH: 1TEIXREEbG1oaGkdHB0lGUkdDRl5PWBoaGBEKTEMXGx0EGx8SBBscHwQdGBAbHho
+	fGhEKWE0XSxEKbX4XGhEKTFkXGxobGxEKWUkXEQpZXhdoY3kRCkNOF0sbGBpiTk0ZBB1/chl4c
+	wccEhsfHh5sHxEKRUMXFmloGx0fGR9pBx1pbh8HHm4fawdrGRsYBxkTE2wdExIfHGkTa2pHS0k
+	ESUVHFBEKWFwXGQQaBBseB01OHBMaGh0TBRsdBBsfEgQbHB8EHRgQGx4aHxsRCl5ZF2ESSHBbE
+	QpDWhccHAQbExoEGx0cBBgbEQpCRRdpRx1GZUxQR2xnRREKQk4XaEZCQB9IeR1HH2QRCkJMF2Z
+	Jbk9wU39MXURcEQpCbBdrelNLXkB+QxpnQhEKQkAXaUhhZF1FH05ucF4RCkJYF2ZhcB5sbUZlX
+	11eEQpwaBdgRHNNHnJPXlN5HBEKcGwXYR5JWx1FQB1sTWwR
+X-CLX-Spam: false
+X-CLX-Score: 1011
+X-Proofpoint-Virus-Version: vendor=fsecure
+ engine=2.50.10432:5.12.52,1.0.14,0.0.0000
+ definitions=2014-07-08_04:2014-07-08,2014-07-08,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=1 phishscore=0 adultscore=0 bulkscore=0 classifier=spam adjust=0
+ reason=mlx scancount=1 engine=7.0.1-1402240000 definitions=main-1407080178
+X-Original-Sender: kyosaku@mac.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of kyosaku@mac.com designates 17.158.232.237 as permitted
+ sender) smtp.mail=kyosaku@mac.com;       dmarc=pass (p=NONE dis=NONE) header.from=mac.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-type: text/plain; charset=ISO-8859-1
+
+The addon is not working in either of Safari of Firefox. It worked the first couple of days and then stopped and will not read and provide information on any tos web page. How can I get help?
+
+Thank you
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

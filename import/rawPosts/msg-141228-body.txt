@@ -1,0 +1,514 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.159 with SMTP id m31csp2944899ioi;
+        Wed, 24 Feb 2016 16:32:24 -0800 (PST)
+X-Received: by 10.28.72.132 with SMTP id v126mr346009wma.88.1456360344795;
+        Wed, 24 Feb 2016 16:32:24 -0800 (PST)
+Return-Path: <tosdr+bncBAABBEUXXG3AKGQE4IFGZ2Q@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id c27si868964wmi.30.2016.02.24.16.32.24
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 Feb 2016 16:32:24 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBAABBEUXXG3AKGQE4IFGZ2Q@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBAABBEUXXG3AKGQE4IFGZ2Q@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBAABBEUXXG3AKGQE4IFGZ2Q@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 16BA6FB882
+	for <michiel@unhosted.org>; Thu, 25 Feb 2016 01:32:24 +0100 (CET)
+Received: from mfilter22-d.gandi.net (mfilter22-d.gandi.net [217.70.178.150])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 07E06116061
+	for <michiel@unhosted.org>; Thu, 25 Feb 2016 01:32:24 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter22-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter22-d.gandi.net (mfilter22-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 1WtGycVBVbAa for <michiel@unhosted.org>;
+	Thu, 25 Feb 2016 01:32:20 +0100 (CET)
+Received: from mail-io0-x23a.google.com (mail-io0-x23a.google.com [IPv6:2607:f8b0:4001:c06::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E780E11614E
+	for <michiel@michielbdejong.com>; Thu, 25 Feb 2016 01:32:19 +0100 (CET)
+Received: by mail-io0-x23a.google.com with SMTP id b188sf8081641iof.1
+        for <michiel@michielbdejong.com>; Wed, 24 Feb 2016 16:32:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:thread-index:date:message-id:accept-language
+         :content-language:content-type:mime-version:spamdiagnosticoutput
+         :spamdiagnosticmetadata:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=/pNuNUagBThsPEqfNICcOV6VNTSoDhG9B9B11TyElzI=;
+        b=SKA3lpO99V0mykHCqcndkrhXm1zP1f3vejyQXr5tiiggEmMCwy73/CNEktrD7OFykU
+         FlVir2oGzJULTPjtjmCYnlL3lEOoBF55imLZ97nKb7ub+r7jx9wUY7D6XJoYqaS4mBQF
+         57QyqEWXQtZFcwmgOqeDRFstLIbEZaZNqJxDDTLnBolf+7XSSDjXLd1ggWQmiE1M/AIg
+         UhJDYmArw5Oj7ky3OyAvrDuRIxfFVxV10mJyQAQkMEv77Gvglsb5RrIl34iI2u7Xd36X
+         8s+NWnzXGoWBMHMp7O6awLSXBPgP/+kQhbcIGvDHHK/QeCwqB2BW+2yWGZVQhBGXKokI
+         V+3g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:thread-index:date:message-id
+         :accept-language:content-language:content-type:mime-version
+         :spamdiagnosticoutput:spamdiagnosticmetadata:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=/pNuNUagBThsPEqfNICcOV6VNTSoDhG9B9B11TyElzI=;
+        b=cFVmLareGUC5CVj8Zd0R7l1OigwmfezNh+1/qgbtwZuLmu9iWVD8gCP8lycQ0FdxZo
+         hzVofr4qBVnlq2O1nyNusYLIbuxOgoGlQ55R3enQpzQGjlAJP6lfQqQQH+1bzlWumR0D
+         aN377tV3hRqVTW9pzSPns0H7oLfftsOCpY2JtZYLfpqN1So4Pi1EpB1oOV7zlT/WX2et
+         0J002DV7ThY++mzbSqK6Tv2EOD7n//7tSZ0h32Fp+9ufnQa9WhWxPMw4Lkpvcfb+kau+
+         29TkjJapjb6hligtmSqQpoHpONhSC2+FTkFHNDNkI+6d7GoUslL6CTFUCazAxMz+wa8H
+         5AXg==
+X-Gm-Message-State: AG10YORb1Mo75WM9OIsZNUwxaD2BZ6MN4rTyjYWS1bUe1VCQKlow1p5LNtNrRbAUvki6wg==
+X-Received: by 10.182.246.104 with SMTP id xv8mr6222obc.1.1456360339019;
+        Wed, 24 Feb 2016 16:32:19 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.87.196 with SMTP id ba4ls42949obb.36.gmail; Wed, 24 Feb
+ 2016 16:32:18 -0800 (PST)
+X-Received: by 10.182.46.201 with SMTP id x9mr39067247obm.43.1456360337991;
+        Wed, 24 Feb 2016 16:32:17 -0800 (PST)
+Received: from APC01-HK2-obe.outbound.protection.outlook.com (mail-hk2apc01on0132.outbound.protection.outlook.com. [104.47.124.132])
+        by gmr-mx.google.com with ESMTPS id ff2si849113pad.2.2016.02.24.16.32.17
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 24 Feb 2016 16:32:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of 201179@thelakes.qld.edu.au designates 104.47.124.132 as permitted sender) client-ip=104.47.124.132;
+Received: from SG2PR01CA0084.apcprd01.prod.exchangelabs.com (10.165.10.52) by
+ PS1PR01MB0985.apcprd01.prod.exchangelabs.com (10.165.64.151) with Microsoft
+ SMTP Server (TLS) id 15.1.409.15; Thu, 25 Feb 2016 00:32:11 +0000
+Received: from AM1FFO11FD051.protection.gbl (2a01:111:f400:7e00::142) by
+ SG2PR01CA0084.outlook.office365.com (2a01:111:e400:79a7::52) with Microsoft
+ SMTP Server (TLS) id 15.1.415.20 via Frontend Transport; Thu, 25 Feb 2016
+ 00:32:11 +0000
+Received-SPF: Pass (protection.outlook.com: domain of thelakes.qld.edu.au
+ designates 203.100.6.109 as permitted sender)
+ receiver=protection.outlook.com; client-ip=203.100.6.109;
+ helo=mail.thelakes.qld.edu.au;
+Received: from mail.thelakes.qld.edu.au (203.100.6.109) by
+ AM1FFO11FD051.mail.protection.outlook.com (10.174.65.214) with Microsoft SMTP
+ Server id 15.1.422.5 via Frontend Transport; Thu, 25 Feb 2016 00:32:05 +0000
+Received: from TLCES02.THELAKES.LOCAL ([fe80::bdd3:bc06:51a3:3279]) by
+ TLCES01.THELAKES.LOCAL ([fe80::5cc8:326a:c4a8:6cc6%15]) with mapi id
+ 14.03.0174.001; Thu, 25 Feb 2016 10:32:05 +1000
+From: Luis Aguilera Salas <201179@thelakes.qld.edu.au>
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+Subject: [tosdr:3778] 
+Thread-Index: AdFvY/LRgwLDe6TjTw68cYECT6LHiA==
+Date: Thu, 25 Feb 2016 00:32:04 +0000
+Message-ID: <0B7A092E87129A469BA06FF138FF63A6647D5AB9@TLCES02.THELAKES.LOCAL>
+Accept-Language: en-US, en-AU
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [172.16.0.198]
+x-exclaimer-md-config: a1e51777-cbfe-479d-bbde-ed1f479ed2e0
+Content-Type: multipart/alternative;
+	boundary="_000_0B7A092E87129A469BA06FF138FF63A6647D5AB9TLCES02THELAKES_"
+MIME-Version: 1.0
+X-EOPAttributedMessage: 0
+X-Microsoft-Exchange-Diagnostics: 1;AM1FFO11FD051;1:adLLtHXBF95UKS1qZr3Ib6KNWzTDbhiOaD5sQwRmUX+VwLNiLWEfUIpt16DoyocgsMW8mBxjtURUjjEGmOvZ762Dg0xy2lRzS7gBPXY6kYK60imhwW7fP0U4Mkol3Q8hDUcpPOqZ7fwSZxR4V7CIIye2e8CjsaZpgl4jGBqVTTf+LgsZK3m1Z1peu5MAXasH2lTLoyQAbrWDoeQPHGNOKo+mvm3eRR6JKegaVAqt52u7tctFSCd10T4dXk+hjl/3tAhUAD1CU8NFApXt43cYCZSUcg8DuBLxVLmVzRSOCguNE9FeUe0TZySLjwDRgc9y7F9LfIySp8lR7RyUhamaYxpgcULsMZ6a+P6bRXLsIaAVNCgsuqNnY5uh0lviO0ZEXAq0kn1HPn6drGOidcZfOQZe03Yj/P24get5sKD+FVs=
+X-Forefront-Antispam-Report: CIP:203.100.6.109;CTRY:AU;IPV:NLI;EFV:NLI;SFV:NSPM;SFS:(10019020)(6009001)(2980300002)(438002)(189002)(51934002)(199003)(5250100002)(50986999)(2501003)(55846006)(54356999)(300700001)(2906002)(260700001)(110136002)(107886002)(189998001)(15975445007)(87936001)(1730700002)(19300405004)(25636003)(5003600100002)(512954002)(19580395003)(1220700001)(450100001)(551544002)(5008740100001)(586003)(19625215002)(2351001)(5406001)(5004730100002)(2920100001)(106466001)(2930100002)(16236675004)(22756006)(74482002)(6116002)(2900100001)(88552002)(92566002)(1096002)(790700001)(33656002)(11100500001)(3846002)(84326002)(86362001)(22746007)(102836003)(575854001)(104016004)(119396004)(5416002);DIR:OUT;SFP:1102;SCL:1;SRVR:PS1PR01MB0985;H:mail.thelakes.qld.edu.au;FPR:;SPF:Pass;MLV:nov;MX:1;A:1;PTR:mail.thelakes.qld.edu.au;LANG:en;
+X-Microsoft-Exchange-Diagnostics: 1;PS1PR01MB0985;2:PK9hGShApHVXoJeouNXo6GR/Q2BChGIk9WUsRu2tDNBueGLs6D92OCjrxCYqufL/GMF+fPdbktRXIh906HEIoDXInYj9rRvfBNnL7m1lREAoPwT5W4Kkz/ANttegSzbT6FPksmiTTG82fWoqR8Fc9w==;3:fpjkXR88cxQ1lyDVQQSOtZ5uAcecrlGLCbplgWQnNpZZ13BrORCBrczNi7IzWhkUCQjrKKM9oCKKxNqPjMrIIpb1deyzZjSxR/oD9+NsY6jR5VJt/T0stleHS+vO6lQIPWPrE66u9gBHzhQZ1oJMwKRvTClOa2l3JS5CLEMmE4IzwYl5MtKEOWnTvKntXlT3KtWpiO98MfvUaPrUiY3tPvFP1c0tI0XnIemq+kyMve5ROAuNIrESERz6657RdszTUQUmV4e0PgroVgRXhGZzKQ==;25:h1zuTlJ709xeDgG1pApCfgiTUY7lpb7HRuQNkrhYHrdJHG0OPON5gt6iepbPY8pmVzttvzqKQUpMIfRkzv3/h6zgi5FGcS+v8X0R6T0ZumzruStY11vRHvJGJ1iYgTrcKThDXFnV3c7jWTXjwrWIBnMqTdHgk8tZvAQYLKvOdETwWnVgHpXs2qBN4vhF1vcBCtswGah61TX0jJxYzb2Ma43lkMVVGv2bNeh0M7KeQCQm6zaNJt9fVZUxMwlzMM0Dc7qX/bNEJj+m0mzb2e6ceMkCVwVqs1fG3s0B7jsvsMVn/1MQXPjQRhPvJ2CnVPCCWHhVGQKHIY5ODkQXfq6Gbg==;20:4o2JeAy8fbMeqHTjPOvklzz+To0zNGlJQ7W509k5fYf5phMX/pZu9hkSMzLmlc69mOms4n/JM92p1d3awu3AhXKJvjXh6N73MZZcKpcewjBkdtmCDBeMoX+U3rV4m8hurxV2/ceSeUz38TJZocuNOx5hEUmnwtz
+ kcpc3Uw8rJ+k=
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(8251501001);SRVR:PS1PR01MB0985;
+X-MS-Office365-Filtering-Correlation-Id: 9712b3ef-6f3c-4143-7fc8-08d33d7b1734
+X-Microsoft-Antispam-PRVS: <PS1PR01MB09851C6DFA935605A56C74F3C8A60@PS1PR01MB0985.apcprd01.prod.exchangelabs.com>
+X-Exchange-Antispam-Report-Test: UriScan:;
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(601004)(2401047)(13018025)(8121501046)(13015025)(13024025)(5005006)(13017025)(13023025)(3002001)(10201501046);SRVR:PS1PR01MB0985;BCL:0;PCL:0;RULEID:;SRVR:PS1PR01MB0985;
+X-Microsoft-Exchange-Diagnostics: 1;PS1PR01MB0985;4:duR86xYJt1nK0iHg212eZz/ouNCatlPob/GnlLqlAqFrej8u4M9CGr+3QWPbgwPtoa3pRaeFSZtOT5/CaK+nd/zjOCQKYXF4FNNOEnHhSVinCi9zyB12pE2ijC7ua0mjWoM1LUE3ivwyTtRa6ZdNFV7LpsUiGLVlQ2davUqA3cQEvPXACtrtBAz8IMLCLcrnit/LlEtG2Az4S+mU8l4uqVqIPT0hzYSgcqvvf60NRzvGDmAk8hFf0GIpenu5sifksLMptyBksK9Y0rxqiIL6DqY90iPy78soqS13tVpyfmCCPcav+uhDg7PTvgcCfl1W/rEi6CKtwsQYn1R7cFo3KLtAxVgHGlb8BQXHwU+O2i/aX6T8aZnciMeIufcebNJoWisMYcIzFSrgvva3U+cXKJOiNwG1Gd91wU3AX+kROdpIdVhlZHc4N2WtbGZyuQpssynmE9YmR8no4m13qwqJ9Q==
+X-Forefront-PRVS: 08635C03D4
+X-Microsoft-Exchange-Diagnostics: =?us-ascii?Q?1;PS1PR01MB0985;23:OEI8fmMa3TKpxUWZPMGApkr/fG6hPjZyCf+tDP0ef?=
+ =?us-ascii?Q?apX9iKoupG1QFeuaW8+ZWCj/MnysphGVYmYxUYftrmyQYSvxVZiFq8yFlIbE?=
+ =?us-ascii?Q?KTaJOYi5RbMc0u+GYCJUfbfSftyBMv663MAxu5s3DYD0F9MxNzOtPYFj7uBh?=
+ =?us-ascii?Q?+Gzj4XLHWcLdF5k35oZaDqp6m+QzXT3bhuGE7oyIA6ZhmbhomJoKi4wjCmkZ?=
+ =?us-ascii?Q?Dda+LvqEzQW3S1YPrKxh4p3pbbB4Y/kEGWcg9nnhjVVURfIObRpfB6eiwd9C?=
+ =?us-ascii?Q?gZc5Z55j1M0pL60VymBsFvejbtGvxc7UkgvFGz23M5zcuRzFWulPdkigp3LL?=
+ =?us-ascii?Q?+hZHso160/JSFdWewEalHd+3Gh9Ekmaif/afkBHeyC4zzpLPURxpSKX86jmA?=
+ =?us-ascii?Q?bmxYzVVHvAGLQNSxNbGJmK5x7C34C/97qP4Tx/4Pv8gFpKxEFC9s3/7Jj8Go?=
+ =?us-ascii?Q?/qSUu5473QdDS7Cs7TrQHJMFSvWzXuW/zMGLhgZosJ24Mf6kSpGd9bdepzEl?=
+ =?us-ascii?Q?2vPWeozQLYpexd+j5BwMe0OYZzpTa5qNHWhO7xw8SPWltADRjgx91M8oqiTe?=
+ =?us-ascii?Q?IGAsFzreFEwcqJhjKN+uZhOtuSOy9sK9PjIyGlveY9+uZJlmmQDUzC1M/aNx?=
+ =?us-ascii?Q?IMV902Q1qQBFXr3oIEedw8tKXht/ATNBguPLPw3UI0DYihu7o0DtXkoJU81d?=
+ =?us-ascii?Q?vGXFQU/HP1n16pGm3p5M0XHYDgxGsoPjUyk1RZR2Bi0iojZDOA3GxqfjKqH2?=
+ =?us-ascii?Q?Hkgvk9rrNhsJ+EogxzcIz3qyN9Ac+REhSi5SFftH9rfoxIDvM2vj93TiPk4J?=
+ =?us-ascii?Q?zWIOdBXVZeo+zvKdhYqEpfVCOycya/KtiEr05J1Hw8sMeq70XkhUiNDwcd4J?=
+ =?us-ascii?Q?GuBXN4OnpSvo/XMd4xb8XIvc21RtEukoQDaBQ+lfbBXTQU6QoSSUKVrfyXnw?=
+ =?us-ascii?Q?FIs9uq3hugjtAq3/XF+toRfrCvkEtyQBB9BKp51jUv/EIV/e2OFOOQZEiHG7?=
+ =?us-ascii?Q?q4p4q7wZIM5ankbhhTEhieX4sStC8cjSLqCqUg4kX6c4LOrXtg1PoEJj6RGS?=
+ =?us-ascii?Q?85xF63PMLgcgeJRVprGUMe+oUlsFs3srZpZrukN5oUvwFUQpLDwY3eASeNXN?=
+ =?us-ascii?Q?jQ/7b6JezMw3N8vJNPiRaZGUVQFr7PNKuKale34TxSRbqlWHU5B5cvRO1F4F?=
+ =?us-ascii?Q?tXoL17bWkiH9C63WnIkDCJmd9pyLN35/uC+06r/P2dCRKZLjrGzT1eb+mpPu?=
+ =?us-ascii?Q?PVKAOLHSbkgPBYL8n6L1GqZYrSGjx9n5/HWE0WFIUF65qOKbLx+DWy6QcDhw?=
+ =?us-ascii?Q?aFbbmAe6E4MR+x2tgE9tH87uvHJGEp21A/qJr+W7K0w4RLWR328VlRBbXg7i?=
+ =?us-ascii?Q?yyQnjKmlPF7XhbE31bp/9rLj1mzkCDcSeaV7/tbVhpmFQDUZ7xtbeC794UNC?=
+ =?us-ascii?Q?+42/RdAFu8th3auDSIEztpeMO9jjAMIonJK+6zzDwRHsB8cFtsc?=
+X-Microsoft-Exchange-Diagnostics: 1;PS1PR01MB0985;5:q4XKEL7nfr8HD7JRhKIWxiT28mNnNKKnybK+Gd3w1i7ygdepsEkFm7DKtG9iEGt8YBakZa+oNdjjDvHcFkDbjIHJddSQFCdwVHVrXZPxgAHI8ANI+U7dsz959xjM9eGxeYqBppbAnGM0gtxBXmxx1w==;24:/yT06DewX6gMlMuz/TXF4udnwscRz0rN9qWl6x6IQz3iKCP/0tLvaSAy58KQqmePgDKaEcai1/8cUALBd4hZQ44hdIZf9nmGSf+GJwfWZHs=
+SpamDiagnosticOutput: 1:23
+SpamDiagnosticMetadata: NSPM
+X-OriginatorOrg: thelakes.qld.edu.au
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 25 Feb 2016 00:32:05.9912
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: 200c737e-504e-4053-a32f-e9a7917327d8
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=200c737e-504e-4053-a32f-e9a7917327d8;Ip=[203.100.6.109];Helo=[mail.thelakes.qld.edu.au]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PS1PR01MB0985
+X-Original-Sender: 201179@thelakes.qld.edu.au
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of 201179@thelakes.qld.edu.au designates 104.47.124.132
+ as permitted sender) smtp.mailfrom=201179@thelakes.qld.edu.au;
+       dkim=pass header.i=@studentthelakesqldedu.onmicrosoft.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--_000_0B7A092E87129A469BA06FF138FF63A6647D5AB9TLCES02THELAKES_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+This Licence Agreement sets out the terms and conditions under which John W=
+iley & Sons Australia, Ltd ABN: 67 009 673 081 of 42 McDougall St, Milton, =
+QLD 4064, Australia ('Wiley') grants the user ('You') the rights to use the=
+ JacarandaPLUS online product.
+JacarandaPLUS ('JacPLUS') is the online portal for Wiley's digital resource=
+s for teachers and students.  You will need to create a JacPLUS account in =
+order to access Wiley digital resources which you have or will purchase.
+1.  Licensed Rights
+
+For good and valuable consideration, including the use by You of the JacPLU=
+S digital resources, Wiley grants You the non-exclusive licence to access, =
+read and use JacPLUS on the following terms and conditions. This licence is=
+ non-transferable.
+2.  Conditions of Use
+
+    You will use JacPLUS for your personal use only in the course of resear=
+ch or study, or as part of the preparation and execution of class lessons b=
+y a registered teacher.
+    Personal use means any reasonable use for your own learning and educati=
+on.  You may view and use JacPLUS online through Wiley's website, and agree=
+ to abide by the terms and conditions which accompany the digital resource =
+programs accessed through JacPLUS.
+    In order to maintain the security of the digital resource programs acce=
+ssed through JacPLUS, You agree You will not:
+        use or attempt to use JacPLUS on more than one computer at any one =
+time;
+        share or allow anyone else to use your JacPLUS password when You ar=
+e not using it;
+        make JacPLUS, or any part thereof, available on public internet sit=
+es or in any way allow anyone without authorised access to read, download o=
+r access JacPLUS.
+    You acknowledge that copyright in the JacPLUS compilation vests in Wile=
+y or its licensees
+
+3. Term and Termination
+
+The licence granted for your use of JacPLUS is ongoing, however Wiley may t=
+erminate Your account if there are no active digital resources being access=
+ed through JacPLUS or if there has been no account activity for more than t=
+welve months.
+If Your account is terminated any stored personalised settings or informati=
+on held within JacPLUS will be deleted.
+If Wiley determines you have breached this Licence Agreement, your licence =
+and password may be automatically terminated.  If Wiley terminates the lice=
+nce due to a breach, such termination will be in addition to and not in lie=
+u of any equitable, civil, or other remedies available to Wiley.
+Upon termination, You agree to delete JacPLUS, or any part thereof, which Y=
+ou may have retained in print or electronic form.
+4. Wiley's Rights
+
+You acknowledge that all rights (including without limitation copyrights, p=
+atents and trademarks) in JacPLUS (including without limitation the structu=
+re, sequence, organisation, flow, logic, source code, object code and all m=
+eans and forms of operation of JacPLUS) are the sole and exclusive property=
+ of Wiley, and/or its licensors.  You agree to protect JacPLUS from unautho=
+rised use, reproduction or distribution.  You further agree not to decompil=
+e, disassemble or otherwise reverse engineer the underlying source code of =
+JacPLUS.
+You may use JacPLUS in accordance with this licence or in accordance with t=
+he fair use exceptions of the Copyright Act 1968 (Cth).  Nothing in this Ag=
+reement allows You to on-license JacPLUS or any part thereof, or to communi=
+cate JacPLUS to the public.
+5. Warranty and Indemnity
+
+    Wiley will use its best endeavours to provide continued access to JacPL=
+US for the length of the Term, but does not guarantee any such availability=
+, and access to JacPLUS may be intermittently unavailable due to repair and=
+ maintenance, and other events out of Wiley's control.
+    In no event will Wiley or its licensors be liable to You for any damage=
+s, including without limitation lost opportunity, lost profits, lost saving=
+s, or other incidental or consequential damages arising out of the use or i=
+nability to use JacPLUS.
+    You warrant that You will not use JacPLUS otherwise than in accordance =
+with the terms of this Licence Agreement. If Wiley deems it necessary, Wile=
+y may pursue injunctive relief to protect its copyright in JacPLUS, as well=
+ as pursuing any other remedies available at law.
+
+6. Interpretation and Procedural
+
+    The headings in this agreement shall not affect its interpretation and =
+are for convenience only.
+    The singular includes the plural and vice versa.
+    This Agreement embodies the entire understanding and agreement between =
+the parties as to its subject matter of this Agreement.
+    If a dispute arises in relation to this Agreement, the parties shall us=
+e all reasonable endeavours to resolve it amicably and expeditiously.
+
+7. Jurisdiction
+
+This Agreement will be construed and interpreted according to the laws of t=
+he State of Queensland in Australia; any legal action will be instituted in=
+ a court of competent jurisdiction in Brisbane; and each party consents and=
+ submits to the personal jurisdiction of such court, waives any objection t=
+o venue of such court, and consents to service of process by registered or =
+certified mail, return receipt requested, at such party's last known addres=
+s.
+8. Changes and Notification
+
+These terms and conditions are subject to change from time to time at the s=
+ole discretion of Wiley.   Wiley will display a notice of such changes on y=
+our JacPLUS home page, and continued use of JacPLUS is deemed to be accepta=
+nce of any new terms and conditions.  You agree that Wiley may, from time t=
+o time, notify you regarding updates, additions or amendments to JacPLUS an=
+d any associated services.
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/0B7A092E87129A469BA06FF138FF63A6647D5AB9%40TLCES02.THELAKES.LOCAL.
+For more options, visit https://groups.google.com/d/optout.
+
+--_000_0B7A092E87129A469BA06FF138FF63A6647D5AB9TLCES02THELAKES_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-AU" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">This Licence Agreement sets out the terms and condit=
+ions under which John Wiley &amp; Sons Australia, Ltd ABN: 67 009 673 081 o=
+f 42 McDougall St, Milton, QLD 4064, Australia (&#8216;Wiley&#8217;) grants=
+ the user (&#8216;You&#8217;) the rights to use the JacarandaPLUS
+ online product.<o:p></o:p></p>
+<p class=3D"MsoNormal">JacarandaPLUS (&#8216;JacPLUS&#8217;) is the online =
+portal for Wiley&#8217;s digital resources for teachers and students.&nbsp;=
+ You will need to create a JacPLUS account in order to access Wiley digital=
+ resources which you have or will purchase.
+<o:p></o:p></p>
+<p class=3D"MsoNormal">1.&nbsp; Licensed Rights<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">For good and valuable consideration, including the u=
+se by You of the JacPLUS digital resources, Wiley grants You the non-exclus=
+ive licence to access, read and use JacPLUS on the following terms and cond=
+itions. This licence is non-transferable.<o:p></o:p></p>
+<p class=3D"MsoNormal">2.&nbsp; Conditions of Use<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; You will use JacPLUS for your per=
+sonal use only in the course of research or study, or as part of the prepar=
+ation and execution of class lessons by a registered teacher.<o:p></o:p></p=
+>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; Personal use means any reasonable=
+ use for your own learning and education.&nbsp; You may view and use JacPLU=
+S online through Wiley&#8217;s website, and agree to abide by the terms and=
+ conditions which accompany the digital resource programs accessed
+ through JacPLUS.&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;In order to maintain the sec=
+urity of the digital resource programs accessed through JacPLUS, You agree =
+You will not:<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; use or at=
+tempt to use JacPLUS on more than one computer at any one time;<o:p></o:p><=
+/p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; share or =
+allow anyone else to use your JacPLUS password when You are not using it;<o=
+:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make JacP=
+LUS, or any part thereof, available on public internet sites or in any way =
+allow anyone without authorised access to read, download or access JacPLUS.
+<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;You acknowledge that copyrig=
+ht in the JacPLUS compilation vests in Wiley or its licensees<o:p></o:p></p=
+>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">3. Term and Termination<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">The licence granted for your use of JacPLUS is ongoi=
+ng, however Wiley may terminate Your account if there are no active digital=
+ resources being accessed through JacPLUS or if there has been no account a=
+ctivity for more than twelve months.<o:p></o:p></p>
+<p class=3D"MsoNormal">If Your account is terminated any stored personalise=
+d settings or information held within JacPLUS will be deleted.<o:p></o:p></=
+p>
+<p class=3D"MsoNormal">If Wiley determines you have breached this Licence A=
+greement, your licence and password may be automatically terminated.&nbsp; =
+If Wiley terminates the licence due to a breach, such termination will be i=
+n addition to and not in lieu of any equitable,
+ civil, or other remedies available to Wiley.<o:p></o:p></p>
+<p class=3D"MsoNormal">Upon termination, You agree to delete JacPLUS, or an=
+y part thereof, which You may have retained in print or electronic form.<o:=
+p></o:p></p>
+<p class=3D"MsoNormal">4. Wiley's Rights<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">You acknowledge that all rights (including without l=
+imitation copyrights, patents and trademarks) in JacPLUS (including without=
+ limitation the structure, sequence, organisation, flow, logic, source code=
+, object code and all means and forms
+ of operation of JacPLUS) are the sole and exclusive property of Wiley, and=
+/or its licensors.&nbsp; You agree to protect JacPLUS from unauthorised use=
+, reproduction or distribution.&nbsp; You further agree not to decompile, d=
+isassemble or otherwise reverse engineer the
+ underlying source code of JacPLUS.<o:p></o:p></p>
+<p class=3D"MsoNormal">You may use JacPLUS in accordance with this licence =
+or in accordance with the fair use exceptions of the Copyright Act 1968 (Ct=
+h).&nbsp; Nothing in this Agreement allows You to on-license JacPLUS or any=
+ part thereof, or to communicate JacPLUS
+ to the public. <o:p></o:p></p>
+<p class=3D"MsoNormal">5. Warranty and Indemnity<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; Wiley will use its best endeavour=
+s to provide continued access to JacPLUS for the length of the Term, but do=
+es not guarantee any such availability, and access to JacPLUS may be interm=
+ittently unavailable due to repair and maintenance,
+ and other events out of Wiley&#8217;s control. <o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;In no event will Wiley or it=
+s licensors be liable to You for any damages, including without limitation =
+lost opportunity, lost profits, lost savings, or other incidental or conseq=
+uential damages arising out of the use or inability to
+ use JacPLUS.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; You warrant that You will not use=
+ JacPLUS otherwise than in accordance with the terms of this Licence Agreem=
+ent. If Wiley deems it necessary, Wiley may pursue injunctive relief to pro=
+tect its copyright in JacPLUS, as well as pursuing
+ any other remedies available at law.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">6. Interpretation and Procedural<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; The headings in this agreement sh=
+all not affect its interpretation and are for convenience only.<o:p></o:p><=
+/p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; The singular includes the plural =
+and vice versa.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; This Agreement embodies the entir=
+e understanding and agreement between the parties as to its subject matter =
+of this Agreement.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;&nbsp;&nbsp; If a dispute arises in relation t=
+o this Agreement, the parties shall use all reasonable endeavours to resolv=
+e it amicably and expeditiously.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">7. Jurisdiction<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">This Agreement will be construed and interpreted acc=
+ording to the laws of the State of Queensland in Australia; any legal actio=
+n will be instituted in a court of competent jurisdiction in Brisbane; and =
+each party consents and submits to
+ the personal jurisdiction of such court, waives any objection to venue of =
+such court, and consents to service of process by registered or certified m=
+ail, return receipt requested, at such party&#8217;s last known address.<o:=
+p></o:p></p>
+<p class=3D"MsoNormal">8. Changes and Notification<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">These terms and conditions are subject to change fro=
+m time to time at the sole discretion of Wiley.&nbsp;&nbsp; Wiley will disp=
+lay a notice of such changes on your JacPLUS home page, and continued use o=
+f JacPLUS is deemed to be acceptance of any
+ new terms and conditions.&nbsp; You agree that Wiley may, from time to tim=
+e, notify you regarding updates, additions or amendments to JacPLUS and any=
+ associated services.<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/0B7A092E87129A469BA06FF138FF63A6647D5AB9%40TLCES02.THELAKE=
+S.LOCAL?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d=
+/msgid/tosdr/0B7A092E87129A469BA06FF138FF63A6647D5AB9%40TLCES02.THELAKES.LO=
+CAL</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--_000_0B7A092E87129A469BA06FF138FF63A6647D5AB9TLCES02THELAKES_--

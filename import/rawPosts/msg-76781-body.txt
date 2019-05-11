@@ -1,0 +1,120 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp204228wfj;
+        Wed, 20 Jun 2012 08:32:04 -0700 (PDT)
+Received: by 10.224.108.129 with SMTP id f1mr41523472qap.53.1340206324366;
+        Wed, 20 Jun 2012 08:32:04 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDx2Yf_BBoEskHJqw@googlegroups.com>
+Received: from mail-qa0-f63.google.com (mail-qa0-f63.google.com [209.85.216.63])
+        by mx.google.com with ESMTPS id l17si9235896qct.166.2012.06.20.08.32.03
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 08:32:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDx2Yf_BBoEskHJqw@googlegroups.com designates 209.85.216.63 as permitted sender) client-ip=209.85.216.63;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDx2Yf_BBoEskHJqw@googlegroups.com designates 209.85.216.63 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDx2Yf_BBoEskHJqw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qatk31 with SMTP id k31sf558310qat.8
+        for <multiple recipients>; Wed, 20 Jun 2012 08:32:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=QxNPVsRS2sWFrZibygCtxprQaRBaPkQpX6wy39zPNcE=;
+        b=RjmCZ9ELMM95pgoH9K1ByZwwWExuk9oLS7/f0s3+Wj7KKyx6COtkc7+1OJtVoMg6Y1
+         iERBL4fUOBjS4K77ufYghkcxiFLScbY4A01KXXV+Mkt3Y+Aod8M35xoJrAqgmvOdYidb
+         a3tcphRm4XkjepEgkE20Qc4IHEW9rLQBY1WGs=
+Received: by 10.236.80.70 with SMTP id j46mr2453061yhe.11.1340206321695;
+        Wed, 20 Jun 2012 08:32:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.138.163 with SMTP id a23ls10113206yhj.4.gmail; Wed, 20 Jun
+ 2012 08:32:01 -0700 (PDT)
+Received: by 10.101.166.30 with SMTP id t30mr12469931ano.16.1340206321208;
+        Wed, 20 Jun 2012 08:32:01 -0700 (PDT)
+Received: by 10.101.166.30 with SMTP id t30mr12469930ano.16.1340206321194;
+        Wed, 20 Jun 2012 08:32:01 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id q4si6941946ano.0.2012.06.20.08.32.00
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 08:32:00 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 9478663B4EF
+	for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 17:31:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id aUVqitzy2XxU for <tosdr@googlegroups.com>;
+	Wed, 20 Jun 2012 17:31:53 +0200 (CEST)
+Received: from [192.168.44.183] (e264.enterprise.fastwebserver.de [46.20.43.194])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id A682C63B4F6
+	for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 17:31:52 +0200 (CEST)
+Message-ID: <1340206291.11576.34.camel@synclavier.lan>
+Subject: Twitter supports "do not track" DNT was: Re: [good] Widget Data is
+ kept a maximum of 10 days (and opt-out)
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Wed, 20 Jun 2012 17:31:31 +0200
+In-Reply-To: <1339773660.21271.26.camel@synclavier.lan>
+References: <1339773660.21271.26.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+https://support.twitter.com/groups/33-report-abuse-or-policy-violations/top=
+ics/148-policy-information/articles/20169453-twitter-supports-do-not-track#
+Twitter Supports =93Do Not Track=94
+
+"DNT as a simple way for users to inform integrated web services which
+offer content across the Internet (such as buttons, widgets, and other
+embedded features) that they do not want certain information about their
+webpage visits collected across websites when they have not interacted
+with that service's content on the page."
+
+"When you turn on DNT in your browser, we stop collecting the
+information that allows us to tailor Twitter based on your recent visits
+to websites that have integrated our buttons or widgets. Specifically,
+we remove from your browser the unique cookie that links your browser to
+visits to websites in the Twitter ecosystem. We then cannot provide
+tailored suggestions for you.  For more on how this works, see our
+privacy policy.  "
+
+So this is originally what I referred to as:
+"Widget Data is kept a maximum of 10 days (and opt-out)"
+
+I'll modify the data point accordingly
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

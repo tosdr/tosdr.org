@@ -1,0 +1,229 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.52.74 with SMTP id b71csp230537vka;
+        Tue, 27 Sep 2016 22:14:39 -0700 (PDT)
+X-Received: by 10.195.10.132 with SMTP id ea4mr30595864wjd.19.1475039679631;
+        Tue, 27 Sep 2016 22:14:39 -0700 (PDT)
+Return-Path: <tosdr+bncBC5ITJ5RSMJBBO5DVW7QKGQE4VVXHTI@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id 66si18069982wmy.42.2016.09.27.22.14.39
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Sep 2016 22:14:39 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbc5itj5rsmjbbo5dvw7qkgqe4vvxhti@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@unhosted-org.20150623.gappssmtp.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbc5itj5rsmjbbo5dvw7qkgqe4vvxhti@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBC5ITJ5RSMJBBO5DVW7QKGQE4VVXHTI@googlegroups.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 4F8DDFB8A0
+	for <michiel@unhosted.org>; Wed, 28 Sep 2016 07:14:39 +0200 (CEST)
+Received: from mfilter48-d.gandi.net (mfilter48-d.gandi.net [217.70.178.179])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 41DFA11602F
+	for <michiel@unhosted.org>; Wed, 28 Sep 2016 07:14:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter48-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter48-d.gandi.net (mfilter48-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id V3qA_SVljEUC for <michiel@unhosted.org>;
+	Wed, 28 Sep 2016 07:14:37 +0200 (CEST)
+Received: from mail-vk0-x23c.google.com (mail-vk0-x23c.google.com [IPv6:2607:f8b0:400c:c05::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id DBD4A116163
+	for <michiel@michielbdejong.com>; Wed, 28 Sep 2016 07:14:36 +0200 (CEST)
+Received: by mail-vk0-x23c.google.com with SMTP id u196sf13989742vkd.1
+        for <michiel@michielbdejong.com>; Tue, 27 Sep 2016 22:14:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=14m2KKSx7FW9PUIPE0S0bzQ/nHiINXqMm3quKIm1JJs=;
+        b=mfTG4LcMckMLq0shJ56K25z1GMI4gBEjH7aKJTXusHDvJpaHGyTImCr5YdDj2KUbYP
+         8/B4vm9skHlWwU2zgg1zJJNDF4k4GDWqdK8mbsUHDHQ2onLjrf0suSeHAcZm0lfY0ymP
+         rzQmh5zTwQqZxkqCxRInb8/beUHiaLKzp0QUDnLWIn2KjG0WNVdWwnoyKI1ACPpsgbCJ
+         6wOWIj+tGWJgO1wVGz9tLCDJqdFdhudsQkwwYo3KEMt2IgEQp390QRdsxNYqoN5rnyrX
+         2u/ZFuMOutX1P0tmZI3N6tSBU8GSaZ2MlQv1LJj/mirjBskBFFAzedB5TxdgOR12WYq/
+         w05w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unhosted-org.20150623.gappssmtp.com; s=20150623;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=14m2KKSx7FW9PUIPE0S0bzQ/nHiINXqMm3quKIm1JJs=;
+        b=mSLghO2W57N/GN5sDYR6fuF0JFoHHfFvZSucp5rO8bl9rXfWr4hBe4HgNnS4BT4cv+
+         C4lDtuwUsOXuSEA4gW1WLH1EpLDh/sAF8TslpDcO6MaKcaFFwE2SrZfmPp1lCwUo2caW
+         BBC03Lnd0tDAQn2F2bAhq3Z50QF5uOiGNmubqdAeKffsKx+ZecKbifcDmWjYCF3WWog4
+         1ZbuOAhtZqPPfXSOYgcbBef6a5UTSv31hbpl3/9CF29Unc2Ov/VRqO9dkaWoYbg48BMA
+         sammVzd/4NVf4Zsir6yZ1dlYihkDLneTNHj0YZ1LYvrikWbjPtCTfZnAOZmPnuEVRVlz
+         plSQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:in-reply-to
+         :references:subject:mime-version:x-original-sender:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=14m2KKSx7FW9PUIPE0S0bzQ/nHiINXqMm3quKIm1JJs=;
+        b=KqbRfoZxDpAwCPyd0O3U8PLG+YOMio6duz9CEvFvv99ah4kAYI8ch0psz2yFpDkUgX
+         1rKbzwoVqKU6ZxEhHlKnUFy5tDFtiRUYhUVWQjBGAsz7SQVu3NbhBHa8Sk+wm9+x0rFz
+         MNu6s0qSihmvfenVO/L7WC8EydB4tuEltg3kuB5qloXJvK5wEntakMkzBeHQQh/js7Qn
+         cStAjbRz/GDgRS7B4JXjLzrPccPYvP54hQsX23oL8gMoVJ8GTrmV+e0LbxoViEmjd4/5
+         Fvcwmhgu6DJvtCg6jn1nitqGpfIU5o5ydjjtT+cWUKiGGikQ/JmONYzmGvaheCsXF7yL
+         ffrQ==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AA6/9RmvatulxS6kdYvWIm/CYm/NWDyRA1rKkHzNHVrnyh9t8odXHthcyIiBosgjQJD5HA==
+X-Received: by 10.157.55.181 with SMTP id x50mr2111436otb.7.1475039675920;
+        Tue, 27 Sep 2016 22:14:35 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.1.202 with SMTP id e68ls146876ote.47.gmail; Tue, 27 Sep
+ 2016 22:14:35 -0700 (PDT)
+X-Received: by 10.157.18.211 with SMTP id g77mr837296otg.5.1475039675504;
+        Tue, 27 Sep 2016 22:14:35 -0700 (PDT)
+Date: Tue, 27 Sep 2016 22:14:34 -0700 (PDT)
+From: Michiel de Jong <michiel@unhosted.org>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <63e5546e-db1d-483b-bfd5-78374a55c92b@googlegroups.com>
+In-Reply-To: <78c785e0-f338-4242-8a78-2ce0a88e01cc@googlegroups.com>
+References: <78c785e0-f338-4242-8a78-2ce0a88e01cc@googlegroups.com>
+Subject: [tosdr:3975] Re: Styleseat.com [bad] analyze payment data
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_114_1476559124.1475039674781"
+X-Original-Sender: michiel@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_114_1476559124.1475039674781
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_115_1548885512.1475039674781"
+
+------=_Part_115_1548885512.1475039674781
+Content-Type: text/plain; charset=UTF-8
+
+
+
+On Thursday, September 15, 2016 at 8:56:10 AM UTC+7, Stephon Harris wrote:
+>
+> Link: https://www.styleseat.com/tos-for-clients
+>
+> Bad: "StyleSeat facilitates the processing of payments Professionals 
+> receive from Clients. This means that we collect, analyze and relay 
+> information generated in connection with these payments."
+>
+
+Thanks for posting this! I think the interpretation is a bit tricky there - 
+initially I would say on the one hand you could read that they only do the 
+payment processing - "collect" your creditcard number because you type it 
+into their website, "analyze" whether your CVC code is correct, and "relay" 
+the payment information to your bank and back to the Professional who gets 
+paid. Especially the 'This means...' preamble implies that payment 
+processing is the sole reason for the activities described, i.e. what they 
+collect, analyze and relay, is all "in connection with these payments". Of 
+course, "in connection with" is a broad term but a willing reader would 
+probably interpret this as "needed for" these payments.
+
+However, on second read, you could also interpret it as the "in connection 
+with" phrase to apply to "information generated", and then it does not 
+restrict the scope of the described activity at all. The "analyze" could 
+cover all sorts of privacy-invading practices, and the "relay" part does 
+not specify if they relay only to your bank and the bank of the 
+Professional, or also to advertisers who pay for this data. So I think this 
+phrasing is at least dodgy enough to raise a flag. I'll contact StyleSeat 
+to see if they're available for comments / would care to clarify what they 
+mean with that paragraph.
+
+Thanks again for bringing this up, Stephon!
+
+Cheers,
+Michiel.
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/63e5546e-db1d-483b-bfd5-78374a55c92b%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_115_1548885512.1475039674781
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br>On Thursday, September 15, 2016 at 8:56:10 AM UTC+=
+7, Stephon Harris wrote:<blockquote class=3D"gmail_quote" style=3D"margin: =
+0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div d=
+ir=3D"ltr">Link:=C2=A0<a href=3D"https://www.styleseat.com/tos-for-clients"=
+ target=3D"_blank" rel=3D"nofollow" onmousedown=3D"this.href=3D&#39;https:/=
+/www.google.com/url?q\x3dhttps%3A%2F%2Fwww.styleseat.com%2Ftos-for-clients\=
+x26sa\x3dD\x26sntz\x3d1\x26usg\x3dAFQjCNGdJvGKJCo-ohw_x3dWxFTEMabQxQ&#39;;r=
+eturn true;" onclick=3D"this.href=3D&#39;https://www.google.com/url?q\x3dht=
+tps%3A%2F%2Fwww.styleseat.com%2Ftos-for-clients\x26sa\x3dD\x26sntz\x3d1\x26=
+usg\x3dAFQjCNGdJvGKJCo-ohw_x3dWxFTEMabQxQ&#39;;return true;">https://www.st=
+yleseat.<wbr>com/tos-for-clients</a><div><br></div><div>Bad: &quot;<span st=
+yle=3D"color:rgb(85,85,85);font-family:sans-serif;font-size:14.4px;line-hei=
+ght:23.04px">StyleSeat facilitates the processing of payments Professionals=
+ receive from Clients. This means that we collect, analyze and relay inform=
+ation generated in connection with these payments.&quot;</span></div></div>=
+</blockquote><div><br>Thanks for posting this! I think the interpretation i=
+s a bit tricky there - initially I would say on the one hand you could read=
+ that they only do the payment processing - &quot;collect&quot; your credit=
+card number because you type it into their website, &quot;analyze&quot; whe=
+ther your CVC code is correct, and &quot;relay&quot; the payment informatio=
+n to your bank and back to the Professional who gets paid. Especially the &=
+#39;This means...&#39; preamble implies that payment processing is the sole=
+ reason for the activities described, i.e. what they collect, analyze and r=
+elay, is all &quot;in connection with these payments&quot;. Of course, &quo=
+t;in connection with&quot; is a broad term but a willing reader would proba=
+bly interpret this as &quot;needed for&quot; these payments.<br><br>However=
+, on second read, you could also interpret it as the &quot;in connection wi=
+th&quot; phrase to apply to &quot;information generated&quot;, and then it =
+does not restrict the scope of the described activity at all. The &quot;ana=
+lyze&quot; could cover all sorts of privacy-invading practices, and the &qu=
+ot;relay&quot; part does not specify if they relay only to your bank and th=
+e bank of the Professional, or also to advertisers who pay for this data. S=
+o I think this phrasing is at least dodgy enough to raise a flag. I&#39;ll =
+contact StyleSeat to see if they&#39;re available for comments / would care=
+ to clarify what they mean with that paragraph.<br><br>Thanks again for bri=
+nging this up, Stephon!<br><br>Cheers,<br>Michiel.<br></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/63e5546e-db1d-483b-bfd5-78374a55c92b%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/63e5546e-db1d-483b-bfd5-78374a55c92b%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_115_1548885512.1475039674781--
+
+------=_Part_114_1476559124.1475039674781--

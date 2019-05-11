@@ -1,0 +1,130 @@
+Return-Path: <tosdr+bncBCFJJRF5WYBBBCURTSGAKGQE4TXNOOQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 16C5D161735
+	for <anything@michielbdejong.com>; Mon,  6 May 2013 03:34:10 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 12E9114206D
+	for <anything@michielbdejong.com>; Mon,  6 May 2013 03:34:10 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id dI2hnULctwKY for <anything@michielbdejong.com>;
+	Mon,  6 May 2013 03:34:08 +0200 (CEST)
+Received: from mail-qe0-f62.google.com (mail-qe0-f62.google.com [209.85.128.62])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D2F2C142063
+	for <michiel@michielbdejong.com>; Mon,  6 May 2013 03:34:04 +0200 (CEST)
+Received: by mail-qe0-f62.google.com with SMTP id q19sf1088226qeb.7
+        for <michiel@michielbdejong.com>; Sun, 05 May 2013 18:34:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf
+         :x-ironport-anti-spam-filtered:x-ironport-anti-spam-result
+         :x-ironport-av:x-spam-status:x-spam-level:subject:from:to
+         :in-reply-to:references:date:message-id:mime-version:x-mailer
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=e5O03q5LHVAxlWZERttShbTIm9q1rMLw8AZ+sO6JdJk=;
+        b=aTzgb2gT+1+JFtVS0rns63tKZklc50k6w2Dr9AfxZM0YRYGNNUZ0XS2Xm0NDOZoLNf
+         eW6uV3LrKfIoQ8rc+EkuPEilM1QAiiBff1OBHT2orgQl/Hdt4mK6KKLzbUGwGCd976jl
+         xBHsD5sq8qcEJvynINSG6wkKSrPWv88rweeYvQjuBzabr4iojZLT9xTuunBSYE6lM3ap
+         RQIiDijbp0x8KGn+whH3aI5mTErkJeGGE5klRCuYRLwdLSA6r1Swd3x8nW1wydTUQkrs
+         qpCdKOjpzQpDVRo7VvuY7VQ4qtqtlS57wjm+suQoz/laQ3/3cJ0H7wbXYyMFoEWpikYu
+         o1Bg==
+X-Received: by 10.50.149.132 with SMTP id ua4mr485102igb.8.1367804043291;
+        Sun, 05 May 2013 18:34:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.97.73 with SMTP id dy9ls1223802igb.10.canary; Sun, 05 May
+ 2013 18:34:02 -0700 (PDT)
+X-Received: by 10.66.221.42 with SMTP id qb10mr6871849pac.37.1367804042293;
+        Sun, 05 May 2013 18:34:02 -0700 (PDT)
+Received: from iport-c2-out.ucsd.edu (iport-c2-out.ucsd.edu. [132.239.0.174])
+        by gmr-mx.google.com with ESMTPS id qo12si3455321pbb.1.2013.05.05.18.34.01
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sun, 05 May 2013 18:34:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 132.239.0.174 is neither permitted nor denied by best guess record for domain of jesse@wefu.org) client-ip=132.239.0.174;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: Al4KADcHh1GE7/kU/2dsb2JhbABQgwc3gzMJu0aBAxZ0gh8BAQUjKzsLGAICJgICMQQREQ4HBAEcBIdrDK9Mj1mBJIEtix6BSRaCKoETA4kajzqEXoswgy1OgQQ
+X-IronPort-AV: E=Sophos;i="4.87,618,1363158000"; 
+   d="scan'208";a="981047248"
+Received: from smtp-tpcs.ucsd.edu ([132.239.249.20])
+  by iport-c2-out.ucsd.edu with ESMTP; 05 May 2013 18:34:01 -0700
+Received: from localhost (unknown [209.134.71.253])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by smtp-tpcs.ucsd.edu (Postfix) with ESMTPSA id 4B1EF802FF
+	for <tosdr@googlegroups.com>; Sun,  5 May 2013 18:34:01 -0700 (PDT)
+Subject: Re: [tosdr:1931] Pull request for tosback2
+From: Jesse Weinstein <jesse@wefu.org>
+To: tosdr@googlegroups.com
+In-Reply-To: <9380e9c6-e810-414b-8a14-3af9f2e2cff1@googlegroups.com>
+References: <1367680700.2840.10.camel@zareason>
+	 <fc4ac208ab60809eb113bb8529cfcf7a@michielbdejong.com>
+	 <9380e9c6-e810-414b-8a14-3af9f2e2cff1@googlegroups.com>
+Date: Sun, 05 May 2013 18:33:58 -0700
+Message-ID: <1367804038.2840.13.camel@zareason>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.3
+X-Original-Sender: jesse@wefu.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 132.239.0.174 is neither permitted nor denied by best guess
+ record for domain of jesse@wefu.org) smtp.mail=jesse@wefu.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thanks! I've now made another pull-request, with the other half of the
+URLs from tos-archive.
+
+On Sun, 2013-05-05 at 06:58 -0700, Jimm Stout wrote:
+> Last night, I went through the rules to add xpath, test the output,
+> and merge them on the crawl server. Thanks again!
+> 
+> On Saturday, May 4, 2013 12:57:37 PM UTC-4, Michiel B. de Jong wrote:
+>         On 2013-05-04 17:18, Jesse Weinstein wrote: 
+>         > I have an open pull request on tosback2 -- could one of the 
+>         > collaborators on that repo accept it? 
+>         > 
+>         > Jesse 
+>         
+>         Done. Thanks for the awesome work! 
+>         
+>         Jimm, can you pull it into the crawler server so that these
+>         new jobs 
+>         start running daily? 
+> 
+> -- 
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> --- 
+> You received this message because you are subscribed to the Google
+> Groups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send
+> an email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>  
+>  
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

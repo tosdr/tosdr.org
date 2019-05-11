@@ -1,0 +1,114 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp74756qek;
+        Sat, 25 Aug 2012 06:47:32 -0700 (PDT)
+Received: by 10.220.141.202 with SMTP id n10mr7061619vcu.49.1345902451465;
+        Sat, 25 Aug 2012 06:47:31 -0700 (PDT)
+Return-Path: <tosdr+bncCMW1zdL2DRDyruOBBRoE-QTWkA@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id a6si11142368vdw.149.2012.08.25.06.47.30
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 25 Aug 2012 06:47:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCMW1zdL2DRDyruOBBRoE-QTWkA@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCMW1zdL2DRDyruOBBRoE-QTWkA@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCMW1zdL2DRDyruOBBRoE-QTWkA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbgb30 with SMTP id gb30sf2474041vcb.29
+        for <multiple recipients>; Sat, 25 Aug 2012 06:47:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=4PIxicXK/VNi2snijfOKZwrjKwjlNXCsjvmT90oOE/4=;
+        b=eRS2rnY5JVRtDOpskT/T55PpMo35PKQaHg1c04cyXGb+4F+VLzffXahPuVgks6G4rp
+         XvilQFgXgQTkAgKkivEw/PaIz+0D/ZuuvsWVOG5mWKoysYX10VG41XBj9d+oe10UBULz
+         saIu+eo8dXyV7F7jmTRqZfVNU9n/GO2amVo/fN9fPkfIf7VraxSIFjmrquv9L6p1sS9a
+         4JO8OdAx4PenH5FmTsucszYQZipd52FdP48tDRIGdxftG6NU8A7kqxKGHD2a4RbzLoz1
+         IhIHSwYE94jmwQHkgjTP1BqotAn76drn/CuJtBx46Z9aEBjkC/G1gaLpCjMcmw66Rc86
+         I32w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=4PIxicXK/VNi2snijfOKZwrjKwjlNXCsjvmT90oOE/4=;
+        b=VnRatAsA+4C5/aRA/vjV0Y2gTe2KMWHYabsIjoWjpcnpD7+acIvEja6kRiA/fELCUb
+         Unmy1sUZYF2UcNRZW+WvF2utUx89r3HCmVUeCTRDCR+hMokwF8+3478AJE9/iajCOv4h
+         pgguP89RUlsdeEcQL2DSvXaZZrAZKdXuZvsUVn8xhva5lt9XrSiQvZk/9yX9VSJ3Pon2
+         L3TO61Izb0ytpR6qibi3UM1R7jA2qnS/Et/xFIu6bb0Q+1IDKvSPuL3ctWeZ+2ivKMZ0
+         eSf/2IHBJQvPVWgmEROxsNUvSH5mzX+eP9EBNcPhCbm9IId6KuMFMHVtVqR9LLA6+sMN
+         PH8Q==
+Received: by 10.224.213.1 with SMTP id gu1mr1327313qab.17.1345902450231;
+        Sat, 25 Aug 2012 06:47:30 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.224.210.4 with SMTP id gi4ls3984646qab.2.gmail; Sat, 25 Aug
+ 2012 06:47:29 -0700 (PDT)
+Received: by 10.224.146.67 with SMTP id g3mr4200062qav.6.1345902449554;
+        Sat, 25 Aug 2012 06:47:29 -0700 (PDT)
+Received: by 10.224.146.67 with SMTP id g3mr4200061qav.6.1345902449546;
+        Sat, 25 Aug 2012 06:47:29 -0700 (PDT)
+Received: from mail-qa0-f49.google.com (mail-qa0-f49.google.com [209.85.216.49])
+        by gmr-mx.google.com with ESMTPS id k34si2531547qcz.1.2012.08.25.06.47.29
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 25 Aug 2012 06:47:29 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.216.49 is neither permitted nor denied by best guess record for domain of indrora@earfolds.com) client-ip=209.85.216.49;
+Received: by qafk1 with SMTP id k1so1009467qaf.15
+        for <tosdr@googlegroups.com>; Sat, 25 Aug 2012 06:47:29 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.224.216.7 with SMTP id hg7mr14208367qab.3.1345902449096; Sat,
+ 25 Aug 2012 06:47:29 -0700 (PDT)
+Received: by 10.224.67.130 with HTTP; Sat, 25 Aug 2012 06:47:29 -0700 (PDT)
+X-Originating-IP: [2602:47:d5ba:9200:d067:69ef:86d9:e6ac]
+In-Reply-To: <COL401-EAS3615E6518172F9599B8C80DFFBD0@phx.gbl>
+References: <COL401-EAS3615E6518172F9599B8C80DFFBD0@phx.gbl>
+Date: Sat, 25 Aug 2012 07:47:29 -0600
+Message-ID: <CACjy-ZG4gdLx8U1WOnEEC6e85JfMHaEO_SL5GHy4pPtuA=uu5w@mail.gmail.com>
+Subject: Re: [tosdr:670] Blatent
+From: Morgan Gangwere <indrora@earfolds.com>
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQmcWS74TM11dhU/hXv+2MVM7k3vBBfV0nElE8bYp8wx8qZwKBuB1t+zbfwLZBQ+km5JVOWp
+X-Original-Sender: indrora@earfolds.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.216.49 is neither permitted nor denied by best guess record for domain
+ of indrora@earfolds.com) smtp.mail=indrora@earfolds.com; dkim=neutral (bad
+ format) header.i=@earfolds.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Fri, Aug 24, 2012 at 3:25 PM, Graeme Mclaughlin
+<gmick1986@hotmail.co.uk> wrote:
+> The free WiFi on first buses and city link buses is a con as they say they
+> will share your details.
+
+I'll agree, the Terms of usage on most publicly-available wifi is
+atrocious, but that would be something totally different.
+
+
+-- 
+my .sigfile is on vacation.
+I filter everything with an application/ms-* mimetype.
+I write code: https://github.com/indrora/ https://bitbucket.org/indrora/
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

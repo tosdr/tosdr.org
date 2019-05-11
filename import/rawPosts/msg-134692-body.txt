@@ -1,0 +1,120 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.181.81 with SMTP id e78csp1820335iof;
+        Mon, 10 Aug 2015 09:24:06 -0700 (PDT)
+X-Received: by 10.194.184.82 with SMTP id es18mr48625559wjc.79.1439223846235;
+        Mon, 10 Aug 2015 09:24:06 -0700 (PDT)
+Return-Path: <tosdr+bncBCLYBLWG3YORBHFAUOXAKGQEBZPBUWI@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id e9si2224847wix.96.2015.08.10.09.24.05
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 10 Aug 2015 09:24:06 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCLYBLWG3YORBHFAUOXAKGQEBZPBUWI@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCLYBLWG3YORBHFAUOXAKGQEBZPBUWI@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mail=tosdr+bncBCLYBLWG3YORBHFAUOXAKGQEBZPBUWI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 849D5172081
+	for <michiel@unhosted.org>; Mon, 10 Aug 2015 18:24:05 +0200 (CEST)
+Received: from mfilter26-d.gandi.net (mfilter26-d.gandi.net [217.70.178.154])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 747AB116542
+	for <michiel@unhosted.org>; Mon, 10 Aug 2015 18:24:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter26-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter26-d.gandi.net (mfilter26-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id OknUOXuVOPbg for <michiel@unhosted.org>;
+	Mon, 10 Aug 2015 18:24:01 +0200 (CEST)
+Received: from mail-vk0-x23c.google.com (mail-vk0-x23c.google.com [IPv6:2607:f8b0:400c:c05::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id CDAB1116552
+	for <michiel@michielbdejong.com>; Mon, 10 Aug 2015 18:23:57 +0200 (CEST)
+Received: by vkhf128 with SMTP id f128sf40193632vkh.1
+        for <michiel@michielbdejong.com>; Mon, 10 Aug 2015 09:23:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=dgHhpgNtjIqBHbs05hpPo92eu3xouxO0JC/5wIUqpbY=;
+        b=LAq4T0I4J6C/Nen+FOQ6PYCOGnfm2VtM3uow7J0bLQK19hVjj5DMUSxMxMFmLsAOJ+
+         HQb4yuXHzkMLgOPosVL7PL2azeyCuF8gmAKr6C7pl1ljidQ0esHI72TmXVpz4MsL2QbO
+         PA16n6w3m3MtwKYre3HjzuEShQWvNHD8WoaaV5rChquBkfipBt6RGdc5JVvAG5UWnGMz
+         YXdtykWjqPLsktBs2feNyDZbt+kkHQL3BoMQ2XJPHynWbZtovZ1hMBJx6fHtxF4EnmXh
+         U4guVimw05TnuOSeCA6M0aLc50tBHZV55bsS0sg216rg/n/EsYcTG3Uka+QASK9ry9xo
+         FBBQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=dgHhpgNtjIqBHbs05hpPo92eu3xouxO0JC/5wIUqpbY=;
+        b=g1PE7cQB0wz3Rgl9QkufMVsbYzVPxU3NFRkCawwoW+DeQXPSwyl/o16zgxCuOiWDRY
+         7RbhgBLniltfJET/C7Y317aLeSPO+PBMwWgpDqeTFFGqBJBDcJOZGAjCfc8ZsdXl0fdk
+         HxZ1xyoQpQwfPxm7kbO4fkn2XgefMKrfu0I8uqT2Tt2kZYWT/Q1fc/YmHjmLFlkLtHQs
+         1NFvy+piAfObfRrcJQwPKTaU3yPf4WkU5q/SlpEBAnpBPiofGR5N6W3cnq/GkPcvHfPx
+         jEmsy8Ga8rTvN9m+AivCTYZ6UUwl5IAsvn3wHVYAkOM5WxJG6F9JfDZeoF0I2RI0IYc5
+         +Dug==
+X-Received: by 10.140.95.79 with SMTP id h73mr221535qge.30.1439223836636;
+        Mon, 10 Aug 2015 09:23:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.18.227 with SMTP id 90ls3030657qgf.70.gmail; Mon, 10 Aug
+ 2015 09:23:55 -0700 (PDT)
+X-Received: by 10.140.101.112 with SMTP id t103mr142190qge.32.1439223835976;
+        Mon, 10 Aug 2015 09:23:55 -0700 (PDT)
+Date: Mon, 10 Aug 2015 09:23:55 -0700 (PDT)
+From: djhg2000@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: xyheme@gmail.com
+Message-Id: <7d63867d-d671-4c6b-b810-db55d8cfeef4@googlegroups.com>
+In-Reply-To: <f5aacb8d-ce9b-4f99-b882-2cc565af8c53@googlegroups.com>
+References: <1343227805.3786.19.camel@synclavier.lan>
+ <f5aacb8d-ce9b-4f99-b882-2cc565af8c53@googlegroups.com>
+Subject: [tosdr:3585] Re: Github can suspend your service and delete your data
+ any time for any reason
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_375_1646303467.1439223835370"
+X-Original-Sender: Djhg2000@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_375_1646303467.1439223835370
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Monday, March 30, 2015 at 2:26:18 PM UTC+2, xyh...@gmail.com wrote:
+> is there an example that github has suspended or
+> terminated someone's account and refuse any and all current or future
+> use of the Service, or any other GitHub service ?
+
+Yes, the official accounts for a couple of Popcorn Time repositories was re=
+moved due to pressure from MPAA which threatened to effectively hold GitHub=
+ responsible for copyright infringement. News article: https://torrentfreak=
+.com/mpaa-pulls-popcorn-time-off-github-140711/
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_375_1646303467.1439223835370--

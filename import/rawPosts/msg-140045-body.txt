@@ -1,0 +1,186 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.217 with SMTP id m86csp3507977ioi;
+        Wed, 20 Jan 2016 09:03:51 -0800 (PST)
+X-Received: by 10.194.88.130 with SMTP id bg2mr36713269wjb.162.1453309431595;
+        Wed, 20 Jan 2016 09:03:51 -0800 (PST)
+Return-Path: <tosdr+bncBCC5RB4ATAPRBG5S722AKGQEXNWHPXQ@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id d9si41686107wmc.106.2016.01.20.09.03.51
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 20 Jan 2016 09:03:51 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCC5RB4ATAPRBG5S722AKGQEXNWHPXQ@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCC5RB4ATAPRBG5S722AKGQEXNWHPXQ@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBCC5RB4ATAPRBG5S722AKGQEXNWHPXQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=hotmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 5AEC9FB94A
+	for <michiel@unhosted.org>; Wed, 20 Jan 2016 18:03:51 +0100 (CET)
+Received: from mfilter42-d.gandi.net (mfilter42-d.gandi.net [217.70.178.172])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 47A80116152
+	for <michiel@unhosted.org>; Wed, 20 Jan 2016 18:03:51 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter42-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter42-d.gandi.net (mfilter42-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id cNe4_TMALm_7 for <michiel@unhosted.org>;
+	Wed, 20 Jan 2016 18:03:49 +0100 (CET)
+X-Policy: Greylisted 300 seconds
+Received: from mail-pf0-x23b.google.com (unknown [IPv6:2607:f8b0:400e:c00::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5DE51116205
+	for <michiel@michielbdejong.com>; Wed, 20 Jan 2016 18:03:49 +0100 (CET)
+Received: by mail-pf0-x23b.google.com with SMTP id 65sf4313004pff.1
+        for <michiel@michielbdejong.com>; Wed, 20 Jan 2016 09:03:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:content-type:from:to:subject:date:importance
+         :mime-version:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=zGyCN1r9b2ek4wu+4e1VdIqNYeOVoSWaJ580A+qqHAM=;
+        b=KwVYVwyGd8B4zFiDIBglIb9XyeOzCnA6EWt4Gre5VpXJvI8ZhdCidjZWTspJ9NybuX
+         OCpua+rYlu+fuApe/xlPv21IeO7umtjlf26Esmky3uUzQOobH6iVU3p1Lf7gZc74cbHz
+         xhtWnK5rhweJqRyudDGZ5EKXypb1VgiAIQ24FTGl3BDIHH41fH+xYk1slSVTcKfd1leo
+         TPMurHlMIK3S/WVbPZxYG0vCh0UqTOWAqYYiJP1ICoOLNzcDO17lV39qCUnQJ6Qk7KOB
+         +AhLAYaVkFD7UPXfGYQOMRirpqFp31akvLnwX8Eibp/chfBfvAjH2rmm9NX7nD3b8wG4
+         t67Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:content-type:from:to:subject:date
+         :importance:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=zGyCN1r9b2ek4wu+4e1VdIqNYeOVoSWaJ580A+qqHAM=;
+        b=FJntQsY2ztYnDunNMRnJKzQFXfmcGv9X2rRUXbPBI2vvyhUVtAG51Fhm6FhQmAKg1I
+         uVzb7rcntcPZCu07zflcl0fHmXBNBGNHgC7vT6ICaigT6xT/IUaUb+so+qpcbvayr5xN
+         DYKyF76FbR4W0Ssc5W9ajAMxqeoMKuNCHrslUSZhcF6ShprQZlvoV4o+lBFLq9fg/3uo
+         bHuZd6m+ni1mF7XKJr4KGUDOoq2uTP3VXFVw+0GfSFixJafPTGTzwnGAbTQNtbA82LiZ
+         ldRLvE2JkYrIEmD0K/Srkb6hRsxV7Ih/A8scYYqqPZPaVkW3OGKgKbZf69Gtxtfrfb/c
+         oqGw==
+X-Gm-Message-State: AG10YOST+qUG/Mo6XdIFuw1J9ERCWa+trN2jOUGLtrJbRT+TjNr2jHtpfmqD1ztmqXqf8Q==
+X-Received: by 10.50.117.3 with SMTP id ka3mr103697igb.0.1453299996424;
+        Wed, 20 Jan 2016 06:26:36 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.134.103 with SMTP id pj7ls435328igb.1.canary; Wed, 20 Jan
+ 2016 06:26:35 -0800 (PST)
+X-Received: by 10.66.165.39 with SMTP id yv7mr33264684pab.28.1453299995626;
+        Wed, 20 Jan 2016 06:26:35 -0800 (PST)
+Received: from BLU004-OMC2S29.hotmail.com (blu004-omc2s29.hotmail.com. [65.55.111.104])
+        by gmr-mx.google.com with ESMTPS id o63si2749273ywd.1.2016.01.20.06.26.35
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 20 Jan 2016 06:26:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of jp-coli@hotmail.com designates 65.55.111.104 as permitted sender) client-ip=65.55.111.104;
+Received: from BLU181-W48 ([65.55.111.72]) by BLU004-OMC2S29.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Wed, 20 Jan 2016 06:26:35 -0800
+X-TMN: [bU6U3zyPpXBMzqZ8HO1VYkSZud+zYBBN]
+X-Originating-Email: [jp-coli@hotmail.com]
+Message-ID: <BLU181-W487640C41CCD1B7BE404DDF1C20@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_ca1f4b04-5b8e-4def-b0a1-784ef7b8d19d_"
+From: =?iso-8859-1?B?Sm/jbyBQZWRybyBDb2xpIEZlcnJlaXJhIERpYXM=?=
+	<jp-coli@hotmail.com>
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+Subject: [tosdr:3735] FC2, and its sevices
+Date: Wed, 20 Jan 2016 12:26:35 -0200
+Importance: Normal
+MIME-Version: 1.0
+X-OriginalArrivalTime: 20 Jan 2016 14:26:35.0585 (UTC) FILETIME=[91222310:01D1538E]
+X-Original-Sender: jp-coli@hotmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of jp-coli@hotmail.com designates 65.55.111.104 as
+ permitted sender) smtp.mailfrom=jp-coli@hotmail.com;       dmarc=pass (p=NONE
+ dis=NONE) header.from=hotmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--_ca1f4b04-5b8e-4def-b0a1-784ef7b8d19d_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Sir or Madam,
+
+FC2 (fc2.com) is a free internet portal providing free blogs, free websites=
+, free video-hosting, among other services. There is a problem, though. The=
+y are Japanese, and the English in their page is not bad, but not great eit=
+her.
+That hinders understanding, as is example in "Should users do not lower the=
+ bandwidth despite of our warning, they might be banned from any use of the=
+ service", and I would like to ask you to analyse the terms of services and=
+ privacy policies.
+
+Thank you for your attention.
+-Jo=C3=A3o Pedro
+ 		 	   		 =20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--_ca1f4b04-5b8e-4def-b0a1-784ef7b8d19d_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<style><!--
+.hmmessage P
+{
+margin:0px;
+padding:0px
+}
+body.hmmessage
+{
+font-size: 12pt;
+font-family:Calibri
+}
+--></style></head>
+<body class=3D'hmmessage'><div dir=3D'ltr'>Dear Sir or Madam,<br><br>FC2 (f=
+c2.com) is a free internet portal providing free blogs, free websites, free=
+ video-hosting, among other services. There is a problem, though. They are =
+Japanese, and the English in their page is not bad, but not great either.<b=
+r>That hinders understanding, as is example in "Should users do not lower t=
+he bandwidth despite of our warning, they might be banned from any use of t=
+he service", and I would like to ask you to analyse the terms of services a=
+nd privacy policies.<br><br>Thank you for your attention.<br>-Jo=C3=A3o Ped=
+ro<br> 		 	   		  </div></body>
+</html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--_ca1f4b04-5b8e-4def-b0a1-784ef7b8d19d_--

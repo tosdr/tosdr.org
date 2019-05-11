@@ -1,0 +1,1379 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.52.74 with SMTP id b71csp369967vka;
+        Sat, 17 Sep 2016 18:03:45 -0700 (PDT)
+X-Received: by 10.98.217.70 with SMTP id s67mr14410242pfg.118.1474160622695;
+        Sat, 17 Sep 2016 18:03:42 -0700 (PDT)
+Return-Path: <tosdr+bncBCAOB7HSZMLBBZGP667AKGQEKC5Q4KA@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [217.70.183.197])
+        by mx.google.com with ESMTPS id z67si19229202pfb.179.2016.09.17.18.03.41
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 17 Sep 2016 18:03:42 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbcaob7hszmlbbzgp667akgqekc5q4ka@googlegroups.com does not designate 217.70.183.197 as permitted sender) client-ip=217.70.183.197;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbcaob7hszmlbbzgp667akgqekc5q4ka@googlegroups.com does not designate 217.70.183.197 as permitted sender) smtp.mailfrom=tosdr+bncBCAOB7HSZMLBBZGP667AKGQEKC5Q4KA@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=googlegroups.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 062A141C07F
+	for <michiel@unhosted.org>; Sun, 18 Sep 2016 03:03:38 +0200 (CEST)
+Received: from mfilter34-d.gandi.net (mfilter34-d.gandi.net [217.70.178.165])
+	by spool.mail.gandi.net (Postfix) with ESMTP id ED6B722604C
+	for <michiel@unhosted.org>; Sun, 18 Sep 2016 03:03:38 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter34-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter34-d.gandi.net (mfilter34-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Gu3RhA67MUT6 for <michiel@unhosted.org>;
+	Sun, 18 Sep 2016 03:03:36 +0200 (CEST)
+Received: from mail-pa0-x23f.google.com (mail-pa0-x23f.google.com [IPv6:2607:f8b0:400e:c03::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 991B6226043
+	for <michiel@michielbdejong.com>; Sun, 18 Sep 2016 03:03:35 +0200 (CEST)
+Received: by mail-pa0-x23f.google.com with SMTP id bd2sf38348745pad.0
+        for <michiel@michielbdejong.com>; Sat, 17 Sep 2016 18:03:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:reply-to:to:message-id:subject:mime-version
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-subscribe:list-unsubscribe;
+        bh=GsN1lKDeVayt4A6GLy0CUz4fOymr6KwhGKKpjDUEDAk=;
+        b=njLkuXx8q4tsxioFc8Mphq1jq5j7tbKnxzKmCmPpfw8eaXzLQc6WnBlFPwNqgqL2Eq
+         25xE27Ao8t62uJJ/n3cNOLp4hFdv7se6/vmeAqZj6OqvTRMCBYImeOYR8QTVCCXYUDRg
+         88+vAm/jzvpSGs30tXWuF9e6UiukGHyQlLNrYC86g+WkKDKsJbuf44Ew3vI6N9xP6Qo6
+         Vpn8uPurpLwMvLTIhDO+d6tvRrAC4yfs1PEiwQVlpv38YuobEugjyQYCNlG4Ga8XpK9D
+         qgkXc3IOz+Q4nWhLD4Uhlx463gR2VmBTHDj1Dos0FO30sDMEKp9g0YCTMxyiB6tCtLXD
+         fgiw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:reply-to:to:message-id:subject
+         :mime-version:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=GsN1lKDeVayt4A6GLy0CUz4fOymr6KwhGKKpjDUEDAk=;
+        b=HyTEPGS/iqptsa4mSEl4/r04qU+H5TPwlAr9EBsb+kaHbHBSu0NuVX9B405fXPkDjR
+         MQc61bm9h694djiGw3YLC3yVEgNW9ZpYH39XORDKvUo0BdW7cp4O3MzapHmTngEKW70p
+         uPejyejKgs+Aaae8fd2JJp+F/mtZi9QZnMeuF3DRYpSdKbNegfdhaACTLDFchVzlVUuG
+         3g4/5yMuoEfa0S107TTP7IOVrPnqKiISaJyxfKYyQiKWCcJERtr52jjBsS9GxPXwMI9r
+         5m8emTSm8hMmvZCyn1N2rJjnerT+ttNHLzYDfB/LOVwQzhBen7RcsgDdxFvB2ELREZia
+         jTgA==
+X-Gm-Message-State: AE9vXwOE/JkurhQoT5iAsSowD8qURm4nRnQxROokOTIXyk9AOPxYR37nivtkjI3z2KmGoQ==
+X-Received: by 10.36.225.5 with SMTP id n5mr153675ith.2.1474160614060;
+        Sat, 17 Sep 2016 18:03:34 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.162.132 with SMTP id l126ls2523722ioe.34.gmail; Sat, 17
+ Sep 2016 18:03:32 -0700 (PDT)
+X-Received: by 10.107.29.129 with SMTP id d123mr13159669iod.9.1474160612733;
+        Sat, 17 Sep 2016 18:03:32 -0700 (PDT)
+Received: from mail-qt0-x265.google.com (mail-qt0-x265.google.com. [2607:f8b0:400d:c0d::265])
+        by gmr-mx.google.com with ESMTPS id p193si1111529ywe.6.2016.09.17.18.03.32
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 17 Sep 2016 18:03:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 404-cvx-657.0.3820.0.0.12019.7.3103410-2@google.com designates 2607:f8b0:400d:c0d::265 as permitted sender) client-ip=2607:f8b0:400d:c0d::265;
+Received: by mail-qt0-x265.google.com with SMTP id 12so4758910qtm.1
+        for <tosdr@googlegroups.com>; Sat, 17 Sep 2016 18:03:32 -0700 (PDT)
+X-Received: by 10.36.125.137 with SMTP id b131mr4493790itc.55.1474160612382;
+        Sat, 17 Sep 2016 18:03:32 -0700 (PDT)
+Received: from frisee.mktdns.com (frisee.mktdns.com. [199.15.213.113])
+        by smtp-relay.gmail.com with ESMTPS id o10sm3128886itg.3.2016.09.17.18.03.31
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 17 Sep 2016 18:03:32 -0700 (PDT)
+X-Relaying-Domain: google.com
+X-MSFBL: dG9zZHJAZ29vZ2xlZ3JvdXBzLmNvbUBkdnAtMTk5LTE1LTIxMy0xMTNAYmctYWJy
+	LTAyQDQwNC1DVlgtNjU3OjA6MzgyMDo2NTE2OjE6MTIwMTk6NzozMTAzNDEwLTI=
+Received: from [10.1.87.249] ([10.1.87.249:60876] helo=abmas01.marketo.org)
+	by abmta05.marketo.org (envelope-from <thinkwithgoogle-noreply@google.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 85/B6-06316-3E7EDD75; Sat, 17 Sep 2016 20:03:31 -0500
+Date: Sat, 17 Sep 2016 20:03:31 -0500 (CDT)
+From: "'Think with Google' via Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Reply-To: tosdr@googlegroups.com
+To: tosdr@googlegroups.com
+Message-ID: <1811991347.547659510.1474160611033.JavaMail.root@abmas01.marketo.org>
+Subject: [tosdr:3973] Hey there, thanks for signing up! Ready to dive in?
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_547659508_989704538.1474160611032"
+X-Binding: bg-abr-02
+X-MarketoID: 404-CVX-657:0:3820:6516:1:12019:7:3103410-2
+X-MktArchive: false
+X-Mailfrom: 404-CVX-657.0.3820.0.0.12019.7.3103410-2@google.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-Original-Sender: thinkwithgoogle-noreply@google.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@google.com;       spf=pass (google.com: domain of
+ 404-cvx-657.0.3820.0.0.12019.7.3103410-2@google.com designates
+ 2607:f8b0:400d:c0d::265 as permitted sender) smtp.mailfrom=404-CVX-657.0.3820.0.0.12019.7.3103410-2@google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=google.com
+X-Original-From: Think with Google <thinkwithgoogle-noreply@google.com>
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_547659508_989704538.1474160611032
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+You can also view this email as a webpage <[[http://go.thinkwithgoogle.com/=
+index.php/email/emailWebview?mkt_tok=3DeyJpIjoiTkRFd09XVTBaRFE0WVRkbSIsInQi=
+OiI3aVRURCtkZjVieE1mUDQrRlJ0Q2tDQ1VZQm5pdlhXWFJiWjUxbGtocTEyMzZDcHoyc2ZlbUN=
+5b0JNRStQVDJDRCtrRktuL0JMdjFjbjFsV0RYbGdyMXViMWx2ZUw0ZmwrTFc1TWtHRXNTVT0ifQ=
+%3D%3D]]>.            <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9F=
+KmB-yk9n2CCc1w7JrXRK_U_6bTcvd-GC1xCHffLSkRA9B3DqI2XgSJ4rrtX81U8sWAedqLrrqgF=
+auKiJTN-RNql6IUSYkAL7shEQho1_VOz2LtYBGokK_qWB-t5dbmH-W0FJAqyy-W2dh8sIk0BeJ6=
+pW2zHxxQ8GEmaExtmVDZc4vt5tYuxktqElTtEmlIH2REj6UA=3D=3D/WC0kLgVdJ0l1XH00010l=
+m00>             Hey there, now it's time to customize your inbox.         =
+                                              Add the topics and industries=
+ you care about most and get our latest insights sent directly to you.     =
+                  Add topics <http://email.thinkwithgoogle.com/dc/2UmxTyNcR=
+g6c9nzbH8kD0Jtr5qlIgZDJsQm60aBlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgF=
+JkX4V3L75vxDoX2PYTI7zdKNLWQXKa4jaqMzsPkhLXXfCA6MZgptarXB2Po1C9KNfv0DqvUxViO=
+P8s5xZzeJJ-gyUu5KOilKwnwfQ8gpaUIIlK_eGUP2uFsVwE7aTSRikegR0kratB8KyfA-Isgspg=
+RBcH_aeGE_VhRzNMQgtKKxAghTTf_kkFlIw5OiilPu80oaPFmT6mWBAaKgGY9GtKHh_QAAEYKmo=
+UlH3s5fMOBw/WC0kLgVdJ0l1XH00010lm00>                            Now, see mo=
+re of what=20
+Think with Google has to offer.                =20
+           <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CC=
+c1w7JrXRK_U_6bTeNFPndyKvG_4qVjjav5ZRnACx21HQrvh-UudOMQKXay7blyEZJS4wz9Q4tAm=
+gaDbZvwEIABwQQpt0NBQMfSPZM8enRVUNjnva8VGfIPGSS1_SCCT193kSOOLa28v7vetNv8xEA_=
+AUKYpROh_44JquCdLQ_XtKnKxw5q-oPjN_62mfUKcBZwpfPIO9bNEQiiMrI4xh10t6dKhXed9WG=
+gMEUvCUnBP7yjsAu9H8vWvqhLjDm9bcr5n17sNlHlfN5_lI=3D/WC0kLgVdJ0l1XH00010lm00>=
+    =20
+
+
+      Video          How to Identify the Right KPIs for Online Video: Lesso=
+ns From Google BrandLab  <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95S=
+p9FKmB-yk9n2CCc1w7JrXRK_U_6bTeNFPndyKvG_4qVjjav5ZRnACx21HQrvh-UudOMQKXay7bl=
+yEZJS4wz9Q4tAmgaDbZvwEIABwQQpt0NBQMfSPZM8enRVUNjnva8VGfIPGSS1_SCCT193kSOOLa=
+28v7vetNv8xEA_AUKYpROh_44JquCdLQ_XtKnKxw5q-oPjN_62mfUKcBZwpfPIO9bNEQiiMrI4x=
+h10t6dKhXed9WGgMEUvCUnBP7yjsAu9H8vWvqhLp0Dn_CZ0p3VEzPK24Mq_H4=3D/WC0kLgVdJ0=
+l1XH00010lm00>        Kim Larson, who works with hundreds of brands each ye=
+ar as the global head of BrandLab, shares her four-step method for getting =
+to the right key performance indicators (KPIs).                       =20
+           <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CC=
+c1w7JrXRK_U_6bTfVQ39R7RGW8Goqc6DFW9MipFWhDl_pwMkLRRogbFZXRC9924tQhVriWUd5Nq=
+q2qq772T3VI4ufK3eWLSXvMSmtIkB_eG8bgz-hb4unNdpxktvFusP0Fwnrl48W8L2I7QLXsVwGr=
+lJrZhUCY7nvA8d_qfAI344BiSZKXBLuHRNC9vZ_UdZvhNHaHTTppmdgeXoMXi4jxBzOjJr_t6JE=
+ECxsBPRGsYuf7ZboCsJ8Z-b2rB-1_VbGwOgWOspmutc1SRg=3D/WC0kLgVdJ0l1XH00010lm00>=
+    =20
+
+
+      MICRO-MOMENTS          How Mobile Search Connects Consumers to Stores=
+  <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK=
+_U_6bTfVQ39R7RGW8Goqc6DFW9MipFWhDl_pwMkLRRogbFZXRC9924tQhVriWUd5Nqq2qq772T3=
+VI4ufK3eWLSXvMSmtIkB_eG8bgz-hb4unNdpxktvFusP0Fwnrl48W8L2I7QLXsVwGrlJrZhUCY7=
+nvA8d_qfAI344BiSZKXBLuHRNC9vZ_UdZvhNHaHTTppmdgeXoMXi4jxBzOjJr_t6JEECxsBPRGs=
+Yuf7ZboCsJ8Z-b2rBzcHBk8nQnVghF21RMbH5Y=3D/WC0kLgVdJ0l1XH00010lm00>        N=
+ew data on how consumers use mobile search to connect to brands and busines=
+ses.                       =20
+           <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CC=
+c1w7JrXRK_U_6bTcqn3BAkqXxTautyDO0qJSDf-asPKqVIV_GlanjTQL-wCCcXXpC63r_CgT3Yj=
+EH8LL17paUNAdX522mLmWHrM2fVnqhJiUZlHy13fUZ--4SMiSAsNQBtmj49Lkop7r5J5mfGZNtU=
+l8ItLV0WEG_i3hnvJyqS8G1yuFlIufx1tMw9jJ3oK-gOLkZPQUUlv1OjTBoEWlqMEUTE92KcM4G=
+I6DbyoL9ThFW3BhWXin2t2R3Y6cfH2E68R3xhdTUVn5qUvc=3D/WC0kLgVdJ0l1XH00010lm00>=
+    =20
+
+
+      ADVERTISING          What Virtual Reality Will Mean for Advertising  =
+<http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTcqn3BAkqXxTautyDO0qJSDf-asPKqVIV_GlanjTQL-wCCcXXpC63r_CgT3YjEH8LL17paUN=
+AdX522mLmWHrM2fVnqhJiUZlHy13fUZ--4SMiSAsNQBtmj49Lkop7r5J5mfGZNtUl8ItLV0WEG_=
+i3hnvJyqS8G1yuFlIufx1tMw9jJ3oK-gOLkZPQUUlv1OjTBoEWlqMEUTE92KcM4GI6DbYmB3b12=
+YLFzVN8CuijW_jA-ia_G0vB9H3nZl7ePKYTg=3D/WC0kLgVdJ0l1XH00010lm00>        Glo=
+bal search interest in virtual reality grew by nearly 4X in the last year. =
+What will a future with virtual reality mean for advertisers, creators, and=
+ storytellers?                     Read more <http://email.thinkwithgoogle.=
+com/dc/sw2Jv2lliV95Sp9FKmB-yrSFD4qNtBgFxlb2G3LPFA7kaR5k9kkcD3XWLTUEzK_qWTz-=
+g_iiKgpn1eHSK8pOB85iHOsgMHJSgz70A5EROGP9iCz-rxyiqgHT8YN0QtMbwssXBj1ziURNH1l=
+uP8oKxClolX0eDt3Lm32_W4FssppVjV6i7APkisab0Ays3t2Y-mw4jv1w7EJ5Cj58gUe3uQ=3D=
+=3D/WC0kLgVdJ0l1XH00010lm00>                            Plan for what=E2=80=
+=99s next using our DIY tools.                        <http://email.thinkwi=
+thgoogle.com/dc/fulriKJrI2Dp0adrei7lSNpYgcx63B4v9W-VxTEyPO-UZPf2daalFSZwLP_=
+Rj4pWWvvYtcc2zUZon_wuC91u68i-j1-Ts6FqEFIYezAxcufZ3DhbWIX1WW092Itx8xhuRnaock=
+zJjgCvWMGAfsbGgV312ECG7X5xgdQPiMbUFtJ8MfIriK-NgCzY3lVnhoSp/WC0kLgVdJ0l1XH00=
+010lm00>         Shopping Insights          Trends and popularity of produc=
+ts across=C2=A0the U.S.  <http://email.thinkwithgoogle.com/dc/fulriKJrI2Dp0=
+adrei7lSNpYgcx63B4v9W-VxTEyPO-UZPf2daalFSZwLP_Rj4pWWvvYtcc2zUZon_wuC91u68i-=
+j1-Ts6FqEFIYezAxcufZ3DhbWIX1WW092Itx8xhuRnaockzJjgCvWMGAfsbGgV312ECG7X5xgdQ=
+PiMbUFtJ8MfIriK-NgCzY3lVnhoSp/WC0kLgVdJ0l1XH00010lm00>                     =
+ <http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_=
+U_6bTdEhFg7U_RyeDsmB5cYASJZ_J9S85L_tiK_y5GqIrRs7F8qpzKDXHZfJwKxEXpB12ZoBwLj=
+tALxhfcP2HlouFC0ZOPI8CAi5sx8rhTJyZP4EDS-8O9Ow2ZjjYtOIjZQ3tDqpjPfl6pmM1mElCS=
+NOCB4gV0Kpb0Ni9CtS4WOv5lVBg=3D=3D/WC0kLgVdJ0l1XH00010lm00>         Google T=
+rends          Real-time consumer search
+ behavior                <http://email.thinkwithgoogle.com/dc/9YaQpuZoRd9RK=
+HBxa8MTfiIUdUTL6NojN3IpDynIc4EcOX3bA8pOBYrPwUfG_5-Kbt9gltcO5lqFFniWkKEi79-0=
+fHZJNtjSQjWdYuKLh920RtDum2j3lMfVQK0JwD9keZ4DUsgkzgmdkfitno805bYyDJBqk1eIalt=
+uV7ymN9NI6aUUO02I7zlk25mHBYuV/WC0kLgVdJ0l1XH00010lm00>         Test My Site=
+          Gauge your site=E2=80=99s performance=20
+and mobile-friendliness                    See all planning tools <http://e=
+mail.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U_6bTfr4H9=
+TCttenpdnbcRXZo6WAbbIuHtPjUDkPtTgsDiKyCJM9nm_XzduQDx0Oq6TxxwqWO8rMopudIqnB4=
+qWZFi4T4K_0sNWld4EbwSkbVk1DfBHwEt2BvuvRvygSDpdhUxPFolDTzHC2LhxMPXeGCd01F6zF=
+F_6UezVlXM5T8AxduaFwKvziiAVxSrbgsoMGldrlqaLnkK0Wwrw8GuTWUB2/WC0kLgVdJ0l1XH0=
+0010lm00>                                  Received this e-mail from a frie=
+nd?     Subscribe here <http://email.thinkwithgoogle.com/dc/PM7EhE08bMh7Wap=
+eMwfiHqKtD1r0bABJ6rP-F3z0BwhYl8HUrKp74DfDargI7kdVQY28j3m2mo4eEwDInolhJV1ibu=
+Jh3Xc4CEPnzoLVb3c1nWc_yTLSAuPuz-FUsFXcUc1CCZXvrDRz5OZ6QIs-Rweh6GKyUcY360RR2=
+AM9r4LMEa9T6hZrpdL7_m9Gpg9kwHqQDFWI-seViVTaTzpANjLgSZWBd6aXR20lWxSD7MH4G5pP=
+kgp5x6P38Z9cg5vKLnpOkVj4gaBUYyZJR6R8-Q=3D=3D/WC0kLgVdJ0l1XH00010lm00>      =
+         How are we doing?     Give feedback <http://email.thinkwithgoogle.=
+com/hJ0kodV00C0001Hmg010XOl>                        This email was sent to =
+tosdr@googlegroups.com because you signed up for the latest from Think with=
+ Google. If you don't want to receive this newsletter in the future, you ma=
+y unsubscribe <http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr=
+5qlIgZDJsQm60aBlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJmE8Wt3T2mBSX9n=
+vwoznVAj9JXbBvOvKaFW7dJyzmej1DvnihfCj2UXwoDMg_no3yyBUAqq0fUp6pzXSYLI1nlkBQF=
+Fiz3dVPH8TWygwsMRQihsrhQAimztwqzV0DPQ2PFWWFHMAXwrPgvas0sUgpZBMz6AEEi8UKLgCg=
+IevYP0QOd5gt18L9RfDze9Vyv_5Egpi95ASU_TS6hr5kbmjRZ3hnbRzgOhSWuv8vqedacxsCyvR=
+7JEsJ0VWwtmbHxZXtA=3D=3D/WC0kLgVdJ0l1XH00010lm00> or update your preference=
+s <http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm6=
+0aBlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJkX4V3L75vxDoX2PYTI7zdKNLWQ=
+XKa4jaqMzsPkhLXXfCA6MZgptarXB2Po1C9KNfv0DqvUxViOP8s5xZzeJJ-gyUu5KOilKwnwfQ8=
+gpaUIIlK_eGUP2uFsVwE7aTSRikegR0kratB8KyfA-IsgspgRBcH_aeGE_VhRzNMQgtKKxAghTT=
+f_kkFlIw5OiilPu8xjB4DbSSsKWkpIE7bLw2eg=3D/WC0kLgVdJ0l1XH00010lm00>.=20
+
+ =C2=A9 2016 Google Inc. All Rights Reserved. Google and the Google logo ar=
+e trademarks of Google Inc. www.google.com <http://email.thinkwithgoogle.co=
+m/b0000HVJmCn0X0kN0101ldg> 1600 Amphitheatre Parkway, Mountain View, CA 940=
+43.                   - - - - - - - - - - - - - - - - - - - - - - - - - - -=
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =
+-
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/1811991347.547659510.1474160611033.JavaMail.root%40abmas01.marketo.or=
+g.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_547659508_989704538.1474160611032
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>=20
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />=20
+    <meta name=3D"HandheldFriendly" content=3D"true" />=20
+    <meta name=3D"MobileOptimized" content=3D"320" />=20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width" />=20
+    <title>Think with Google</title>=20
+    <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:100,200,=
+400,300italic,300,400italic,500,500italic,700,700italic" rel=3D"stylesheet"=
+ type=3D"text/css" />=20
+    <!--[if gte mso 12]>
+	    <style>
+	    	h1{ color:#ffffff;}
+	   		h2 { color:#ffffff;}
+	   		p { color:#ffffff;}
+	    </style>
+	<![endif]-->=20
+    <!--[if gte mso 13]>
+	    <style>
+	   		h2 {padding-top:20px;}
+	    </style>
+	<![endif]-->=20
+    <!--[if gte mso 14]>
+	    <style>
+	    	h1{ color:#ffffff;}
+	   		h2 { color:#ffffff;}
+	   		p { color:#ffffff;}
+	    </style>
+	<![endif]-->=20
+    <!--[if gte mso 15]>
+	    <style>
+	    	h1{ color:#ffffff;}
+	   		h2 { color:#ffffff;}
+	   		p { color:#ffffff;}
+	    </style>
+	<![endif]-->=20
+    <!--[if mso]>
+		<style type=3D"text/css">
+			@import url(https://fonts.googleapis.com/css?family=3DRoboto:400,300,300=
+italic,400italic,500,500italic,700,700italic);
+			body, table, td, h2, h3, h4, h6, h5, h1, p, span, a { font-family:'Robot=
+o', Arial, sans-serif !important;}
+		</style>
+	<![endif]-->=20
+    <style type=3D"text/css">
+        span.preheader {display:none;height:0px;}
+		div, p, a, li, td { -webkit-text-size-adjust:none; }
+	</style>=20
+    <!--[if IEMobile]>
+		<style type=3D"text/css">
+			table[class=3D"main-table"]{ width: 320px!important; min-width: 320px!im=
+portant;}
+			table[class=3D"inner"]{ width: 280px!important;}
+			table[class=3D"inner-inside"]{ width: 240px!important;}
+			img[class=3D"inner"]{ width: 280px!important;}
+			td[class=3D"alignleft"]{ text-align: left!important;}
+			td[class=3D"centeraligned"]{ text-align: center!important;}
+			table[class=3D"inline"]{ display: inline-block!important;}
+			td[class=3D"desktop"]{ width: 0px!important; height: 0px!important; visi=
+bility: hidden!important; display: none!important; line-height: 0px!importa=
+nt; font-size: 0px!important;}
+			table[class=3D"mobshow"]{display: inline-block !important; width:100% !i=
+mportant; height:305px !important; overflow:visible !important; float:none =
+!important; visibility:visible !important; border:none !important;font-size=
+:15px !important;}
+			td[class=3D"mobshow"]{display: inline-block !important; width:100% !impo=
+rtant; height:305px !important; overflow:visible !important; float:none !im=
+portant; visibility:visible !important; border:none !important;font-size:15=
+px !important; max-height: 305px!important;}
+			div[class=3D"mobshow"]{display: inline-block !important; width:100% !imp=
+ortant; height:305px !important; overflow:visible !important; float:none !i=
+mportant; visibility:visible !important; border:none !important;font-size:1=
+5px !important; max-height: 305px!important;}
+			table[class=3D"mob-inner"]{ width: 280px!important; display: inline-bloc=
+k !important; height:305px !important; overflow:visible !important; float:n=
+one !important; visibility:visible !important; border:none !important;font-=
+size:15px !important; max-height: 305px!important;}
+			td[class=3D"custom-background"]{ padding-top: 140px!important; backgroun=
+d: url(http://twg.emailimagecdn.com/twgmaynewsletter/images/desktop-backgro=
+und-b.png) no-repeat -200px -30px!important;}
+			p[class=3D"mobhide"]{ font-size:0px!important; line-height:0px!important=
+; display:none!important; margin:0px!important; padding:0px!important;}
+		</style>
+	<![endif]-->=20
+    <style type=3D"text/css">
+		body{ margin:0px; background:#f8f8f8;}
+		a{ color:#ffffff; text-decoration:none;}
+
+
+		@media only screen and (max-width: 480px){
+			table[class=3D"main-table"]{ width: 320px!important; min-width: 320px!im=
+portant;}
+			table[class=3D"inner"]{ width: 280px!important;}
+            table[class=3D"inner-c"]{ width: 320px!important;}
+			table[class=3D"leftmargin"]{ width: 280px!important; margin-left: 20px!i=
+mportant;}
+			table[class=3D"inner-inside"]{ width: 240px!important;}
+			img[class=3D"inner"]{ width: 280px!important;}
+            img[class=3D"inner-b"]{ width: 85px!important;}
+            img[class=3D"inner-d"]{ width: 320px!important;}
+            img[class=3D"feature"]{ width: 200px!important; padding-right: =
+37px;}
+			td[class=3D"alignleft"]{ text-align: left!important;}
+			td[class=3D"centeraligned"]{ text-align: center!important;}
+			td[class=3D"centeralignedmargin"], table[class=3D"centeralignedmargin"],=
+ img[class=3D"centeralignedmargin"] {margin:0 auto !important;}
+			.full-width {width:100% !important;}
+			.no-float: {float:none !important;}
+			table[class=3D"inline"]{ display: inline-block!important; margin-left: 1=
+0px!important;}
+			td[class=3D"desktop"]{ width: 0px!important; height: 0px!important; visi=
+bility: hidden!important; display: none!important; line-height: 0px!importa=
+nt; font-size: 0px!important;}
+            td[class=3D"full"]{ display:block !important; width:100% !impor=
+tant;}
+			img[class=3D"desktop"]{ width: 0px!important; height: 0px!important; vis=
+ibility: hidden!important; display: none!important; line-height: 0px!import=
+ant; font-size: 0px!important;}
+			table[class=3D"mobshow"]{display: inline-block !important; width:100% !i=
+mportant; height:305px !important; overflow:visible !important; float:none =
+!important; visibility:visible !important; border:none !important;font-size=
+:15px !important;}
+			td[class=3D"mobshow"]{display: inline-block !important; width:100% !impo=
+rtant; height:305px !important; overflow:visible !important; float:none !im=
+portant; visibility:visible !important; border:none !important;font-size:15=
+px !important; max-height: 305px!important;}
+			div[class=3D"mobshow"]{display: inline-block !important; width:100% !imp=
+ortant; height:305px !important; overflow:visible !important; float:none !i=
+mportant; visibility:visible !important; border:none !important;font-size:1=
+5px !important; max-height: 305px!important;}
+			table[class=3D"mob-inner"]{ width: 280px!important; display: inline-bloc=
+k !important; height:305px !important; overflow:visible !important; float:n=
+one !important; visibility:visible !important; border:none !important;font-=
+size:15px !important; max-height: 305px!important;}
+			td[class=3D"custom-background"]{ padding-top: 140px!important; backgroun=
+d: url(http://twg.emailimagecdn.com/twgmaynewsletter/images/desktop-backgro=
+und-b.png) no-repeat -200px -30px!important;}
+			p[class=3D"mobhide"]{ font-size:0px!important; line-height:0px!important=
+; display:none!important; margin:0px!important; padding:0px!important;}
+			img[class=3D"full"]{ width: 320px!important;}
+			.mobile-padding-top {padding-top:15px !important;}
+			.text-center {text-align:center !important;}
+			.header-text {font-size:30px !important;}
+			.mobile-padding-bottom {padding-bottom:30px !important;}
+		}
+
+        @media only screen and (min-width: 481px){
+           td[class=3D"desktop-padding"]{ vertical-align:top; height:40px;}=
+=20
+        }
+	=09
+	</style>=20
+    <!--[if mso]>
+        <style type=3D"text/css">
+        table[module-table-wrapper]{width: 560px!important;}
+        .body-text, body, td, span, div, a {
+        font-family: Arial, sans-serif !important;
+        }
+        </style>
+	<![endif]-->=20
+    <!--[if IEMobile]>
+		<style type=3D"text/css">
+			td, span, p, a, h5, h6, div{font-family: Roboto,Arial,Helvetica,sans-ser=
+if !important;}
+		</style>
+	<![endif]-->=20
+  </head>=20
+  <body>=20
+    <span class=3D"preheader" style=3D"display: none !important; visibility=
+: hidden; opacity: 0; color: transparent; height: 0; width: 0;">A must-read=
+ on new shopper behavior insights, including actionable ideas for how to me=
+et shoppers in their micro-moments.</span>=20
+    <div class=3D"mktEditable" id=3D"body">=20
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+        <tbody>=20
+          <tr>=20
+            <td align=3D"center" style=3D"vertical-align:top;" bgcolor=3D"#=
+f2f2f2">=20
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"600" class=3D"main-table" style=3D"min-width:600px;" bgcolor=3D"#2979ff=
+">=20
+                <!-- HEADER MODULE -->=20
+                <tbody>=20
+                  <tr>=20
+                    <td bgcolor=3D"#2979ff">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"535" class=3D"inner" align=3D"center">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td height=3D"15"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td>=20
+                              <table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"300" align=3D"right" class=3D"inner centeraligned">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"font-family:'Roboto', Aria=
+l,Sans-serif;font-size:10px;color:#ffffff;text-align:right; " class=3D"cent=
+eraligned">You can also view this email as a <a href=3D"http://go.thinkwith=
+google.com/index.php/email/emailWebview?mkt_tok=3DeyJpIjoiTkRFd09XVTBaRFE0W=
+VRkbSIsInQiOiI3aVRURCtkZjVieE1mUDQrRlJ0Q2tDQ1VZQm5pdlhXWFJiWjUxbGtocTEyMzZD=
+cHoyc2ZlbUN5b0JNRStQVDJDRCtrRktuL0JMdjFjbjFsV0RYbGdyMXViMWx2ZUw0ZmwrTFc1TWt=
+HRXNTVT0ifQ%3D%3D" style=3D"color:#ffffff; text-decoration:none;">webpage</=
+a>. </td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table>=20
+                              <table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"200" align=3D"left" class=3D"inner centeraligned center=
+alignedmargin full-width no-float mobile-padding-top">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"vertical-align:middle;" bg=
+color=3D"#2979ff" class=3D"centeraligned"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTcvd-GC1xCHffLSkRA9B3DqN17iBhBRJPic5qSlXu8sz76dPBFz9Cgp90vSSm1QT_w4zTweU=
+JKKpNrqHhRfC5yW9VdK4kajXPZWezsseF-8a1bK1VE1K_LTNpwyagXNmDcZ115JU3xvVeCiJZ_Q=
+RIr7kZyPuQ1J9bAHZ2vIgmP8cp02So6pQaM9BrQYl1fdyog=3D/WC0kLgVdJ0l1XH00010lm00"=
+ target=3D"_blank"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/think-wit=
+h-google-white.png" width=3D"153" border=3D"0" alt=3D"Think=20
+with Google" title=3D"Think with Google" style=3D"border-style:none;" class=
+=3D"centeralignedmargin" /> </a> </td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td height=3D"50"> </td>=20
+                          </tr>=20
+                          <tr align=3D"center">=20
+                            <td style=3D"font-family:'Roboto', Arial,Sans-s=
+erif;font-size:40px;color:#ffffff;padding-bottom:10px; text-align: left;" c=
+lass=3D"text-center header-text"> <span style=3D"font-weight:200;">Hey ther=
+e, now it's time to customize your inbox.</span> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td height=3D"15"></td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table> </td>=20
+                  </tr>=20
+                  <tr>=20
+                    <td align=3D"center"> <img class=3D"inner" src=3D"http:=
+//go.thinkwithgoogle.com/rs/404-CVX-657/images/twgWelcome-header.png" align=
+=3D"center" width=3D"600" /> </td>=20
+                  </tr>=20
+                  <tr>=20
+                    <td height=3D"15"></td>=20
+                  </tr>=20
+                  <!-- HEADER MODULE -->=20
+                  <tr>=20
+                    <td width=3D"100%" align=3D"center" style=3D"vertical-a=
+lign:middle;" bgcolor=3D"#2979ff" height=3D"100%"> <img class=3D"inner" src=
+=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/twgWelcome-separato=
+r.png" /> </td>=20
+                  </tr>=20
+                  <!-- HERO MODULE -->=20
+                  <tr>=20
+                    <td width=3D"100%" align=3D"center" style=3D"vertical-a=
+lign:middle;" bgcolor=3D"#2979ff" height=3D"100%">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"100%" height=3D"100%">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td align=3D"center" style=3D"vertical-align:bo=
+ttom; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;"=
+ dir=3D"rtl" height=3D"100%">=20
+                              <table cellpadding=3D"0" cellspacing=3D"0" di=
+r=3D"rtl" width=3D"100%" height=3D"100%">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"margin:0;padding:0;overflo=
+w:hidden;" dir=3D"ltr" width=3D"50%" class=3D"full">=20
+                                      <table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"50%" class=3D"main-table" dir=3D"ltr" style=3D=
+"border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td align=3D"center" style=3D"v=
+ertical-align:top; padding-top: 30px;"> <img class=3D"full" src=3D"http://g=
+o.thinkwithgoogle.com/rs/404-CVX-657/images/twgWelcome-topics.png" width=3D=
+"260" border=3D"0" style=3D"display:block;margin:0;" /> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                    <td style=3D"margin:0;padding:0;overflo=
+w:hidden; vertical-align: top;" dir=3D"ltr" width=3D"50%" class=3D"full">=
+=20
+                                      <table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"49%" align=3D"center" class=3D"main-table" dir=
+=3D"ltr" style=3D"border-collapse: collapse; mso-table-lspace: 0; mso-table=
+-rspace: 0; " bgcolor=3D"#2979ff">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td align=3D"center" style=3D"v=
+ertical-align:top;">=20
+                                              <table width=3D"240" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" class=3D"inner-inside mobile-paddi=
+ng-bottom" bgcolor=3D"#2979ff">=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top; text-align: left; padding-top: 30px;" align=3D"cen=
+ter"> <span style=3D"font-family:'Roboto', Arial, sans-serif; font-size:20p=
+x; line-height:28px; color:#ffffff; margin:0px!important; padding:0px!impor=
+tant; font-weight:200;"> Add the topics and industries you care about most =
+and get our latest insights sent directly to you.</span> </td>=20
+                                                  </tr>=20
+                                                  <!--[if gte mso 12]>
+		                                                   =20
+<tr>
+<td width=3D"100%" align=3D"left" style=3D"vertical-align:top;" height=3D"1=
+5"></td>
+														=09
+</tr>
+		                                                    <![endif]-->=20
+                                                </tbody>=20
+                                              </table> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table>=20
+                              <div style=3D"padding: 0px 0px 70px 30px;">=
+=20
+                                <table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" width=3D"120" bgcolor=3D"#FFFFFF" style=3D"border-radius:3px;"=
+ class=3D"centeralignedmargin" align=3D"left">=20
+                                  <tbody>=20
+                                    <tr>=20
+                                      <td style=3D"font-family:'Roboto', Ar=
+ial,Sans-serif;font-size:13px;color:#0d47a1;text-align:center;font-weight:5=
+00;padding:10px;text-transform:uppercase;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm60a=
+BlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJkX4V3L75vxDoX2PYTI7zdKNLWQXK=
+a4jaqMzsPkhLXXfCA6MZgptarXB2Po1C9KNfgqB3tvCQEOeQm-2uv3dFizSeYQaDsPgMHgKiOzO=
+pJh7QxzVyXpC2leCctcIS7SrVjM15xxIYJjYQeTrz_sMNBOUFUASL0Gczsiru5LR0u3MhfnODio=
+W0yyjQSFbb7IDsWK5V6OdFEHXcPBpezbpYQGp2IqPQbTe8Hv1sd4YiK5eEadK0p_kFzsbEqn_oo=
+depg=3D=3D/WC0kLgVdJ0l1XH00010lm00" style=3D"color:#0d47a1;text-decoration:=
+none;"
+>Add topics</a> </td>=20
+                                    </tr>=20
+                                  </tbody>=20
+                                </table>=20
+                              </div> </td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table> </td>=20
+                  </tr>=20
+                  <!-- HERO MODULE -->=20
+                  <tr>=20
+                    <td height=3D"10"> </td>=20
+                  </tr>=20
+                  <!-- RECOMMENDED MODULE -->=20
+                  <tr>=20
+                    <td width=3D"100%" align=3D"center" style=3D"vertical-a=
+lign:top;" bgcolor=3D"#ffffff">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"535" class=3D"inner">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"45"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"center" style=3D"ve=
+rtical-align:top;"> <p style=3D"font-family:'Roboto', Arial, sans-serif; fo=
+nt-size:28px; line-height:36px; color:#757575; margin:0px!important; paddin=
+g:0px!important;"> <span class=3D"body-text" style=3D"font-weight: 300;">No=
+w, see more of what <br />Think with Google has to offer.</span> </p> </td>=
+=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"45"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"center" style=3D"ve=
+rtical-align:top;">=20
+                              <table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%">=20
+                                      <table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0" align=3D"center" class=3D"inner">=20
+                                        <!--[if mso]>
+												=09
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+                                                   =20
+<tr>
+<td valign=3D"top">
+<![endif]-->=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;">=20
+                                              <table width=3D"185" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left" class=3D"inner">=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTeNFPndyKvG_4qVjjav5ZRnACx21HQrvh-UudOMQKXay7blyEZJS4wz9Q4tAmgaDbZvwEIAB=
+wQQpt0NBQMfSPZMc-tepEl6fEPBNfH1vG-prSbtM3vpkAvl3F0zcMtqIrPtpGphn9F_BP87BfXQ=
+Cpmyp61cedY0r0R-vypSeUL4EUkEnblfK8QZ2I-HflePsHAXSs0E7veHbaRLirieoEvAaT1gjV4=
+s-pC9SUOHXlZzWKl1hjyFI2MEu0SZ1rWDWnP7N7XsusnNmRt04YjCTfMk/WC0kLgVdJ0l1XH000=
+10lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/how-ident=
+ify-right-kpis-online-video.jpg" width=3D"181" border=3D"0" style=3D"displa=
+y:block;" class=3D"inner" alt=3D"How to Identify the Right KPIs for Online =
+Video: Lessons From Google BrandLab" title=3D"How to Identify the Right KPI=
+s for Online Video: Lessons From Google BrandLab" /> </a> </td>=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+</td>
+<td valign=3D"top">
+<![endif]-->=20
+                                              <table width=3D"340" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"right" class=3D"inner">=
+=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;" class=3D"mobile-padding-top"> <p style=3D"font-fa=
+mily:'Roboto', Arial, sans-serif; font-size:13px; line-height:19px; color:#=
+3949AB; margin:0px!important; padding:0px!important; text-transform: upperc=
+ase;font-weight:600;"> <span class=3D"body-text">Video</span> </p> </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"3"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTeNFPndyKvG_4qVjjav5ZRnACx21HQrvh-UudOMQKXay7blyEZJS4wz9Q4tAmgaDbZvwEIAB=
+wQQpt0NBQMfSPZMc-tepEl6fEPBNfH1vG-prSbtM3vpkAvl3F0zcMtqIrPtpGphn9F_BP87BfXQ=
+Cpmyp61cedY0r0R-vypSeUL4EUkEnblfK8QZ2I-HflePsHAXSs0E7veHbaRLirieoEvAaT1gjV4=
+s-pC9SUOHXlZzWKl1hjyFI2MEu0SZ1rWDWnM2BXtbH0lSiWL3NUE_dipg/WC0kLgVdJ0l1XH000=
+10lm00" target=3D"_blank" style=3D"font-family:'Roboto', Arial, sans-serif;=
+ font-size:16px; line-height:22px;=20
+color:#424242; margin:0px!important; padding:0px!important; font-weight:nor=
+mal; text-decoration:none!important;"
+> <span class=3D"body-text">How to Identify the Right KPIs for Online Video=
+: Lessons From Google BrandLab</span> </a> </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"6"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;font-family:'Roboto', Arial, sans-serif; font-size:=
+14px; line-height:18px; color:#757575; margin:0px!important; padding:0px!im=
+portant; font-weight:normal; text-decoration:none!important;font-weight:200=
+;"> Kim Larson, who works with hundreds of brands each year as the global h=
+ead of BrandLab, shares her four-step method for getting to the right key p=
+erformance indicators (KPIs). </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"45" align=
+=3D"center"></td>=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+                                                             </td>
+                                                            =20
+</tr>
+                                                            =20
+</table>
+<![endif]--> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%">=20
+                                      <table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0" align=3D"center" class=3D"inner">=20
+                                        <!--[if mso]>
+												=09
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+                                                   =20
+<tr>
+<td valign=3D"top">
+<![endif]-->=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;">=20
+                                              <table width=3D"185" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left" class=3D"inner">=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTfVQ39R7RGW8Goqc6DFW9MipFWhDl_pwMkLRRogbFZXRC9924tQhVriWUd5Nqq2qq772T3VI=
+4ufK3eWLSXvMSmtRZx89gXMZ7pp5NkoN6j0Bl2_cTAp3mKZa69Pqxmcc7-W3SdgBNrG_KnyCpsh=
+eV64x4hBsD4BHXsE1LcCmmi9oaJvc_YMRUCsFCL3REdzI99duWso9Z_VSsmw7tBWUW65Cc54v_F=
+vaK4B3LwWefozJIMBHASFJ3hi_jAn4KQNABppfnFAWAWtrCoJIEOPTFfl/WC0kLgVdJ0l1XH000=
+10lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/mobile-se=
+arch-trends-consumers-to-stores-sm-2.png" width=3D"181" border=3D"0" style=
+=3D"display:block;" class=3D"inner" alt=3D"How Mobile Search Connects Consu=
+mers to Stores" title=3D"How Mobile Search Connects Consumers to Stores" />=
+ </a> </td>=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+</td>
+<td valign=3D"top">
+<![endif]-->=20
+                                              <table width=3D"340" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"right" class=3D"inner">=
+=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;" class=3D"mobile-padding-top"> <p style=3D"font-fa=
+mily:'Roboto', Arial, sans-serif; font-size:13px; line-height:19px; color:#=
+3949AB; margin:0px!important; padding:0px!important; text-transform: upperc=
+ase;font-weight:600;"> <span class=3D"body-text">MICRO-MOMENTS</span> </p> =
+</td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"3"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTfVQ39R7RGW8Goqc6DFW9MipFWhDl_pwMkLRRogbFZXRC9924tQhVriWUd5Nqq2qq772T3VI=
+4ufK3eWLSXvMSmtRZx89gXMZ7pp5NkoN6j0Bl2_cTAp3mKZa69Pqxmcc7-W3SdgBNrG_KnyCpsh=
+eV64x4hBsD4BHXsE1LcCmmi9oaJvc_YMRUCsFCL3REdzI99duWso9Z_VSsmw7tBWUW65Cc54v_F=
+vaK4B3LwWefozJIMBHASFJ3hi_jAn4KQNABrtuOlhww_TzffD4CSUMFXf/WC0kLgVdJ0l1XH000=
+10lm00" target=3D"_blank" style=3D"font-family:'Roboto', Arial, sans-serif;=
+ font-size:16px;=20
+line-height:22px; color:#424242; margin:0px!important; padding:0px!importan=
+t; font-weight:normal; text-decoration:none!important;"
+> <span class=3D"body-text">How Mobile Search Connects Consumers to Stores<=
+/span> </a> </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"6"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top; font-family:'Roboto', Arial, sans-serif; font-size=
+:14px; line-height:18px; color:#757575; margin:0px!important; padding:0px!i=
+mportant; font-weight:normal; text-decoration:none!important;font-weight:20=
+0;"> New data on how consumers use mobile search to connect to brands and b=
+usinesses. </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"45" align=
+=3D"center"></td>=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+                                                             </td>
+                                                            =20
+</tr>
+                                                            =20
+</table>
+<![endif]--> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%">=20
+                                      <table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0" align=3D"center" class=3D"inner">=20
+                                        <!--[if mso]>
+												=09
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+                                                   =20
+<tr>
+<td valign=3D"top">
+<![endif]-->=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;">=20
+                                              <table width=3D"185" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left" class=3D"inner">=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTcqn3BAkqXxTautyDO0qJSDf-asPKqVIV_GlanjTQL-wCCcXXpC63r_CgT3YjEH8LI67DNE5=
+YTul3efzsKWeP1TYBYmrbqQd7nWFGtK1aVoDc_GpkRc8VDtmNgP8j2lz4hHdONdCVUXRLVi9dZw=
+N913s9jYJ5wUYsCNvuYAupJqD-ndXndkbTwHsBMsbKTDL6AbWRQBxMp5KRK9-8Wi-LezVesJ-iy=
+Au6783eDt5S5_CuDHCDpguemfR14qZoDQM5p_gae0Hug_VtGIJDj6mhdb/WC0kLgVdJ0l1XH000=
+10lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/virtual-r=
+eality-advertising-lg.jpg" width=3D"181" border=3D"0" style=3D"display:bloc=
+k;" class=3D"inner" alt=3D"What Virtual Reality Will Mean for Advertising" =
+title=3D"What Virtual Reality Will Mean for Advertising" /> </a> </td>=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+</td>
+<td valign=3D"top">
+<![endif]-->=20
+                                              <table width=3D"340" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"right" class=3D"inner">=
+=20
+                                                <tbody>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;" class=3D"mobile-padding-top"> <p style=3D"font-fa=
+mily:'Roboto', Arial, sans-serif; font-size:13px; line-height:19px; color:#=
+3949AB; margin:0px!important; padding:0px!important; text-transform: upperc=
+ase;font-weight:600;"> <span class=3D"body-text">ADVERTISING</span> </p> </=
+td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"3"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTcqn3BAkqXxTautyDO0qJSDf-asPKqVIV_GlanjTQL-wCCcXXpC63r_CgT3YjEH8LI67DNE5=
+YTul3efzsKWeP1TYBYmrbqQd7nWFGtK1aVoDc_GpkRc8VDtmNgP8j2lz4hHdONdCVUXRLVi9dZw=
+N913s9jYJ5wUYsCNvuYAupJqD-ndXndkbTwHsBMsbKTDL6AbWRQBxMp5KRK9-8Wi-LezVesJ-iy=
+Au6783eDt5S5_CuqLPDzhmpIgrb07Ir_U_tt9SMd9M1slWjiFWITojnxT/WC0kLgVdJ0l1XH000=
+10lm00" target=3D"_blank" style=3D"font-family:'Roboto', Arial, sans-serif;=
+ font-size:16px; line-height:22px;=20
+color:#424242; margin:0px!important; padding:0px!important; font-weight:nor=
+mal; text-decoration:none!important;"
+> <span class=3D"body-text">What Virtual Reality Will Mean for Advertising<=
+/span> </a> </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"6"></td>=
+=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td width=3D"100%" styl=
+e=3D"vertical-align:top; font-family:'Roboto', Arial, sans-serif; font-size=
+:14px; line-height:18px; color:#757575; margin:0px!important; padding:0px!i=
+mportant; font-weight:normal; text-decoration:none!important;font-weight:20=
+0;"> Global search interest in virtual reality grew by nearly 4X in the las=
+t year. What will a future with virtual reality mean for advertisers, creat=
+ors, and storytellers? </td>=20
+                                                  </tr>=20
+                                                  <tr>=20
+                                                    <td height=3D"60"></td>=
+=20
+                                                  </tr>=20
+                                                </tbody>=20
+                                              </table>=20
+                                              <!--[if mso]>
+                                                             </td>
+                                                            =20
+</tr>
+                                                            =20
+</table>
+<![endif]--> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table>=20
+                                      <table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"120" bgcolor=3D"#2979ff" style=3D"border-radiu=
+s:3px;" class=3D"centeralignedmargin" align=3D"center">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td style=3D"font-family:'Robot=
+o', Arial,Sans-serif;font-size:13px;color:#ffffff;text-align:center;font-we=
+ight:500;padding:10px;text-transform:uppercase;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yrSFD4qNtBgFxlb2G3=
+LPFA7kaR5k9kkcD3XWLTUEzK_q6ieNdBhibjMCQnv-DWLgDUoM1f7BoY1q27YedN3ZTQLY0YJ_p=
+Wh-3A0fm09jIWtYyARkDcald0K0sbErHW8QQnlDR6ksYAOClEH7d0mbTutJUQ1YQG45TiyfpLkC=
+7JuAyXT8t_TDYtyNTSB6Va4k-owYw7Jh3YCMNh7YEDYNhBI=3D/WC0kLgVdJ0l1XH00010lm00"=
+ style=3D"color:#ffffff;text-decoration:none;"
+>Read more</a> </td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td height=3D"50"></td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table> </td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table> </td>=20
+                  </tr>=20
+                  <!-- FEATURED MODULE -->=20
+                  <tr>=20
+                    <td width=3D"100%" align=3D"center" style=3D"vertical-a=
+lign:top;" bgcolor=3D"#EEEEEE" height=3D"330">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"535" class=3D"inner">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"45"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"center" style=3D"ve=
+rtical-align:top;text-align:center;"> <span style=3D"font-family:'Roboto', =
+Arial,Sans-serif;font-size:28px;color:#424242;font-weight:300;">Plan for wh=
+at=E2=80=99s next using our DIY tools. </span> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td height=3D"45"></td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table>=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"100%">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"center" style=3D"ve=
+rtical-align:top;">=20
+                              <table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%">=20
+                                      <table width=3D"600" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" align=3D"left" class=3D"inner-c" bgcolor=
+=3D"#ffffff">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;" bgcolor=3D"#1a90f6"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/fulriKJrI2Dp0adrei7lSNpYgcx63B4v9W-VxT=
+EyPO-UZPf2daalFSZwLP_Rj4pWfLHLx14no_eSJuXjsKinvfIwIiAP2JFNvvHJrNXMmd_XduEkO=
+qeZ9zMKYqIQeVceF63HZwo3jifiZMNUMSJ8PKJo_57ZJ4Ci22iDOGYTIyU0jw_FSiKpovuCkB9V=
+LHPc3bHGv3zTr55PYxuIIpQmKQ=3D=3D/WC0kLgVdJ0l1XH00010lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/shopping.=
+png" width=3D"85" border=3D"0" style=3D"display:block; padding-top: 40px;=
+=20
+padding-bottom: 40px" class=3D"inner-b" alt=3D"Shopping Insights" title=3D"=
+Shopping Insights" /> </a> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"25"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <p style=3D"font-family:'Roboto', Arial=
+, sans-serif; font-size:16px; line-height:19px; color:#0b1356; margin:0px!i=
+mportant; padding:0px!important; text-transform: uppercase; font-weight:500=
+;"> <span class=3D"body-text">Shopping Insights</span> </p> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"3"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/fulriKJrI2Dp0adrei7lSNpYgcx63B4v9W-VxT=
+EyPO-UZPf2daalFSZwLP_Rj4pWfLHLx14no_eSJuXjsKinvfIwIiAP2JFNvvHJrNXMmd_XduEkO=
+qeZ9zMKYqIQeVceF63HZwo3jifiZMNUMSJ8PKJo_57ZJ4Ci22iDOGYTIyU0jw_FSiKpovuCkB9V=
+LHPc3bHGv3zTr55PYxuIIpQmKQ=3D=3D/WC0kLgVdJ0l1XH00010lm00" target=3D"_blank"=
+ style=3D"font-family:'Roboto', Arial, sans-serif; font-size:14px; line-hei=
+ght:16px; color:#424242; margin:0px!important; padding:0px!important;=20
+font-weight:300; text-decoration:none!important;"
+> <span class=3D"body-text" style=3D"padding-left: 6px;">Trends and popular=
+ity of products across&nbsp;the U.S.</span> </a> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"30"></td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td align=3D"left" class=3D"desktop" st=
+yle=3D"vertical-align:top;" width=3D"100%" height=3D"40px"></td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%">=20
+                                      <table width=3D"256" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" align=3D"left" class=3D"inner-c" bgcolor=
+=3D"#ffffff">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTdEhFg7U_RyeDsmB5cYASJZ_J9S85L_tiK_y5GqIrRs7EAvj5kJ83swfkIGLf7k4mNF-Q4gL=
+Fn_ksZ6LZ96KOt7-OhjWRMCQEcQTpzfdT7kFIpiNKP5nrI-ZSjLH0PhXSnMWvOP3TsGQE5X4-CN=
+YtSvWuv1dsBu6qIfqEgmb3SV7q_ScKTbP5po2E_d25lDyzQ=3D/WC0kLgVdJ0l1XH00010lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/twgWelcom=
+e-google-trends.png" width=3D"256" border=3D"0" style=3D"display:block;" cl=
+ass=3D"inner-d" alt=3D"Google Trends" title=3D"Google Trends" /> </a> </td>=
+=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"25"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <p style=3D"font-family:'Roboto', Arial=
+, sans-serif; font-size:16px; line-height:19px; color:#0b1356; margin:0px!i=
+mportant; padding:0px!important; text-transform: uppercase; font-weight:500=
+;"> <span class=3D"body-text">Google Trends</span> </p> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"3"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTdEhFg7U_RyeDsmB5cYASJZ_J9S85L_tiK_y5GqIrRs7EAvj5kJ83swfkIGLf7k4mNF-Q4gL=
+Fn_ksZ6LZ96KOt7-OhjWRMCQEcQTpzfdT7kFIpiNKP5nrI-ZSjLH0PhXSnMWvOP3TsGQE5X4-CN=
+YtSvWuv1dsBu6qIfqEgmb3SV7q_ScKTbP5po2E_d25lDyzQ=3D/WC0kLgVdJ0l1XH00010lm00"=
+ target=3D"_blank" style=3D"font-family:'Roboto', Arial, sans-serif; font-s=
+ize:14px; line-height:16px; color:#424242; margin:0px!important;=20
+padding:0px!important; font-weight:300; text-decoration:none!important;"
+> <span class=3D"body-text">Real-time consumer search<br /> behavior</span>=
+ </a> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"30"></td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table>=20
+                                      <table width=3D"256" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" align=3D"right" bgcolor=3D"#ffffff">=20
+                                        <tbody>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"lef=
+t" style=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/9YaQpuZoRd9RKHBxa8MTfiIUdUTL6NojN3IpDy=
+nIc4EcOX3bA8pOBYrPwUfG_5-Kta7JweIsnQQcW4SGPf4SRWssRJmjOBb_h5cMOqnqf-EtHyN_H=
+WXVp_MLEPGB-GSCOTGoeojjrPa3lw_iDUQE8chacsjeIeU3KEC6uB6mOtBH9glS9cGCSFklNWIF=
+WSR1osdikYZz_NUJg7aacEYzog=3D=3D/WC0kLgVdJ0l1XH00010lm00"
+> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/twgWelcom=
+e-test-my-site.png" width=3D"256" border=3D"0" style=3D"display:block;" cla=
+ss=3D"inner-d" alt=3D"Test My Site" title=3D"Test My Site" /> </a> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"25"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <p style=3D"font-family:'Roboto', Arial=
+, sans-serif; font-size:16px; line-height:19px; color:#0b1356; margin:0px!i=
+mportant; padding:0px!important; text-transform: uppercase; font-weight:500=
+;"> <span class=3D"body-text">Test My Site</span> </p> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"3"></td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td width=3D"100%" align=3D"cen=
+ter" style=3D"vertical-align:top;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/9YaQpuZoRd9RKHBxa8MTfiIUdUTL6NojN3IpDy=
+nIc4EcOX3bA8pOBYrPwUfG_5-Kta7JweIsnQQcW4SGPf4SRWssRJmjOBb_h5cMOqnqf-EtHyN_H=
+WXVp_MLEPGB-GSCOTGoeojjrPa3lw_iDUQE8chacsjeIeU3KEC6uB6mOtBH9glS9cGCSFklNWIF=
+WSR1osdikYZz_NUJg7aacEYzog=3D=3D/WC0kLgVdJ0l1XH00010lm00" target=3D"_blank"=
+ style=3D"font-family:'Roboto', Arial, sans-serif; font-size:14px; line-hei=
+ght:16px; color:#424242; margin:0px!important; padding:0px!important;=20
+font-weight:300; text-decoration:none!important;"
+> <span class=3D"body-text">Gauge your site=E2=80=99s performance <br />and=
+ mobile-friendliness</span> </a> </td>=20
+                                          </tr>=20
+                                          <tr>=20
+                                            <td height=3D"30"></td>=20
+                                          </tr>=20
+                                        </tbody>=20
+                                      </table> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td align=3D"left" style=3D"vertical-al=
+ign:top;" width=3D"100%" height=3D"50px"></td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table>=20
+                              <table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"200" bgcolor=3D"#2979ff" style=3D"border-radius:3px;" c=
+lass=3D"centeralignedmargin" align=3D"center">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"font-family:'Roboto', Aria=
+l,Sans-serif;font-size:13px;color:#ffffff;text-align:center;font-weight:500=
+;padding:10px;text-transform:uppercase;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTfr4H9TCttenpdnbcRXZo6WAbbIuHtPjUDkPtTgsDiKyCJM9nm_XzduQDx0Oq6Txxzr0Su8t=
+mCZydB50BGrgyCOE5NQCqeAK1vyCauc-iZxmgvMeGLTqk9Ek-Z-Z7Ap11ypo32z59qDlilDxSRw=
+-yyYYRzoAecvvBUloY0ZiX5d4u1OqNhoYCLA3QZd8qkSJ3AxZ_Af-MEmcmUuiUvpdzoVKAE8dve=
+3HBvw8sztASftHA=3D=3D/WC0kLgVdJ0l1XH00010lm00" style=3D"color:#ffffff;text-=
+decoration:none;"
+>See all planning tools</a> </td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td align=3D"left" style=3D"vertical-align:top;=
+" width=3D"100%" height=3D"50px"></td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table> </td>=20
+                  </tr>=20
+                  <!-- RECOMMENDED MODULE -->=20
+                  <!-- FOOTER MODULE -->=20
+                  <tr>=20
+                    <td width=3D"100%" align=3D"center" style=3D"vertical-a=
+lign:top;" bgcolor=3D"#ffffff">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"535" class=3D"inner">=20
+                        <tbody>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"45"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"left" style=3D"vert=
+ical-align:top;">=20
+                              <!--[if mso]>
+                               =20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+                                =09
+<tr>
+<td valign=3D"top">
+<![endif]-->=20
+                              <table width=3D"250" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" align=3D"left" class=3D"inner centeralignedmargin =
+no-float text-center full-width">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"font-family:'Roboto', Aria=
+l,Sans-serif;font-size:16px;color:#424242;font-weight:500;padding-bottom:5p=
+x;"> Received this e-mail from a friend? </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td style=3D"font-family:'Roboto', Aria=
+l,Sans-serif;font-size:14px;color:#424242;font-weight:200;padding-bottom:10=
+px;"> <img src=3D"http://go.thinkwithgoogle.com/rs/404-CVX-657/images/ic_em=
+ail_blue_18dp_2x.png" style=3D"padding-right:8px;vertical-align: bottom;" w=
+idth=3D"18px" /><a href=3D
+"http://email.thinkwithgoogle.com/dc/PM7EhE08bMh7WapeMwfiHqKtD1r0bABJ6rP-F3=
+z0BwhYl8HUrKp74DfDargI7kdVQY28j3m2mo4eEwDInolhJV1ibuJh3Xc4CEPnzoLVb3eJcD9e0=
+SeLGukC11HVBXvsGVeZ_cu_I8E2PI0gj3L03q060U6Vj_PhfxtenqbGv7Tf8nn3CPzijUXSELSZ=
+QbuAG__ZdiOfcJmkRiSn3MDujaTWYzs3NSy75AF7Kk-2JI_z-rRaXPLh6RdACoDpEdkIUsRZFVl=
+2JKQhtP-wHmQOTv6PBU670tA8toYkHPtG0es=3D/WC0kLgVdJ0l1XH00010lm00" style=3D"c=
+olor:#3762EA;text-decoration:none;"
+>Subscribe here</a></td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td height=3D"10"></td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table>=20
+                              <!--[if mso]>
+                                    </td>
+<td valign=3D"top">
+<![endif]-->=20
+                              <table width=3D"236" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" align=3D"right" class=3D"centeralignedmargin no-fl=
+oat full-width text-center mobile-padding-top">=20
+                                <tbody>=20
+                                  <tr>=20
+                                    <td style=3D"font-family:'Roboto', Aria=
+l,Sans-serif;font-size:16px;color:#424242;font-weight:500;padding-bottom:5p=
+x;"> How are we doing? </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td style=3D"padding-bottom:20px;font-f=
+amily:'Roboto', Arial,Sans-serif;font-size:14px;color:#424242;font-weight:2=
+00;line-height:22px;"> <a href=3D
+"http://email.thinkwithgoogle.com/wVlXgdHCJ00000kM0011m0m" style=3D"color:#=
+3762EA;text-decoration:none;"
+>Give feedback</a> </td>=20
+                                  </tr>=20
+                                  <tr>=20
+                                    <td height=3D"10"></td>=20
+                                  </tr>=20
+                                </tbody>=20
+                              </table>=20
+                              <!--[if mso]>
+                                    </td>
+                                   =20
+</tr>
+                                   =20
+</table>
+                               =20
+<![endif]--> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"30" style=3D"borde=
+r-bottom:1px solid #dddddd;"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"30"></td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" align=3D"left" style=3D"vert=
+ical-align:top;"> <p style=3D"font-family:'Roboto', Arial, sans-serif; font=
+-size:14px; line-height:18px; color:#757575; margin:0px!important; padding:=
+0px!important; font-weight:300;"> <span class=3D"body-text">This email was =
+sent to tosdr@googlegroups.com because you signed up for the latest from Th=
+ink with Google. If you don't want to receive this newsletter in the future=
+, you may <a href=3D
+"http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm60a=
+BlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJmE8Wt3T2mBSX9nvwoznVAj9JXbBv=
+OvKaFW7dJyzmej1DvnihfCj2UXwoDMg_no3y-q-sEJvkf5c4xlObYbjUzIbwdvm8gfdDKidtgsI=
+Ayt-km4a3IYt2HEs_lhBFmTaehv8PJC2M_uKT9KTz5QTZ9xT5a7AcEMdQD32o-dh371IrCCK2ih=
+LVXI-Uynm_4UzLSZfzDAIPhIcS4lKNP2iTNxjKtFV9PNoMTyim7sierr9LQyjVDWQ4gyHxoeORB=
+v3pvapjhZZviijoORlfarQWcSxdjOIURF8rRYkX98mrSdb/WC0kLgVdJ0l1XH00010lm00" tar=
+get=3D"_blank" style=3D"color:#1155CC;=20
+text-decoration:none;"
+>unsubscribe</a> or <a href=3D
+"http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm60a=
+BlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJkX4V3L75vxDoX2PYTI7zdKNLWQXK=
+a4jaqMzsPkhLXXfCA6MZgptarXB2Po1C9KNfgqB3tvCQEOeQm-2uv3dFizSeYQaDsPgMHgKiOzO=
+pJh7QxzVyXpC2leCctcIS7SrVjM15xxIYJjYQeTrz_sMNBOUFUASL0Gczsiru5LR0u3MhfnODio=
+W0yyjQSFbb7IDsWK5V6OdFEHXcPBpezbpYQF6v7ZxASnXS32MGZnwOofWyq5gYhfzoCMaFmE7Mo=
+Z-Rw=3D=3D/WC0kLgVdJ0l1XH00010lm00" target=3D"_blank" style=3D"color:#1155C=
+C; text-decoration:none;"
+>update your preferences</a>. <br /><br /> =C2=A9 2016 Google Inc. All Righ=
+ts Reserved. Google and the Google logo are trademarks of Google Inc. <a hr=
+ef=3D
+"http://email.thinkwithgoogle.com/b0000HVJmCn0X0kN0101ldg" target=3D"_blank=
+" style=3D"color:#1155CC; text-decoration:none;"
+>www.google.com</a> 1600 Amphitheatre Parkway, Mountain View, CA 94043.</sp=
+an> </p> </td>=20
+                          </tr>=20
+                          <tr>=20
+                            <td width=3D"100%" height=3D"40"></td>=20
+                          </tr>=20
+                        </tbody>=20
+                      </table> </td>=20
+                  </tr>=20
+                  <!-- FOOTER MODULE -->=20
+                </tbody>=20
+              </table>=20
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"600" class=3D"main-table" style=3D"min-width:600px;">=20
+                <tbody>=20
+                  <tr>=20
+                    <td height=3D"10" width=3D"100%">=20
+                      <div style=3D"display:none; white-space: nowrap; line=
+-height: 0; color: #f8f8f8;">
+                         - - - - - - - - - - - - - - - - - - - - - - - - - =
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -=
+ - -=20
+                      </div> </td>=20
+                  </tr>=20
+                </tbody>=20
+              </table> </td>=20
+          </tr>=20
+        </tbody>=20
+      </table>=20
+    </div> =20
+ =20
+<img src=3D"http://email.thinkwithgoogle.com/trk?t=3D1&mid=3DNDA0LUNWWC02NT=
+c6MDozODIwOjY1MTY6MToxMjAxOTo3OjMxMDM0MTAtMjpudWxs" width=3D"1" height=3D"1=
+" style=3D"display:none !important;" alt=3D"" />
+</body>
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/1811991347.547659510.1474160611033.JavaMail.root%40abmas01=
+.marketo.org?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/tosdr/1811991347.547659510.1474160611033.JavaMail.root%40abmas0=
+1.marketo.org</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_547659508_989704538.1474160611032--

@@ -1,0 +1,524 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp247026qek;
+        Wed, 12 Sep 2012 12:44:38 -0700 (PDT)
+Received: by 10.60.172.236 with SMTP id bf12mr24053172oec.23.1347479077799;
+        Wed, 12 Sep 2012 12:44:37 -0700 (PDT)
+Return-Path: <tosdr+bncBC3ILW55UQGBBJGMYOBAKGQEGY5HW2I@googlegroups.com>
+Received: from mail-oa0-f64.google.com (mail-oa0-f64.google.com [209.85.219.64])
+        by mx.google.com with ESMTPS id f7si27329053obd.28.2012.09.12.12.44.37
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 12 Sep 2012 12:44:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3ILW55UQGBBJGMYOBAKGQEGY5HW2I@googlegroups.com designates 209.85.219.64 as permitted sender) client-ip=209.85.219.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3ILW55UQGBBJGMYOBAKGQEGY5HW2I@googlegroups.com designates 209.85.219.64 as permitted sender) smtp.mail=tosdr+bncBC3ILW55UQGBBJGMYOBAKGQEGY5HW2I@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by oagi10 with SMTP id i10sf717523oag.29
+        for <multiple recipients>; Wed, 12 Sep 2012 12:44:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=K1Frz6G+6Hx9UMbtRH2QO07Z1DEKQaWTUTsO5W6ljSo=;
+        b=nMpUt4LdVWX3PKT5SuTyO/TgrKjBbS0DgtXj+JJ3YYeKmN0oYgOPpRB1Bp5LIY4K+K
+         d8REI8285bcUgXRzaMx0zrLkot+qn90lC9ToPXO5UJcBO2czpjToXknxhHtW1xzLmGTM
+         j1cXNwouo3kBod1nBzOaD8aVGNJfhdFMQgIlaz7/74sZr/qUSU9DgqKne0bOSzUaG5bC
+         7PBOg/vw6XyGO9JxGD0soqzPeMWHtu59D8vKz1uuvDG3WdhxAfqenWFRFJoJNTiYG6Vb
+         qqwSUFqFTG83CZhdxxQZw7BhPEczDA4lQDIWviBOxPIOxcHxRZ8CwnJhRPxKN/OldvrU
+         YXVg==
+Received: by 10.52.72.16 with SMTP id z16mr4066272vdu.15.1347479076962;
+        Wed, 12 Sep 2012 12:44:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.100.74.30 with SMTP id w30ls575458ana.5.gmail; Wed, 12 Sep
+ 2012 12:44:36 -0700 (PDT)
+Received: by 10.236.152.5 with SMTP id c5mr2893061yhk.10.1347479075877;
+        Wed, 12 Sep 2012 12:44:35 -0700 (PDT)
+Date: Wed, 12 Sep 2012 12:44:35 -0700 (PDT)
+From: Duck X <duckjr159@gmail.com>
+To: tosdr@googlegroups.com
+Cc: joe@switchbook.com
+Message-Id: <c28c947a-1a0f-47fb-a20a-5a5099c82c77@googlegroups.com>
+In-Reply-To: <1347292880.9323.140661126012825.64CF1047@webmail.messagingengine.com>
+References: <CA+aD3u05iJSkJtL2fgO=UeVjYjec1N4Ssb1mRWM6vG29xaGg9w@mail.gmail.com>
+ <3ee86880-b655-435b-9924-6ff26b819af9@googlegroups.com>
+ <ed202447-10f6-491e-a674-6329970f2713@googlegroups.com>
+ <CAGT43G8+jvMS5PFo3yaOHoaaN2LSqtsjo+u_Y9S93D9SCKxOJg@mail.gmail.com>
+ <1347292880.9323.140661126012825.64CF1047@webmail.messagingengine.com>
+Subject: Re: [tosdr:800] Re: standardizing data point texts
+MIME-Version: 1.0
+X-Original-Sender: duckjr159@gmail.com
+X-Original-Authentication-Results: ls.google.com; spf=pass (google.com: domain of
+ duckjr159@gmail.com designates internal as permitted sender)
+ smtp.mail=duckjr159@gmail.com; dkim=pass
+ header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_856_20636859.1347479075391"
+
+------=_Part_856_20636859.1347479075391
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Something like GPL or CC-By-SA would work well enough that it won't be used=
+=20
+for commercial purposes.
+
+On Monday, September 10, 2012 12:01:22 PM UTC-4, Joe Andrieu wrote:
+>
+>   Par,
+>  =20
+>  The motivation behind the no derivatives license makes sense, but it=20
+> makes it hard for other services to build on your work. It's a classic=20
+> dichotomy of open source: if you want people to build on your work, you=
+=20
+> have to let them fork it. FWIW, as useful as Creative Commons is, nobody=
+=20
+> has been able to build on it (which may or may not be a good thing=20
+> depending on your point of view).
+>  =20
+>  That said, you may be able to establish trademark over "Common Terms" if=
+=20
+> you carefully protect it, which will give you much of the same protection=
+.=20
+> People won't be able to say their terms are "Common Terms". IANAL, but I=
+=20
+> think pursuing this route would allow other projects the freedom to fork=
+=20
+> without diluting the meaning of "Common Terms" terms.=20
+>  =20
+>  Or you could always just give ToS;DR a separate license.
+>  =20
+>  -j
+>  =20
+>  On Mon, Sep 10, 2012, at 08:32 AM, P=E4r Lanner=F6 wrote:
+>
+>  Hi!
+>
+> We can drop the CC-BY-ND license if there is a good reason to do that!
+>
+> The only reason we put ND (no derivatives) in the license was because we=
+=20
+> would not want anybody to confuse the meaning of a term/data point, by=20
+> publishing a modified version with identical name.
+> Anybody should be able to add new terms, but if they do, the new term=20
+> should have its own name and uri, or at least a new version number. That =
+is=20
+> our only concern. Except for that, CommonTerms wants the material to be a=
+s=20
+> free and redistributable as it possibly can.
+>
+> Please compare with Creative Commons licenses and icons! The CC icons are=
+=20
+> NOT CC-licensed, and as far as I can tell, neither are the license=20
+> definitions (eg. http://creativecommons.org/licenses/by/3.0/legalcode).
+>
+> Would you argue that Common terms definitions should have another license=
+=20
+> than Creative Commons licence definitions?
+>
+> Best regards
+> P=E4r
+> =20
+> 8 sep 2012 kl. 16:05 skrev Duck X <duck...@gmail.com <javascript:>>:
+> =20
+>
+>  They're not compatible with our license because they're CC=20
+> Attribution-NoDerivs. We need permission to use them for this purpose.
+>
+> On Friday, September 7, 2012 7:31:16 AM UTC-4, P=E4r Lanner=F6 wrote:=20
+>
+> Hi!
+>
+> If you like, the CommonTerms database of common terms can be used as a=20
+> master repository for such standardized patterns.
+>
+> We already have a database of some 450 patterns, and can easily add TOS;D=
+R=20
+> data points, and adapt the API to consequent requirements.
+> See http://www.commonterms.net/patterns
+> Every pattern gets assigned a unique URI, and when an HTTP call is made t=
+o=20
+> that address, a serialization of the pattern is returned.
+> When somebody (eg. after discussing the issue on the mailinglist) wants t=
+o=20
+> assign a data point to a website, they should start by searching the=20
+> database for a suitable pattern.
+> If they find one, they can assign the URI of the pattern to the website.
+> If they don't find one, they can add a new pattern to the database. This=
+=20
+> will create a new URI, which they can assign to the website.
+> API methods for searching and adding to the database are under developmen=
+t.
+> URI structure needs to be discussed.
+>
+> I can see that the idea of having a master repository of patterns=20
+> conflicts slightly with the Unhosted ideal of being independent of any=20
+> single host. But all patterns could be exported regularly as json files f=
+or=20
+> offline storage...
+>
+> Best regards
+> P=E4r Lanner=F6, Commonterms.net
+>
+>
+> Den torsdagen den 6:e september 2012 kl. 20:19:58 UTC+2 skrev Michiel de=
+=20
+> Jong:=20
+>
+> Hi,
+>
+> this is something that came up in the opennotice confcall just now -
+> if you look at for instance http://tos-dr.info/topics.html#track you
+> see the following data point texts:
+>
+> You must use your real name (yahoo)
+> You must use your real name (facebook)
+> You must use your real name (xing)
+> You must provide your legal name (github)
+>
+> These (at least the first three) are obviously the same thing (even
+> though we could weigh them differently depending on the type of
+> service).
+>
+> Right now, we are not reflecting that, as data point texts are just
+> free texts. But we could start doing that, and that way we would build
+> up a valuable ontology of typical data points that we see recurring a
+> lot.
+>
+> Once we have such a list, sites could pro-actively auto-review
+> themselves, and in particular, if sites use templated ToS texts like
+> the ones Docracy works on, then these could come pre-reviewed with
+> such standardized data point texts. The weighing would then still
+> depend on the specific service type, although even that could default
+> to a common suggested value.
+>
+> Of course you could also then try to detect commonly used phrases in
+> ToS texts, trying to treat human-readable texts as if they were
+> machine-readable, but that's another extra step. For now just
+> standardizing the data point texts would already be a very valuable
+> thing, i think.
+>
+> Thanks Veronica Par and others on the confcall for the suggestion!
+>
+>
+> Ciao,
+> Michiel
+>
+>  =20
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---
+> You received this message because you are subscribed to the Google Groups=
+=20
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to to...@googlegroups.com <javascript:>=
+.
+> To unsubscribe from this group, send email to tosdr+un...@googlegroups.co=
+m<javascript:>
+> .
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+>
+>  =20
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---
+> You received this message because you are subscribed to the Google Groups=
+=20
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to to...@googlegroups.com <javascript:>=
+.
+> To unsubscribe from this group, send email to tosdr+un...@googlegroups.co=
+m<javascript:>
+> .
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+>
+>   =20
+> --=20
+> Joe Andrieu
+> SwitchBook
+> j...@switchbook.com <javascript:>
+> +1(805)705-8651
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_856_20636859.1347479075391
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Something like GPL or CC-By-SA would work well enough that it won't be used=
+ for commercial purposes.<br><br>On Monday, September 10, 2012 12:01:22 PM =
+UTC-4, Joe Andrieu wrote:<blockquote class=3D"gmail_quote" style=3D"margin:=
+ 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">
+<div><div style=3D"font-family:Arial;font-size:medium" dir=3D"ltr"><div>
+	<div>
+		<div>
+			Par,</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			The motivation behind the no derivatives license makes sense, but it mak=
+es it hard for other services to build on your work. It's a classic dichoto=
+my of open source: if you want people to build on your work, you have to le=
+t them fork it. FWIW, as useful as Creative Commons is, nobody has been abl=
+e to build on it (which may or may not be a good thing depending on your po=
+int of view).</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			That said, you may be able to establish trademark over "Common Terms" if=
+ you carefully protect it, which will give you much of the same protection.=
+ People won't be able to say their terms are "Common Terms". IANAL, but I t=
+hink pursuing this route would allow other projects the freedom to fork wit=
+hout diluting the meaning of "Common Terms" terms.&nbsp;</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			Or you could always just give ToS;DR a separate license.</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			-j</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			On Mon, Sep 10, 2012, at 08:32 AM, P=E4r Lanner=F6 wrote:</div>
+		<blockquote type=3D"cite">
+			<div bgcolor=3D"#FFFFFF">
+				Hi!<br>
+				<br>
+				We can drop the CC-BY-ND license if there is a good reason to do that!<=
+br>
+				<br>
+				The only reason we put ND (no derivatives) in the license was because w=
+e would not want anybody to confuse the meaning of a term/data point, by pu=
+blishing a modified version with identical name.<br>
+				Anybody should be able to add new terms, but if they do, the new term s=
+hould have its own name and uri, or at least a new version number. That is =
+our only concern. Except for that, CommonTerms wants the material to be as =
+free and redistributable as it possibly can.<br>
+				<br>
+				Please compare with Creative Commons licenses and icons! The CC icons a=
+re NOT CC-licensed, and as far as I can tell, neither are the license defin=
+itions (eg. <a href=3D"http://creativecommons.org/licenses/by/3.0/legalcode=
+" target=3D"_blank">http://creativecommons.org/<wbr>licenses/by/3.0/legalco=
+de</a>).<br>
+				<br>
+				Would you argue that Common terms definitions should have another licen=
+se than Creative Commons licence definitions?<br>
+				<br>
+				Best regards<br>
+				P=E4r<br>
+				<div>
+					<br>
+					8 sep 2012 kl. 16:05 skrev Duck X &lt;<a href=3D"javascript:" target=
+=3D"_blank" gdf-obfuscated-mailto=3D"80oq10hkDvEJ">duck...@gmail.com</a>&gt=
+;:<br>
+					&nbsp;</div>
+				<blockquote type=3D"cite">
+					<div>
+						They're not compatible with our license because they're CC Attributio=
+n-NoDerivs. We need permission to use them for this purpose.<br>
+						<br>
+						On Friday, September 7, 2012 7:31:16 AM UTC-4, P=E4r Lanner=F6 wrote:
+						<blockquote style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc =
+solid;padding-left:1ex">
+							Hi!<br>
+							<br>
+							If you like, the CommonTerms database of common terms can be used as=
+ a master repository for such standardized patterns.<br>
+							<br>
+							We already have a database of some 450 patterns, and can easily add =
+TOS;DR data points, and adapt the API to consequent requirements.<br>
+							See <a href=3D"http://www.commonterms.net/patterns" target=3D"_blank=
+">http://www.commonterms.net/<wbr>patterns</a><br>
+							Every pattern gets assigned a unique URI, and when an HTTP call is m=
+ade to that address, a serialization of the pattern is returned.<br>
+							When somebody (eg. after discussing the issue on the mailinglist) wa=
+nts to assign a data point to a website, they should start by searching the=
+ database for a suitable pattern.<br>
+							If they find one, they can assign the URI of the pattern to the webs=
+ite.<br>
+							If they don't find one, they can add a new pattern to the database. =
+This will create a new URI, which they can assign to the website.<br>
+							API methods for searching and adding to the database are under devel=
+opment.<br>
+							URI structure needs to be discussed.<br>
+							<br>
+							I can see that the idea of having a master repository of patterns co=
+nflicts slightly with the Unhosted ideal of being independent of any single=
+ host. But all patterns could be exported regularly as json files for offli=
+ne storage...<br>
+							<br>
+							Best regards<br>
+							P=E4r Lanner=F6, <a href=3D"http://Commonterms.net" target=3D"_blank=
+">Commonterms.net</a><br>
+							<br>
+							<br>
+							Den torsdagen den 6:e september 2012 kl. 20:19:58 UTC+2 skrev Michie=
+l de Jong:
+							<blockquote style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc=
+ solid;padding-left:1ex">
+								Hi,<br>
+								<br>
+								this is something that came up in the opennotice confcall just now =
+-<br>
+								if you look at for instance <a href=3D"http://tos-dr.info/topics.ht=
+ml#track" target=3D"_blank">http://tos-dr.info/topics.<wbr>html#track</a> y=
+ou<br>
+								see the following data point texts:<br>
+								<br>
+								You must use your real name (yahoo)<br>
+								You must use your real name (facebook)<br>
+								You must use your real name (xing)<br>
+								You must provide your legal name (github)<br>
+								<br>
+								These (at least the first three) are obviously the same thing (even=
+<br>
+								though we could weigh them differently depending on the type of<br>
+								service).<br>
+								<br>
+								Right now, we are not reflecting that, as data point texts are just=
+<br>
+								free texts. But we could start doing that, and that way we would bu=
+ild<br>
+								up a valuable ontology of typical data points that we see recurring=
+ a<br>
+								lot.<br>
+								<br>
+								Once we have such a list, sites could pro-actively auto-review<br>
+								themselves, and in particular, if sites use templated ToS texts lik=
+e<br>
+								the ones Docracy works on, then these could come pre-reviewed with<=
+br>
+								such standardized data point texts. The weighing would then still<b=
+r>
+								depend on the specific service type, although even that could defau=
+lt<br>
+								to a common suggested value.<br>
+								<br>
+								Of course you could also then try to detect commonly used phrases i=
+n<br>
+								ToS texts, trying to treat human-readable texts as if they were<br>
+								machine-readable, but that's another extra step. For now just<br>
+								standardizing the data point texts would already be a very valuable=
+<br>
+								thing, i think.<br>
+								<br>
+								Thanks Veronica Par and others on the confcall for the suggestion!<=
+br>
+								<br>
+								<br>
+								Ciao,<br>
+								Michiel</blockquote>
+						</blockquote>
+						<p>
+							&nbsp;</p>
+						--<br>
+						<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info<=
+/a> // <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitt=
+er.com/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" targe=
+t=3D"_blank">www.github.com/Unhosted/ToS-DR</a><br>
+						---<br>
+						You received this message because you are subscribed to the Google Gr=
+oups "Terms of Service; Didn't Read" group.<br>
+						To post to this group, send email to <a href=3D"javascript:" target=
+=3D"_blank" gdf-obfuscated-mailto=3D"80oq10hkDvEJ">to...@googlegroups.com</=
+a>.<br>
+						To unsubscribe from this group, send email to <a href=3D"javascript:"=
+ target=3D"_blank" gdf-obfuscated-mailto=3D"80oq10hkDvEJ">tosdr+un...@<wbr>=
+googlegroups.com</a>.<br>
+						Visit this group at <a href=3D"http://groups.google.com/group/tosdr?h=
+l=3Den" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den=
+</a>.<br>
+						For more options, visit <a href=3D"https://groups.google.com/groups/o=
+pt_out" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>=
+.<br>
+						&nbsp;<br>
+						&nbsp;</div>
+				</blockquote>
+			</div>
+			<p>
+				&nbsp;</p>
+			--<br>
+			<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a>=
+ // <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.=
+com/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=
+=3D"_blank">www.github.com/Unhosted/ToS-DR</a><br>
+			---<br>
+			You received this message because you are subscribed to the Google Group=
+s "Terms of Service; Didn't Read" group.<br>
+			To post to this group, send email to <a href=3D"javascript:" target=3D"_=
+blank" gdf-obfuscated-mailto=3D"80oq10hkDvEJ">to...@googlegroups.com</a>.<b=
+r>
+			To unsubscribe from this group, send email to <a href=3D"javascript:" ta=
+rget=3D"_blank" gdf-obfuscated-mailto=3D"80oq10hkDvEJ">tosdr+un...@<wbr>goo=
+glegroups.com</a>.<br>
+			Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=
+=3Den" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den<=
+/a>.<br>
+			For more options, visit <a href=3D"https://groups.google.com/groups/opt_=
+out" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>.<b=
+r>
+			&nbsp;<br>
+			&nbsp;</blockquote>
+	</div>
+</div>
+<div>
+	&nbsp;</div>
+</div><div>-- </div>
+<div>Joe Andrieu</div>
+<div>SwitchBook</div>
+<div><a href=3D"javascript:" target=3D"_blank" gdf-obfuscated-mailto=3D"80o=
+q10hkDvEJ">j...@switchbook.com</a></div>
+<div>+1(805)705-8651</div>
+</div></blockquote>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_856_20636859.1347479075391--

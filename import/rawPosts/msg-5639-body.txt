@@ -1,0 +1,130 @@
+Return-Path: <tosdr+bncBDLNDZOVVYBRBFENQCHAKGQETFYVLQA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 46D4816174B
+	for <anything@michielbdejong.com>; Tue, 18 Jun 2013 09:04:59 +0200 (CEST)
+Received: from mfilter24-d.gandi.net (mfilter24-d.gandi.net [217.70.178.152])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 42D622260A4
+	for <anything@michielbdejong.com>; Tue, 18 Jun 2013 09:04:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter24-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter24-d.gandi.net (mfilter24-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id fOEFHsXfBZ-A for <anything@michielbdejong.com>;
+	Tue, 18 Jun 2013 09:04:57 +0200 (CEST)
+Received: from mail-wg0-x239.google.com (mail-wg0-x239.google.com [IPv6:2a00:1450:400c:c00::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 409AA226078
+	for <anything@michielbdejong.com>; Tue, 18 Jun 2013 09:04:54 +0200 (CEST)
+Received: by mail-wg0-f57.google.com with SMTP id b12sf779439wgh.22
+        for <anything@michielbdejong.com>; Tue, 18 Jun 2013 00:04:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:message-id:in-reply-to
+         :subject:mime-version:x-originating-ip:x-mailer:thread-topic
+         :thread-index:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=bu5ah/FLR1TSwNW4v1Be/hTgM778MwFFyJblRyukPcQ=;
+        b=KxSPsDwqZLO7K8Et7DIL6Ct85y5ON2qeD9lXxjCUHHn3rAjgk3DDoI4512jZhS1AL3
+         xTMPtshphQ8gGrICwldtZoRDP97a1P4oWWfGc4iJabQLdrhjMDOF0BlhHpYHFMbaHNKU
+         JyHraE9Z/NZq1YgLFC2d7VTTfSPPKxPBDL+oDjp76CWSCM9INa7gOxoCSLErHkq0N14N
+         xtbcF9FDnV8m9GMaJFgQ5WvFM0QYY4D8XAD68NvBwtBouQu7eK7HoOHfpFPn624jycbZ
+         y4l9m7pjrBeYXfA32AhIrUG29cGM599rbtX0n80T0/ktgsih4uq0D8YrIYSGTrMseVcy
+         D+vg==
+X-Received: by 10.180.212.14 with SMTP id ng14mr362651wic.5.1371539092859;
+        Tue, 18 Jun 2013 00:04:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.86.194 with SMTP id r2ls543243wiz.35.canary; Tue, 18 Jun
+ 2013 00:04:52 -0700 (PDT)
+X-Received: by 10.15.75.201 with SMTP id l49mr23977659eey.3.1371539092289;
+        Tue, 18 Jun 2013 00:04:52 -0700 (PDT)
+Received: from mail.brainsware.org (prod-mail01.esotericsystems.at. [176.9.94.134])
+        by gmr-mx.google.com with ESMTP id bk51si1756047eeb.0.2013.06.18.00.04.52
+        for <tosdr@googlegroups.com>;
+        Tue, 18 Jun 2013 00:04:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 176.9.94.134 is neither permitted nor denied by best guess record for domain of i.galic@brainsware.org) client-ip=176.9.94.134;
+Received: from localhost (localhost [127.0.0.1])
+	by mail.brainsware.org (Postfix) with ESMTP id CCB1D21C46
+	for <tosdr@googlegroups.com>; Tue, 18 Jun 2013 07:04:51 +0000 (UTC)
+X-Virus-Scanned: amavisd-new at brainsware.org
+Received: from mail.brainsware.org ([127.0.0.1])
+	by localhost (mail.brainsware.org [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id 2OuqmHI0ReJE for <tosdr@googlegroups.com>;
+	Tue, 18 Jun 2013 07:04:48 +0000 (UTC)
+Received: from mail.brainsware.org (mail.brainsware.org [176.9.94.134])
+	by mail.brainsware.org (Postfix) with ESMTP id E7B0A21C45
+	for <tosdr@googlegroups.com>; Tue, 18 Jun 2013 07:04:47 +0000 (UTC)
+Date: Tue, 18 Jun 2013 07:04:47 +0000 (UTC)
+From: Igor =?utf-8?Q?Gali=C4=87?= <i.galic@brainsware.org>
+To: "ToS;DR" <tosdr@googlegroups.com>
+Message-ID: <1154278162.91976.1371539087697.JavaMail.root@brainsware.org>
+In-Reply-To: <657294603.91956.1371538400652.JavaMail.root@brainsware.org>
+Subject: [tosdr:2318] coursera
+MIME-Version: 1.0
+X-Originating-IP: [91.130.91.18]
+X-Mailer: Zimbra 8.0.1_GA_5438 (ZimbraWebClient - GC25 (Linux)/8.0.1_GA_5438)
+Thread-Topic: coursera
+Thread-Index: GeDmBadvLGybQ9BrDP+CGurnl76l4w==
+X-Original-Sender: i.galic@brainsware.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 176.9.94.134 is neither permitted nor denied by best guess
+ record for domain of i.galic@brainsware.org) smtp.mail=i.galic@brainsware.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Hi folks,
+
+I started looking into adding coursera.org to the ToS;DR
+but I'm a little startled by the fact that
+
+Terms of Use and the Privacy Policy actually reside on the
+same page:
+
+   https://www.coursera.org/about/terms
+   https://www.coursera.org/about/terms/privacypolicy
+
+For now I've opted to include both in the same <docname>.
+
+But the really irritating part is that they are loaded
+via JavaScript, so I don't know what that will do to the
+crawler.
+
+you can find my patch here:
+
+  https://github.com/igalic/tosback2/tree/coursera
+
+  https://github.com/tosdr/tosback2/pull/9
+
+So long,
+-- i
+Igor Gali=C4=87
+
+Tel: +43 (0) 664 886 22 883
+Mail: i.galic@brainsware.org
+URL: http://brainsware.org/
+GPG: 6880 4155 74BD FD7C B515  2EA5 4B1D 9E08 A097 C9AE
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,237 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp310717ioi;
+        Sat, 23 Apr 2016 22:59:18 -0700 (PDT)
+X-Received: by 10.107.128.74 with SMTP id b71mr8312936iod.87.1461477558098;
+        Sat, 23 Apr 2016 22:59:18 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBL6B6G4AKGQEE22PI3A@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id u82si17805747iou.97.2016.04.23.22.59.17
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 22:59:18 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBL6B6G4AKGQEE22PI3A@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBL6B6G4AKGQEE22PI3A@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBL6B6G4AKGQEE22PI3A@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id B2E9341C080
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:59:14 +0200 (CEST)
+Received: from mfilter33-d.gandi.net (mfilter33-d.gandi.net [217.70.178.164])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A238522604D
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:59:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter33-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter33-d.gandi.net (mfilter33-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id NFEs4yr73y2b for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 07:59:12 +0200 (CEST)
+Received: from mail-ig0-x239.google.com (mail-ig0-x239.google.com [IPv6:2607:f8b0:4001:c05::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8B035226058
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 07:59:12 +0200 (CEST)
+Received: by mail-ig0-x239.google.com with SMTP id sq19sf11180796igc.1
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 22:59:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=zR5FF+DmbPFayke1NFLlORW/C7Xf2AjM+yN00pKWUB0=;
+        b=KUTHsD7N7rw5pCli3uc3jdHAB+jSxpIxR7iP/c45uoGOQVZ1UavAQzy9XOxj1uNZ97
+         pUMJoV+89CRlxsDj+COd3GGJ0Sa6wecH9ZqiuG+37xjE5rc8ToWs9NThf2cz7ZFQnRNl
+         6ZJtwtK8XiPzTmItVrL9TzRlyl6RTE5F7B41m+HK1BMoFMxZFvekfPOuRizD2oLjne19
+         Kla/IVcR2ZIpAo/fNeNf/b5z4UoHuxfOHd+aQ5vPljxRy7i31uFM44rUCM8CXBKuHKtF
+         AEgmCVm3u0K2orMeKFDQBJaKGL93s5XSu9NGjUrTVCLbGbwYjySEBI0fOjM4NHxIXags
+         o2Vg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=zR5FF+DmbPFayke1NFLlORW/C7Xf2AjM+yN00pKWUB0=;
+        b=EzoJYNuXT9lOAQow2BrdNFj0YPK1OTTLqtnGyOQb8Y7lGOOqkoxUeJKvKoKjxbE/qH
+         AUGGToYATd8yn1rzjdq5/CP595OJL+rViGBpE5SamWP+GyonxB02ME5LldmQIbtHfGYp
+         WVOTZycgfY1xOhvmIDNgXS91ezsPjYTQ/8QfFMQSQRaJelk8gDuj0ltxUKP2SFurguCi
+         nLxLPClo8czzgUFV/ZWKgioNb/1+NrOOWNPy+vjARH9HhkNcfhe/2YzQR58JABNd4FJr
+         jj3GK/QCZdS/9PkkwKvI+pOT5dY7wK/mOR9qypM380JhQ84dqqQnrUgM2gRgS60ey4of
+         mVLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=zR5FF+DmbPFayke1NFLlORW/C7Xf2AjM+yN00pKWUB0=;
+        b=hRwfTggnOX5STVuUCtlIs84G4wpwbQCyoyW1Bt2i+pW26d+fsngwNFXDoD/sN1AyUS
+         sxUejs8TOrqIfkRd9BiTxc6/wcdQ094j7ANbEcQuTV6N+1dG0MUbqHwH36RTM/yQgVQS
+         2P9bul0mm1tMyZiFmTaI9Hct6IB3Sj+uu2VK5NVK4wq5EqHJkDhY5fASN0AvrA35KN1w
+         yToSk87s0DTnH5CFV+YsBjR2Khq+SpFNpXYcUTv6Ls7LmKFexz8DY6eqdCpNN6EJbPK3
+         sCkGUIINlwIYcscNNVOc3ZIWdtd+HE/zYYSmZRDyCrDyCN4xOI43WgdDeLyAHomDIcpI
+         qQXw==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FVvMhLUv8N2LlXrC5XzltB37imM8t6xm3UZZ1P8cd0rkY08oUgfPBW3fjg7cN7z7g==
+X-Received: by 10.157.32.137 with SMTP id x9mr309279ota.11.1461477551626;
+        Sat, 23 Apr 2016 22:59:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.10.47 with SMTP id 44ls8178otg.54.gmail; Sat, 23 Apr 2016
+ 22:59:11 -0700 (PDT)
+X-Received: by 10.182.117.170 with SMTP id kf10mr307956obb.18.1461477551241;
+        Sat, 23 Apr 2016 22:59:11 -0700 (PDT)
+Date: Sat, 23 Apr 2016 22:59:10 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <84a6c6e0-b407-4b65-9584-8c477fb5398c@googlegroups.com>
+Subject: [tosdr:3873] [Good] Pinterest will work with you to resolve any disputes.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4336_1484256416.1461477550687"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4336_1484256416.1461477550687
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4337_235979743.1461477550687"
+
+------=_Part_4337_235979743.1461477550687
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+https://about.pinterest.com/en/terms-service
+
+*10. Arbitration*=20
+
+=E2=80=9CFor any dispute you have with Pinterest, you agree to first contac=
+t us=20
+<https://help.pinterest.com/login-request> and attempt to resolve the=20
+dispute with us informally=E2=80=A6
+
+
+if not=E2=80=A6
+
+
+Each party will be responsible for paying any AAA filing, administrative=20
+and arbitrator fees in accordance with AAA rules, except that Pinterest=20
+will pay for your reasonable filing, administrative, and arbitrator fees if=
+=20
+your claim for damages does not exceed $75,000 and is non-frivolous (as=20
+measured by the standards set forth in Federal Rule of Civil Procedure=20
+11(b)).=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/84a6c6e0-b407-4b65-9584-8c477fb5398c%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4337_235979743.1461477550687
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><span style=3D"font-family: &quot;Calibri&quot;,&quot=
+;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-fami=
+ly: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: min=
+or-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme=
+-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; m=
+so-bidi-language: AR-SA;"><a href=3D"https://about.pinterest.com/en/terms-s=
+ervice"><font color=3D"#0088cc" size=3D"2">https://about.pinterest.com/en/t=
+erms-service</font></a></span></div><div><span style=3D"font-family: &quot;=
+Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; ms=
+o-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ha=
+nsi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&qu=
+ot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast=
+-language: EN-US; mso-bidi-language: AR-SA;"><font size=3D"2"><br></font></=
+span></div><div><span style=3D"font-family: &quot;Calibri&quot;,&quot;sans-=
+serif&quot;; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareas=
+t-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-them=
+e-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso=
+-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-languag=
+e: EN-US; mso-bidi-language: AR-SA;"><font color=3D"#000000" face=3D"Times =
+New Roman" size=3D"2">
+
+</font><h2 style=3D"margin: 10pt 0in 0pt;"><span style=3D"mso-bidi-font-fam=
+ily: Arial;"><strong><font color=3D"#4f81bd" face=3D"Cambria" size=3D"2">10=
+. Arbitration</font></strong></span></h2><font color=3D"#000000" face=3D"Ti=
+mes New Roman" size=3D"2">
+
+</font><p><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans-seri=
+f&quot;; mso-bidi-font-family: Arial;"><font color=3D"#000000" size=3D"2">=
+=E2=80=9CFor any dispute you have with Pinterest, you agree
+to first=C2=A0</font><a href=3D"https://help.pinterest.com/login-request"><=
+span style=3D"mso-fareast-font-family: &quot;Times New Roman&quot;; mso-far=
+east-theme-font: major-fareast;"><font color=3D"#0088cc" size=3D"2">contact
+us</font></span></a><font color=3D"#000000" size=3D"2">=C2=A0and attempt to=
+ resolve the dispute with us informally=E2=80=A6</font></span></p><font col=
+or=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans-seri=
+f&quot;; mso-bidi-font-family: Arial;"><font color=3D"#000000" size=3D"2"><=
+br></font></span></p><p><span style=3D"font-family: &quot;Helvetica&quot;,&=
+quot;sans-serif&quot;; mso-bidi-font-family: Arial;"><font color=3D"#000000=
+" size=3D"2">if not=E2=80=A6</font></span></p><font color=3D"#000000" face=
+=3D"Times New Roman" size=3D"2">
+
+</font><p><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans-seri=
+f&quot;; mso-bidi-font-family: Arial;"><font color=3D"#000000" size=3D"2"><=
+br></font></span></p><p><span style=3D"font-family: &quot;Helvetica&quot;,&=
+quot;sans-serif&quot;; mso-bidi-font-family: Arial;"><font color=3D"#000000=
+" size=3D"2">Each party will be responsible for paying any AAA
+filing, administrative and arbitrator fees in accordance with AAA rules, ex=
+cept
+that Pinterest will pay for your reasonable filing, administrative, and
+arbitrator fees if your claim for damages does not exceed $75,000 and is
+non-frivolous (as measured by the standards set forth in Federal Rule of Ci=
+vil
+Procedure 11(b)).=E2=80=9D</font></span></p><font color=3D"#000000" face=3D=
+"Times New Roman" size=3D"3">
+
+</font></span></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/84a6c6e0-b407-4b65-9584-8c477fb5398c%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/84a6c6e0-b407-4b65-9584-8c477fb5398c%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4337_235979743.1461477550687--
+------=_Part_4336_1484256416.1461477550687--

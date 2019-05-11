@@ -1,0 +1,320 @@
+Return-Path: <tosdr+bncBC7J34PU5MPRB76CWKKAKGQENZO4EPI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 4F890412BE
+	for <anything@michielbdejong.com>; Wed, 20 Nov 2013 12:48:19 +0100 (CET)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4C15114225C
+	for <anything@michielbdejong.com>; Wed, 20 Nov 2013 12:48:19 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id rzH4ZEe1X0zr for <anything@michielbdejong.com>;
+	Wed, 20 Nov 2013 12:48:17 +0100 (CET)
+Received: from mail-ie0-x23a.google.com (mail-ie0-x23a.google.com [IPv6:2607:f8b0:4001:c03::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 369A9142298
+	for <anything@michielbdejong.com>; Wed, 20 Nov 2013 12:48:17 +0100 (CET)
+Received: by mail-ie0-f186.google.com with SMTP id ar20sf1013939iec.23
+        for <anything@michielbdejong.com>; Wed, 20 Nov 2013 03:48:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:date:message-id:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=1p8w+f3XQEfOaUOolUj1GvfWbc5aPxEPobnwpKgNYeA=;
+        b=Mt7lApuijjhXvfF0/mPwdN4nDSh4+SM8aW79/ht61UjGblrX21EyG8gDTG8lh/ezw2
+         QIQTHqdscnHzMIqnTRh8YWDhMBuZc9RtJQnn3JS4zOa73YlhZ3eHXZSRTRRkxivuXIKG
+         KfpB19Sr/KZl8YLaxV+MIlWSX1UQ+n2ZP+seVQqsdg4eT1jQPy2FEXDhV96FtKM6u204
+         3ebHDSdU2uMxzIOgWB9X3YN284p9I8OZoJ9p76kqtQXG5wYFrv2INewWWQUAEyDw/KMs
+         6HE03kIIfEMGYdB9IIlRjw7wVDkdu55NC2XA7X4gAr+AVTJbM6ClaYiF7Zr1owCPEm+Z
+         ja+Q==
+X-Received: by 10.182.118.170 with SMTP id kn10mr2843obb.20.1384948095862;
+        Wed, 20 Nov 2013 03:48:15 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.116.201 with SMTP id jy9ls23902obb.85.gmail; Wed, 20 Nov
+ 2013 03:48:15 -0800 (PST)
+X-Received: by 10.182.186.105 with SMTP id fj9mr84421obc.5.1384948095017;
+        Wed, 20 Nov 2013 03:48:15 -0800 (PST)
+Received: from mail-qe0-x22f.google.com (mail-qe0-x22f.google.com [2607:f8b0:400d:c02::22f])
+        by gmr-mx.google.com with ESMTPS id gs8si1443163qcb.0.2013.11.20.03.48.14
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 20 Nov 2013 03:48:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of gnomeuser@gmail.com designates 2607:f8b0:400d:c02::22f as permitted sender) client-ip=2607:f8b0:400d:c02::22f;
+Received: by mail-qe0-x22f.google.com with SMTP id t7so1328602qeb.20
+        for <tosdr@googlegroups.com>; Wed, 20 Nov 2013 03:48:14 -0800 (PST)
+X-Received: by 10.224.114.81 with SMTP id d17mr630834qaq.18.1384948094914;
+        Wed, 20 Nov 2013 03:48:14 -0800 (PST)
+Received: from [192.168.254.6] (201-35-197-55.fnsce703.dsl.brasiltelecom.net.br. [201.35.197.55])
+        by mx.google.com with ESMTPSA id fc16sm56647865qeb.3.2013.11.20.03.48.13
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 20 Nov 2013 03:48:14 -0800 (PST)
+From: David Nielsen <gnomeuser@gmail.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:2800] ToS for Mega.co.nz and rdio.com
+Date: Wed, 20 Nov 2013 03:48:14 -0800 (PST)
+Message-Id: <78481653-EC27-4BBD-814D-34E500371AAF@gmail.com>
+MIME-Version: 1.0
+X-Mailer: Unibox (116)
+X-Original-Sender: gnomeuser@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of gnomeuser@gmail.com designates 2607:f8b0:400d:c02::22f
+ as permitted sender) smtp.mail=gnomeuser@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative;
+	boundary="=_E1767622-408D-476C-B879-EA50B911F0D7"
+
+--=_E1767622-408D-476C-B879-EA50B911F0D7
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+I believe both of these are missing from your excellent service.
+
+
+=3D=3D Mega.co.nz - Mega - Encrypted cloud storage =3D=3D
+
+
+I especially like the presentation of Mega=92s ToS as it is presented in a =
+readable format with good sectioning to separate what terms apply to which =
+parts of the service. Every section is kept small and understandable. The t=
+erms though are presented in English and not the users language. The servic=
+e itself is presented in multiple languages, this appears to be crowd trans=
+lated which would explain the terms not being subject to translation.
+
+
+Terms can be changed at any time but users will be informed about this (Sec=
+tion 3)
+
+
+You are free to delete your account (Section 21)
+
+
+Extracting data (Not specifically noted in any section)
+Though the service currently is Cloud storage and some user to user messagi=
+ng they plan to expand into VoIP and email soon. Files can easily be extrac=
+ted but there is so far as I can tell no means of extracting things like co=
+ntact lists and messages. I will contact Mega regarding such extraction for=
+ clarification.
+
+
+Data stored on the service is encrypted using keys held by the user so Mega=
+ has no access to them. Though there is no anonymity it is a private servic=
+e. They will also by their own public admission (twitter - no citation link=
+s presently) not make any effort to prevent users from since TOR or other a=
+nonymity technologies when accessing the service.=A0
+
+
+They have a well documented process in place to handle DMCA and other copyr=
+ight violations. Since Mega has no knowledge of the files stored, this is o=
+nly applicable in cases where a user has publicly shared a file. They also =
+make the user aware that doing so negates the privacy of that file for anyo=
+ne in possession of the link. They also have a process for filing a counter=
+ claim to any such request (Section 19 and 20).
+One presumes that being in possession of any such shared file(s) which has =
+been the subject of a valid DMCA or other copyright takedown would be reaso=
+nable grounds to compel a user to provide decryption keys under the law in =
+many countries which is probably reasonable and at any rate not something M=
+ega can put conditions for in their ToS. They could though put such notices=
+ in their service like they do to explain the loss of privacy when sharing =
+a link.
+
+
+
+They remind you that the password should be strong and held securely as if =
+it is lost there is no means of recovery and it is the provider of security=
+ for your data (Section 18)
+
+
+I believe these are A class terms, with bonus points for an excellent easy =
+to read presentation.
+
+
+
+Terms of Service - https://mega.co.nz/#terms
+
+Privacy policy -=A0https://mega.co.nz/#privacy
+
+
+=A0=3D=3D rdio.com - rdio - streaming music service =3D=3D
+
+
+This is a traditional legalese Terms of Service agreement with long section=
+s and unclear separation. They do however get points for presenting it in t=
+he users language.
+
+
+Terms can be changed at any time and you will not be informed of such chang=
+es. It is the users responsibility to constantly stay aware of the terms of=
+ service and continued use as changes are published is considered accepting=
+ changes (Section 19)
+
+
+You grant rdio and its associated companies rights to any content you uploa=
+d. They may also use and publish your name in conjunction with any such con=
+tent (Section 10)
+
+
+Users can have access terminated at any time if Rdio judges that the ToS ha=
+ve been violated, have gotten a request regarding such a violation (one ass=
+umes copyright or DMCA request) or your use of the service is deemed =93uns=
+uitable=94 or =93unacceptable=94 =A0(neither term defined so basically this=
+ must mean.. if they feel like it). (Section 16)
+
+
+If you are in a region where rdio sells downloadable music, this content is=
+ DRM free and in the common mp3 format. Such files are, potentially, waterm=
+arked and such information is stored in the file. If the service is termina=
+ted this content will remain usable (Section 3.2)
+
+
+There are no provisions of having an account terminated and deleted permane=
+ntly from the service, nor for extracting data so far as I can tell.
+
+
+There isn=92t much nice stuff to say about rdio=92s terms, they are likely =
+in Class D or E.
+
+
+Terms of Service - http://www.rdio.com/legal/terms-of-service/
+
+
+Kind regards,
+David Nielsen
+
+
+Thank you for the service, it really does I hope make terms of service a li=
+ttle easier to figure out for regular users.
+
+
+Sent with Unibox
+
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+--=_E1767622-408D-476C-B879-EA50B911F0D7
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml"><head><title></title></head><b=
+ody><div>I believe both of these are missing from your excellent service.
+</div><div><br></div><div>=3D=3D Mega.co.nz - Mega - Encrypted cloud storag=
+e =3D=3D
+</div><div><br></div><div>I especially like the presentation of Mega=92s To=
+S as it is presented in a readable format with good sectioning to separate =
+what terms apply to which parts of the service. Every section is kept small=
+ and understandable. The terms though are presented in English and not the =
+users language. The service itself is presented in multiple languages, this=
+ appears to be crowd translated which would explain the terms not being sub=
+ject to translation.
+</div><div><br></div><div>Terms can be changed at any time but users will b=
+e informed about this (Section 3)
+</div><div><br></div><div>You are free to delete your account (Section 21)
+</div><div><br></div><div>Extracting data (Not specifically noted in any se=
+ction)
+</div><div>Though the service currently is Cloud storage and some user to u=
+ser messaging they plan to expand into VoIP and email soon. Files can easil=
+y be extracted but there is so far as I can tell no means of extracting thi=
+ngs like contact lists and messages. I will contact Mega regarding such ext=
+raction for clarification.
+</div><div><br></div><div>Data stored on the service is encrypted using key=
+s held by the user so Mega has no access to them. Though there is no anonym=
+ity it is a private service. They will also by their own public admission (=
+twitter - no citation links presently) not make any effort to prevent users=
+ from since TOR or other anonymity technologies when accessing the service.=
+=A0
+</div><div><br></div><div>They have a well documented process in place to h=
+andle DMCA and other copyright violations. Since Mega has no knowledge of t=
+he files stored, this is only applicable in cases where a user has publicly=
+ shared a file. They also make the user aware that doing so negates the pri=
+vacy of that file for anyone in possession of the link. They also have a pr=
+ocess for filing a counter claim to any such request (Section 19 and 20).
+</div><div>One presumes that being in possession of any such shared file(s)=
+ which has been the subject of a valid DMCA or other copyright takedown wou=
+ld be reasonable grounds to compel a user to provide decryption keys under =
+the law in many countries which is probably reasonable and at any rate not =
+something Mega can put conditions for in their ToS. They could though put s=
+uch notices in their service like they do to explain the loss of privacy wh=
+en sharing a link.<br>
+</div><div><br></div><div>They remind you that the password should be stron=
+g and held securely as if it is lost there is no means of recovery and it i=
+s the provider of security for your data (Section 18)
+</div><div><br></div><div>I believe these are A class terms, with bonus poi=
+nts for an excellent easy to read presentation.<br>
+</div><div><br></div><div>Terms of Service - https://mega.co.nz/#terms<br>
+</div><div>Privacy policy -=A0https://mega.co.nz/#privacy
+</div><div><br></div><div>=A0=3D=3D rdio.com - rdio - streaming music servi=
+ce =3D=3D
+</div><div><br></div><div>This is a traditional legalese Terms of Service a=
+greement with long sections and unclear separation. They do however get poi=
+nts for presenting it in the users language.
+</div><div><br></div><div>Terms can be changed at any time and you will not=
+ be informed of such changes. It is the users responsibility to constantly =
+stay aware of the terms of service and continued use as changes are publish=
+ed is considered accepting changes (Section 19)
+</div><div><br></div><div>You grant rdio and its associated companies right=
+s to any content you upload. They may also use and publish your name in con=
+junction with any such content (Section 10)
+</div><div><br></div><div>Users can have access terminated at any time if R=
+dio judges that the ToS have been violated, have gotten a request regarding=
+ such a violation (one assumes copyright or DMCA request) or your use of th=
+e service is deemed =93unsuitable=94 or =93unacceptable=94 =A0(neither term=
+ defined so basically this must mean.. if they feel like it). (Section 16)
+</div><div><br></div><div>If you are in a region where rdio sells downloada=
+ble music, this content is DRM free and in the common mp3 format. Such file=
+s are, potentially, watermarked and such information is stored in the file.=
+ If the service is terminated this content will remain usable (Section 3.2)
+</div><div><br></div><div>There are no provisions of having an account term=
+inated and deleted permanently from the service, nor for extracting data so=
+ far as I can tell.
+</div><div><br></div><div>There isn=92t much nice stuff to say about rdio=
+=92s terms, they are likely in Class D or E.
+</div><div><br></div><div>Terms of Service - http://www.rdio.com/legal/term=
+s-of-service/
+</div><div><br></div><div>Kind regards,
+</div><div>David Nielsen
+</div><div><br></div><div>Thank you for the service, it really does I hope =
+make terms of service a little easier to figure out for regular users.
+</div><div><br></div><div class=3D"unibox-signature">Sent with <a href=3D"h=
+ttp://www.uniboxapp.com/t/sig">Unibox</a>
+</div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+
+--=_E1767622-408D-476C-B879-EA50B911F0D7--

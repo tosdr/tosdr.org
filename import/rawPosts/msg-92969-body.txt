@@ -1,0 +1,122 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp17042qek;
+        Thu, 13 Sep 2012 02:33:15 -0700 (PDT)
+Received: by 10.224.174.148 with SMTP id t20mr4215932qaz.67.1347528795262;
+        Thu, 13 Sep 2012 02:33:15 -0700 (PDT)
+Return-Path: <tosdr+bncBCIL5UMI4MDBBWWQY2BAKGQEFNYT3RY@googlegroups.com>
+Received: from mail-qc0-f192.google.com (mail-qc0-f192.google.com [209.85.216.192])
+        by mx.google.com with ESMTPS id fz4si17970700qab.81.2012.09.13.02.33.15
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 13 Sep 2012 02:33:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBCIL5UMI4MDBBWWQY2BAKGQEFNYT3RY@googlegroups.com designates 209.85.216.192 as permitted sender) client-ip=209.85.216.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBCIL5UMI4MDBBWWQY2BAKGQEFNYT3RY@googlegroups.com designates 209.85.216.192 as permitted sender) smtp.mail=tosdr+bncBCIL5UMI4MDBBWWQY2BAKGQEFNYT3RY@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qcon41 with SMTP id n41sf2080130qco.29
+        for <multiple recipients>; Thu, 13 Sep 2012 02:33:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:x-beenthere:received-spf:x-originating-ip
+         :x-virus-scanned:x-originating-ip:from:to:cc:subject:in-reply-to
+         :references:date:message-id:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=6kSpR2lpW8fp2KKg/xPY/NEcSLyPKOpwPKMaXJ54aj0=;
+        b=ZMUVC0LA4JYhBqyuC5cA5ZQA0qEx/CSuKG0qHdDCVV/WpmFa+okl7ora2dLDkVa0RO
+         5Zwd9wDK8PYIiRLNumBM50R0HSY+lOuW0v03DM1cmlTOAqlBzdANRrgFeFU3WbbmDMQU
+         7NgV/xgbTEoYZk8jguPLgGxvdfx6Ss9h51gTH0FmnoPArutIJNg64Lu8vwS8gfuhHtKr
+         K9GLT2FoYlCL5gx+ENJW4H2TI7mW/iQ0vSd1Mae3fgjiqC6CAluVBXFrdXqFEThegwdA
+         KNFYgXdxemTopcxEAbncJnlEMmMt6w0tCCsy9HkeYcCUnG3H+oJpLmZc/BYJI6SAkCwk
+         0QKA==
+Received: by 10.224.26.205 with SMTP id f13mr431319qac.12.1347528794951;
+        Thu, 13 Sep 2012 02:33:14 -0700 (PDT)
+MIME-Version: 1.0
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.224.217.65 with SMTP id hl1ls4850142qab.8.gmail; Thu, 13 Sep
+ 2012 02:33:14 -0700 (PDT)
+Received: by 10.224.182.74 with SMTP id cb10mr1312906qab.0.1347528794489;
+        Thu, 13 Sep 2012 02:33:14 -0700 (PDT)
+Received: by 10.224.182.74 with SMTP id cb10mr1312905qab.0.1347528794479;
+        Thu, 13 Sep 2012 02:33:14 -0700 (PDT)
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by gmr-mx.google.com with ESMTP id t29si2564070qcz.1.2012.09.13.02.33.14;
+        Thu, 13 Sep 2012 02:33:14 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.70.183.195 is neither permitted nor denied by best guess record for domain of perpetual-tripper@wwelves.org) client-ip=217.70.183.195;
+X-Originating-IP: 217.70.178.139
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 86EFCA80AD;
+	Thu, 13 Sep 2012 11:33:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from relay3-d.mail.gandi.net ([217.70.183.195])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id W-NtgX8XGBGo; Thu, 13 Sep 2012 11:33:02 +0200 (CEST)
+X-Originating-IP: 217.11.53.243
+Received: from localhost (243.53.11.217.in-addr.arpa.manitu.net [217.11.53.243])
+	(Authenticated sender: perpetual-tripper@wwelves.org)
+	by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id 26596A80C0;
+	Thu, 13 Sep 2012 11:33:02 +0200 (CEST)
+From: =?utf-8?q?=E2=98=AE_elf_Pavlik_=E2=98=AE?= <perpetual-tripper@wwelves.org>
+To: hellekin <hellekin@riseup.net>
+Cc: tosdr <tosdr@googlegroups.com>
+Subject: Re: [tosdr:801] ToS Lorea
+In-reply-to: <5051329D.2080706@riseup.net>
+References: <5051329D.2080706@riseup.net>
+Date: Thu, 13 Sep 2012 09:33:01 +0000
+Message-Id: <1347528509-sup-837@heahdk.net>
+User-Agent: Sup/0.12.1
+X-Original-Sender: perpetual-tripper@wwelves.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.70.183.195 is neither permitted nor denied by best guess record for
+ domain of perpetual-tripper@wwelves.org) smtp.mail=perpetual-tripper@wwelves.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Excerpts from hellekin's message of 2012-09-13 01:10:53 +0000:
+> Hash: SHA256
+>=20
+> Hola chicxs :)
+>=20
+> Finally I can take the time to submit the draft terms of service for
+> Lorea. It's in Spanish right now, and only a draft (currently, we're
+> pretty accessible and liberal^Hanarchist to deal with each case.)
+>=20
+> Our aim is to be classified A in according to your terms, so we're
+> looking for your input. Please tell me if you need translation. The
+> original is at
+> https://n-1.cc/pg/dokuwiki/5241/doku.php?id=3Dpropuesta_030610 and you
+> can edit the wiki directly if you're a member of the group (you can
+> login with OpenID.)
+
+Hola Monsieur ;)
+
+I find a Lorea quite interesting case. Since as administrator of n-1.cc you=
+ can publish ToS for this node. But what about other nodes running lorea-el=
+gg? ToS per domain sounds relatively straight forward but per software? Sta=
+tusNet ToS, Diaspora ToS? Looks like federated environment makes situations=
+ possibly bit more complex?
+
+o/
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,140 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.240.2 with SMTP id vw2csp1055303vec;
+        Fri, 30 Nov 2012 08:08:02 -0800 (PST)
+Received: by 10.152.124.111 with SMTP id mh15mr1746105lab.20.1354291682319;
+        Fri, 30 Nov 2012 08:08:02 -0800 (PST)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBX5T4OCQKGQECN2DGYY@googlegroups.com>
+Received: from mail-lb0-f184.google.com (mail-lb0-f184.google.com [209.85.217.184])
+        by mx.google.com with ESMTPS id h8si235736lbk.75.2012.11.30.08.08.00
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 30 Nov 2012 08:08:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBX5T4OCQKGQECN2DGYY@googlegroups.com designates 209.85.217.184 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBX5T4OCQKGQECN2DGYY@googlegroups.com designates 209.85.217.184 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBX5T4OCQKGQECN2DGYY@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-lb0-f184.google.com with SMTP id j14sf403455lbo.11
+        for <michiel@unhosted.org>; Fri, 30 Nov 2012 08:08:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=1eJ13o1ka21PsqfsZ5dMx7W+oXt3EAhtUQeAzsCB0bE=;
+        b=UNJM/TcddkXvXky9PKCL3N0HHWyArOORwDVjj+BWg12PBSH7DmnWMNbrbw8naxZSWy
+         FU8UgxUPOQfzEqkLSM7WTWms9InuWCYmAP3Tkjefbn4S+0DqM5OXrzGHcwzjCyy7zqWI
+         mMZjHzLh3EiIgasvVG+PnBiIaYg/yLAIxL6Dt15m+4JFM/yFiJk59pDSoPKJGLtF5WTR
+         03ArlXCtC7flGsM5h7oVIF4hakG8EvrEzrMWQPFI34iVPgWsasWwn1SI0N9MhOeRNEG9
+         oahp9nOr/Z0S/UodayxyuCTqL8adQANrYJXFKCppazTouNzD/alEyh8kmqlKEt+XWEN4
+         K9NA==
+Received: by 10.180.8.9 with SMTP id n9mr4369835wia.6.1354291680437;
+        Fri, 30 Nov 2012 08:08:00 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.83.99 with SMTP id p3ls2972461wiy.31.canary; Fri, 30 Nov
+ 2012 08:07:58 -0800 (PST)
+Received: by 10.14.178.3 with SMTP id e3mr692432eem.5.1354291678809;
+        Fri, 30 Nov 2012 08:07:58 -0800 (PST)
+Received: by 10.14.178.3 with SMTP id e3mr692431eem.5.1354291678797;
+        Fri, 30 Nov 2012 08:07:58 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id u8si1259185een.1.2012.11.30.08.07.58
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 30 Nov 2012 08:07:58 -0800 (PST)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 3D0F063A672;
+	Fri, 30 Nov 2012 17:07:58 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 918FQEsOey0J; Fri, 30 Nov 2012 17:07:53 +0100 (CET)
+Received: from [10.2.213.207] (pat-address.sciences-po.fr [193.54.67.93])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id F278263A63D;
+	Fri, 30 Nov 2012 17:07:52 +0100 (CET)
+Message-ID: <1354291669.22722.3.camel@synclavier.lan>
+Subject: Re: [tosdr:1126] Re: [Good] Dropbox can cancel your account without
+ notice but they'll try to avoid it
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Fri, 30 Nov 2012 17:07:49 +0100
+In-Reply-To: <a868e65c-889f-4f36-8883-3356e4364e72@googlegroups.com>
+References: <0c8a9815-476b-4eb0-8599-add10fa4ba12@googlegroups.com>
+	 <a868e65c-889f-4f36-8883-3356e4364e72@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.4-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Le vendredi 30 novembre 2012 =E0 07:39 -0800, Ian McGowan a =E9crit :
+> This point has been curated and will appear on the website soon.
+>=20
+> On Thursday, August 23, 2012 5:31:32 PM UTC+2, Sebasti=E1n Waisbrot wrote=
+:
+> >
+> > https://www.dropbox.com/terms
+> >
+> >> We may stop, suspend, or modify the Services at any time without prior=
+=20
+> >> notice to you.
+> >
+> > We reserve the right to suspend or end the Services at any time, with o=
+r=20
+> >> without cause, and with or without notice. For example, we may suspend=
+ or=20
+> >> terminate your use if you are not complying with these Terms, or use t=
+he=20
+> >> Services in any way that would cause us legal liability or disrupt oth=
+ers=92=20
+> >> use of the Services. If we suspend or terminate your use, we will try =
+to=20
+> >> let you know in advance and help you retrieve data, though there may b=
+e=20
+> >> some cases (for example, repeatedly or flagrantly violating these Term=
+s, a=20
+> >> court order, or danger to other users) where we may suspend immediatel=
+y.
+
+I would be careful classifying this as a "good thing" especially the
+"without cause, without notice". How does this clause qualify regarding
+other services? I'm not sure it is really necessary. Of course court
+orders are another matter.
+
+Can you expand on the reasoning behind the point? Thank you
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

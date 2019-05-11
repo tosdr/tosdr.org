@@ -1,0 +1,139 @@
+Return-Path: <tosdr+bncBCO4JXGAUQFBBQM352RAKGQENF3YWHQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 052A240F81
+	for <anything@michielbdejong.com>; Thu,  6 Nov 2014 16:03:35 +0100 (CET)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 01D5B11668D
+	for <anything@michielbdejong.com>; Thu,  6 Nov 2014 16:03:35 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qCzzm8E6+XiV for <anything@michielbdejong.com>;
+	Thu,  6 Nov 2014 16:03:33 +0100 (CET)
+Received: from mail-ee0-x23b.google.com (mail-ee0-x23b.google.com [IPv6:2a00:1450:4013:c00::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 59380116613
+	for <michiel@michielbdejong.com>; Thu,  6 Nov 2014 16:03:30 +0100 (CET)
+Received: by mail-ee0-f59.google.com with SMTP id c41sf319829eek.24
+        for <michiel@michielbdejong.com>; Thu, 06 Nov 2014 07:03:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:from:to:reply-to:subject:message-id:date
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=e2AxMk0TF4FuINr+bvqWs1TWf6Xr5giFpauArdwoRM4=;
+        b=TS9EiAfGB0E+5KQHPxS8eQNP2gOA/4LMt00G/dX7eMUtAdQzKluG5zjlk3wkVVIzqA
+         WwhqNDkgbux9a3/RwHZ5CFTzJge9pWOHzmjwCKIfGok1mKiKPd+AKL+CU2G7q76+TaT3
+         XzhpeU3Xe4vSo3XVAVjB1mTmK2fUKTGnBfXu1erXC+CCvh0XnlxMeV9PaN5E+ORT9m0T
+         YgyCXaDrXXSbqcTDx8N4UeOQst0YFN3+jYlJLd6Yjzjr79u6j+F4Qjbt7ffoDJnvRr+9
+         bf7ejZ3M/QJOHFK934JpNz9Hgd8MxlVx4LmNuuSqrAgFkADneBV6D37E325JPSbvpV/J
+         VR+A==
+X-Received: by 10.152.29.1 with SMTP id f1mr7349lah.36.1415286209953;
+        Thu, 06 Nov 2014 07:03:29 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.5.166 with SMTP id t6ls110996lat.20.gmail; Thu, 06 Nov
+ 2014 07:03:28 -0800 (PST)
+X-Received: by 10.112.138.202 with SMTP id qs10mr834341lbb.5.1415286208561;
+        Thu, 06 Nov 2014 07:03:28 -0800 (PST)
+Received: from o19821683.outbound-mail.sendgrid.net (o19821683.outbound-mail.sendgrid.net. [198.21.6.83])
+        by gmr-mx.google.com with ESMTPS id ea4si1024282lbc.0.2014.11.06.07.03.27
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Nov 2014 07:03:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1466753-934c-tosdr=googlegroups.com@sendgrid.me designates 198.21.6.83 as permitted sender) client-ip=198.21.6.83;
+Received: by filter-287.sjc1.sendgrid.net with SMTP id filter-287.26364.545B8D704
+        2014-11-06 15:02:08.395350511 +0000 UTC
+Received: from MTQ2Njc1Mw (unknown [10.42.83.122])
+	by ismtpd-032.sjc1.sendgrid.net (SG) with HTTP id 14985a07f09.2f75.34791
+	for <daniel.graziotin@unibz.it>; Thu, 06 Nov 2014 15:02:08 +0000 (GMT)
+MIME-Version: 1.0
+From: Daniel Graziotin <daniel.graziotin@unibz.it>
+To: tosdr@googlegroups.com
+Reply-To: tosdr@googlegroups.com
+Subject: [tosdr:3315] How do you feel while you develop software?
+Message-ID: <14985a07f09.2f75.34791@ismtpd-032.sjc1.sendgrid.net>
+Date: Thu, 06 Nov 2014 15:02:08 +0000 (UTC)
+X-SG-EID: QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYuQO9EYcp+aSbdYJwKBjxeTDJAqctrAdy7Ud7
+ 9J/TvR6r7TDNrju9M2j4d08iTN4ODl6jJl12g7vff5UkX5e1Yi7D5vAHD5L65nKgYYdVhiQRshO7H3
+ Mr+R75abOh5B8Ew=
+X-SG-ID: VPWZYjw6GOzHdwkwPeoX9QiEbzQXX/gF9P8njHP5+LDFs9QEBYA6h5hFmaQ060s72Eyt4/rggxLZEF
+ qE593BOb30lb7NPk/dQ/Fgj0VuiTKuCu1Qk+6T5KPF65wVGL5iHP1K7wdA957OkhxvPxp1UWkbdIIO
+ oZBiqDhIXENEWguyupKL39xlgpyjhmcnIVVl
+X-Original-Sender: daniel.graziotin@unibz.it
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of bounces+1466753-934c-tosdr=googlegroups.com@sendgrid.me
+ designates 198.21.6.83 as permitted sender) smtp.mail=bounces+1466753-934c-tosdr=googlegroups.com@sendgrid.me;
+       dkim=pass header.i=@sendgrid.me
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+We've noticed your recent pushes to tosdr-server on GitHub. Brilliant!
+
+We would love to learn about your feelings related to developing software. =
+Are happy developers more creative? Do you need a manager to keep you disci=
+plined?
+
+We would appreciate it if you would spend around 15 minutes to complete a s=
+urvey on developers' feelings. With your help, we can contribute to improvi=
+ng development practices and conditions for software developers.
+
+Go to: https://www.esurveycreator.com/s/d85a687
+
+We are conducting an academic study (Universities of Helsinki, Finland and =
+Bozen-Bolzano, Italy) to investigate how software developers feel when they=
+ develop software. We are contacting you because you provided a public e-ma=
+il address in your GitHub profile. Hopefully, this did not annoy you. We pr=
+omise never to contact you again regarding this study without your authoriz=
+ation.
+
+Your responses are voluntary and are kept strictly confidential. Responses =
+will not be identified by individual. The information gathered through this=
+ survey will only be used for non-commercial, academic research purposes. A=
+ny published results will be based on anonymised data and it will not be po=
+ssible to identify your individual responses.
+
+At the end of the survey, you have the option to leave your email address i=
+f you wish to be contacted for some follow-up questions. This is completely=
+ optional. In case you decide to leave your e-mail address, we will not dis=
+close your personal information or contact details to anybody.
+
+If you have any questions or concerns, please contact Daniel Graziotin (see=
+ below).
+
+Thank you in advance,=20
+
+Daniel Graziotin,
+Faculty of Computer Science, Free University of Bozen-Bolzano, Italy (http:=
+//www.inf.unibz.it)
+daniel.graziotin@unibz.it
+
+Fabian Fagerholm,
+Department of Computer Science, Faculty of Science, University of Helsinki =
+(http://www.cs.helsinki.fi)
+fabian.fagerholm@helsinki.fi
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

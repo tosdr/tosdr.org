@@ -1,0 +1,135 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp125835qed;
+        Mon, 20 Aug 2012 03:33:02 -0700 (PDT)
+Received: by 10.180.76.36 with SMTP id h4mr26728217wiw.13.1345458782515;
+        Mon, 20 Aug 2012 03:33:02 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDdpMiBBRoEV2X-4A@googlegroups.com>
+Received: from mail-wg0-f64.google.com (mail-wg0-f64.google.com [74.125.82.64])
+        by mx.google.com with ESMTPS id t9si32150926wiz.20.2012.08.20.03.33.01
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 20 Aug 2012 03:33:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDdpMiBBRoEV2X-4A@googlegroups.com designates 74.125.82.64 as permitted sender) client-ip=74.125.82.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDdpMiBBRoEV2X-4A@googlegroups.com designates 74.125.82.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDdpMiBBRoEV2X-4A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by wgbdr1 with SMTP id dr1sf1738324wgb.29
+        for <multiple recipients>; Mon, 20 Aug 2012 03:33:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:content-type:x-mailer
+         :mime-version:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=/FMOdcT6IuEwAnCRuUIgzhDEiKJ6F8Ea3imp7Mhazh8=;
+        b=aHIlzR3be+GwvLQ4+39U4YfXaEOZ2Nq4XSvkHbM+y3yTy+XU08ptMT4kj/3cuAwy5o
+         G12W4GlHSHYmJ1aNFeLWwh+utrgHNdCM3qeae14y9SP+IIaat2H0FSsk7QXZZ0Q7QbC8
+         3gg03DC9EyXucgTTb+vY7JIR+wM0LCPk19A2E=
+Received: by 10.180.92.103 with SMTP id cl7mr766164wib.4.1345458781517;
+        Mon, 20 Aug 2012 03:33:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.172.194 with SMTP id t42ls1522867eel.0.gmail; Mon, 20 Aug
+ 2012 03:33:00 -0700 (PDT)
+Received: by 10.14.205.5 with SMTP id i5mr2457655eeo.5.1345458780793;
+        Mon, 20 Aug 2012 03:33:00 -0700 (PDT)
+Received: by 10.14.205.5 with SMTP id i5mr2457654eeo.5.1345458780782;
+        Mon, 20 Aug 2012 03:33:00 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d5si21416387eep.0.2012.08.20.03.33.00
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 20 Aug 2012 03:33:00 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4BD9D63A69B;
+	Mon, 20 Aug 2012 12:32:59 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 8+CLW2ItwRN8; Mon, 20 Aug 2012 12:32:56 +0200 (CEST)
+Received: from [192.168.2.114] (p5797A72F.dip.t-dialin.net [87.151.167.47])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DBFC363A686;
+	Mon, 20 Aug 2012 12:32:55 +0200 (CEST)
+Message-ID: <1345458775.16599.65.camel@synclavier.lan>
+Subject: Re: [tosdr:550] Next steps for contributors?
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Mon, 20 Aug 2012 12:32:55 +0200
+In-Reply-To: <50320134.9040701@fsfe.org>
+References: <50320134.9040701@fsfe.org>
+Organization: Free Software Foundation Europe
+Content-Type: multipart/signed; micalg="pgp-sha1"; protocol="application/pgp-signature";
+	boundary="=-BrrcWt18pM7TQSXkkfK8"
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--=-BrrcWt18pM7TQSXkkfK8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Le lundi 20 ao=C3=BBt 2012 =C3=A0 11:19 +0200, Erik Albers a =C3=A9crit :
+> Hey guys,
+>=20
+> I did some contribution about the ToS of WhatsApp. If you like to look
+> 'em up, all threads begin with "[good/bad] WhatsApp ..."
+> Well, no one responded to these threads but anyway I would like to see
+> my points listed on the frontpage of tos-dr.info. So I am wondering
+> what will happen next or are these threads now lost in cyberspace?
+>=20
+> cheers,
+> erik
+>=20
+
+Not at all. Nothing's lost. I read everything. But a lot, a lot of data
+needs to be discussed before it gets to tos-dr. These things take
+time ;)
+
+If you think a point has already reached consensus, feel free to submit
+a request on git. You just have to write a .json file for each data
+point, with the "id" coming from the google group thread.
+
+See: http://tos-dr.info/api.html#data-point=20
+and the current data:
+https://github.com/unhosted/ToS-DR/tree/master/points/
+
+Best,
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=-BrrcWt18pM7TQSXkkfK8
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iJwEAAECAAYFAlAyElcACgkQ8KSEfk6+5ozzgwQArbPEbQvb1j67EuHWgENV3epQ
+WA1xPBuArNh20hp5FmhQe89Qb52dhOTsaUUl5EvCNCC63+l7wkIGIVt0yeAwhw85
+K22fE9BSk2twvNWz9YIUXz9OFOZBSkgmkyOBxGs7jIUSUFu/wia+/Z+D4SsIkwaT
+6kxLYuFJd4f7s6Pn9Lo=
+=QKFB
+-----END PGP SIGNATURE-----
+
+--=-BrrcWt18pM7TQSXkkfK8--
+

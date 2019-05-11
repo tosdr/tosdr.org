@@ -1,0 +1,122 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.51.17 with SMTP id z17csp426728ioz;
+        Sat, 3 Oct 2015 17:27:47 -0700 (PDT)
+X-Received: by 10.194.179.231 with SMTP id dj7mr21792525wjc.146.1443918467330;
+        Sat, 03 Oct 2015 17:27:47 -0700 (PDT)
+Return-Path: <tosdr+bncBCOJJKF37UHBB6HEYGYAKGQEYB6L6LI@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id g17si22133194wjz.119.2015.10.03.17.27.46
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 03 Oct 2015 17:27:47 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCOJJKF37UHBB6HEYGYAKGQEYB6L6LI@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCOJJKF37UHBB6HEYGYAKGQEYB6L6LI@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBCOJJKF37UHBB6HEYGYAKGQEYB6L6LI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id C75B8FB86E
+	for <michiel@unhosted.org>; Sun,  4 Oct 2015 02:27:46 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id BA6741421DA
+	for <michiel@unhosted.org>; Sun,  4 Oct 2015 02:27:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id PgDFHDuIAksQ for <michiel@unhosted.org>;
+	Sun,  4 Oct 2015 02:27:41 +0200 (CEST)
+Received: from mail-io0-x239.google.com (mail-io0-x239.google.com [IPv6:2607:f8b0:4001:c06::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3CCAE14221C
+	for <michiel@michielbdejong.com>; Sun,  4 Oct 2015 02:27:38 +0200 (CEST)
+Received: by iofh134 with SMTP id h134sf25630207iof.0
+        for <michiel@michielbdejong.com>; Sat, 03 Oct 2015 17:27:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=88ccskIJq/WEFrTNvbdtTIs465m92ZaOxWOHJBalF3c=;
+        b=vcFViQ/s21T30X3VpyN+7Z0wULgojHcTKQ/AJ4Cn7BZFN9M0PrYKJoNXznum1G0Vyq
+         k2DvrpB2fnXN20xFmZjo8LNgdE4PL/L4pDjAbIbH5vCILYawGu5TR6zi+fnY2FOKnXv2
+         T33ppHoFki51lvUX1pmOlh9a+C7NmAI1CMh443+gdVT8rsssNjF0PrP+kISqo7SiiI+r
+         hP1BtVLETESdByrzs9Z1nEjGVfMe6L3osrt4AOZmx6G8mYgm4DiBcdNY7lzUSBb3JpR/
+         5bId6F5hq41XtPRA8SCoqL3eTHBJho1dRclSXVv5j3HQlW5oydL3YOlvGlyJvkj9sff4
+         /TUA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=88ccskIJq/WEFrTNvbdtTIs465m92ZaOxWOHJBalF3c=;
+        b=CR6bhuIAG5n7WPInbfV0hwXzjqQwu0z87VqkUmRsC2+NDyg671us0115JwwKqe4gum
+         EycjDX/JKPO5BLeelhADEVZXpApO+2F8KV8LBnwv84/pzcW5ZdzAxo2A8qCEf4glpF6S
+         KiwTySTJSMP7uYL+p9mbJQdXYZnxeko93QfwWm7XeN0hp6fFn5BH+xLBfPsN79J2isc2
+         8G8tQ6mu0O2mSXaj5l1BV3PV5X3c4GsiyHvkNV9PLEecsi1VbeEfRg/DblCOhMVEDu2V
+         yZvHVuLLHj+kYURE0TsvTzOoObUZDNLexC0n6oM1TAMudsprWvzFnbZ0UDagQarDvDuD
+         wefA==
+X-Received: by 10.50.43.137 with SMTP id w9mr35434igl.17.1443918456989;
+        Sat, 03 Oct 2015 17:27:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.117.97 with SMTP id kd1ls869729igb.19.gmail; Sat, 03 Oct
+ 2015 17:27:36 -0700 (PDT)
+X-Received: by 10.50.112.4 with SMTP id im4mr35908igb.1.1443918456486;
+        Sat, 03 Oct 2015 17:27:36 -0700 (PDT)
+Date: Sat, 3 Oct 2015 17:27:35 -0700 (PDT)
+From: jackhammer111@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <673dac20-24c3-4e94-ab2c-cc52fddd9876@googlegroups.com>
+In-Reply-To: <CADNfgRf4-wkrVL7zMn1sTs7tCxwcw0kTCweXkLyXFKVoLO10+w@mail.gmail.com>
+References: <CADNfgRf4-wkrVL7zMn1sTs7tCxwcw0kTCweXkLyXFKVoLO10+w@mail.gmail.com>
+Subject: [tosdr:3645] Re: Prescription on youtube?
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1078_1379315324.1443918455150"
+X-Original-Sender: jackhammer111@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_1078_1379315324.1443918455150
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Tuesday, May 7, 2013 at 11:07:04 AM UTC-4, Suzanne Azmayesh wrote:
+> YOU AND YOUTUBE AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED =
+TO THE SERVICES=C2=A0 MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF =
+ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS PERMANENTLY BARRED.=C2=
+=A0
+
+they may put that in to make you think you can't but you can't give up righ=
+ts that are covered by law. in other words, just because they say that does=
+n't mean it's true.=20
+
+They could put in there, "By accepting this agreement you give us permissio=
+n to come stab you in the face."=20
+
+Obviously, they can't.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_1078_1379315324.1443918455150--

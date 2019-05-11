@@ -1,0 +1,266 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBM7QWSGAKGQEUMN43SQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool7-d.mgt.gandi.net [10.0.21.138])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 5365D161735
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 20:11:03 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5075019F38A
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 20:11:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.138])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id k6ZAu2qfAFOM for <anything@michielbdejong.com>;
+	Fri, 10 May 2013 20:11:01 +0200 (CEST)
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6883519F399
+	for <michiel@michielbdejong.com>; Fri, 10 May 2013 20:11:01 +0200 (CEST)
+Received: by mail-vc0-f192.google.com with SMTP id kw10sf63117vcb.29
+        for <michiel@michielbdejong.com>; Fri, 10 May 2013 11:11:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=RbPpUkVzs4k/o6vZWS3Ev9ZCl1qcg1PEZ1iSOwPUrXY=;
+        b=P5y+Om4PTQqXrho7+EKpHk1O7yQLifp7558tLsh05pPi3k7LjqE4cIqSdziwyQy2qJ
+         OuSbQwaFQ0eeD1srUoDJIl0l+3HKzsuqoyILzB+AJ6aTHNwG+RuZBaJXsUKIXp9E5qQt
+         MJKigv2qyYL0Htge/5Y2X4i0GVcMtqtp+EZokiTOKwBTt3KlDid6MP+xSweFSACw+jDo
+         VAu+mT8qSkZIe50kbmfcI1QF3Q2MOJImRiWJt8bZ4NMawd9f+ogpBYk9cY3qkp7bagHA
+         r5tL+TkJqKsfz3K7TEBgkZAQIGwltzKf8p0lwkyAOGU98aVvabzjf5bFTzVlJ69ILnhq
+         e6Yw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=RbPpUkVzs4k/o6vZWS3Ev9ZCl1qcg1PEZ1iSOwPUrXY=;
+        b=EYfwLjJyFXmXplzTTAU3hZtXnR9ezd11LfPAkqVhEZKspvwnHz9dC+JEJ8zYUCFmtV
+         6qRAZ6u7A3OACEGN2G43/2tUe/CF4y+wn/+1tb+uAGyCswdm/mRk3+/Legf94J+OvuMu
+         rY2liOJzqguwDU66YtCItAlg9FYsuvm7KU7iKnme9t+w9VT9D2/+bwO1201OscwvSTOE
+         oR2V7NE8U2Wv6Vr5j9B8W215Nedu2hDk8IoRD1k9X46IWNXLf6gkNZkU1HUeNAIvAqWs
+         81fcIQMkjmBxyRJ5QqtUioSc5mANxB4PRPAceDEMZbBoObXi2UjU5DDdFKAQcPBTWkOE
+         uI0g==
+X-Received: by 10.49.12.43 with SMTP id v11mr1532412qeb.38.1368209460159;
+        Fri, 10 May 2013 11:11:00 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.12.143 with SMTP id y15ls1664942qeb.82.gmail; Fri, 10 May
+ 2013 11:10:59 -0700 (PDT)
+X-Received: by 10.49.107.226 with SMTP id hf2mr1555806qeb.25.1368209459743;
+        Fri, 10 May 2013 11:10:59 -0700 (PDT)
+Date: Fri, 10 May 2013 11:10:59 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <800bf580-b4d0-4f8d-bf8a-39bce0f4478c@googlegroups.com>
+Subject: [tosdr:2028] Bing.com [bad] Uses web beacons to track you across the internet
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1341_28815046.1368209459546"
+
+------=_Part_1341_28815046.1368209459546
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+
+Bing.com has its own Privacy Policy, even though it uses the Microsoft 
+Services Agreement for its ToS. These privacy points apply only to Bing.com.
+
+
+Microsoft web pages may contain electronic images known as web beacons - 
+> sometimes called single-pixel gifs - that may be used to help deliver 
+> cookies on our sites, let us count users who have visited those pages and 
+> deliver co-branded services. We may include web beacons in our promotional 
+> e-mail messages or newsletters to determine whether messages have been 
+> opened and acted upon.
+>
+> We may also work with other companies that advertise on Microsoft sites to 
+> place web beacons on their sites or in their advertisements to let us 
+> develop statistics on how often clicking on an advertisement on a Microsoft 
+> site results in a purchase or other action on the advertiser's site.
+>
+> Finally, Microsoft sites may contain web beacons from third parties to 
+> help us compile aggregated statistics regarding the effectiveness of our 
+> promotional campaigns or other web site operations. These web beacons may 
+> allow the third parties to set or read a cookie on your computer. We 
+> prohibit third parties from using web beacons on our sites to collect or 
+> access your personal information. Nevertheless, you may be able to opt out 
+> from data collection or use by these third-party analytics companies by 
+> clicking the links for each of the following analytics providers:
+>
+>    - Omniture (Adobe): http://www.d1.sc.omtrdc.net/optout.html 
+>    - Nielsen: 
+>    http://www.nielsen-online.com/corp.jsp?section=leg_prs&nav=1#Optoutchoices 
+>    - Coremetrics: http://www.coremetrics.com/company/privacy.php#optout 
+>    - Visible Measures: http://corp.visiblemeasures.com/viewer-settings 
+>    - Google Analytics: http://tools.google.com/dlpage/gaoptout (requires 
+>    you to install a browser add-on) 
+>
+>  
+>
+> From <http://www.microsoft.com/privacystatement/en-us/bing/default.aspx#> 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1341_28815046.1368209459546
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt">Bing.com has i=
+ts own
+Privacy Policy, even though it uses the Microsoft Services Agreement for it=
+s
+ToS. These privacy points apply only to Bing.com.</p><p style=3D"margin:0in=
+;font-family:Calibri;font-size:11.0pt"><br></p><blockquote class=3D"gmail_q=
+uote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-le=
+ft-color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;"=
+><p style=3D"margin:0in;margin-left:.375in;font-family:&quot;Segoe UI&quot;=
+;font-size:9.0pt;
+color:#524D52"><span style=3D"background-position: initial initial; backgro=
+und-repeat: initial initial;">Microsoft web pages may contain
+electronic images known as web beacons - sometimes called single-pixel gifs=
+ -
+that may be used to help deliver cookies on our sites, let us count users w=
+ho
+have visited those pages and deliver co-branded services. We may include we=
+b
+beacons in our promotional e-mail messages or newsletters to determine whet=
+her
+messages have been opened and acted upon.</span></p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:&quot;Segoe UI&quot;;=
+font-size:9.0pt;
+color:#524D52"><span style=3D"background-position: initial initial; backgro=
+und-repeat: initial initial;">We may also work with other
+companies that advertise on Microsoft sites to place web beacons on their s=
+ites
+or in their advertisements to let us develop statistics on how often clicki=
+ng
+on an advertisement on a Microsoft site results in a purchase or other acti=
+on
+on the advertiser's site.</span></p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:&quot;Segoe UI&quot;;=
+font-size:9.0pt;
+color:#524D52"><span style=3D"background-position: initial initial; backgro=
+und-repeat: initial initial;">Finally, Microsoft sites may
+contain web beacons from third parties to help us compile aggregated statis=
+tics
+regarding the effectiveness of our promotional campaigns or other web site
+operations. These web beacons may allow the third parties to set or read a
+cookie on your computer. We prohibit third parties from using web beacons o=
+n
+our sites to collect or access your personal information. Nevertheless, you=
+ may
+be able to opt out from data collection or use by these third-party analyti=
+cs
+companies by clicking the links for each of the following analytics provide=
+rs:</span></p>
+
+<ul type=3D"disc" style=3D"margin-left:.375in;direction:ltr;unicode-bidi:em=
+bed;
+ margin-top:0in;margin-bottom:0in">
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#524=
+D52"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; background-pos=
+ition: initial initial; background-repeat: initial initial;" lang=3D"en-US"=
+>Omniture (Adobe):</span><span style=3D"font-family: 'Segoe UI'; font-size:=
+ 9pt; background-position: initial initial; background-repeat: initial init=
+ial;" lang=3D"en-CA">&nbsp;</span><a href=3D"http://www.d1.sc.omtrdc.net/op=
+tout.html"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; backgrou=
+nd-position: initial initial; background-repeat: initial initial;" lang=3D"=
+en-CA">http://www.d1.sc.omtrdc.net/optout.html</span></a></li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#524=
+D52"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; background-pos=
+ition: initial initial; background-repeat: initial initial;" lang=3D"en-US"=
+>Nielsen:</span><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; bac=
+kground-position: initial initial; background-repeat: initial initial;" lan=
+g=3D"en-CA">&nbsp;</span><a href=3D"http://www.nielsen-online.com/corp.jsp?=
+section=3Dleg_prs&amp;nav=3D1#Optoutchoices"><span style=3D"font-family: 'S=
+egoe UI'; font-size: 9pt; background-position: initial initial; background-=
+repeat: initial initial;" lang=3D"en-CA">http://www.nielsen-online.com/corp=
+.jsp?section=3Dleg_prs&amp;nav=3D1#Optoutchoices</span></a></li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#524=
+D52"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; background-pos=
+ition: initial initial; background-repeat: initial initial;" lang=3D"en-US"=
+>Coremetrics:</span><span style=3D"font-family: 'Segoe UI'; font-size: 9pt;=
+ background-position: initial initial; background-repeat: initial initial;"=
+ lang=3D"en-CA">&nbsp;</span><a href=3D"http://www.coremetrics.com/company/=
+privacy.php#optout"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt;=
+ background-position: initial initial; background-repeat: initial initial;"=
+ lang=3D"en-CA">http://www.coremetrics.com/company/privacy.php#optout</span=
+></a></li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#524=
+D52"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; background-pos=
+ition: initial initial; background-repeat: initial initial;" lang=3D"en-US"=
+>Visible Measures:</span><span style=3D"font-family: 'Segoe UI'; font-size:=
+ 9pt; background-position: initial initial; background-repeat: initial init=
+ial;" lang=3D"en-CA">&nbsp;</span><a href=3D"http://corp.visiblemeasures.co=
+m/viewer-settings"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; =
+background-position: initial initial; background-repeat: initial initial;" =
+lang=3D"en-CA">http://corp.visiblemeasures.com/viewer-settings</span></a></=
+li>
+ <li style=3D"margin-top:0;margin-bottom:0;vertical-align:middle;color:#524=
+D52"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; background-pos=
+ition: initial initial; background-repeat: initial initial;" lang=3D"en-US"=
+>Google Analytics:</span><span style=3D"font-family: 'Segoe UI'; font-size:=
+ 9pt; background-position: initial initial; background-repeat: initial init=
+ial;" lang=3D"en-CA">&nbsp;</span><a href=3D"http://tools.google.com/dlpage=
+/gaoptout"><span style=3D"font-family: 'Segoe UI'; font-size: 9pt; backgrou=
+nd-position: initial initial; background-repeat: initial initial;" lang=3D"=
+en-CA">http://tools.google.com/dlpage/gaoptout</span></a><span style=3D"fon=
+t-family: 'Segoe UI'; font-size: 9pt; background-position: initial initial;=
+ background-repeat: initial initial;" lang=3D"en-CA">&nbsp;</span><span sty=
+le=3D"font-family: 'Segoe UI'; font-size: 9pt; background-position: initial=
+ initial; background-repeat: initial initial;" lang=3D"en-US">(requires you
+     to install a browser add-on)</span></li>
+</ul>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.=
+0pt" lang=3D"en-CA">&nbsp;</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:9.0=
+pt;
+color:#595959">From &lt;<a href=3D"http://www.microsoft.com/privacystatemen=
+t/en-us/bing/default.aspx#">http://www.microsoft.com/privacystatement/en-us=
+/bing/default.aspx#</a>&gt;&nbsp;</p></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1341_28815046.1368209459546--

@@ -1,0 +1,363 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp153228wfj;
+        Tue, 26 Jun 2012 02:28:27 -0700 (PDT)
+Received: by 10.204.151.211 with SMTP id d19mr5146119bkw.63.1340702906825;
+        Tue, 26 Jun 2012 02:28:26 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRC5gab_BBoE_6kzmg@googlegroups.com>
+Received: from mail-bk0-f64.google.com (mail-bk0-f64.google.com [209.85.214.64])
+        by mx.google.com with ESMTPS id fs20si12743221bkc.139.2012.06.26.02.28.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 02:28:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRC5gab_BBoE_6kzmg@googlegroups.com designates 209.85.214.64 as permitted sender) client-ip=209.85.214.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRC5gab_BBoE_6kzmg@googlegroups.com designates 209.85.214.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRC5gab_BBoE_6kzmg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by bkty8 with SMTP id y8sf3550739bkt.29
+        for <multiple recipients>; Tue, 26 Jun 2012 02:28:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :in-reply-to:references:organization:date:mime-version:x-mailer
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=92vX+khnG8WL64LaQpnqDrnoLEkOQJR3iIBEd17/o9k=;
+        b=oYlMd7avH5VZ0GiAQgd1fZPRfwBzss9HJf/aeDVwx31ed1f/0eSbZEjcUXYi1rlFSG
+         eA5V1OiYEx9IBZqVzi//VkKybhaMzxAyVuUHo2NCSvbGgDzJM9vKEcguaSACJNFhnuIW
+         8ES61KHllr3ADbqh7I11KGdYuYIDEYB992CyY=
+Received: by 10.204.157.20 with SMTP id z20mr802475bkw.9.1340702905188;
+        Tue, 26 Jun 2012 02:28:25 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.130.152 with SMTP id t24ls4508828bks.1.gmail; Tue, 26 Jun
+ 2012 02:28:24 -0700 (PDT)
+Received: by 10.205.134.138 with SMTP id ic10mr1707989bkc.8.1340702904642;
+        Tue, 26 Jun 2012 02:28:24 -0700 (PDT)
+Received: by 10.205.134.138 with SMTP id ic10mr1707987bkc.8.1340702904604;
+        Tue, 26 Jun 2012 02:28:24 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id iv15si15205603bkc.0.2012.06.26.02.28.24
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 02:28:24 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id E394263B508
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 11:28:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6VUkzPzalTuV for <tosdr@googlegroups.com>;
+	Tue, 26 Jun 2012 11:28:17 +0200 (CEST)
+Received: from [10.240.40.245] (smb-rsycl-03.wifihubtelecom.net [213.174.124.179])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id D2CD163B4F0
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 11:27:48 +0200 (CEST)
+Message-ID: <1340702285.4413.53.camel@synclavier.lan>
+Subject: Re: Twitter's practice to notify changes in ToS [Fwd: [IFOSSLR
+ Ed-Com] Updates to Twitter and Our Policies]
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+In-Reply-To: <1340699493.4413.40.camel@synclavier.lan>
+References: <1340699493.4413.40.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+Date: Tue, 26 Jun 2012 11:18:05 +0200
+Mime-Version: 1.0
+X-Mailer: Evolution 3.2.2-1+b1
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/mixed; boundary="=-j6KbbVw/YJKx5eKeciNz"
+
+--=-j6KbbVw/YJKx5eKeciNz
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Sorry, I didn't realise my email client wasn't able to send proper
+html-to-text emails (although it's able to show them to me properly=85)
+
+So, attached is the original HTML email.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--=-j6KbbVw/YJKx5eKeciNz
+Content-Disposition: attachment; filename="twitter-tos-notification.html"
+Content-Type: text/html; name="twitter-tos-notification.html"; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />  
+  <style type="text/css">
+    @media only screen and (max-device-width: 480px) {
+      table[class=outer] .cut {
+        width: 0 !important;
+        padding: 0 !important;
+      }
+      table[class=outer] .vcut {
+        height: 0 !important;
+        padding: 0 !important;
+      }
+      table[class=outer] img.cut {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+      table[class=outer] .cut span, table[class=outer] .cut a {
+        display: none !important;
+      }
+      table[class=outer] .frame {
+        width: 320px !important;
+      }
+      table[class=outer] .main_header.media_header {
+        width: 300px !important;
+        height: 55px !important;
+      }
+      table[class=outer] .header_left {
+        height: 55px !important;
+      }
+      table[class=outer] .logo_header {
+        height: 62px !important;
+      }
+      table[class=outer] .media_header .main_name {
+        font-size: 12px !important;
+        line-height: 14px !important;
+      }
+      table[class=outer] .media_header .subtitle {
+        font-size: 12px !important;
+      }
+      table[class=outer] .media_main {
+        width: 300px !important;
+      }
+      table[class=outer] .media_main .intro {
+        width: 260px !important;
+        font-size: 14px !important;
+      }
+      table[class=outer] .media_main .intro2 {
+        font-size: 14px !important;
+      }
+      table[class=outer] .media_main .suggestions {
+        font-size: 14px !important;
+      }
+      table[class=outer] .media_more {
+        width: 300px !important;
+        border-radius: 0 !important;
+        background-color: #ffffff !important;
+        border-top: 1px solid #e8e8e8 !important;
+      }
+      table[class=outer] .media_button {
+        width: 300px !important;
+        background-color: #209ae4 !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+      }
+      table[class=outer] .media_footer {
+        font-size: 11px !important;
+        line-height: 14px !important;
+        padding: 0 10px !important;
+      }
+      table[class=outer] .address {
+        font-size: 11px !important;
+        line-height: 14px !important;
+        display: block !important;
+      }
+      table[class=outer] td[class=footer-padding-top] {
+        height: 20px !important;
+      }
+      table[class=outer] td[class=footer-padding-bottom] {
+        height: 17px !important;
+      }
+      table[class=outer] .media_footer br {
+        display: none !important;
+      }
+      table[class=outer] .reset {
+        display: block !important;
+        padding-bottom: 4px !important;
+      }
+      table[class=outer] .media_logo_div {
+        display: block !important;
+        position: absolute !important;
+        left: 270px !important;
+        top: 0 !important;
+        background-image: url('https://twitter.com/images/email/t1/ribbon.png') !important;
+        background-size: 100% 100% !important;
+        width: 36px !important;
+        height: 68px !important;
+      }
+      table[class=employee-only-padding-top-bottom] {
+        width: 310px !important;
+      }
+      td[class=employee-only-padding-left-right] {
+        width: 4px !important;
+      }
+      table[class=employee-only] {
+        width: 310px !important;
+      }
+    }
+
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        table[class=outer] .media_button {
+          padding-top: 3px !important;
+          padding-bottom: 3px !important;
+          background-color: #209ae4 !important;
+        }
+        table[class=outer] .media_button td.cut {
+          width: 0 !important;
+          padding: 0 !important;
+        }
+        table[class=outer] .media_button {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+      }
+    
+  </style> 
+ </head> 
+ <body style="margin: 0; padding: 0; background-color: #dddddd;"> 
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" class="outer" style="position: relative;">
+   <tbody>
+    <tr>
+     <td> 
+      <table class="outer frame" align="center" cellpadding="0" cellspacing="0" border="0" width="670" style="border: 0px; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc; background-color: #ffffff;position: relative;"> 
+       <tbody>
+        <tr> 
+         <td> <a href="https://twitter.com/?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+21+20120520" style="border: none; color: #0084b4; text-decoration: none;"><span class="media_logo_div"></span></a> 
+          <table cellpadding="0" cellspacing="0" border="0" width="670" class="header frame" style="background-color: #f2f2f2;"> 
+           <tbody>
+            <tr> 
+             <td class="header_left cut" style="width: 19px; height: 77px;"></td> 
+             <td height="94" width="46" valign="top" rowspan="2" class="logo_header cut" style="background-color: #ffffff; line-height: 100%;"><a href="https://twitter.com/?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+21+20120520" style="border: none; color: #0084b4; text-decoration: none;"><img class="logo cut" src="https://twitter.com/images/email/t1/ribbon.png" width="46" height="94" style="border: 0; background-color: #fff; line-height: 100%;border: 0;" /></a></td> 
+             <td class="cut" width="10"></td> 
+             <td width="458" height="77" class="main_header media_header" style="padding-left: 10px; padding-right: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;"> <span class="main_name" style="font-size: 14px; line-height: 16px; font-weight: bold; color: #000000;">Hi, IFOSS L. Rev.</span> </td> 
+             <td class="main_avatar cut" width="32" style="text-align: right; padding-right: 10px;"> <a href="https://twitter.com/ifosslr?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+22+20120520" style="border: none; color: #0084b4; text-decoration: none;"><img class="cut" src="https://si0.twimg.com/profile_images/313437275/ifosslr-just-column-large_reasonably_small.png" width="32" height="32" alt="IFOSS L. Rev." style="border-radius: 4px;background-color: #ffffff;border: 0;" /></a> </td> 
+             <td class="col header cut" style="width: 75px;background-color: #f2f2f2;"></td> 
+            </tr> 
+            <tr> 
+             <td class="main header_drop cut" style="border-top: 1px solid #dddddd;background-color: #ffffff;">&nbsp;</td> 
+             <td class="main header_drop cut" style="border-top: 1px solid #dddddd;background-color: #ffffff;">&nbsp;</td> 
+             <td class="main header_drop media_header" height="17" style="border-top: 1px solid #dddddd;background-color: #ffffff;"><img width="1" height="1" style="display: block;border: 0;" src="https://twitter.com/scribe/ibis?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+20+20120520" /></td> 
+             <td class="main header_drop cut" height="17" colspan="2" style="border-top: 1px solid #dddddd;background-color: #ffffff;">&nbsp;</td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+         <td rowspan="3"></td> 
+        </tr> 
+        <tr> 
+         <td>  
+          <table width="670" border="0" cellpadding="0" cellspacing="0" class="main frame" style="background-color: #ffffff;"> 
+           <tbody>
+            <tr> 
+             <td class="col cut" style="width: 75px;"></td> 
+             <td class="media_main"> 
+              <table cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> New things are always happening here at Twitter HQ. We're growing at a rapid pace, and our commitment to simplicity, transparency, and reaching every person on the planet continues. We thought you might be interested in knowing about some of our most recent developments: </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> 
+                  <ul style="margin: 0;"> 
+                   <li> A <a href="http://blog.twitter.com/2012/05/best-of-twitter-in-your-inbox.html" style="border: none; color: #0084b4; text-decoration: none;">new weekly email</a> that delivers the most interesting news and items you might have missed from the people you're connected to on Twitter. </li>
+                   <li> Now Twitter is in <a href="http://blog.twitter.com/2012/01/twitter-in-your-language.html" style="border: none; color: #0084b4; text-decoration: none;">more languages</a> than ever. Check for your preferred language and <a href="https://support.twitter.com/articles/119137-how-to-change-language-settings" style="border: none; color: #0084b4; text-decoration: none;">change your setting</a>. </li>
+                   <li> Download the latest Twitter mobile apps at <a href="https://twitter.com/download" style="border: none; color: #0084b4; text-decoration: none;">twitter.com/download</a>. </li>
+                   <li> There's more to <a href="http://blog.twitter.com/2012/05/discover-better-stories.html" style="border: none; color: #0084b4; text-decoration: none;">Discover</a> on Twitter.com - try out the new Discover tab. </li> 
+                  </ul> </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> In addition, we've made a number of updates to our <a href="https://twitter.com/privacy" style="border: none; color: #0084b4; text-decoration: none;">Privacy Policy</a> and <a href="https://twitter.com/tos" style="border: none; color: #0084b4; text-decoration: none;">Terms of Service</a>. </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> Here are some of the main changes to our Privacy Policy, with links for more information: </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> 
+                  <ul style="margin: 0;"> 
+                   <li> We've provided more details about the <a href="https://twitter.com/privacy#section1" style="border: none; color: #0084b4; text-decoration: none;">information we collect</a> and how we use it to deliver our services and to improve Twitter. One example: our new tailored suggestions feature, which is based on your recent visits to websites that integrate Twitter buttons or widgets, is an experiment that we're beginning to roll out to some users in a number of countries. Learn more <a href="https://support.twitter.com/articles/20169421" style="border: none; color: #0084b4; text-decoration: none;">here</a>. </li>
+                   <li> We've noted the many ways you can set your preferences to limit, modify or remove the information we collect. For example, we now support the <a href="https://support.twitter.com/articles/20169453" style="border: none; color: #0084b4; text-decoration: none;">Do Not Track</a> (DNT) browser setting, which stops the collection of information used for tailored suggestions. </li>
+                   <li> We've clarified the <a href="https://twitter.com/privacy#section2" style="border: none; color: #0084b4; text-decoration: none;">limited circumstances</a> in which your information may be shared with others (for example, when you've given us permission to do so, or when the data itself is not private or personal). Importantly, our privacy policy is not intended to limit your rights to object to a third party's request for your information. </li> 
+                  </ul> </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> In our Terms of Service, we've clarified how your relationship with Twitter works and made a number of small changes and formatting improvements, such as new headings for easy reference and updated descriptions of our services. </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> Take a moment to read our new <a href="https://twitter.com/privacy" style="border: none; color: #0084b4; text-decoration: none;">Privacy Policy</a> and <a href="https://twitter.com/tos" style="border: none; color: #0084b4; text-decoration: none;">Terms of Service</a>, and thanks for using Twitter. </td>
+                </tr> 
+                <tr>
+                 <td class="mid text" style="padding: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;padding-bottom: 0; font-size: 15px; line-height: 20px;"> The Twitter Team </td>
+                </tr> 
+                <tr>
+                 <td height="20"> </td>
+                </tr> 
+               </tbody>
+              </table> </td>
+             <td class="col cut" style="width: 75px;"></td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td> 
+          <table border="0" cellpadding="0" cellspacing="0" width="670" class="frame footer" style="background-color: #eeeeee;"> 
+           <tbody>
+            <tr> 
+             <td colspan="3" height="28" class="footer-padding-top" style="border-top: 1px solid #dddddd;"></td> 
+            </tr> 
+            <tr> 
+             <td class="col cut" style="width: 75px;"></td> 
+             <td class="footer_body media_footer" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 17px; color: #777; text-shadow: 0 1px 0 #ffffff;"> 
+              <div>
+               Forgot your Twitter password? 
+               <a class="reset" href="https://twitter.com/account/resend_password?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+24+20120520" style="border: none; color: #0084b4; text-decoration: none;">Get instructions on how to reset it.</a>
+              </div> 
+              <div>
+               You can change your 
+               <a href="https://twitter.com/settings/notifications?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+27+20120520" style="border: none; color: #0084b4; text-decoration: none;">notification settings</a>. Need 
+               <a href="https://support.twitter.com/?uid=56759299&amp;iid=8e29692a-635a-4ebc-a2b0-5aa3f62db7a9&amp;nid=8+97+20120520" style="border: none; color: #0084b4; text-decoration: none;">help</a>?
+              </div> 
+              <div>
+               <a href="#" class="address" style="border: none; color: #0084b4; text-decoration: none;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none; font-size: 11px; line-height: 17px; color: #999999; text-shadow: 0 1px 0 #ffffff;">Twitter, Inc. 795 Folsom St., Suite 600 <span class="nobreak" style="white-space: nowrap;">San Francisco, CA 94107</span></a>
+              </div> </td> 
+             <td class="col cut" style="width: 75px;"></td> 
+            </tr> 
+            <tr>
+             <td colspan="3" class="footer-padding-bottom" height="25"></td>
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td>
+    </tr>
+   </tbody>
+  </table> 
+ </body>
+</html>
+--=-j6KbbVw/YJKx5eKeciNz--
+

@@ -1,0 +1,276 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp14966vec;
+        Wed, 5 Dec 2012 05:44:45 -0800 (PST)
+Received: by 10.50.12.168 with SMTP id z8mr1425622igb.53.1354715084852;
+        Wed, 05 Dec 2012 05:44:44 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBS477WCQKGQECPKZOOY@googlegroups.com>
+Received: from mail-ia0-f183.google.com (mail-ia0-f183.google.com [209.85.210.183])
+        by mx.google.com with ESMTPS id in3si4592480igc.17.2012.12.05.05.44.44
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 05 Dec 2012 05:44:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBS477WCQKGQECPKZOOY@googlegroups.com designates 209.85.210.183 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBS477WCQKGQECPKZOOY@googlegroups.com designates 209.85.210.183 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBS477WCQKGQECPKZOOY@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-ia0-f183.google.com with SMTP id r13sf3570368iar.0
+        for <michiel@unhosted.org>; Wed, 05 Dec 2012 05:44:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=NFliuxzJ/cuQes6K799mzJtibM/cJxFJwiWN5nejbaU=;
+        b=o95yd7gmwJSCkMK4Q8ojpO5rKAaMg+dofe/yGowJHF09ObqA3PqJBD5QFW11JtxF+l
+         PM6493imGaleZeJrZjWZkkvXPjwSgCNv0IvBE3l6B/186opFe7Fd/GPaZyXroS3PmFDd
+         DM29dVgqirHNG1DsyWjr+LRW8lCJT38EdvgYs7svTL/KpcZ7zFylzmWdUInqm40BTFgk
+         Seg+eHyBkuO6eRWiyGonMoeA6GkXAKI0YINyyPOnKe/1sCIUbUJUckW1VLQTTb1OeNuL
+         akLlaEUVLfHNUbD/ntkhUVCpwD/jYAWNYU53aZ0vyRySqwl9CshNcqE06/HpgzgCW//G
+         25Rw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=NFliuxzJ/cuQes6K799mzJtibM/cJxFJwiWN5nejbaU=;
+        b=xZRgYZqnEZ4Uv66De1faB9u9L01IaMQ0wKzo9OYy+7MQ51mxQtuw4tNoAd0No7ukEw
+         1d3LyYo0Dtbwq3fRZYUsJiwLs7hQBsju0Fe24h0g4gtZZBALLw5NHa0IYziWSe5LdNGE
+         zObEp1TiyeNMQ7Md1S3tzBuml4fWGaV11TI2TiZtiVGluCIZGhmssB4YhOuuqYBbmGk2
+         xN8isxbwipqA3Q2hXSZ6FvzXcPDa3WJwy/i5tqby+LzR6ddxaowlTe/XxZ/C6nNokwql
+         WOLC3yC1x8n+fHa1pzKhE2WTs7itlhiWST2SevPvwngTfjcaDq7Faai+GhFIBjtTpzG6
+         8Qpg==
+Received: by 10.50.5.174 with SMTP id t14mr605296igt.11.1354715084546;
+        Wed, 05 Dec 2012 05:44:44 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.190.163 with SMTP id gr3ls4001016igc.17.canary; Wed, 05 Dec
+ 2012 05:44:43 -0800 (PST)
+Received: by 10.50.222.132 with SMTP id qm4mr607597igc.5.1354715083172;
+        Wed, 05 Dec 2012 05:44:43 -0800 (PST)
+Date: Wed, 5 Dec 2012 05:44:42 -0800 (PST)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <7f97194a-6873-426a-a3e8-effcb952fce1@googlegroups.com>
+In-Reply-To: <1349519527.22715.6.camel@synclavier.lan>
+References: <CA+aD3u19m+S4+D5E=GrRi2J9es43RSU2hrm+OTz7vY8mGMxMGA@mail.gmail.com>
+ <3ded95b9-d676-4404-a57a-277783894e8d@googlegroups.com>
+ <8aca0767-9cb0-4ebb-9f3c-beb6ec003214@googlegroups.com>
+ <5068A64A.3480.38809AB1@pm.YourIPAttorney.com>
+ <CA+aD3u0ebzaDC1bHS9zBWR+Xnt70r=FsiU=STCvkaEtAvt1xEQ@mail.gmail.com>
+ <1349519527.22715.6.camel@synclavier.lan>
+Subject: Re: [tosdr:1206] Re: [Bad] CouchSurfing may revoke the right to link
+ to them
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_131_24959838.1354715082770"
+
+------=_Part_131_24959838.1354715082770
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I see these kinds of terms in a lot of ToS; it seems incredibly stupid and=
+=20
+a large attempt and hindering free speech rights by companies.  If there is=
+=20
+a entry in tos;dr for this, it should likely contain a small "article"=20
+explaining fair use and free speech in a few targeted countries to allow=20
+people to remain informed.
+
+/Robin
+
+On Saturday, October 6, 2012 7:32:12 AM UTC-3, Hugo Roy wrote:
+>
+> Le samedi 06 octobre 2012 =E0 11:01 +0200, Michiel de Jong a =E9crit :=20
+> > ok, i got a reply from them, what this is about is travel websites=20
+> > that have 'accomodation search' linking to couchsurfing. they don't=20
+> > want that to happen. they will not use this clause against you if you=
+=20
+> > just blog about them.=20
+>
+> We should not get fooled. This is not what the clause says. This=20
+> interpretation is not binding and seems like just an excuse for terms of=
+=20
+> bad quality.=20
+>
+> > i guess this is about deeplinking to specific offers and/or iframing=20
+> > couchsurfing's content in a context, not about linking to the=20
+> > couchsurfing home page i think.=20
+>
+> The clause says linking, right? Is there a definition of linking=20
+> anywhere? If not, then assume it's the standard definition of linking,=20
+> i.e. to write somewhere on the web a <a=20
+> href=3D"http://couchsurfing.org">link</a>.=20
+>
+> > i think a couchsurfing offer is not a historical or newsworthy fact,=20
+> > and i think this exposes the absurdity of web 2.0, where publishing=20
+> > tools claim copyright over user content.=20
+> >=20
+> > i guess they can prohibit other sites from quoting copyrighted=20
+> > information only if they are the owners/authors, right?=20
+>
+> No because quoting text is covered by the exceptions to copyright law=20
+> (or fair use in the US).=20
+>
+> >  if they only=20
+> > get a non-exclusive license to user content, then how can they have=20
+> > anything to say over others displaying it?=20
+> >=20
+> > can you prohibit other sites from deeplinking to specific search=20
+> > results on your site?=20
+> >=20
+> > i think there was a similar case where google was displaying tweets=20
+> > from twitter as 'real time results' on their search results page, and=
+=20
+> > iirc, twitter was able to stop them from doing that.=20
+>
+> IIRC there was an agreement between google and twitter, then they didn't=
+=20
+> pursue it. But I think seriously this issue is getting too far. We're=20
+> trying to make assumptions, whereas if you read the clause in question,=
+=20
+> it's rather simple and stupid. There was actually a website making fun=20
+> of all these silly clauses forbidding people to make links.=20
+>
+> I propose, if we summarise this point, to write a title like:=20
+>         Absurd: they claim the right to forbid you to link to them=20
+>        =20
+> or something like this.=20
+>
+> --=20
+> Hugo Roy=20
+>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org <javascript:=
+>=20
+>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41=20
+>                                  mobile DE: +49 151 143 56 563=20
+>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_131_24959838.1354715082770
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I see these kinds of terms in a lot of ToS; it seems incredibly stupid and =
+a large attempt and hindering free speech rights by&nbsp;companies. &nbsp;I=
+f there is a entry in tos;dr for this, it should likely contain a small "ar=
+ticle" explaining fair use and free speech in a few targeted countries to a=
+llow people to remain informed.<div><br></div><div>/Robin<br><br>On Saturda=
+y, October 6, 2012 7:32:12 AM UTC-3, Hugo Roy wrote:<blockquote class=3D"gm=
+ail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc soli=
+d;padding-left: 1ex;">Le samedi 06 octobre 2012 =E0 11:01 +0200, Michiel de=
+ Jong a =E9crit :
+<br>&gt; ok, i got a reply from them, what this is about is travel websites
+<br>&gt; that have 'accomodation search' linking to couchsurfing. they don'=
+t
+<br>&gt; want that to happen. they will not use this clause against you if =
+you
+<br>&gt; just blog about them.
+<br>
+<br>We should not get fooled. This is not what the clause says. This
+<br>interpretation is not binding and seems like just an excuse for terms o=
+f
+<br>bad quality.
+<br>
+<br>&gt; i guess this is about deeplinking to specific offers and/or iframi=
+ng
+<br>&gt; couchsurfing's content in a context, not about linking to the
+<br>&gt; couchsurfing home page i think.
+<br>
+<br>The clause says linking, right? Is there a definition of linking
+<br>anywhere? If not, then assume it's the standard definition of linking,
+<br>i.e. to write somewhere on the web a &lt;a
+<br>href=3D"<a href=3D"http://couchsurfing.org" target=3D"_blank">http://co=
+uchsurfing.org</a>"<wbr>&gt;link&lt;/a&gt;.
+<br>
+<br>&gt; i think a couchsurfing offer is not a historical or newsworthy fac=
+t,
+<br>&gt; and i think this exposes the absurdity of web 2.0, where publishin=
+g
+<br>&gt; tools claim copyright over user content.
+<br>&gt;=20
+<br>&gt; i guess they can prohibit other sites from quoting copyrighted
+<br>&gt; information only if they are the owners/authors, right?
+<br>
+<br>No because quoting text is covered by the exceptions to copyright law
+<br>(or fair use in the US).
+<br>
+<br>&gt; &nbsp;if they only
+<br>&gt; get a non-exclusive license to user content, then how can they hav=
+e
+<br>&gt; anything to say over others displaying it?
+<br>&gt;=20
+<br>&gt; can you prohibit other sites from deeplinking to specific search
+<br>&gt; results on your site?
+<br>&gt;=20
+<br>&gt; i think there was a similar case where google was displaying tweet=
+s
+<br>&gt; from twitter as 'real time results' on their search results page, =
+and
+<br>&gt; iirc, twitter was able to stop them from doing that.
+<br>
+<br>IIRC there was an agreement between google and twitter, then they didn'=
+t
+<br>pursue it. But I think seriously this issue is getting too far. We're
+<br>trying to make assumptions, whereas if you read the clause in question,
+<br>it's rather simple and stupid. There was actually a website making fun
+<br>of all these silly clauses forbidding people to make links.
+<br>
+<br>I propose, if we summarise this point, to write a title like:
+<br>&nbsp; &nbsp; &nbsp; &nbsp; Absurd: they claim the right to forbid you =
+to link to them
+<br>&nbsp; &nbsp; &nbsp; &nbsp;=20
+<br>or something like this.
+<br>
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp; chat: <a href=3D"j=
+avascript:" target=3D"_blank" gdf-obfuscated-mailto=3D"tAJA8wbEmwEJ">hu...@=
+jabber.fsfe.org</a>
+<br>&nbsp; <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> &nbsp; &nbsp; &nbsp; &nbsp; mobile: +336 08 74 13 41
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mobile DE: +49 151 143 56 56=
+3
+<br>
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_131_24959838.1354715082770--

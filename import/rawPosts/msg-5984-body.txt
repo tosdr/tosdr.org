@@ -1,0 +1,128 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBUVNVOHAKGQE26F7WQQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id B568D161747
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 13:56:06 +0200 (CEST)
+Received: from mfilter22-d.gandi.net (mfilter22-d.gandi.net [217.70.178.150])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B1DC0142242
+	for <anything@michielbdejong.com>; Wed, 26 Jun 2013 13:56:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter22-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter22-d.gandi.net (mfilter22-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id F+klqDuRMHXs for <anything@michielbdejong.com>;
+	Wed, 26 Jun 2013 13:56:05 +0200 (CEST)
+Received: from mail-ee0-x238.google.com (mail-ee0-x238.google.com [IPv6:2a00:1450:4013:c00::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 44D601421E9
+	for <michiel@michielbdejong.com>; Wed, 26 Jun 2013 13:56:04 +0200 (CEST)
+Received: by mail-ee0-f56.google.com with SMTP id c1sf2553449eek.11
+        for <michiel@michielbdejong.com>; Wed, 26 Jun 2013 04:56:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:x-virus-scanned:date:from:to:subject:message-id
+         :mail-followup-to:references:mime-version:content-type
+         :content-disposition:in-reply-to:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=fyvsDgot2fbwjYBLkz9InMZsZTXwutoPeNRV8yOs8W4=;
+        b=WuM+H6h+t8y2V+qrg6BIDzSTL9tlmVZod7TCZGnSzAPrNBkLKBiwSGJSxbcAOIBG6G
+         x0pNtlUhLvV4kCmddwTQseSadBJkM5h3/MNtFD22GIPNG9cbgIa0dPQRNs+FkJ+7IUwE
+         DH+VGtHeOcwTyVe0uVSxNnWaOwmlNjMXk+a4l/VEC+wW0UWjI4lSwuaPBk2wWdFxzBbx
+         q78BDLXGYywdbXiE2KM/6hAr+bOH5AWJpqkUgBbXSqgW/dyxLjdaneLOWJ9VLDYYBEvz
+         lLlqeQ5/NYFWLPCXBwRYtlMjvQ2ubA1uHOdCqGLikL49BkX3haoUhgkiPRhHqD7BQsHN
+         KvOQ==
+X-Received: by 10.180.93.136 with SMTP id cu8mr550244wib.9.1372247762951;
+        Wed, 26 Jun 2013 04:56:02 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.35.38 with SMTP id e6ls1305746wij.9.canary; Wed, 26 Jun
+ 2013 04:56:02 -0700 (PDT)
+X-Received: by 10.15.10.130 with SMTP id g2mr3311364eet.2.1372247762278;
+        Wed, 26 Jun 2013 04:56:02 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id ci6si5089628eeb.1.2013.06.26.04.56.02
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 26 Jun 2013 04:56:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 996D863B56C
+	for <tosdr@googlegroups.com>; Wed, 26 Jun 2013 13:56:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sH92lqy-u73u for <tosdr@googlegroups.com>;
+	Wed, 26 Jun 2013 13:55:59 +0200 (CEST)
+Received: from localhost (cev75-2-82-66-209-187.fbx.proxad.net [82.66.209.187])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id B33DF63B445
+	for <tosdr@googlegroups.com>; Wed, 26 Jun 2013 13:55:58 +0200 (CEST)
+Date: Wed, 26 Jun 2013 13:55:56 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:2370] AT&T Yahoo! mail: no commercial use allowed
+Message-ID: <20130626115556.GF19397@synclavier.ampoliros.net>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <0a5ca601-4845-4fef-a818-e6f9c8bdc98a@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="PqX6tBBuHl4HmZHK"
+Content-Disposition: inline
+In-Reply-To: <0a5ca601-4845-4fef-a818-e6f9c8bdc98a@googlegroups.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+
+
+--PqX6tBBuHl4HmZHK
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
++ 2013-06-26 Wed 13:48, dmeyer2@acm.org <dmeyer2@acm.org>:
+
+> "You may use the Software and access for your personal use, and not for a=
+ny commercial use or benefit."
+>=20
+> http://info.yahoo.com/legal/us/att/terms/mail/atos.html
+
+Thanks. Can you explain what's AT&T Yahoo! so we can better assess
+this?
+
+
+
+--=20
+Hugo Roy, Project Lead
+Terms of Service; Didn't Read | www.tosdr.org
+
+--PqX6tBBuHl4HmZHK
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRytbMAAoJEI0CLJmz17eVDp0IALmdGG9W+I7Pge9gID/izJPb
+pBp4SGTvtvG/j5GyXQa5OBnAkomSahogNaBLOKcTDKt3baB1wjmwWG91XbvMNIEl
+FTbE42OQnBv32IlJ6wmm4nE2OYVeMzkhmqSp6C6emNjI033o8JUW3f7UjhcSSn8s
+dYDkmeSEjHC7gNLHfrB5fAy80QJMdpvr57iDujXIbPq7IJayJnRAkrP8p8ENH12n
+r2cEG/Y4Vlg3sf2q80A8A+h12R3YB4nI+vN/QbU+uv2tPZuPG9mLpJA6pfSkMCnb
+LcUvwyCivBy9PgRm7W8UxCrLHexP/TM1woqwvyKlto1LOTeU8laLrORbw3HOat4=
+=Hzkg
+-----END PGP SIGNATURE-----
+
+--PqX6tBBuHl4HmZHK--

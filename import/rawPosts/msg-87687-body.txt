@@ -1,0 +1,262 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp96342qed;
+        Sat, 18 Aug 2012 17:05:26 -0700 (PDT)
+Received: by 10.229.136.208 with SMTP id s16mr8035640qct.112.1345334725986;
+        Sat, 18 Aug 2012 17:05:25 -0700 (PDT)
+Return-Path: <tosdr+bncCMW1zdL2DRDF28CBBRoEbuVafQ@googlegroups.com>
+Received: from mail-qa0-f64.google.com (mail-qa0-f64.google.com [209.85.216.64])
+        by mx.google.com with ESMTPS id w4si5849981qct.176.2012.08.18.17.05.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 18 Aug 2012 17:05:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCMW1zdL2DRDF28CBBRoEbuVafQ@googlegroups.com designates 209.85.216.64 as permitted sender) client-ip=209.85.216.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCMW1zdL2DRDF28CBBRoEbuVafQ@googlegroups.com designates 209.85.216.64 as permitted sender) smtp.mail=tosdr+bncCMW1zdL2DRDF28CBBRoEbuVafQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qabg24 with SMTP id g24sf2741502qab.29
+        for <multiple recipients>; Sat, 18 Aug 2012 17:05:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=pNG76eX/lgdBws5788bes+mYZdniqVY9JGHzHzWsv5s=;
+        b=oG3lhp59gxHONjZkH+puGOxBsfgQtoYLMP/ceIP4UCcm+hch5A6upG+ZBvx5pzFzcl
+         oseIb1TUEB4TfiLhJKraiafDHxqmRjCqcsga2IIpBEQ7tFeOS8U2FX/jteQAQuCgb1j8
+         cqrnodBv8t+8WMFBTXbC/iX16w/XDuX27tw14=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=pNG76eX/lgdBws5788bes+mYZdniqVY9JGHzHzWsv5s=;
+        b=iESabTTwt8dPgsp21cQsP5NgulQsy8RPuVOKQojhRJ21tqCLlEKZxWDiNeDPmkjqIM
+         ex/UaVS0IY29Z8rqvYHJQImeIR1gZXRJ/Ek5b4aDQZcy4eTY/JsK1nFFHdTmuXBnhdu6
+         hnkXB1u+AmQhcIpFxg3QCftLtNZvMrvTqx1ylyw6RGniZo2yikKLyYNgB32XuykGqgSg
+         qZRsjiNOlCFaqIt8FbYRlVtwfMw01YQAiseKnSayY8u88Bn4/f3pfFECPmbtnnwL13pm
+         SE/b/ZDwJSic/7Nrw+6zheFgeEzXgU19b4OomYenOMH88CFBIJ7x6/1hZ8x88pPwFS5Y
+         57Yg==
+Received: by 10.236.75.3 with SMTP id y3mr2828106yhd.20.1345334725051;
+        Sat, 18 Aug 2012 17:05:25 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.170.229 with SMTP id p65ls11820452yhl.5.gmail; Sat, 18 Aug
+ 2012 17:05:24 -0700 (PDT)
+Received: by 10.101.138.29 with SMTP id q29mr1474600ann.22.1345334724055;
+        Sat, 18 Aug 2012 17:05:24 -0700 (PDT)
+Received: by 10.101.138.29 with SMTP id q29mr1474599ann.22.1345334724038;
+        Sat, 18 Aug 2012 17:05:24 -0700 (PDT)
+Received: from mail-qc0-f178.google.com (mail-qc0-f178.google.com [209.85.216.178])
+        by gmr-mx.google.com with ESMTPS id mx24si3042057qcb.3.2012.08.18.17.05.22
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 18 Aug 2012 17:05:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.216.178 is neither permitted nor denied by best guess record for domain of indrora@earfolds.com) client-ip=209.85.216.178;
+Received: by qchj9 with SMTP id j9so4760474qch.23
+        for <tosdr@googlegroups.com>; Sat, 18 Aug 2012 17:05:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.229.135.149 with SMTP id n21mr7988262qct.131.1345334722262;
+ Sat, 18 Aug 2012 17:05:22 -0700 (PDT)
+Received: by 10.224.211.196 with HTTP; Sat, 18 Aug 2012 17:05:22 -0700 (PDT)
+X-Originating-IP: [71.213.186.146]
+In-Reply-To: <550d0956-1477-4b7f-a0be-10e47bc3f6db@googlegroups.com>
+References: <550d0956-1477-4b7f-a0be-10e47bc3f6db@googlegroups.com>
+Date: Sat, 18 Aug 2012 18:05:22 -0600
+Message-ID: <CACjy-ZGtiv-R5z3HL1DRiY3k+-5avcXe_zHKf18KewM5Fv9Rpg@mail.gmail.com>
+Subject: Re: [tosdr:528] F-List: A brief overview of most of the terms.
+From: Morgan Gangwere <indrora@earfolds.com>
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQlruT7NRBERhw4TQxuuOgsz3Vp1ocAJGoM/8+Bh7MPP/NT4kOP6Am8JhNXeQqNqTQN46VtM
+X-Original-Sender: indrora@earfolds.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.216.178 is neither permitted nor denied by best guess record for
+ domain of indrora@earfolds.com) smtp.mail=indrora@earfolds.com; dkim=neutral
+ (bad format) header.i=@earfolds.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Sat, Aug 18, 2012 at 1:00 AM, Thoth <thoth@> wrote:
+
+I'll mention that this particular site is aimed at a particular /sub-genre/.
+
+Y'all have been warned.
+
+> [~]Changing Terms: The terms can be changed at any time, with no notice. "We
+> expressly reserve the right to change these Terms of Use from time to time
+> without notice to you. You acknowledge and agree that it is your
+> responsibility to review this site and these Terms of Use from time to time
+> and to familiarize yourself with any modifications."
+
+> [~]Suspension and Censorship: Due to the adult nature of the site, accounts
+> can be banned if they belong to an underage individual. The usual provisions
+> barring harassment, impersonation, piracy, spamming, and hacking the site
+> also apply. Accounts can be banned without notice to the owner.
+
+This is a Cover Your Butt line. 90% of this is because of the target
+audience being unable to pick their nose without causing drama; thus,
+this clause tries to push drama out of the way.
+
+I wouldn't consider it a "mediocre" thing, I'd consider it more an
+informational: "Zero-tolerance for rule-breaking" (which is REALLY
+hard)
+
+> [~]Right to leave: While accounts can be 'deleted' (stated in the ToS), this
+> does not actually purge associated character profiles from the database, but
+> only renders them unviewable (not stated in the ToS, but discussed in the
+> suggestions forum). If you intend to leave, I would suggest that you delete
+> your characters first, and then the account. It's a few steps, but it's
+> definitely possible. It is also possible to open a ticket and request the
+> account and its associated characters be deleted. (I have reasons to believe
+> this discrepancy in policy vs reality is due to bad code, rather than ill
+> intent.)
+
+This is a Good Thing. It might not be /straightforward/, but it is a Good Thing.
+
+> [G]Personal Data: The only personal data required to make an account is an
+> email address, which is never made public. Other contact information (IM
+> names, usernames from popular MMOs) can be made available on character
+> profiles, and can be removed just as easily.
+> [I]Sharing RL Info: Aside from other digital methods of communication,
+> sharing personal information is prohibited. No personally identifiable
+> information may be shared, nor may RL meetups be arranged.
+
+> [~]Third Parties: "We will not share -any- of your data with third parties
+> without your permission." BUT "You also grant us the right to disclose to
+> third parties certain Registration Data about you." Registration data
+> consists entirely of a username, password, and email address. No other
+> information is collected, nor has any evidence, even anecdotally, arisen of
+> the second statement coming to pass.
+
+I know a few of their admins. The most their API gives out is what you
+present to them. If you don't want it publicly available, don't put it
+up.
+
+> [?] Law and government requests: In short, if it's public, it's public. But,
+> if it's not, you need a warrant. "We will not inspect or disclose the
+> contents of private Communications except with the consent of the sender or
+> the recipient, or in the narrowly-defined situations provided under the
+> Electronic Communications Privacy Act, or as other required by law or by
+> court or governmental order."
+
+This is a Good Thing. Under personal information protection, this is
+pretty much the standard "come back with a warrant or GTFO" line that
+I wish more people had.
+
+> [I]Age requirement: 18 years of age, or legal majority in your area, if
+> higher.
+
+This ties in with above (CYB)
+
+> [G]API Access: "F-List does share some profile data (excluding contact
+> details) with other sites that may want to offer services like embeddable
+> profiles, and stuff like that. If you don't want this, turn API access off
+> in settings, and any access to your profiles is blocked."
+
+> [I]Shared Accounts: ...are prohibited. One account, one user.
+> [I]Multiple Accounts: ... are permitted, provided one is not using them to
+> evade a ban.
+
+This is pretty standard.
+
+>
+>
+> Services with user generated content:
+>
+> [?]Scope of the copyright license: "Subject to our Privacy Policy, any
+> communication or material that you transmit to this site or to us, whether
+> by electronic mail, post, or other means, for any reason, will be treated as
+> non-confidential and non-proprietary. While you retain all rights in such
+> communications or material, you grant us and our agents and affiliates a
+> non-exclusive, paid-up, perpetual, and worldwide right to copy, distribute,
+> display, perform, publish, translate, adapt, modify, and otherwise use such
+> material for any purpose regardless of the form or medium (now known or not
+> currently known) in which it is used."
+
+Interesting, never saw that one in there for a long time. Looks like below.
+
+> [?]Ownership: User retains all rights, but grants the site a "non-exclusive,
+> paid-up, perpetual, and worldwide right to copy, distribute, display,
+> perform, publish, translate, adapt, modify, and otherwise use such material
+> for any purpose regardless of the form or medium (now known or not currently
+> known) in which it is used."
+
+> [~]Copyrighted material removal requests: Upon receiving a properly filed
+> DMCA request, sent to the correct address, the offending material will be
+> removed, pending adjucation. (There is a list with eight bullet points on
+> the information that must be included in the request.) "You acknowledge and
+> agree that upon receipt of a notice of a claim of copyright infringement, we
+> may immediately remove the identified materials from our site without
+> liability to you or any other party and that the claims of the complaining
+> party and the party that originally posted the materials will be referred to
+> the United States Copyright Office for adjudication as provided in the
+> Digital Millennium Copyright Act."
+
+If you've dealt with artists, there's drama involved when one notices
+someone's using their picture that they were(n't) paid for and put
+lots of effort into being used without permission.
+
+>
+>
+> Additional common topics to watch for:
+>
+
+> [G]Anonymity and Tracking: No data is stored longer than one day. "While we
+> do collect data of site usage, both for statistical and for security
+> purposes (Pretty much all raw $_POST/$_GET data if you know what this means)
+> This info is deleted after one day. We don't store any data like this for
+> longer than a day. A cronjob is ran twice every day that deletes data that
+> is older than a day."
+
+Considering about 90% of webservers already do this (have you LOOKED
+at what Apache can spit out on shared-hosting sites?)
+
+> [I]Cookies: Site uses cookies for logins and to store user preferences for
+> the web-based chat client. Deleting the cookies logs out the user and resets
+> the client defaults.
+
+The unfortunate thing is that they cannot actually control this. FWIW,
+this is all it takes for PHP to register a cookie on your box:
+
+<?php session_start(); ?>
+
+Congratulations, your session cookie is set.
+
+In ASP.Net, you don't even have to do anything. It just sets 5 of the
+things. You're hosed if you put Google's analytics on your page too
+(12 cookies). With Ruby On Rails, it may or may not set a few cookies
+to keep tabs on things (because HTTP is stateless).
+
+See why people are confused about Europe's cookie law?
+
+> [I]Jurisdiction and Governing Laws: State of Texas, US. "Each of us agrees
+> and hereby submits to the exclusive personal jurisdiction and venue any
+> court of competent jurisdiction within the State of Texas with respect to
+> such matters."
+
+
+
+-- 
+my .sigfile is on vacation.
+I filter everything with an application/ms-* mimetype.
+I write code: https://github.com/indrora/ https://bitbucket.org/indrora/
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

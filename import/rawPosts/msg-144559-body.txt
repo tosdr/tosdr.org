@@ -1,0 +1,143 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.11 with SMTP id z11csp544934ioi;
+        Fri, 3 Jun 2016 21:17:05 -0700 (PDT)
+X-Received: by 10.107.17.150 with SMTP id 22mr9217437ior.101.1465013825564;
+        Fri, 03 Jun 2016 21:17:05 -0700 (PDT)
+Return-Path: <tosdr+bncBC52ZMFATULBBO5MZG5AKGQE3AAFZGA@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id as6si10058167pac.173.2016.06.03.21.17.05
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 03 Jun 2016 21:17:05 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC52ZMFATULBBO5MZG5AKGQE3AAFZGA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC52ZMFATULBBO5MZG5AKGQE3AAFZGA@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBC52ZMFATULBBO5MZG5AKGQE3AAFZGA@googlegroups.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 6768B41C088
+	for <michiel@unhosted.org>; Sat,  4 Jun 2016 06:17:02 +0200 (CEST)
+Received: from mfilter37-d.gandi.net (mfilter37-d.gandi.net [217.70.178.168])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 57FE1142074
+	for <michiel@unhosted.org>; Sat,  4 Jun 2016 06:17:02 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter37-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter37-d.gandi.net (mfilter37-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id kveRofXwxS1i for <michiel@unhosted.org>;
+	Sat,  4 Jun 2016 06:17:00 +0200 (CEST)
+Received: from mail-yw0-f184.google.com (mail-yw0-f184.google.com [209.85.161.184])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5A07D1421DA
+	for <michiel@michielbdejong.com>; Sat,  4 Jun 2016 06:17:00 +0200 (CEST)
+Received: by mail-yw0-f184.google.com with SMTP id n16sf30504024ywd.0
+        for <michiel@michielbdejong.com>; Fri, 03 Jun 2016 21:17:00 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:from:date:message-id:subject
+         :to:x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=iDWkL1cuP+yUNSVBwLsUtR4GoGSy2lcyRsJrdRJOUns=;
+        b=W4Xw4K36RKKY4AilKzE32ZdHJzAECjAiJfSe/pGYoGgIaYky5GKZ6Ff8IRlcBV2rGK
+         N4mdc+KnuGO7JqBj/b2rRTl91Q0d0AsbDudZWM6LyfKYj1JrlRk671EKDzrSYhhYp7PR
+         hrOyW0iEmGZJ7EsWUlP12sFVN4i3PKX0Q6DN7L2At/9GVMtpXYzgBLKNmOMRqM5q0GEi
+         e7+31eR889prrdPdqstLkYnUq3F6FoHpIi8nkT8uvTHRSrcElZeWGWSTMSb5/f8WJb4R
+         2NSLNH3VwDOw/Wvw7BHX6KcxRPG8z0p9j9tK9BX5WP+1cNT94z4za3t5hPga0UP+40wz
+         YOEQ==
+X-Gm-Message-State: ALyK8tInYaCRivXPz7oe05LzF84qlLyttPYO2LMvKtfMY5AnD24QXY9ToCh+bwPhjhc5VQ==
+X-Received: by 10.36.81.79 with SMTP id s76mr90450ita.9.1465013819515;
+        Fri, 03 Jun 2016 21:16:59 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.44.7 with SMTP id s7ls297051ios.58.gmail; Fri, 03 Jun 2016
+ 21:16:58 -0700 (PDT)
+X-Received: by 10.66.139.77 with SMTP id qw13mr5100750pab.46.1465013818911;
+        Fri, 03 Jun 2016 21:16:58 -0700 (PDT)
+Received: from mail-io0-x22e.google.com (mail-io0-x22e.google.com. [2607:f8b0:4001:c06::22e])
+        by gmr-mx.google.com with ESMTPS id v62si156695itf.3.2016.06.03.21.16.58
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 03 Jun 2016 21:16:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::22e is neither permitted nor denied by best guess record for domain of grossdm@filter.douglasmgross.com) client-ip=2607:f8b0:4001:c06::22e;
+Received: by mail-io0-x22e.google.com with SMTP id o189so87901886ioe.2
+        for <tosdr@googlegroups.com>; Fri, 03 Jun 2016 21:16:58 -0700 (PDT)
+X-Received: by 10.107.38.145 with SMTP id m139mr9530068iom.15.1465013818258;
+ Fri, 03 Jun 2016 21:16:58 -0700 (PDT)
+MIME-Version: 1.0
+Sender: grossdm@filter.douglasmgross.com
+Received: by 10.36.14.13 with HTTP; Fri, 3 Jun 2016 21:16:57 -0700 (PDT)
+X-Originating-IP: [68.38.208.111]
+From: "Douglas M. Gross" <Me@douglasmgross.com>
+Date: Sat, 4 Jun 2016 00:16:57 -0400
+Message-ID: <CAHXiaG9zgrPevKqsaRN+d1v1Q+KaZK-o6Msex8bnMLHB8NzuBA@mail.gmail.com>
+Subject: [tosdr:3900] Terms | MakeUseOf Deals
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a114031ee3a8f4305346c1c4f
+X-Original-Sender: me@douglasmgross.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@filter-douglasmgross-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4001:c06::22e is neither permitted nor denied by best
+ guess record for domain of grossdm@filter.douglasmgross.com) smtp.mailfrom=grossdm@filter.douglasmgross.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--001a114031ee3a8f4305346c1c4f
+Content-Type: text/plain; charset=UTF-8
+
+I don't know what to think of this stuff.  It's pretty confusing.
+
+https://deals.makeuseof.com/terms
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/CAHXiaG9zgrPevKqsaRN%2Bd1v1Q%2BKaZK-o6Msex8bnMLHB8NzuBA%40mail.gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a114031ee3a8f4305346c1c4f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I don&#39;t know what to think of this stuff.=C2=A0 It&#39=
+;s pretty confusing.<br><div><br><a href=3D"https://deals.makeuseof.com/ter=
+ms">https://deals.makeuseof.com/terms</a></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/CAHXiaG9zgrPevKqsaRN%2Bd1v1Q%2BKaZK-o6Msex8bnMLHB8NzuBA%40=
+mail.gmail.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.googl=
+e.com/d/msgid/tosdr/CAHXiaG9zgrPevKqsaRN%2Bd1v1Q%2BKaZK-o6Msex8bnMLHB8NzuBA=
+%40mail.gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a114031ee3a8f4305346c1c4f--

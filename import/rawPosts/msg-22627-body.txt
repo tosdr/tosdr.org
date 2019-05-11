@@ -1,0 +1,114 @@
+Return-Path: <tosdr+bncBDEIL6M7RQCRBX72WOQQKGQEZLELBJI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 9903640910
+	for <anything@michielbdejong.com>; Thu,  2 Oct 2014 09:23:14 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 95CB817808C
+	for <anything@michielbdejong.com>; Thu,  2 Oct 2014 09:23:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id xLQQOHMM3D81 for <anything@michielbdejong.com>;
+	Thu,  2 Oct 2014 09:23:13 +0200 (CEST)
+Received: from mail-lb0-x240.google.com (mail-lb0-x240.google.com [IPv6:2a00:1450:4010:c04::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 128E71780D9
+	for <anything@michielbdejong.com>; Thu,  2 Oct 2014 09:23:13 +0200 (CEST)
+Received: by mail-lb0-f192.google.com with SMTP id f15sf122770lbj.19
+        for <anything@michielbdejong.com>; Thu, 02 Oct 2014 00:23:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:subject:from:to:date:content-type:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=3A/P1jo4nzzbCt8FY7L1OzLe8GZpcBi2DvddBr3d9hs=;
+        b=deemYbvgagucugoZCC5P2NvLAZFJ7RDlvdJqXIAuzSZlTBvUez+SNyvHkKBJ0H3EJR
+         dzJ1TsA/Y1TF3hcfgEkMThCLwhVw6KAEGPYuaOJPdbLpDFSvnTaXjOHURi8LMYdXz61c
+         GDdaynZsn3t2cyqKOs2tM1+FtjGgQKPnnTgpszc+1rcT5qGmstnkFzZHoJbS4GKiBqxJ
+         4pqi2YTmY8xB/MXDVh8LaW8b6dvWJpxEQ18A/ISKjJEhawYZ1JIteOBGk3GFISXV2F60
+         dA5OhBjDaSFlZpkir2OYO0Fjo04HSRZpHFG2GgezKJGhawRAHzDVextyWzI+xMKojCJy
+         Q1BA==
+X-Received: by 10.152.29.195 with SMTP id m3mr371009lah.1.1412234592474;
+        Thu, 02 Oct 2014 00:23:12 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.5.134 with SMTP id s6ls244350las.108.gmail; Thu, 02 Oct
+ 2014 00:23:11 -0700 (PDT)
+X-Received: by 10.152.6.9 with SMTP id w9mr520453law.7.1412234591655;
+        Thu, 02 Oct 2014 00:23:11 -0700 (PDT)
+Received: from deliver03.mhs.ch (deliver03.mhs.ch. [213.188.32.6])
+        by gmr-mx.google.com with ESMTP id h1si17144wib.0.2014.10.02.00.23.11
+        for <tosdr@googlegroups.com>;
+        Thu, 02 Oct 2014 00:23:11 -0700 (PDT)
+Received-SPF: none (google.com: richi@paraeasy.ch does not designate permitted sender hosts) client-ip=213.188.32.6;
+Received: from mail-deliver.mhs.ch ([192.168.1.77]:24660)
+	by mhs.ch with [XMail 1.25 ESMTP Server]
+	id <SA2E789> for <tosdr@googlegroups.com> from <richi@paraeasy.ch>;
+	Thu, 2 Oct 2014 09:20:50 +0200
+Received: from mc09.int.mhs.ch ([213.188.32.155]:37737)
+	by mail-deliver.mhs.ch with [XMail 1.25 ESMTP Server]
+	id <S1E3D126> for <tosdr@googlegroups.com> from <richi@paraeasy.ch>;
+	Thu, 2 Oct 2014 09:23:10 +0200
+X-AuthUser: richi@paraeasy.ch
+Received: from [127.0.0.1] ([178.194.66.87]:39981)
+	by mc09.int.mhs.ch with [mhsMailserver 1.27.20111115 ESMTP Server]
+	id <S5268C17> for <tosdr@googlegroups.com> from <richi@paraeasy.ch>;
+	Thu, 2 Oct 2014 09:23:10 +0200
+Message-ID: <1412234583.25181.1.camel@XPS13dev>
+Subject: [tosdr:3259] coinbase.com
+From: Richard Ulrich <richi@paraeasy.ch>
+To: tosdr@googlegroups.com
+Date: Thu, 02 Oct 2014 09:23:03 +0200
+Content-Type: multipart/signed; micalg="pgp-sha1"; protocol="application/pgp-signature";
+	boundary="=-8FR2jmkRhekOUyAi0P63"
+X-Mailer: Evolution 3.10.4-0ubuntu2
+Mime-Version: 1.0
+X-Original-Sender: richi@paraeasy.ch
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: richi@paraeasy.ch does not designate permitted sender hosts) smtp.mail=richi@paraeasy.ch
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--=-8FR2jmkRhekOUyAi0P63
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+https://www.coinbase.com/users/accept_terms
+
+Hi, I just installed the plugin, and assumed it would automatically
+analyze these legaleze pages.
+Instead it told me to post the link to this email address.
+
+Rgds
+Richard
+
+--=-8FR2jmkRhekOUyAi0P63
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iQEcBAABAgAGBQJULP1XAAoJEALsYBToQBSSL2IIAImA66kk25S5GNj4VewTP0im
+viMbp1iB5HyopbnYmPlloWDNJqw9Z2UHbe5HZ/eGkDNjblWqwDZsZCUnM9zo6utP
+fcHhDmlSKLbPY/CQM99blD4F0BeOxkOWMD3iBM4L9Flsftn6l9x4PUVdVC+C08Y3
+ql4p2Rnuxm6h5OkbXgo1DTp88Ywn86+NZy97XNIUB0Wwg/D7p2U3sGQWImO/BBgM
+E0jtPKEc+dx+yGH0Sq9mfOedGZSSIhbPXcFlEhAtbBx/GivYjRTnYcyVMhnSZbGL
+aGB9qy07d9Hggp6t8Df0mE0XNk5mxfYyhvPWXpgSA29eoq4emiCgN3FOSXHRdkA=
+=JjqN
+-----END PGP SIGNATURE-----
+
+--=-8FR2jmkRhekOUyAi0P63--
+

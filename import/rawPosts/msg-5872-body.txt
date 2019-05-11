@@ -1,0 +1,710 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBCMTUOHAKGQEMFY5OKI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id AA655161743
+	for <anything@michielbdejong.com>; Tue, 25 Jun 2013 00:34:55 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A721014205E
+	for <anything@michielbdejong.com>; Tue, 25 Jun 2013 00:34:55 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Nyy+yl1ITThI for <anything@michielbdejong.com>;
+	Tue, 25 Jun 2013 00:34:53 +0200 (CEST)
+Received: from mail-pb0-x23c.google.com (mail-pb0-x23c.google.com [IPv6:2607:f8b0:400e:c01::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4BA65142088
+	for <michiel@michielbdejong.com>; Tue, 25 Jun 2013 00:34:52 +0200 (CEST)
+Received: by mail-pb0-f60.google.com with SMTP id rr13sf3796796pbb.15
+        for <michiel@michielbdejong.com>; Mon, 24 Jun 2013 15:34:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=pMgsWmoCnolGwGr/H8+BUE5T+EFjf/KsKA4zbg/e/3A=;
+        b=AmOM29TMezpvYjKEwogIimBMf4htyf1yeyBoPX71w/JIjrmtUGSDIbwHmCRGphO8Yq
+         dseqT+9lnSEvF45EnUnbY8oc/46LCjDk+CHlKqm0S6TFJHTZ9042eyrtiCVXVcvmgkqG
+         b6c3eHyZlX9iKwa6xJyK0ptyh/W7HxD+1D9qhyxO2F7MFR4xijsmBBl+sV7ihDwdcejP
+         +ph4CERlMd9lPy7RqHOiuDH7tGOj7MWXxzWrI+lC/IlS16UmQOwKNUOPtdyBVljyNVIl
+         OQmd40KXjQjkJQmME1iTVAdXsUAni+CBGO1o2vHG6DSeIT0o7oI8xm1Nzsfow4axTEvQ
+         WwIQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=pMgsWmoCnolGwGr/H8+BUE5T+EFjf/KsKA4zbg/e/3A=;
+        b=Q2lckH5a5csWQ/TIRuV4NkpOhvZ4n7IXujvS55nfInrPg/4140ielBDXzZgw60LMI/
+         GaYdZ7V1LRP//UZs7aFeHMJjGEWXOywHx7FFOU220ut1TLFHwBMFZSPc1qcu3Gs35PgB
+         Pb9zorSlog0BJV7yCdaJwmjuq2X5Q0aL1jgJ8SSSoVf+3ISYPTkyHv2yjyrNBENdjUuv
+         NM4Lwdn901tSBpcq2GNEyEsjBA3ReWCDJNOyv9ayODiX4ER+WB5SK5MEIJAxeAXT1XV/
+         QbcFUfP2gUjWUgqKFtO3Gz9Dxvk4hihDQC3GnArNtbEcaIUw5puM4NPjwHmK+X7zcA+U
+         YLnA==
+X-Received: by 10.49.17.42 with SMTP id l10mr564923qed.10.1372113289706;
+        Mon, 24 Jun 2013 15:34:49 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.63.1 with SMTP id c1ls1770911qes.32.gmail; Mon, 24 Jun 2013
+ 15:34:49 -0700 (PDT)
+X-Received: by 10.49.120.67 with SMTP id la3mr574452qeb.35.1372113289023;
+        Mon, 24 Jun 2013 15:34:49 -0700 (PDT)
+Date: Mon, 24 Jun 2013 15:34:48 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <97b44ba9-ca70-4b98-a2e5-0e009c4a5f06@googlegroups.com>
+In-Reply-To: <CA+aD3u3Y3mBqSuHHOhzTkmDgUxuokeXJLSA3cNuaZU58GJaobQ@mail.gmail.com>
+References: <7c6a958c-8f05-45cd-a124-5e4197915ce3@googlegroups.com>
+ <fa784db7-aa74-4674-b73d-b53f1e62af3e@googlegroups.com>
+ <CA+aD3u3Y3mBqSuHHOhzTkmDgUxuokeXJLSA3cNuaZU58GJaobQ@mail.gmail.com>
+Subject: Re: [tosdr:2333] Re: Wikipedia ToU & PP
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_20_23585712.1372113288711"
+
+------=_Part_20_23585712.1372113288711
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+I'll go through these and make individual discussion threads for each point=
+=20
+so we can get them on the site. Based on the points here, I'd say the class=
+=20
+rating would probably be pretty good.
+
+On Sunday, October 14, 2012 3:37:28 AM UTC-5, Michiel de Jong wrote:
+>
+> thanks! we'll try to get this onto the website asap. we are struggling=20
+> with a bit of a backlog in that respect, but the funds we raised on=20
+> http://www.indiegogo.com/terms-of-service-didnt-read will help us to=20
+> fix that, and we're working hard to set things up for this, so please=20
+> bear with us. :)=20
+>
+> Thank you!!=20
+> Michiel=20
+>
+> On Sat, Oct 13, 2012 at 12:00 AM, Duck X <duck...@gmail.com <javascript:>=
+>=20
+> wrote:=20
+> > http://wikimediafoundation.org/wiki/Terms_of_Use=20
+> >=20
+> > [Info] You are responsible for your contributions=20
+> > [Info] Wikimedia makes no claim of validity, and some information may b=
+e=20
+> > inaccurate=20
+> > [Good] You retain copyright to your contributions=20
+> > [Good] You freely license your contributions=20
+> > [Info] Harassment and spam prohibited=20
+> > [Info] You must freely license derivative works of Wikimedia content,=
+=20
+> even=20
+> > if you are not an editor=20
+> > [Good] Cookies only used to keep you logged into your account=20
+> > [Bad] You cannot delete your account=20
+> > [Good] You may terminate the agreement simply by leaving the project=20
+> > [Bad] Wikimedia and site administrators can block, but not delete, your=
+=20
+> > account=20
+> > [Good] Wikimedia gives advance notice of terms of use changes=20
+> > [Good] Users may decide on changes to terms of use=20
+> >=20
+> > I think this ToS is overall favorable.=20
+> >=20
+> > On Friday, August 10, 2012 8:07:41 AM UTC-4, Pantsburgh wrote:=20
+> >>=20
+> >> Wikipedia ToU & PP=20
+> >>=20
+> >> [1] (bad) No links to ToU or PP on index. Had to navigate to a sub pag=
+e=20
+> to=20
+> >> get links in footer. This is really more a note to Wikipedia rather=20
+> than=20
+> >> worthy of inclusion on ToS;DR.=20
+> >>=20
+> >> [2] (good) ToU formatted with excellent summary section. Both ToU and=
+=20
+> PP=20
+> >> have an index with links to #anchors down the page.=20
+> >>=20
+> >> Privacy Policy=20
+> >> http://wikimediafoundation.org/wiki/Privacy_policy=20
+> >>=20
+> >> [3] (good) Use of real name not required.=20
+> >>=20
+> >> Anyone with Internet access (and not otherwise restricted from doing=
+=20
+> so)=20
+> >> may edit the publicly editable pages of these sites with or without=20
+> logging=20
+> >> in as a registered user.=20
+> >> ...=20
+> >> The Foundation does not require editors to register with a project.=20
+> Anyone=20
+> >> can edit without logging in with a username, in which case they will b=
+e=20
+> >> identified by network IP address. Users that do register are identifie=
+d=20
+> by=20
+> >> their chosen username.=20
+> >>=20
+> >> [4] (good) Personal info is only used for running the service.=20
+> >>=20
+> >> The Foundation limits the collection of personally identifiable user=
+=20
+> data=20
+> >> to purposes which serve the well-being of its projects (list of uses=
+=20
+> related=20
+> >> to preventing abuse).=20
+> >> ...=20
+> >> To provide site statistics. The Foundation statistically samples raw=
+=20
+> log=20
+> >> data from users' visits. These logs are used to produce the site=20
+> statistics=20
+> >> pages; the raw log data is not made public.=20
+> >> To solve technical problems. Log data may be examined by developers in=
+=20
+> the=20
+> >> course of solving technical problems and in tracking down badly-behave=
+d=20
+> web=20
+> >> spiders that overwhelm the site.=20
+> >>=20
+> >> [5] (note) User's IP may be used as permanently available public=20
+> >> identification. Better privacy available in form of being a registered=
+=20
+> user.=20
+> >>=20
+> >> For editors who do not log in, the IP address used is publicly and=20
+> >> permanently credited as the author of the edit. It may be possible for=
+=20
+> a=20
+> >> third party to identify the author from this IP address in conjunction=
+=20
+> with=20
+> >> other information available. Logging in with a registered username=20
+> allows=20
+> >> for better preservation of privacy.=20
+> >> ...=20
+> >> Edits to Project pages are identified with the username or network IP=
+=20
+> >> address of the editor, and editing history is aggregated by author in =
+a=20
+> >> contribution list. Such information will be available permanently on=
+=20
+> the=20
+> >> projects.=20
+> >>=20
+> >> [6] (good) Cookies optional if just viewing pages. Cookies used for=20
+> >> logins/edits.=20
+> >>=20
+> >> The sites set a temporary session cookie on a visitor's computer=20
+> whenever=20
+> >> a Project page is visited. Readers who do not intend to log in or edit=
+=20
+> may=20
+> >> deny this cookie; it will be deleted at the end of the browser's=20
+> session.=20
+> >> More cookies may be set when one logs in to maintain logged-in status.=
+=20
+> If=20
+> >> one saves a user name or password in one's browser, that information=
+=20
+> will be=20
+> >> saved for up to 30 days, and this information will be resent to the=20
+> server=20
+> >> on every visit to the same Project. Contributors using a public machin=
+e=20
+> who=20
+> >> do not wish to show their username to future users of the machine=20
+> should=20
+> >> clear these cookies after use.=20
+> >>=20
+> >> [7] (good) Personal info disclosed to law enforcement by court order=
+=20
+> only.=20
+> >> User is notified.=20
+> >>=20
+> >> As a general principle, the access to, and retention of, personally=20
+> >> identifiable data in all projects should be minimal and should be used=
+=20
+> only=20
+> >> internally to serve the well-being of the projects. Occasionally,=20
+> however,=20
+> >> the Foundation may receive a subpoena or other compulsory request from=
+=20
+> a=20
+> >> law-enforcement agency or a court or equivalent government body that=
+=20
+> >> requests the disclosure of information about a registered user, and ma=
+y=20
+> be=20
+> >> compelled by law to comply with the request. In the event of such a=20
+> legally=20
+> >> compulsory request, the Foundation will attempt to notify the affected=
+=20
+> user=20
+> >> within three business days after the arrival of such subpoena by=20
+> sending a=20
+> >> notice by email to the email address (if any) that the affected user=
+=20
+> has=20
+> >> listed in his or her user preferences.=20
+> >>=20
+> >>=20
+> >> Terms of Use=20
+> >> http://wikimediafoundation.org/wiki/Terms_of_use=20
+> >>=20
+> >> [8] (note?) Users are legally responsible for their own contributions=
+=20
+> and=20
+> >> actions.=20
+> >>=20
+> >> Section 1.b=20
+> >> You are responsible for your own actions: You are legally responsible=
+=20
+> for=20
+> >> your edits and contributions on Wikimedia Projects, so for your own=20
+> >> protection you should exercise caution and avoid contributing any=20
+> content=20
+> >> that may result in criminal or civil liability under any applicable=20
+> laws.=20
+> >> For clarity, applicable law includes at least the laws of the United=
+=20
+> States=20
+> >> of America. Although we may not agree with such actions, we warn=20
+> editors and=20
+> >> contributors that authorities may seek to apply other country laws to=
+=20
+> you,=20
+> >> including local laws where you live or where you view or edit content.=
+=20
+> WMF=20
+> >> generally cannot offer any protection, guarantee, immunity or=20
+> >> indemnification.=20
+> >>=20
+> >> [9] (good) User contributions licensed under CC BY-SA 3.0 and GFDL.=20
+> >>=20
+> >> Section 7.a=20
+> >> Text to which you hold the copyright: When you submit text to which yo=
+u=20
+> >> hold the copyright, you agree to license it under:=20
+> >> Creative Commons Attribution-ShareAlike 3.0 Unported License (=93CC=20
+> BY-SA=94),=20
+> >> and=20
+> >> GNU Free Documentation License (=93GFDL=94) (unversioned, with no inva=
+riant=20
+> >> sections, front-cover texts, or back-cover texts).=20
+> >>=20
+> >> [10] (good) You may cancel at any time.=20
+> >>=20
+> >> Though we hope you will stay and continue to contribute to the=20
+> Projects,=20
+> >> you can stop using our services any time.=20
+> >>=20
+> >> [11] (note) Jurisdiction in California.=20
+> >>=20
+> >> If you seek to file a legal claim against us, you agree to file and=20
+> >> resolve it exclusively in a state or federal court located in San=20
+> Francisco=20
+> >> County, California. You also agree that the laws of the State of=20
+> California=20
+> >> and, to the extent applicable, the laws of the United States of Americ=
+a=20
+> will=20
+> >> govern these Terms of Use, as well as any legal claim that might arise=
+=20
+> >> between you and us (without reference to conflict of laws principles).=
+=20
+> You=20
+> >> agree to submit to the personal jurisdiction of, and agree that venue=
+=20
+> is=20
+> >> proper in, the courts located in San Francisco County, California, in=
+=20
+> any=20
+> >> legal action or proceeding relating to us or these Terms of Use.=20
+> >>=20
+> >> [12] (good) Community included in modifications to ToU. Notifications=
+=20
+> >> provided via website.=20
+> >>=20
+> >> Just as the Wikimedia community's input is essential for the growth an=
+d=20
+> >> maintenance of the Projects, we believe that community input is=20
+> essential=20
+> >> for these Terms of Use to properly serve our users. It is also=20
+> essential for=20
+> >> a fair contract. Therefore, we will provide these Terms of Use, as wel=
+l=20
+> as=20
+> >> any substantial future revisions of these Terms of Use, to the=20
+> community for=20
+> >> comment at least thirty (30) days before the end of the comment period=
+.=20
+> >> ...=20
+> >> Because it may be necessary to modify these Terms of Use from time to=
+=20
+> >> time, we will provide notice of such modifications and the opportunity=
+=20
+> to=20
+> >> comment via the Project websites, and via a notification on=20
+> >> WikimediaAnnounce-L.=20
+> >=20
+> > --=20
+> > www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread=
+=20
+> >=20
+> > ---=20
+> > You received this message because you are subscribed to the Google=20
+> Groups=20
+> > "Terms of Service; Didn't Read" group.=20
+> > To post to this group, send email to to...@googlegroups.com<javascript:=
+>.=20
+>
+> > To unsubscribe from this group, send email to=20
+> > tosdr+un...@googlegroups.com <javascript:>.=20
+> > Visit this group at http://groups.google.com/group/tosdr?hl=3Den.=20
+> > For more options, visit https://groups.google.com/groups/opt_out.=20
+> >=20
+> >=20
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_20_23585712.1372113288711
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div>I'll go through these and make individual discussion threads for each =
+point so we can get them on the site. Based on the points here, I'd say the=
+ class rating would probably be pretty good.</div><br><div>On Sunday, Octob=
+er 14, 2012 3:37:28 AM UTC-5, Michiel de Jong wrote:<blockquote class=3D"gm=
+ail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc soli=
+d;padding-left: 1ex;">thanks! we'll try to get this onto the website asap. =
+we are struggling
+<br>with a bit of a backlog in that respect, but the funds we raised on
+<br><a href=3D"http://www.indiegogo.com/terms-of-service-didnt-read" target=
+=3D"_blank">http://www.indiegogo.com/<wbr>terms-of-service-didnt-read</a> w=
+ill help us to
+<br>fix that, and we're working hard to set things up for this, so please
+<br>bear with us. :)
+<br>
+<br>Thank you!!
+<br>Michiel
+<br>
+<br>On Sat, Oct 13, 2012 at 12:00 AM, Duck X &lt;<a href=3D"javascript:" ta=
+rget=3D"_blank" gdf-obfuscated-mailto=3D"Iyob-BEVCoYJ">duck...@gmail.com</a=
+>&gt; wrote:
+<br>&gt; <a href=3D"http://wikimediafoundation.org/wiki/Terms_of_Use" targe=
+t=3D"_blank">http://wikimediafoundation.<wbr>org/wiki/Terms_of_Use</a>
+<br>&gt;
+<br>&gt; [Info] You are responsible for your contributions
+<br>&gt; [Info] Wikimedia makes no claim of validity, and some information =
+may be
+<br>&gt; inaccurate
+<br>&gt; [Good] You retain copyright to your contributions
+<br>&gt; [Good] You freely license your contributions
+<br>&gt; [Info] Harassment and spam prohibited
+<br>&gt; [Info] You must freely license derivative works of Wikimedia conte=
+nt, even
+<br>&gt; if you are not an editor
+<br>&gt; [Good] Cookies only used to keep you logged into your account
+<br>&gt; [Bad] You cannot delete your account
+<br>&gt; [Good] You may terminate the agreement simply by leaving the proje=
+ct
+<br>&gt; [Bad] Wikimedia and site administrators can block, but not delete,=
+ your
+<br>&gt; account
+<br>&gt; [Good] Wikimedia gives advance notice of terms of use changes
+<br>&gt; [Good] Users may decide on changes to terms of use
+<br>&gt;
+<br>&gt; I think this ToS is overall favorable.
+<br>&gt;
+<br>&gt; On Friday, August 10, 2012 8:07:41 AM UTC-4, Pantsburgh wrote:
+<br>&gt;&gt;
+<br>&gt;&gt; Wikipedia ToU &amp; PP
+<br>&gt;&gt;
+<br>&gt;&gt; [1] (bad) No links to ToU or PP on index. Had to navigate to a=
+ sub page to
+<br>&gt;&gt; get links in footer. This is really more a note to Wikipedia r=
+ather than
+<br>&gt;&gt; worthy of inclusion on ToS;DR.
+<br>&gt;&gt;
+<br>&gt;&gt; [2] (good) ToU formatted with excellent summary section. Both =
+ToU and PP
+<br>&gt;&gt; have an index with links to #anchors down the page.
+<br>&gt;&gt;
+<br>&gt;&gt; Privacy Policy
+<br>&gt;&gt; <a href=3D"http://wikimediafoundation.org/wiki/Privacy_policy"=
+ target=3D"_blank">http://wikimediafoundation.<wbr>org/wiki/Privacy_policy<=
+/a>
+<br>&gt;&gt;
+<br>&gt;&gt; [3] (good) Use of real name not required.
+<br>&gt;&gt;
+<br>&gt;&gt; Anyone with Internet access (and not otherwise restricted from=
+ doing so)
+<br>&gt;&gt; may edit the publicly editable pages of these sites with or wi=
+thout logging
+<br>&gt;&gt; in as a registered user.
+<br>&gt;&gt; ...
+<br>&gt;&gt; The Foundation does not require editors to register with a pro=
+ject. Anyone
+<br>&gt;&gt; can edit without logging in with a username, in which case the=
+y will be
+<br>&gt;&gt; identified by network IP address. Users that do register are i=
+dentified by
+<br>&gt;&gt; their chosen username.
+<br>&gt;&gt;
+<br>&gt;&gt; [4] (good) Personal info is only used for running the service.
+<br>&gt;&gt;
+<br>&gt;&gt; The Foundation limits the collection of personally identifiabl=
+e user data
+<br>&gt;&gt; to purposes which serve the well-being of its projects (list o=
+f uses related
+<br>&gt;&gt; to preventing abuse).
+<br>&gt;&gt; ...
+<br>&gt;&gt; To provide site statistics. The Foundation statistically sampl=
+es raw log
+<br>&gt;&gt; data from users' visits. These logs are used to produce the si=
+te statistics
+<br>&gt;&gt; pages; the raw log data is not made public.
+<br>&gt;&gt; To solve technical problems. Log data may be examined by devel=
+opers in the
+<br>&gt;&gt; course of solving technical problems and in tracking down badl=
+y-behaved web
+<br>&gt;&gt; spiders that overwhelm the site.
+<br>&gt;&gt;
+<br>&gt;&gt; [5] (note) User's IP may be used as permanently available publ=
+ic
+<br>&gt;&gt; identification. Better privacy available in form of being a re=
+gistered user.
+<br>&gt;&gt;
+<br>&gt;&gt; For editors who do not log in, the IP address used is publicly=
+ and
+<br>&gt;&gt; permanently credited as the author of the edit. It may be poss=
+ible for a
+<br>&gt;&gt; third party to identify the author from this IP address in con=
+junction with
+<br>&gt;&gt; other information available. Logging in with a registered user=
+name allows
+<br>&gt;&gt; for better preservation of privacy.
+<br>&gt;&gt; ...
+<br>&gt;&gt; Edits to Project pages are identified with the username or net=
+work IP
+<br>&gt;&gt; address of the editor, and editing history is aggregated by au=
+thor in a
+<br>&gt;&gt; contribution list. Such information will be available permanen=
+tly on the
+<br>&gt;&gt; projects.
+<br>&gt;&gt;
+<br>&gt;&gt; [6] (good) Cookies optional if just viewing pages. Cookies use=
+d for
+<br>&gt;&gt; logins/edits.
+<br>&gt;&gt;
+<br>&gt;&gt; The sites set a temporary session cookie on a visitor's comput=
+er whenever
+<br>&gt;&gt; a Project page is visited. Readers who do not intend to log in=
+ or edit may
+<br>&gt;&gt; deny this cookie; it will be deleted at the end of the browser=
+'s session.
+<br>&gt;&gt; More cookies may be set when one logs in to maintain logged-in=
+ status. If
+<br>&gt;&gt; one saves a user name or password in one's browser, that infor=
+mation will be
+<br>&gt;&gt; saved for up to 30 days, and this information will be resent t=
+o the server
+<br>&gt;&gt; on every visit to the same Project. Contributors using a publi=
+c machine who
+<br>&gt;&gt; do not wish to show their username to future users of the mach=
+ine should
+<br>&gt;&gt; clear these cookies after use.
+<br>&gt;&gt;
+<br>&gt;&gt; [7] (good) Personal info disclosed to law enforcement by court=
+ order only.
+<br>&gt;&gt; User is notified.
+<br>&gt;&gt;
+<br>&gt;&gt; As a general principle, the access to, and retention of, perso=
+nally
+<br>&gt;&gt; identifiable data in all projects should be minimal and should=
+ be used only
+<br>&gt;&gt; internally to serve the well-being of the projects. Occasional=
+ly, however,
+<br>&gt;&gt; the Foundation may receive a subpoena or other compulsory requ=
+est from a
+<br>&gt;&gt; law-enforcement agency or a court or equivalent government bod=
+y that
+<br>&gt;&gt; requests the disclosure of information about a registered user=
+, and may be
+<br>&gt;&gt; compelled by law to comply with the request. In the event of s=
+uch a legally
+<br>&gt;&gt; compulsory request, the Foundation will attempt to notify the =
+affected user
+<br>&gt;&gt; within three business days after the arrival of such subpoena =
+by sending a
+<br>&gt;&gt; notice by email to the email address (if any) that the affecte=
+d user has
+<br>&gt;&gt; listed in his or her user preferences.
+<br>&gt;&gt;
+<br>&gt;&gt;
+<br>&gt;&gt; Terms of Use
+<br>&gt;&gt; <a href=3D"http://wikimediafoundation.org/wiki/Terms_of_use" t=
+arget=3D"_blank">http://wikimediafoundation.<wbr>org/wiki/Terms_of_use</a>
+<br>&gt;&gt;
+<br>&gt;&gt; [8] (note?) Users are legally responsible for their own contri=
+butions and
+<br>&gt;&gt; actions.
+<br>&gt;&gt;
+<br>&gt;&gt; Section 1.b
+<br>&gt;&gt; You are responsible for your own actions: You are legally resp=
+onsible for
+<br>&gt;&gt; your edits and contributions on Wikimedia Projects, so for you=
+r own
+<br>&gt;&gt; protection you should exercise caution and avoid contributing =
+any content
+<br>&gt;&gt; that may result in criminal or civil liability under any appli=
+cable laws.
+<br>&gt;&gt; For clarity, applicable law includes at least the laws of the =
+United States
+<br>&gt;&gt; of America. Although we may not agree with such actions, we wa=
+rn editors and
+<br>&gt;&gt; contributors that authorities may seek to apply other country =
+laws to you,
+<br>&gt;&gt; including local laws where you live or where you view or edit =
+content. WMF
+<br>&gt;&gt; generally cannot offer any protection, guarantee, immunity or
+<br>&gt;&gt; indemnification.
+<br>&gt;&gt;
+<br>&gt;&gt; [9] (good) User contributions licensed under CC BY-SA 3.0 and =
+GFDL.
+<br>&gt;&gt;
+<br>&gt;&gt; Section 7.a
+<br>&gt;&gt; Text to which you hold the copyright: When you submit text to =
+which you
+<br>&gt;&gt; hold the copyright, you agree to license it under:
+<br>&gt;&gt; Creative Commons Attribution-ShareAlike 3.0 Unported License (=
+=93CC BY-SA=94),
+<br>&gt;&gt; and
+<br>&gt;&gt; GNU Free Documentation License (=93GFDL=94) (unversioned, with=
+ no invariant
+<br>&gt;&gt; sections, front-cover texts, or back-cover texts).
+<br>&gt;&gt;
+<br>&gt;&gt; [10] (good) You may cancel at any time.
+<br>&gt;&gt;
+<br>&gt;&gt; Though we hope you will stay and continue to contribute to the=
+ Projects,
+<br>&gt;&gt; you can stop using our services any time.
+<br>&gt;&gt;
+<br>&gt;&gt; [11] (note) Jurisdiction in California.
+<br>&gt;&gt;
+<br>&gt;&gt; If you seek to file a legal claim against us, you agree to fil=
+e and
+<br>&gt;&gt; resolve it exclusively in a state or federal court located in =
+San Francisco
+<br>&gt;&gt; County, California. You also agree that the laws of the State =
+of California
+<br>&gt;&gt; and, to the extent applicable, the laws of the United States o=
+f America will
+<br>&gt;&gt; govern these Terms of Use, as well as any legal claim that mig=
+ht arise
+<br>&gt;&gt; between you and us (without reference to conflict of laws prin=
+ciples). You
+<br>&gt;&gt; agree to submit to the personal jurisdiction of, and agree tha=
+t venue is
+<br>&gt;&gt; proper in, the courts located in San Francisco County, Califor=
+nia, in any
+<br>&gt;&gt; legal action or proceeding relating to us or these Terms of Us=
+e.
+<br>&gt;&gt;
+<br>&gt;&gt; [12] (good) Community included in modifications to ToU. Notifi=
+cations
+<br>&gt;&gt; provided via website.
+<br>&gt;&gt;
+<br>&gt;&gt; Just as the Wikimedia community's input is essential for the g=
+rowth and
+<br>&gt;&gt; maintenance of the Projects, we believe that community input i=
+s essential
+<br>&gt;&gt; for these Terms of Use to properly serve our users. It is also=
+ essential for
+<br>&gt;&gt; a fair contract. Therefore, we will provide these Terms of Use=
+, as well as
+<br>&gt;&gt; any substantial future revisions of these Terms of Use, to the=
+ community for
+<br>&gt;&gt; comment at least thirty (30) days before the end of the commen=
+t period.
+<br>&gt;&gt; ...
+<br>&gt;&gt; Because it may be necessary to modify these Terms of Use from =
+time to
+<br>&gt;&gt; time, we will provide notice of such modifications and the opp=
+ortunity to
+<br>&gt;&gt; comment via the Project websites, and via a notification on
+<br>&gt;&gt; WikimediaAnnounce-L.
+<br>&gt;
+<br>&gt; --
+<br>&gt; <a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.in=
+fo</a> // <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.tw=
+itter.com/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=
+=3D"_blank">www.github.com/didnotread</a>
+<br>&gt;
+<br>&gt; ---
+<br>&gt; You received this message because you are subscribed to the Google=
+ Groups
+<br>&gt; "Terms of Service; Didn't Read" group.
+<br>&gt; To post to this group, send email to <a href=3D"javascript:" targe=
+t=3D"_blank" gdf-obfuscated-mailto=3D"Iyob-BEVCoYJ">to...@googlegroups.com<=
+/a>.
+<br>&gt; To unsubscribe from this group, send email to
+<br>&gt; <a href=3D"javascript:" target=3D"_blank" gdf-obfuscated-mailto=3D=
+"Iyob-BEVCoYJ">tosdr+un...@<wbr>googlegroups.com</a>.
+<br>&gt; Visit this group at <a href=3D"http://groups.google.com/group/tosd=
+r?hl=3Den" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=
+=3Den</a>.
+<br>&gt; For more options, visit <a href=3D"https://groups.google.com/group=
+s/opt_out" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out<=
+/a>.
+<br>&gt;
+<br>&gt;
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_20_23585712.1372113288711--

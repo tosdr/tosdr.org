@@ -1,0 +1,550 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp24283qek;
+        Wed, 3 Oct 2012 09:33:54 -0700 (PDT)
+Received: by 10.180.102.131 with SMTP id fo3mr14063958wib.1.1349282033903;
+        Wed, 03 Oct 2012 09:33:53 -0700 (PDT)
+Return-Path: <tosdr+bncBCQKD5P2YMKRB4GRWGBQKGQEDXGKT2A@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id m49si5237513wen.160.2012.10.03.09.33.53
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 03 Oct 2012 09:33:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBCQKD5P2YMKRB4GRWGBQKGQEDXGKT2A@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBCQKD5P2YMKRB4GRWGBQKGQEDXGKT2A@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncBCQKD5P2YMKRB4GRWGBQKGQEDXGKT2A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by famm1 with SMTP id m1sf3049858fam.29
+        for <michiel@unhosted.org>; Wed, 03 Oct 2012 09:33:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ecmsTzPAOw6BRa/Ia7cwprtBn2mWvN8/L5uRnIiSA8Y=;
+        b=nNYZkeZVV7Or4pLOc7hcd0BOkt64s1LF9HNCncBwnL44+GJe02ufYCi6slDkfSnVzx
+         uDRyepXe7i/MNAqDbg0U8/b0t0R/d0cabSyzhJS11BR8DYJz7CRhwgYUVyKIPtO8YTwY
+         oSMp/dKqVfGeebM78brgcQWMr+Bsloyv3G2VzTu9btOh0Yl1RsQJIrl/RryQzJGZ1XgY
+         gYEiqqH5WyeYZR672ENfsP2RG3YbUz8hLjKJgQtYTjXFogI8X4YzcMjHgjCd8aLCgrzs
+         w9fO9UioWu23gxQGlTe2Bp+3mgYZbMGHL4+MoBKwd6tT00lrRKIEgJpUZSqgthxUpRG9
+         rMuw==
+Received: by 10.204.156.25 with SMTP id u25mr228113bkw.8.1349282032878;
+        Wed, 03 Oct 2012 09:33:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.131.72 with SMTP id w8ls2272484bks.3.gmail; Wed, 03 Oct
+ 2012 09:33:52 -0700 (PDT)
+Received: by 10.204.145.140 with SMTP id d12mr189048bkv.6.1349282031928;
+        Wed, 03 Oct 2012 09:33:51 -0700 (PDT)
+Received: by 10.204.145.140 with SMTP id d12mr189047bkv.6.1349282031889;
+        Wed, 03 Oct 2012 09:33:51 -0700 (PDT)
+Received: from mail-la0-f50.google.com (mail-la0-f50.google.com [209.85.215.50])
+        by gmr-mx.google.com with ESMTPS id v13si455707bkw.0.2012.10.03.09.33.51
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 03 Oct 2012 09:33:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of parlannero@gmail.com designates 209.85.215.50 as permitted sender) client-ip=209.85.215.50;
+Received: by mail-la0-f50.google.com with SMTP id r15so3040805lag.9
+        for <tosdr@googlegroups.com>; Wed, 03 Oct 2012 09:33:51 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.152.124.180 with SMTP id mj20mr2128562lab.43.1349282031607;
+ Wed, 03 Oct 2012 09:33:51 -0700 (PDT)
+Received: by 10.112.147.133 with HTTP; Wed, 3 Oct 2012 09:33:51 -0700 (PDT)
+In-Reply-To: <CA+aD3u1c0H2TTDLDpAhnNimtou9Lf5Qm841vKG5qCYB28Q-orA@mail.gmail.com>
+References: <CA+aD3u05iJSkJtL2fgO=UeVjYjec1N4Ssb1mRWM6vG29xaGg9w@mail.gmail.com>
+	<3ee86880-b655-435b-9924-6ff26b819af9@googlegroups.com>
+	<CA+aD3u1c0H2TTDLDpAhnNimtou9Lf5Qm841vKG5qCYB28Q-orA@mail.gmail.com>
+Date: Wed, 3 Oct 2012 18:33:51 +0200
+Message-ID: <CAGT43G_7C--Be6aiChQByug2NaRLiUddaSK5+3FNL_aMJDxO_A@mail.gmail.com>
+Subject: Re: [tosdr:966] Re: standardizing data point texts
+From: =?ISO-8859-1?Q?P=E4r_Lanner=F6?= <parlannero@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: parlannero@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of parlannero@gmail.com designates 209.85.215.50 as permitted sender)
+ smtp.mail=parlannero@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=f46d0434bfde32211804cb2a3495
+
+--f46d0434bfde32211804cb2a3495
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Michiel,
+thanks for your efforts!
+
+Primarily, I want to say that the CommonTerms database is by no means final
+(and will never be).
+If you stumble upon a term/clause that does not map well onto any
+CommonTerms pattern, you should add a new pattern.
+There will be a tool for that, I am working on it right now. Later on an
+API, too, in case you don't like the tool.
+
+Secondly, however, I (non-lawyer) would say that some of your clauses
+actually do exist in the CommonTerms database. Will indicate them below.
+But since you did not find them, others won't either. This is a challenge.
+It would not be good if the database grows wildly with multiple equivalent
+or almost equivalent patterns appearing under different headings. The
+database can be browsed by hierarchy and searched by keyword, but probably
+alternative formulations should be added for better searchability.
+
+Best regards
+P=E4r
+
+2012/10/2 Michiel de Jong <michiel@unhosted.org>
+
+> as an exercise, let's try to use this to for the clauses we have
+> started assigning standards weights to, for changes:
+>
+> - terms may change at any time with immediate effect, and it is your
+> responsibility to discover this
+>
+
+http://www.commonterms.net/patterns/notification_of_changed_terms/lookup_we=
+bpage
+
+
+> - term changes are published silently X days in advance, you will not
+> be notified
+
+
+http://www.commonterms.net/patterns/notification_of_changed_terms/lookup_we=
+bpage
+http://www.commonterms.net/patterns/advance_notice_of_term_changes/number_o=
+f_days_specified
+
+
+> - you will be notified, but the effect is immediate from the moment
+> the notification is sent
+>
+
+http://www.commonterms.net/patterns/notification_of_changed_terms/provider_=
+will_try_to_notify_user
+http://www.commonterms.net/patterns/advance_notice_of_term_changes/number_o=
+f_days_specified
+
+
+> - you will be notified at least X days in advance
+>
+
+http://www.commonterms.net/patterns/advance_notice_of_term_changes/number_o=
+f_days_specified
+
+
+> I would map all of these to
+> http://www.commonterms.net/patterns/change_of_terms/at_providers_discreti=
+on
+>
+> and for indemnification:
+>
+> - you will defend, indemnify them [, and hold them harmless] and this
+> survives the termination of the agreement
+>
+
+Only partial match:
+http://www.commonterms.net/patterns/survival_of_terms_after_termination/lis=
+ted_terms_still_valid
+
+
+> - you will indemnify them (but no mention of defending them)
+> - you will indemnify them (but no mention of defending them) and this
+> survives the termination of the agreement
+>
+> I would map all four of these to
+> http://www.commonterms.net/patterns/indemnity/procedure_described
+>
+> How can we distinguish them? i think it's clear we need to add
+> something more here, but it's not totally clear to me what or how yet.
+>
+> I will think about it myself as well. P=E4r, other, what do you think?
+>
+>
+> Cheers,
+> Michiel
+>
+> On Fri, Sep 7, 2012 at 1:31 PM, P=E4r Lanner=F6 <par@lannero.com> wrote:
+> > Hi!
+> >
+> > If you like, the CommonTerms database of common terms can be used as a
+> > master repository for such standardized patterns.
+> >
+> > We already have a database of some 450 patterns, and can easily add
+> TOS;DR
+> > data points, and adapt the API to consequent requirements.
+> > See http://www.commonterms.net/patterns
+> > Every pattern gets assigned a unique URI, and when an HTTP call is made
+> to
+> > that address, a serialization of the pattern is returned.
+> > When somebody (eg. after discussing the issue on the mailinglist) wants
+> to
+> > assign a data point to a website, they should start by searching the
+> > database for a suitable pattern.
+> > If they find one, they can assign the URI of the pattern to the website=
+.
+> > If they don't find one, they can add a new pattern to the database. Thi=
+s
+> > will create a new URI, which they can assign to the website.
+> > API methods for searching and adding to the database are under
+> development.
+> > URI structure needs to be discussed.
+> >
+> > I can see that the idea of having a master repository of patterns
+> conflicts
+> > slightly with the Unhosted ideal of being independent of any single hos=
+t.
+> > But all patterns could be exported regularly as json files for offline
+> > storage...
+> >
+> > Best regards
+> > P=E4r Lanner=F6, Commonterms.net
+> >
+> >
+> > Den torsdagen den 6:e september 2012 kl. 20:19:58 UTC+2 skrev Michiel d=
+e
+> > Jong:
+> >>
+> >> Hi,
+> >>
+> >> this is something that came up in the opennotice confcall just now -
+> >> if you look at for instance http://tos-dr.info/topics.html#track you
+> >> see the following data point texts:
+> >>
+> >> You must use your real name (yahoo)
+> >> You must use your real name (facebook)
+> >> You must use your real name (xing)
+> >> You must provide your legal name (github)
+> >>
+> >> These (at least the first three) are obviously the same thing (even
+> >> though we could weigh them differently depending on the type of
+> >> service).
+> >>
+> >> Right now, we are not reflecting that, as data point texts are just
+> >> free texts. But we could start doing that, and that way we would build
+> >> up a valuable ontology of typical data points that we see recurring a
+> >> lot.
+> >>
+> >> Once we have such a list, sites could pro-actively auto-review
+> >> themselves, and in particular, if sites use templated ToS texts like
+> >> the ones Docracy works on, then these could come pre-reviewed with
+> >> such standardized data point texts. The weighing would then still
+> >> depend on the specific service type, although even that could default
+> >> to a common suggested value.
+> >>
+> >> Of course you could also then try to detect commonly used phrases in
+> >> ToS texts, trying to treat human-readable texts as if they were
+> >> machine-readable, but that's another extra step. For now just
+> >> standardizing the data point texts would already be a very valuable
+> >> thing, i think.
+> >>
+> >> Thanks Veronica Par and others on the confcall for the suggestion!
+> >>
+> >>
+> >> Ciao,
+> >> Michiel
+> >
+> > --
+> > www.tos-dr.info // www.twitter.com/tosdr //
+> www.github.com/Unhosted/ToS-DR
+> > ---
+> > You received this message because you are subscribed to the Google Grou=
+ps
+> > "Terms of Service; Didn't Read" group.
+> > To post to this group, send email to tosdr@googlegroups.com.
+> > To unsubscribe from this group, send email to
+> > tosdr+unsubscribe@googlegroups.com.
+> > Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> > For more options, visit https://groups.google.com/groups/opt_out.
+> >
+> >
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--f46d0434bfde32211804cb2a3495
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Michiel,<br>thanks for your efforts!<br><br>Primarily, I want to say tha=
+t the CommonTerms database is by no means final (and will never be).<br>If =
+you stumble upon a term/clause that does not map well onto any CommonTerms =
+pattern, you should add a new pattern.<br>
+There will be a tool for that, I am working on it right now. Later on an AP=
+I, too, in case you don&#39;t like the tool.<br><br>Secondly, however, I (n=
+on-lawyer) would say that some of your clauses actually do exist in the Com=
+monTerms database. Will indicate them below. But since you did not find the=
+m, others won&#39;t either. This is a challenge. It would not be good if th=
+e database grows wildly with multiple equivalent or almost equivalent patte=
+rns appearing under different headings. The database can be browsed by hier=
+archy and searched by keyword, but probably alternative formulations should=
+ be added for better searchability.<br>
+<br>Best regards<br>P=E4r<br><br><div class=3D"gmail_quote">2012/10/2 Michi=
+el de Jong <span dir=3D"ltr">&lt;<a href=3D"mailto:michiel@unhosted.org" ta=
+rget=3D"_blank">michiel@unhosted.org</a>&gt;</span><br><blockquote class=3D=
+"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding=
+-left:1ex">
+as an exercise, let&#39;s try to use this to for the clauses we have<br>
+started assigning standards weights to, for changes:<br>
+<br>
+- terms may change at any time with immediate effect, and it is your<br>
+responsibility to discover this<br></blockquote><div><br><a href=3D"http://=
+www.commonterms.net/patterns/notification_of_changed_terms/lookup_webpage">=
+http://www.commonterms.net/patterns/notification_of_changed_terms/lookup_we=
+bpage</a><br>
+=A0</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex">
+- term changes are published silently X days in advance, you will not<br>
+be notified</blockquote><div><br><a href=3D"http://www.commonterms.net/patt=
+erns/notification_of_changed_terms/lookup_webpage">http://www.commonterms.n=
+et/patterns/notification_of_changed_terms/lookup_webpage</a><br><a href=3D"=
+http://www.commonterms.net/patterns/advance_notice_of_term_changes/number_o=
+f_days_specified">http://www.commonterms.net/patterns/advance_notice_of_ter=
+m_changes/number_of_days_specified</a><br>
+=A0</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex">
+- you will be notified, but the effect is immediate from the moment<br>
+the notification is sent<br></blockquote><div><br><a href=3D"http://www.com=
+monterms.net/patterns/notification_of_changed_terms/provider_will_try_to_no=
+tify_user">http://www.commonterms.net/patterns/notification_of_changed_term=
+s/provider_will_try_to_notify_user</a><br>
+<a href=3D"http://www.commonterms.net/patterns/advance_notice_of_term_chang=
+es/number_of_days_specified">http://www.commonterms.net/patterns/advance_no=
+tice_of_term_changes/number_of_days_specified</a><br>=A0</div><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex">
+
+- you will be notified at least X days in advance<br></blockquote><div><br>=
+<a href=3D"http://www.commonterms.net/patterns/advance_notice_of_term_chang=
+es/number_of_days_specified">http://www.commonterms.net/patterns/advance_no=
+tice_of_term_changes/number_of_days_specified</a><br>
+=A0</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex">
+I would map all of these to<br>
+<a href=3D"http://www.commonterms.net/patterns/change_of_terms/at_providers=
+_discretion" target=3D"_blank">http://www.commonterms.net/patterns/change_o=
+f_terms/at_providers_discretion</a><br>
+<br>
+and for indemnification:<br>
+<br>
+- you will defend, indemnify them [, and hold them harmless] and this<br>
+survives the termination of the agreement<br></blockquote><div><br>Only par=
+tial match:<br><a href=3D"http://www.commonterms.net/patterns/survival_of_t=
+erms_after_termination/listed_terms_still_valid">http://www.commonterms.net=
+/patterns/survival_of_terms_after_termination/listed_terms_still_valid</a><=
+br>
+=A0</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex">
+- you will indemnify them (but no mention of defending them)<br>
+- you will indemnify them (but no mention of defending them) and this<br>
+survives the termination of the agreement<br>
+<br>
+I would map all four of these to<br>
+<a href=3D"http://www.commonterms.net/patterns/indemnity/procedure_describe=
+d" target=3D"_blank">http://www.commonterms.net/patterns/indemnity/procedur=
+e_described</a><br>
+<br>
+How can we distinguish them? i think it&#39;s clear we need to add<br>
+something more here, but it&#39;s not totally clear to me what or how yet.<=
+br>
+<br>
+I will think about it myself as well. P=E4r, other, what do you think?<br>
+<br>
+<br>
+Cheers,<br>
+Michiel<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+On Fri, Sep 7, 2012 at 1:31 PM, P=E4r Lanner=F6 &lt;<a href=3D"mailto:par@l=
+annero.com">par@lannero.com</a>&gt; wrote:<br>
+&gt; Hi!<br>
+&gt;<br>
+&gt; If you like, the CommonTerms database of common terms can be used as a=
+<br>
+&gt; master repository for such standardized patterns.<br>
+&gt;<br>
+&gt; We already have a database of some 450 patterns, and can easily add TO=
+S;DR<br>
+&gt; data points, and adapt the API to consequent requirements.<br>
+&gt; See <a href=3D"http://www.commonterms.net/patterns" target=3D"_blank">=
+http://www.commonterms.net/patterns</a><br>
+&gt; Every pattern gets assigned a unique URI, and when an HTTP call is mad=
+e to<br>
+&gt; that address, a serialization of the pattern is returned.<br>
+&gt; When somebody (eg. after discussing the issue on the mailinglist) want=
+s to<br>
+&gt; assign a data point to a website, they should start by searching the<b=
+r>
+&gt; database for a suitable pattern.<br>
+&gt; If they find one, they can assign the URI of the pattern to the websit=
+e.<br>
+&gt; If they don&#39;t find one, they can add a new pattern to the database=
+. This<br>
+&gt; will create a new URI, which they can assign to the website.<br>
+&gt; API methods for searching and adding to the database are under develop=
+ment.<br>
+&gt; URI structure needs to be discussed.<br>
+&gt;<br>
+&gt; I can see that the idea of having a master repository of patterns conf=
+licts<br>
+&gt; slightly with the Unhosted ideal of being independent of any single ho=
+st.<br>
+&gt; But all patterns could be exported regularly as json files for offline=
+<br>
+&gt; storage...<br>
+&gt;<br>
+&gt; Best regards<br>
+&gt; P=E4r Lanner=F6, Commonterms.net<br>
+&gt;<br>
+&gt;<br>
+&gt; Den torsdagen den 6:e september 2012 kl. 20:19:58 UTC+2 skrev Michiel =
+de<br>
+&gt; Jong:<br>
+&gt;&gt;<br>
+&gt;&gt; Hi,<br>
+&gt;&gt;<br>
+&gt;&gt; this is something that came up in the opennotice confcall just now=
+ -<br>
+&gt;&gt; if you look at for instance <a href=3D"http://tos-dr.info/topics.h=
+tml#track" target=3D"_blank">http://tos-dr.info/topics.html#track</a> you<b=
+r>
+&gt;&gt; see the following data point texts:<br>
+&gt;&gt;<br>
+&gt;&gt; You must use your real name (yahoo)<br>
+&gt;&gt; You must use your real name (facebook)<br>
+&gt;&gt; You must use your real name (xing)<br>
+&gt;&gt; You must provide your legal name (github)<br>
+&gt;&gt;<br>
+&gt;&gt; These (at least the first three) are obviously the same thing (eve=
+n<br>
+&gt;&gt; though we could weigh them differently depending on the type of<br=
+>
+&gt;&gt; service).<br>
+&gt;&gt;<br>
+&gt;&gt; Right now, we are not reflecting that, as data point texts are jus=
+t<br>
+&gt;&gt; free texts. But we could start doing that, and that way we would b=
+uild<br>
+&gt;&gt; up a valuable ontology of typical data points that we see recurrin=
+g a<br>
+&gt;&gt; lot.<br>
+&gt;&gt;<br>
+&gt;&gt; Once we have such a list, sites could pro-actively auto-review<br>
+&gt;&gt; themselves, and in particular, if sites use templated ToS texts li=
+ke<br>
+&gt;&gt; the ones Docracy works on, then these could come pre-reviewed with=
+<br>
+&gt;&gt; such standardized data point texts. The weighing would then still<=
+br>
+&gt;&gt; depend on the specific service type, although even that could defa=
+ult<br>
+&gt;&gt; to a common suggested value.<br>
+&gt;&gt;<br>
+&gt;&gt; Of course you could also then try to detect commonly used phrases =
+in<br>
+&gt;&gt; ToS texts, trying to treat human-readable texts as if they were<br=
+>
+&gt;&gt; machine-readable, but that&#39;s another extra step. For now just<=
+br>
+&gt;&gt; standardizing the data point texts would already be a very valuabl=
+e<br>
+&gt;&gt; thing, i think.<br>
+&gt;&gt;<br>
+&gt;&gt; Thanks Veronica Par and others on the confcall for the suggestion!=
+<br>
+&gt;&gt;<br>
+&gt;&gt;<br>
+&gt;&gt; Ciao,<br>
+&gt;&gt; Michiel<br>
+&gt;<br>
+&gt; --<br>
+&gt; <a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</=
+a> // <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitte=
+r.com/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=
+=3D"_blank">www.github.com/Unhosted/ToS-DR</a><br>
+
+&gt; ---<br>
+&gt; You received this message because you are subscribed to the Google Gro=
+ups<br>
+&gt; &quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+&gt; To post to this group, send email to <a href=3D"mailto:tosdr@googlegro=
+ups.com">tosdr@googlegroups.com</a>.<br>
+&gt; To unsubscribe from this group, send email to<br>
+&gt; <a href=3D"mailto:tosdr%2Bunsubscribe@googlegroups.com">tosdr+unsubscr=
+ibe@googlegroups.com</a>.<br>
+&gt; Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=
+=3Den" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<=
+br>
+&gt; For more options, visit <a href=3D"https://groups.google.com/groups/op=
+t_out" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+&gt;<br>
+&gt;<br>
+<br>
+--<br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=3D"_=
+blank">www.github.com/Unhosted/ToS-DR</a><br>
+
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+<br>
+<br>
+</div></div></blockquote></div><br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--f46d0434bfde32211804cb2a3495--

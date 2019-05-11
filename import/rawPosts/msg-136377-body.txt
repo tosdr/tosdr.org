@@ -1,0 +1,135 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.51.17 with SMTP id z17csp431030ioz;
+        Sat, 3 Oct 2015 17:48:25 -0700 (PDT)
+X-Received: by 10.194.187.17 with SMTP id fo17mr21664897wjc.130.1443919705203;
+        Sat, 03 Oct 2015 17:48:25 -0700 (PDT)
+Return-Path: <tosdr+bncBCOJJKF37UHBBT7OYGYAKGQELL3F2SY@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id ee6si7725655wic.82.2015.10.03.17.48.25
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 03 Oct 2015 17:48:25 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCOJJKF37UHBBT7OYGYAKGQELL3F2SY@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCOJJKF37UHBBT7OYGYAKGQELL3F2SY@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBCOJJKF37UHBBT7OYGYAKGQELL3F2SY@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id CD401A80AA
+	for <michiel@unhosted.org>; Sun,  4 Oct 2015 02:48:24 +0200 (CEST)
+Received: from mfilter33-d.gandi.net (mfilter33-d.gandi.net [217.70.178.164])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 79368178065
+	for <michiel@unhosted.org>; Sun,  4 Oct 2015 02:48:24 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter33-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter33-d.gandi.net (mfilter33-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id DqFBfnvx3hqK for <michiel@unhosted.org>;
+	Sun,  4 Oct 2015 02:48:20 +0200 (CEST)
+Received: from mail-yk0-x237.google.com (mail-yk0-x237.google.com [IPv6:2607:f8b0:4002:c07::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E39C2178071
+	for <michiel@michielbdejong.com>; Sun,  4 Oct 2015 02:48:16 +0200 (CEST)
+Received: by ykdg206 with SMTP id g206sf25113812ykd.1
+        for <michiel@michielbdejong.com>; Sat, 03 Oct 2015 17:48:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=dFaymx947U/E2+xUDeEJfmJE9wIzHuofzer24/mWzXw=;
+        b=oVn4x4KjXtBn54P/C1VPPI29BLXtn/V0dPpIIHv1BmZYGy7MvqGbIu20fsmxYx2y1s
+         cHqegfDKpuw2O9Xaeu+BkMlzh3gJmffKiWTWoiUY5avBhKTi/xNCQlP9ynkEAXAyU8xC
+         NYqyzE61d/JIaTOqUZmcRvd94BRBROgYDi8Wtmfq77mzqD72FQ8tP6cELe8/6sszhNA0
+         4zFwtkp0sf7LHkMz7UsHn68rBGViykpp3BPjpGZEE7oIGRIZqXHPeWMoPg4CZEsR/OSX
+         yM41zC32Xewxiyk9X90dD0jZM1dYfZQAOt4Cp2P7jdNu7xoN5dyUg9o3WJ/f+bEli1X2
+         rfrg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=dFaymx947U/E2+xUDeEJfmJE9wIzHuofzer24/mWzXw=;
+        b=zNx/Qgb7IFJ8SlJz7Ok0KZVSpTVuEs9MjTkYsmHZHLq0/7RdgvBInQosG7KbfFz1gr
+         QUxyIIAWXEJbNU6X5JZt7k7Z/2QZusDNhybjTbPAk1e6Jo0RKuvbf9rvHMGtkoI5Ph/r
+         UL+eOW9jG1EFxDT6x3u+KxRkSqMq4uP2F9IPRb3TY14VN2LdEr+Iptkx5M377Uxocrco
+         V6pjmYa0xTvyLkxU2euwmpb0VtcISQVjqv9grd6AxWw1rLIZFbwchi1taGUwf9wISFCu
+         T2RnWJdDEsILMC/5spww53wK2cQmML4LWeCNEW0CKdzR0YsROqDBzC+M9C8jr6sQrsVP
+         L0hA==
+X-Received: by 10.50.112.4 with SMTP id im4mr36180igb.1.1443919695663;
+        Sat, 03 Oct 2015 17:48:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.12.93 with SMTP id w90ls690647ioi.58.gmail; Sat, 03 Oct
+ 2015 17:48:15 -0700 (PDT)
+X-Received: by 10.50.8.42 with SMTP id o10mr35689iga.7.1443919695223;
+        Sat, 03 Oct 2015 17:48:15 -0700 (PDT)
+Date: Sat, 3 Oct 2015 17:48:13 -0700 (PDT)
+From: jackhammer111@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <e94e1a19-d2e8-493d-bd21-d89b1af7254d@googlegroups.com>
+In-Reply-To: <CADNfgRd9d8ARgQkEFgpo0sEv3G3FdBSkMOi-MM2T5pbgVnDL4g@mail.gmail.com>
+References: <CADNfgRd9d8ARgQkEFgpo0sEv3G3FdBSkMOi-MM2T5pbgVnDL4g@mail.gmail.com>
+Subject: [tosdr:3647] Re: jurisdiction and governing law for Youtube
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1052_316304268.1443919694016"
+X-Original-Sender: jackhammer111@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_1052_316304268.1443919694016
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Tuesday, May 7, 2013 at 11:03:46 AM UTC-4, Suzanne Azmayesh wrote:
+> 1) Competence of the Court of Santa Barbara, in California
+>=20
+> 2) The applicable law is the one of the State of California
+>=20
+> You agree that: (i) the Service shall be deemed solely based in Californi=
+a; and (ii) the Service shall be deemed a passive website that does not giv=
+e rise to personal jurisdiction over YouTube, either specific or general, i=
+n jurisdictions other than California. These Terms of Service shall be gove=
+rned by the internal substantive laws of the State of California, without r=
+espect to its conflict of laws principles. Any claim or dispute between you=
+ and YouTube that arises in whole or in part from the Service shall be deci=
+ded exclusively by a court of competent jurisdiction located in Santa Clara=
+ County, California. These Terms of Service, together with the Privacy Noti=
+ce at http://www.google.fr/intl/fr/policies/privacy/ and any other legal no=
+tices published by YouTube on the Service, shall constitute the entire agre=
+ement between you and YouTube concerning the Service. If any provision of t=
+hese Terms of Service is deemed invalid by a court of competent jurisdictio=
+n, the invalidity of such provision shall not affect the validity of the re=
+maining provisions of these Terms of Service, which shall remain in full fo=
+rce and effect. No waiver of any term of this these Terms of Service shall =
+be deemed a further or continuing waiver of such term or any other term, an=
+d YouTube's failure to assert any right or provision under these Terms of S=
+ervice shall not constitute a waiver of such right or provision
+
+why not post a url to where this language so we can see if it's legit. this=
+ is to absurd to be true.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_1052_316304268.1443919694016--

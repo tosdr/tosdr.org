@@ -1,0 +1,174 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp278648wfj;
+        Tue, 10 Jul 2012 02:50:28 -0700 (PDT)
+Received: by 10.180.83.106 with SMTP id p10mr802232wiy.21.1341913827597;
+        Tue, 10 Jul 2012 02:50:27 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDi9e__BBoEaLeESg@googlegroups.com>
+Received: from mail-wi0-f192.google.com (mail-wi0-f192.google.com [209.85.212.192])
+        by mx.google.com with ESMTPS id g6si32085938wiy.38.2012.07.10.02.50.26
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 10 Jul 2012 02:50:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDi9e__BBoEaLeESg@googlegroups.com designates 209.85.212.192 as permitted sender) client-ip=209.85.212.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDi9e__BBoEaLeESg@googlegroups.com designates 209.85.212.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDi9e__BBoEaLeESg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by wibhm4 with SMTP id hm4sf2483620wib.29
+        for <multiple recipients>; Tue, 10 Jul 2012 02:50:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=iWG5tqqrVWXMAincoXXxspEf3AOYP39VYxOxPd7OkO8=;
+        b=JwZvYSsMciooDZ2qgfi3+nG7J+S1DX70WHztfzYy06n5mOOErGC3aqJijGZRl3Bx8P
+         Koq3TFC2ymaZh/faHqjihGZrhjLdUbA1/xdcmm5vIC7svtT+fMsCpsIwagDik5wb8pFz
+         38LuUX2pT2p/N70OCFpHvXew1xYSzBEdDjFTs=
+Received: by 10.180.101.197 with SMTP id fi5mr818879wib.3.1341913826335;
+        Tue, 10 Jul 2012 02:50:26 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.90.195 with SMTP id by3ls1467687wib.4.gmail; Tue, 10 Jul
+ 2012 02:50:25 -0700 (PDT)
+Received: by 10.180.99.232 with SMTP id et8mr2572345wib.4.1341913825923;
+        Tue, 10 Jul 2012 02:50:25 -0700 (PDT)
+Received: by 10.180.99.232 with SMTP id et8mr2572344wib.4.1341913825911;
+        Tue, 10 Jul 2012 02:50:25 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id cx9si3672123wib.0.2012.07.10.02.50.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 10 Jul 2012 02:50:25 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 6A09463B4EE;
+	Tue, 10 Jul 2012 11:50:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id KmJwcgHV16JF; Tue, 10 Jul 2012 11:50:18 +0200 (CEST)
+Received: from [IPv6:2001:67c:28dc:850:8537:1248:b5b:30b7] (unknown [IPv6:2001:67c:28dc:850:8537:1248:b5b:30b7])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 7C07763A671;
+	Tue, 10 Jul 2012 11:50:18 +0200 (CEST)
+Message-ID: <1341913817.3920.15.camel@synclavier.lan>
+Subject: Re: [good] Twitter does not requrie cookies
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 10 Jul 2012 11:50:17 +0200
+In-Reply-To: <CA+aD3u1AZvcWa4=g95jb0b4GopG_Tfq1sxFvgiN29hURe3jyCg@mail.gmail.com>
+References: <1339773352.21271.22.camel@synclavier.lan>
+	 <CA+aD3u1z_R44i07s3Mwi+VaLF65GLF4DfuDa6JD8KRxAywGhyw@mail.gmail.com>
+	 <1340124209.5340.78.camel@synclavier.lan>
+	 <CA+aD3u1AZvcWa4=g95jb0b4GopG_Tfq1sxFvgiN29hURe3jyCg@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Thanks for the information. I should put it up on antitracking.net=20
+
+Le mardi 10 juillet 2012 =E0 08:56 +0300, Michiel de Jong a =E9crit :
+> cool! i also found out some more shocking practices regarding cookies:
+>=20
+> even if you delete your cookies or even in private browsing mode,
+> websites have ways to cookie you, for instance using Flash
+> http://en.wikipedia.org/wiki/Local_shared_object or using Etags
+> http://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags
+> or using html5 localStorage. check this out:
+>=20
+> "over 5,600 standard HTTP cookies on popular sites, over 4,900 were
+> from third parties. Google-controlled cookies were present on 97 of
+> the top 100 sites, including popular government websites."
+>=20
+> third party cookies are evil and unnecessary. it's one thing to cookie
+> your users yourself, but why would you presume the right to give your
+> users a third-party cookie without their consent?
+>=20
+> "We found two sites that were respawning cookies, including one site =96
+> hulu.com =96 where both Flash and cache cookies were employed to make
+> identifiers more persistent. The cache cookie method used ETags, and
+> is capable of unique tracking even where all cookies are blocked by
+> the user and =93Private Browsing Mode=94 is enabled."
+>=20
+> http://papers.ssrn.com/sol3/papers.cfm?abstract_id=3D1898390
+>=20
+> so the "well, people know they risk getting cookied when they go
+> online, and everybody who cares about privacy will have cookies
+> disabled" excuse doesn't apply there.
+>=20
+> i really think that when we see third-party cookies, we should punish
+> both the second party and the third party, so in 97% of websites,
+> google, but facebook's like button is also all over the web. maybe in
+> case of the TweetThis widget we can be more forgiving because Twitter
+> takes the effort to delete your tracked data after 10 days, which is
+> at least a gesture of goodwill. Although a gesture of goodwill
+> sometimes means something else is being covered up, for instance,
+> twitter probably monetizes on your data within 10 days because they
+> are about fast-moving topics.
+>=20
+> i think maybe we should not give class A unless a website has an
+> explicit "we don't track you" policy.
+>=20
+> cheers,
+> Michiel
+>=20
+>=20
+> On Tue, Jun 19, 2012 at 7:43 PM, Hugo Roy <hugo@fsfe.org> wrote:
+> > I added the data point
+> > https://github.com/unhosted/ToS-DR/commit/d7345894b3a41b242288ea9185870=
+42533b84242
+> >
+> > and I lowered the score after discussing with Michiel around a Guinness
+> > yesterday.
+> >
+> > What do you think?
+> > --
+> > Hugo Roy
+> >   French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+> >   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+> >                                  mobile DE: +49 151 143 56 563
+> >
+> > --
+> > You received this message because you are subscribed to the Google Grou=
+ps "Terms of Service; Didn't Read" group.
+> > To post to this group, send email to tosdr@googlegroups.com.
+> > To unsubscribe from this group, send email to tosdr+unsubscribe@googleg=
+roups.com.
+> > For more options, visit this group at http://groups.google.com/group/to=
+sdr?hl=3Den.
+> >
+>=20
+
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

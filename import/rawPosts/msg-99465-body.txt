@@ -1,0 +1,158 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.16.42 with SMTP id c10csp11294qed;
+        Sat, 6 Oct 2012 03:32:13 -0700 (PDT)
+Received: by 10.216.139.104 with SMTP id b82mr6795195wej.24.1349519532830;
+        Sat, 06 Oct 2012 03:32:12 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBK4RYCBQKGQEISAGNOI@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id ce4si7538811wib.13.2012.10.06.03.32.12
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 06 Oct 2012 03:32:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBK4RYCBQKGQEISAGNOI@googlegroups.com designates 209.85.161.64 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBK4RYCBQKGQEISAGNOI@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBK4RYCBQKGQEISAGNOI@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-fa0-f64.google.com with SMTP id m1sf1061691fam.29
+        for <michiel@unhosted.org>; Sat, 06 Oct 2012 03:32:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=5Mv4Af8dWgFA0rI0SxtlrxW2KcufHwmsr3bTzpCNyBY=;
+        b=DM6277lKua0J51i4SLhh1Jm0Tg+Tm9aAHi9lulofqVhovh+eAJ+j/bNA4v6SelBYj0
+         H/GsqekrZk6OJLUzzy3p4kNCnIY2fkYY514Y3nmsppJB6pmLza86b14LgMSgR1vBbprY
+         4LmUwQ+sCJd9bT4le3dbAApQL0zgwMgeEw5ELEDZ3EsFJUHbQAUxj96ykVRqR6lrRPY2
+         GmuIMch9pvt8K1oDCkcIm0bCg53ZFKp2cj1QSx0CZUBOmImMcSbWjxcArs+UG5/zBtzU
+         mQhunZ39gV6vkaqA+IeHhIou7VLCy90SH6iVWXy4OoE2z/CUyOQWM6DG/Eu7J0W261tG
+         pYYg==
+Received: by 10.216.226.17 with SMTP id a17mr637609weq.52.1349519532247;
+        Sat, 06 Oct 2012 03:32:12 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.99.65 with SMTP id eo1ls3360687wib.1.gmail; Sat, 06 Oct
+ 2012 03:32:11 -0700 (PDT)
+Received: by 10.180.75.197 with SMTP id e5mr1071611wiw.1.1349519531598;
+        Sat, 06 Oct 2012 03:32:11 -0700 (PDT)
+Received: by 10.180.75.197 with SMTP id e5mr1071610wiw.1.1349519531586;
+        Sat, 06 Oct 2012 03:32:11 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id hm1si405191wib.3.2012.10.06.03.32.11
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 06 Oct 2012 03:32:11 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id EF31063A61F;
+	Sat,  6 Oct 2012 12:32:10 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id C4RGx2ycqUDd; Sat,  6 Oct 2012 12:32:08 +0200 (CEST)
+Received: from [192.168.1.14] (APuteaux-552-1-99-62.w90-44.abo.wanadoo.fr [90.44.38.62])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 01B7963A608;
+	Sat,  6 Oct 2012 12:32:07 +0200 (CEST)
+Message-ID: <1349519527.22715.6.camel@synclavier.lan>
+Subject: Re: [tosdr:1009] Re: [Bad] CouchSurfing may revoke the right to link
+ to them
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Sat, 06 Oct 2012 12:32:07 +0200
+In-Reply-To: <CA+aD3u0ebzaDC1bHS9zBWR+Xnt70r=FsiU=STCvkaEtAvt1xEQ@mail.gmail.com>
+References: <CA+aD3u19m+S4+D5E=GrRi2J9es43RSU2hrm+OTz7vY8mGMxMGA@mail.gmail.com>
+	 <3ded95b9-d676-4404-a57a-277783894e8d@googlegroups.com>
+	 <8aca0767-9cb0-4ebb-9f3c-beb6ec003214@googlegroups.com>
+	 <5068A64A.3480.38809AB1@pm.YourIPAttorney.com>
+	 <CA+aD3u0ebzaDC1bHS9zBWR+Xnt70r=FsiU=STCvkaEtAvt1xEQ@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le samedi 06 octobre 2012 =E0 11:01 +0200, Michiel de Jong a =E9crit :
+> ok, i got a reply from them, what this is about is travel websites
+> that have 'accomodation search' linking to couchsurfing. they don't
+> want that to happen. they will not use this clause against you if you
+> just blog about them.
+
+We should not get fooled. This is not what the clause says. This
+interpretation is not binding and seems like just an excuse for terms of
+bad quality.
+
+> i guess this is about deeplinking to specific offers and/or iframing
+> couchsurfing's content in a context, not about linking to the
+> couchsurfing home page i think.
+
+The clause says linking, right? Is there a definition of linking
+anywhere? If not, then assume it's the standard definition of linking,
+i.e. to write somewhere on the web a <a
+href=3D"http://couchsurfing.org">link</a>.
+
+> i think a couchsurfing offer is not a historical or newsworthy fact,
+> and i think this exposes the absurdity of web 2.0, where publishing
+> tools claim copyright over user content.
+>=20
+> i guess they can prohibit other sites from quoting copyrighted
+> information only if they are the owners/authors, right?
+
+No because quoting text is covered by the exceptions to copyright law
+(or fair use in the US).
+
+>  if they only
+> get a non-exclusive license to user content, then how can they have
+> anything to say over others displaying it?
+>=20
+> can you prohibit other sites from deeplinking to specific search
+> results on your site?
+>=20
+> i think there was a similar case where google was displaying tweets
+> from twitter as 'real time results' on their search results page, and
+> iirc, twitter was able to stop them from doing that.
+
+IIRC there was an agreement between google and twitter, then they didn't
+pursue it. But I think seriously this issue is getting too far. We're
+trying to make assumptions, whereas if you read the clause in question,
+it's rather simple and stupid. There was actually a website making fun
+of all these silly clauses forbidding people to make links.
+
+I propose, if we summarise this point, to write a title like:
+        Absurd: they claim the right to forbid you to link to them
+       =20
+or something like this.
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

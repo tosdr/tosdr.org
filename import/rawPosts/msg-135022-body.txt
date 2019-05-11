@@ -1,0 +1,173 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp877400iou;
+        Thu, 20 Aug 2015 04:15:14 -0700 (PDT)
+X-Received: by 10.180.211.98 with SMTP id nb2mr62853655wic.91.1440069314354;
+        Thu, 20 Aug 2015 04:15:14 -0700 (PDT)
+Return-Path: <tosdr+bncBCEPLUMOSYHRBOXN22XAKGQE7MC6CMA@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id qc8si7817001wjc.78.2015.08.20.04.15.13
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 20 Aug 2015 04:15:14 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCEPLUMOSYHRBOXN22XAKGQE7MC6CMA@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCEPLUMOSYHRBOXN22XAKGQE7MC6CMA@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBCEPLUMOSYHRBOXN22XAKGQE7MC6CMA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 639DEA80B0
+	for <michiel@unhosted.org>; Thu, 20 Aug 2015 13:15:13 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 51BAE2260A1
+	for <michiel@unhosted.org>; Thu, 20 Aug 2015 13:15:13 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id CdtzbDA-mixE for <michiel@unhosted.org>;
+	Thu, 20 Aug 2015 13:15:10 +0200 (CEST)
+Received: from mail-la0-x23d.google.com (mail-la0-x23d.google.com [IPv6:2a00:1450:4010:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D1EFA22607E
+	for <michiel@michielbdejong.com>; Thu, 20 Aug 2015 13:15:07 +0200 (CEST)
+Received: by labqg3 with SMTP id qg3sf6859397lab.1
+        for <michiel@michielbdejong.com>; Thu, 20 Aug 2015 04:15:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=to:from:sender:subject:message-id:date:mime-version:content-type
+         :content-transfer-encoding:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=JQPHoesG1vD8ElgJIuHBYTn+g/Jb2Okbl5Kqi20+3EE=;
+        b=nsqidWS7hiN3NUpaqZs6nSOa6sWjSLcdfy1vC5WS6S4iayGgvaZAdEAVc28mNIOA98
+         nTZgwkjcvI1/96N4z7rooEB9kHR6rNFwzZ0EYWwIOFv1+yRQX+jeCDoHOuifcic98hb3
+         EecSOvBrqvJrBfkzIURsy/wXdTz0vXhBA05FH4n7kb46ETy9SAvzB4YKhN3o5dX3gWDI
+         id64dKgSQS6LySBqcZkkxFfuAsR2csaq70DdZFeuUanKwlYtwbvan4YXag475p5+OELW
+         dQwmLB/mU7nB+uaIhgdoDP5VKV/UmebH+r9OU2HDS1OSbHnMfnoBWQFCJIV2NYEWsPEG
+         GtWA==
+X-Received: by 10.152.28.67 with SMTP id z3mr10680lag.28.1440069307425;
+        Thu, 20 Aug 2015 04:15:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.21.3 with SMTP id r3ls168592lae.89.gmail; Thu, 20 Aug 2015
+ 04:15:06 -0700 (PDT)
+X-Received: by 10.112.50.10 with SMTP id y10mr724752lbn.10.1440069306232;
+        Thu, 20 Aug 2015 04:15:06 -0700 (PDT)
+Received: from mta04.svc.cra.dublin.eircom.net (mta04.svc.cra.dublin.eircom.net. [159.134.118.171])
+        by gmr-mx.google.com with SMTP id hm7si780581wib.0.2015.08.20.04.15.06
+        for <tosdr@googlegroups.com>;
+        Thu, 20 Aug 2015 04:15:06 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of beame@eircom.net designates 159.134.118.171 as permitted sender) client-ip=159.134.118.171;
+Received: (qmail 39189 messnum 9452928 invoked from network[213.94.190.12/avas01.vendorsvc.cra.dublin.eircom.net]); 20 Aug 2015 11:15:06 -0000
+Received: from avas01.vendorsvc.cra.dublin.eircom.net (213.94.190.12)
+  by mta04.svc.cra.dublin.eircom.net (qp 39189) with SMTP; 20 Aug 2015 11:15:06 -0000
+Received: from carl ([82.141.234.37])
+	by avas01.vendorsvc.cra.dublin.eircom.net with Cloudmark Gateway
+	id 6zF21r00a0p52PE01zF5ly; Thu, 20 Aug 2015 12:15:06 +0100
+To: tosdr@googlegroups.com
+From: Carl Beame <beame@eircom.net>
+Sender: tosdr@googlegroups.com
+Subject: [tosdr:3599] Microsoft Privacy Statement
+X-Originating-Host: carl
+Message-Id: <2015Aug20.121503+0100@carl>
+Date: 20 Aug 2015 12:14:54 +0100
+X-Priority: 3 (Normal)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+X-Mailer: Hummingbird 32-bit EMail Client Version 3.2.0.81
+X-Original-Sender: beame@eircom.net
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: best guess record for domain of beame@eircom.net designates
+ 159.134.118.171 as permitted sender) smtp.mailfrom=beame@eircom.net
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+https://www.microsoft.com/en-us/privacystatement/
+
+(Expand All)
+
+"Finally, we will access, disclose and preserve personal data, including yo=
+ur content
+(such as the content of your emails, other private communications or files =
+in private
+folders), when we have a good faith belief that doing so is necessary to: .=
+.."
+
+Note that when you agree to any new Microsoft EULA you are agreeing to the =
+Privacy
+Statement. The above statement does not just apply to Windows 10 but to Sky=
+pe and
+almost any Microsoft product, so if you install Skype on Windows XP you are=
+ agreeing
+to this Privacy statement.
+
+"This privacy statement explains what personal data we collect from you and=
+ how we
+use it. It applies to Bing, Cortana, MSN, Office, OneDrive, Outlook.com, Sk=
+ype,
+Windows, Xbox and other Microsoft services that display this statement."
+
+This statement does not distinguish between private folders on a network se=
+rvice or
+private folders on your local computer or possibly on a shared company serv=
+er mapped
+to a local drive on your PC.
+
+If your company holds ANY third party confidential information (e.g. Accoun=
+tant,
+Lawyer, Doctor, Arhcitect, Service Provider) about a third party and you ha=
+ve a
+confidentiallity agreement (physical or implied) with your customers and ..=
+.
+
+If you are using ANY Microsoft Product and have agreed to the new Privacy S=
+tatement
+by installing Microsoft software on an old computer or purchasing a new com=
+puter, you
+have violated your confidentiallity agreement with your customers as you ha=
+ve agreed
+that in certain circumstances that do not require a court order, this
+confidential third party information could possibly be taken by Microsoft a=
+nd/or
+given to someone else.=20
+
+While this may never happen and techincally it may not be possible in Windo=
+ws
+XP/Vista/7 etc (without an update), you still have violated your confidenti=
+allity
+agreement with your customer by agreeing to the POSSIBILITY of the informat=
+ion being
+transmitted to Microsoft.
+
+One quote that was in the Preview Privacy Policy that did not make it into =
+the
+Privacy Statement above is:
+
+"To stop the transmission of all data, you must completely uninstall the Pr=
+ogram
+software and services from all of your devices. This may require you to rei=
+nstall
+your device=E2=80=99s operating system."
+
+While this is not in the statement it seems to be fact at the moment.
+
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

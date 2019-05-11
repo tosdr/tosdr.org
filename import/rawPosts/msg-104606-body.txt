@@ -1,0 +1,386 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp224900vec;
+        Sat, 8 Dec 2012 10:39:56 -0800 (PST)
+Received: by 10.58.33.66 with SMTP id p2mr6355290vei.24.1354991996386;
+        Sat, 08 Dec 2012 10:39:56 -0800 (PST)
+Return-Path: <tosdr+bncBDLZX5PJWMBBB64SR2DAKGQE6KV2CRA@googlegroups.com>
+Received: from mail-vc0-f187.google.com (mail-vc0-f187.google.com [209.85.220.187])
+        by mx.google.com with ESMTPS id w8si12670000vdh.150.2012.12.08.10.39.56
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 08 Dec 2012 10:39:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDLZX5PJWMBBB64SR2DAKGQE6KV2CRA@googlegroups.com designates 209.85.220.187 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDLZX5PJWMBBB64SR2DAKGQE6KV2CRA@googlegroups.com designates 209.85.220.187 as permitted sender) smtp.mail=tosdr+bncBDLZX5PJWMBBB64SR2DAKGQE6KV2CRA@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-vc0-f187.google.com with SMTP id m8sf1005171vcd.14
+        for <michiel@unhosted.org>; Sat, 08 Dec 2012 10:39:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=8t27reTAVgvvNPAaREqhbYHk0TmulQVgicqE7TSD6lw=;
+        b=PJ+MYdx1q3fGytLjLIhK/h4w9PNKJpx6vkwegJUFgjf+x1tVtPshYtqlF10PqV9gZY
+         sH9oR48S8VKgbuQfrID7GRTBukLTEDI4N7oYiyKwrU32l5FDX6Q5Mqw8qKOzHdkWipN2
+         TQRxT3X0l0R+k6pxO4afTvU/tkaUIe6TBMUNEL7SwSSRb0FdCW83pwTU0zjN0s/D243o
+         Mt57fHoMxCx5GovGxdHNHgg8f40E/PMBCepNYppS/mmbLM4NNEIxEAPy0IZF2RS0dg1L
+         MWBmx2EVnFNC66dATzxVsRHWDsXw5txfizYSExqs6KJs8KtVLiXIHnBjA83/jLJUKqZG
+         XlPA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=8t27reTAVgvvNPAaREqhbYHk0TmulQVgicqE7TSD6lw=;
+        b=mGkM3n+jjRCXCB/KJZEmPnV4syorvzaweCwIbloSmb61HsgNmY8BVvsfR2QH/QqiFW
+         FdYwJR+XnypdZ1DnxcUiAHYjio+qDogyESZqjfBY/Pdp3oq9+5Vhv7mVXySK4BhJSi1X
+         ZbuEVPh5dZI3FeBfVDAlFccs4f3vJbxdBImXrOCjjaVv28IRv4rVQsq96Bjn2mUNMusx
+         miyH/u5LBXF4B5jqIhB5UhHaXfpfAYgtzZqefLI2FzlwJ5FIvUVKb5tLgDUeNsrk+q5e
+         iWZHOvOENS8iwgrJXBGfM51yUgsHSBF+mJdyDtglmm+Qt/ZJE/biqnemCN2rNoCnZ1pU
+         XYfw==
+Received: by 10.49.94.99 with SMTP id db3mr2052376qeb.2.1354991996239;
+        Sat, 08 Dec 2012 10:39:56 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.16.37 with SMTP id c5ls2732137qed.80.gmail; Sat, 08 Dec
+ 2012 10:39:55 -0800 (PST)
+Received: by 10.49.18.231 with SMTP id z7mr2147007qed.25.1354991995709;
+        Sat, 08 Dec 2012 10:39:55 -0800 (PST)
+Date: Sat, 8 Dec 2012 10:39:55 -0800 (PST)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Cc: robin@robinmonks.com
+Message-Id: <d6d3aede-5c1a-4b9d-9d78-456a38c25e2e@googlegroups.com>
+In-Reply-To: <CAB8Z3EfGZ2fcH_nKV-SUN=thTAQtL5ef-vcf38cgctaR-t4oTw@mail.gmail.com>
+References: <1349291817.21837.5.camel@synclavier.lan>
+ <2ae77b27-7d78-4c62-88a7-733395a9fb2f@googlegroups.com>
+ <9b2e1d84-5a6f-4636-b90e-01408ce27633@googlegroups.com>
+ <629ff489-a5ca-444c-bd68-bd2d30da56bf@googlegroups.com>
+ <CAB8Z3EfGZ2fcH_nKV-SUN=thTAQtL5ef-vcf38cgctaR-t4oTw@mail.gmail.com>
+Subject: Re: [tosdr:1290] Re: Terms may be changed any time at their
+ discretion, without notice to the user
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5_13467140.1354991995433"
+
+------=_Part_5_13467140.1354991995433
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+And another:
+
+Envato: http://themeforest.net/legal/terms
+
+"Envato may, at its sole discretion, revise or change their Terms and=20
+Conditions (in whole or in part) from time to tim and at any time without=
+=20
+notice to you."
+
+The irony here is that they *do *give 30 days notice to Privacy Policy=20
+changes.
+
+Ian
+
+On Saturday, December 8, 2012 2:20:37 PM UTC+1, Robin Monks wrote:
+>
+> I'll never understand how hard these companies make sending a mass email=
+=20
+> seem. It seriously can't be the difficult for them.
+>
+>
+> On Sat, Dec 8, 2012 at 9:07 AM, Ian McGowan <irmc...@gmail.com<javascript=
+:>
+> > wrote:
+>
+>> Here's another: IFTTT
+>>
+>> "IFTTT reserves the right, at its discretion, to update and change, from=
+=20
+>> time to time, these Terms of Use. IFTTT may change these Terms of Use by=
+=20
+>> posting a new version on the Site. You shall be responsible for reviewin=
+g=20
+>> and becoming familiar with any such modifications. Use of the Service af=
+ter=20
+>> such change constitutes acceptance of such changes."
+>>
+>> http://ifttt.com/terms
+>>
+>>
+>> On Friday, December 7, 2012 10:13:21 PM UTC+1, Ian McGowan wrote:
+>>>
+>>> I've made a note of Faranow's change-at-any-time.
+>>>
+>>> On Tuesday, December 4, 2012 2:06:21 PM UTC+1, Robin Monks wrote:
+>>>>
+>>>> And another...
+>>>>
+>>>>
+>>>> faranow.com
+>>>>
+>>>>> We reserve the right to alter these Terms of Service at any time. Any=
+=20
+>>>>> alterations will be posted to the Fara website at=20
+>>>>> www.faranow.com/terms.
+>>>>
+>>>> =20
+>>>> /Robin
+>>>>
+>>>> On Wednesday, October 3, 2012 4:17:07 PM UTC-3, Hugo Roy wrote:
+>>>>>
+>>>>> Hi,=20
+>>>>>
+>>>>> This is a unified point for common terms about how services apply=20
+>>>>> changes to their terms.=20
+>>>>>
+>>>>>         They can change the terms of service any time they see fit,=
+=20
+>>>>> even=20
+>>>>>         without notification to the user. Your use of the service=20
+>>>>>         supposedly constitutes acceptance of the changes in the terms=
+.=20
+>>>>>        =20
+>>>>> This new point supersedes:=20
+>>>>>       * Couchsurfing=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/9rIMjf6FifM/3BoT_**
+>>>>> bQvtEEJ<https://groups.google.com/d/msg/tosdr/9rIMjf6FifM/3BoT_bQvtEE=
+J>=20
+>>>>>       * FreeForums=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/gVTL529k5as/_**
+>>>>> d9CCxdcvf4J<https://groups.google.com/d/msg/tosdr/gVTL529k5as/_d9CCxd=
+cvf4J>=20
+>>>>>       * Yahoo=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/RcOEEGGziUk/**
+>>>>> N2YAhiSX0BcJ<https://groups.google.com/d/msg/tosdr/RcOEEGGziUk/N2YAhi=
+SX0BcJ>=20
+>>>>>       * Netflix=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/L5pl0Vn9lKY/**
+>>>>> 52WrIBJR79cJ<https://groups.google.com/d/msg/tosdr/L5pl0Vn9lKY/52WrIB=
+JR79cJ>=20
+>>>>>       * Informe=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/hiZY0tNP6kQ/**
+>>>>> JS5tTBIKNooJ<https://groups.google.com/d/msg/tosdr/hiZY0tNP6kQ/JS5tTB=
+IKNooJ>=20
+>>>>>       * Nabble=20
+>>>>>         https://groups.google.com/d/**msg/tosdr/CDh_bV7eWSs/**
+>>>>> duxJdcyBX_MJ<https://groups.google.com/d/msg/tosdr/CDh_bV7eWSs/duxJdc=
+yBX_MJ>=20
+>>>>>       * ownCube=20
+>>>>>         https://groups.google.com/d/**topic/tosdr/Ntp1e20YTGs/**
+>>>>> discussion<https://groups.google.com/d/topic/tosdr/Ntp1e20YTGs/discus=
+sion>=20
+>>>>> --=20
+>>>>> Hugo Roy=20
+>>>>>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org=20
+>>>>>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41=20
+>>>>>                                  mobile DE: +49 151 143 56 563=20
+>>>>>
+>>>>>  --=20
+>> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+>> ---=20
+>> You received this message because you are subscribed to the Google Group=
+s=20
+>> "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to to...@googlegroups.com <javascript:=
+>
+>> .
+>> To unsubscribe from this group, send email to=20
+>> tosdr+un...@googlegroups.com <javascript:>.
+>> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+>> For more options, visit https://groups.google.com/groups/opt_out.
+>> =20
+>> =20
+>>
+>
+>
+>
+> --=20
+> *R=E2=99=82bin Monks <http://robinmonks.com>*
+> President, Podhurl Inc. <http://podhurl.us>
+> Drupal Association Individual Member
+> 603.236.7357
+>
+> Live in such a way that those who know you but don't know God, will come=
+=20
+> to know God because they know you.
+>
+>=20
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_5_13467140.1354991995433
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+And another:<div><br>Envato: http://themeforest.net/legal/terms</div><div><=
+br></div><div>"Envato may, at its sole discretion, revise or change their T=
+erms and Conditions (in whole or in part) from time to tim and at any time =
+without notice to you."</div><div><br></div><div>The irony here is that the=
+y <b>do </b>give 30 days notice to Privacy Policy changes.</div><div><br></=
+div><div>Ian<br><br>On Saturday, December 8, 2012 2:20:37 PM UTC+1, Robin M=
+onks wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left=
+: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">I'll never understa=
+nd how hard these companies make sending a mass email seem. It seriously ca=
+n't be the&nbsp;difficult&nbsp;for them.<div><br><br><div class=3D"gmail_qu=
+ote">On Sat, Dec 8, 2012 at 9:07 AM, Ian McGowan <span dir=3D"ltr">&lt;<a h=
+ref=3D"javascript:" target=3D"_blank" gdf-obfuscated-mailto=3D"tuMkZoo9C2MJ=
+">irmc...@gmail.com</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Here's another: IFTTT<div><br></div><div>"IF=
+TTT reserves the right, at its discretion, to update and change, from time =
+to time, these Terms of Use. IFTTT may change these Terms of Use by posting=
+ a new version on the Site. You shall be responsible for reviewing and beco=
+ming familiar with any such modifications. Use of the Service after such ch=
+ange constitutes acceptance of such changes."</div>
+<div><br></div><div><a href=3D"http://ifttt.com/terms" target=3D"_blank">ht=
+tp://ifttt.com/terms</a><div><div><br><br>On Friday, December 7, 2012 10:13=
+:21 PM UTC+1, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"=
+margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">
+I've made a note of Faranow's change-at-any-time.<br><br>On Tuesday, Decemb=
+er 4, 2012 2:06:21 PM UTC+1, Robin Monks wrote:<blockquote class=3D"gmail_q=
+uote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;paddin=
+g-left:1ex">
+And another...<div><br></div><div><br><div><a href=3D"http://faranow.com" t=
+arget=3D"_blank">faranow.com</a></div><div><blockquote class=3D"gmail_quote=
+" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color=
+:rgb(204,204,204);border-left-style:solid;padding-left:1ex">
+<span style=3D"color:rgb(51,51,51);font-family:Helvetica,Arial,sans-serif;f=
+ont-size:12px;line-height:18px">We reserve the right to alter these Terms o=
+f Service at any time. Any alterations will be posted to the Fara website a=
+t <a href=3D"http://www.faranow.com/terms" target=3D"_blank">www.faranow.co=
+m/terms</a>.</span></blockquote>
+<div>&nbsp;</div><div>/Robin</div><br>On Wednesday, October 3, 2012 4:17:07=
+ PM UTC-3, Hugo Roy wrote:<blockquote class=3D"gmail_quote" style=3D"margin=
+:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Hi,
+<br>
+<br>This is a unified point for common terms about how services apply
+<br>changes to their terms.
+<br>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; They can change the terms of service any ti=
+me they see fit, even
+<br>&nbsp; &nbsp; &nbsp; &nbsp; without notification to the user. Your use =
+of the service
+<br>&nbsp; &nbsp; &nbsp; &nbsp; supposedly constitutes acceptance of the ch=
+anges in the terms.
+<br>&nbsp; &nbsp; &nbsp; &nbsp;=20
+<br>This new point supersedes:
+<br>&nbsp; &nbsp; &nbsp; * Couchsurfing
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/9rIMjf6FifM/3BoT_bQvtEEJ" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/9rIMjf6FifM/3BoT_<u></u>bQvtE<wbr>EJ</a>
+<br>&nbsp; &nbsp; &nbsp; * FreeForums
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/gVTL529k5as/_d9CCxdcvf4J" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/gVTL529k5as/_<u></u>d9CCxdcvf<wbr>4J</a>
+<br>&nbsp; &nbsp; &nbsp; * Yahoo
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/RcOEEGGziUk/N2YAhiSX0BcJ" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/RcOEEGGziUk/<u></u>N2YAhiSX0B<wbr>cJ</a>
+<br>&nbsp; &nbsp; &nbsp; * Netflix
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/L5pl0Vn9lKY/52WrIBJR79cJ" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/L5pl0Vn9lKY/<u></u>52WrIBJR79<wbr>cJ</a>
+<br>&nbsp; &nbsp; &nbsp; * Informe
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/hiZY0tNP6kQ/JS5tTBIKNooJ" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/hiZY0tNP6kQ/<u></u>JS5tTBIKNo<wbr>oJ</a>
+<br>&nbsp; &nbsp; &nbsp; * Nabble
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/msg/=
+tosdr/CDh_bV7eWSs/duxJdcyBX_MJ" target=3D"_blank">https://groups.google.com=
+/d/<u></u>ms<wbr>g/tosdr/CDh_bV7eWSs/<u></u>duxJdcyBX_<wbr>MJ</a>
+<br>&nbsp; &nbsp; &nbsp; * ownCube
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <a href=3D"https://groups.google.com/d/topi=
+c/tosdr/Ntp1e20YTGs/discussion" target=3D"_blank">https://groups.google.com=
+/d/<u></u>to<wbr>pic/tosdr/Ntp1e20YTGs/<u></u>discussi<wbr>on</a>
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp; chat: <a>hu...@jab=
+ber.fsfe.org</a>
+<br>&nbsp; <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> &nbsp; &nbsp; &nbsp; &nbsp; mobile: <a value=3D"+336=
+08741341">+336 08 74 13 41</a>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mobile DE: <a value=3D"+4915=
+114356563">+49 151 143 56 563</a>
+<br>
+<br></blockquote></div></div></blockquote></blockquote></div></div></div><d=
+iv><div>
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To post to this group, send email to <a href=3D"javascript:" target=3D"_bla=
+nk" gdf-obfuscated-mailto=3D"tuMkZoo9C2MJ">to...@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"javascript:" targe=
+t=3D"_blank" gdf-obfuscated-mailto=3D"tuMkZoo9C2MJ">tosdr+un...@<wbr>google=
+groups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den</a>.<=
+br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com" targe=
+t=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:cent=
+er">President, <a href=3D"http://podhurl.us" target=3D"_blank">Podhurl Inc.=
+</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er">603.236.7357</div><div><span style=3D"font-size:x-small"></span><br><di=
+v style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don't know God, will come to know God because they know you.</span></=
+div></div></div><br>
+</div>
+</blockquote></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_5_13467140.1354991995433--

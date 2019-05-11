@@ -1,0 +1,162 @@
+Return-Path: <tosdr+bncBD26DI45T4KRBZOGVSQQKGQERS4HOOQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 0410840F7F
+	for <anything@michielbdejong.com>; Tue, 30 Sep 2014 23:40:57 +0200 (CEST)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0111E11645F
+	for <anything@michielbdejong.com>; Tue, 30 Sep 2014 23:40:57 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id ycHb7Js14Zte for <anything@michielbdejong.com>;
+	Tue, 30 Sep 2014 23:40:55 +0200 (CEST)
+Received: from mail-qg0-x240.google.com (mail-qg0-x240.google.com [IPv6:2607:f8b0:400d:c04::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id F327A116484
+	for <anything@michielbdejong.com>; Tue, 30 Sep 2014 23:40:54 +0200 (CEST)
+Received: by mail-qg0-f64.google.com with SMTP id a108sf564300qge.9
+        for <anything@michielbdejong.com>; Tue, 30 Sep 2014 14:40:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=7G2qLGGu1jaMki6/vgnNnORI1GABm9CUIp2Bx1xRQTQ=;
+        b=ijg3ppgJNcECSkg8MIHi8vSrg+NLSu1CIgBTz3Cxmqh9AVvPfQvpUeguWR9LR+WAOH
+         uEav7HS34iUmkz0xqDwgwKqgNYrWgx/lO2isSGUZaxgdZ3TijT2BB6RATgPbAXzdYKLn
+         moD+rUBV1Hit23ZFpBcLXwv3xJOEMFqEp18B2+qTyfe3Gbz+Kezid6+zIAY/p0Tpx+BE
+         ERnprKHtbkya+ks2NUKSxALdibhS2ECnN9s+orLypZvZJNfOsoOni0joVq+UB0c6T1M3
+         cSt70CVWLJ2hGVv0NbIS3uk9BW8T/DZvh8dVLYtSaOUbQqLxpHejySLAcfLyrfCIVOZG
+         G8SA==
+X-Received: by 10.50.61.132 with SMTP id p4mr161437igr.1.1412113253708;
+        Tue, 30 Sep 2014 14:40:53 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.82.5 with SMTP id e5ls538259igy.19.gmail; Tue, 30 Sep 2014
+ 14:40:53 -0700 (PDT)
+X-Received: by 10.43.85.136 with SMTP id ao8mr39047385icc.21.1412113253231;
+        Tue, 30 Sep 2014 14:40:53 -0700 (PDT)
+Received: from imap2-3.ox.privateemail.com (imap2-3.ox.privateemail.com. [192.64.116.208])
+        by gmr-mx.google.com with ESMTPS id e24si946982yhe.3.2014.09.30.14.40.52
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 30 Sep 2014 14:40:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin@mattheweast.me designates 192.64.116.208 as permitted sender) client-ip=192.64.116.208;
+Received: from localhost (localhost [127.0.0.1])
+	by mail.privateemail.com (Postfix) with ESMTP id 0B79A8C007B
+	for <tosdr@googlegroups.com>; Tue, 30 Sep 2014 17:40:52 -0400 (EDT)
+X-Virus-Scanned: Debian amavisd-new at imap2.ox.privateemail.com
+Received: from mail.privateemail.com ([127.0.0.1])
+	by localhost (imap2.ox.privateemail.com [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id RX_wR28Nm2ZU for <tosdr@googlegroups.com>;
+	Tue, 30 Sep 2014 17:40:51 -0400 (EDT)
+Received: from [192.168.1.244] (f7.09.ce6d.cidr.airmail.net [206.109.9.247])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mail.privateemail.com (Postfix) with ESMTPSA id 6728F8C0080
+	for <tosdr@googlegroups.com>; Tue, 30 Sep 2014 17:40:50 -0400 (EDT)
+Message-ID: <542B2358.40602@mattheweast.me>
+Date: Tue, 30 Sep 2014 16:40:40 -0500
+From: Matthew East <admin@mattheweast.me>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Thunderbird/31.1.2
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: [tosdr:3254] OwnCube links broken
+X-Original-Sender: admin@mattheweast.me
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of admin@mattheweast.me designates 192.64.116.208 as
+ permitted sender) smtp.mail=admin@mattheweast.me
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/mixed;
+ boundary="------------040708000203060607050205"
+
+This is a multi-part message in MIME format.
+--------------040708000203060607050205
+Content-Type: text/plain; charset=UTF-8; format=flowed
+
+I was browsing ToS;DR earlier and noticed the links to OwnCube's ToS and 
+Privacy Policy were broken. The new URLs are 
+https://owncube.com/terms-en.php (terms) and 
+https://owncube.com/privacy-en.php (privacy.) I've attached a git patch 
+for the tosdr-build repository that will fix this.
+
+Cheers!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--------------040708000203060607050205
+Content-Type: text/x-patch;
+ name="fix-owncube-links.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="fix-owncube-links.patch"
+
+From: Matthew East <matthew@mattheweast.me>
+Date: Tue, 30 Sep 2014 14:22:50 -0500
+Subject: [PATCH] Fix broken OwnCube links
+
+---
+ index/services.json       | 4 ++--
+ src/services/owncube.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/index/services.json b/index/services.json
+index 1fa3a28..da8ec64 100644
+--- a/index/services.json
++++ b/index/services.json
+@@ -674,11 +674,11 @@
+     "links": {
+       "privacy": {
+         "name": "Privacy",
+-        "url": "https://owncube.com/privacy.php"
++        "url": "https://owncube.com/privacy-en.php"
+       },
+       "terms": {
+         "name": "Terms",
+-        "url": "https://owncube.com/terms.php"
++        "url": "https://owncube.com/terms-en.php"
+       }
+     },
+     "points": [
+diff --git a/src/services/owncube.json b/src/services/owncube.json
+index 0925f99..d63246c 100644
+--- a/src/services/owncube.json
++++ b/src/services/owncube.json
+@@ -7,12 +7,12 @@
+   "tosback2": {
+     "privacy": {
+       "name": "Privacy",
+-      "url": "https://owncube.com/privacy.php"
++      "url": "https://owncube.com/privacy-en.php"
+     },
+     "sitename": "owncube.com",
+     "terms": {
+       "name": "Terms",
+-      "url": "https://owncube.com/terms.php"
++      "url": "https://owncube.com/terms-en.php"
+     }
+   },
+   "tosdr": {
+-- 
+1.9.1
+
+
+--------------040708000203060607050205--

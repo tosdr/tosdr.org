@@ -1,0 +1,368 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.217 with SMTP id m86csp1556466ioi;
+        Thu, 24 Dec 2015 04:05:51 -0800 (PST)
+X-Received: by 10.194.121.167 with SMTP id ll7mr9896404wjb.113.1450958751469;
+        Thu, 24 Dec 2015 04:05:51 -0800 (PST)
+Return-Path: <tosdr+bncBCQPNKNCY4LBBG5756ZQKGQEQUI3DLA@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id r184si57744196wmb.0.2015.12.24.04.05.51
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 24 Dec 2015 04:05:51 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCQPNKNCY4LBBG5756ZQKGQEQUI3DLA@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCQPNKNCY4LBBG5756ZQKGQEQUI3DLA@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBCQPNKNCY4LBBG5756ZQKGQEQUI3DLA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 39ECEFB8C6
+	for <michiel@unhosted.org>; Thu, 24 Dec 2015 13:05:51 +0100 (CET)
+Received: from mfilter34-d.gandi.net (mfilter34-d.gandi.net [217.70.178.165])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2F0A111601D
+	for <michiel@unhosted.org>; Thu, 24 Dec 2015 13:05:51 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter34-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter34-d.gandi.net (mfilter34-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 14O8qClXMJ-M for <michiel@unhosted.org>;
+	Thu, 24 Dec 2015 13:05:49 +0100 (CET)
+Received: from mail-yk0-x237.google.com (mail-yk0-x237.google.com [IPv6:2607:f8b0:4002:c07::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 11EBE1163A1
+	for <michiel@michielbdejong.com>; Thu, 24 Dec 2015 13:05:49 +0100 (CET)
+Received: by mail-yk0-x237.google.com with SMTP id p130sf25576532yka.1
+        for <michiel@michielbdejong.com>; Thu, 24 Dec 2015 04:05:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:content-type:subject:message-id:date:to:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=Sd64VH3cOZOdGPWR5aXk3CGrTIxwIAn44p/G+gKk1+s=;
+        b=M7cNykv6jq/HPTI5m2YW7GPDiFSzeLVP90j2rPbGXvoaXmhW2w9MwQmsinWRsWgFVL
+         R67rzQh2QtEEgx+oXQqQ0n9jAqUTuMg17T9u/hXwb1TdKAwMHWjOHxYTkqsKvOcvmDdJ
+         YCEodfj7wi552mjxUFVebMH5JeHY6ILvPV3oQT9nzGvsIrSDnRexGjH4lQ2PWENScHnG
+         /zsNZ1vUQSpN+5bZq0WAyFYt0Rp+QualX3HXXTTZz//TlX9fiMELCIAT1JpyhCpVLiY1
+         WuRivBxWNKSZZtH2KlzABUZeJMBbBTsjs3KxLDIdige3D/DbVO22uVRNuhQVuXD0MBlE
+         Wntw==
+X-Received: by 10.50.28.20 with SMTP id x20mr609249igg.3.1450958748159;
+        Thu, 24 Dec 2015 04:05:48 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.66.144 with SMTP id f16ls1948538igt.15.canary; Thu, 24 Dec
+ 2015 04:05:47 -0800 (PST)
+X-Received: by 10.107.16.211 with SMTP id 80mr31714587ioq.2.1450958747358;
+        Thu, 24 Dec 2015 04:05:47 -0800 (PST)
+Received: from mail-pf0-x22e.google.com (mail-pf0-x22e.google.com. [2607:f8b0:400e:c00::22e])
+        by gmr-mx.google.com with ESMTPS id t69si1078384pfi.1.2015.12.24.04.05.47
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 24 Dec 2015 04:05:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of ruth.abeba@gmail.com designates 2607:f8b0:400e:c00::22e as permitted sender) client-ip=2607:f8b0:400e:c00::22e;
+Received: by mail-pf0-x22e.google.com with SMTP id 65so23457601pff.3
+        for <tosdr@googlegroups.com>; Thu, 24 Dec 2015 04:05:47 -0800 (PST)
+X-Received: by 10.98.71.203 with SMTP id p72mr51427278pfi.151.1450958747241;
+        Thu, 24 Dec 2015 04:05:47 -0800 (PST)
+Received: from [192.168.0.3] ([101.165.70.147])
+        by smtp.gmail.com with ESMTPSA id sy5sm58711590pac.5.2015.12.24.04.05.45
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 24 Dec 2015 04:05:46 -0800 (PST)
+From: Ruth <ruth.abeba@gmail.com>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_B0F7F153-8450-4E82-835E-B4694BC15B0A"
+Subject: [tosdr:3719] unity terms conditions
+Message-Id: <061B7950-8BF9-4064-85C9-43AA809D8DA3@gmail.com>
+Date: Thu, 24 Dec 2015 22:05:39 +1000
+To: tosdr@googlegroups.com
+Mime-Version: 1.0 (Mac OS X Mail 8.2 \(2104\))
+X-Mailer: Apple Mail (2.2104)
+X-Original-Sender: ruth.abeba@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of ruth.abeba@gmail.com designates 2607:f8b0:400e:c00::22e
+ as permitted sender) smtp.mailfrom=ruth.abeba@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--Apple-Mail=_B0F7F153-8450-4E82-835E-B4694BC15B0A
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Web Player License Agreement
+PLEASE READ CAREFULLY: BY INSTALLING THE SOFTWARE (AS DEFINED BELOW), YOU (=
+EITHER ON BEHALF OF YOURSELF AS AN INDIVIDUAL OR ON BEHALF OF AN ENTITY AS =
+ITS AUTHORIZED REPRESENTATIVE) AGREE TO ALL OF THE TERMS OF THIS END USER L=
+ICENSE AGREEMENT REGARDING THE USE OF THE SOFTWARE.
+
+1) GRANT OF LICENSE:
+
+You may install this Software on your computer to experience Unity web cont=
+ent.
+
+2) TITLE:
+
+You acknowledge that no title to the intellectual property in the Software =
+is transferred to you. Title, ownership, rights, and intellectual property =
+rights in and to the Software shall remain that of Unity Technologies. The =
+Software is protected by copyright laws of the United States and internatio=
+nal treaties.
+
+3) ANONYMOUS USAGE STATISTICS:
+
+You accept that the first time the Unity Web Player is used, anonymous info=
+rmation about the computer it's loaded on is submitted to Unity Technologie=
+s ApS. This only happens once time, and contains no personally identifiable=
+ information. The information submitted is:
+
+(a) Operating system and version
+(b) The make of the CPU, and number of CPUs present
+(c) The graphics card type and vendor name
+(d) Graphics card driver name and version (example: "nv4disp.dll 6.10.93.71=
+")
+(e) Which graphics API is in use (example: "OpenGL 2.1" or "Direct3D 9.0c")
+(f) Amount of system and video RAM present
+(g) Current desktop resolution
+(h) Version of the Unity Web Player
+(i) A number describing whether running on Mac or Windows
+(j) A checksum of all the data that gets sent to verify that it did transmi=
+t correctly
+
+3) DISTRIBUTION:
+
+You acknowledge that only Unity Technologies ApS and its designated distrib=
+ution partners may distribute the Unity Web Player, without a special permi=
+ssion.
+
+4) CEASE OF DISTRIBUTION:
+
+In case Unity Technologies ApS and its designated distribution partners per=
+manently cease to distribute the Unity Web Player, versions of the Unity We=
+b Player that have previously been distributed by Unity Technologies ApS be=
+come freely redistributable.
+
+5) DISCLAIMER OF WARRANTY:
+
+YOU AGREE THAT UNITY TECHNOLOGIES APS HAS MADE NO EXPRESS WARRANTIES, ORAL =
+OR WRITTEN, TO YOU REGARDING THE PRODUCTS AND THAT THE PRODUCTS ARE BEING P=
+ROVIDED TO YOU 'AS IS' WITHOUT WARRANTY OF ANY KIND. UNITY TECHNOLOGIES APS=
+ DISCLAIMS ANY AND ALL OTHER WARRANTIES, WHETHER EXPRESSED, IMPLIED, OR STA=
+TUTORY. YOUR RIGHTS MAY VARY DEPENDING ON THE STATE IN WHICH YOU LIVE. UNIT=
+Y TECHNOLOGIES APS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, C=
+OVER, RELIANCE, OR CONSEQUENTIAL DAMAGES RESULTING FROM THE USE OF THIS PRO=
+DUCT.
+
+6) LIMITATION OF LIABILITY:
+
+YOU USE THIS PROGRAM SOLELY AT YOUR OWN RISK. IN NO EVENT SHALL UNITY TECHN=
+OLOGIES APS BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO =
+ANY LOSS, OR OTHER INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIN=
+D ARISING OUT OF THE USE OF THE SOFTWARE, EVEN IF UNITY TECHNOLOGIES APS HA=
+S BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT WILL UNITY T=
+ECHNOLOGIES APS BE LIABLE FOR ANY CLAIM, WHETHER IN CONTRACT, TORT, OR ANY =
+OTHER THEORY OF LIABILITY, EXCEED THE COST OF THE SOFTWARE. THIS LIMITATION=
+ SHALL APPLY TO CLAIMS OF PERSONAL INJURY TO THE EXTENT PERMITTED BY LAW.
+
+7) TERMINATION:
+
+This Agreement shall terminate automatically if you fail to comply with the=
+ limitations described in this Agreement. No notice shall be required to ef=
+fectuate such termination. Upon termination, you must remove and destroy al=
+l copies of the Software.
+
+8) MISCELLANEOUS:
+
+Severability: In the event of invalidity of any provision of this Agreement=
+, the parties agree that such invalidity shall not affect the validity of t=
+he remaining portions of this Agreement.
+
+Export: You agree that you will not export or re-export the Software outsid=
+e of the jurisdiction in which you obtained it without the appropriate Unit=
+ed States or foreign government licenses.
+
+Governing Law: This Agreement will be governed by the laws of the State of =
+Denmark as they are applied to agreements between Denmark residents entered=
+ into and to be performed entirely within Denmark. The United Nations Conve=
+ntion on Contracts for the International Sale of Goods is specifically disc=
+laimed.
+
+Entire Agreement: You agree that this is the entire agreement between you a=
+nd Unity Technologies ApS, which supersedes any prior agreement, whether wr=
+itten or oral, and all other communications between Unity Technologies ApS =
+and you relating to the subject matter of this Agreement.
+
+Reservation of rights: All rights not expressly granted in this Agreement a=
+re reserved by Unity Technologies ApS.
+
+Derivative work: Whether you are licensing the Software as an individual or=
+ on behalf of an entity, you may not: (a) reverse engineer, decompile, or d=
+isassemble the Software or attempt to discover the source code; (b) modify,=
+ or create derivative works based upon, the Software in whole or in part wi=
+thout the express written consent of Unity Technologies ApS; (c) distribute=
+ copies of the Software; (d) remove any proprietary notices or labels on th=
+e Software; (e) resell, lease, rent, transfer, sublicense, or otherwise tra=
+nsfer rights to the Software.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--Apple-Mail=_B0F7F153-8450-4E82-835E-B4694BC15B0A
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html charset=
+=3Dus-ascii"></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode=
+: space; -webkit-line-break: after-white-space;" class=3D""><p style=3D"mar=
+gin: 0px; font-size: 18px; color: rgb(35, 35, 35);" class=3D""><b class=3D"=
+">Web Player License Agreement</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">PLEASE READ CAREFULLY: BY INSTALLING THE SOFTWARE (AS DEFINED B=
+ELOW), YOU (EITHER ON BEHALF OF YOURSELF AS AN INDIVIDUAL OR ON BEHALF OF A=
+N ENTITY AS ITS AUTHORIZED REPRESENTATIVE) AGREE TO ALL OF THE TERMS OF THI=
+S END USER LICENSE AGREEMENT REGARDING THE USE OF THE SOFTWARE.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">1) GRANT OF LICENSE:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">You may install this Software on your computer to experience Un=
+ity web content.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">2) TITLE:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">You acknowledge that no title to the intellectual property in t=
+he Software is transferred to you. Title, ownership, rights, and intellectu=
+al property rights in and to the Software shall remain that of Unity Techno=
+logies. The Software is protected by copyright laws of the United States an=
+d international treaties.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">3) ANONYMOUS USAGE STATISTICS:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">You accept that the first time the Unity Web Player is used, an=
+onymous information about the computer it's loaded on is submitted to Unity=
+ Technologies ApS. This only happens once time, and contains no personally =
+identifiable information. The information submitted is:</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">(a) Operating system and version<br class=3D"">
+(b) The make of the CPU, and number of CPUs present<br class=3D"">
+(c) The graphics card type and vendor name<br class=3D"">
+(d) Graphics card driver name and version (example: "nv4disp.dll 6.10.93.71=
+")<br class=3D"">
+(e) Which graphics API is in use (example: "OpenGL 2.1" or "Direct3D 9.0c")=
+<br class=3D"">
+(f) Amount of system and video RAM present<br class=3D"">
+(g) Current desktop resolution<br class=3D"">
+(h) Version of the Unity Web Player<br class=3D"">
+(i) A number describing whether running on Mac or Windows<br class=3D"">
+(j) A checksum of all the data that gets sent to verify that it did transmi=
+t correctly</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">3) DISTRIBUTION:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">You acknowledge that only Unity Technologies ApS and its design=
+ated distribution partners may distribute the Unity Web Player, without a s=
+pecial permission.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">4) CEASE OF DISTRIBUTION:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">In case Unity Technologies ApS and its designated distribution =
+partners permanently cease to distribute the Unity Web Player, versions of =
+the Unity Web Player that have previously been distributed by Unity Technol=
+ogies ApS become freely redistributable.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">5) DISCLAIMER OF WARRANTY:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">YOU AGREE THAT UNITY TECHNOLOGIES APS HAS MADE NO EXPRESS WARRA=
+NTIES, ORAL OR WRITTEN, TO YOU REGARDING THE PRODUCTS AND THAT THE PRODUCTS=
+ ARE BEING PROVIDED TO YOU 'AS IS' WITHOUT WARRANTY OF ANY KIND. UNITY TECH=
+NOLOGIES APS DISCLAIMS ANY AND ALL OTHER WARRANTIES, WHETHER EXPRESSED, IMP=
+LIED, OR STATUTORY. YOUR RIGHTS MAY VARY DEPENDING ON THE STATE IN WHICH YO=
+U LIVE. UNITY TECHNOLOGIES APS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL=
+, SPECIAL, COVER, RELIANCE, OR CONSEQUENTIAL DAMAGES RESULTING FROM THE USE=
+ OF THIS PRODUCT.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">6) LIMITATION OF LIABILITY:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">YOU USE THIS PROGRAM SOLELY AT YOUR OWN RISK. IN NO EVENT SHALL=
+ UNITY TECHNOLOGIES APS BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING BUT NOT=
+ LIMITED TO ANY LOSS, OR OTHER INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGE=
+S OF ANY KIND ARISING OUT OF THE USE OF THE SOFTWARE, EVEN IF UNITY TECHNOL=
+OGIES APS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT =
+WILL UNITY TECHNOLOGIES APS BE LIABLE FOR ANY CLAIM, WHETHER IN CONTRACT, T=
+ORT, OR ANY OTHER THEORY OF LIABILITY, EXCEED THE COST OF THE SOFTWARE. THI=
+S LIMITATION SHALL APPLY TO CLAIMS OF PERSONAL INJURY TO THE EXTENT PERMITT=
+ED BY LAW.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">7) TERMINATION:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D"">This Agreement shall terminate automatically if you fail to com=
+ply with the limitations described in this Agreement. No notice shall be re=
+quired to effectuate such termination. Upon termination, you must remove an=
+d destroy all copies of the Software.</p>
+<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(35, 35, 35);"=
+ class=3D""><b class=3D"">8) MISCELLANEOUS:</b></p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Severability:</i> In the event of invalidity of a=
+ny provision of this Agreement, the parties agree that such invalidity shal=
+l not affect the validity of the remaining portions of this Agreement.</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Export:</i> You agree that you will not export or=
+ re-export the Software outside of the jurisdiction in which you obtained i=
+t without the appropriate United States or foreign government licenses.</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Governing Law:</i> This Agreement will be governe=
+d by the laws of the State of Denmark as they are applied to agreements bet=
+ween Denmark residents entered into and to be performed entirely within Den=
+mark. The United Nations Convention on Contracts for the International Sale=
+ of Goods is specifically disclaimed.</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Entire Agreement:</i> You agree that this is the =
+entire agreement between you and Unity Technologies ApS, which supersedes a=
+ny prior agreement, whether written or oral, and all other communications b=
+etween Unity Technologies ApS and you relating to the subject matter of thi=
+s Agreement.</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Reservation of rights:</i> All rights not express=
+ly granted in this Agreement are reserved by Unity Technologies ApS.</p>
+<p style=3D"margin: 0px 0px 15px; font-size: 13px; color: rgb(85, 85, 85);"=
+ class=3D""><i class=3D"">Derivative work:</i> Whether you are licensing th=
+e Software as an individual or on behalf of an entity, you may not: (a) rev=
+erse engineer, decompile, or disassemble the Software or attempt to discove=
+r the source code; (b) modify, or create derivative works based upon, the S=
+oftware in whole or in part without the express written consent of Unity Te=
+chnologies ApS; (c) distribute copies of the Software; (d) remove any propr=
+ietary notices or labels on the Software; (e) resell, lease, rent, transfer=
+, sublicense, or otherwise transfer rights to the Software.</p></body></htm=
+l>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--Apple-Mail=_B0F7F153-8450-4E82-835E-B4694BC15B0A--

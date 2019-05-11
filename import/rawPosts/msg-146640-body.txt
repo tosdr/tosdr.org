@@ -1,0 +1,182 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.52.74 with SMTP id b71csp325653vka;
+        Sun, 21 Aug 2016 15:56:40 -0700 (PDT)
+X-Received: by 10.28.130.130 with SMTP id e124mr11902213wmd.111.1471820200276;
+        Sun, 21 Aug 2016 15:56:40 -0700 (PDT)
+Return-Path: <tosdr+bncBCDKJLHT3YFBBJHD5C6QKGQETNEMC6Q@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id q197si13511300wmb.145.2016.08.21.15.56.40
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Aug 2016 15:56:40 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbcdkjlht3yfbbjhd5c6qkgqetnemc6q@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbcdkjlht3yfbbjhd5c6qkgqetnemc6q@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBCDKJLHT3YFBBJHD5C6QKGQETNEMC6Q@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id F12FDFB882
+	for <michiel@unhosted.org>; Mon, 22 Aug 2016 00:56:39 +0200 (CEST)
+Received: from mfilter36-d.gandi.net (mfilter36-d.gandi.net [217.70.178.167])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D393D178044
+	for <michiel@unhosted.org>; Mon, 22 Aug 2016 00:56:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter36-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter36-d.gandi.net (mfilter36-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id PNMir0nEZQ8Q for <michiel@unhosted.org>;
+	Mon, 22 Aug 2016 00:56:38 +0200 (CEST)
+Received: from mail-pf0-x23b.google.com (mail-pf0-x23b.google.com [IPv6:2607:f8b0:400e:c00::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C2AC8178043
+	for <michiel@michielbdejong.com>; Mon, 22 Aug 2016 00:56:37 +0200 (CEST)
+Received: by mail-pf0-x23b.google.com with SMTP id i6sf24122816pfe.0
+        for <michiel@michielbdejong.com>; Sun, 21 Aug 2016 15:56:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=5OjGQLgleYVkBwVFoDB4JT68weaVITn+0+OBwDOtYfY=;
+        b=g7Wc+s72ccYITvq9O8BwocQWWZI6KNmYbcg01REVjYJAQ8IxP39zqna+/ChVQ9QPrj
+         o0Yf8pZGvfIUU4L6K7AzbmpS8zFrSyNKAamerzcR/ZF2y1SH/Qp+caxCvtA3/0IZ4THG
+         PbLpCkgo7Dd4Ya+3UtmzQB38VtUxHHoDzeXYYWcu7LeNVcmchRtCZR4jh/wzenX4jaye
+         oXly4Fc2OyBHfrsFnBJHCViNzOk1pqX9NjHMkukVR7FJanU0OZIAChf3xWCACLIzrq5c
+         FrbG4XWwouqEY3XVP9UrkWZkFZ5cgadHFM2XxdJ+2RO1SQ3DKAU8nI+JCydpVLhObFQH
+         SsmQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=5OjGQLgleYVkBwVFoDB4JT68weaVITn+0+OBwDOtYfY=;
+        b=h1GNhNL44/rYXA/EvAlCV02A0QI8eXjcZMCnoHJyP3DPBhIqrZfhIHhdknAUIsYi+4
+         KPLPSuKiCRAukKH6d+u11+EBP5evrbfVUAkBkY7UthskCXpsOuTAf117L7N+KXA+V11p
+         79nfDDtwdrx90Au4ce5ZCgCAYJxOIUreJsYe1IDtpC1oyJV43mCCRlPz/OO3IyZ8U53G
+         sN1Je1EwncoHOPjS5alnkyPGtLdGsYvKqoTe+m8sC87rmyX678Qq2a3IIZacr7M6F/E3
+         DnHky1tp3WzO/GQ1D/WLoSatFyICIkMoYVPNb2EFBto6aampJslFaiKolkX9GnL4rw2S
+         ZUzg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:mime-version:from:date:message-id:subject
+         :to:x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=5OjGQLgleYVkBwVFoDB4JT68weaVITn+0+OBwDOtYfY=;
+        b=KDc89MIjWgbcNhlO4lYNOJHOaQa0RCvgjkdpbfd2McB2OFir4QXQAhTtWhEnnoQBqI
+         xAHvCB9NdiHguHYGODyywPXTLjxvPJ7KzrRqWlOUlmjzua5AUDpItytMFaHdOtRpSADV
+         vHl/FgRq1MwgmEImzdeS2lXaADEsUsAi9STJV7zGd3eJ8LxGYb1h99cmnBHPuHCKvlre
+         RPT6jEC1iiMcCssn/uVopcA9ATVayUhRz379+Zm9h9uE2O2J/dW+dVDEnSO283cYsGo4
+         aJvvPfLzKTwjjER5zs8OK9y5Va+ZYZfhtk+kBip+cWK74OMb9J8FfijRPtnwloEfVt58
+         wnng==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkoousaiq4ZfYnTti4PMxYl2vipdWUk4tb1hx3yGF5t7ZNY897rueqOr9MViBxlPWr2fg==
+X-Received: by 10.36.120.140 with SMTP id p134mr32852itc.10.1471820196444;
+        Sun, 21 Aug 2016 15:56:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.36.189.5 with SMTP id x5ls900292ite.15.gmail; Sun, 21 Aug 2016
+ 15:56:35 -0700 (PDT)
+X-Received: by 10.107.178.146 with SMTP id b140mr14554082iof.4.1471820195309;
+        Sun, 21 Aug 2016 15:56:35 -0700 (PDT)
+Received: from mail-oi0-x235.google.com (mail-oi0-x235.google.com. [2607:f8b0:4003:c06::235])
+        by gmr-mx.google.com with ESMTPS id j127si1345469ith.0.2016.08.21.15.56.35
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Aug 2016 15:56:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tvp1rat3@gmail.com designates 2607:f8b0:4003:c06::235 as permitted sender) client-ip=2607:f8b0:4003:c06::235;
+Received: by mail-oi0-x235.google.com with SMTP id f189so129033892oig.3
+        for <tosdr@googlegroups.com>; Sun, 21 Aug 2016 15:56:35 -0700 (PDT)
+X-Received: by 10.157.15.245 with SMTP id m50mr11820190otd.162.1471820195006;
+ Sun, 21 Aug 2016 15:56:35 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.202.227.5 with HTTP; Sun, 21 Aug 2016 15:55:54 -0700 (PDT)
+From: Software Killer <tvp1rat3@gmail.com>
+Date: Sun, 21 Aug 2016 18:55:54 -0400
+Message-ID: <CAFguBbfVHPB59v2gqRBE0-853e3assdDJSM5eQpfc1+nSsB6OQ@mail.gmail.com>
+Subject: [tosdr:3949] yummly.com
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a113b18aae5915b053a9cd730
+X-Original-Sender: TVP1rat3@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@gmail.com;       spf=pass (google.com: domain of tvp1rat3@gmail.com
+ designates 2607:f8b0:4003:c06::235 as permitted sender) smtp.mailfrom=tvp1rat3@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--001a113b18aae5915b053a9cd730
+Content-Type: text/plain; charset=UTF-8
+
+tos link:
+http://www.yummly.com/terms
+
+VERY BAD . the take ownership everything posted even if you delete they can
+repost and use as there own . they force you to sign up to use site. they
+tos are out to screw user.. you give them at there whim right to host your
+data in country with no privacey laws. lastily if the go bankrupt you give
+them right to sell your info to get out of debt
+
+suggested rating: F
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/CAFguBbfVHPB59v2gqRBE0-853e3assdDJSM5eQpfc1%2BnSsB6OQ%40mail.gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a113b18aae5915b053a9cd730
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div>tos link:<br><a href=3D"http://www.yummly.com/te=
+rms">http://www.yummly.com/terms</a><br><br></div>VERY BAD . the take owner=
+ship everything posted even if you delete they can repost and use as there =
+own . they force you to sign up to use site. they tos are out to screw user=
+.. you give them at there whim right to host your data in country with no p=
+rivacey laws. lastily if the go bankrupt you give them right to sell your i=
+nfo to get out of debt<br><br></div>suggested rating: F<br></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/CAFguBbfVHPB59v2gqRBE0-853e3assdDJSM5eQpfc1%2BnSsB6OQ%40ma=
+il.gmail.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/tosdr/CAFguBbfVHPB59v2gqRBE0-853e3assdDJSM5eQpfc1%2BnSsB6OQ%40m=
+ail.gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a113b18aae5915b053a9cd730--

@@ -1,0 +1,88 @@
+Return-Path: <tosdr+bncBAABB2GJYSQAKGQEFSILE6I@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 0A6BF4091A
+	for <anything@michielbdejong.com>; Thu, 11 Sep 2014 06:28:31 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 07212178079
+	for <anything@michielbdejong.com>; Thu, 11 Sep 2014 06:28:31 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id UiSco3t0boQz for <anything@michielbdejong.com>;
+	Thu, 11 Sep 2014 06:28:29 +0200 (CEST)
+Received: from mail-qc0-x23e.google.com (mail-qc0-x23e.google.com [IPv6:2607:f8b0:400d:c01::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2B74017806D
+	for <michiel@michielbdejong.com>; Thu, 11 Sep 2014 06:28:26 +0200 (CEST)
+Received: by mail-qc0-f190.google.com with SMTP id x13sf3923178qcv.27
+        for <michiel@michielbdejong.com>; Wed, 10 Sep 2014 21:28:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=SWyPf8TvWSNghmvFwMDuy/tIm+8Sb3s/OpIfV8p1tME=;
+        b=omU9S1joGp5uSi2ajbThUFvqqP6nBh+j9AuQugjISiQPnVU95E/jjJ5bmvBxs4ZgIH
+         0RawsfSubzCDX9aWdbnQIdrf7zFSiKYQHUgVJgybCLjMIcBShVFgnLvX+MdWXpNcUiie
+         b+13XAyHB1lCSn7MnZElQH1/pgUbyz9e+jZHUbfy9K38Gs3XF1ou68/Cf5WAU1isNNDG
+         IpmpYz69lzu785qVFonHwumv5rACRdEBPsZsBrcJK1/oGGtoG4FS2FW9+vHFAlzKz8/P
+         hPKXiDVgVXD6ncowOokAdc+9C+e17hRymaGtFWsC/eN1mSiAYqEMghlVIwD6eRkbtU7C
+         FTnQ==
+X-Received: by 10.50.18.17 with SMTP id s17mr568699igd.10.1410409704975;
+        Wed, 10 Sep 2014 21:28:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.23.108 with SMTP id l12ls3613063igf.2.canary; Wed, 10 Sep
+ 2014 21:28:24 -0700 (PDT)
+X-Received: by 10.70.92.137 with SMTP id cm9mr24478158pdb.4.1410409704133;
+        Wed, 10 Sep 2014 21:28:24 -0700 (PDT)
+Received: from o1678924x164.outbound-mail.sendgrid.net (o1678924x164.outbound-mail.sendgrid.net. [167.89.24.164])
+        by gmr-mx.google.com with SMTP id hz1si679763pbc.1.2014.09.10.21.28.23
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 Sep 2014 21:28:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 167.89.24.164 as permitted sender) client-ip=167.89.24.164;
+Received: by filter-171.sjc1.sendgrid.net with SMTP id filter-171.17705.541124E610
+        2014-09-11 04:28:22.777618042 +0000 UTC
+Received: from tosdr.org (unknown [162.211.64.106])
+	by ismtpd-013.sjc1.sendgrid.net (SG) with ESMTP id 14862f82508.344f.11cc236
+	for <tosdr@googlegroups.com>; Thu, 11 Sep 2014 04:28:22 +0000 (GMT)
+Date: Thu, 11 Sep 2014 00:28:22 -0400
+From: ToSBack <tosback@tosdr.org>
+To: tosdr@googlegroups.com
+Message-ID: <541124e643f12_29674794812910dd@dragon.mail>
+Subject: [tosdr:3229] ToSBack: Policy Changes
+Mime-Version: 1.0
+X-SG-EID: QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYtWqj4jKfI0/KgG+Ju/OOn9Ax5OnEzC8AKhwFNDsCE0JS0CpGyo2iM1ZqsndWAscnqBDxs3Z0AkzaVSWxKAipaZ39W1Ya42tfa4LwTmxXa8EwSJ+so9C0jHBwt1QcfGtWI=
+X-Original-Sender: tosback@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info
+ designates 167.89.24.164 as permitted sender) smtp.mail=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info;
+       dkim=pass header.i=@sendgrid.me
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+
+runescape.com: Terms and Conditions
+runescape.com: Privacy Policy
+disqus.com: Privacy Policy
+ These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/4e0677f28ec33198d6d5b6e0e296213352738bfe to see the differences!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

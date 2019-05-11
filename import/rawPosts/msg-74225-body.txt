@@ -1,0 +1,174 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.68.57.102 with SMTP id h6csp163107pbq;
+        Wed, 6 Jun 2012 09:53:04 -0700 (PDT)
+Received: by 10.205.133.7 with SMTP id hw7mr13239995bkc.123.1339001584305;
+        Wed, 06 Jun 2012 09:53:04 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDvlb7-BBoEJoiefA@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id y43si689495wel.11.2012.06.06.09.53.03
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 06 Jun 2012 09:53:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDvlb7-BBoEJoiefA@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDvlb7-BBoEJoiefA@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDvlb7-BBoEJoiefA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fanl9 with SMTP id l9sf4221638fan.29
+        for <michiel@unhosted.org>; Wed, 06 Jun 2012 09:53:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=BWghxZSx/H8OFeTW2htziyEKKLmgRubx5e/bkp9lb74=;
+        b=aU69+6MK9eSxtdFPcPK7loEEy40fBFo9L0ay+OCra4WnST14N0qCP4Hwthh8YPE/U7
+         3qj/WnPc5lIXZAoT6+LgmMe4cdMsM+UcDOBohRzTO6IMk1wa2BNBHKUD2L4x3fkWqNmn
+         acmj5TAhId3jINpCtoHb1gYu6mXKuYUeUd+BE=
+Received: by 10.204.128.73 with SMTP id j9mr1020596bks.14.1339001583190;
+        Wed, 06 Jun 2012 09:53:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.27.200 with SMTP id e48ls106952eea.8.gmail; Wed, 06 Jun
+ 2012 09:53:02 -0700 (PDT)
+Received: by 10.14.101.2 with SMTP id a2mr6502533eeg.6.1339001582822;
+        Wed, 06 Jun 2012 09:53:02 -0700 (PDT)
+Received: by 10.14.101.2 with SMTP id a2mr6502532eeg.6.1339001582796;
+        Wed, 06 Jun 2012 09:53:02 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id b15si321605een.0.2012.06.06.09.53.02
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 06 Jun 2012 09:53:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 571C563B424
+	for <tosdr@googlegroups.com>; Wed,  6 Jun 2012 18:53:02 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id AvQgaQlqap45 for <tosdr@googlegroups.com>;
+	Wed,  6 Jun 2012 18:52:55 +0200 (CEST)
+Received: from [192.168.2.196] (p5795B0D8.dip.t-dialin.net [87.149.176.216])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id AFDB863A672
+	for <tosdr@googlegroups.com>; Wed,  6 Jun 2012 18:52:55 +0200 (CEST)
+Message-ID: <1339001575.4265.32.camel@synclavier.lan>
+Subject: What's the right balance in a copyright license for publishing over
+ "social networks"?
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Wed, 06 Jun 2012 18:52:55 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Obviously one of the most important issues that's addressed in ToS is
+the copyright license. Not all services are equal in this regard,
+especially between services where the user operate in private and
+services where the user shares / publishes content with other people /
+with the world.
+
+        With this first topic, I'd like to gather some comparative
+        information and discuss what seems to be a fair balance between
+        needs to operate the service and rights of the authors & the
+        public. Then we could try to categorize them and give them a
+        rating.
+
+The first thing to discuss obviously is the scope of the copyright
+license. Some of the ToS out there seems to go as far as they can get in
+scope. It seems to me that the biggest difference are:
+      * some ToS don't grant a specifically large license to the
+        operator of the service but fall back on a copyright public
+        license e.g. creative commons=20
+      * some ToS require the ability to transfer, sublicense with others
+        (sometimes it is limited to the partners e.g. Twitter Partners)
+
+Do I miss anything substantial?
+
+Facebook:
+        you grant us a non-exclusive, transferable, sub-licensable,
+        royalty-free, worldwide license to use any IP content that you
+        post on or in connection with Facebook (IP License).
+
+Twitter:
+        By submitting, posting or displaying Content on or through the
+        Services, you grant us a worldwide, non-exclusive, royalty-free
+        license (with the right to sublicense) to use, copy, reproduce,
+        process, adapt, modify, publish, transmit, display and
+        distribute such Content in any and all media or distribution
+        methods (now known or later developed).
+       =20
+        You agree that this license includes the right for Twitter to
+        provide, promote, and improve the Services and to make Content
+        submitted to or through the Services available to other
+        companies, organizations or individuals who partner with Twitter
+        for the syndication, broadcast, distribution or publication of
+        such Content on other media and services, subject to our terms
+        and conditions for such Content use.
+       =20
+Identi.ca:
+        By submitting Content to Operator for inclusion on your Website,
+        you grant all readers the right to use, re-use, modify and/or
+        re-distribute the Content under the terms of the Creative
+        Commons Attribution 3.0.
+       =20
+SeenThis:
+        en publiant leurs messages sur Seenthis, les auteurs acceptent :
+        =97 que ces messages soient publi=E9s (pr=E9sent=E9s au public) sur=
+ le
+        site seenthis.net,
+        =97 que ces messages soient organis=E9s et enrichis par les
+        automatismes pr=E9sents dans le syst=E8me Seenthis (traduction,
+        th=E9matisation...).
+       =20
+        By publishing their messages on Seenthis, the authors agree
+        that:
+         - these messages are published (displayed to the public) on the
+        seenthis.net website
+         - these messages are organised and augmented by automatic
+        systems in Seenthis (translation, taggin...).
+       =20
+Note that SeenThis gives the option when the message is posted to choose
+which license (classic copyright, cc-by-sa, and others)
+
+Wordpress.com
+        By submitting Content to Automattic for inclusion on your
+        Website, you grant Automattic a world-wide, royalty-free, and
+        non-exclusive license to reproduce, modify, adapt and publish
+        the Content solely for the purpose of displaying, distributing
+        and promoting your blog.=20
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

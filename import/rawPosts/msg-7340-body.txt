@@ -1,0 +1,172 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBVX5X6HQKGQEABJ2R5Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id D4B5D161755
+	for <anything@michielbdejong.com>; Wed, 24 Jul 2013 18:20:42 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D1F27116290
+	for <anything@michielbdejong.com>; Wed, 24 Jul 2013 18:20:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id gYfsUx+SEKkd for <anything@michielbdejong.com>;
+	Wed, 24 Jul 2013 18:20:41 +0200 (CEST)
+Received: from mail-ob0-x23a.google.com (mail-ob0-x23a.google.com [IPv6:2607:f8b0:4003:c01::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 051AD1FA019
+	for <michiel@michielbdejong.com>; Wed, 24 Jul 2013 18:20:40 +0200 (CEST)
+Received: by mail-ob0-f186.google.com with SMTP id v19sf3068571obq.23
+        for <michiel@michielbdejong.com>; Wed, 24 Jul 2013 09:20:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=xV55rYN36R1PsulGSJeDbRoOtCT6BVpHPYr/44r7gL4=;
+        b=CnAUvZ6zlEd62ZNizdlEa0ujw/0jf1pIDjph1jQ9STjm//YtPzXmBXS4Fp3TLwl3nK
+         SQwVOj4P4Np0hTImJRYRXtNpFBXo8DIBiNfAImhMzzhi7SJ5QkLmRmXfSghaVLS7RUMs
+         nf8btSbx8VB8FdxrznbQHnqFcmrqzSwEFnsKOol24g4trwJpaxsrnQ0G85cdzqpDQnuH
+         W3o0dzsXxaApKziGMXtgD0jo1Jv9sZmSZYuHGd3oeKF1H7I0NKchcMKe+BCt32GDz8di
+         3qrL27rsSTGptdBFffsH8gIbROEt+8rUByRO2sO4f6gEihXjpmCnKK9j2XPuFek1VIb3
+         Sqhg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=xV55rYN36R1PsulGSJeDbRoOtCT6BVpHPYr/44r7gL4=;
+        b=jBMbHzGIvuHHC7HWBsa1/6xjO32ltzfb9Y/vN3rUIdA39xq1wBBfY05y/yqEXm5lNg
+         8g6+S6GyxVv0I60WzVmo9cmFWV0OYyShtkTG8ii1/zAHfeC+U7EUFFgPziySj3rCFwCF
+         g5LMqnTtTUZkbJBHSLK4mmTutliCn6x8qNjDpOfdpFwstibys5TixPXL9hGys1baZLbn
+         7SXra3YhOz+Jkpk4mAfmdzhHKrfZMtFEvBGvomuTipULnybdODCpdf+1k7gApYnUi3b4
+         bualjP7tz9VUMafUEGrsK58wkeepMtzM8MZpzWzj/8+1iNnZzg6hFWy0KGPr1daawP++
+         wbyg==
+X-Received: by 10.49.64.37 with SMTP id l5mr771250qes.32.1374682839119;
+        Wed, 24 Jul 2013 09:20:39 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.99.10 with SMTP id em10ls218878qeb.82.gmail; Wed, 24 Jul
+ 2013 09:20:38 -0700 (PDT)
+X-Received: by 10.49.101.34 with SMTP id fd2mr1499484qeb.12.1374682838784;
+        Wed, 24 Jul 2013 09:20:38 -0700 (PDT)
+Date: Wed, 24 Jul 2013 09:20:38 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <3b063eab-4b4b-436b-a07c-1272f2880bbe@googlegroups.com>
+In-Reply-To: <20130520223041.GF3759@synclavier.ampoliros.net>
+References: <CADNfgRfsnm7=-Gjg+AB3wrgupu7wimQ87nk2v-N6Zo+z9cNT2g@mail.gmail.com>
+ <20130520223041.GF3759@synclavier.ampoliros.net>
+Subject: Re: [tosdr:2536] Instagram - changing terms
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_546_5346125.1374682838352"
+
+------=_Part_546_5346125.1374682838352
+Content-Type: text/plain; charset=ISO-8859-1
+
+Agreed. I also wonder specifically how they'd notify users because just 
+posting the new TOS on the services isn't good enough, in my opinion. Is 
+their notification posted on the page of the TOS, in which case users have 
+to periodically check that page? Or would users receive an email saying the 
+terms will be updating in X days/weeks, please review?
+
+On Monday, May 20, 2013 5:30:41 PM UTC-5, Hugo Roy wrote:
+>
+> Le dim. 19/05/13, 13:56, Suzanne Azmayesh <suz...@azmayesh.fr<javascript:>>: 
+>
+> > *Instagram reserves the right, in its sole discretion, to change the 
+> terms 
+> > of service. Normally, except for legal and administrative reason, 
+> Instagram 
+> > is supposed to notify the changes to the users with "reasonable 
+> advance", 
+> > by posting them on the service. * 
+> > ** 
+> > 
+>
+> Reasonable advance should be defined, and a notification to the 
+> service might not be enough... 
+>
+> To me, this isn't enough to deserve a green thumb up. 
+>
+> -- 
+> Hugo Roy, Project Lead 
+> Terms of Service; Didn't Read | www.tosdr.org 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_546_5346125.1374682838352
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Agreed. I also wonder specifically how they'd notify users because just pos=
+ting the new TOS on the services isn't good enough, in my opinion. Is their=
+ notification posted on the page of the TOS, in which case users have to pe=
+riodically check that page? Or would users receive an email saying the term=
+s will be updating in X days/weeks, please review?<br><br>On Monday, May 20=
+, 2013 5:30:41 PM UTC-5, Hugo Roy wrote:<blockquote class=3D"gmail_quote" s=
+tyle=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-le=
+ft: 1ex;">Le dim. 19/05/13, 13:56, Suzanne Azmayesh &lt;<a href=3D"javascri=
+pt:" target=3D"_blank" gdf-obfuscated-mailto=3D"J1mk8EMeCdkJ">suz...@azmaye=
+sh.fr</a>&gt;:
+<br>&gt; *Instagram reserves the right, in its sole discretion, to change t=
+he terms
+<br>&gt; of service. Normally, except for legal and administrative reason, =
+Instagram
+<br>&gt; is supposed to notify the changes to the users with "reasonable ad=
+vance",
+<br>&gt; by posting them on the service. *
+<br>&gt; **
+<br>&gt;=20
+<br>
+<br>Reasonable advance should be defined, and a notification to the
+<br>service might not be enough...=20
+<br>
+<br>To me, this isn't enough to deserve a green thumb up.
+<br>
+<br>--=20
+<br>Hugo Roy, Project Lead
+<br>Terms of Service; Didn't Read | <a href=3D"http://www.tosdr.org" target=
+=3D"_blank">www.tosdr.org</a>
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_546_5346125.1374682838352--

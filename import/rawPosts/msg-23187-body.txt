@@ -1,0 +1,137 @@
+Return-Path: <tosdr+bncBCNMDAXBZ4LBBANXSGRQKGQE6ILWYWA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id A3A3B40910
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 08:19:32 +0100 (CET)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A0138116497
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 08:19:32 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id uAarxaSjwZqX for <anything@michielbdejong.com>;
+	Thu, 13 Nov 2014 08:19:31 +0100 (CET)
+Received: from mail-oi0-x23a.google.com (mail-oi0-x23a.google.com [IPv6:2607:f8b0:4003:c06::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id EF31D1FE675
+	for <michiel@michielbdejong.com>; Thu, 13 Nov 2014 08:19:30 +0100 (CET)
+Received: by mail-oi0-f58.google.com with SMTP id u20sf1956316oif.3
+        for <michiel@michielbdejong.com>; Wed, 12 Nov 2014 23:19:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=AmWffPCW1kx/1DUJV+2RzRDlNViWxsencTX5HzYbOEE=;
+        b=TYItPyL+qTz6GrwNHEZtrzIP8mKVV99FX8pBFb1OeU0b6Cq/pHHHsnsPtGUHr9LmFS
+         IAOY+j5FNnPq1c1q2+M9yHjftexOtWtf/JGWhkNNODXwumCQ6Jg7HL2SsvMV9Ydqs6wL
+         TQRJNJ+rhqmSk+r+GOYSQ7sLtjXwQrzzn5POIx/aH4ageh/UCH6uZIOk1zzTZP0b8Bf1
+         D8XOuBAuuQrZ0IubeNX30F6G8x4mOozmGw0O1PP9uejGFPGk8LybXWXXSVL/cU30dEps
+         6/nx4Z+nWmni/hGhcKekWyvyIrEpPZmg2RW9/gLNKk6mgT6B8w3cQLTjj5N5RtCa2EL3
+         Mj9w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=AmWffPCW1kx/1DUJV+2RzRDlNViWxsencTX5HzYbOEE=;
+        b=nzkh41372GoYuIfB6rO1yeC34K32wn+hDAdsCOz9eMZbRm75dg1Zrz15NSHjUPskud
+         Q5q09KVPhDFx38XU5bpzN8ODi9vh5pqv/0ezy4lLSpjz9jC6T1Mub/NELc7C5gmjQZtg
+         qpa61IvsJ4Bf1Gxoi0vTxYjZdLD7CNrLUV0xq9zHSKsxX8FPiYKNuPtzya+nUd323G0l
+         c5hZiJuxA0cq3HzYt0GV5qh9MqbTBV6qiL4Q6Tr5t20Yk+N9sNC5ldqUrXC92l9xfIUQ
+         wacG2g7VrmwCzFUwTyH2G3bQchMDhePjuus8uSl75+e4a4xYXmNa2Y5XL9zPuVET04UG
+         bnrg==
+X-Received: by 10.50.47.45 with SMTP id a13mr543441ign.7.1415863169848;
+        Wed, 12 Nov 2014 23:19:29 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.169.12 with SMTP id s12ls2564823ioe.39.gmail; Wed, 12 Nov
+ 2014 23:19:29 -0800 (PST)
+X-Received: by 10.50.143.104 with SMTP id sd8mr545470igb.15.1415863169473;
+        Wed, 12 Nov 2014 23:19:29 -0800 (PST)
+Date: Wed, 12 Nov 2014 23:19:28 -0800 (PST)
+From: Hedge Sparrow <kipperpanzee@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <d553aa81-6996-4dc9-90bd-311d5dfc7cfb@googlegroups.com>
+In-Reply-To: <1357999000.15341.8.camel@synclavier.lan>
+References: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+ <1340125919.5340.80.camel@synclavier.lan>
+ <1357999000.15341.8.camel@synclavier.lan>
+Subject: [tosdr:3322] Re: [Bad] Facebook automatically shares your information
+MIME-Version: 1.0
+X-Original-Sender: kipperpanzee@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+From https://www.facebook.com/full_data_use_policy#ip :
+
+> When you visit a site or app using instant personalization, it will know =
+>some information about you and your friends the moment you arrive. This is=
+ >because sites and apps using instant personalization can access your User=
+ >ID, your friend list, and your public information.
+
+COMMENT: These sites are only Facebook partners (scribd, rotten tomatoes, e=
+tc).
+
+>The first time you visit a site or app using instant personalization, you =
+>will see a notification letting you know that the site or app has partnere=
+d >with Facebook to provide a personalized experience.
+>
+>>***
+>>The notification will give you the ability to disable or turn off instant=
+ >>personalization for that site or app. If you do that, that site or app i=
+s >>required to delete all of the information about you it received from >>=
+Facebook as part of the instant personalization program.
+>> In addition, we will prevent that site from accessing your information i=
+n >>the future, even when your friends use that site.
+>>***
+>
+>If you decide that you do not want to experience instant personalization >=
+for all partner sites and apps, you can disable instant personalization >fr=
+om the =E2=80=9CApps=E2=80=9D settings page.
+>If you turn off instant personalization, these partner third party sites >=
+and apps will not be able to access your public information, even when >you=
+r friends visit those sites."
+
+COMMENT: Thus, you can turn off info sharing (so far, only on a case by cas=
+e basis. Let's read on.
+
+> If you turn off an instant personalization site or app after you have bee=
+n >using it or visited it a few times (or after you have given it specific =
+>permission to access your data), it will not automatically delete >informa=
+tion about you it received through Facebook. Like all other apps, >the site=
+ is required by our policies to delete information about you if you >ask it=
+ to do so.
+
+COMMENT: Here I get somewhat confused; the first sentence suggests that the=
+ site/app can keep your information if you've already given it permission, =
+or if you have used it multiple times without withholding permission. Okay.=
+ Then the second sentence says they're required to delete that information =
+if you ask.
+So, I suppose that means turning off personalization is NOT deleting the in=
+formation which has already been given out. Deletion only happens when the =
+site/app is expressly asked to delete your personal information. It seems y=
+ou do this through Facebook, but how is anyone's guess.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

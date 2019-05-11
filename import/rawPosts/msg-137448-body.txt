@@ -1,0 +1,126 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.148 with SMTP id j142csp1975938ioj;
+        Tue, 3 Nov 2015 09:35:02 -0800 (PST)
+X-Received: by 10.28.11.205 with SMTP id 196mr19889677wml.83.1446572102345;
+        Tue, 03 Nov 2015 09:35:02 -0800 (PST)
+Return-Path: <tosdr+bncBCU4PAGL6YJRBO7A4OYQKGQEKLFGTZA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id 129si229955wmj.115.2015.11.03.09.35.02
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 03 Nov 2015 09:35:02 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCU4PAGL6YJRBO7A4OYQKGQEKLFGTZA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCU4PAGL6YJRBO7A4OYQKGQEKLFGTZA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBCU4PAGL6YJRBO7A4OYQKGQEKLFGTZA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id D4A88172070
+	for <michiel@unhosted.org>; Tue,  3 Nov 2015 18:35:01 +0100 (CET)
+Received: from mfilter35-d.gandi.net (mfilter35-d.gandi.net [217.70.178.166])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C81F01786A5
+	for <michiel@unhosted.org>; Tue,  3 Nov 2015 18:35:01 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter35-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter35-d.gandi.net (mfilter35-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yTQtOF1nCeAq for <michiel@unhosted.org>;
+	Tue,  3 Nov 2015 18:34:56 +0100 (CET)
+Received: from mail-pa0-x23c.google.com (mail-pa0-x23c.google.com [IPv6:2607:f8b0:400e:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 338451783EC
+	for <michiel@michielbdejong.com>; Tue,  3 Nov 2015 18:34:53 +0100 (CET)
+Received: by padcn9 with SMTP id cn9sf5769877pad.1
+        for <michiel@michielbdejong.com>; Tue, 03 Nov 2015 09:34:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=Ro60DiDc2DLo0+Oj2VESF9e0bGE/+9DRXApF1UV3S60=;
+        b=shwwztyAxr7F9s8exMDEA3KTPV5Gq2H+w6XN10i6NRFgZopiqUPM29a4Td57IYM2TL
+         Hmgdnmg9e84jQdYVNbQ8FI3SMbtsH67c/hCRfxMERRYgeZrdcDlHZY8XPwjAGVFq+KyN
+         kJTMT69g8ct0jJUTTYx+NAAPOrrnC5JQ5YXiuhGqC4LckDdWzAvThgpb1IDcDo3jPtdD
+         RDrDQndA2rPUeu6QWgzZL8HygLojHfNl+ldYo2vuisliCK4GmTb/74IXo7NbZYoLv9Xt
+         raiRNMPItV1+GtAP+2ZstIJHq01OL1peoEWRFiTYJiwSGv8G0KIq1/bg/wlomMCKxTQf
+         Sbtg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=Ro60DiDc2DLo0+Oj2VESF9e0bGE/+9DRXApF1UV3S60=;
+        b=ikCpKtBq0Vxq1fu8BeUhkrxROpDQ+YkgGFJejCymRz87OpY5SpXJ8WzWnBejDVfs+Y
+         uufAcBs0ewsVafnb4a5cI0yS6NgTW6wEVN8xrCLNHc9ifQwCJkAO9CdsyRWylWKj9FJJ
+         0qenvPvnZ1Bq4uZ5iHKwvEY8veekf7LChYzFJSscQ8JL92wzTLguBknRIOdxvlg+GOfM
+         Y+rdwh23kFpoUSRmNGYPAFFwJ4oNiO+pPCX1AdU5aW8UMgekoJla8DKeRBhTcxs0y5zZ
+         6uwOjhShPXMVtaFgHafSJ7IILIscaRV6SlwAR63QzWytue86OoLHTQ/w8uuSsej2cFF2
+         kVsw==
+X-Received: by 10.50.6.40 with SMTP id x8mr381649igx.0.1446572091953;
+        Tue, 03 Nov 2015 09:34:51 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.142.2 with SMTP id rs2ls1338258igb.24.canary; Tue, 03 Nov
+ 2015 09:34:51 -0800 (PST)
+X-Received: by 10.50.225.70 with SMTP id ri6mr383530igc.9.1446572091433;
+        Tue, 03 Nov 2015 09:34:51 -0800 (PST)
+Date: Tue, 3 Nov 2015 09:34:50 -0800 (PST)
+From: aarisom@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: mark.adams@sjsu.edu
+Message-Id: <13888ad3-2f53-4dc5-9e8b-90e6f4ea67fe@googlegroups.com>
+In-Reply-To: <09ab4178-de1b-4b37-985b-d378320e8a2c@googlegroups.com>
+References: <09ab4178-de1b-4b37-985b-d378320e8a2c@googlegroups.com>
+Subject: [tosdr:3680] Re: Dropbox
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_6711_2038875606.1446572090870"
+X-Original-Sender: aarisom@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_6711_2038875606.1446572090870
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, February 26, 2014 at 6:53:23 PM UTC-7, mark....@sjsu.edu wrot=
+e:
+> Surprised Dropbox isn't on the BAD list for having a NO REFUND policy on =
+their accounts...this doesn;t seem fair--a perfect example of the reason fo=
+r tour website (to expose these companies). Here's the fine print...
+>=20
+>=20
+> Dropbox Premium Accounts are prepaid and are non-refundable. DROPBOX DOES=
+ NOT PROVIDE REFUNDS OR CREDITS FOR ANY PARTIAL MONTHS OR YEARS. You may ca=
+ncel your Dropbox Premium Account at anytime, and cancellation will be effe=
+ctive immediately. If you wish to cancel your Premium Account you may do so=
+ via your "Account" page. Should you elect to cancel your Premium Account, =
+please note that you will not be issued a refund for the most recently (or =
+any previously) charged monthly fees.
+
+Was anybody able to resolve this and get a refund? I'm in the same situatio=
+n.=20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_6711_2038875606.1446572090870--

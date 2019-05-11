@@ -1,0 +1,170 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp211qek;
+        Wed, 29 Aug 2012 05:22:56 -0700 (PDT)
+Received: by 10.205.117.141 with SMTP id fm13mr845941bkc.125.1346242975217;
+        Wed, 29 Aug 2012 05:22:55 -0700 (PDT)
+Return-Path: <tosdr+bncCIqqu6foDhD_kviBBRoEV5GrGQ@googlegroups.com>
+Received: from mail-lpp01m010-f64.google.com (mail-lpp01m010-f64.google.com [209.85.215.64])
+        by mx.google.com with ESMTPS id fy11si15556133bkc.58.2012.08.29.05.22.23
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 29 Aug 2012 05:22:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCIqqu6foDhD_kviBBRoEV5GrGQ@googlegroups.com designates 209.85.215.64 as permitted sender) client-ip=209.85.215.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCIqqu6foDhD_kviBBRoEV5GrGQ@googlegroups.com designates 209.85.215.64 as permitted sender) smtp.mail=tosdr+bncCIqqu6foDhD_kviBBRoEV5GrGQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lahl5 with SMTP id l5sf221303lah.29
+        for <multiple recipients>; Wed, 29 Aug 2012 05:22:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:date:from
+         :organization:user-agent:mime-version:to:subject:references
+         :in-reply-to:x-enigmail-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=XJ025T7ntIKLJw9g91m+b7Pc1mjmOdXPXaaVTaUZN0U=;
+        b=eHlN4qDVVtb2dLajf8C+tN0FYyKlbqBmeSsDgSNeNqId+0LFIEXODBn858jmhduQZd
+         hZQnvnX4jIAcISWfLcf81oTs/eztuPd5R6FQeB0hi983hTWZfqna5pVvxf1U9eiKQlwU
+         yc525GsTWqKnGmL5vwSNYL8jgi603nh+HKFUGYgT8fqqdKmaVFq6/OyAJMqIJuFQwEE+
+         0n0tKzSszpwgOF+3D4rInwdCtnZLu8KPtO6KpW4hqNjuq8Iphr3wQxneXWyZuL6QXtZy
+         V++fyz4Rw07n48zZqR1VWx8lFS7jAe6LIChruoEDLpo6/wVocnq2Um3H4d8n6SNbDxu4
+         gFCg==
+Received: by 10.180.105.163 with SMTP id gn3mr2103125wib.0.1346242943232;
+        Wed, 29 Aug 2012 05:22:23 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.223.136 with SMTP id v8ls133685eep.7.gmail; Wed, 29 Aug
+ 2012 05:22:22 -0700 (PDT)
+Received: by 10.14.205.5 with SMTP id i5mr1342913eeo.5.1346242942456;
+        Wed, 29 Aug 2012 05:22:22 -0700 (PDT)
+Received: by 10.14.205.5 with SMTP id i5mr1342912eeo.5.1346242942444;
+        Wed, 29 Aug 2012 05:22:22 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id v3si33200050eep.1.2012.08.29.05.22.22
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 29 Aug 2012 05:22:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of eal@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id EF51D63A689
+	for <tosdr@googlegroups.com>; Wed, 29 Aug 2012 14:22:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sqzewAKEHBUk for <tosdr@googlegroups.com>;
+	Wed, 29 Aug 2012 14:22:14 +0200 (CEST)
+Received: from [192.168.141.151] (p54BD2FB0.dip.t-dialin.net [84.189.47.176])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: eal)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id C478B63B445
+	for <tosdr@googlegroups.com>; Wed, 29 Aug 2012 14:22:14 +0200 (CEST)
+Message-ID: <503E0976.3010404@fsfe.org>
+Date: Wed, 29 Aug 2012 14:22:14 +0200
+From: Erik Albers <eal@fsfe.org>
+Organization: Free Software Foundation Europe
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:14.0) Gecko/20120714 Thunderbird/14.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:719] [Bad] WhatsApp holds unlimited copyright license on
+ your Status Submissions
+References: <432070bf-a2bd-41b9-b341-d531e078f72d@googlegroups.com> <1346158303.19155.121.camel@synclavier.lan>
+In-Reply-To: <1346158303.19155.121.camel@synclavier.lan>
+X-Enigmail-Version: 1.4.4
+X-Original-Sender: eal@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of eal@fsfe.org) smtp.mail=eal@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 08/28/2012 02:51 PM, Hugo Roy wrote:
+> Le jeudi 23 ao=FBt 2012 =E0 09:49 -0700, Sebasti=E1n Waisbrot a =E9crit :
+>> http://www.whatsapp.com/legal/
+>>=20
+>>> by submitting the Status Submissions to WhatsApp, you hereby
+>>> grant WhatsApp a worldwide, non-exclusive, royalty-free,
+>>> sublicenseable and transferable license to use, reproduce,
+>>> distribute, prepare derivative works of, display, and perform
+>>> the Status Submissions in connection with the WhatsApp Service
+>>> and WhatsApp's (and its successor's) business, including
+>>> without limitation for promoting and redistributing part or all
+>>>  of the WhatsApp Service (and derivative works thereof) in any
+>>> media formats and through any media channels
+>>=20
+>>=20
+>> Status Submissions are not a main feature of WhatsApp so it's not
+>> too relevant.
+>>=20
+>=20
+> Can you describe exactly why that wouldn't be too relevant? If
+> that's not relevant for the service, then they don't need a
+> sublicensable and transferable license on all post Status
+> Submissions.
+I think his point is that status submissions are a "sub-feature" of
+WhatsApp. this means that the main service of whatsapp is to provide a
+IM-like service between two people. In addition, you are able to write
+status submissions that are readable by everyone if they look at your
+account. (very similar to the status messages of most instant
+messaging clients)
+there is no need to send any status message, never, and you can use
+the full system as anybody else. i think that is why he states "it's
+not too relevant"?
+
+>=20
+> Are Status Submissions kept for a long time or is it temporary
+> messages that they delete after some days and when do they end the
+> copyright license?
+Not sure about this, but if they keep the right to use it, I think
+they have to store it, no?
+
+
+
+- --=20
+Erik Albers | Free Software Foundation Europe (FSFE)
+Campaigning & Community
+info/contact: http://fsfe.org/about/albers/albers.en.html
+
+		Free as in Freedom!
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Mozilla - http://www.enigmail.net/
+
+iQIcBAEBAgAGBQJQPgl2AAoJEBho/C6GOdyBx1oP/icpGM7Cfi46hBQ0fn2nt457
+yjSg9+vBYLQ0CfH3iVkZim9rOn8jr3d77D6ivx+Y1xnv99t0TVNMmCv+HA3j2/al
+XGuPRqxm3/QB+OXvHgclr27wtBYTx60Q2677YCWxwUobPnRiF8njKACewWYTtpcr
+oGcN8XMPRfREIM+BQ5Zixfi02FhRQKCTODoCuTeVtcqAy+b/U2CXsE7P6PC1tN6H
+LXbWLVMlWj7+jgOPA/RbTkwbUP8r1dE/q7kRMUsXn8AYj84WJws/xdrC3Yor9HFo
+H4A/Tb7+0i/5Ha5mQLjv2YLFN4CkA0DBUEJYYK48FpWQYHIRdzbhrH7MTfxNEcab
+T5sTw/o76fIXj/MjSmQGxBisvWfrZ0jLAulG/DzxvWANy1oMTiGkX/Sv1MevNjA7
+yagqB6OinVEzlfcUrL2MLjmiuqUQ9LXcmg1MkfKVx0ADb04EYoVrWoL1Et4oHcMT
+6+HbaHZvirBcRbB9jebu761OJeKUpHdcMMWwwPkH/4UcIrF6xqqbLJA2Rok0qv+Z
+25t8yq5LSmKihU2Vtv7V8AdDvk07GsLAEQw5XW+K/qv3C/yxgFbJXlYt1QkgycB/
+hLEMBys6X7szLxve0xhrgw3p1EOlRgOKNdqn4Za+fDsrULFpD0ijumufNlRfAc36
+lhlh56mtNGDFVfAzrgIW
+=3DSORf
+-----END PGP SIGNATURE-----
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

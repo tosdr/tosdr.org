@@ -1,0 +1,98 @@
+Return-Path: <tosdr+bncBDSIFUHK4ALRBLVDVWTAKGQE757VYPA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id C0CFD40325
+	for <anything@michielbdejong.com>; Fri, 30 Jan 2015 10:41:08 +0100 (CET)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id BCE181164AD
+	for <anything@michielbdejong.com>; Fri, 30 Jan 2015 10:41:08 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id MzQR7hCs4EOd for <anything@michielbdejong.com>;
+	Fri, 30 Jan 2015 10:41:07 +0100 (CET)
+Received: from mail-ie0-x239.google.com (mail-ie0-x239.google.com [IPv6:2607:f8b0:4001:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2EA0C116462
+	for <michiel@michielbdejong.com>; Fri, 30 Jan 2015 10:41:04 +0100 (CET)
+Received: by mail-ie0-f185.google.com with SMTP id x19sf15660859ier.2
+        for <michiel@michielbdejong.com>; Fri, 30 Jan 2015 01:41:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=y72KSusXF+thj2w/AHqpD8WKDw973xOQ6TfVDQPSHBw=;
+        b=oB/crZyVILNCotE+wp5DnscW4sGFCZ27dxFXHeQPzAggvKTut80J1LPk269/F3Xap1
+         HlvCbKsbzhvaGAi+l36PUd+H6IKB0Bi6x/f0uzjfzT7LRAPeehZE/ktDn/0lW36LG3nG
+         jymUaNyNg8u3DldH71/+ZQ1VeJdA2l5gMyaHAQbFYx7SBHSQZnGLlnV3G6WjA0U/fwjC
+         6P/RW/KwxnLOGqH96naw7QMJb5gcIxTui/1bwlwKhCRjjre3wTMz8L223cIBKXZzzKVL
+         78kS25JJQ2J6GTJKC7mESEgGxm8L335ATa/xFwy2u962GQ3SecY9CRINeI3fNPN7CIGH
+         aNEA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=y72KSusXF+thj2w/AHqpD8WKDw973xOQ6TfVDQPSHBw=;
+        b=QqowuRkUDcKtuO50FGf+bRvPzriiVq+a4FwvGfeb7ygOYzLAc32QgX5Y2qxnpB5TTI
+         w3TA3/rQTvi9Kjr9JsdWRFn+t/LKvKjxQ5P/ucHQ9Q7uLy7Ocldwil7r78JQ/zeqosj4
+         872NdbEo+r4d8HcZ1lIGGcgIlsv/nPFHZ7KUT23KTb3iE0pVoKPzcQyZ3q9N8gm+9G8Y
+         jisQDs934y+2H7SOY/CXrOytrDFnVCjfAT5sTDb9Mojv1LQseOyfVzfAcv/ulyqiAG9q
+         QrRC7815OD1gJP7yQwV1+u95p2pAc2jQUBFfF2pej7c2xJP8S1BLDY52Clvb/xbikuTr
+         GGfg==
+X-Received: by 10.50.127.232 with SMTP id nj8mr23298igb.0.1422610863322;
+        Fri, 30 Jan 2015 01:41:03 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.124.193 with SMTP id mk1ls464543igb.1.canary; Fri, 30 Jan
+ 2015 01:41:02 -0800 (PST)
+X-Received: by 10.50.78.133 with SMTP id b5mr22858igx.4.1422610862160;
+        Fri, 30 Jan 2015 01:41:02 -0800 (PST)
+Date: Fri, 30 Jan 2015 01:41:01 -0800 (PST)
+From: treedoof@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <ea5782e1-15f5-468d-a59e-26943cad577c@googlegroups.com>
+In-Reply-To: <70ba46ac-a023-43aa-af73-2cb2a9a6482d@googlegroups.com>
+References: <70ba46ac-a023-43aa-af73-2cb2a9a6482d@googlegroups.com>
+Subject: [tosdr:3405] Re: [Good] DuckDuckGo doesn't track you
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_572_1581929973.1422610861188"
+X-Original-Sender: treedoof@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_572_1581929973.1422610861188
+Content-Type: text/plain; charset=UTF-8
+
+So I just looked this website up - and went to see if they have plugins for browsers. I use Opera personally and their required permissions state:
+
+Permissions
+This extension will access your data on some websites.
+This extension will access your tabs and browsing activity.
+
+https://addons.opera.com/en/extensions/details/duckduckgo-for-opera-2/?display=en
+
+Sounds sussish. But I also am not savvy enough to actually look at how the plugin works to verify how intrusive or non-intrusive those catch all statements are.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_572_1581929973.1422610861188--

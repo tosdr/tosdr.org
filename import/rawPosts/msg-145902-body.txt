@@ -1,0 +1,247 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.147.213 with SMTP id v204csp1185992vkd;
+        Mon, 25 Jul 2016 08:10:23 -0700 (PDT)
+X-Received: by 10.107.34.212 with SMTP id i203mr23773577ioi.8.1469459423030;
+        Mon, 25 Jul 2016 08:10:23 -0700 (PDT)
+Return-Path: <tosdr+bncBAABBVOX3C6AKGQEAIU6ISY@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id o68si21339722ioo.208.2016.07.25.08.10.22
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 25 Jul 2016 08:10:23 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbaabbvox3c6akgqeaiu6isy@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbaabbvox3c6akgqeaiu6isy@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBAABBVOX3C6AKGQEAIU6ISY@googlegroups.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 86115FB8C6
+	for <michiel@unhosted.org>; Mon, 25 Jul 2016 17:10:19 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 766E61780CA
+	for <michiel@unhosted.org>; Mon, 25 Jul 2016 17:10:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id BaGER9Gz7UJ7 for <michiel@unhosted.org>;
+	Mon, 25 Jul 2016 17:10:17 +0200 (CEST)
+Received: from mail-vk0-x238.google.com (mail-vk0-x238.google.com [IPv6:2607:f8b0:400c:c05::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id AE5BF178077
+	for <michiel@michielbdejong.com>; Mon, 25 Jul 2016 17:10:15 +0200 (CEST)
+Received: by mail-vk0-x238.google.com with SMTP id s189sf43974992vkh.1
+        for <michiel@michielbdejong.com>; Mon, 25 Jul 2016 08:10:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:from:to:subject:thread-topic:thread-index:date:message-id
+         :accept-language:content-language:spamdiagnosticoutput
+         :spamdiagnosticmetadata:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=uzJk6ZF6Xnf8aU/JP0yRLTRL4U5jaagZJqPCKnWbNgc=;
+        b=dEzmzDLAZTWA48TWKA18MM0QbGk1nIGF9RJOwlMcE/eBPVZ7tLRWdw7sIyltVW/0my
+         5MjyuBtAox6JTWDSzd4atIy97nHRsBlGeszpXmpnHUxHMytuXWcFpg+JREJd4j1dFKdB
+         Y7+VH2dGP37TpAKLc59TLRthBJQglvBPc/umv9C7BI1841tXm4xldA7kcfPod6YPO156
+         F9C70yZZ27z7SuwA0uWGxQ4W4n62LsPTrSm7P747+3hq+ClLIoWD+qzX6lxcm61ja03P
+         8DKdDMG6+LKVITX21B8FN+k3vUR8QnTW/E6rJWUp/JR5VCRhGVrk0Rc74bkwOtO4Bty0
+         LFYg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:from:to:subject:thread-topic:thread-index
+         :date:message-id:accept-language:content-language
+         :spamdiagnosticoutput:spamdiagnosticmetadata:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=uzJk6ZF6Xnf8aU/JP0yRLTRL4U5jaagZJqPCKnWbNgc=;
+        b=bgVjGDDrxQTv8asZTx6sqNxHBDKk/MkuFIdqv5lNdLlf/+FpUtoZ0Kse3oqVV6O+7o
+         EIYtOqAO99mBkHAEtutP6YAEQX6DJdxfi95m9CCTm9KOx4TSxJrq4CIN6QmJQmOFgAI/
+         S3zpLMmjc2DVevCmRjskw7MMiyZAJhuSUzel2j0zZFHZu9jQI0CAH0A1pfxkQxi6KCgf
+         cujPsCsJ+uNiralGkb0Mx5MnemOpgDsLgd+MaThcqfMNO42h/6bqp7OEozVCnziuXtKD
+         1+oCf8CmFo5PXuBijDvD5DVe0moXj/5u5DvbRTZmT2DgTlEWcoEeUNzDM5VQjSWgxlk8
+         NsqQ==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkoouutRlyjyrMLOt01HA5dtUNtJlWmUf4EMt94/6DBL4uYMbR1I7oyGo/ffVreRgSvCQ==
+X-Received: by 10.36.89.10 with SMTP id p10mr516083itb.4.1469459414235;
+        Mon, 25 Jul 2016 08:10:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.19.150 with SMTP id 22ls3497944iot.17.gmail; Mon, 25 Jul
+ 2016 08:10:12 -0700 (PDT)
+X-Received: by 10.107.144.86 with SMTP id s83mr15818209iod.26.1469459412863;
+        Mon, 25 Jul 2016 08:10:12 -0700 (PDT)
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com (mail-cys01nam02on0102.outbound.protection.outlook.com. [104.47.37.102])
+        by gmr-mx.google.com with ESMTPS id o123si1384294ith.3.2016.07.25.08.10.12
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 25 Jul 2016 08:10:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bkweusijana@cascadia.edu designates 104.47.37.102 as permitted sender) client-ip=104.47.37.102;
+Received: from BL2PR05MB2177.namprd05.prod.outlook.com (10.167.98.137) by
+ BL2PR05MB2179.namprd05.prod.outlook.com (10.167.98.139) with Microsoft SMTP
+ Server (TLS) id 15.1.523.12; Mon, 25 Jul 2016 15:10:09 +0000
+Received: from BL2PR05MB2177.namprd05.prod.outlook.com ([10.167.98.137]) by
+ BL2PR05MB2177.namprd05.prod.outlook.com ([10.167.98.137]) with mapi id
+ 15.01.0539.021; Mon, 25 Jul 2016 15:10:09 +0000
+From: "Weusijana, Baba Kofi" <bkweusijana@cascadia.edu>
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+Subject: [tosdr:3921] Changes to Microsoft Services Agreement
+Thread-Topic: Changes to Microsoft Services Agreement
+Thread-Index: AQHR5oahaqGrQLQBtEeFkgBQCB/3RQ==
+Date: Mon, 25 Jul 2016 15:10:08 +0000
+Message-ID: <7E651CAB-2021-4DE6-8158-740BDD67D124@cascadia.edu>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-exchange-messagesentrepresentingtype: 1
+x-originating-ip: [50.159.64.104]
+x-ms-office365-filtering-correlation-id: dd73a042-5e72-44f2-dd83-08d3b49dc4da
+x-microsoft-exchange-diagnostics: 1;BL2PR05MB2179;6:h1FcmUKWH0/Irp/vR4x3B3Xb3HcHAxwOmnADux8JfmhYpr3hLeqIz+Ba0WGWvCAjNrZNwS2bKqrUEYNFByFPce1+ffCObl0NwI/hmxtTY40mmMzToH4hHJz666ZfiWenuwRl0KLR+5+FlfV4una7hjG99X3NOfRhS+3lnbors7gFseoeW9Em8XfDW6XFHzb6xXmFXzf3fUuEjen2GCIZSO++nvJoZH8cnDuuGcWQrsI3NvP8cttBHckMbzRRATMDNuoG9WrZ6rr2jlWA5TkicZ06SaE18mplVsqlJcFdOyM=;5:WPEyNdGy8XzLna9ZIlGNGIWx+b2R5kti/vmhXdlzigT6DSIv1tVWbi9+ZFJvUBQMCUiXz36KA33yVCsK5MEQYX0j1teutiDBasVkgDuAXdJDXkuziPConuYKx1RR9r84G8LIGIobvSFKJQqe2jK5kw==;24:NBS6S+DLloPEBDeS7YaTeXTq8G0gWoi2uHy4MZszPsVWdezckLsBFqv28zcyiZfRBXWCh8VDAsX2OVT8Znb7UsNaATQpTFyYDP5GSMqvrok=;7:gtaX59F7trkqkvWyC7uFhtmBWgQJwFeSRiQ+I6aYpZyaje/7u5akIb8FO6jBY6JlyZa07td4DegtEux/G7ljsOifmKPahHy8lVatJOtqt/LzbB+S/TJXg1Zl2hO3p9OA2G8T2rIY4vEqfqBdVOQCv1D8Nw/Z6u0DxXdJouIQv6z+wWGlQbtM31IxZjZ9TPAtZXPKb2GyrqEUYKoye41oxVNwa1lgZgfM/7tBc4to8ONt1JAPYuTvfoYCYNn3yTvb
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:;SRVR:BL2PR05MB2179;
+x-microsoft-antispam-prvs: <BL2PR05MB21797321FD5AA60FD1D1C458CF0D0@BL2PR05MB2179.namprd05.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(43050042349365)(128460861657000)(81160342030619);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(601004)(2401047)(5005006)(8121501046)(10201501046)(3002001);SRVR:BL2PR05MB2179;BCL:0;PCL:0;RULEID:;SRVR:BL2PR05MB2179;
+x-forefront-prvs: 0014E2CF50
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(7916002)(3905003)(189002)(199003)(2351001)(77096005)(99286002)(229853001)(75432002)(82746002)(83716003)(8936002)(66066001)(81166006)(2900100001)(10400500002)(5640700001)(122556002)(19617315012)(81156014)(450100001)(15975445007)(19580395003)(89122001)(87936001)(1730700003)(90282001)(5002640100001)(2906002)(50986999)(54356999)(3280700002)(101416001)(15395725005)(110136002)(105586002)(3660700001)(7736002)(36756003)(88552002)(33656002)(7906003)(2501003)(16236675004)(189998001)(86362001)(586003)(11100500001)(106356001)(6116002)(107886002)(102836003)(106116001)(3846002)(92566002)(8676002)(97736004)(7846002)(68736007)(104396002);DIR:OUT;SFP:1102;SCL:1;SRVR:BL2PR05MB2179;H:BL2PR05MB2177.namprd05.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;MX:1;A:0;LANG:en;
+received-spf: None (protection.outlook.com: cascadia.edu does not designate
+ permitted sender hosts)
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_7E651CAB20214DE68158740BDD67D124cascadiaedu_"
+MIME-Version: 1.0
+X-OriginatorOrg: cascadia.edu
+X-MS-Exchange-CrossTenant-originalarrivaltime: 25 Jul 2016 15:10:08.8749
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 2505efd9-9f5d-4941-865c-03c9b1b88613
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL2PR05MB2179
+X-Original-Sender: bkweusijana@cascadia.edu
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@cascadiacc.onmicrosoft.com;       spf=pass (google.com: domain of
+ bkweusijana@cascadia.edu designates 104.47.37.102 as permitted sender) smtp.mailfrom=bkweusijana@cascadia.edu
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--_000_7E651CAB20214DE68158740BDD67D124cascadiaedu_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+https://www.microsoft.com/en-us/servicesagreement/Updates.aspx
+
+Best regards,
+Dr. Weusijana
+https://www.linkedin.com/in/babakofi
+
+Email communications to and from Cascadia faculty and staff are generally s=
+ubject to public disclosure under the Washington Public Records Act, RCW 42=
+.56.  However, this communication may contain confidential information prot=
+ected by other laws.  If you are not the intended recipient, please delete =
+this email and notify the sender.
+To contact Dr. Weusijana securely please use PGP.<http://edutek.net/Kofi/co=
+ntact.html>
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/7E651CAB-2021-4DE6-8158-740BDD67D124%40cascadia.edu.
+For more options, visit https://groups.google.com/d/optout.
+
+--_000_7E651CAB20214DE68158740BDD67D124cascadiaedu_
+Content-Type: text/html; charset=UTF-8
+Content-ID: <7E4FE071FF1402429FBAB42507CFFC5C@namprd05.prod.outlook.com>
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-lin=
+e-break: after-white-space;" class=3D"">
+<a href=3D"https://www.microsoft.com/en-us/servicesagreement/Updates.aspx" =
+class=3D"">https://www.microsoft.com/en-us/servicesagreement/Updates.aspx</=
+a>
+<div class=3D""><br class=3D"">
+<div class=3D"">
+<div style=3D"color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; t=
+ext-align: start; text-indent: 0px; text-transform: none; white-space: norm=
+al; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-w=
+rap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-=
+space;" class=3D"">
+<div style=3D"color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; t=
+ext-align: start; text-indent: 0px; text-transform: none; white-space: norm=
+al; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-w=
+rap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-=
+space;" class=3D"">
+<div style=3D"color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; t=
+ext-align: start; text-indent: 0px; text-transform: none; white-space: norm=
+al; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-w=
+rap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-=
+space;" class=3D"">
+Best regards,<br class=3D"">
+Dr. Weusijana<br class=3D"">
+<a href=3D"https://www.linkedin.com/in/babakofi" class=3D"">https://www.lin=
+kedin.com/in/babakofi</a><br class=3D"">
+<br class=3D"">
+Email communications to and from Cascadia faculty and staff are generally&n=
+bsp;subject to public disclosure under the Washington Public Records Act, R=
+CW&nbsp;42.56. &nbsp;However, this communication may contain confidential i=
+nformation&nbsp;protected by other laws. &nbsp;If you are
+ not the intended recipient, please&nbsp;delete this email and notify the s=
+ender.<br class=3D"">
+<a href=3D"http://edutek.net/Kofi/contact.html" class=3D"">To contact Dr. W=
+eusijana securely please use PGP.</a><br class=3D"">
+</div>
+</div>
+</div>
+</div>
+<br class=3D"">
+</div>
+</body>
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/7E651CAB-2021-4DE6-8158-740BDD67D124%40cascadia.edu?utm_me=
+dium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tosdr/7=
+E651CAB-2021-4DE6-8158-740BDD67D124%40cascadia.edu</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--_000_7E651CAB20214DE68158740BDD67D124cascadiaedu_--

@@ -1,0 +1,208 @@
+Return-Path: <tosdr+bncBDEIX2FW5IIBBGXZZ6RAKGQEYVPIFPY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id BC73240F5A
+	for <anything@michielbdejong.com>; Fri, 31 Oct 2014 22:18:23 +0100 (CET)
+Received: from mfilter40-d.gandi.net (mfilter40-d.gandi.net [217.70.178.171])
+	by spool.mail.gandi.net (Postfix) with ESMTP id BA1D0142292
+	for <anything@michielbdejong.com>; Fri, 31 Oct 2014 22:18:23 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter40-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter40-d.gandi.net (mfilter40-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id x5AKFPyUCiId for <anything@michielbdejong.com>;
+	Fri, 31 Oct 2014 22:18:22 +0100 (CET)
+Received: from mail-wg0-x238.google.com (mail-wg0-x238.google.com [IPv6:2a00:1450:400c:c00::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4797414225E
+	for <michiel@michielbdejong.com>; Fri, 31 Oct 2014 22:18:19 +0100 (CET)
+Received: by mail-wg0-f56.google.com with SMTP id b13sf512474wgh.11
+        for <michiel@michielbdejong.com>; Fri, 31 Oct 2014 14:18:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=5HByC5HGoXtn620xwi5jMg0vxUsOCFF6TvChxW8o9j0=;
+        b=pRBg0Lj8tKUuPG6vQIDizhu8q9kLNje4qpccDGD2jf/lypYY/rgfRX66MiHK8InUIP
+         TZJpFIrUdG1WfHndKnT1KkyxOtFfIivpU7NwyUl0bY/cSUbGr5tGoHTDHQDmFosTpHBR
+         hoFasWKiBWSAGW8i+K2oYJvvwf1rmgoKK+FSt3n0bzZCJlgBfa5WQINnmu7Hsxtfa1OY
+         5Ub00N8XfSc/SkIi/PtoNem/osA5oBQmJMhZ3nU8ZeKfQXmI5euDIYc+7O4eZ/rC++AT
+         5XtDTSZLHn7OV40uVDBlXhquTELbIo7GHkoFyGCdGu0bvijiNWsevp2Qi+KoqWp2tNH3
+         N5bw==
+X-Received: by 10.180.10.36 with SMTP id f4mr31228wib.6.1414790299004;
+        Fri, 31 Oct 2014 14:18:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.21.129 with SMTP id v1ls189671wie.38.gmail; Fri, 31 Oct
+ 2014 14:18:18 -0700 (PDT)
+X-Received: by 10.194.178.163 with SMTP id cz3mr4418871wjc.1.1414790298227;
+        Fri, 31 Oct 2014 14:18:18 -0700 (PDT)
+Received: from mail-la0-x232.google.com (mail-la0-x232.google.com. [2a00:1450:4010:c03::232])
+        by gmr-mx.google.com with ESMTPS id sg7si683486lbb.1.2014.10.31.14.18.18
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 31 Oct 2014 14:18:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of rlfrischer@gmail.com designates 2a00:1450:4010:c03::232 as permitted sender) client-ip=2a00:1450:4010:c03::232;
+Received: by mail-la0-f50.google.com with SMTP id hz20so4437079lab.9
+        for <tosdr@googlegroups.com>; Fri, 31 Oct 2014 14:18:18 -0700 (PDT)
+X-Received: by 10.153.11.133 with SMTP id ei5mr29489628lad.75.1414790298079;
+ Fri, 31 Oct 2014 14:18:18 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.55.165 with HTTP; Fri, 31 Oct 2014 14:17:57 -0700 (PDT)
+In-Reply-To: <20141027091644.GA1481@xps>
+References: <CABXXwQZLcq2B=B4PmwWjsLs3i+LuepTn8x7OqV6JA_dBKavqTA@mail.gmail.com>
+ <20141027091644.GA1481@xps>
+From: Richard Frischer <rlfrischer@gmail.com>
+Date: Fri, 31 Oct 2014 14:17:57 -0700
+Message-ID: <CABXXwQbUJaoaLdn0xfLHaruoRGUYrKT+3SpQE=B49hEb0MgK8w@mail.gmail.com>
+Subject: Re: [tosdr:3305] Hulu
+To: Richard Frischer <rlfrischer@gmail.com>, tosdr@googlegroups.com
+X-Original-Sender: RLFrischer@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of rlfrischer@gmail.com designates 2a00:1450:4010:c03::232
+ as permitted sender) smtp.mail=rlfrischer@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; boundary=001a113471202618460506be89e1
+
+--001a113471202618460506be89e1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I tried using the online form just now. It would not let me submit, and I
+kept getting the message  "Something went wrong saving your point, did you
+fill in all the fields?" but I'm certain I filled in all fields.
+
+Thank you
+
+Richard
+
+On Mon, Oct 27, 2014 at 2:16 AM, Hugo Roy <hugo@tosdr.org> wrote:
+
+> =E2=86=AA 2014-10-27 Mon 00:22, Richard Frischer <rlfrischer@gmail.com>:
+> > Link: http://www.hulu.com/terms
+> >
+> > Bad, but a little good: Hulu has a binding arbitration clause that waiv=
+es
+> > class actions. But, they will pay all arbitration fees except AAA filin=
+g
+> > fee, and they will pay a prevailing consumer's attorneys fees. Hulu wil=
+l
+> > not collect attorneys fees from the plaintiff if Hulu prevails.
+> >
+> > Nearly everything else in their terms is pretty neutral.
+> >
+> > Thank you for the service you provide!
+>
+> Hello Richard,
+>
+> Thank you for your contribution. Can you try to submit it through
+> our web interface? We are still testing it at the moment, your
+> feedback is welcome:
+> https://tosdr.org/submit-point.html
+>
+> Best regards,
+>
+> --
+> Hugo Roy
+> Project Lead, Terms of Service; Didn't Read <www.tosdr.org>
+>
+> Please use cryptography for email: see
+> https://emailselfdefense.fsf.org/en/
+> Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email : voir
+> https://emailselfdefense.fsf.org/fr/
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a113471202618460506be89e1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div>Hi,<br><br>I tried using the online form just no=
+w. It would not let me submit, and I kept getting the message=C2=A0 &quot;S=
+omething went wrong saving your point, did you fill in all the fields?&quot=
+; but I&#39;m certain I filled in all fields.<br><br></div>Thank you<br><br=
+></div>Richard<br><div><div><div class=3D"gmail_extra"><br><div class=3D"gm=
+ail_quote">On Mon, Oct 27, 2014 at 2:16 AM, Hugo Roy <span dir=3D"ltr">&lt;=
+<a href=3D"mailto:hugo@tosdr.org" target=3D"_blank">hugo@tosdr.org</a>&gt;<=
+/span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex">=E2=86=AA 2014-10-27 Mon 00=
+:22, Richard Frischer &lt;<a href=3D"mailto:rlfrischer@gmail.com">rlfrische=
+r@gmail.com</a>&gt;:<br>
+<div><div class=3D"h5">&gt; Link: <a href=3D"http://www.hulu.com/terms" tar=
+get=3D"_blank">http://www.hulu.com/terms</a><br>
+&gt;<br>
+&gt; Bad, but a little good: Hulu has a binding arbitration clause that wai=
+ves<br>
+&gt; class actions. But, they will pay all arbitration fees except AAA fili=
+ng<br>
+&gt; fee, and they will pay a prevailing consumer&#39;s attorneys fees. Hul=
+u will<br>
+&gt; not collect attorneys fees from the plaintiff if Hulu prevails.<br>
+&gt;<br>
+&gt; Nearly everything else in their terms is pretty neutral.<br>
+&gt;<br>
+&gt; Thank you for the service you provide!<br>
+<br>
+</div></div>Hello Richard,<br>
+<br>
+Thank you for your contribution. Can you try to submit it through<br>
+our web interface? We are still testing it at the moment, your<br>
+feedback is welcome:<br>
+<a href=3D"https://tosdr.org/submit-point.html" target=3D"_blank">https://t=
+osdr.org/submit-point.html</a><br>
+<br>
+Best regards,<br>
+<span class=3D"HOEnZb"><font color=3D"#888888"><br>
+--<br>
+Hugo Roy<br>
+Project Lead, Terms of Service; Didn&#39;t Read &lt;<a href=3D"http://www.t=
+osdr.org" target=3D"_blank">www.tosdr.org</a>&gt;<br>
+<br>
+Please use cryptography for email: see <a href=3D"https://emailselfdefense.=
+fsf.org/en/" target=3D"_blank">https://emailselfdefense.fsf.org/en/</a><br>
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+<a href=3D"https://emailselfdefense.fsf.org/fr/" target=3D"_blank">https://=
+emailselfdefense.fsf.org/fr/</a><br>
+</font></span></blockquote></div><br></div></div></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a113471202618460506be89e1--

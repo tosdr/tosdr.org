@@ -1,0 +1,150 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp804523iou;
+        Sat, 29 Aug 2015 23:18:25 -0700 (PDT)
+X-Received: by 10.194.2.9 with SMTP id 9mr19324546wjq.95.1440915505657;
+        Sat, 29 Aug 2015 23:18:25 -0700 (PDT)
+Return-Path: <tosdr+bncBDH6LUNIREARBKGARKXQKGQEP733CKY@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id ej4si20421255wjd.145.2015.08.29.23.18.24
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 29 Aug 2015 23:18:25 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDH6LUNIREARBKGARKXQKGQEP733CKY@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDH6LUNIREARBKGARKXQKGQEP733CKY@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBDH6LUNIREARBKGARKXQKGQEP733CKY@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id C9237FB86F
+	for <michiel@unhosted.org>; Sun, 30 Aug 2015 08:18:24 +0200 (CEST)
+Received: from mfilter28-d.gandi.net (mfilter28-d.gandi.net [217.70.178.159])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B657C14220C
+	for <michiel@unhosted.org>; Sun, 30 Aug 2015 08:18:24 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter28-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter28-d.gandi.net (mfilter28-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id JqPKPZm6ArV8 for <michiel@unhosted.org>;
+	Sun, 30 Aug 2015 08:18:21 +0200 (CEST)
+Received: from mail-oi0-x239.google.com (mail-oi0-x239.google.com [IPv6:2607:f8b0:4003:c06::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 394E114221E
+	for <michiel@michielbdejong.com>; Sun, 30 Aug 2015 08:18:18 +0200 (CEST)
+Received: by oigm66 with SMTP id m66sf20554078oig.0
+        for <michiel@michielbdejong.com>; Sat, 29 Aug 2015 23:18:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=GJoXErrxv8AzN6A7cHpRXAO4tC4cSLj7MOUxgTnjJeo=;
+        b=rvrzZ7j8ZAjF8DHF2+YtT5WqewrvQSqdtWaps685LsjKpyAuKYH5ds5M/Mopji71N5
+         r/ASCNlwwKfvIh1MhKM6bFOg3RNm4lZN0dr3dpv7jH65HFgWL6Uh7ezunX6b0VGS0N0M
+         MsDgfxoLu82VMuVFHvfWd60+eV2JL+deZYX4yRsfNWCNvkhFjD2+VtvpV3NFX7i7Yh8r
+         6XePOm6SnBho0PupG3/LG9jy+5ejIUIhiHkHsy8zzePzm+mBw2D2YhzJlBImflexyiGp
+         I09OvgxKrSVFQc79byJtlvTc6LvwQr2OTTuiDPEhwXXrSa4Q8tQXXOl8tzDgTlAPID7L
+         7xmw==
+X-Received: by 10.50.66.144 with SMTP id f16mr19412igt.14.1440915497257;
+        Sat, 29 Aug 2015 23:18:17 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.132.221 with SMTP id o90ls134404ioi.64.gmail; Sat, 29 Aug
+ 2015 23:18:16 -0700 (PDT)
+X-Received: by 10.66.236.41 with SMTP id ur9mr19661826pac.12.1440915496700;
+        Sat, 29 Aug 2015 23:18:16 -0700 (PDT)
+Received: from mail-yk0-x22e.google.com (mail-yk0-x22e.google.com. [2607:f8b0:4002:c07::22e])
+        by gmr-mx.google.com with ESMTPS id d68si1921695ywe.5.2015.08.29.23.18.16
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 29 Aug 2015 23:18:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jkc.clemens@gmail.com designates 2607:f8b0:4002:c07::22e as permitted sender) client-ip=2607:f8b0:4002:c07::22e;
+Received: by mail-yk0-x22e.google.com with SMTP id u129so19455272ykb.2
+        for <tosdr@googlegroups.com>; Sat, 29 Aug 2015 23:18:16 -0700 (PDT)
+X-Received: by 10.170.95.212 with SMTP id m203mr16023032yka.54.1440915496475;
+        Sat, 29 Aug 2015 23:18:16 -0700 (PDT)
+Received: from James.local ([2602:30a:2cbe:58c0:5546:2bd3:53ac:3404])
+        by smtp.gmail.com with ESMTPSA id f126sm3022538ywe.47.2015.08.29.23.18.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 29 Aug 2015 23:18:15 -0700 (PDT)
+Date: Sun, 30 Aug 2015 02:18:14 -0400
+From: Kyle Clemens <jkc.clemens@gmail.com>
+To: tosdr@googlegroups.com
+Message-ID: <etPan.55e2a026.5d7fe225.20c@James.local>
+Subject: [tosdr:3609] Twitch
+X-Mailer: Airmail Beta (321)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="55e2a026_5ddc0efc_20c"
+X-Original-Sender: jkc.clemens@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of jkc.clemens@gmail.com designates 2607:f8b0:4002:c07::22e
+ as permitted sender) smtp.mailfrom=jkc.clemens@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--55e2a026_5ddc0efc_20c
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+
+http://www.twitch.tv/user/legal?page=terms_of_service
+
+Thanks a bazillion.
+
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--55e2a026_5ddc0efc_20c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html><head><style>body{font-family:Helvetica,Arial;font-size:13px}</style>=
+</head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -web=
+kit-line-break: after-white-space;"><div id=3D"bloop_customfont" style=3D"f=
+ont-family:Helvetica,Arial;font-size:13px; color: rgba(0,0,0,1.0); margin: =
+0px; line-height: auto;"><a href=3D"http://www.twitch.tv/user/legal?page=3D=
+terms_of_service">http://www.twitch.tv/user/legal?page=3Dterms_of_service</=
+a></div><div id=3D"bloop_customfont" style=3D"font-family:Helvetica,Arial;f=
+ont-size:13px; color: rgba(0,0,0,1.0); margin: 0px; line-height: auto;"><br=
+></div><div id=3D"bloop_customfont" style=3D"font-family:Helvetica,Arial;fo=
+nt-size:13px; color: rgba(0,0,0,1.0); margin: 0px; line-height: auto;">Than=
+ks a bazillion.</div><br><div id=3D"bloop_sign_1440915477536154880" class=
+=3D"bloop_sign"><div style=3D"font-family:helvetica,arial;font-size:13px"><=
+br></div></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--55e2a026_5ddc0efc_20c--
+

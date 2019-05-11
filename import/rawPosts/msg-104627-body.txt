@@ -1,0 +1,358 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp244946vec;
+        Sat, 8 Dec 2012 21:34:46 -0800 (PST)
+Received: by 10.100.76.20 with SMTP id y20mr4357644ana.75.1355031286269;
+        Sat, 08 Dec 2012 21:34:46 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBB5GFSCDAKGQEAJ7JA6I@googlegroups.com>
+Received: from mail-yh0-f57.google.com (mail-yh0-f57.google.com [209.85.213.57])
+        by mx.google.com with ESMTPS id e5si8549553anb.102.2012.12.08.21.34.45
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 08 Dec 2012 21:34:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBB5GFSCDAKGQEAJ7JA6I@googlegroups.com designates 209.85.213.57 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBB5GFSCDAKGQEAJ7JA6I@googlegroups.com designates 209.85.213.57 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBB5GFSCDAKGQEAJ7JA6I@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-yh0-f57.google.com with SMTP id j63sf1185774yhj.22
+        for <michiel@unhosted.org>; Sat, 08 Dec 2012 21:34:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n0rbIYP9bB6hl2Cb1nxTQGvd056F+EWBPnhHmjxA6/k=;
+        b=PTpKARQEVr8xAw4Z+ZFhL1RMN64BZzg/fYsIC4etmjxyrFkdERqGWpjQo/JG2opEcQ
+         gt0a0sg+Cz+mRyukQNaiuF8GDe/NqF2fKTwXZ4Ns2g4+G9TmYP4Rqcd6UUMfVbh88XkU
+         pxKNp1VYFnu6bQeEFHJKbuLrAS1rdQkC43cZ7vpYEFuKMhXcR2c8r0QRs5CnwyM4J+J4
+         lWWDMKcYiWY3FPNTx4COxjDeYYyB69zKvNP7RqrxHxG3UnpCcFea9Ajoj9W9POJu/khg
+         XUsTBvEIe1c6vurAqPgMDmYn68CnccEm5wE2DYDni0cilhJJ5CEJMf+DQi9QdV6QZX4c
+         cjVQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=n0rbIYP9bB6hl2Cb1nxTQGvd056F+EWBPnhHmjxA6/k=;
+        b=kf5xj6pL1HanXC8vfMlnCaBQhbSArbAbyi37rNEJJ2Wjg68yfrr90QR8jslyT49/U6
+         SZMwMiu5P2HDI2ec9Gjn/+VM/ZjE6mGW/IZ3NVTkHpK0mVciF0UeAkKkHI148Pog5xaH
+         qNacWqEyneHlfR7ToSxlltGpBADBZOtCXzPFd7RvzZPzbFgj6MDbECgXq8GDfhprGSXF
+         asDpkEgiI+NcmU7ELWp3CUlDXbkKd5HQKfOOGHPXvjTEU8qX7AdbPYgEXQyhP8Rz7fOE
+         q8E1UpVvkEmxz/txh1mGkar3sXGNU0U2sfSWCP3CFeDVjdYfv+ycIlgQd53bHR1SPpNV
+         igig==
+Received: by 10.49.116.34 with SMTP id jt2mr2323982qeb.38.1355031285466;
+        Sat, 08 Dec 2012 21:34:45 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.82.70 with SMTP id g6ls3304220qey.33.gmail; Sat, 08 Dec
+ 2012 21:34:44 -0800 (PST)
+Received: by 10.49.38.72 with SMTP id e8mr2359029qek.42.1355031284048;
+        Sat, 08 Dec 2012 21:34:44 -0800 (PST)
+Date: Sat, 8 Dec 2012 21:34:42 -0800 (PST)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <d38deedc-9d6c-4656-bc45-b56c090c428f@googlegroups.com>
+Subject: [tosdr:1301] PHP validation script
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_15_24658479.1355031282995"
+
+------=_Part_15_24658479.1355031282995
+Content-Type: text/plain; charset=ISO-8859-1
+
+Heya!
+
+  So in the process of writing a tool to import *.json -> CouchDD I found a 
+need to write a validation script, the first working version of which is in my 
+fork on github<https://github.com/mozillamonks/didnotread.org/blob/gh-pages/php/validate_json.php>. 
+It's run from the command line (opening it in a browser would likely not be 
+readable). A few things I'm wondering about...
+
+
+   1. There's a "type" attribute on services, that's almost always set to 
+   "service". Should this always be set to service and a "type": "point" 
+   introduced to points, or is this meant to track a different metric (eg: 
+   eulas) in the future? Right now, to avoid overwriting "type" I'm needing 
+   to make a new "datatype": "service" or "point" for import to Couch. Is that 
+   something that should be in the original *.json files, or is it pointless?
+   2. Why do so many points not have full attributes (especially "service" 
+   attributes)? Is this list automatically generated?
+   3. Is there any technical reason "id"s cannot have the -1 or -2 added to 
+   match file names?
+
+Anyone, feel free to suggest other things this code should check for. If 
+you'd like a hand making all these changes to the *.json files I'd be 
+willing to help. In any case, here is the script's current output with 
+everything except the "Points must have a "service" attribute." since there 
+are so many:
+
+> php validate_json.php
+>
+> RESULTS
+>
+> ../services/facebook-connect.json: Internal "type" is not "service". 
+>> Internal "type" is: software
+>
+> ../services/minecraft.json: Internal "id" does not match filename. 
+>> Internal "id" is: minecrat
+>
+> ../services/mozilla-persona.json: Internal "type" is not "service". 
+>> Internal "type" is: software
+>
+> ../services/status-net.json: Internal "type" is not "service". Internal 
+>> "type" is: software
+>
+> ../services/yahoo.json: Internal "id" does not match filename. Internal 
+>> "id" is: Yahoo
+>
+> ../points/7EArFDi7faE-2.json: Internal "id" does not match filename. 
+>> Internal "id" is: 7EArFDi7faE
+>
+> ../points/DRj4SuDbnP8-1.json: Internal "id" does not match filename. 
+>> Internal "id" is: DRj4SuDbnP8
+>
+> ../points/EpPNnYXBW_w.json: Internal "id" does not match filename. 
+>> Internal "id" is: EpPNnYXBW_wk
+>
+> ../points/L5pl0Vn9lKY-1.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-10.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-11.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-2.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-3.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-4.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-5.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-6.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-7.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-8.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/L5pl0Vn9lKY-9.json: Internal "id" does not match filename. 
+>> Internal "id" is: L5pl0Vn9lKY
+>
+> ../points/Rn8M-KQOcNU.json: Internal "id" does not match filename. 
+>> Internal "id" is: t-INoE6fH982
+>
+> ../points/T98obrJsjJA-2.json: Internal "id" does not match filename. 
+>> Internal "id" is: account-killer-blacklist
+>
+> ../points/_ZNQ9J07ntI.json: Internal "id" does not match filename. 
+>> Internal "id" is: aPGR2C_AkskJ
+>
+> ../points/aXOIDbzevYE-1.json: Internal "id" does not match filename. 
+>> Internal "id" is: VYXGTAktQuAJ
+>
+> ../points/damOWTFaho0-1.json: Internal "id" does not match filename. 
+>> Internal "id" is: damOWTFaho0
+>
+> ../points/pseudos-allowed.json: Internal "id" does not match filename. 
+>> Internal "id" is: x2OybdCClW0
+>
+>
+>> Process finished with exit code 0 at 01:31:15.
+>
+> Execution time: 3,218 ms.
+>
+>
+Hopefully the import_to_couchdb.php script will be along shortly.
+
+/Robin 
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_15_24658479.1355031282995
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Heya!<div><br></div><div>&nbsp; So in the process of writing a tool to impo=
+rt *.json -&gt; CouchDD I found a need to write a validation script, the fi=
+rst working version of which is in <a href=3D"https://github.com/mozillamon=
+ks/didnotread.org/blob/gh-pages/php/validate_json.php">my fork on github</a=
+>. It's run from the command line (opening it in a browser would likely not=
+ be readable). A few things I'm wondering about...</div><div><br></div><div=
+><ol><li><span style=3D"line-height: normal;">There's a "type" attribute on=
+ services, that's almost always set to "service". Should this always be set=
+ to service and a "type": "point" introduced to points, or is this meant to=
+ track a different metric (eg: eulas) in the future?&nbsp;</span><span styl=
+e=3D"line-height: normal;">Right now, to avoid overwriting "type" I'm needi=
+ng to make a new "datatype": "service" or "point" for import to Couch. Is t=
+hat something that should be in the original *.json files, or is it pointle=
+ss?</span></li><li><span style=3D"line-height: normal;">Why do so many poin=
+ts not have full attributes (especially "service" attributes)? Is this list=
+ automatically&nbsp;generated?</span></li><li><span style=3D"line-height: n=
+ormal;">Is there any technical reason "id"s cannot have the -1 or -2 added =
+to match file names?</span></li></ol><div>Anyone, feel free to suggest othe=
+r things this code should check for. If you'd like a hand making all these =
+changes to the *.json files I'd be willing to help. In any case, here is th=
+e script's current output with everything except the "Points must have a "s=
+ervice" attribute." since there are so many:</div></div><div><br></div><blo=
+ckquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-le=
+ft-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: so=
+lid; padding-left: 1ex;"><blockquote class=3D"gmail_quote" style=3D"margin:=
+ 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204=
+, 204); border-left-style: solid; padding-left: 1ex;">&gt; php validate_jso=
+n.php</blockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0p=
+x 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204);=
+ border-left-style: solid; padding-left: 1ex;">RESULTS</blockquote><blockqu=
+ote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-w=
+idth: 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid;=
+ padding-left: 1ex;">../services/facebook-connect.json: Internal "type" is =
+not "service". Internal "type" is: software</blockquote><blockquote class=
+=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px=
+; border-left-color: rgb(204, 204, 204); border-left-style: solid; padding-=
+left: 1ex;">../services/minecraft.json: Internal "id" does not match filena=
+me. Internal "id" is: minecrat</blockquote><blockquote class=3D"gmail_quote=
+" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-c=
+olor: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;">../=
+services/mozilla-persona.json: Internal "type" is not "service". Internal "=
+type" is: software</blockquote><blockquote class=3D"gmail_quote" style=3D"m=
+argin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(20=
+4, 204, 204); border-left-style: solid; padding-left: 1ex;">../services/sta=
+tus-net.json: Internal "type" is not "service". Internal "type" is: softwar=
+e</blockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0p=
+x 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); bor=
+der-left-style: solid; padding-left: 1ex;">../services/yahoo.json: Internal=
+ "id" does not match filename. Internal "id" is: Yahoo</blockquote><blockqu=
+ote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-w=
+idth: 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid;=
+ padding-left: 1ex;">../points/7EArFDi7faE-2.json: Internal "id" does not m=
+atch filename. Internal "id" is: 7EArFDi7faE</blockquote><blockquote class=
+=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px=
+; border-left-color: rgb(204, 204, 204); border-left-style: solid; padding-=
+left: 1ex;">../points/DRj4SuDbnP8-1.json: Internal "id" does not match file=
+name. Internal "id" is: DRj4SuDbnP8</blockquote><blockquote class=3D"gmail_=
+quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-l=
+eft-color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;=
+">../points/EpPNnYXBW_w.json: Internal "id" does not match filename. Intern=
+al "id" is: EpPNnYXBW_wk</blockquote><blockquote class=3D"gmail_quote" styl=
+e=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: =
+rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;">../points=
+/L5pl0Vn9lKY-1.json: Internal "id" does not match filename. Internal "id" i=
+s: L5pl0Vn9lKY</blockquote><blockquote class=3D"gmail_quote" style=3D"margi=
+n: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 2=
+04, 204); border-left-style: solid; padding-left: 1ex;">../points/L5pl0Vn9l=
+KY-10.json: Internal "id" does not match filename. Internal "id" is: L5pl0V=
+n9lKY</blockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0p=
+x 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204);=
+ border-left-style: solid; padding-left: 1ex;">../points/L5pl0Vn9lKY-11.jso=
+n: Internal "id" does not match filename. Internal "id" is: L5pl0Vn9lKY</bl=
+ockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8=
+ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-l=
+eft-style: solid; padding-left: 1ex;">../points/L5pl0Vn9lKY-2.json: Interna=
+l "id" does not match filename. Internal "id" is: L5pl0Vn9lKY</blockquote><=
+blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border=
+-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style:=
+ solid; padding-left: 1ex;">../points/L5pl0Vn9lKY-3.json: Internal "id" doe=
+s not match filename. Internal "id" is: L5pl0Vn9lKY</blockquote><blockquote=
+ class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-widt=
+h: 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid; pa=
+dding-left: 1ex;">../points/L5pl0Vn9lKY-4.json: Internal "id" does not matc=
+h filename. Internal "id" is: L5pl0Vn9lKY</blockquote><blockquote class=3D"=
+gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; bo=
+rder-left-color: rgb(204, 204, 204); border-left-style: solid; padding-left=
+: 1ex;">../points/L5pl0Vn9lKY-5.json: Internal "id" does not match filename=
+. Internal "id" is: L5pl0Vn9lKY</blockquote><blockquote class=3D"gmail_quot=
+e" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-=
+color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;">..=
+/points/L5pl0Vn9lKY-6.json: Internal "id" does not match filename. Internal=
+ "id" is: L5pl0Vn9lKY</blockquote><blockquote class=3D"gmail_quote" style=
+=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: r=
+gb(204, 204, 204); border-left-style: solid; padding-left: 1ex;">../points/=
+L5pl0Vn9lKY-7.json: Internal "id" does not match filename. Internal "id" is=
+: L5pl0Vn9lKY</blockquote><blockquote class=3D"gmail_quote" style=3D"margin=
+: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 20=
+4, 204); border-left-style: solid; padding-left: 1ex;">../points/L5pl0Vn9lK=
+Y-8.json: Internal "id" does not match filename. Internal "id" is: L5pl0Vn9=
+lKY</blockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px =
+0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); b=
+order-left-style: solid; padding-left: 1ex;">../points/L5pl0Vn9lKY-9.json: =
+Internal "id" does not match filename. Internal "id" is: L5pl0Vn9lKY</block=
+quote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex;=
+ border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left=
+-style: solid; padding-left: 1ex;">../points/Rn8M-KQOcNU.json: Internal "id=
+" does not match filename. Internal "id" is: t-INoE6fH982</blockquote><bloc=
+kquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-lef=
+t-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: sol=
+id; padding-left: 1ex;">../points/T98obrJsjJA-2.json: Internal "id" does no=
+t match filename. Internal "id" is: account-killer-blacklist</blockquote><b=
+lockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-=
+left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: =
+solid; padding-left: 1ex;">../points/_ZNQ9J07ntI.json: Internal "id" does n=
+ot match filename. Internal "id" is: aPGR2C_AkskJ</blockquote><blockquote c=
+lass=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width:=
+ 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid; padd=
+ing-left: 1ex;">../points/aXOIDbzevYE-1.json: Internal "id" does not match =
+filename. Internal "id" is: VYXGTAktQuAJ</blockquote><blockquote class=3D"g=
+mail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; bor=
+der-left-color: rgb(204, 204, 204); border-left-style: solid; padding-left:=
+ 1ex;">../points/damOWTFaho0-1.json: Internal "id" does not match filename.=
+ Internal "id" is: damOWTFaho0</blockquote><blockquote class=3D"gmail_quote=
+" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-c=
+olor: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;">../=
+points/pseudos-allowed.json: Internal "id" does not match filename. Interna=
+l "id" is: x2OybdCClW0</blockquote><blockquote class=3D"gmail_quote" style=
+=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: r=
+gb(204, 204, 204); border-left-style: solid; padding-left: 1ex;"><br></bloc=
+kquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex=
+; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-lef=
+t-style: solid; padding-left: 1ex;">Process finished with exit code 0 at 01=
+:31:15.</blockquote><blockquote class=3D"gmail_quote" style=3D"margin: 0px =
+0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204=
+); border-left-style: solid; padding-left: 1ex;">Execution time: 3,218 ms.<=
+/blockquote></blockquote><div><br></div><div>Hopefully the import_to_couchd=
+b.php script will be along shortly.</div><div><br></div><div>/Robin&nbsp;</=
+div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_15_24658479.1355031282995--

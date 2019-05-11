@@ -1,0 +1,133 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.148 with SMTP id j142csp655323ioj;
+        Thu, 29 Oct 2015 11:20:52 -0700 (PDT)
+X-Received: by 10.28.18.21 with SMTP id 21mr5740125wms.34.1446142852811;
+        Thu, 29 Oct 2015 11:20:52 -0700 (PDT)
+Return-Path: <tosdr+bncBDN6FF6MX4HBB7GGZGYQKGQE72WM6QI@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id n127si12962674wmd.24.2015.10.29.11.20.52
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 29 Oct 2015 11:20:52 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDN6FF6MX4HBB7GGZGYQKGQE72WM6QI@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDN6FF6MX4HBB7GGZGYQKGQE72WM6QI@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBDN6FF6MX4HBB7GGZGYQKGQE72WM6QI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 84D3D17208C
+	for <michiel@unhosted.org>; Thu, 29 Oct 2015 19:20:52 +0100 (CET)
+Received: from mfilter16-d.gandi.net (mfilter16-d.gandi.net [217.70.178.144])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6E94B178082
+	for <michiel@unhosted.org>; Thu, 29 Oct 2015 19:20:52 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter16-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter16-d.gandi.net (mfilter16-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 36lUCNogG4uI for <michiel@unhosted.org>;
+	Thu, 29 Oct 2015 19:20:49 +0100 (CET)
+Received: from mail-oi0-x239.google.com (mail-oi0-x239.google.com [IPv6:2607:f8b0:4003:c06::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C7993178124
+	for <michiel@michielbdejong.com>; Thu, 29 Oct 2015 19:20:45 +0100 (CET)
+Received: by oies6 with SMTP id s6sf11572544oie.0
+        for <michiel@michielbdejong.com>; Thu, 29 Oct 2015 11:20:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:message-id:subject:from:to:content-type
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=96ouNUv3CQpC+UOU6dJGZyoSvUWUNbR9P+w8XkgTyHM=;
+        b=DzcfgOMpCfGvnXc2L0qoyWP6ume7HsARr6YdzAA/ESCsQ0aEG8TOj3xQs+PATi1StH
+         hmtWsJ5pxj6P6heObkrvfx6as2kS2LXwMuckMKDQX6O87GGGTsKMo2rT0ifcx+On4a52
+         eHhY31PEsLIrvnKpG2QlAdT/efX4ZnUKDQzjKVrCmgR+ChV+1hLTzX5I/ZB/F0jkbPAk
+         0Z7guK+Dr0qcQAqtdGAXwBwsrh59ejGeW7y9p95x3cOl1xD2eaAyvWDAe+a5w5hoVKWc
+         vmMxxiF9D/xm/yiCb9Ub/VSwHwJpB06C03h+GbOEhg5TcdqaEv1eNWjleVwe0OgImZaW
+         bo3g==
+X-Received: by 10.140.25.193 with SMTP id 59mr80636qgt.1.1446142844666;
+        Thu, 29 Oct 2015 11:20:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.23.229 with SMTP id 92ls636744qgp.24.gmail; Thu, 29 Oct
+ 2015 11:20:43 -0700 (PDT)
+X-Received: by 10.129.95.6 with SMTP id t6mr2758948ywb.7.1446142843838;
+        Thu, 29 Oct 2015 11:20:43 -0700 (PDT)
+Received: from mail-vk0-x230.google.com (mail-vk0-x230.google.com. [2607:f8b0:400c:c05::230])
+        by gmr-mx.google.com with ESMTPS id q193si115758vke.3.2015.10.29.11.20.43
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 11:20:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of skeliath@gmail.com designates 2607:f8b0:400c:c05::230 as permitted sender) client-ip=2607:f8b0:400c:c05::230;
+Received: by mail-vk0-x230.google.com with SMTP id s66so32441824vkg.1
+        for <tosdr@googlegroups.com>; Thu, 29 Oct 2015 11:20:43 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.31.159.69 with SMTP id i66mr2313856vke.127.1446142843734;
+ Thu, 29 Oct 2015 11:20:43 -0700 (PDT)
+Received: by 10.31.94.130 with HTTP; Thu, 29 Oct 2015 11:20:43 -0700 (PDT)
+Date: Thu, 29 Oct 2015 14:20:43 -0400
+Message-ID: <CADDVW_98STKpJP_PrrKAutVHtbehkvQxQVe9Qgbp_2gY0c+YwA@mail.gmail.com>
+Subject: [tosdr:3675] League of Legends "Terms of Use"
+From: Cole Pedrick <skeliath@gmail.com>
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a114260647ed0bf0523425ef1
+X-Original-Sender: skeliath@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of skeliath@gmail.com designates 2607:f8b0:400c:c05::230
+ as permitted sender) smtp.mailfrom=skeliath@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--001a114260647ed0bf0523425ef1
+Content-Type: text/plain; charset=UTF-8
+
+I just want a rating for these Terms of Use as a whole. There's nothing in
+particular I want to point out. The link is here:
+
+http://na.leagueoflegends.com/legal/termsofuse
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a114260647ed0bf0523425ef1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I just want a rating for these Terms of Use as a whole. Th=
+ere&#39;s nothing in particular I want to point out. The link is here:<br><=
+div><br><a href=3D"http://na.leagueoflegends.com/legal/termsofuse">http://n=
+a.leagueoflegends.com/legal/termsofuse</a><br></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a114260647ed0bf0523425ef1--

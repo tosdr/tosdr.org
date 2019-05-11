@@ -1,0 +1,228 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp1364449iou;
+        Mon, 31 Aug 2015 01:41:15 -0700 (PDT)
+X-Received: by 10.180.81.227 with SMTP id d3mr19027613wiy.38.1441010475471;
+        Mon, 31 Aug 2015 01:41:15 -0700 (PDT)
+Return-Path: <tosdr+bncBDL2DMFCRUCBBINGSCXQKGQEEJEV52Q@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id bx16si19844766wib.20.2015.08.31.01.41.14
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 31 Aug 2015 01:41:15 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDL2DMFCRUCBBINGSCXQKGQEEJEV52Q@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDL2DMFCRUCBBINGSCXQKGQEEJEV52Q@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBDL2DMFCRUCBBINGSCXQKGQEEJEV52Q@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id C5968A80D1
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 10:41:14 +0200 (CEST)
+Received: from mfilter34-d.gandi.net (mfilter34-d.gandi.net [217.70.178.165])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B9F25116044
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 10:41:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter34-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter34-d.gandi.net (mfilter34-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id z1esLzb8i90x for <michiel@unhosted.org>;
+	Mon, 31 Aug 2015 10:41:07 +0200 (CEST)
+Received: from mail-ob0-x23c.google.com (mail-ob0-x23c.google.com [IPv6:2607:f8b0:4003:c01::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D74CE11644E
+	for <michiel@michielbdejong.com>; Mon, 31 Aug 2015 10:41:06 +0200 (CEST)
+Received: by obkg7 with SMTP id g7sf29846382obk.1
+        for <michiel@michielbdejong.com>; Mon, 31 Aug 2015 01:41:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=3kRLC/nLli7KSS6taW+Ky16ihXKByd5EOYNF8x/T2CQ=;
+        b=M3hbPYdFTMNmOkAwM59ZZ9ae3VMVEyLceiBfgkYlH7pKUX762B31duVjl/3ktIw670
+         pNgub/zyFa+B4nJWHIZMF5Y1ATDqJeh+G9QqDRZYfPSY0XIFT1Om9b8K7zfWekURp8HK
+         +MbiBze6Rd3ZqnHFU8NWCtwDskYwyF5sfRTfqFEAM5fhIibQBnxfD4LSWpc/0O3ouLoO
+         44zQmFG7MTUTRdqLVeuKzuvx+gxlAjbPQ2OpXE+vX4qCeWiN2ASzYmJ4giOxTjqXoYBE
+         FVfJIH2DrYOeP9ZmtffFOVoxX1wEazOxiCAg9PqRrlpkJ9+XoBnOpqraw5P94tST7a1/
+         x1WA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=3kRLC/nLli7KSS6taW+Ky16ihXKByd5EOYNF8x/T2CQ=;
+        b=w3uffayCBvefpXIcXpJYgEThR2lXPmJelsO5eW+p6dhFpfG/QHQst6X9oBylFv8G3w
+         t7ccZrITnh4NdqBqw3Uu4ZXe6y8jnwSD9u6TzXRGAP5ZLdWbQOc5dzAUxYyNmbl8exCL
+         dxPjsBiHiaygLKf8Zwd8CrV/G5mNf7gCf/ganY554MrS/wth2V76YieLZNqLMtK265Id
+         D8P3SjZpHUz4orfR4I5tmXghBoMPs8LmaDKiIL6BuPCpdbHtLSFFwCKgLsrRQYomHmtV
+         cYvDFhz26ixOlJ6m89pGtkTNrCJ008iPBLE4OMJpj/wMy7d9XLSzkhzATHhidcQS2j6h
+         GAbg==
+X-Received: by 10.50.79.137 with SMTP id j9mr204282igx.15.1441010465856;
+        Mon, 31 Aug 2015 01:41:05 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.169.202 with SMTP id f71ls1315285ioj.93.gmail; Mon, 31 Aug
+ 2015 01:41:05 -0700 (PDT)
+X-Received: by 10.50.142.7 with SMTP id rs7mr23968igb.17.1441010465402;
+        Mon, 31 Aug 2015 01:41:05 -0700 (PDT)
+Date: Mon, 31 Aug 2015 01:41:03 -0700 (PDT)
+From: askebisgaard@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <329004b5-fdd0-4bde-9e81-1e5483b425b3@googlegroups.com>
+In-Reply-To: <20150831063123.GA7690@xps.localdomain>
+References: <1349368558.4304.22.camel@synclavier.lan>
+ <64d3ca44-95de-4257-8000-c425f6286760@googlegroups.com>
+ <20150831063123.GA7690@xps.localdomain>
+Subject: Re: [tosdr:3612] Re: No pseudonyms allowed
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_2646_2130749433.1441010464050"
+X-Original-Sender: askebisgaard@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_2646_2130749433.1441010464050
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Den mandag den 31. august 2015 kl. 08.31.34 UTC+2 skrev Hugo Roy:
+> =E2=86=AA 2015-08-29 Sat 19:46, askebi...@gmail.com <askebi...@gmail.com>=
+:
+> >=20
+> > I don't think "no pseudonyms allowed" are necessarily an overall bad
+> > thing, neither a non-obvious thing.
+>=20
+> Yes, it depends on the context. We're not saying that not allowing
+> pseudonyms in all circumstances is a bad thing.=20
+>=20
+> > From a quick glance at Facebook, it's pretty clear that pseudonyms
+> > are almost exclusively used by fake profiles and spampots.
+>=20
+> I do not use Facebook, but I have read elsewhere that this is
+> absolutely not the case. In any event, the behaviour of spambot isn't
+> a good standard to judge whether the rule is good or not, spambots are
+> just designed to abuse rules anyway.
+>=20
+Well, that's how it used to be. Now that you mention it, you are right that=
+ it's not the case any longer. Facebook is also allowing nicknames now (Set=
+tings->Edit Name->Add Another Name->Nickname), so I guess they're moving sl=
+ightly away from it.
+
+> > I understand how pseudonyms can protect some people, who would like fre=
+e speech, but cannot for whatever reason.
+>=20
+> And this is an important issue for Facebook, considering that it's
+> probably the most general and large platform allowing people to
+> publish on the web today.
+>=20
+
+Facebook would not be likely to have existed if not for the real names. Rem=
+ember that it only got so popular, because it was something exclusive, and =
+something personal. And I'm not sure it's a strong enough platform that the=
+y'll keep being popular if they allowed pseudonyms. Because something usual=
+ly happens when a majority starts using pseudonyms: it becomes scary to hav=
+e you real name, since most people choose not to. So how could you trust pe=
+ople with your real name if they don't?
+
+> > But disallowing pseudonyms also allow you to know that what they say is=
+ something they're not afraid to take responsibility for. When you talk wit=
+h someone on Facebook, you can be far more sure, that you're talking to a p=
+erson who is who he says he is, and thus, you avoid some parts of "trolling=
+", i.e. pretending to be someone you're not, in the effort to trick people.
+>=20
+> I do not think that disallowing pseudoyms is really working in
+> Facebook to protect against trolling. Does it?
+>=20
+> In any case, for the reason stated above, I don't think that this
+> alone is enough to dismiss the fact that disallowing pseudonyms harm
+> the freedom to speak of some people and that it's too important to
+> ignore.
+>=20
+I think it does protect against trolling. But it doesn't protect fully of c=
+ourse. But trolling also usually occurs from people who have a profile pict=
+ure of something that isn't themselves (an object, or a place for example),=
+ which means that you can know that people who are not ready to be open abo=
+ut themselves, don't have a picture of themselves. I think it does make a d=
+ifference.
+
+
+>=20
+> > That can still happen on Facebook, of course, but I think it's enough t=
+o not make it a conclusively negative thing.
+>=20
+> I suppose we disagree. I'm interested in knowing what others would
+> think here, but I want to also make clear that ToS;DR is also biased
+> in favour of users=E2=80=99 rights online, and raising awareness regardin=
+g
+> what's in the terms. Now, considering the amount of legitimate users
+> who want to use pseudonyms in Facebook and considering the amount of
+> these users who actually *do* use pseudonyms: I think they're entitled
+> to know that unfortunately Facebook does not allow pseudos in their
+> terms (when we checked--has this changed? The ToS have changed so the
+> analysis is out of date at the moment).=20
+>=20
+I don't disagree with that. I think it's good to inform users about this. T=
+he reason I have the ToS;DR plugin as well, is because I'm not great at goi=
+ng through the ToS.
+
+> > And it's clearly possible to find places to by anynomous elsewhere, and=
+ still reach a big audience. After all, the vast majority of sites allow ps=
+eudonyms, including social media sites.
+>=20
+> I don't think there's anything quite as large as Facebook for this.
+
+I think Facebook is the biggest place, yes. But what is "for this"? I think=
+ it really depends on what your purpose is. If you're a company, there's no=
+ point in pseudonyms of course (unless you're trying to phish). And if you'=
+re a (human) person, I can't think of many (if any) scenarios where you can=
+ do something on Facebook, that you can't do elsewhere. At least, I can't t=
+hink of any features where Facebook would be useful for someone who wanted =
+to be anonymous. Because there's forums for all kinds of things. Reddit bei=
+ng one of the big platforms (suicide hotlines, anonymous addicts, sensitive=
+ sexuality subjects, religion change from fundamentalist families - and man=
+y more). And for news, there's twitter. And for social interaction in very =
+specific subjects, there's all the many forums that exist.
+
+Maybe for the games? Or events?
+Although I think the games are hardly good enough to attract a lot of peopl=
+e for that to be relevant - and I have difficulty imagining many cases wher=
+e it's relevant (from a protect-user-rights perspective) to by anonymous wh=
+en discussing an event. Perhaps demonstrations? That's all I can think of. =
+Because if it's more private than that, then there's no useful idea in usin=
+g Facebook.
+
+So I guess, I just don't understand why someone would want to be anonymous =
+on a platform, that is mostly useful, because you're not anonymous.
+
+
+
+>=20
+>=20
+> Thanks for your input,
+
+Thank you for your reply as well!
+
+Kind regards, Aske B. Vammen
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2646_2130749433.1441010464050--

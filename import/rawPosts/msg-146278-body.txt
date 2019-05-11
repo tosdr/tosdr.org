@@ -1,0 +1,460 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.137.199 with SMTP id l190csp94808vkd;
+        Tue, 9 Aug 2016 11:14:08 -0700 (PDT)
+X-Received: by 10.194.168.197 with SMTP id zy5mr104708616wjb.112.1470766448354;
+        Tue, 09 Aug 2016 11:14:08 -0700 (PDT)
+Return-Path: <tosdr+bncBC3PXRONTAHBB252VC6QKGQEK5GQHCY@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [217.70.183.194])
+        by mx.google.com with ESMTPS id k23si4250560wmc.105.2016.08.09.11.14.08
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Aug 2016 11:14:08 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbc3pxrontahbb252vc6qkgqek5gqhcy@googlegroups.com does not designate 217.70.183.194 as permitted sender) client-ip=217.70.183.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbc3pxrontahbb252vc6qkgqek5gqhcy@googlegroups.com does not designate 217.70.183.194 as permitted sender) smtp.mailfrom=tosdr+bncBC3PXRONTAHBB252VC6QKGQEK5GQHCY@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id 21750C5A53
+	for <michiel@unhosted.org>; Tue,  9 Aug 2016 20:14:08 +0200 (CEST)
+Received: from mfilter44-d.gandi.net (mfilter44-d.gandi.net [217.70.178.175])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 117F9226062
+	for <michiel@unhosted.org>; Tue,  9 Aug 2016 20:14:08 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter44-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter44-d.gandi.net (mfilter44-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id XttB9dA3qE6k for <michiel@unhosted.org>;
+	Tue,  9 Aug 2016 20:14:06 +0200 (CEST)
+Received: from mail-pa0-x23c.google.com (mail-pa0-x23c.google.com [IPv6:2607:f8b0:400e:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9126622605A
+	for <michiel@michielbdejong.com>; Tue,  9 Aug 2016 20:14:05 +0200 (CEST)
+Received: by mail-pa0-x23c.google.com with SMTP id hb8sf8376840pac.0
+        for <michiel@michielbdejong.com>; Tue, 09 Aug 2016 11:14:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:mime-version:message-id:date:subject:from:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=FCqLSuMOQaktC02qSQ+3aClUszHUEIBiQ4tYrAvdJt0=;
+        b=BKenLzhNrmV+aWVxT9SjPdZRo1lXZcZRNJI/dJC9yVrKeTgopA5974tSJr78ELvy0u
+         P3DovF8qurno0ET+BTwYit+RE1CDckdv6lOSCnVfzPpwPXZeztQX9Ipy49vQXOBbx2Ca
+         3RT87s536M0iXViQ2WSn26TJw4QaXpXRsRSAtgTudP3/B7yI1EmLH53CwhwGs7ad85zj
+         6DLLG0Otm/g+pYwRTHYd67OY/g+TlqMhn5OpQ548nDJv514s1rkiHINW9W437lnI1FGF
+         oDDTgWlCnHn9bmUvVhBgcXuLRD5KMXlP9LbcLytuRm4g+lEuxKV9PwtCX/58y4IgKXN8
+         P0Tg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:message-id:date:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=FCqLSuMOQaktC02qSQ+3aClUszHUEIBiQ4tYrAvdJt0=;
+        b=nKWZo04GFxN9ofeGh9UocQEd8q57ccVeedU0xTsn0yZ4D6KE2oD/3DdnhnqZL8zBLJ
+         JEadC59T7W2xAkK0PaMpgD0HvqHYFvDVmQ7kuy9iMS8VFsuDDIo/7OXt7xrCz88mjav5
+         srCoHvrJkRe+f+iKsuTcBl/BjjJX7K4VmAJYxhNWV2ullUq7FcjxwZ2ELAzAy1E5y/BX
+         xBzYEHQbCGe/84U8Oww3tNgV6OTOJJlwow3ZEUo6RKpWXpvVjiCxhIm2oEcYMncZgbw8
+         JM1NgziU45cDjP8dXETvW3w5B8Eouj3tPGRQdyBfDHaL3PsRf9vCg+n8Tu/XMXy3uvZl
+         /3zw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:mime-version:message-id:date:subject:from
+         :to:x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=FCqLSuMOQaktC02qSQ+3aClUszHUEIBiQ4tYrAvdJt0=;
+        b=jfDGSDYxj66uJ+AFleLhcGZTz7oS1wFFeY4tQScWITUlgIgGDrrzkhG4oyIdrsjDLz
+         Z2Pr4ImOizP633NBUhtfVo6YNLzgQvFUuVeEk9+37/Ro2NUW1ujRIu22UOYOBhU0vOxS
+         vWPsIezKNGJGeKglcJCGusgD1xxu9r3SCEJE1ursGLHfkgcmxLz2fmBBm8csnSFxtiyf
+         0z43lO+SzTcRkfDwPbRZOGo4IiUNCE0mTLaWAW4f7Yok/fAFgbqnzP0mQz17E6DRx0Ck
+         ZWV4AIdft4tv5h5hb06jxETJJ0xY3YWtrpcsBfWD4ZjRYnHtxX4E+o+I+43APjeRO4gI
+         uZVg==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkooushdkM1ioHBa5APOdgwCW9L8SGj2SCI/CNj3hs1lyJOrX+3BkFHGjIATXsIsjirug==
+X-Received: by 10.36.115.15 with SMTP id y15mr34704itb.8.1470766444191;
+        Tue, 09 Aug 2016 11:14:04 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.58.137 with SMTP id h131ls4860079ioa.44.gmail; Tue, 09 Aug
+ 2016 11:14:02 -0700 (PDT)
+X-Received: by 10.66.216.69 with SMTP id oo5mr7154160pac.16.1470766442900;
+        Tue, 09 Aug 2016 11:14:02 -0700 (PDT)
+Received: from mail-yb0-x246.google.com (mail-yb0-x246.google.com. [2607:f8b0:4002:c09::246])
+        by gmr-mx.google.com with ESMTPS id f206si2618600ywb.6.2016.08.09.11.14.02
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Aug 2016 11:14:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bellgrahamtech@gmail.com designates 2607:f8b0:4002:c09::246 as permitted sender) client-ip=2607:f8b0:4002:c09::246;
+Received: by mail-yb0-x246.google.com with SMTP id e141so17208688ybf.0
+        for <tosdr@googlegroups.com>; Tue, 09 Aug 2016 11:14:02 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.13.223.84 with SMTP id i81mr89392815ywe.9.1470766442596;
+ Tue, 09 Aug 2016 11:14:02 -0700 (PDT)
+Message-ID: <001a114e3fc05bd1c10539a77ff8@google.com>
+Date: Tue, 09 Aug 2016 18:14:02 +0000
+Subject: [tosdr:3938] Tosdr.org | Boost Search Traffic
+From: Graham Bell <bellgrahamtech@gmail.com>
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a114e3fc05bd1ac0539a77ff5
+X-Original-Sender: bellgrahamtech@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@gmail.com;       spf=pass (google.com: domain of
+ bellgrahamtech@gmail.com designates 2607:f8b0:4002:c09::246 as permitted
+ sender) smtp.mailfrom=bellgrahamtech@gmail.com;       dmarc=pass (p=NONE
+ dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+--001a114e3fc05bd1ac0539a77ff5
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Hello Tosdr.org Team,
+
+
+
+Hope you are well.
+
+
+
+I assume, yet again you have seen similar mail.
+
+
+
+However here is the difference because I am here to talk something specific
+to your website neither generic.
+
+
+
+Let=E2=80=99s talk scopes that have been missed out from your website promo=
+tion
+campaign as of today and needs serious attention.
+
+
+
+*Local Landing Page optimization*
+
+Look up your address via street view of Google. Do you see residences,
+street or even empty lots? Red flag! This isn=E2=80=99t smart rather a broa=
+dly
+ignored parameter on your website that=E2=80=99s makes you spammy.
+
+
+
+*Back-Link Again =E2=80=9CWhich sites your target audience visits=E2=80=9D*
+
+Back links are no- more just links that adds your pool, rather its meaning
+full way out to reach your target audience. Identifying your target market
+is only one-fifth of the battle. Now Opportunity is to deliver on their key
+searches.
+
+
+
+*Eye-Tracking impact on Mobile Search vs. Desktop*
+
+Talked so much on Google whiplash over =E2=80=9CMobilegeddon=E2=80=9D. Now =
+the setback is
+how and where your target visitors are moving on search result page. Most
+importantly do you have your place?
+
+
+
+*Measuring SMO Impact of PR Wins and Fails*
+
+Social Media has been considered a great tool to flourish and create your
+brand. However this is not end of the story, disgrace-full social media
+postings making your brand difficult for users.
+
+
+
+Well, if you have not analyzed or thought of these factors essentially,
+then this is your wake-up call.
+
+
+
+Reply us back and we will share you more insightful report with proper
+competitive analysis on other relevant factors.
+
+
+
+
+
+
+
+Best Regards,
+
+Graham Bell| Digital Marketing Consultant
+
+Skype: digital.business1
+
+
+
+Note: If you don't find this email suitable, please ask us to
+"Remove/Unsubscribe".
+
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/001a114e3fc05bd1c10539a77ff8%40google.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a114e3fc05bd1ac0539a77ff5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Hello Tosdr.org Team,</span><span style=3D"font-size:12pt;font-family=
+:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Hope you are well.</span><span style=3D"font-size:12pt;font-family:&q=
+uot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">I assume, yet again
+you have seen similar mail.</span><span style=3D"font-size:12pt;font-family=
+:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">However here is the
+difference because I am here to talk something specific to your website nei=
+ther
+generic.</span><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Let=E2=80=99s talk scopes that
+have been missed out from your website promotion campaign as of today and n=
+eeds
+serious attention.</span><span style=3D"font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><b><span style=3D"font-=
+size:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34=
+,34,34)">Local Landing Page
+optimization</span></b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Look up your address
+via street view of Google. Do you see residences, street or even empty lots=
+?
+Red flag! This isn=E2=80=99t smart rather a broadly ignored parameter on yo=
+ur website
+that=E2=80=99s makes you spammy.</span><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><b><span style=3D"font-=
+size:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34=
+,34,34)">Back-Link Again =E2=80=9CWhich
+sites your target audience visits=E2=80=9D</span></b><span style=3D"font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"></span><=
+/p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Back links are no-
+more just links that adds your pool, rather its meaning full way out to rea=
+ch
+your target audience. Identifying your target market is only one-fifth of t=
+he
+battle. Now Opportunity is to deliver on their key searches.</span><span st=
+yle=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&q=
+uot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><b><span style=3D"font-=
+size:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34=
+,34,34)">Eye-Tracking impact on
+Mobile Search vs. Desktop</span></b><span style=3D"font-size:12pt;font-fami=
+ly:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Talked so much on
+Google whiplash over =E2=80=9CMobilegeddon=E2=80=9D. Now the setback is how=
+ and where your
+target visitors are moving on search result page. Most importantly do you h=
+ave
+your place?</span><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><b><span style=3D"font-=
+size:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34=
+,34,34)">Measuring SMO Impact
+of PR Wins and Fails</span></b><span style=3D"font-size:12pt;font-family:&q=
+uot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Social Media has been
+considered a great tool to flourish and create your brand. However this is =
+not
+end of the story, disgrace-full social media postings making your brand
+difficult for users.</span><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Well, if you have not
+analyzed or thought of these factors essentially, then this is your wake-up
+call. </span><span style=3D"font-size:12pt;font-family:&quot;Times New Roma=
+n&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34)">Reply us back and we
+will share you more insightful report with proper competitive analysis on o=
+ther
+relevant factors.</span><span style=3D"font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:10pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=C2=A0</s=
+pan><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&=
+quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground:white none repeat scroll 0% 0%"><span style=3D"font-size:12pt;fon=
+t-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34,34)">Best=
+ Regards,=C2=A0</span><span style=3D"font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground:white none repeat scroll 0% 0%">Graham Bell<span style=3D"font-si=
+ze:12pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,3=
+4,34)">| Digital Marketing
+Consultant</span><span style=3D"font-size:12pt;font-family:&quot;Times New =
+Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground:white none repeat scroll 0% 0%"><span style=3D"font-size:12pt;fon=
+t-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34,34)">Skyp=
+e: digital.business1</span><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:10pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34);background:white none repeat scroll 0% 0%">=C2=A0</span><span style=3D=
+"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=
+</span></p>
+
+<p class=3D"MsoNormal" style=3D"line-height:normal"><span style=3D"font-siz=
+e:10pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34=
+,34);background:white none repeat scroll 0% 0%">Note:
+If you don&#39;t find this email suitable, please ask us to
+&quot;Remove/Unsubscribe&quot;.</span><span style=3D"font-size:12pt;font-fa=
+mily:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p>
+
+<p class=3D"MsoNormal">=C2=A0</p>
+
+</div>
+<img src=3D"https://bellgrahamtech-dot-yamm-track.appspot.com/FireBase?ukey=
+=3D1FOTKXX_RjVkjus3-P-tUUOEXgnxE2I_B7gCJFLjMi1g-0&amp;key=3DYAMMID-66442557=
+" width=3D"1" height=3D"1" alt=3D"beacon" style=3D"display:none; display:no=
+ne!important;"/>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/001a114e3fc05bd1c10539a77ff8%40google.com?utm_medium=3Dema=
+il&utm_source=3Dfooter">https://groups.google.com/d/msgid/tosdr/001a114e3fc=
+05bd1c10539a77ff8%40google.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a114e3fc05bd1ac0539a77ff5--

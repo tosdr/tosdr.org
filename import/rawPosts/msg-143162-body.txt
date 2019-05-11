@@ -1,0 +1,220 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp229185ioi;
+        Sat, 23 Apr 2016 17:08:46 -0700 (PDT)
+X-Received: by 10.66.41.43 with SMTP id c11mr38719915pal.96.1461456526582;
+        Sat, 23 Apr 2016 17:08:46 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBCE56C4AKGQEEPX4JWA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id s28si288320pfj.65.2016.04.23.17.08.45
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 17:08:46 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBCE56C4AKGQEEPX4JWA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBCE56C4AKGQEEPX4JWA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBCE56C4AKGQEEPX4JWA@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 792981720AC
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 02:08:43 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 55447178043
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 02:08:43 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 2LoA1QNaSXuf for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 02:08:41 +0200 (CEST)
+Received: from mail-ig0-x238.google.com (mail-ig0-x238.google.com [IPv6:2607:f8b0:4001:c05::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4982917803E
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 02:08:41 +0200 (CEST)
+Received: by mail-ig0-x238.google.com with SMTP id sq19sf10715033igc.1
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 17:08:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=wCmsOaWMEHqFmMzuGD1aVtJYeeT+ZR5WKVPrhkOm/Fg=;
+        b=inBwBbNe5/TbzVh5lmeOJBADVKu0Cgd/yG385KtE0f/gPPx8nlYUnnR3wPG5uIxUXj
+         B7jKrl4gxvERLRbm7n0FnbB8xnAtcmpUq2Ls9rsVPH46XCeKUXrt0+AJ7/+y15UGYoxR
+         M16+AKmEbt63kRddaMaGy7dEXZ5dCpVEfKgnPEw3wn4vaLpfQumT6nq2zymejITaK/04
+         zonW3NqPw/q5jk+yyA2z8VvzjT6jBNoUymwnPxVFBSLPIe1XA0FV5vcBw02GW5TCCRi8
+         v3zew42nPtX0p3JBQkcTszj19g9b4gVCUQqZuUAQk7XuzawzKNHzdZNTPU9OeRnzcacD
+         DpLg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=wCmsOaWMEHqFmMzuGD1aVtJYeeT+ZR5WKVPrhkOm/Fg=;
+        b=sEP6YMgAi9nFsYkvQ+zM5aRiIWZ0wlVkSo5sJ23b4SwzSO8lRH7HNQ80ggz+XZB03E
+         xJlutaMdmj2r2mGSPTeBcKvoiNj9KfT38IwdhfdcZgdl6i7+HBo3P95GZzRmfTH3gEwu
+         u4Ec22qFI0eTy36Rhu1H+s25M9A0Wuo0/YAUJ+z6QItv0tmD/RLUBkc64k1kQuRK8Glm
+         jE6QUU1SYkkfeAau4FKt67ymraJWWcCNuJw2JvbQ06b/SheXvJ/hFra4GZIYCllHhWIO
+         RV7dgd8fyOs4nZe9eIaRW2uUhUkGJ3vnFmxlvDQLS4c/onmC30vr8Etfw1qUddOpXEXl
+         0MoQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=wCmsOaWMEHqFmMzuGD1aVtJYeeT+ZR5WKVPrhkOm/Fg=;
+        b=iCfysqutbNznYZq21ueOiFdZOPXNru7ZcdKmz/Fz4JpDUOJe7mrUbXjI54itRfL5OR
+         QXNCSGTSUw9nPYun3prnomK3zzEednVaB13iAWYrGDssKYV69hcfyBZxjAwUe0q4n3JC
+         YF21iqNr3u18n9aKiPuGPm5H0hBpBT6+W9pLnfGj7tRnyG2zQMihNNL6m4pa542L7X3t
+         mNJ4KOEyzrj+kx57O2g7d0pHn6abWqJVCcHIQ08bzdMgdC+vcAC2S/Nzl8Hki56rfY/2
+         lMwWqapaAogT7aWrZjGZUO09+BivRpUqXwdqbN99nsvfDknpgqU5euvYos3I81MbqjNl
+         4DQQ==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FVgrZkr2pm5tSAGnIEdXNZzYOqW6giGoJrgUpeMP9q5+KA1tcN1GA7Ic5/fnsUOYQ==
+X-Received: by 10.182.117.170 with SMTP id kf10mr305073obb.18.1461456520442;
+        Sat, 23 Apr 2016 17:08:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.33.21 with SMTP id i21ls340617otb.16.gmail; Sat, 23 Apr
+ 2016 17:08:40 -0700 (PDT)
+X-Received: by 10.182.88.129 with SMTP id bg1mr304483obb.3.1461456520032;
+        Sat, 23 Apr 2016 17:08:40 -0700 (PDT)
+Date: Sat, 23 Apr 2016 17:08:39 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <94190c88-e6bd-4694-8948-d65dc53adc66@googlegroups.com>
+Subject: [tosdr:3841] [Good] Tinder updates their Privacy Policy and lists
+ latest date at top.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4064_325150360.1461456519496"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4064_325150360.1461456519496
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4065_19327986.1461456519496"
+
+------=_Part_4065_19327986.1461456519496
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+https://www.gotinder.com/privacy
+
+Changes to this Privacy Policy
+=E2=80=9CWe will occasionally update this Privacy Policy. When we post chan=
+ges to=20
+this Privacy Policy, we will revise the "last updated" date at the top of=
+=20
+this Privacy Policy. We recommend that you check our Service from time to=
+=20
+time to inform yourself of any changes in this Privacy Policy or any of our=
+=20
+other policies.=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/94190c88-e6bd-4694-8948-d65dc53adc66%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4065_19327986.1461456519496
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><span style=3D"font-family: &quot;Calibri&quot;,&quot=
+;sans-serif&quot;; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-=
+fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hans=
+i-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot=
+;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-l=
+anguage: EN-US; mso-bidi-language: AR-SA;"><a href=3D"https://www.gotinder.=
+com/privacy"><font color=3D"#0088cc">https://www.gotinder.com/privacy</font=
+></a></span></div><div><span style=3D"font-family: &quot;Calibri&quot;,&quo=
+t;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-fam=
+ily: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: mi=
+nor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-them=
+e-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; =
+mso-bidi-language: AR-SA;"><br></span></div><div><span style=3D"font-family=
+: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-l=
+atin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin=
+; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New =
+Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso=
+-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font color=3D"#000000=
+" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 1em 0in; line-height: 15.6pt;"><span style=3D"co=
+lor: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quo=
+t;; mso-bidi-font-family: Arial;"><font size=3D"2">Changes
+to this Privacy Policy</font></span></p><font size=3D"2"><font color=3D"#00=
+0000" face=3D"Times New Roman">
+
+</font><span style=3D"color: rgb(52, 52, 52); font-family: &quot;Calibri&qu=
+ot;,&quot;sans-serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-t=
+heme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-=
+US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-font-f=
+amily: proxima-nova; mso-hansi-font-family: proxima-nova;">=E2=80=9C</span>=
+<span style=3D"color: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot=
+;,&quot;serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-fo=
+nt: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso=
+-fareast-language: EN-US; mso-bidi-language: AR-SA;">We will occasionally u=
+pdate this Privacy Policy. When we post changes to
+this Privacy Policy, we will revise the &quot;last updated&quot; date at th=
+e
+top of this Privacy Policy. We recommend that you check our Service from ti=
+me
+to time to inform yourself of any changes in this Privacy Policy or any of =
+our
+other policies.</span><span style=3D"color: rgb(52, 52, 52); font-family: &=
+quot;Calibri&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: Calibri=
+; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ans=
+i-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; m=
+so-ascii-font-family: proxima-nova; mso-hansi-font-family: proxima-nova;">=
+=E2=80=9D</span></font></span></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/94190c88-e6bd-4694-8948-d65dc53adc66%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/94190c88-e6bd-4694-8948-d65dc53adc66%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4065_19327986.1461456519496--
+------=_Part_4064_325150360.1461456519496--

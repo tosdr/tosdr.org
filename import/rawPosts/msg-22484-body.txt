@@ -1,0 +1,203 @@
+Return-Path: <tosdr+bncBCYIVNHJ5EARBD545WQAKGQEB2Z64FQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id C113F40916
+	for <anything@michielbdejong.com>; Fri, 19 Sep 2014 00:35:01 +0200 (CEST)
+Received: from mfilter36-d.gandi.net (mfilter36-d.gandi.net [217.70.178.167])
+	by spool.mail.gandi.net (Postfix) with ESMTP id BF497116042
+	for <anything@michielbdejong.com>; Fri, 19 Sep 2014 00:35:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter36-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter36-d.gandi.net (mfilter36-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qU0u5MYitfco for <anything@michielbdejong.com>;
+	Fri, 19 Sep 2014 00:35:00 +0200 (CEST)
+Received: from mail-oi0-x239.google.com (mail-oi0-x239.google.com [IPv6:2607:f8b0:4003:c06::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0030511603A
+	for <michiel@michielbdejong.com>; Fri, 19 Sep 2014 00:34:56 +0200 (CEST)
+Received: by mail-oi0-f57.google.com with SMTP id v63sf312040oia.2
+        for <michiel@michielbdejong.com>; Thu, 18 Sep 2014 15:34:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=GunTkXnpgEDfE3K1QB8v7QVToFF0wIhEXA7t5gBeWR8=;
+        b=Stjz/BF1nmXfQRmMXfjSIeEP3S6d8jbIDAPOQqyaMKbVj7Q3Ffrg8zTvevwcxLYgKW
+         f0cEotteJvD2Acj2tIfLtFzuV2TLJD7TrvgL976mxaJlCsFBhO4c8LyXeX594Ny0tcp+
+         vqVwbqI95bCzVYGk4XtCmxE5HFGdYQP+KQBe+KX4QyJdgUV6aAP5Uobd2q53q39i5a5E
+         qwq8EbcMHB5ZAAXrctKphSFt1nDCP8PgxtgfQPs0lEbO2JswrLqYS7yEDP1uGBcTCUyi
+         +LhJN2GEbwHudd1xUiPkFI/T8b6DHXvcXfDbs5kIfTMSZRMycY8oDEmsCVdevOGJswAE
+         SF2g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=GunTkXnpgEDfE3K1QB8v7QVToFF0wIhEXA7t5gBeWR8=;
+        b=eU6WUOGVNbOYdq/nDQHKOxraW5Rfo3kC9Fk18OgIrPRBJhLSLU6lLQbLHH+Byy8QE0
+         R+rGMVw6vVIKug4XXFr1dccYmQdOnI1s7DJXFcYE0i1hwIDoJFRU7xuhnmB0br73ptGE
+         ZO9WBYoS4s5OZpMhzjCqaGTVRpkbIa8+tIVvM4/PMdxNUkqv8dYX0g5jstND4jtOehkS
+         vNAEOkJb8JN7VsZW6w4AoojAs39Korx8jsOssM5Is4GFNjOXidUbpzi8DuGcWbecrxq2
+         jsEfKYI0uuRk2Uzhu1GSjBcQoMD0ckeb7NenUnIzms92vI7NlheG7hrT71EXE8eW//Mu
+         QPnA==
+X-Received: by 10.140.21.51 with SMTP id 48mr13908qgk.12.1411079695609;
+        Thu, 18 Sep 2014 15:34:55 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.42.16 with SMTP id b16ls520958qga.16.gmail; Thu, 18 Sep
+ 2014 15:34:55 -0700 (PDT)
+X-Received: by 10.140.94.34 with SMTP id f31mr13442qge.11.1411079695109;
+        Thu, 18 Sep 2014 15:34:55 -0700 (PDT)
+Date: Thu, 18 Sep 2014 15:34:54 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Cc: tosback@tosdr.org
+Message-Id: <39bb51ae-b48b-46bd-824c-285b0bf26ae5@googlegroups.com>
+In-Reply-To: <541a601a20773_36d441998221755b@dragon.mail>
+References: <541a601a20773_36d441998221755b@dragon.mail>
+Subject: [tosdr:3237] Re: ToSBack: Policy Changes
+MIME-Version: 1.0
+X-Original-Sender: aanmeldingen49@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2214_1553970800.1411079694599"
+
+------=_Part_2214_1553970800.1411079694599
+Content-Type: text/plain; charset=UTF-8
+
+Damn, Apple really knows how to make vague terms (37 and further):
+
+We may collect and store details of how you use our services, including 
+search queries. This information may be used to improve the relevancy of 
+results provided by our services. *Except in limited instances to ensure 
+quality of our services over the Internet*, such information will not be 
+associated with your IP address.
+
+
+
+
+Op donderdag 18 september 2014 06:31:26 UTC+2 schreef ToSBack:
+>
+> live.com: Privacy Policy 
+> apple.com: Privacy Policy 
+> apple.com: iCloud Terms of Service 
+> apple.com: iTunes Terms of Service 
+> xing.com: Terms and Conditions 
+> microsoft.com: Privacy Policy 
+> msn.com: Privacy Policy 
+>  These were changed in last night's crawl. Please have a look at the 
+> commit at 
+> https://github.com/tosdr/tosback2/commit/bac70978534c98f76394a49dff8c220788583d4c 
+> to see the differences!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2214_1553970800.1411079694599
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Damn, Apple really knows how to make vague terms (37 and f=
+urther):<br><br><table class=3D"diff-table  tab-size-8 file-diff-split"><tb=
+ody><tr><td class=3D"blob-code blob-code-addition head">We may collect and =
+store details of how you use our services, including search queries. This i=
+nformation may be used to improve the relevancy of results provided by our =
+services. <b>Except in limited instances to ensure quality of our services =
+over the=20
+Internet</b>, such information will not be associated with your IP address.=
+</td></tr><tr><td class=3D"blob-code blob-code-empty base empty-cell"><br><=
+/td><td class=3D"blob-code blob-code-addition head"><br></td></tr><tr><td c=
+lass=3D"blob-code blob-code-empty base empty-cell"></td><td class=3D"blob-c=
+ode blob-code-addition head"><br></td></tr></tbody></table><br><br>Op donde=
+rdag 18 september 2014 06:31:26 UTC+2 schreef ToSBack:<blockquote class=3D"=
+gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc so=
+lid;padding-left: 1ex;"><a href=3D"http://live.com" target=3D"_blank" onmou=
+sedown=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%2Flive.com\=
+46sa\75D\46sntz\0751\46usg\75AFQjCNE5zGdITUHEl4Duty1IgOjnQUy8Qw';return tru=
+e;" onclick=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%2Flive=
+.com\46sa\75D\46sntz\0751\46usg\75AFQjCNE5zGdITUHEl4Duty1IgOjnQUy8Qw';retur=
+n true;">live.com</a>: Privacy Policy
+<br><a href=3D"http://apple.com" target=3D"_blank" onmousedown=3D"this.href=
+=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\07=
+51\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick=3D"thi=
+s.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46s=
+ntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.co=
+m</a>: Privacy Policy
+<br><a href=3D"http://apple.com" target=3D"_blank" onmousedown=3D"this.href=
+=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\07=
+51\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick=3D"thi=
+s.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46s=
+ntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.co=
+m</a>: iCloud Terms of Service
+<br><a href=3D"http://apple.com" target=3D"_blank" onmousedown=3D"this.href=
+=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\07=
+51\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick=3D"thi=
+s.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46s=
+ntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.co=
+m</a>: iTunes Terms of Service
+<br><a href=3D"http://xing.com" target=3D"_blank" onmousedown=3D"this.href=
+=3D'http://www.google.com/url?q\75http%3A%2F%2Fxing.com\46sa\75D\46sntz\075=
+1\46usg\75AFQjCNGxcZbh8uSoOQQGKAza-S6HyymIaw';return true;" onclick=3D"this=
+.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fxing.com\46sa\75D\46snt=
+z\0751\46usg\75AFQjCNGxcZbh8uSoOQQGKAza-S6HyymIaw';return true;">xing.com</=
+a>: Terms and Conditions
+<br><a href=3D"http://microsoft.com" target=3D"_blank" onmousedown=3D"this.=
+href=3D'http://www.google.com/url?q\75http%3A%2F%2Fmicrosoft.com\46sa\75D\4=
+6sntz\0751\46usg\75AFQjCNFZ1ZUQgvPRZ7hk39CTh6Zoll3cuA';return true;" onclic=
+k=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fmicrosoft.com\=
+46sa\75D\46sntz\0751\46usg\75AFQjCNFZ1ZUQgvPRZ7hk39CTh6Zoll3cuA';return tru=
+e;">microsoft.com</a>: Privacy Policy
+<br><a href=3D"http://msn.com" target=3D"_blank" onmousedown=3D"this.href=
+=3D'http://www.google.com/url?q\75http%3A%2F%2Fmsn.com\46sa\75D\46sntz\0751=
+\46usg\75AFQjCNHZLJJjaih5Su-F46m-fJGfxXyErw';return true;" onclick=3D"this.=
+href=3D'http://www.google.com/url?q\75http%3A%2F%2Fmsn.com\46sa\75D\46sntz\=
+0751\46usg\75AFQjCNHZLJJjaih5Su-F46m-fJGfxXyErw';return true;">msn.com</a>:=
+ Privacy Policy
+<br>&nbsp;These were changed in last night's crawl. Please have a look at t=
+he commit at <a href=3D"https://github.com/tosdr/tosback2/commit/bac7097853=
+4c98f76394a49dff8c220788583d4c" target=3D"_blank" onmousedown=3D"this.href=
+=3D'https://www.google.com/url?q\75https%3A%2F%2Fgithub.com%2Ftosdr%2Ftosba=
+ck2%2Fcommit%2Fbac70978534c98f76394a49dff8c220788583d4c\46sa\75D\46sntz\075=
+1\46usg\75AFQjCNErsXAmmLSu9qm-WJ5p_furRr3ANA';return true;" onclick=3D"this=
+.href=3D'https://www.google.com/url?q\75https%3A%2F%2Fgithub.com%2Ftosdr%2F=
+tosback2%2Fcommit%2Fbac70978534c98f76394a49dff8c220788583d4c\46sa\75D\46snt=
+z\0751\46usg\75AFQjCNErsXAmmLSu9qm-WJ5p_furRr3ANA';return true;">https://gi=
+thub.com/tosdr/<wbr>tosback2/commit/<wbr>bac70978534c98f76394a49dff8c22<wbr=
+>0788583d4c</a> to see the differences!</blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2214_1553970800.1411079694599--

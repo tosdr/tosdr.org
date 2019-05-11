@@ -1,0 +1,1363 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.52.74 with SMTP id b71csp428598vka;
+        Thu, 29 Sep 2016 10:17:51 -0700 (PDT)
+X-Received: by 10.194.246.134 with SMTP id xw6mr2917735wjc.4.1475169471722;
+        Thu, 29 Sep 2016 10:17:51 -0700 (PDT)
+Return-Path: <tosdr+bncBCAOB7HSZMLBBOUZWW7QKGQEUV6WAOY@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id a62si6947092wmd.51.2016.09.29.10.17.51
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 10:17:51 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbcaob7hszmlbbouzww7qkgqeuv6waoy@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbcaob7hszmlbbouzww7qkgqeuv6waoy@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBCAOB7HSZMLBBOUZWW7QKGQEUV6WAOY@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=googlegroups.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 6FB631720A3
+	for <michiel@unhosted.org>; Thu, 29 Sep 2016 19:17:51 +0200 (CEST)
+Received: from mfilter46-d.gandi.net (mfilter46-d.gandi.net [217.70.178.177])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 48B01226083
+	for <michiel@unhosted.org>; Thu, 29 Sep 2016 19:17:51 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter46-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter46-d.gandi.net (mfilter46-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 7CyEEROgV7U8 for <michiel@unhosted.org>;
+	Thu, 29 Sep 2016 19:17:48 +0200 (CEST)
+Received: from mail-vk0-x23f.google.com (mail-vk0-x23f.google.com [IPv6:2607:f8b0:400c:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3EE76226062
+	for <michiel@michielbdejong.com>; Thu, 29 Sep 2016 19:17:48 +0200 (CEST)
+Received: by mail-vk0-x23f.google.com with SMTP id v205sf29690628vke.0
+        for <michiel@michielbdejong.com>; Thu, 29 Sep 2016 10:17:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:reply-to:to:message-id:subject:mime-version
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-subscribe:list-unsubscribe;
+        bh=V91L4SWooiOAzJ2bmLz4Rjg9OIlh2nia9kVqhW/nmug=;
+        b=mU8CPSvR6ow6HPGt1SwFmiWn1+vu2iIcZ/4G01d23ZhB4cgo/Ariu3qLcfFXXpz4kW
+         c9fDIr9GC0t/5njZf/xh6gX4zPk0fZWL9WaWGge+4WXbWBOwQxAAPvV9HbKY+/gFimKT
+         f7T+DZNZVAtaWQj2TbEbrVFyni2/1iiTP6d+9t8qZye5k/fU6s1J5LCQEOww1eurzGDb
+         wDlxe39gGdjam7wWQqOkQtF6Ub/BENibF9fq64+VQ1t9OLCUf0vG4P2FS2rbOqvH06sR
+         3wjBp+Zp366Te7ltjdx87BNIsk96fwhiAQWCFZsnLu6wIJpiphL2xS7cFKyWIdMJi8rw
+         7Zug==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:reply-to:to:message-id:subject
+         :mime-version:x-original-sender:x-original-authentication-results
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=V91L4SWooiOAzJ2bmLz4Rjg9OIlh2nia9kVqhW/nmug=;
+        b=cgojg861/0A0JKzdhTk1EaOsDRxXZ0KRwayFhDgx4lWzsEmeycJ7Jebpv+RUj3bwjE
+         qtm0xi2z7E8g7418e010WqXc8HBV1qy7pQDKBGDjsghFa23iB9nHPixPZ5stRRgeBrNu
+         bWIX27yqjHTvh8DLm+hsvRcu4i3LFDdGlABYK67WLsQAFxxCcoK/XFQsqpeZZnIQq/0N
+         ViLJraLGsdfUtMWIlGBeXOR68Xym/OLRw/Nzpt8Y7xLFuC1ogMAJvJakuJ8MkLAlp3Ke
+         FslJzk0PyU9s2KWI0SzqOwNz1QF0yH+Ky9R2y1hQB/+kbKRKImd8wbFl4wiGGE0SMqov
+         AqvQ==
+X-Gm-Message-State: AA6/9Rlio7ZaIew+lf2lkGV7Va9RupaHabF36gCa91hjMg5CROIt9ChHmW3YtZMUjbUkpw==
+X-Received: by 10.36.122.134 with SMTP id a128mr138506itc.0.1475169467073;
+        Thu, 29 Sep 2016 10:17:47 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.131.195 with SMTP id n64ls1428836ioi.36.gmail; Thu, 29 Sep
+ 2016 10:17:46 -0700 (PDT)
+X-Received: by 10.98.102.147 with SMTP id s19mr722304pfj.26.1475169465962;
+        Thu, 29 Sep 2016 10:17:45 -0700 (PDT)
+Received: from mail-qt0-x264.google.com (mail-qt0-x264.google.com. [2607:f8b0:400d:c0d::264])
+        by gmr-mx.google.com with ESMTPS id o72si1334242vkc.0.2016.09.29.10.17.45
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 10:17:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 404-cvx-657.0.13269.0.0.13064.7.3103410@google.com designates 2607:f8b0:400d:c0d::264 as permitted sender) client-ip=2607:f8b0:400d:c0d::264;
+Received: by mail-qt0-x264.google.com with SMTP id f59so1545624qtb.0
+        for <tosdr@googlegroups.com>; Thu, 29 Sep 2016 10:17:45 -0700 (PDT)
+X-Received: by 10.107.47.151 with SMTP id v23mr4807189iov.172.1475169465424;
+        Thu, 29 Sep 2016 10:17:45 -0700 (PDT)
+Received: from frisee.mktdns.com (frisee.mktdns.com. [199.15.213.113])
+        by smtp-relay.gmail.com with ESMTPS id e191sm2845754ita.0.2016.09.29.10.17.44
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 10:17:45 -0700 (PDT)
+X-Relaying-Domain: google.com
+X-MSFBL: dG9zZHJAZ29vZ2xlZ3JvdXBzLmNvbUBkdnAtMTk5LTE1LTIxMy0xMTNAYmctYWJy
+	LTAyQDQwNC1DVlgtNjU3OjE1MzQyOjEzMjY5OjQ2MjY2OjA6MTMwNjQ6NzozMTAz
+	NDEw
+Received: from [10.1.87.249] ([10.1.87.249:51399] helo=abmas02.marketo.org)
+	by abmta16.marketo.org (envelope-from <thinkwithgoogle-noreply@google.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 13/43-06508-9CB4DE75; Thu, 29 Sep 2016 12:13:45 -0500
+Date: Thu, 29 Sep 2016 12:13:45 -0500 (CDT)
+From: "'Think with Google' via Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Reply-To: tosdr@googlegroups.com
+To: tosdr@googlegroups.com
+Message-ID: <1643313598.-1893481053.1475169225633.JavaMail.root@abmas02.marketo.org>
+Subject: =?UTF-8?Q?=5Btosdr=3A3975=5D_Hi_there=2C_see_what=E2=80=99s_new_on_Think_wit?=
+	=?UTF-8?Q?h_Google?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_-1893481055_1566682149.1475169225633"
+X-Binding: bg-abr-02
+X-MarketoID: 404-CVX-657:15342:13269:46266:0:13064:7:3103410
+X-MktArchive: false
+X-Mailfrom: 404-CVX-657.0.13269.0.0.13064.7.3103410@google.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-Original-Sender: thinkwithgoogle-noreply@google.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@google.com;       spf=pass (google.com: domain of
+ 404-cvx-657.0.13269.0.0.13064.7.3103410@google.com designates
+ 2607:f8b0:400d:c0d::264 as permitted sender) smtp.mailfrom=404-CVX-657.0.13269.0.0.13064.7.3103410@google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=google.com
+X-Original-From: Think with Google <thinkwithgoogle-noreply@google.com>
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_-1893481055_1566682149.1475169225633
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+The latest Canadian data, insights, and inspiration for marketers. View our=
+ web version if this email isn't displaying well.
+
+http://go.thinkwithgoogle.com/index.php/email/emailWebview?mkt_tok=3DeyJpIj=
+oiWVRNM01UVTRaRFEzTkdZMCIsInQiOiJiOXBiRUZzNDFzTk9qdGdQRWNVUzZHRjBLbnBxV3U0U=
+VA2T3k4RDluMXVsQUpiSGZFcnlvV1NheVZ4S2cxY2tURXJidjcyRDNGbWdBVmlIczAwZWNGRnNm=
+dEd6MVBlVm5GSDdxMHdydE01TT0ifQ%3D%3D
+
+Think with Google
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Busy Canadian moms choose YouTube: the latest research
+
+Fill in the blank: _________ are always-on digital natives, watch a lot of =
+YouTube, and have massive spending power. The answer is "millennials," righ=
+t? Well, yes=E2=80=94but also=E2=80=94moms. Hear us out. We=E2=80=99ve got =
+new research on how Canadian moms watch, engage, and rely on YouTube.
+
+Read more =E2=80=BA
+
+https://www.thinkwithgoogle.com/articles/busy-canadian-moms-choose-youtube-=
+latest-research.html?utm_medium=3Demail-d&utm_source=3Dnewsletter&utm_team=
+=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-monthly-edition-a&utm_cont=
+ent=3Darticle-1-txt-vdeo-adv
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Get a jump on holiday marketing plans in Canada with this checklist
+
+It may be a bit too early for holiday music and decorations (okay, it defin=
+itely is), but it=E2=80=99s certainly not too early for marketers to get a =
+jump on their holiday strategies. To help you get started, here=E2=80=99s o=
+ur 2016 holiday planning checklist=E2=80=94and fine, we=E2=80=99ll say it. =
+You should check it twice.
+
+Read more =E2=80=BA
+
+https://www.thinkwithgoogle.com/infographics/get-jump-on-holiday-marketing-=
+plans-in-canada-with-this-checklist.html?utm_medium=3Demail-d&utm_source=3D=
+newsletter&utm_team=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-monthly=
+-edition-a&utm_content=3Darticle-2-txt-locl-ret
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+"Mobile is where Canadians are": lessons from Catalyst's Jeff Lancaster
+
+Catalyst, a Canadian digital marketing agency, recently wrapped up its thir=
+d-annual survey on smartphone adoption and behaviour in Canada. Jeff Lancas=
+ter, CEO of Catalyst, pens this guest column, detailing what the research m=
+eans for Canadian marketers and why =E2=80=9Cmobile is a must-have.=E2=80=
+=9D
+
+Read more =E2=80=BA
+
+https://www.thinkwithgoogle.com/articles/mobile-is-where-canadians-are-less=
+ons-from-catalysts-jeff-lancaster.html?utm_medium=3Demail-d&utm_source=3Dne=
+wsletter&utm_team=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-monthly-e=
+dition-a&utm_content=3Darticle-3-txt-mobl-adv
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Amex Canada discovers 68% more mobile-driven conversions with cross-device =
+measurement
+
+What if you discovered one of your media channels was 68% more productive t=
+han you thought? American Express Canada realized just how important mobile=
+ was after working with its agency, Mindshare Canada, and DoubleClick to ac=
+curately measure cross-device conversions.
+
+Read more =E2=80=BA
+
+https://www.thinkwithgoogle.com/case-studies/amex-canada-discovers-more-mob=
+ile-driven-conversions-cross-device-measurement.html?utm_medium=3Demail-d&u=
+tm_source=3Dnewsletter&utm_team=3Dtwg-canada&utm_campaign=3D20160831-twg-ca=
+nada-monthly-edition-a&utm_content=3Darticle-4-txt-mmnt-fin
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Canadian YouTube Ads Leaderboard: July 2016
+
+John Cena and Cricket top this edition of the Canadian YouTube Ads Leaderbo=
+ard <https://www.thinkwithgoogle.com/platforms/video/leaderboards/ca-youtub=
+e-leaderboard-july-2016.html?utm_medium=3Demail-d&utm_source=3Dnewsletter&u=
+tm_team=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-monthly-edition-a&u=
+tm_content=3Darticle-5-txt-vdeo-adv>. Check out what other brands are doing=
+ to gain attention and engagement in Canada this month.
+
+Read more =E2=80=BA
+
+https://www.thinkwithgoogle.com/platforms/video/leaderboards/ca-youtube-lea=
+derboard-july-2016.html?utm_medium=3Demail-d&utm_source=3Dnewsletter&utm_te=
+am=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-monthly-edition-a&utm_co=
+ntent=3Darticle-5-txt-vdeo-adv
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Received this email from a friend? Sign up now.
+
+https://getsubscriptions.withgoogle.com/newsletter/thinkwithgoogle/signup?u=
+tm_medium=3Demail-d&utm_source=3Dnewsletter&utm_team=3Dtwg-canada&utm_campa=
+ign=3D20160831-twg-canada-monthly-edition-a-forward&utm_content=3Dsign-up-n=
+ow&rfr=3D3103410
+
+More on Think with Google =E2=80=BA
+
+https://www.thinkwithgoogle.com/collections/canada.html?utm_medium=3Demail-=
+d&utm_source=3Dnewsletter&utm_team=3Dtwg-canada&utm_campaign=3D20160831-twg=
+-canada-monthly-edition-a&utm_content=3Dmore-think-with-google
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This email was sent to tosdr@googlegroups.com because you signed up for the=
+ latest from Think with Google. If you don't want to receive this newslette=
+r in the future, you may unsubscribe:
+
+http://getsubscriptions.withgoogle.com/newsletter/thinkwithgoogle/unsubscri=
+be?uuid=3D7cc95bb7-f1fe-4aad-a5d5-3f6cea4ca20e&opt-out=3DoptinThinkenALL&ut=
+m_medium=3Demail-d&utm_source=3Dnewsletter&utm_team=3Dtwg-canada&utm_campai=
+gn=3D20160831-twg-canada-monthly-edition-a&utm_content=3Dunsub
+
+or update your preferences:
+
+http://getsubscriptions.withgoogle.com/newsletter/thinkwithgoogle/manage?uu=
+id=3D7cc95bb7-f1fe-4aad-a5d5-3f6cea4ca20e&utm_medium=3Demail-d&utm_source=
+=3Dnewsletter&utm_team=3Dtwg-canada&utm_campaign=3D20160831-twg-canada-mont=
+hly-edition-a&utm_content=3Dmanage.
+
+Copyright 2016 Google Inc. All Rights Reserved. Google and the Google logo =
+are trademarks of Google Inc. 1600 Amphitheatre Parkway, Mountain View, CA =
+94043.
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/1643313598.-1893481053.1475169225633.JavaMail.root%40abmas02.marketo.=
+org.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_-1893481055_1566682149.1475169225633
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />=
+=20
+<meta name=3D"HandheldFriendly" content=3D"true" />=20
+<meta name=3D"MobileOptimized" content=3D"320" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width" />=20
+<title>Think with Google</title>=20
+<style href=3D"">a {text-decoration: none} </style>=20
+<style type=3D"text/css">
+		@import url('http://fonts.googleapis.com/css?family=3DRoboto');	=09
+        span.preheader {display:none;height:0px;}
+		/* Client-specific Styles */
+		body{width:100% !important; -webkit-text-size-adjust:100%; margin:0; padd=
+ing:0; background:#FFFFFF; font-family: Roboto,Arial,Helvetica,sans-serif;}
+		#outlook a {padding:0;text-decoration: none!important;} /* Force Outlook =
+to provide a "view in browser" menu link. */
+		#backgroundTable {margin:0; padding:0; width:100% !important;}
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full w=
+idth*/ =20
+		.ExternalClass *{line-height: 100%;}
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fon=
+t, .ExternalClass td, .ExternalClass div {line-height: 100%;} /*Force Hotma=
+il to display normal line spacing.  More on that: http://www.emailonacid.co=
+m/forum/viewthread/43/ */
+
+		/*css generic*/
+		a,a:hover,a:link,a:visited{text-decoration:none!important;outline: none;}
+		hr{display: none!important;background-color: red;}
+
+		@media only screen and (max-device-width: 480px) {
+			table[class=3D"wrapper-table"]{ width:100%!important;}
+		  	td[class=3Delement-block-center]{display:block!important;width:100%!im=
+portant;text-align:center!important;padding:0px!important;}
+		  	td[class=3Dtext-align-center]{text-align:center!important;}
+		  	tr[class=3Dshow-device]{display:block!important;}
+		  	tr[class=3Dhidden-device]{display:none!important;}
+		  	.font-size-device-big{font-size:16px!important;line-height:24px!import=
+ant;}
+		  	.font-size-device-small{font-size:12px!important;line-height:24px!impo=
+rtant;}
+		}
+	</style>=20
+<!--[if mso]>
+        <style type=3D"text/css">
+        table[module-table-wrapper]{width: 560px!important;}
+        .body-text {
+        font-family: Arial, sans-serif !important;
+        }
+        </style>
+	<![endif]-->=20
+<!--[if IEMobile]>
+		<style type=3D"text/css">
+			td, span, p, a, h5, h6, div{font-family: Roboto,Arial,Helvetica,sans-ser=
+if !important;}
+		</style>
+	<![endif]-->=20
+</head>=20
+<body>=20
+<span class=3D"preheader" style=3D"display: none !important; visibility: hi=
+dden; opacity: 0; color: transparent; height: 0; width: 0;">In the days of =
+one computer per household, last-click measurement made a lot of sense. Now=
+ that consumers shift constantly between devices, cross-environment measure=
+ment is a must. Conducting a mobile assessment is a great place to start ca=
+pturing the true return on your media investments.</span>=20
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td align=3D"center" bgcolor=3D"#FFFFFF" style=3D"vertical-align:top;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" class=
+=3D"wrapper-table">=20
+<tbody>
+<tr id=3D"row_2" class=3D"header_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"">
+<tbody>=20
+<tr>=20
+<td height=3D"15" align=3D"center">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" clas=
+s=3D"standard-header-table" style=3D"border-collapse:collapse; border-spaci=
+ng:0px; padding:0px!important; margin:0px!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"center" style=3D"padding-top: 10px;"> <span sty=
+le=3D"display: inline;font-family:Roboto,Arial,Helvetica,sans-serif;font-si=
+ze:11px; color:#999999; line-height:normal; margin:0px; padding:0px;" class=
+=3D"body-text"> The latest Canadian data, insights, and inspiration for mar=
+keters.</span>
+<!-- VIEW IN BROWSER --><span style=3D"display:inline; font-family:Roboto,A=
+rial,Helvetica,sans-serif; font-size:11px; color:#999999; line-height:norma=
+l; margin:0px; padding:0px;text-align:right;"><a href=3D"http://go.thinkwit=
+hgoogle.com/index.php/email/emailWebview?mkt_tok=3DeyJpIjoiWVRNM01UVTRaRFEz=
+TkdZMCIsInQiOiJiOXBiRUZzNDFzTk9qdGdQRWNVUzZHRjBLbnBxV3U0UVA2T3k4RDluMXVsQUp=
+iSGZFcnlvV1NheVZ4S2cxY2tURXJidjcyRDNGbWdBVmlIczAwZWNGRnNmdEd6MVBlVm5GSDdxMH=
+dydE01TT0ifQ%3D%3D" style=3D"text-decoration:none; color:#468aca;" class=3D=
+"browser-link"> <span class=3D"body-text">View our web version</span></a> <=
+span class=3D"body-text">if this email isn't displaying well.</span></span>
+<!-- VIEW IN BROWSER ENDS --> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" height=3D"65" align=3D"center" style=3D"font-size:0px!im=
+portant;line-height:0px!important;"> <a href=3D
+"http://email.thinkwithgoogle.com/dc/sw2Jv2lliV95Sp9FKmB-yk9n2CCc1w7JrXRK_U=
+_6bTeUKeIrSYQzxUc-Z3FcL0y4zDgerDYdC8cL-G82MIseMvXhNLRAF8w-Mz4volo4i2-Ei0r0Z=
+_PB8wcw7dF3rs_gTuaDVqgySQLpTJ8t5rLefVS4AswsnEpX-qqgQxEWgJ_vcgPvIoi6Alu640UG=
+lgoP2cZjwOLOy0gMMaM1igyJ7zzKDyxEK6sDrjYWTgUcjlvtKF5b4-bLAe8baTfRuSzVE0vFRK8=
+ud3KPgaH7l39Gbo_yYegHzNXBp4SMaJAof2E=3D/iCHC0gVm0PJ00H000l11X0d" class=3D""=
+ data-modal-type=3D"header"
+>=20
+<!--[if mso]> <img id=3D"img0" src=3D"http://twg.emailimagecdn.com/_common/=
+images/v1/en_uk/header-logo-twg-v2.png" width=3D"188" border=3D"0" style=3D=
+"display:block;" class=3D""  alt=3D"Think with Google" title=3D"Think with =
+Google"> <div style=3D"width:0px; height:0px; max-height:0; max-width:0; ov=
+erflow:hidden; display:none; visibility:hidden; mso-hide:all;"> <![endif]--=
+>=20
+<!--[if !mso]><!-- --><img id=3D"img0" src=3D"http://go.thinkwithgoogle.com=
+/rs/404-CVX-657/images/2016_horiz_ThinkWithGoogle_logo_pos_rgb_372x56.png" =
+width=3D"188" border=3D"0" style=3D"display:block; mso-hide:all;" class=3D"=
+" alt=3D"Think with Google" title=3D"Think with Google" />
+<!--<![endif]--></a> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_4" class=3D"colored_header_3_img_twg module-img">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-color=3D"#ffffff" class=3D"module-table-wrapper" style=3D"width: 100% !imp=
+ortant; background: rgb(219, 68, 55);">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;"><a href=3D
+"http://email.thinkwithgoogle.com/s0QH0Jm0lVgD0C01d010H0X" class=3D"" data-=
+modal-type=3D"header-image" data-header-text=3D"Busy Canadian moms choose Y=
+ouTube: the latest research" data-header-text-font-size=3D"30" data-header-=
+text-margin-top=3D"0" data-header-margin-top=3D"47" data-header-margin-bott=
+om=3D"-9" data-header-font-family=3D"Roboto-Medium" data-source-img=3D"http=
+s://enterprise.fanbridge.com/twg/assets/img/campaigns/57bb4f05bf8b6e5602436=
+f89/en_us/img_1471897063.png" data-font-color=3D"" data-link-parameter-type=
+=3D"header" data-link-parameter-taxonomy=3D"vdeo" data-link-parameter-indus=
+try=3D"adv"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/img_1471897063.png" width=3D"100%" border=3D"0" style=3D"display:block;"=
+ class=3D"" alt=3D"Busy Canadian moms choose YouTube: the latest research" =
+/></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_5" class=3D"simple_image module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;" bgcolor=3D"#ffffff"><a href=3D
+"http://email.thinkwithgoogle.com/AH0E0dCV10gHm0100J0R0lX" class=3D"" data-=
+modal-type=3D"image" data-video-title=3D"video-title" data-video-text=3D"vi=
+deo-text" data-link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"=
+vdeo" data-link-parameter-industry=3D"adv"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/b4a3883055f1a3c64910f05aacba473f_600x0_1471897128.jpeg" width=3D"100%" b=
+order=3D"0" alt=3D"Busy Canadian moms choose YouTube: the latest research" =
+title=3D"Busy Canadian moms choose YouTube: the latest research" style=3D"d=
+isplay:block;" class=3D"" data-attr=3D"" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_6" class=3D"free_text_paragraph_twg module">=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"vertical-align:top;padding:20px;=
+">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left" valign=3D"top" style=3D"vertical-align:to=
+p;"> <p style=3D"text-align:left;font-family:Roboto,Arial,Helvetica,sans-se=
+rif;font-size:15px;color:#616161;font-weight:300;line-height:21px;margin:0p=
+x!important;padding:0px;background-color:#ffffff;"><span clas=3D"body-text"=
+>Fill in the blank: _________ are always-on digital natives, watch a lot of=
+ YouTube, and have massive spending power. The answer is "millennials," rig=
+ht? Well, yes=E2=80=94but also=E2=80=94moms. Hear us out. We=E2=80=99ve got=
+ new research on how Canadian moms watch, engage, and rely on YouTube.</spa=
+n></p></td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_7" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_8" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/ymHCl10g0H0JXVS0dF00010" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"vdeo" data-link=
+-parameter-industry=3D"adv"
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;">Read more&nbsp;=E2=80=BA</span> </a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_9" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_10" class=3D"line_separation_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"10" valign=3D"top" align=3D"center" style=3D"v=
+ertical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.=
+emailimagecdn.com/_common/images/v1/en_us/line-separation.png" width=3D"100=
+%" height=3D"10" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_11" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_12" class=3D"colored_header_3_img_twg module-img">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-color=3D"#ffffff" class=3D"module-table-wrapper" style=3D"width: 100% !imp=
+ortant; background: rgb(63, 81, 181);">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;"><a href=3D
+"http://email.thinkwithgoogle.com/eg0lTX01000VCH01dmGJ00H" class=3D"" data-=
+modal-type=3D"header-image" data-header-text=3D"Get a jump on holiday marke=
+ting plans in Canada with this checklist" data-header-text-font-size=3D"30"=
+ data-header-text-margin-top=3D"0" data-header-margin-top=3D"47" data-heade=
+r-margin-bottom=3D"-9" data-header-font-family=3D"Roboto-Medium" data-sourc=
+e-img=3D"https://enterprise.fanbridge.com/twg/assets/img/campaigns/57bb4f05=
+bf8b6e5602436f89/en_us/img_1471894537.png" data-font-color=3D"" data-link-p=
+arameter-type=3D"header" data-link-parameter-taxonomy=3D"locl" data-link-pa=
+rameter-industry=3D"ret"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/img_1471894537.png" width=3D"100%" border=3D"0" style=3D"display:block;"=
+ class=3D"" alt=3D"Get a jump on holiday marketing plans in Canada with thi=
+s checklist" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_13" class=3D"simple_image module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;" bgcolor=3D"#ffffff"><a href=3D
+"http://email.thinkwithgoogle.com/m000gH10d01HmJ0lVHU0CX0" class=3D"" data-=
+modal-type=3D"image" data-video-title=3D"video-title" data-video-text=3D"vi=
+deo-text" data-link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"=
+locl" data-link-parameter-industry=3D"ret"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/2b3a05b3df9a69b8d8249ffd69b38e0f_600x0_1471894397.jpeg" width=3D"100%" b=
+order=3D"0" alt=3D"Get a jump on holiday marketing plans in Canada with thi=
+s checklist" title=3D"Get a jump on holiday marketing plans in Canada with =
+this checklist" style=3D"display:block;" class=3D"" data-attr=3D"" /></a></=
+td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_14" class=3D"free_text_paragraph_twg module">=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"vertical-align:top;padding:20px;=
+">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left" valign=3D"top" style=3D"vertical-align:to=
+p;"> <p style=3D"text-align:left;font-family:Roboto,Arial,Helvetica,sans-se=
+rif;font-size:15px;color:#616161;font-weight:300;line-height:21px;margin:0p=
+x!important;padding:0px;background-color:#ffffff;"><span clas=3D"body-text"=
+>It may be a bit too early for holiday music and decorations (okay, it defi=
+nitely is), but it=E2=80=99s certainly not too early for marketers to get a=
+ jump on their holiday strategies. To help you get started, here=E2=80=99s =
+our 2016 holiday planning checklist=E2=80=94and fine, we=E2=80=99ll say it.=
+ You should check it twice.</span></p></td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_15" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_16" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/qmXC0H0lJI0gdH01V00V001" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"locl" data-link=
+-parameter-industry=3D"ret"
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;">Read more&nbsp;=E2=80=BA</span> </a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_17" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_18" class=3D"line_separation_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"10" valign=3D"top" align=3D"center" style=3D"v=
+ertical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.=
+emailimagecdn.com/_common/images/v1/en_us/line-separation.png" width=3D"100=
+%" height=3D"10" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_19" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_20" class=3D"colored_header_3_img_twg module-img">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-color=3D"#ffffff" class=3D"module-table-wrapper" style=3D"width: 100% !imp=
+ortant; background: rgb(15, 157, 88);">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;"><a href=3D
+"http://email.thinkwithgoogle.com/DCWd00J0XVl00H0mJg100H1" class=3D"" data-=
+modal-type=3D"header-image" data-header-text=3D"'Mobile is where Canadians =
+are': lessons from Catalyst's Jeff Lancaster" data-header-text-font-size=3D=
+"30" data-header-text-margin-top=3D"0" data-header-margin-top=3D"47" data-h=
+eader-margin-bottom=3D"-9" data-header-font-family=3D"Roboto-Medium" data-s=
+ource-img=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_us/img_14721=
+47047.png" data-font-color=3D"#ffffff" data-link-parameter-type=3D"header" =
+data-link-parameter-taxonomy=3D"mobl" data-link-parameter-industry=3D"adv"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/img_1472147047.png" width=3D"100%" border=3D"0" style=3D"display:block;"=
+ class=3D"" alt=3D"&quot;Mobile is where Canadians are&quot;: lessons from =
+Catalyst's Jeff Lancaster" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_21" class=3D"simple_image module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;" bgcolor=3D"#ffffff"><a href=3D
+"http://email.thinkwithgoogle.com/VlVK000HHm0X100CJd10Xg0" class=3D"" data-=
+modal-type=3D"image" data-video-title=3D"video-title" data-video-text=3D"vi=
+deo-text" data-link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"=
+mobl" data-link-parameter-industry=3D"adv"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/92af18a9863faf2433b1049ae8964656_600x0_1471897264.jpeg" width=3D"100%" b=
+order=3D"0" alt=3D"&quot;Mobile is where Canadians are&quot;: lessons from =
+Catalyst's Jeff Lancaster" style=3D"display:block;" class=3D"" data-attr=3D=
+"" title=3D"&quot;Mobile is where Canadians are&quot;: lessons from Catalys=
+t's Jeff Lancaster" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_22" class=3D"free_text_paragraph_twg module">=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"vertical-align:top;padding:20px;=
+">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left" valign=3D"top" style=3D"vertical-align:to=
+p;"> <p style=3D"text-align:left;font-family:Roboto,Arial,Helvetica,sans-se=
+rif;font-size:15px;color:#616161;font-weight:300;line-height:21px;margin:0p=
+x!important;padding:0px;background-color:#ffffff;"><span clas=3D"body-text"=
+>Catalyst, a Canadian digital marketing agency, recently wrapped up its thi=
+rd-annual survey on smartphone adoption and behaviour in Canada. Jeff Lanca=
+ster, CEO of Catalyst, pens this guest column, detailing what the research =
+means for Canadian marketers and why =E2=80=9Cmobile is a must-have.=E2=80=
+=9D</span></p></td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_23" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_24" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/L1d1XV00m0YH0CLl00J0H0g" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"mobl" data-link=
+-parameter-industry=3D"adv"
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;">Read more&nbsp;=E2=80=BA</span> </a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_25" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_26" class=3D"line_separation_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"10" valign=3D"top" align=3D"center" style=3D"v=
+ertical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.=
+emailimagecdn.com/_common/images/v1/en_us/line-separation.png" width=3D"100=
+%" height=3D"10" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_27" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_28" class=3D"colored_header_3_img_twg module-img">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-color=3D"#ffffff" class=3D"module-table-wrapper" style=3D"width: 100% !imp=
+ortant; background: rgb(0, 150, 136);">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;"><a href=3D
+"http://email.thinkwithgoogle.com/iMHC0gVm0ZJ00H000l11X0d" class=3D"" data-=
+modal-type=3D"header-image" data-header-text=3D"Amex Canada discovers 68% m=
+ore mobile-driven conversions with cross-device measurement" data-header-te=
+xt-font-size=3D"30" data-header-text-margin-top=3D"0" data-header-margin-to=
+p=3D"47" data-header-margin-bottom=3D"-9" data-header-font-family=3D"Roboto=
+-Medium" data-source-img=3D"https://enterprise.fanbridge.com/twg/assets/img=
+/campaigns/57bb4f05bf8b6e5602436f89/en_us/img_1471896356.png" data-font-col=
+or=3D"" data-link-parameter-type=3D"header" data-link-parameter-taxonomy=3D=
+"mmnt" data-link-parameter-industry=3D"fin"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/img_1471896356.png" width=3D"100%" border=3D"0" style=3D"display:block;"=
+ class=3D"" alt=3D"Amex Canada discovers 68% more mobile-driven conversions=
+ with cross-device measurement" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_29" class=3D"simple_image module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;" bgcolor=3D"#ffffff"><a href=3D
+"http://email.thinkwithgoogle.com/eg0l0X01000VCI01dmOJ00H" class=3D"" data-=
+modal-type=3D"image" data-video-title=3D"video-title" data-video-text=3D"vi=
+deo-text" data-link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"=
+mmnt" data-link-parameter-industry=3D"fin"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/bcf83552f1f57911596c5ada22491f36_600x0_1471897001.jpeg" width=3D"100%" b=
+order=3D"0" alt=3D"Amex Canada discovers 68% more mobile-driven conversions=
+ with cross-device measurement" title=3D"Amex Canada discovers 68% more mob=
+ile-driven conversions with cross-device measurement" style=3D"display:bloc=
+k;" class=3D"" data-attr=3D"" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_30" class=3D"free_text_paragraph_twg module">=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"vertical-align:top;padding:20px;=
+">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left" valign=3D"top" style=3D"vertical-align:to=
+p;"> <p style=3D"text-align:left;font-family:Roboto,Arial,Helvetica,sans-se=
+rif;font-size:15px;color:#616161;font-weight:300;line-height:21px;margin:0p=
+x!important;padding:0px;background-color:#ffffff;"><span clas=3D"body-text"=
+>What if you discovered one of your media channels was 68% more productive =
+than you thought? American Express Canada realized just how important mobil=
+e was after working with its agency, Mindshare Canada, and DoubleClick to a=
+ccurately measure cross-device conversions.</span></p></td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_31" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_32" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/FmlVJ001P0C001I1000XHgd" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"mmnt" data-link=
+-parameter-industry=3D"fin"
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;">Read more&nbsp;=E2=80=BA</span> </a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_33" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_34" class=3D"line_separation_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"10" valign=3D"top" align=3D"center" style=3D"v=
+ertical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.=
+emailimagecdn.com/_common/images/v1/en_us/line-separation.png" width=3D"100=
+%" height=3D"10" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_35" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_36" class=3D"colored_header_5_img_twg module-img">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-color=3D"#ffffff" class=3D"module-table-wrapper" style=3D"width: 100% !imp=
+ortant; background: rgb(244, 67, 54);">
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"middle" style=3D"vertical-align:middle;paddi=
+ng:20px 0;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>=20
+<tr>=20
+<td width=3D"100%" align=3D"center" style=3D"vertical-align:top;padding-bot=
+tom: 20px;"> <a style=3D"text-decoration:none!important;outline: none;" hre=
+f=3D
+"http://email.thinkwithgoogle.com/O0I00d1X0100gCJ20Q0HmlV" class=3D"" data-=
+link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"vdeo" data-link=
+-parameter-industry=3D"adv"
+><img src=3D"http://twg.emailimagecdn.com/_common/images/v1/en_us/logo-ytad=
+s-leaderboard-twg.png" height=3D"26" border=3D"0" alt=3D"YouTube Ads Leader=
+board" style=3D"display:block;" /></a> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;"><a href=3D
+"http://email.thinkwithgoogle.com/O0I00d1X0100gCJ20Q0HmlV" class=3D"" data-=
+modal-type=3D"header-image" data-header-text=3D"Canadian YouTube Ads Leader=
+board: July 2016" data-header-text-font-size=3D"30" data-header-text-margin=
+-top=3D"0" data-header-margin-top=3D"29" data-header-margin-bottom=3D"-25" =
+data-header-font-family=3D"Roboto-Medium" data-source-img=3D"https://enterp=
+rise.fanbridge.com/twg/assets/img/campaigns/57bb4f05bf8b6e5602436f89/en_us/=
+img_1471896524.png" data-font-color=3D"" data-link-parameter-type=3D"header=
+" data-link-parameter-taxonomy=3D"vdeo" data-link-parameter-industry=3D"adv=
+"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/img_1471896524.png" width=3D"100%" border=3D"0" style=3D"display:block;"=
+ class=3D"" alt=3D"Canadian YouTube Ads Leaderboard: July 2016" title=3D"Ca=
+nadian YouTube Ads Leaderboard: July 2016" /></a></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_37" class=3D"simple_image module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"vertical-align:=
+top;" bgcolor=3D"#ffffff"><a href=3D
+"http://email.thinkwithgoogle.com/Bm00RC1Xg000d0IV0l3J01H" class=3D"" data-=
+modal-type=3D"image" data-video-title=3D"video-title" data-video-text=3D"vi=
+deo-text" data-link-parameter-type=3D"img" data-link-parameter-taxonomy=3D"=
+vdeo" data-link-parameter-industry=3D"adv"
+><img id=3D"img0" src=3D"http://twg.emailimagecdn.com/bqniuxaj9w/images/en_=
+us/1848eb7264a6b8f48c196b4337a2aa1a_600x0_1471899057.jpeg" width=3D"100%" b=
+order=3D"0" alt=3D"Canadian YouTube Ads Leaderboard: July 2016" title=3D"Ca=
+nadian YouTube Ads Leaderboard: July 2016" style=3D"display:block;" class=
+=3D"" data-attr=3D"" /></a></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_38" class=3D"free_text_paragraph_twg module">=20
+<td align=3D"center" valign=3D"top">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" valign=3D"top" style=3D"vertical-align:top;padding:20px;=
+">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left" valign=3D"top" style=3D"vertical-align:to=
+p;"> <p style=3D"text-align:left;font-family:Roboto,Arial,Helvetica,sans-se=
+rif;font-size:15px;color:#616161;font-weight:300;line-height:21px;margin:0p=
+x!important;padding:0px;background-color:#ffffff;"><span clas=3D"body-text"=
+>John Cena and Cricket top this edition of the <a href=3D
+"http://email.thinkwithgoogle.com/z01l1HJ000dVg4ImC0S0X00" style=3D"color:#=
+3762ea; text-decoration:none;"
+>Canadian YouTube Ads Leaderboard</a>. Check out what other brands are doin=
+g to gain attention and engagement in Canada this month.</span></p></td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_39" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/z01l1HJ000dVg4ImC0S0X00" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"vdeo" data-link=
+-parameter-industry=3D"adv"
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;">Read more&nbsp;=E2=80=BA</span> </a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_42" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_43" class=3D"line_separation_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"10" valign=3D"top" align=3D"center" style=3D"v=
+ertical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.=
+emailimagecdn.com/_common/images/v1/en_us/line-separation.png" width=3D"100=
+%" height=3D"10" border=3D"0" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<tr id=3D"row_46" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_51" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_56" class=3D"link_twg module">=20
+<td align=3D"left" style=3D"vertical-align:middle;line-height:25px">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" data=
+-select-popup=3D"link-generic" class=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"left" style=3D"padding:0 20px;">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;padding:0px!important;margin:0px!importan=
+t;">
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"left"> <a href=3D
+"http://email.thinkwithgoogle.com/Q0IX0lV0C51J10gmH00Td00" class=3D"" style=
+=3D"text-decoration:none;font-family:Roboto,Arial,Helvetica,sans-serif;font=
+-size:16px;font-weight:normal;color:#3762ea;line-height:20px;margin:0px!imp=
+ortant;padding:0px!important;background-color:#ffffff;display:block;" data-=
+link-parameter-type=3D"CTA" data-link-parameter-taxonomy=3D"" data-link-par=
+ameter-industry=3D""
+> <span class=3D"body-text" style=3D"display:inline!important;font-family:R=
+oboto,Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;color:#3=
+762ea;line-height:20px;margin:0px!important;padding:0px!important;backgroun=
+d-color:#ffffff;"><b>More on Think with Google</b>&nbsp;=E2=80=BA</span> </=
+a> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_57" class=3D"spacer_10_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" class=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"10" style=3D"vertical-align:middle;"></td>
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr id=3D"row_58" class=3D"colored_separator_twg module">=20
+<td align=3D"center" style=3D"vertical-align:middle;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"" style=3D"width:100%!important;">
+<tbody>
+<tr>=20
+<td width=3D"100%" height=3D"4" valign=3D"top" align=3D"center" style=3D"ve=
+rtical-align:top;" bgcolor=3D"#ffffff"><img id=3D"img0" src=3D"http://twg.e=
+mailimagecdn.com/_common/images/v1/en_us/colored-separator.png" width=3D"10=
+0%" height=3D"4" border=3D"0" alt=3D"" style=3D"display:block;" /></td>=20
+</tr>
+</tbody>
+</table> <span class=3D"hr" style=3D"display:none!important;width:0px!impor=
+tant;height:0px!important;line-height:0px!important;margin:0!important;bord=
+er:0!important;padding:0!important;"></span> </td>=20
+</tr>=20
+<!-- FOOTER -->
+<tr id=3D"row_59" class=3D"footer_twg module">=20
+<td align=3D"center" valign=3D"top" style=3D"vertical-align:top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" clas=
+s=3D"module-table-wrapper">
+<tbody>
+<tr>=20
+<td align=3D"center" style=3D"padding:0 20px;" bgcolor=3D"#ffffff">=20
+<!-- Target Outlook 2003 -->=20
+<!--[if lte mso 7]>
+      <table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ style=3D"border-collapse:collapse; table-width:fixed;" align=3D"center">
+      <tr><td style=3D"width:600px !important;">
+      <![endif]-->=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" alig=
+n=3D"center" bgcolor=3D"#ffffff" class=3D"" style=3D"max-width: 600px; marg=
+in-left: 0; margin-bottom: 0; margin-right: 0; margin-top: 0; padding-left:=
+ 0; padding-bottom: 0; padding-top: 0; padding-right: 0; background-color: =
+#ffffff; font-family:Roboto,Arial,Helvetica,sans-serif; font-weight: normal=
+; font-size: 13px; line-height: 18px; color: #666666; text-align: left;">
+<tbody>
+<tr>=20
+<td style=3D"line-height:19px;color:#bbbebf;font-size:12px;font-weight:norm=
+al;padding:20px 0; font-family:Roboto,Arial,Helvetica,sans-serif;"><span cl=
+ass=3D"body-text"> This email was sent to tosdr@googlegroups.com because yo=
+u signed up for the latest from Think with Google. If you don't want to rec=
+eive this newsletter in the future, you may <a class=3D"" style=3D"color: #=
+195beb; text-decoration: none;" href=3D
+"http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm60a=
+BlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJmE8Wt3T2mBSX9nvwoznVAj9JXbBv=
+OvKaFW7dJyzmej1DvnihfCj2UXwoDMg_no3y-q-sEJvkf5c4xlObYbjUzIbwdvm8gfdDKidtgsI=
+Ayt-km4a3IYt2HEs_lhBFmTaehv8PJC2M_uKT9KTz5QTZ9xT5a7AcEMdQD32o-dh371IrCCK2ih=
+LVXI-Uynm_4UzLaZRRuCKFvGMuMRnTwlDo2ntkmL-rtGAnh6dMEm0U6kzDRUsexolf5ewXHIaaI=
+LobT_UX8WZ9KvnU3pcPsxG9_v88mShjvq1puX0dW8keXnuAY5_G_YmTnGQqxO05O-BZw=3D=3D/=
+iCHC0gVm0PJ00H000l11X0d"
+>unsubscribe</a> or <a class=3D"" style=3D"text-decoration: none; color: #1=
+95beb;" href=3D
+"http://email.thinkwithgoogle.com/dc/2UmxTyNcRg6c9nzbH8kD0Jtr5qlIgZDJsQm60a=
+BlN4D2wScQNQ_J3IjvyYtx0p05_hRfd9b0e2yZHfWbpvgFJkX4V3L75vxDoX2PYTI7zdKNLWQXK=
+a4jaqMzsPkhLXXfCA6MZgptarXB2Po1C9KNfgqB3tvCQEOeQm-2uv3dFizSeYQaDsPgMHgKiOzO=
+pJh7QxzVyXpC2leCctcIS7SrVjM15xxIYJjYQeTrz_sMNBOVv2xAkNIHJ8yOzt_KnbnLHpiIrqA=
+xsxAXqh1kSBtTl2BqSPFTiqPAV7fU3xR6MuNkrWjK9KHn6m5okOGI3-lQ95uSb-G18BhrPtSSr_=
+aeYbsmP98VDLpVb8j7DoBYrdA=3D/iCHC0gVm0PJ00H000l11X0d"
+>update your preferences</a>.<br /><br />=C2=A9 2016 Google Inc. All Rights=
+ Reserved. Google and the Google logo are trademarks of Google Inc. 1600 Am=
+phitheatre Parkway, Mountain View, CA 94043.</span></td>=20
+</tr>
+</tbody>
+</table>=20
+<!--[if lte mso 7]>
+      </td></tr></table>
+      <![endif]--> </td>=20
+</tr>
+</tbody>
+</table> </td>=20
+</tr>=20
+<!-- FOOTER -->=20
+</tbody>
+</table> </td>=20
+</tr>
+</tbody>
+</table> =20
+
+<img src=3D"http://email.thinkwithgoogle.com/trk?t=3D1&mid=3DNDA0LUNWWC02NT=
+c6MTUzNDI6MTMyNjk6NDYyNjY6MDoxMzA2NDo3OjMxMDM0MTA6dG9zZHJAZ29vZ2xlZ3JvdXBzL=
+mNvbQ%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" al=
+t=3D"" />
+</body>
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/1643313598.-1893481053.1475169225633.JavaMail.root%40abmas=
+02.marketo.org?utm_medium=3Demail&utm_source=3Dfooter">https://groups.googl=
+e.com/d/msgid/tosdr/1643313598.-1893481053.1475169225633.JavaMail.root%40ab=
+mas02.marketo.org</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_-1893481055_1566682149.1475169225633--

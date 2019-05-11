@@ -1,0 +1,193 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp166335wfj;
+        Sat, 16 Jun 2012 17:55:33 -0700 (PDT)
+Received: by 10.236.152.97 with SMTP id c61mr13145282yhk.130.1339894533098;
+        Sat, 16 Jun 2012 17:55:33 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxCD1vT-BBoEU6EPKQ@googlegroups.com>
+Received: from mail-yw0-f64.google.com (mail-yw0-f64.google.com [209.85.213.64])
+        by mx.google.com with ESMTPS id r19si2323506ank.10.2012.06.16.17.55.32
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 16 Jun 2012 17:55:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxCD1vT-BBoEU6EPKQ@googlegroups.com designates 209.85.213.64 as permitted sender) client-ip=209.85.213.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxCD1vT-BBoEU6EPKQ@googlegroups.com designates 209.85.213.64 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxCD1vT-BBoEU6EPKQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by yhnn12 with SMTP id n12sf3654598yhn.29
+        for <multiple recipients>; Sat, 16 Jun 2012 17:55:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip
+         :in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=TmisL/XH7M1i37qnRH4wxrjPZQihFVx8xYt57c8qx8I=;
+        b=50BQz0Yi0QKdfDMb1y3dGisqLLGKPMizsfkE2kOgw994Yj5+pWGuK0pT2L5/5/c/We
+         zk1PJso3o/6Bl1dCv7h6fO6l+yT5AVcFMOTbSpzZ6/9x69mc9/IYuWK36L20V68txc+e
+         QW+u6xC3+J3exgYTTYlxv/LOetdnvHWGYVd7U=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip
+         :in-reply-to:references:from:date:message-id:subject:to
+         :x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=TmisL/XH7M1i37qnRH4wxrjPZQihFVx8xYt57c8qx8I=;
+        b=G7wZrkI4uaS/teot0ptJDzVXddPqU2fFtZdJB/glQZIJfFu4/nbKRGqmeWOZ4Wg7Da
+         HGDhTo2/DiQXZ42ULjUTyTck5cVw8BZ1RRIJ52zL+Jni8P8UcImFZU0OoyR7RXPrsarS
+         nusXqRfJqExQT5Z2DOvRO/RFR4/3dj0W0m/x+27te/U8ZOgJbLrY5qPVK9YdBqJSnXrc
+         IDzRe+H+9fMx2KbmXKnaojyDNurIKiQ62GG2c2jOmiLILjCpwT3ECdE2Aw6KhnWzBrD/
+         Mdt6/jkH0TMObtVyhbpuXf+guNhDCUOoKtlGI/0hz733g1R59JjOczVlmQ7te0IpozDf
+         Vw/A==
+Received: by 10.68.237.67 with SMTP id va3mr534560pbc.9.1339894531758;
+        Sat, 16 Jun 2012 17:55:31 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.132.136 with SMTP id ou8ls9325829pbb.9.gmail; Sat, 16 Jun
+ 2012 17:55:31 -0700 (PDT)
+Received: by 10.68.238.65 with SMTP id vi1mr11256564pbc.7.1339894531494;
+        Sat, 16 Jun 2012 17:55:31 -0700 (PDT)
+Received: by 10.68.238.65 with SMTP id vi1mr11256563pbc.7.1339894531484;
+        Sat, 16 Jun 2012 17:55:31 -0700 (PDT)
+Received: from mail-pz0-f43.google.com (mail-pz0-f43.google.com [209.85.210.43])
+        by gmr-mx.google.com with ESMTPS id tf10si5498564pbc.0.2012.06.16.17.55.31
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 16 Jun 2012 17:55:31 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.210.43 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.210.43;
+Received: by dajz8 with SMTP id z8so5593103daj.2
+        for <tosdr@googlegroups.com>; Sat, 16 Jun 2012 17:55:31 -0700 (PDT)
+Received: by 10.68.237.202 with SMTP id ve10mr1853122pbc.54.1339894530945;
+ Sat, 16 Jun 2012 17:55:30 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Sat, 16 Jun 2012 17:55:10 -0700 (PDT)
+X-Originating-IP: [67.164.74.119]
+In-Reply-To: <CA+aD3u1_Tp4F7HGx1JYB+cNH8LWYyBT4gB4GsjjYBn8XQJOtHA@mail.gmail.com>
+References: <CA+aD3u1qUUGJ56ch=Gf1-X--=+9+SY+WQqF4Cbk2cHCzn=y7-g@mail.gmail.com>
+ <CABQMFTT9hDeB-7F4ooScBkgk+7GrkJtZR1+a91ukYGj9_MVTiA@mail.gmail.com> <CA+aD3u1_Tp4F7HGx1JYB+cNH8LWYyBT4gB4GsjjYBn8XQJOtHA@mail.gmail.com>
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Sat, 16 Jun 2012 17:55:10 -0700
+Message-ID: <CABQMFTTmb8L50+=cz8k_QYSLyFuyR0-1p0Xqp=K_7tHF4k=Q9A@mail.gmail.com>
+Subject: Re: criteria to (not) add
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQkdkURkqq2Zscn5OSqItic66cdw/w3U4ihWLK0J9DDZca2wyQEhaoLqfNDDbH7RdgE1MmdJ
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.210.43 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This has also been on the bottom of
+https://github.com/unhosted/website/wiki/Terms-of-Service;-Didn%E2%80%99t-R=
+ead
+
+On Fri, Jun 15, 2012 at 6:12 AM, Michiel de Jong <michiel@unhosted.org> wro=
+te:
+> For reference, this is what Jan and I talked about in December. I
+> still think the 'location of court of law' one is not something you
+> can call globally good or bad about a service - but maybe we can add
+> 'a large percentage of users will be able to use the service under the
+> law system of the country where they (habitually) live'? i guess all
+> law systems have good and bad aspects, but i know a lot of Europeans
+> trust their own country's law system, or that of other European
+> countries, more than the US law system. that's the reason this point
+> is on there. but it's a difficult one to implement, i guess.
+>
+>
+> ---------- Forwarded message ----------
+> From: Jan-Christoph Borchardt <jan@unhosted.org>
+> Date: Thu, Dec 29, 2011 at 10:38 AM
+> Subject: Re: criteria to (not) add
+> To: Michiel de Jong <michiel@unhosted.org>
+>
+>
+> My thoughts on criteria (maybe merging):
+>
+> 1) (basically revised this one, data liberation has enough weight)
+> Ownership & Data liberation (not sure, but data liberation as it is
+> has not enough weight on its own)
+> 2) Equality & Anonymity (because the case for separating it is
+> specifically Dropbox =96 rephrase to =BBservice is blind to location, rea=
+l
+> name, =85=AB =96 =BBpolitical views=AB are also problematic because that=
+=92s not a
+> matter of freedom of speech (see Swastika in Germany))
+> 3) Third Parties (advertising) & Law enforcement (both essentially
+> =BBgiving stuff away to third parties=AB)
+> 4) Location of court of law (not sure, maybe merge with EEA?)
+>
+> The 2 new ones:
+> 1) this service is exploited by a for-profit company / is not ...
+> 2) there is a contact person for questions and complaints about this
+> service / there is none
+> don=92t warrant 2 whole new criteria in my eyes. Especially the
+> for-/non-profit one. Maybe if we rephrase or merge, but just binary
+> =BBnon-profit=AB or =BBfor-profit=AB is too short sighted. Giving data aw=
+ay to
+> advertisers for instance would be exclusive to for-profits, wouldn=92t
+> it?
+>
+> Also a bit of devil=92s advocate =96 on the discussion page we should als=
+o
+> say why we included the criteria and why in this form.
+>
+> Just to mention it, another approach from the =BBbig but few criteria=AB
+> would be =BBmany but just binary criteria=AB. That would leave us with,
+> say, 50 criteria though (30 at least) and would be very non-accurate
+> (say, data liberation would not be expressed with a simple binary
+> choice as it doesn=92t account for open formats, usability between
+> services, importing etc. =96 and if it does, it would be a very
+> black/white choice.)
+>
+>
+>
+> On Thu, Dec 29, 2011 at 10:20 AM, Michiel de Jong <michiel@unhosted.org> =
+wrote:
+>> add:
+>>
+>> this service is exploited by a for-profit company / is not ...
+>>
+>> there is a contact person for questions and complaints about this servic=
+e /
+>> there is none
+>>
+>> remove:
+>> the court of law is in an oppressive regime
+>>
+>> don't add:
+>> your data stays in the EEA (only relevant for Europeans)
+>> accessilbility (more general ethics than actual ToS)
+>> standards compliance (same reason)
+>> green power (same reason)
+>>
+>
+> --
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> For more options, visit this group at http://groups.google.com/group/tosd=
+r?hl=3Den.
+>
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

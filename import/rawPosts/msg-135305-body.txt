@@ -1,0 +1,188 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp1616519iou;
+        Mon, 31 Aug 2015 09:31:04 -0700 (PDT)
+X-Received: by 10.180.23.71 with SMTP id k7mr11584553wif.5.1441038664289;
+        Mon, 31 Aug 2015 09:31:04 -0700 (PDT)
+Return-Path: <tosdr+bncBDL2DMFCRUCBBQUCSKXQKGQEPUBKCHI@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id b9si18170755wjx.14.2015.08.31.09.31.03
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 31 Aug 2015 09:31:04 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDL2DMFCRUCBBQUCSKXQKGQEPUBKCHI@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDL2DMFCRUCBBQUCSKXQKGQEPUBKCHI@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBDL2DMFCRUCBBQUCSKXQKGQEPUBKCHI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 5AC8B41C093
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 18:31:03 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 46EAE1780A5
+	for <michiel@unhosted.org>; Mon, 31 Aug 2015 18:31:03 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id OzH4jUMxv61e for <michiel@unhosted.org>;
+	Mon, 31 Aug 2015 18:30:59 +0200 (CEST)
+Received: from mail-vk0-x237.google.com (mail-vk0-x237.google.com [IPv6:2607:f8b0:400c:c05::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6BC3617808B
+	for <michiel@michielbdejong.com>; Mon, 31 Aug 2015 18:30:59 +0200 (CEST)
+Received: by vkbc123 with SMTP id c123sf22001234vkb.0
+        for <michiel@michielbdejong.com>; Mon, 31 Aug 2015 09:30:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=G49QigdP7WilcAQX7SuIryQdELtzRS0OgksdH7BlAC4=;
+        b=AcxOHgNlWDGZtdSmqg/OTUlNIgG2f2/EwWW8YX+lBHxEwHFv2P628H0aVq7zRoFvq/
+         63ANf3nB7Ygfj6GODwO5cw+QoaQPqjGwf5t2T5nOtUmNLpS4az7/SRy4M3lExJCW01DA
+         vyof/qNGwXqDzxI4MD7ohgmxG7t2ZRMRHeR9U2dcZ/IuKDnDGj4I1EbU9ru2fVXyiD+y
+         pdrS4rlKHUP/fWl0BN6zB7M7wDpcvWp3XxCYb31p9Uuc/BlUcLOv0ygWcQVRfwo5hQgH
+         ri8PkkaowsAyTaaUlvBgU4mF2NBikmSWB2Ww3Qt3WgirwsRmnKdbTWp85yttgQ/HKtIb
+         HIIg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=G49QigdP7WilcAQX7SuIryQdELtzRS0OgksdH7BlAC4=;
+        b=QX6R2YrB+7XeL4VXv9Ct7+yryytE0xyEO0x+KtzHq8ITxYCTX+u4HA+QGoByRzVd96
+         ruabOhipiL6k7KBC/CrOPCa0MMBEUeu7b2ZPdfqaUpz/zVSQXJZLzrGF3dRzKyyplPya
+         XwOgA1hkMwMifJCjxQJ+dekDB3uIYPR1KXsvXxw05EekJfkTsRYkwkdgbxr6t7QlWzFw
+         ldDj/42L573GqTX+9NLpuf4pGoKSRKkgDRlVwyiPZAIJrbGnZkKm3kFylxtpz74+ipcV
+         2Cn9+pEwUjDKoy72lH2MTQHRnE5ZkJ5HA2vZANDsVAGKXNcLMLqDZsqq/cY7U/C3bP3X
+         ig2g==
+X-Received: by 10.50.164.131 with SMTP id yq3mr204298igb.2.1441038658517;
+        Mon, 31 Aug 2015 09:30:58 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.15.197 with SMTP id 66ls1398684iop.100.gmail; Mon, 31 Aug
+ 2015 09:30:58 -0700 (PDT)
+X-Received: by 10.50.50.101 with SMTP id b5mr44482igo.12.1441038658087;
+        Mon, 31 Aug 2015 09:30:58 -0700 (PDT)
+Date: Mon, 31 Aug 2015 09:30:56 -0700 (PDT)
+From: askebisgaard@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <5d020dbd-64d5-40cf-baee-545493185446@googlegroups.com>
+In-Reply-To: <20150831133422.GC1386@xps.lan>
+References: <1349368558.4304.22.camel@synclavier.lan>
+ <64d3ca44-95de-4257-8000-c425f6286760@googlegroups.com>
+ <20150831063123.GA7690@xps.localdomain>
+ <329004b5-fdd0-4bde-9e81-1e5483b425b3@googlegroups.com>
+ <20150831133422.GC1386@xps.lan>
+Subject: Re: [tosdr:3615] Re: No pseudonyms allowed
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_418_548835362.1441038657050"
+X-Original-Sender: askebisgaard@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_418_548835362.1441038657050
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Den mandag den 31. august 2015 kl. 15.34.30 UTC+2 skrev Hugo Roy:
+> =E2=86=AA 2015-08-31 Mon 10:41, askebis...@gmail.com <askebis...@gmail.co=
+m>:=20
+> I do not think that allowing pseudonyms would have really lower the
+> success of Facebook in terms of size. Why do I think that? Because in
+> spite of the policy to exclude pseudonyms, a lot of users on Facebook
+> do not use their real name anyway.
+
+I think there's a big difference between the purpose. The vast majority of =
+the people I know that don't use their real name, just use a nickname, but =
+their friends still know who they really are.
+If pseudonyms were the norm, then I'd find it likely that you'd lose the kn=
+owledge of whether each profile represented one person (or e.g. if people u=
+sed multiple identities) and whether that person is actually someone you re=
+ally know or not. There's a big difference between social interaction on th=
+e Internet, with strangers, or with people you also know in real life. (Pre=
+sumably due to missing body language, vocal tone etc.)
+
+And since Facebook was made famous because it was exclusively for students =
+who could confirm their identity, it has always been about the personal ide=
+ntity. Somewhat like LinkedIn, but for spare time. Now there's a lot of oth=
+er things there, since the commercial industry really took part in it, but =
+I for one can by no means presume that Facebook would stand strong, if pseu=
+donyms were explicitly allowed. At least not in the long run.
+
+> With Facebook, anyone can easily publish posts without having to
+> configure a server or a blog. It's very easy and it has a massive
+> size. By =E2=80=9Cthis=E2=80=9D I meant =E2=80=9Cpublishing on the Web fo=
+r individuals=E2=80=9D, which
+> is what I believe Facebook is mainly (in terms of what it's used for
+> by the majority of users).=20
+
+But twitter and reddit are also very large platforms that can do this, righ=
+t? They both allow pseudonyms.
+
+>=20
+> > So I guess, I just don't understand why someone would want to be anonym=
+ous on a platform, that is mostly useful, because you're not anonymous.
+>=20
+> An important distinction to make: this is not about anonymity. Someone
+> with a pseudonym is not anonymous. Anonymous means "no name" at all
+> whereas, with a pseudonym, you have a name; it's just not the same name
+> that the State has registered for you.
+
+Sure, but the distinction is mostly important for those with the power to i=
+nvestigate the background of a certain online identity.
+To must people, it's just an alias - like wearing a mask at a masquerade.
+You can still be personal with a mask on, but never quite as personal (show=
+ing strong responsibility for your actions). And you can also be very imper=
+sonal and rude, and easily get away with it, because you're just another ra=
+ndom identity.
+
+>=20
+> There are a lot of people who are actually known under a pseudonym
+> more than under their =E2=80=9Ccivil name=E2=80=9D.
+
+I know. Especially Internet celebrities. Captain Sparkles is one example. B=
+ut to my understanding, it's not against the terms to have a profile that r=
+epresents an online identity - especially not if it's famous. At least, I'v=
+e seen many examples of this - and Captain Sparklez is one of those.
+
+I don't understand why it's explicitly important to have a separate identit=
+y all across the Internet though?
+I know many of my (older) family members wouldn't use Facebook if it wasn't=
+ personal.
+
+It's not that I agree with everything the Facebook culture does by the way =
+- I just wondered why this pseudonym part was shown as definitely negative.
+
+> But maybe this rule is not up to date, can you check the terms today
+> regarding what users are allowed to do with pseudonyms?
+
+Sorry, I'm not great at that. It's not that important to me either. I'm sur=
+e it is to someone, who'll then look at it.
+
+Thanks for the discussion.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_418_548835362.1441038657050--

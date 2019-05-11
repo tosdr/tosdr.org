@@ -1,0 +1,157 @@
+Return-Path: <tosdr+bncBCNMDAXBZ4LBBMOPSGRQKGQE5EIXV2Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id D07BA40F5A
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 09:11:32 +0100 (CET)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id CDFE2117211
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 09:11:32 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id nsBeKwdZ9mdv for <anything@michielbdejong.com>;
+	Thu, 13 Nov 2014 09:11:31 +0100 (CET)
+Received: from mail-ie0-x240.google.com (mail-ie0-x240.google.com [IPv6:2607:f8b0:4001:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id ECCE9117264
+	for <michiel@michielbdejong.com>; Thu, 13 Nov 2014 09:11:30 +0100 (CET)
+Received: by mail-ie0-f192.google.com with SMTP id rl12sf2199739iec.19
+        for <michiel@michielbdejong.com>; Thu, 13 Nov 2014 00:11:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=ogbDB4sV4MQvGHIgXxFrDWKzh2WVD29fq9aQyAEmXuw=;
+        b=EqVX2tuZ6mp2OnTZ7B2tNqpJr4TwGTO6drJcilMpUsUk38M3XfwPSIu/y9R6aaGkTo
+         ujNt7f+bYvfLJMENOU0Dg8BO7MD+CYBU1fffbqKPHCMDnIxPc6UMOq/le7a5oIn1CzCz
+         NUu+2g19nmpbdjvfeOawUsKknpkKQhn8Qp204L68qfidattrWbFBdfaTkbJ2rUN1buth
+         /KCCl0oGDH3AXXmorWv4IG96NpfdeWfbC+uQnjU8u005IGF9D3Ym1emcw/fqUeBjexve
+         D51Gq4T35N06MZntH1+Bk4eq71KmKoZnzHlKckiNYmTdmL//4pcwZ9NKuOwx0NMlxYxV
+         d2qw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=ogbDB4sV4MQvGHIgXxFrDWKzh2WVD29fq9aQyAEmXuw=;
+        b=YAXymjUg2n6c9Cb1o8xaXnMvkOks22zEbB3J53cTIk9ggOSraxhBp210OL3ieeTwdH
+         nA0bWy+OzjzvP6ZO+IuV9a2vDJgZ7L0mcl5xyw4jGsOZxjj1i+a1p+p91WZRXDi57l7f
+         dfVTZCrULtBK89UINy+dQ5zEDnD21rUba1wqBOwarRgGuVeYHAUJAozvF2vdgWONiIlj
+         i6evQYvv9zN3/mDydEREnx28IbmRPUB/Ur4Hyoq3oBFFKlISWH3r0/fSdKIGz79MDiv9
+         R271v8K5ZVe5dQRa6I6Y4rP4bd3ZDjbpXGRnUMe5Wofk9nP11GNN6sKFsIJFzxWlvDZy
+         N3oA==
+X-Received: by 10.50.126.101 with SMTP id mx5mr33797igb.0.1415866290007;
+        Thu, 13 Nov 2014 00:11:30 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.162.13 with SMTP id l13ls2445325ioe.104.gmail; Thu, 13 Nov
+ 2014 00:11:29 -0800 (PST)
+X-Received: by 10.50.78.130 with SMTP id b2mr448884igx.4.1415866289606;
+        Thu, 13 Nov 2014 00:11:29 -0800 (PST)
+Date: Thu, 13 Nov 2014 00:11:28 -0800 (PST)
+From: Hedge Sparrow <kipperpanzee@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <0258031d-f7f5-4097-9cac-23140c726dfb@googlegroups.com>
+In-Reply-To: <37fb4fdc-7047-427c-978b-d36c2e69083f@googlegroups.com>
+References: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+ <37fb4fdc-7047-427c-978b-d36c2e69083f@googlegroups.com>
+Subject: [tosdr:3323] Re: [Bad] Facebook automatically shares your information
+MIME-Version: 1.0
+X-Original-Sender: kipperpanzee@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2234_1391195071.1415866288301"
+
+------=_Part_2234_1391195071.1415866288301
+Content-Type: text/plain; charset=UTF-8
+
+Moreover, from the next section "How It Works":
+
+Instant personalization *partners sometimes use an email hash process to 
+> see if any of their users are on Facebook and get those users' User IDs*. 
+> This process is similar to searching for someone on Facebook using an email 
+> address, except in this case, *the email addresses are hashed so no 
+> actual email addresses are exchanged*. *The partner is also contractually 
+> required not to use your User ID for any purpose (other than associating it 
+> with your account) until you or your friends visit the site*.
+
+
+They get (limited, it seems) access to Facebook's user information in order 
+to see if any of their users are also on Facebook. They can't use your fb 
+user id until you visit their site (which begs the question: how do they 
+know you've visited their site assuming you don't have an account or 
+haven't logged on?)
+
+In addition to public info, it can see your user id, friends list (and any 
+info *they* have made public). *Unless given your express permission, the 
+site/app cannot see any information you haven't made public*. 
+
+But, y'know. You may have given that permission in *their *ToS. ;")
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2234_1391195071.1415866288301
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Moreover, from the next section "How It Works":<div><br></=
+div><blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; b=
+order-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-s=
+tyle: solid; padding-left: 1ex;"><span style=3D"color: rgb(20, 24, 35); fon=
+t-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-s=
+erif; font-size: 12px; line-height: 16px;">Instant personalization <u>partn=
+ers sometimes use an email hash process to see if any of their users are on=
+ Facebook and get those users' User IDs</u>. This process is similar to sea=
+rching for someone on Facebook using an email address, except in this case,=
+ <u>the email addresses are hashed so no actual email addresses are exchang=
+ed</u>. <b>The partner is also contractually required not to use your User =
+ID for any purpose (other than associating it with your account) until you =
+or your friends visit the site</b>.</span></blockquote><div><br></div><div>=
+They get (limited, it seems) access to Facebook's user information in order=
+ to see if any of their users are also on Facebook. They can't use your fb =
+user id until you visit their site (which begs the question: how do they kn=
+ow you've visited their site assuming you don't have an account or haven't =
+logged on?)</div><div><br></div><div>In addition to public info, it can see=
+ your user id, friends list (and any info&nbsp;<i>they</i>&nbsp;have made p=
+ublic).&nbsp;<b>Unless given your express permission, the site/app cannot s=
+ee any information you haven't made public</b>.&nbsp;</div><div><br></div><=
+div>But, y'know. You may have given that permission in <i>their </i>ToS. ;"=
+)</div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2234_1391195071.1415866288301--

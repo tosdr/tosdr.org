@@ -1,0 +1,173 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp103238wfj;
+        Fri, 15 Jun 2012 07:50:43 -0700 (PDT)
+Received: by 10.180.83.168 with SMTP id r8mr5114429wiy.22.1339771843474;
+        Fri, 15 Jun 2012 07:50:43 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDCl-3-BBoEd7NR9g@googlegroups.com>
+Received: from mail-wg0-f64.google.com (mail-wg0-f64.google.com [74.125.82.64])
+        by mx.google.com with ESMTPS id z9si3416905wiw.15.2012.06.15.07.50.42
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 15 Jun 2012 07:50:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDCl-3-BBoEd7NR9g@googlegroups.com designates 74.125.82.64 as permitted sender) client-ip=74.125.82.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDCl-3-BBoEd7NR9g@googlegroups.com designates 74.125.82.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDCl-3-BBoEd7NR9g@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by wgbfm10 with SMTP id fm10sf1713343wgb.29
+        for <multiple recipients>; Fri, 15 Jun 2012 07:50:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=aTip6arManN3TDg8kHuc61ZtvYxQzDbNg0ZRGoJtUO4=;
+        b=2zZg4sTmi6m2eazbZBMRNEc8ztExI4WAcq97pAQSybb/2hMAEBqaruL9QSEX/8rbYq
+         U23Zq4MFIR+36mUqJ20x826FXRSqOHEWC6IlpyMuunEHu2lh2onLKWQGu1hZImyfCxTA
+         Qbw3iLZW8AEOe/j6d49j8HRGS5fE9qe5ruqsM=
+Received: by 10.180.87.199 with SMTP id ba7mr260004wib.2.1339771842338;
+        Fri, 15 Jun 2012 07:50:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.99.194 with SMTP id x42ls481511eef.6.gmail; Fri, 15 Jun
+ 2012 07:50:41 -0700 (PDT)
+Received: by 10.14.187.129 with SMTP id y1mr1833778eem.10.1339771841081;
+        Fri, 15 Jun 2012 07:50:41 -0700 (PDT)
+Received: by 10.14.187.129 with SMTP id y1mr1833775eem.10.1339771841025;
+        Fri, 15 Jun 2012 07:50:41 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id v14si8599748eef.2.2012.06.15.07.50.40
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 15 Jun 2012 07:50:41 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id B6F6463A6B7
+	for <tosdr@googlegroups.com>; Fri, 15 Jun 2012 16:50:40 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id aqKCoGPg0Pus for <tosdr@googlegroups.com>;
+	Fri, 15 Jun 2012 16:50:33 +0200 (CEST)
+Received: from [192.168.44.167] (vpn14.hotsplots.net [80.237.234.132])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 0234463A60A
+	for <tosdr@googlegroups.com>; Fri, 15 Jun 2012 16:50:32 +0200 (CEST)
+Message-ID: <1339771831.21271.17.camel@synclavier.lan>
+Subject: [bad] Twitter copyright license: very broad scope and 3rd parties
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Fri, 15 Jun 2012 16:50:31 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+To continue on the thread about copyright licenses
+https://groups.google.com/forum/?fromgroups#!topic/tosdr/kizrN7qb1Ck
+(please answer to that post if you have further opinion about the
+general topic)
+
+Let's now focus on Twitter terms. https://twitter.com/tos
+
+TL;DR:=20
+     1. [mediocre] Ownership: The copyright license is very broad and
+        goes beyond the requirements to run the service,
+     2. [mediocre] Third-parties: Your data can be shared with Twitter's
+        partners and other third-parties, on Twitter's terms =96 not
+        yours.
+
+The copyright license in Twitter terms is, as I wrote earlier, very
+broad:
+        You retain your rights to any Content you submit, post or
+        display on or through the Services. By submitting, posting or
+        displaying Content on or through the Services, you grant us a
+        worldwide, non-exclusive, royalty-free license (with the right
+        to sublicense) to use, copy, reproduce, process, adapt, modify,
+        publish, transmit, display and distribute such Content in any
+        and all media or distribution methods (now known or later
+        developed).
+       =20
+        [Tip This license is you authorizing us to make your Tweets
+        available to the rest of the world and to let others do the
+        same.]
+       =20
+That seems reasonable, but is it? The "Tip" is very optimistic. The
+license isn't just about the rights "to display to the world" but is
+indeed much larger.
+
+I would say that the most worrying aspect of this license is that there
+are absolutely no limitations to this license. By limitations, I mean
+something like SeenThis (Twitter competitor) "autorisations permettant
+le bon fonctionnement du syst=E8me" or Dropbox's "These Terms do not grant
+us any rights to your stuff or intellectual property except for the
+limited rights that are needed to run the Services". Dropbox also
+documents in their privacy policy why exactly and with whom information
+is shared.
+
+Moreover if you look at how Twitter handled copyright prior to their
+September 2009 changes, you get a very different picture. Here's what we
+had before:
+        Copyright (What=92s Yours is Yours)
+       =20
+            We claim no intellectual property rights over the material
+        you provide to the Twitter service. Your profile and materials
+        uploaded remain yours. [...]
+            We encourage users to contribute their creations to the
+        public domain or consider progressive licensing terms.
+       =20
+I believe it's possible that this former policy may encounter problems.
+However I am not convinced that the current solution is in the best
+interest of the users. With such a broad scope in the copyright license,
+Twitter effectively becomes owner of the data (tweet, meta information
+in the tweet, pictures tweeted; etc.) and can transfer or sublicense to
+third parties. As acknowledges the current TOS:
+       =20
+        You agree that this license includes the right for Twitter to
+        provide, promote, and improve the Services and to make Content
+        submitted to or through the Services available to other
+        companies, organizations or individuals who partner with Twitter
+        for the syndication, broadcast, distribution or publication of
+        such Content on other media and services, subject to our terms
+        and conditions for such Content use.
+       =20
+        [Tip Twitter has an evolving set of rules for how ecosystem
+        partners can interact with your Content. These rules exist to
+        enable an open ecosystem with your rights in mind. But what=92s
+        yours is yours =96 you own your Content (and your photos are part
+        of that Content).]
+
+To me, what's in the best interest of the user is a copyright license
+chosen by the user, like for instance CC-BY or CC-BY-SA or CC-BY-NC or
+CC-BY-ND, whatever the _user_ chooses. At least in these case it is
+clear for users how their content is licensed.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

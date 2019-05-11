@@ -1,0 +1,123 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp161727qek;
+        Tue, 28 Aug 2012 02:58:57 -0700 (PDT)
+Received: by 10.14.202.131 with SMTP id d3mr21528034eeo.32.1346147936719;
+        Tue, 28 Aug 2012 02:58:56 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDfrPKBBRoEwRGyLA@googlegroups.com>
+Received: from mail-ey0-f192.google.com (mail-ey0-f192.google.com [209.85.215.192])
+        by mx.google.com with ESMTPS id m5si13683601een.99.2012.08.28.02.58.55
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 02:58:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDfrPKBBRoEwRGyLA@googlegroups.com designates 209.85.215.192 as permitted sender) client-ip=209.85.215.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDfrPKBBRoEwRGyLA@googlegroups.com designates 209.85.215.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDfrPKBBRoEwRGyLA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by eaal12 with SMTP id l12sf1690043eaa.29
+        for <multiple recipients>; Tue, 28 Aug 2012 02:58:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Xnm/BbolgBCxrARAEXlb94yJgg0AF8Al+cNICVVbqJA=;
+        b=qZBNRrQUx3W0t6GSisvcPlmM92s596TydJNxtFKF7tgi/MoRHaKctX2oSChis8FiNy
+         6sbsRM92MPyiAO+5TAEPfDCS1BxZBXYGkUQjfc1b0xuSSbQVpZEAdp+Xv3zlykifClSi
+         eyEDqcki3oauHeb12w0MJ0bjxPrsSQZznvCa0w3JU7J4CHGp0D8wcjqm3jdHKeUbn5z0
+         92h3zt7KTiZdHQGuqVzcEnQbWfqXebuuVcYvKLltk6xzhwFJ5YpT1oRQCVN0S+Vxx8F0
+         AaUGCUzufkvnvOI7s8DOTzovgynbA3ZUvyF1jm/iSfd0k7BwrPE5aSpcaRG6W8jNBKZ3
+         Nw8Q==
+Received: by 10.180.96.65 with SMTP id dq1mr1570914wib.2.1346147935623;
+        Tue, 28 Aug 2012 02:58:55 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.224.130 with SMTP id x2ls74646eep.7.gmail; Tue, 28 Aug 2012
+ 02:58:54 -0700 (PDT)
+Received: by 10.14.220.131 with SMTP id o3mr11784133eep.6.1346147934880;
+        Tue, 28 Aug 2012 02:58:54 -0700 (PDT)
+Received: by 10.14.220.131 with SMTP id o3mr11784131eep.6.1346147934870;
+        Tue, 28 Aug 2012 02:58:54 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d5si28863466eep.0.2012.08.28.02.58.54
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 02:58:54 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 8BC1863A689;
+	Tue, 28 Aug 2012 11:58:54 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id NtZ68nPgx+Kf; Tue, 28 Aug 2012 11:58:47 +0200 (CEST)
+Received: from [192.168.2.114] (unknown [178.19.216.162])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 370CC63A672;
+	Tue, 28 Aug 2012 11:58:47 +0200 (CEST)
+Message-ID: <1346147925.19155.20.camel@synclavier.lan>
+Subject: Re: [tosdr:681] api question
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 28 Aug 2012 11:58:45 +0200
+In-Reply-To: <338e28f6-4ae5-413c-9d5b-8bda3c4b086f@googlegroups.com>
+References: <338e28f6-4ae5-413c-9d5b-8bda3c4b086f@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le samedi 25 ao=FBt 2012 =E0 19:21 -0700, Matt Snyder a =E9crit :
+> Hi Hugo and others, quick question about your api.  Many of the
+> comments here in  this group are accompanied by excerpted sentences
+> from the agreement being critiqued, and that excerpt is valuable for my
+> project.  Would it be possible to keep the excerpt with the comment,
+> perhaps call it a citation?
+>=20
+
+Hi Matt,
+
+I thought about that for a moment, but it was too difficult to maintain
+etc.=20
+
+So the way we do it is that in the data points we try to make the most
+precise links to the source. Ideally, the source would point to the
+excerpt from an archived version where people can also comment and
+annotate.=20
+
+I plan on doing that with co-ment.
+
+Best,
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

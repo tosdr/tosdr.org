@@ -1,0 +1,134 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.43.94.130 with SMTP id by2csp462387icc;
+        Wed, 10 Sep 2014 14:10:04 -0700 (PDT)
+X-Received: by 10.152.18.130 with SMTP id w2mr5155915lad.89.1410383403343;
+        Wed, 10 Sep 2014 14:10:03 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBKP4YKQAKGQEPJECVEA@googlegroups.com>
+Received: from mail-lb0-x23f.google.com (mail-lb0-x23f.google.com [2a00:1450:4010:c04::23f])
+        by mx.google.com with ESMTPS id lk1si15072750lac.4.2014.09.10.14.10.02
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 10 Sep 2014 14:10:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBKP4YKQAKGQEPJECVEA@googlegroups.com designates 2a00:1450:4010:c04::23f as permitted sender)
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBKP4YKQAKGQEPJECVEA@googlegroups.com designates 2a00:1450:4010:c04::23f as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBKP4YKQAKGQEPJECVEA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: by mail-lb0-f191.google.com with SMTP id w7sf557924lbi.18
+        for <michiel@unhosted.org>; Wed, 10 Sep 2014 14:10:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=xJrN1k/2b1LoY+VNyZfGsCsbY/UAZNqPhAZAA6Q7wfo=;
+        b=QuGgKcOy+PUqSR+hvOBhWVN2fhLXl+0JV2pV46BBxh6nEPj0o08Qauv6eLtKr/1qYk
+         LPBXiXXHR+Jo81i1Dld/KGe1K1d1b//rG4GktArY8Ub03owGq200YMIuBKJRR0j75bn9
+         YzJx5q771k1z2eZRoF1YYU0MdmBplxT50YQ8LXm+ggdpCRRoTLbaCalE7ckUbI6JKsIo
+         oaVvCNcH7E0N85S9FvYq5Oyw0Eh8wM8gZi2zPHae6LlMPaOjwrf3DtRQBaFMEUPDnhhp
+         XkMl+SGJeBXEuaRnol+P+aC/YW+5w275XIjr54CAgY0e6lBImxjk1+qu3qQpsj1sTIly
+         E8rA==
+X-Received: by 10.180.186.6 with SMTP id fg6mr24545wic.11.1410383402486;
+        Wed, 10 Sep 2014 14:10:02 -0700 (PDT)
+X-Received: by 10.180.198.172 with SMTP id jd12mr420220wic.6.1410383401667;
+        Wed, 10 Sep 2014 14:10:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.19.40 with SMTP id b8ls607766lae.73.gmail; Wed, 10 Sep
+ 2014 14:09:58 -0700 (PDT)
+X-Received: by 10.152.42.229 with SMTP id r5mr3578lal.8.1410383398851;
+        Wed, 10 Sep 2014 14:09:58 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id gg11si178261wic.0.2014.09.10.14.09.58
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 10 Sep 2014 14:09:58 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4EB5363B4BB
+	for <tosdr@googlegroups.com>; Wed, 10 Sep 2014 23:09:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 1kvTuDabVlBX for <tosdr@googlegroups.com>;
+	Wed, 10 Sep 2014 23:09:56 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:242d:1bb0:3e77:e6ff:fe18:ed03])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id EFED463AFF7
+	for <tosdr@googlegroups.com>; Wed, 10 Sep 2014 23:09:54 +0200 (CEST)
+Date: Wed, 10 Sep 2014 23:09:51 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3271] Re: Twitter [bad] Right to access
+Message-ID: <20140910210951.GA32279@xps>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com>
+ <7001473d-ec5f-4164-b15c-817d4c328199@googlegroups.com>
+ <34df663c-0922-4263-9d2e-616c3b67321d@googlegroups.com>
+ <540AD403.7030000@michielbdejong.com>
+ <20140907204523.GA7036@xps>
+ <540DB80E.9010000@michielbdejong.com>
+ <d25bf93c-f11f-4648-be80-a4562321932b@googlegroups.com>
+ <20140910064919.GA14781@xps>
+ <66e2f9f9-5934-4678-8abd-c396618c97f4@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="AhhlLboLdkugWU4S"
+Content-Disposition: inline
+In-Reply-To: <66e2f9f9-5934-4678-8abd-c396618c97f4@googlegroups.com>
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugoroyd@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/d/topic/tosdr/0Q-ZHqdSZ3g/unsubscribe>
+
+
+--AhhlLboLdkugWU4S
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-09-10 Wed 19:50, Anna D <aanmeldingen49@gmail.com>:
+> No, I can't find anything about it in the ToS, privacy policy or "Twitter=
+=20
+> rules" (which is part of the ToS), unfortunately.
+
+Then, I would leave it out;
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--AhhlLboLdkugWU4S
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUEL4fAAoJEI0CLJmz17eVb8UH/AsAAh9K8V+5vALzb2YQFfs6
+p01VV4yQTjtnjv3F12t1/wQhq4YqIwhD75WDW9uKhaLgo0LXf0oWLV3H8razXWXM
+Grd659gI5Jxows+QQZLLKlsotkMxAcWgLOqt2Iphos70orCwKagy6xpf/B9NzYwE
+aFnQbZP7ldxIdhWwjsmM4A+nYiSClm6bjxBSXCMxB0kTfGpy51dUHXsJF5PqlMIg
+uz1ldK2brG/FqBJizLCln0qMwW50eb9Sp7c476GIheygFYAO37i3hzw2LfV4Iy7k
+F3ZmGtVXxPShunz2E1cJtF4NaDsuwPmOA7OszrNZ1LxsTZC6EeZsaXVi27OvQN0=
+=0kKL
+-----END PGP SIGNATURE-----
+
+--AhhlLboLdkugWU4S--

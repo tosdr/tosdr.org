@@ -1,0 +1,275 @@
+Return-Path: <tosdr+bncBCNMDAXBZ4LBBJWHSGRQKGQEA2TTUIQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id BE0FB40F41
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 08:54:17 +0100 (CET)
+Received: from mfilter39-d.gandi.net (mfilter39-d.gandi.net [217.70.178.170])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B9F911FAFE3
+	for <anything@michielbdejong.com>; Thu, 13 Nov 2014 08:54:17 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter39-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter39-d.gandi.net (mfilter39-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 2fpISAF7EDGY for <anything@michielbdejong.com>;
+	Thu, 13 Nov 2014 08:54:16 +0100 (CET)
+Received: from mail-yk0-x23c.google.com (mail-yk0-x23c.google.com [IPv6:2607:f8b0:4002:c07::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id BF7431FAFDD
+	for <michiel@michielbdejong.com>; Thu, 13 Nov 2014 08:54:15 +0100 (CET)
+Received: by mail-yk0-f188.google.com with SMTP id q9sf1246059ykb.5
+        for <michiel@michielbdejong.com>; Wed, 12 Nov 2014 23:54:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=HUljiuLHh84tY87ntV8dJedWw8ZT4UmdYFPuorH7Nrw=;
+        b=JyLKnFmnGpSskei+4yO0OcOnpXlaC2hokxp5G00SdUcdi9Uyd9s/+sT/BeAnlsmH54
+         Y76ysgf5ayCUpjsYchOblzavrd+6iNEuJZw+sCoIwyFufi9wz6NU6Ua0J7jzsO5su9yp
+         Zk7QLyN4cEwOVUDnOA4texPZv1j26dpfM06JSJnyWHf1yxMGDe4fotnpoo7lNu8tD4nD
+         R9Hihvjwqti1uO+/ogTBkFVqA3d8//9kuWJCk4La38VJch9PRgHFX0k8IFZBU8QkBIhj
+         SDTsMcyL4oT/rGVHCDJHyF8eA/EB4upIJfoGVH0I1wkEJo/Px4GL6P9lqI4zVKvdTcLz
+         IzMg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=HUljiuLHh84tY87ntV8dJedWw8ZT4UmdYFPuorH7Nrw=;
+        b=QBCkWhTN4zzycycX5HUQHg69Q60A1/qQESEpJvHTRzCMU0vEOVkBKL2DCqutLRDvFd
+         8H+q6HvwJUVL+i66PQc0UlOLVBLcli/1PWvddREAV7UhvbJoaGfpe+LpWoGE8PxDCLsz
+         WrQPXk4fDZG0eUqU+NlTXbi1BJCpwJF+NUjV/uF/H9TKgIKcC7ikvA7w1r0ka1q/nuG/
+         3/n91RhzmWPhRpRqXU92fZkBK5hL5iWm2SoGwEbnsucJQ3yD2RFr/RYni0dvwVTBA9Bw
+         6Y0TcbG3KC60amsT1F+BRUddCImrQrOuaD6Xm6Oj+WLBwwf+eUHZGE4uNiIGm0ym+DJy
+         mjBw==
+X-Received: by 10.50.67.111 with SMTP id m15mr546540igt.1.1415865254881;
+        Wed, 12 Nov 2014 23:54:14 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.13.5 with SMTP id 5ls2558471ion.23.gmail; Wed, 12 Nov 2014
+ 23:54:14 -0800 (PST)
+X-Received: by 10.50.66.144 with SMTP id f16mr548454igt.1.1415865254354;
+        Wed, 12 Nov 2014 23:54:14 -0800 (PST)
+Date: Wed, 12 Nov 2014 23:54:13 -0800 (PST)
+From: Hedge Sparrow <kipperpanzee@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <37fb4fdc-7047-427c-978b-d36c2e69083f@googlegroups.com>
+In-Reply-To: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+References: <CA+aD3u1V6HjRzV3gbd6RNzDiGoA4kAojo79adt7Mq88Amhd+AA@mail.gmail.com>
+Subject: [tosdr:3322] Re: [Bad] Facebook automatically shares your information
+MIME-Version: 1.0
+X-Original-Sender: kipperpanzee@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2192_306319317.1415865253533"
+
+------=_Part_2192_306319317.1415865253533
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+From https://www.facebook.com/full_data_use_policy#ip :=20
+
+Instant personalization (sometimes also referred to as "Start now") is a=20
+> way for Facebook to help partners (such as Bing and Rotten Tomatoes) on a=
+nd=20
+> off Facebook to create a more personalized and social experience for logg=
+ed=20
+> in users than a social plugin=20
+> <https://www.facebook.com/full_data_use_policy#socialplugins> can offer.=
+=20
+> When you visit a site or app using instant personalization, it will know=
+=20
+> some information about you and your friends the moment you arrive. This i=
+s=20
+> because *sites and apps using instant personalization can access your=20
+> User ID, your friend list, and your **public information=20
+> <https://www.facebook.com/full_data_use_policy#publicinfo>.*
+
+
+They automatically give your info to partner sites (from this I can't tell=
+=20
+if they share the info *when* you visit those sites or if those sites have=
+=20
+access to that information anyway. In any case, it seems the info they=20
+share is more-or-less public anyway (see underlined above).
+
+The first time you visit a site or app using instant personalization, you=
+=20
+> will see a notification letting you know that the site or app has partner=
+ed=20
+> with Facebook to provide a personalized experience.
+> The notification will give you the ability to disable or turn off instant=
+=20
+> personalization for that site or app. *If you do that, that site or app=
+=20
+> is required to delete all of the information *about you it received from=
+=20
+> Facebook as part of the instant personalization program. In addition, we=
+=20
+> will prevent that site from accessing your information in the future, eve=
+n=20
+> when your friends use that site.
+> If you decide that you do not want to experience instant personalization=
+=20
+> for all partner sites and apps, *you can disable instant personalization=
+=20
+> from the =E2=80=9CApps <https://www.facebook.com/settings?tab=3Dapplicati=
+ons>=E2=80=9D=20
+> settings page*.
+> If you turn off instant personalization, these partner third party sites=
+=20
+> and apps will not be able to access your public information, even when yo=
+ur=20
+> friends visit those sites.
+
+
+COMMENT: Thus, you can turn off info sharing (so far, it seems, only on a=
+=20
+case by case basis). If you turn off personalization via this notification,=
+=20
+the site/app is required to delete all the info it received from Facebook.
+
+If you turn off an instant personalization site or app after you have been=
+=20
+> using it or visited it a few times (or after you have given it specific=
+=20
+> permission to access your data), it will not automatically delete=20
+> information about you it received through Facebook. Like all other apps,=
+=20
+> the site is required by our policies to delete information about you if y=
+ou=20
+> ask it to do so.
+
+
+COMMENT: Here I get somewhat confused; the first sentence suggests that the=
+=20
+site/app can keep your information if you've already given it permission,=
+=20
+or if you have used it multiple times without turning off personalization.=
+=20
+Okay. Then the second sentence says they're required to delete that=20
+information if you ask.=20
+So, I suppose that means *if you didn't turn off personalization when the=
+=20
+notification showed up the first time, *turning off personalization is NOT=
+=20
+deleting the information which has already been given out. Deletion only=20
+happens when the site/app is* expressly* asked to delete your personal=20
+information. It seems you do this through Facebook, but how is anyone's=20
+guess.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2192_306319317.1415865253533
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>From <a href=3D"https://www.facebook.com/full_data_use=
+_policy#ip">https://www.facebook.com/full_data_use_policy#ip</a> : <br><br>=
+<blockquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; borde=
+r-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style=
+: solid; padding-left: 1ex;"><span style=3D"color: rgb(20, 24, 35); font-fa=
+mily: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif=
+; font-size: 12px; line-height: 16px;">Instant personalization (sometimes a=
+lso referred to as "Start now") is a way for Facebook to help partners (suc=
+h as Bing and Rotten Tomatoes) on and off Facebook to create a more persona=
+lized and social experience for logged in users than a&nbsp;</span><a href=
+=3D"https://www.facebook.com/full_data_use_policy#socialplugins" style=3D"c=
+olor: rgb(59, 89, 152); cursor: pointer; font-family: Helvetica, Arial, 'lu=
+cida grande', tahoma, verdana, arial, sans-serif; font-size: 12px; line-hei=
+ght: 16px;">social plugin</a><span style=3D"color: rgb(20, 24, 35); font-fa=
+mily: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif=
+; font-size: 12px; line-height: 16px;">&nbsp;can offer. When you visit a si=
+te or app using instant personalization, it will know some information abou=
+t you and your friends the moment you arrive. This is because <u>sites and =
+apps using instant personalization can access your User ID, your friend lis=
+t, and your&nbsp;</u></span><u><a href=3D"https://www.facebook.com/full_dat=
+a_use_policy#publicinfo" style=3D"color: rgb(59, 89, 152); cursor: pointer;=
+ font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sa=
+ns-serif; font-size: 12px; line-height: 16px;">public information</a><span =
+style=3D"color: rgb(20, 24, 35); font-family: Helvetica, Arial, 'lucida gra=
+nde', tahoma, verdana, arial, sans-serif; font-size: 12px; line-height: 16p=
+x;">.</span></u></blockquote> <br>They automatically give your info to part=
+ner sites (from this I can't tell if they share the info <i>when</i>&nbsp;y=
+ou visit those sites or if those sites have access to that information anyw=
+ay. In any case, it seems the info they share is more-or-less public anyway=
+ (see underlined above).<br><br><blockquote style=3D"margin: 0px 0px 0px 0.=
+8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-=
+left-style: solid; padding-left: 1ex;" class=3D"gmail_quote">The first time=
+ you visit a site or app using instant personalization, you will see a noti=
+fication letting you know that the site or app has partnered with Facebook =
+to provide a personalized experience.<br>The notification will give you the=
+ ability to disable or turn off instant personalization for that site or ap=
+p. <b>If you do that, that site or app is required to delete all of the inf=
+ormation </b>about you it received from Facebook as part of the instant per=
+sonalization program. In addition, we will prevent that site from accessing=
+ your information in the future, even when your friends use that site.<br>I=
+f you decide that you do not want to experience instant personalization for=
+ all partner sites and apps, <u>you can disable instant personalization fro=
+m the =E2=80=9C<a href=3D"https://www.facebook.com/settings?tab=3Dapplicati=
+ons" style=3D"color: rgb(59, 89, 152); cursor: pointer;">Apps</a>=E2=80=9D =
+settings page</u>.<br>If you turn off instant personalization, these partne=
+r third party sites and apps will not be able to access your public informa=
+tion, even when your friends visit those sites.</blockquote><br>COMMENT: Th=
+us, you can turn off info sharing (so far, it seems, only on a case by case=
+ basis). If you turn off personalization via this notification, the site/ap=
+p is required to delete all the info it received from Facebook.<br><br><blo=
+ckquote class=3D"gmail_quote" style=3D"margin: 0px 0px 0px 0.8ex; border-le=
+ft-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: so=
+lid; padding-left: 1ex;"><span style=3D"color: rgb(20, 24, 35); font-family=
+: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif; fo=
+nt-size: 12px; line-height: 16px;">If you turn off an instant personalizati=
+on site or app after you have been using it or visited it a few times (or a=
+fter you have given it specific permission to access your data), it will no=
+t automatically delete information about you it received through Facebook. =
+Like all other apps, the site is required by our policies to delete informa=
+tion about you if you ask it to do so.</span></blockquote><br>COMMENT: Here=
+ I get somewhat confused; the first sentence suggests that the site/app can=
+ keep your information if you've already given it permission, or if you hav=
+e used it multiple times without turning off personalization. Okay. Then th=
+e second sentence says they're required to delete that information if you a=
+sk. <br>So, I suppose that means <i>if you didn't turn off personalization =
+when the notification showed up the first time,&nbsp;</i>turning off person=
+alization is NOT deleting the information which has already been given out.=
+ Deletion only happens when the site/app is<i> expressly</i> asked to delet=
+e your personal information. It seems you do this through Facebook, but how=
+ is anyone's guess.</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2192_306319317.1415865253533--

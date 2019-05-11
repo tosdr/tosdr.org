@@ -1,0 +1,114 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp187281vec;
+        Fri, 7 Dec 2012 16:40:07 -0800 (PST)
+Received: by 10.60.2.135 with SMTP id 7mr2148667oeu.127.1354927207114;
+        Fri, 07 Dec 2012 16:40:07 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBZEYRKDAKGQEHVUUQXA@googlegroups.com>
+Received: from mail-ob0-f188.google.com (mail-ob0-f188.google.com [209.85.214.188])
+        by mx.google.com with ESMTPS id b5si10225268obl.208.2012.12.07.16.40.05
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 16:40:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBZEYRKDAKGQEHVUUQXA@googlegroups.com designates 209.85.216.181 as permitted sender) client-ip=209.85.216.181;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBZEYRKDAKGQEHVUUQXA@googlegroups.com designates 209.85.216.181 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBZEYRKDAKGQEHVUUQXA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-ob0-f188.google.com with SMTP id wc20sf540404obb.15
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 16:40:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:sender:in-reply-to:references
+         :date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=xNM0xybUyesTArhnV4d8gUv45qvX3aK6NggQr17TdmY=;
+        b=aapCUFE5G06pjdrFXBMG/8pBihP39tf6HUJ8CtgBj0wU9sbWRXONoRVqgn13jc5gZb
+         I5ZLrKStLf4beAXM9NKJwFToMuckR6IhVHjDpoop2rqulFDvhuPa+iPnAZzDfj6lZss2
+         ecES2zB+G6kuVqoWiDohEQUGmyQd/cGLVEMoLMeCfc8XM08Vdb0k8X9wjz5YYmwgjZsA
+         OrJ+lksVbIcGQjhT/rKD60XDagLp5goauE9jecZsfzyzScYyadJKwH56G9PR9ROqCuIP
+         uNE/xF3ZjpWMwvWoeZ6RKkhMGcJpzBWBpLCVxyGNXeDmnQHifoWOiwHwWmTbzyxt/+0y
+         EcKw==
+Received: by 10.49.18.231 with SMTP id z7mr1744994qed.25.1354927205481;
+        Fri, 07 Dec 2012 16:40:05 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.94.82 with SMTP id da18ls2881587qeb.26.gmail; Fri, 07 Dec
+ 2012 16:40:04 -0800 (PST)
+Received: by 10.224.183.16 with SMTP id ce16mr5585803qab.8.1354927204149;
+        Fri, 07 Dec 2012 16:40:04 -0800 (PST)
+Received: by 10.224.174.76 with SMTP id s12msqaz;
+        Fri, 7 Dec 2012 14:55:16 -0800 (PST)
+Received: by 10.224.105.205 with SMTP id u13mr5472233qao.6.1354920916152;
+        Fri, 07 Dec 2012 14:55:16 -0800 (PST)
+Received: by 10.224.105.205 with SMTP id u13mr5472231qao.6.1354920916142;
+        Fri, 07 Dec 2012 14:55:16 -0800 (PST)
+Received: from mail-qc0-f181.google.com (mail-qc0-f181.google.com [209.85.216.181])
+        by gmr-mx.google.com with ESMTPS id r17si3057368qcp.1.2012.12.07.14.55.16
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 14:55:16 -0800 (PST)
+Received-SPF: pass (google.com: domain of devlinks@gmail.com designates 209.85.216.181 as permitted sender) client-ip=209.85.216.181;
+Received: by mail-qc0-f181.google.com with SMTP id x40so514905qcp.12
+        for <tosdr@googlegroups.com>; Fri, 07 Dec 2012 14:55:16 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.224.59.209 with SMTP id m17mr12351142qah.49.1354920916047;
+ Fri, 07 Dec 2012 14:55:16 -0800 (PST)
+Sender: tosdr@googlegroups.com
+Received: by 10.49.25.5 with HTTP; Fri, 7 Dec 2012 14:55:15 -0800 (PST)
+In-Reply-To: <CAE3efOW738Os-PV4NkKWs1VV43uNstQ7Ga+wPpmXo1PmE6aoJg@mail.gmail.com>
+References: <1354897845.2788111732166703@mf58.sendgrid.net>
+	<CAE3efOW738Os-PV4NkKWs1VV43uNstQ7Ga+wPpmXo1PmE6aoJg@mail.gmail.com>
+Date: Fri, 7 Dec 2012 18:55:15 -0400
+Message-ID: <CAB8Z3Ef-8v=dwpDtFuxgabCjhohOYXa96xUHen76z-a_J0daFg@mail.gmail.com>
+Subject: Re: [tosdr:1270] Re: Are ToS;DR reviews and ratings stored in a database?
+From: Robin Monks <robin@robinmonks.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: devlinks@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of devlinks@gmail.com designates 209.85.216.181 as permitted sender)
+ smtp.mail=devlinks@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=20cf306f76b6e6569004d04b1b48
+
+--20cf306f76b6e6569004d04b1b48
+Content-Type: text/plain; charset=ISO-8859-1
+
+You'd need a script to read JSON and output CSV.
+
+/Robin
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--20cf306f76b6e6569004d04b1b48
+Content-Type: text/html; charset=ISO-8859-1
+
+<div class="gmail_extra">You&#39;d need a script to read JSON and output CSV.</div><div class="gmail_extra"><br></div><div class="gmail_extra">/Robin</div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr?hl=en">http://groups.google.com/group/tosdr?hl=en</a>.<br />
+For more options, visit <a href="https://groups.google.com/groups/opt_out">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--20cf306f76b6e6569004d04b1b48--

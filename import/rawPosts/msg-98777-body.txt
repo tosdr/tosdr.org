@@ -1,0 +1,116 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp39318qek;
+        Wed, 3 Oct 2012 16:17:24 -0700 (PDT)
+Received: by 10.52.175.35 with SMTP id bx3mr1684905vdc.4.1349306244193;
+        Wed, 03 Oct 2012 16:17:24 -0700 (PDT)
+Return-Path: <tosdr+bncBDLJF5GCYEHRBA4PWOBQKGQEZMNI5RA@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id dk7si3252510vdc.119.2012.10.03.16.17.23
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 03 Oct 2012 16:17:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBDLJF5GCYEHRBA4PWOBQKGQEZMNI5RA@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDLJF5GCYEHRBA4PWOBQKGQEZMNI5RA@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncBDLJF5GCYEHRBA4PWOBQKGQEZMNI5RA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbf13 with SMTP id f13sf6779827vcb.29
+        for <michiel@unhosted.org>; Wed, 03 Oct 2012 16:17:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=qOX6RMXm7CrHDANq6G5l5CGD3zyWgTCqBPjLGM5Npos=;
+        b=P/7+TGVxoqGO4ZbHc+Z1xSw/03SmYy1lRw6OhJy4M0hojIDYdJkjVGZXLubbq/Poq2
+         yYnubNTshIhknUm8PNaOgW9Y7H2zAY0s9IJh6PQRorVgCwbFkXCThOvTVbHC2JfNByyH
+         zLzlWxx/RUTgJ8ZYiF0QLmMnmt73KDZQenNbf1mrt5qY76Kk+xjkyjM7lckuhI/bC7a+
+         bbOAhXzIRfCR4gPNRI0rKi4j5SGnrJcjzP47IiFN8ZyfGt6QTBIpWhrRvHKtugIQbOaW
+         vAri173J9ltiI1f9pnUdkgITicVHbRq7YGFU2oFzp4klKCNaKl8fi47byFF1oMT+8jWs
+         WPvQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=qOX6RMXm7CrHDANq6G5l5CGD3zyWgTCqBPjLGM5Npos=;
+        b=DqSstn9/A5wFi+fBJxG9cFFRbQsEuoIhJ9GFYOeScLHDPpiyZ7WlHx87YikIXzDwiy
+         9JjaqE2p3ldFWXI6mt5GXdRVILxNC8p4LER5/K9/765RiBN3XbbYmEpXPlbZfvkSnWMa
+         Mm3YfYBotWaTHIvJQYOANLMOm+WOOJNwpow4kttamTv/kLsYykVuN07S5hY/2w/koMv2
+         HvCRexhGb0BAVg2/qEoUwVCRIIbXJvPz3VHLiMGwUiN/R12nnyvkjMVoYOVwf2rf8DFC
+         Oqytcleeuhf36vm30qsmlg6wRqez6jDTpYd74L1gQyR8oM1hnqmLRNtdGyAYIOAoAgGz
+         J78w==
+Received: by 10.50.169.103 with SMTP id ad7mr2185171igc.3.1349306243724;
+        Wed, 03 Oct 2012 16:17:23 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.51.234 with SMTP id n10ls14103750igo.3.canary; Wed, 03 Oct
+ 2012 16:17:23 -0700 (PDT)
+Received: by 10.42.80.2 with SMTP id t2mr2329277ick.9.1349306243115;
+        Wed, 03 Oct 2012 16:17:23 -0700 (PDT)
+Received: by 10.42.80.2 with SMTP id t2mr2329276ick.9.1349306243107;
+        Wed, 03 Oct 2012 16:17:23 -0700 (PDT)
+Received: from mail-ie0-f178.google.com (mail-ie0-f178.google.com [209.85.223.178])
+        by gmr-mx.google.com with ESMTPS id rf8si748319igb.2.2012.10.03.16.17.22
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 03 Oct 2012 16:17:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.223.178 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.223.178;
+Received: by mail-ie0-f178.google.com with SMTP id e11so19245269iej.9
+        for <tosdr@googlegroups.com>; Wed, 03 Oct 2012 16:17:22 -0700 (PDT)
+Received: by 10.50.10.163 with SMTP id j3mr3565578igb.18.1349306242768; Wed,
+ 03 Oct 2012 16:17:22 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.64.137.227 with HTTP; Wed, 3 Oct 2012 16:17:02 -0700 (PDT)
+X-Originating-IP: [188.102.167.179]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Thu, 4 Oct 2012 01:17:02 +0200
+Message-ID: <CABQMFTQoO_E6V2crecxcGySDfmLPTYcg8sO_dJs4MZTmEoMzUA@mail.gmail.com>
+Subject: [tosdr:973] Propaganda posters
+To: remotestorage@librelist.com, Unhosted <unhosted@googlegroups.com>, 
+	=?windows-1252?Q?Terms_of_Service=2C_Didn=92t_Read?= <tosdr@googlegroups.com>
+X-Gm-Message-State: ALoCoQnd/RL/O8Z51bcjToAPw108ma5Dor73g3uTX7hx1a/4uGs0SNXilwqWC5yKd4J9cHRplyyN
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.223.178 is neither permitted nor denied by best guess record for
+ domain of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Here=92s some propaganda posters for unhosted web apps, remotestorage
+and Terms of Service; Didn=92t Read:
+https://github.com/unhosted/design/commit/5df258df57d46f3429caf7adcc3eb7b36=
+6e2ea36
+
+It=92s a hommage to the infamous =BBHome Taping Is Killing Music=AB campaig=
+n
+against copyright infringement, which through the years already
+spawned parodies like =BBHome Sewing Is Killing Fashion=AB. See
+https://en.wikipedia.org/wiki/Home_Taping_Is_Killing_Music
+
+The typeface used is the openly licensed =BBPassion One=AB:
+https://www.google.com/webfonts/specimen/Passion+One
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

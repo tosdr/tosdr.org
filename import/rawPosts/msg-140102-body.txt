@@ -1,0 +1,133 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.217 with SMTP id m86csp669681ioi;
+        Thu, 21 Jan 2016 20:58:36 -0800 (PST)
+X-Received: by 10.194.105.99 with SMTP id gl3mr926113wjb.90.1453438716061;
+        Thu, 21 Jan 2016 20:58:36 -0800 (PST)
+Return-Path: <tosdr+bncBCUM3KPGV4BBB6HNQ22QKGQE5D535IQ@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id wx4si6176369wjc.156.2016.01.21.20.58.35
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 21 Jan 2016 20:58:36 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCUM3KPGV4BBB6HNQ22QKGQE5D535IQ@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCUM3KPGV4BBB6HNQ22QKGQE5D535IQ@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBCUM3KPGV4BBB6HNQ22QKGQE5D535IQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id CFD9417209D
+	for <michiel@unhosted.org>; Fri, 22 Jan 2016 05:58:35 +0100 (CET)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id B193E226042
+	for <michiel@unhosted.org>; Fri, 22 Jan 2016 05:58:35 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 7dWC6LTqh-om for <michiel@unhosted.org>;
+	Fri, 22 Jan 2016 05:58:34 +0100 (CET)
+Received: from mail-pa0-x239.google.com (mail-pa0-x239.google.com [IPv6:2607:f8b0:400e:c03::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25FB2226045
+	for <michiel@michielbdejong.com>; Fri, 22 Jan 2016 05:58:34 +0100 (CET)
+Received: by mail-pa0-x239.google.com with SMTP id gi1sf13835557pac.0
+        for <michiel@michielbdejong.com>; Thu, 21 Jan 2016 20:58:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=hYbe13B2ERZgyrX/fOw0fCKQM1Qsow/QckSED2b1cOc=;
+        b=TcdqjTo3Uesd984fmcgirEZ+MAYOY75gMDPVsQqG/pNtQ2qBn6i9qU39VKREyopbhf
+         24+KjFCgfBC7/bARLSJov9WuFv8JXqnwXsIlJWlPi3mOmAtSZZmW9msv7KNpJi0C9zA6
+         UJCiSpn+LAGt/B/VsAEem6qqe1pH9ZJ0BJY12YLj6YM8FN8sSnT73VeBQ1zoe0ac3QbQ
+         QY/lbwKNiOM5U8r22EjhCzl2azbnzbe1Jm2ybLjOVmVQvTTZ3BNgtjOa5kTYSXyJYIhr
+         HUBvTf5GtAgeQs+TkyDADrMZbPklivMleM4EXXb9qcN6T9BYIjs8WPJmAK7z+PnBUiyp
+         tDfQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=hYbe13B2ERZgyrX/fOw0fCKQM1Qsow/QckSED2b1cOc=;
+        b=cznW4PCuIHUPKTmUl2D15foMJXzn22ixPmUu+oDLFGYg/ID81wD72NEhXX1nSFZLeM
+         ru86tSB52A2eUh5JtC4c3jZB9oC3g8paRLMZwZFkgbQXu/eiCgPwHOHvQSd55P7cQ56w
+         4a8XHH/vtFekrFweiA6EAeHaKx80W0V6HfpItHd8IgsVx/CzBGR8jw77mJdQqaBzt0d2
+         ltJC2FquASBmeEAJu7CvylWGPSmwig89ZixvRt/VzWCN6fEFuEeY9Z8ac60gB5+YUDbN
+         6JKLl5vbyDJdELOr7Ndt3oJ/jf7MDsMTB90+2E/xgnQJ9C+WDiiUX+5lrv7u+W2H8GPY
+         UGzQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:cc:message-id:in-reply-to
+         :references:subject:mime-version:content-type:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=hYbe13B2ERZgyrX/fOw0fCKQM1Qsow/QckSED2b1cOc=;
+        b=dasV9IYD9k+UJ+x2egsZuUTBBZszuCgjVP0DJiU2P4So2MDt7R+LrDpurucZBQ6Qpq
+         Qtf9h9CLpvUcW+vT2bjlJAgwmaB6D1bqrj0PgMJBhoQNZx4EcbmM4sCmq8mGb5T3LrEh
+         55fUrrZzaVWhamzbib7BXX9qJDv0c+k74fDvBdAmbBNoeRzIawbv8YxxyZmn1hTUAoha
+         bVOGVXf+UxEQJsvxrdkb0SWtbDyHRccFqRvCOp2cxNM3E9fVbSKTZxWnKF2fmmN/WxVS
+         vU634s213yWlWCC69JzMlzg0d/oVZuGaQam1p45+xUthQH4qnds+NotcXEZVrI0NV5WY
+         9vqA==
+X-Gm-Message-State: AG10YORla6/M7hW7o+LTjLvq9v1fjjvvesYMQLB4znxsiesHKJ71HqXQfRjHxriFwCYg6w==
+X-Received: by 10.50.131.168 with SMTP id on8mr58992igb.5.1453438712938;
+        Thu, 21 Jan 2016 20:58:32 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.164.216 with SMTP id d85ls714435ioj.73.gmail; Thu, 21 Jan
+ 2016 20:58:32 -0800 (PST)
+X-Received: by 10.50.25.196 with SMTP id e4mr59261igg.8.1453438712524;
+        Thu, 21 Jan 2016 20:58:32 -0800 (PST)
+Date: Thu, 21 Jan 2016 20:58:31 -0800 (PST)
+From: sesquized@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: owncube.e.u@gmail.com
+Message-Id: <b38cedcd-9877-452c-927e-df096e65a561@googlegroups.com>
+In-Reply-To: <5d8d984d-ed06-4b5f-87d0-23d9974fc2e5@googlegroups.com>
+References: <CA+aD3u0o+-XUNzLscPC03+FiqJAQ1oOEZ=Sjhkftym_EEH6-CQ@mail.gmail.com>
+ <5d8d984d-ed06-4b5f-87d0-23d9974fc2e5@googlegroups.com>
+Subject: [tosdr:3738] Re: [Bad] OwnCube can remove your account after complaints
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_690_1466789156.1453438711427"
+X-Original-Sender: sesquized@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_690_1466789156.1453438711427
+Content-Type: text/plain; charset=UTF-8
+
+On Tuesday, September 25, 2012 at 3:30:20 PM UTC-4, owncu...@gmail.com wrote:
+> Wrong info here too.
+> 
+> https://owncube.com/privacy.php
+> https://owncube.com/terms.php
+
+These links now give 404s.
+
+The current terms, dated 11/24/2012 are even worse than what is currently listed on tosdr 
+
+"13 VPS Abuse If we get a Abuse mails due copyrighted files or illegal bandwidh / usage including transfer protocoll or proofs, we will suspend your VPS instantly and we will close your account and you will not get any refund."
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_690_1466789156.1453438711427--

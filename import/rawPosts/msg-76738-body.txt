@@ -1,0 +1,191 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp197534wfj;
+        Wed, 20 Jun 2012 06:53:21 -0700 (PDT)
+Received: by 10.220.241.18 with SMTP id lc18mr1018118vcb.43.1340200401202;
+        Wed, 20 Jun 2012 06:53:21 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDPq4f_BBoEt-MzBw@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id p20si5182790vcu.4.2012.06.20.06.53.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 06:53:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDPq4f_BBoEt-MzBw@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDPq4f_BBoEt-MzBw@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDPq4f_BBoEt-MzBw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbfk1 with SMTP id fk1sf6503146vcb.29
+        for <multiple recipients>; Wed, 20 Jun 2012 06:53:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=csGon3ZrCW/6mwsBenv0d8q6gvcjdkzOk+PrqF/cqnw=;
+        b=DWckogkdjogfaBntpTElmBqBS2xgxVVFMsU2+ymfHezgxA8g25CMbKMxfQKBR3PRdC
+         PDc9XmiJC24t/KBIASYO7Y05iG3YcFVtA5HbxWpeIvd5z/N8eCPjOoqChdGjkUtVcPxO
+         2VdpvTaC74XCFCHJxZvAidFVlQI6ZMaaTH124=
+Received: by 10.236.76.197 with SMTP id b45mr3409931yhe.20.1340200399447;
+        Wed, 20 Jun 2012 06:53:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.131.237 with SMTP id m73ls5646936yhi.0.gmail; Wed, 20 Jun
+ 2012 06:53:18 -0700 (PDT)
+Received: by 10.101.2.30 with SMTP id e30mr12501554ani.27.1340200398908;
+        Wed, 20 Jun 2012 06:53:18 -0700 (PDT)
+Received: by 10.101.2.30 with SMTP id e30mr12501553ani.27.1340200398889;
+        Wed, 20 Jun 2012 06:53:18 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id b73si16804527yhh.4.2012.06.20.06.53.18
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 06:53:18 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 5322363B518
+	for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 15:53:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id uuhcBIZRWX2B for <tosdr@googlegroups.com>;
+	Wed, 20 Jun 2012 15:53:11 +0200 (CEST)
+Received: from [192.168.44.183] (e264.enterprise.fastwebserver.de [46.20.43.194])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id B40FD63B511
+	for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 15:53:10 +0200 (CEST)
+Message-ID: <1340200389.11576.12.camel@synclavier.lan>
+Subject: [good] SeenThis allows you to export your data in XML
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Wed, 20 Jun 2012 15:53:09 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/mixed; boundary="=-Va6jeOCEEk+GhwJIDrKu"
+
+--=-Va6jeOCEEk+GhwJIDrKu
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+http://seenthis.net/fran%C3%A7ais/mentions/article/propri%C3%A9t%C3%
+A9-intellectuelle
+        Les auteurs peuvent =E0 tout moment modifier ou supprimer leurs
+        propres messages. Un outil permet =E0 chaque auteur de r=E9cup=E9re=
+r,
+        au format XML, l=92ensemble de ses messages. Un auteur peut
+        demander =E0 faire d=E9truire son propre compte (nous contacter).
+       =20
+        Authors can modify or delete their own messages at any time. A
+        tool allows each author to get back, in XML, the totality of
+        their messages. An author can ask to delete their own account
+        (contact us).
+
+To get your data, you simply get the file
+https://LOGIN:PASSWD@seenthis.net/?page=3Dxml_export
+
+The data is a bit basic but I suppose it's enough.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+
+
+--=-Va6jeOCEEk+GhwJIDrKu
+Content-Type: audio/x-bzt-xml; name="seenthis-net-example.xml"
+Content-Disposition: attachment; filename="seenthis-net-example.xml"
+Content-Transfer-Encoding: 8bit
+
+<?xml version="1.0" encoding="UTF-8"?>
+<messages href="https://seenthis.net/people/hugo">
+	
+	<thread href="http://seenthis.net/messages/71280">
+	<message>
+		<author href="https://seenthis.net/people/hugo"><![CDATA[Hugo]]></author>
+		<date>2012-06-01T13:44:29Z</date>
+		<text><![CDATA[Vint Cerf s'inquiète pour l'avenir d'Internet http://www.nytimes.com/2012/05/25/opinion/keep-the-internet-open.html?_r=1
+❝When I helped to develop the open standards that computers use to communicate with one another across the Net, I hoped for but could not predict how it would blossom and how much human ingenuity it would unleash. What secret sauce powered its success? The Net prospered precisely because governments — for the most part — allowed the Internet to grow organically, with civil society, academia, private sector and voluntary standards bodies collaborating on development, operation and governance.❞]]></text>
+		
+		
+		<urls>
+		
+		<url href="http://seenthis.net/sites/127779"><![CDATA[http://www.nytimes.com/2012/05/25/opinion/keep-the-internet-open.html?_r=1]]></url>
+		
+		</urls>
+		
+	</message>
+	
+	</thread>
+	<thread href="http://seenthis.net/messages/71271">
+	<message>
+		<author href="https://seenthis.net/people/hugo"><![CDATA[Hugo]]></author>
+		<date>2012-06-01T13:25:22Z</date>
+		<text><![CDATA[this is a test for http://www.seenthis.net ]]></text>
+		
+		
+		<urls>
+		
+		<url href="http://seenthis.net/sites/100347"><![CDATA[http://www.seenthis.net]]></url>
+		
+		</urls>
+		
+	</message>
+	
+	<message>
+		<author href="https://seenthis.net/people/seenthis"><![CDATA[Seenthis]]></author>
+		<date>2012-06-01T13:41:43Z</date>
+		<text><![CDATA[Ça maaaaaarche!]]></text>
+		
+		
+	</message>
+	
+	<message>
+		<author href="https://seenthis.net/people/hugo"><![CDATA[Hugo]]></author>
+		<date>2012-06-01T15:03:17Z</date>
+		<text><![CDATA[j'attends surtout de voir si ça synchronise bien sur twitter.com/RoyHugo avec brdcst.it]]></text>
+		
+		
+	</message>
+	
+	</thread>
+	<thread href="http://seenthis.net/messages/71060">
+	<message>
+		<author href="https://seenthis.net/people/hugo"><![CDATA[Hugo]]></author>
+		<date>2012-05-30T16:17:07Z</date>
+		<text><![CDATA[Je viens de recycler les bons conseils de @Fil http://hugoroy.eu/anti-tracking (retours et conseils seraient appréciés)]]></text>
+		
+		
+		<urls>
+		
+		<url href="http://seenthis.net/sites/127374"><![CDATA[http://hugoroy.eu/anti-tracking]]></url>
+		
+		</urls>
+		
+	</message>
+	
+	</thread>
+</messages>
+--=-Va6jeOCEEk+GhwJIDrKu--
+

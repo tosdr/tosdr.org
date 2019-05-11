@@ -1,0 +1,66 @@
+MIME-Version: 1.0
+Received: by 10.142.10.4 with HTTP; Fri, 15 Jun 2012 08:48:54 -0700 (PDT)
+X-Originating-IP: [84.112.19.176]
+In-Reply-To: <1339772752.21271.20.camel@synclavier.lan>
+References: <1339772752.21271.20.camel@synclavier.lan>
+Date: Fri, 15 Jun 2012 17:48:54 +0200
+Delivered-To: michiel@unhosted.org
+Message-ID: <CA+aD3u3vwTDf-xQRzsOxPLiYiY3Ju_NZU-OV7WsmkdvBebwvXw@mail.gmail.com>
+Subject: Re: [bad] Your copyright license to Twitter does not end when you
+ deactive your accont
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+i think the only correct way to deal with account termination is to
+make it seem like that account never existed. that may mean not only
+removing the account itself, but also editing accounts of people the
+user interacted with, to remove all those interactions.
+
+at tuenti where i used to work, the profile would immediately become
+invisible, and would then be deleted during the night (database
+deletions are quite expensive on the server, so it's best to do them
+when site traffic is low). the system deletes all content when a user
+deletes or deactivates their account using 'lazy delete'. that means
+the data is deleted the next time it's requested. put another way,
+whenever data is retrieved from the database, there is a check whether
+both the author-user and the subject-user of that bit of content still
+exist. so with this system, content that you posted on your own
+profile is deleted on the server within 24 hours, and content you
+posted on other people's profiles is deleted on the server eventually.
+In both cases it is deleted from the site (made invisible) within
+seconds of the user clicking the 'delete my account' button.
+
+i think facebook says you can delete your content, unless someone
+already reshared it, so if you tag someone in a photo, and the photo
+is added to their "photos i am tagged in" album, then you already have
+lost your right to delete that photo. i guess that even happens when
+they tag themselves in it.
+
+
+On Fri, Jun 15, 2012 at 5:05 PM, Hugo Roy <hugo@fsfe.org> wrote:
+> =A0 =A0 =A0 =A0https://twitter.com/tos
+> =A0 =A0 =A0 =A0the Terms shall terminate, including, without limitation, =
+your
+> =A0 =A0 =A0 =A0license to use the Services, except that the following sec=
+tions
+> =A0 =A0 =A0 =A0shall continue to apply: 4, 5, 7, 8, 10, 11, and 12.
+>
+> Section 5 is "Your Rights" w/ the =A9 license etc.
+> --
+> Hugo Roy
+> =A0French Coordinator, FSFE =A0 =A0 =A0 chat: hugo@jabber.fsfe.org
+> =A0www.fsfe.org/about/roy =A0 =A0 =A0 =A0 mobile: +336 08 74 13 41
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 mobile DE=
+: +49 151 143 56 563
+>
+> --
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> For more options, visit this group at http://groups.google.com/group/tosd=
+r?hl=3Den.
+>

@@ -1,0 +1,265 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp126305qek;
+        Sat, 1 Sep 2012 16:32:59 -0700 (PDT)
+Received: by 10.220.150.201 with SMTP id z9mr8630040vcv.70.1346542378209;
+        Sat, 01 Sep 2012 16:32:58 -0700 (PDT)
+Return-Path: <tosdr+bncCLaKlNuzGRCotoqCBRoELISMtA@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id g4si5683654vdv.117.2012.09.01.16.32.56
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 01 Sep 2012 16:32:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaKlNuzGRCotoqCBRoELISMtA@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaKlNuzGRCotoqCBRoELISMtA@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCLaKlNuzGRCotoqCBRoELISMtA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbgb30 with SMTP id gb30sf3388936vcb.29
+        for <multiple recipients>; Sat, 01 Sep 2012 16:32:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-yahoo-newman-property:x-yahoo-newman-id
+         :x-ymail-osg:x-mailer:message-id:date:from:subject:to:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=+qdb2va9jCExL3UCzTjzSsvoI065B8KQEDXj6YEaldo=;
+        b=B/n1n6TLI23dBah1sFlPNlPFcsf6zGu1S91yyshu6e3MLkkL2sxcUWQ4QY0BUPTMwY
+         TyLzi3d7FDTjmVYzCqLc+fpo0hDtzUVflna+bqqj7ml6xRVvyVvQ0f+lzifleeoinAhb
+         AIm6rUHt3HKGxT0bewjmPIU7QvOgiNzq0WaVXZbzQorqwaMgLNccxKozh9xO9eHBP/y3
+         XXKENJYRGh/RWDdKECwwyPnudC4tH3jDSZMULUrjXZDucIfcZz9AWTCbGpsIu/2NlLZa
+         0t+kZ+aocppAJ7ZaRP6LXW1MrfhRZSKmHa5OGz6Ug321g9T44S+rSAfqWz41+/2NeP3x
+         sl1Q==
+Received: by 10.50.0.170 with SMTP id 10mr1508390igf.3.1346542376564;
+        Sat, 01 Sep 2012 16:32:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.11.232 with SMTP id t8ls4180700igb.2.canary; Sat, 01 Sep
+ 2012 16:32:55 -0700 (PDT)
+Received: by 10.43.18.67 with SMTP id qf3mr6178307icb.18.1346542375775;
+        Sat, 01 Sep 2012 16:32:55 -0700 (PDT)
+Received: by 10.43.18.67 with SMTP id qf3mr6178306icb.18.1346542375763;
+        Sat, 01 Sep 2012 16:32:55 -0700 (PDT)
+Received: from nm17-vm2.bullet.mail.ne1.yahoo.com (nm17-vm2.bullet.mail.ne1.yahoo.com. [98.138.91.93])
+        by gmr-mx.google.com with SMTP id mb9si1802215igc.1.2012.09.01.16.32.55;
+        Sat, 01 Sep 2012 16:32:55 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of coleson.nick@yahoo.com designates 98.138.91.93 as permitted sender) client-ip=98.138.91.93;
+Received: from [98.138.90.55] by nm17.bullet.mail.ne1.yahoo.com with NNFMP; 01 Sep 2012 23:32:55 -0000
+Received: from [98.138.87.7] by tm8.bullet.mail.ne1.yahoo.com with NNFMP; 01 Sep 2012 23:32:55 -0000
+Received: from [127.0.0.1] by omp1007.mail.ne1.yahoo.com with NNFMP; 01 Sep 2012 23:32:55 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 447818.16649.bm@omp1007.mail.ne1.yahoo.com
+Received: (qmail 37866 invoked by uid 60001); 1 Sep 2012 23:32:55 -0000
+X-YMail-OSG: iw7jzMEVM1mKrPQEW3h0vRDqrUCdVqCTdGqDfaCcHbNGDg4
+ rINBYoO6fVKd.pkUAyvujliBYzg1QaFZdhB6vCoyKFKEH2aw0C4UJfdMTVJe
+ 9847.UUf672E5q.0Q7RiYsKYdjjXnw3BYcWDJzKPz_rUR_4Y3knxZNFLsELA
+ lFHtJH4IIniG.EgWuFwH5ZPjaHehHwD6EvndSXUvQU.XCZcSmMGATwTB2uCH
+ PY7CmPvDsKoRQhTGnmWqdkW_XaBc3iU4SMMBA.GgQY78n8gfphLcmHPwrS2v
+ 1IZWXoFcUt9rKIizrYH1NTasiLeDjnKxkHLeop8WT4m5Ks.qkbRgo7AFB9Cw
+ Z1E9ubbkTnAN7fxhqYtKmNUfSy7o.ZNnSxCNQ2_jXSqgF.k8pAqup8meB5xb
+ Arz1tLlNBywToieHpoqgq_2qcugqYBxyZ5a8U7gQPK4J2Go6G9TOdmDg.Ohu
+ BpM80F2ijuUXZJVKtOfsj2O35H1ebz4VAOBSugGlgT8U.xfxRlnDkD8Ehq1r
+ DYxQGWKv65uuewYu_KKA-
+Received: from [96.47.226.21] by web121206.mail.ne1.yahoo.com via HTTP; Sat, 01 Sep 2012 16:32:55 PDT
+X-Mailer: YahooMailClassic/15.0.8 YahooMailWebService/0.8.121.416
+Message-ID: <1346542375.93174.YahooMailClassic@web121206.mail.ne1.yahoo.com>
+Date: Sat, 1 Sep 2012 16:32:55 -0700 (PDT)
+From: Nick Coleson <coleson.nick@yahoo.com>
+Subject: [tosdr:761] Virgin Mobile USA
+To: tosdr@googlegroups.com
+MIME-Version: 1.0
+X-Original-Sender: coleson.nick@yahoo.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ best guess record for domain of coleson.nick@yahoo.com designates
+ 98.138.91.93 as permitted sender) smtp.mail=coleson.nick@yahoo.com; dkim=pass
+ (test mode) header.i=@yahoo.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Quick Review + Links to quotes...
+
+Bad- Forced upgrades:
+
+Do device software upgrades affect the performance of my device on Sprint's=
+ network?
+
+From time to time, Sprint may push software updates to your device to impro=
+ve device features, security, and performance. These updates may include co=
+mponents that optimize the way your device and application on the device us=
+e network resources by, for example, managing connections between a user's =
+wifi networks and the Sprint network or by managing the intervals at which =
+certain background application connect to the network. Updates that manage =
+radio resources are intended to improve performance and device battery life=
+ while at the same maintaining a high quality user experience.
+
+--------------------------------------------
+Bad - No P2P. Excessive bandwith =3D Throttling, Blocking, or Banning:=20
+
+Does congestion management target peer-to-peer ("P2P") or other application=
+s or make decisions about the content of my traffic?
+
+No. However Virgin Mobile's Terms and conditions prohibit some uses of Inte=
+rnet access. Virgin Mobile reserves the right to take action when customers=
+ violate these terms and conditions including blocking the traffic, slowing=
+ the customer's effective data speeds, or discontinuing a customer's servic=
+e. Below is the prohibit data use portion of the plan specific terms of Ser=
+vice:
+
+    If your plan includes data services, such services are provided solely =
+for purposes of web browsing, messaging, & similar activities. Examples of =
+Prohibited Use of our data services include but are not limited to use ther=
+eof (1) with server devices or host computer applications, or other systems=
+ that drive continuous heavy traffic or data sessions, including, but not l=
+imited to, disproportionate Web camera posts or broadcasts, automatic data =
+feeds, automated machine-to-machine connections, peer-to-peer (P2P) file-sh=
+aring applications broadcast to multiple servers or recipients such that th=
+ey could enable "bots" or similar routines; (2) as a substitute or backup f=
+or private lines or frame relay connections; (3) to send or receive unusual=
+ly high numbers of messages (4) to engage in atypical web usage behaviors; =
+(5) for tethering your device to a personal computer or other hardware; & (=
+6) for any other reason that, in our sole discretion harms our
+ network.
+
+https://www.virginmobileusa.com/legal/important-service-product-information=
+.html
+https://www.virginmobileusa.com/networkmanagement
+------------------------------------------------------
+
+
+
+
+Bad - Third Parties:
+
+How Do We Use Your Information?
+
+Unless you specifically decline, we may use personally identifiable informa=
+tion to contact you and deliver information to you via your home phone, add=
+ress, email, voice or text messages on your mobile phone if you are a Virgi=
+n Mobile customer. We may also share personally identifiable information wi=
+th certain third parties so that these third parties can share information =
+with you about new products, services and promotions that we believe will i=
+nterest you. By accepting this Privacy Policy or by purchasing or using our=
+ products or our jointly-branded products, you expressly agree to such usag=
+e and sharing of information. In addition, Virgin Mobile may use non-person=
+ally identifiable information in aggregate form for demographic marketing p=
+urposes, and may disclose this information to third parties, including adve=
+rtisers.
+
+
+------------------------------------------------------------
+https://www.virginmobileusa.com/legal/privacy-policy
+
+
+Bad - No Promise to inform about government request:
+
+Virgin Mobile cooperates with law enforcement inquiries, as well as other t=
+hird parties, to enforce laws, such as protecting intellectual property rig=
+hts and preventing fraud. We can (and you authorize us to) disclose any inf=
+ormation about you to law enforcement or other government officials as we, =
+in our sole discretion, believe necessary or appropriate, to respond to cla=
+ims or legal process, to protect the property of Virgin Mobile or the safet=
+y of its employees or others, to investigate fraud, intellectual property i=
+nfringements, or other activity that is or may be illegal or expose us or y=
+ou to liability.=20
+
+
+-------------------------------------------------
+
+Bad - Tracking of Physical Location:
+What Is Our Policy Regarding Location-Based Information?
+
+Location-based information is information that indicates the location of yo=
+ur Virgin Mobile phone. When you turn on your mobile phone and use any of o=
+ur location-based services, your device automatically communicates with our=
+ network and relays its current location. The accuracy of location services=
+ may be affected by circumstances beyond our control, including atmospheric=
+, geographic or topographic conditions. We do not warrant or guarantee that=
+ location services will be available at any specific time or geographic loc=
+ation, or that service will be provided without interruption.
+
+By using our location-based services, you consent to have us electronically=
+ collect, monitor and track your physical location and the location of your=
+ handset. We collect and disclose your location information only to provide=
+ you with the location-based services you have requested, or in emergency s=
+ituations as prescribed by law. If you allow other users to use your handse=
+t, you are responsible for informing these users that their location inform=
+ation may be collected or disclosed. We will not provide your location info=
+rmation to third parties other than as prescribed by law without your conse=
+nt.=20
+-----------------------------------------------------
+
+Bad - Information may be stored outside US Jurisdiction:
+
+In addition, such personally identifiable information may be stored on serv=
+ers located outside your resident jurisdiction. U.S. law may not provide th=
+e degree of protection for your information that is available in other coun=
+tries. BY PROVIDING US WITH YOUR INFORMATION, YOU ACKNOWLEDGE THAT YOUR HAV=
+E READ THIS PRIVACY POLICY, UNDERSTAND IT, AGREE TO ITS TERMS AND CONSENT T=
+O THE TRANSFER OF SUCH INFORMATION OUTSIDE YOUR RESIDENT JURISDICTION. If y=
+ou do not consent to the terms of this Privacy Policy, please do not use ou=
+r websites.
+-------------------------------------------------
+
+Good - Notice of hidden charges:
+
+Based on our Policies, we may charge activation, prepayment, reactivation, =
+program, or other fees to establish, change, or maintain Services. Certain =
+transactions may also be subject to a charge (for example, convenience paym=
+ent, changing phone numbers, handset upgrades, etc.). You will be provided =
+notice of these types of fees before we complete the requested transaction.
+--------------------------------------------------
+Bad - Internet Blocking:
+We can take any action to: (1) protect our networks, our rights and interes=
+ts, or the rights of others; or (2) optimize or improve the overall use of =
+our networks and Services. Some of these actions may interrupt or prevent l=
+egitimate communications and usage=97for example, message filtering/blockin=
+g software to prevent spam or viruses; limiting throughput; limiting access=
+ to certain websites, applications or other Data Content; prohibitions on u=
+nintended uses (for example, use as a dedicated line or use as a monitoring=
+ service); etc. For additional information on what we do to protect our cus=
+tomers, networks, Services and equipment, see our Acceptable Use Policy and=
+ Visitors Agreement at our website.=20
+
+
+-------------------------------------------------------
+Bad - Employees, contractors, or vendors have complete access to private ph=
+one data:
+Information on Devices: Your Device may contain sensitive or personal infor=
+mation (for example, pictures, videos, passwords, or stored credit card num=
+bers). Virgin Mobile is not responsible for any information on your Device,=
+ including sensitive or personal information. If possible, you should remov=
+e or otherwise safeguard any sensitive or personal information when your De=
+vice is out of your possession or control, for example, when you relinquish=
+, exchange, return, or recycle your Device. By submitting your Device to us=
+, you agree that our employees, contractors, or vendors may access all of t=
+he information on your Device. If you exchange, return, or recycle your Dev=
+ice through us, we typically attempt to erase data on your Device but you m=
+ust remove all data from your Device before you provide it to us.=20
+
+
+Bad -
+No Class Actions
+No Trial By Jury
+Indemnification
+http://www.virginmobileusa.com/legal/general-terms-and-conditions-no-annual=
+-contract
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

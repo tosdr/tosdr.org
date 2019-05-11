@@ -1,0 +1,84 @@
+Return-Path: <tosdr+bncBC3JJ44SWECRBU47YGQQKGQE6LOZDHI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 9516B40916
+	for <anything@michielbdejong.com>; Sat,  4 Oct 2014 21:51:50 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 92C8B116030
+	for <anything@michielbdejong.com>; Sat,  4 Oct 2014 21:51:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id li5tKKqRTU5l for <anything@michielbdejong.com>;
+	Sat,  4 Oct 2014 21:51:49 +0200 (CEST)
+Received: from mail-ig0-x23a.google.com (mail-ig0-x23a.google.com [IPv6:2607:f8b0:4001:c05::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0117D11603F
+	for <anything@michielbdejong.com>; Sat,  4 Oct 2014 21:51:48 +0200 (CEST)
+Received: by mail-ig0-f186.google.com with SMTP id uq10sf207713igb.3
+        for <anything@michielbdejong.com>; Sat, 04 Oct 2014 12:51:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=aymBIZnXwVTwZoIRiIkF9jX6s7/uQVAGYJA21vjn3mU=;
+        b=kA1d9U6ty1IBmWUEO+4oeg6YOdggNxrtkf6FcWxfzPFwx4ElkMy4Ad5CAAqqqZIJWh
+         Qzf45nsIqls4ybdpyozuVNgXjdzpTbxQf5+5Gd+vHkP+J/A+OS+A0Tq5Cs8vNnkW/9wj
+         eyv+8+QKnpgpwFi7+j+AqYzALQIU8Fyd3eniqW5r7KoAqSjxNJxlkk2axTRbJggsM543
+         rwmY/RUYbTzRpaoFPRT1+edgpo/oUzKLUGw+m1EKZhF+J4I+oOWUOHX7Hx24P13a6KXg
+         MMfY4t4prdWxZxNYpaIV9K75R+mcjlZOBTC5lhgVQoTNxslf42EeiCwrSuWNckaCKaj9
+         6zCg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=aymBIZnXwVTwZoIRiIkF9jX6s7/uQVAGYJA21vjn3mU=;
+        b=l0ah5IAwJ5AwsKd1Al3gsNotGljVvt8G2oDyqoedU7fOPWPTVp4E/88ZclgKTcVsaT
+         cYK1+vQDSiyPBbG7AkLXmE+RO55Y2cwSZTy8ta6FJij2d5QGyKi+1xKEiSkj4NEKSQtW
+         mUcYOnpFYz4jOd7Hd1LOD5pp57kFbluaSYPcSHE4l3X7ui5QgVAApZf0GJu62DhotD5c
+         P/q61RlKm0RS0ptaAoxe8JKEsdhq00B7sv5sO+34V581ahpluFCKibTWcA1u01t6eIeB
+         egr3/CpqOvy7srs6QBBmczpMjNVc3vrGXairsNORPbXuCwBEbQJb2l87CsuGJYyN883m
+         4WWA==
+X-Received: by 10.50.2.6 with SMTP id 6mr51431igq.10.1412452307617;
+        Sat, 04 Oct 2014 12:51:47 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.51.17.44 with SMTP id gb12ls1667194igd.18.gmail; Sat, 04 Oct
+ 2014 12:51:46 -0700 (PDT)
+X-Received: by 10.50.114.101 with SMTP id jf5mr51270igb.4.1412452306873;
+        Sat, 04 Oct 2014 12:51:46 -0700 (PDT)
+Date: Sat, 4 Oct 2014 12:51:45 -0700 (PDT)
+From: ant8672@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <a5f7266c-e53e-4db0-b596-e411a1732e1f@googlegroups.com>
+In-Reply-To: <CADNfgReNnQ+_uNn+8piYVUcac6kzHpnF+wjn+sTGqPvEzRTing@mail.gmail.com>
+References: <CADNfgReNnQ+_uNn+8piYVUcac6kzHpnF+wjn+sTGqPvEzRTing@mail.gmail.com>
+Subject: [tosdr:3272] Re: ownership on youtube
+MIME-Version: 1.0
+X-Original-Sender: ant8672@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+
+gee, I wonder how to watch those deleted videos?
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

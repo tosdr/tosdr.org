@@ -1,0 +1,135 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.43.94.130 with SMTP id by2csp105897icc;
+        Mon, 8 Sep 2014 06:29:42 -0700 (PDT)
+X-Received: by 10.180.102.40 with SMTP id fl8mr22599533wib.17.1410182981426;
+        Mon, 08 Sep 2014 06:29:41 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBRG6W2QAKGQE3I2KFPQ@googlegroups.com>
+Received: from mail-we0-x23a.google.com (mail-we0-x23a.google.com [2a00:1450:400c:c03::23a])
+        by mx.google.com with ESMTPS id a9si12982316wjs.147.2014.09.08.06.29.40
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 08 Sep 2014 06:29:41 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBRG6W2QAKGQE3I2KFPQ@googlegroups.com does not designate 212.123.27.210 as permitted sender) client-ip=212.123.27.210;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBRG6W2QAKGQE3I2KFPQ@googlegroups.com does not designate 212.123.27.210 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBRG6W2QAKGQE3I2KFPQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: by mail-we0-f186.google.com with SMTP id w61sf87272wes.3
+        for <michiel@unhosted.org>; Mon, 08 Sep 2014 06:29:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=9p0uXf01pNGWxvdkMD1uQicEYP2szkh4M5VkSLa9Ax8=;
+        b=fccCNSe0emeYAxh19Qmig2WC7/SzwDrqLW7SHsOHB5nAjCfuuYx/GIDet/ZHKhhbnw
+         9r3pavYtytPw9U5tqFHBXlpt4P4dYoujnC4HHLe7NLeV00shyIQ4CN97/BdV3H0OVCSs
+         Ny4iUJa53Pyj5tKRd6UKaP3cjVHdKvvarjZXzWPuy8yDllPZTpJG8OqhGhjxjwzrXm/P
+         o/FfXuvczXzdkkPbf865Cv9GCbiFprc7oa1T8uEGdq7PNq+Xf+Y49dwR5+ISe3v4UOR/
+         mOeOWIJd11jxjOjg0FEqE18ZBzejGyxmZjIRbnnnpQI8mJZYZ6pFaFJ2ABi1cSSvFonV
+         Ea/A==
+X-Received: by 10.180.20.14 with SMTP id j14mr93807wie.10.1410182980877;
+        Mon, 08 Sep 2014 06:29:40 -0700 (PDT)
+X-Received: by 10.180.37.211 with SMTP id a19mr1987034wik.6.1410182980336;
+        Mon, 08 Sep 2014 06:29:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.92.74 with SMTP id ck10ls413955wib.46.gmail; Mon, 08 Sep
+ 2014 06:29:39 -0700 (PDT)
+X-Received: by 10.194.57.237 with SMTP id l13mr18156wjq.7.1410182979163;
+        Mon, 08 Sep 2014 06:29:39 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id gj7si617975wib.3.2014.09.08.06.29.39
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 08 Sep 2014 06:29:39 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id B4DE463B4D8
+	for <tosdr@googlegroups.com>; Mon,  8 Sep 2014 15:29:38 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Y11lA56tP8R3 for <tosdr@googlegroups.com>;
+	Mon,  8 Sep 2014 15:29:32 +0200 (CEST)
+Received: from localhost (212-123-27-210.iFiber.telenet-ops.be [212.123.27.210])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 64E1163B523
+	for <tosdr@googlegroups.com>; Mon,  8 Sep 2014 15:29:28 +0200 (CEST)
+Date: Sun, 7 Sep 2014 22:45:23 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3262] Re: Twitter [bad] Right to access
+Message-ID: <20140907204523.GA7036@xps>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com>
+ <7001473d-ec5f-4164-b15c-817d4c328199@googlegroups.com>
+ <34df663c-0922-4263-9d2e-616c3b67321d@googlegroups.com>
+ <540AD403.7030000@michielbdejong.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="7AUc2qLy4jB3hD7Z"
+Content-Disposition: inline
+In-Reply-To: <540AD403.7030000@michielbdejong.com>
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugoroyd@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/d/topic/tosdr/0Q-ZHqdSZ3g/unsubscribe>
+
+
+--7AUc2qLy4jB3hD7Z
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-09-06 Sat 11:29, Michiel de Jong <anything@michielbdejong.co=
+m>:
+> I think a good way to think about it is that practice is influenced in
+> one third by law, in one third by the terms of service, and in one
+> third by employee decisions.
+
+I don=E2=80=99t think it=E2=80=99s the way we should do here.
+
+We focus on the terms, and we don=E2=80=99t forget the legal context in
+which the terms are.=20
+
+We can=E2=80=99t also go and check =E2=80=9Cemployee decisions=E2=80=9D
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--7AUc2qLy4jB3hD7Z
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUDMPjAAoJEI0CLJmz17eVYUMH/RBvVQxHcI1Lhq/7IJHSrE7Q
+8xCdPjt3BlHRYwGtlCmGkQANFutHiHkfrnin4V5+XVUvUUwMa9qPNFJM6GtMzZFE
+62PJXCsbVOgi590LaaoHpYlT1Qh3pZiqScAY4WsWijznMgRD58I3i8swkLmsSNDE
+2U3TunbHLkycTaWskvWQwQC8EB5uU+H+v1yWOjF9UD7syliE+xmQRblZsZmIKVC+
+DYkozgCreQmfLS+SVtVQLOHk37ubf5eDIV2BBLcz/1SAnDEZFc6QQ3+zd3feFQil
+ZUkhuCONZMJnVxEPd6mrh85OnM3Lnjn0D+a8XdjjjTPCX3dvdmaISHEJqpthhm8=
+=9Lu9
+-----END PGP SIGNATURE-----
+
+--7AUc2qLy4jB3hD7Z--

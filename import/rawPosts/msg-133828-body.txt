@@ -1,0 +1,128 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.28.130 with SMTP id c124csp2635804ioc;
+        Wed, 15 Jul 2015 07:41:31 -0700 (PDT)
+X-Received: by 10.140.237.147 with SMTP id i141mr2092783qhc.25.1436971291221;
+        Wed, 15 Jul 2015 07:41:31 -0700 (PDT)
+Return-Path: <tosdr+bncBDROZJUIUQBBBFHCTGWQKGQEJUWB4CY@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id j92si5591059qgj.3.2015.07.15.07.41.30
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 15 Jul 2015 07:41:31 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDROZJUIUQBBBFHCTGWQKGQEJUWB4CY@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDROZJUIUQBBBFHCTGWQKGQEJUWB4CY@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mail=tosdr+bncBDROZJUIUQBBBFHCTGWQKGQEJUWB4CY@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=me.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 29D8841C06B
+	for <michiel@unhosted.org>; Wed, 15 Jul 2015 16:41:30 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1A19214E556
+	for <michiel@unhosted.org>; Wed, 15 Jul 2015 16:41:30 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id oVq2P-pSYrp4 for <michiel@unhosted.org>;
+	Wed, 15 Jul 2015 16:41:28 +0200 (CEST)
+Received: from mail-vn0-x23f.google.com (mail-vn0-x23f.google.com [IPv6:2607:f8b0:400c:c0f::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2AE4314E4D1
+	for <michiel@michielbdejong.com>; Wed, 15 Jul 2015 16:41:25 +0200 (CEST)
+Received: by vnbg190 with SMTP id g190sf16251383vnb.0
+        for <michiel@michielbdejong.com>; Wed, 15 Jul 2015 07:41:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=Q1qRUjvnDugp663zrtPcisZzJJ590ZE65tYFQK6opO4=;
+        b=vsLJ5AEXG5XJe6Be4qfR/FXTF8BXouMpGrNbE55dPe1GfwtGjmtbBEgZ3GIl5o3d3d
+         mGdKbZGbGxwaocemwro0J36pxalHhbP82mylopUtd/mW0A/u8FxZ4cMyxnOmr4Otnh0r
+         QiLo3RmLaRh0D9EtDtA5Vw98d6mjA/O1xevhC8omR4DyfZOYvjNNxdZb11InwiQnk4T/
+         LPovJX8S6JzbJjZ3injjra48ZjCIACCElyqeAPOC+OTSonFINGEedYYr6hEgtMRGzo5e
+         mPjXk86cSGotKvGPSft0beqaFX7TpbPM1SRKzvbwQrnNewIfD+dJXW8EGx9zYbE/Mcxz
+         YcxQ==
+X-Received: by 10.140.47.68 with SMTP id l62mr100390qga.42.1436971284378;
+        Wed, 15 Jul 2015 07:41:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.28.135 with SMTP id 7ls753581qgz.46.gmail; Wed, 15 Jul
+ 2015 07:41:23 -0700 (PDT)
+X-Received: by 10.140.39.165 with SMTP id v34mr95759qgv.25.1436971283855;
+        Wed, 15 Jul 2015 07:41:23 -0700 (PDT)
+Date: Wed, 15 Jul 2015 07:41:23 -0700 (PDT)
+From: anonpls <holger.gunkel@me.com>
+To: tosdr@googlegroups.com
+Message-Id: <6dda02a8-7a12-45e9-96fc-11a862bda3ed@googlegroups.com>
+In-Reply-To: <1361911713.3011.91.camel@synclavier.lan>
+References: <1361911713.3011.91.camel@synclavier.lan>
+Subject: [tosdr:3558] Re: [alert] Apple can remove Content at any time from
+ iCloud without prior notice at its sole discretion if content is "objectionable"
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_5326_1405883319.1436971283169"
+X-Original-Sender: Holger.Gunkel@me.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_5326_1405883319.1436971283169
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5327_267622387.1436971283169"
+
+------=_Part_5327_267622387.1436971283169
+Content-Type: text/plain; charset=UTF-8
+
+icloud is just another cloud, of course they have to be able to remove 
+anything without telling you so, to remove illegal content. pretty simple 
+if you ask me. I'd give the icloud terms an A, maybe an B if you think that 
+having the right to delete anyhing without notice is a bad thing.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_5327_267622387.1436971283169
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">icloud is just another cloud, of course they have to be ab=
+le to remove anything without telling you so, to remove illegal content. pr=
+etty simple if you ask me. I&#39;d give the icloud terms an A, maybe an B i=
+f you think that having the right to delete anyhing without notice is a bad=
+ thing.<br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_5327_267622387.1436971283169--
+------=_Part_5326_1405883319.1436971283169--

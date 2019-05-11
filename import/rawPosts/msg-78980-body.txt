@@ -1,0 +1,97 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp118807wfj;
+        Tue, 3 Jul 2012 04:16:27 -0700 (PDT)
+Received: by 10.152.124.180 with SMTP id mj20mr16519273lab.43.1341314186261;
+        Tue, 03 Jul 2012 04:16:26 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCIqcv_BBoEI1QGrQ@googlegroups.com>
+Received: from mail-lb0-f192.google.com (mail-lb0-f192.google.com [209.85.217.192])
+        by mx.google.com with ESMTPS id sq3si18303556lab.41.2012.07.03.04.16.24
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 03 Jul 2012 04:16:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCIqcv_BBoEI1QGrQ@googlegroups.com designates 209.85.217.192 as permitted sender) client-ip=209.85.217.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCIqcv_BBoEI1QGrQ@googlegroups.com designates 209.85.217.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCIqcv_BBoEI1QGrQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lbok6 with SMTP id k6sf4934442lbo.29
+        for <multiple recipients>; Tue, 03 Jul 2012 04:16:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=aGG6nTtYCn1T2WV1+xNTKi7+6b7tINekjs2oDc1HvZY=;
+        b=kr8VnCSh+XYBI+M/uwnrn9RogMFl8kcV345kUiX5eyFPOpExKF3brWGpi15LJlNrsW
+         Bsj4dnDD+OCQkra4RnRfpadoPExGQ3Rr4wr5DGXCXDRiE6M1/ocYiPBVXLl6k3WWts5E
+         8MTbBMPOs1dRrsCaPRoHHozPlVFdPjbXQsA5w=
+Received: by 10.180.87.229 with SMTP id bb5mr769999wib.0.1341314184439;
+        Tue, 03 Jul 2012 04:16:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.216.141.215 with SMTP id g65ls8001013wej.4.gmail; Tue, 03 Jul
+ 2012 04:16:23 -0700 (PDT)
+Received: by 10.216.120.201 with SMTP id p51mr280606weh.3.1341314183870;
+        Tue, 03 Jul 2012 04:16:23 -0700 (PDT)
+Received: by 10.216.120.201 with SMTP id p51mr280605weh.3.1341314183835;
+        Tue, 03 Jul 2012 04:16:23 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id bb7si4735987wib.2.2012.07.03.04.16.23
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 03 Jul 2012 04:16:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 538D463B4DF
+	for <tosdr@googlegroups.com>; Tue,  3 Jul 2012 13:16:22 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rNCh1BrWySLB for <tosdr@googlegroups.com>;
+	Tue,  3 Jul 2012 13:16:16 +0200 (CEST)
+Received: from [192.168.141.184] (p54BD26AA.dip.t-dialin.net [84.189.38.170])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 2EB7063B4B7
+	for <tosdr@googlegroups.com>; Tue,  3 Jul 2012 13:16:16 +0200 (CEST)
+Message-ID: <1341314174.3832.18.camel@synclavier.lan>
+Subject: AT&T, Verizon, Sprint, T-Mobile: sharing your location data, but
+ not with you
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 03 Jul 2012 13:16:14 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+This might be of interest to you,
+
+http://www.propublica.org/article/cellphone-companies-will-share-your-location-data-just-not-with-you
+Cellphone Companies Will Share Your Location Data - Just Not With You
+
+
+-- 
+Hugo Roy 
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+-- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+

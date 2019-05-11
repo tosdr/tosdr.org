@@ -1,0 +1,206 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp269518vec;
+        Sun, 9 Dec 2012 09:04:15 -0800 (PST)
+Received: by 10.236.76.135 with SMTP id b7mr17703804yhe.90.1355072655018;
+        Sun, 09 Dec 2012 09:04:15 -0800 (PST)
+Return-Path: <tosdr+bncBDLZX5PJWMBBBC4JSODAKGQESOVFV6Q@googlegroups.com>
+Received: from mail-gh0-f184.google.com (mail-gh0-f184.google.com [209.85.160.184])
+        by mx.google.com with ESMTPS id i6si20779740yhc.138.2012.12.09.09.04.12
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 09 Dec 2012 09:04:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBC4JSODAKGQESOVFV6Q@googlegroups.com designates 209.85.160.184 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBC4JSODAKGQESOVFV6Q@googlegroups.com designates 209.85.160.184 as permitted sender) smtp.mail=tosdr+bncBDLZX5PJWMBBBC4JSODAKGQESOVFV6Q@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-gh0-f184.google.com with SMTP id f18sf1535533ghb.1
+        for <michiel@unhosted.org>; Sun, 09 Dec 2012 09:04:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=OiubPLrIbYoU/akdZ6tq57XEhq98jA2YtGXa5ImqcZo=;
+        b=nSDzOgK8ZReRv1FXrcgUADM7QgG5HmBx0OyWJlE3UaDKswQJ+vncWJjn41tL6npUPr
+         4jcyayeFgrUGnO803Ja8eNTKa4cGPcAzFuyiuTInQilkUNGV8Os7l18cuv+NYH06+Wdd
+         YZaIGpkx6wdPhrFFOPl++a28AV5ZooHVrg06Qbux+cD1LxZiLEcY6ockKJFu2GQtv/JY
+         41FRMQcNkwyroJQvRs+oQ53V1hhLxXMXEJqbhEC8r0TjIqJVk+VpgGx2m+VmhGThWL1t
+         LaLxmKBc3xj0EIu1S072Nbme83pgViCvxUbfAGbcRcqOtVfjxpHGkqZNUaKRZwPjCJxO
+         TLqA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=OiubPLrIbYoU/akdZ6tq57XEhq98jA2YtGXa5ImqcZo=;
+        b=S+sIms9ehHVqjXKcd6rRQfSbOEcfwpr4S596GHtw4wcEK46u6dAPQZTeapqW8oBu9p
+         jkQnvZK0f9Hxmux8327E55dZMd09IzqFshkotWeBkM0pZUB21g0F2vbyNfJn6IRJtwyX
+         REHB++javEue5yc9LxycCcsfCa88j+3k04h/aG+Jqe4OqYMncMCFWu+aXCEwxCo3FmOB
+         FtLRP3Piso8zp/3lSmiLK2EkTraI4bhskp17n0XIIr1u+3pItLbqIegOFNqNFvcXbN46
+         XxxJwm93bOZlOhUbtP+Yia+9VdGMX+m3GdVN0XsC2lRIcD81lH+wi2LnK7KeD7lb2cTU
+         QQ1Q==
+Received: by 10.49.58.167 with SMTP id s7mr2562064qeq.5.1355072652651;
+        Sun, 09 Dec 2012 09:04:12 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.120.129 with SMTP id lc1ls3453946qeb.79.gmail; Sun, 09 Dec
+ 2012 09:04:11 -0800 (PST)
+Received: by 10.49.86.106 with SMTP id o10mr2518277qez.14.1355072651225;
+        Sun, 09 Dec 2012 09:04:11 -0800 (PST)
+Date: Sun, 9 Dec 2012 09:04:10 -0800 (PST)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <0fc16923-7efa-4462-933f-6b34d8acb5da@googlegroups.com>
+In-Reply-To: <0ba2e1e5-36e5-4b9e-b88e-d8fcadd7cf25@googlegroups.com>
+References: <0ba2e1e5-36e5-4b9e-b88e-d8fcadd7cf25@googlegroups.com>
+Subject: [tosdr:1302] Re: [ENVANTO] No guarantee of availability, and the
+ service can be suspended at any time
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3_14807019.1355072650965"
+
+------=_Part_3_14807019.1355072650965
+Content-Type: text/plain; charset=ISO-8859-1
+
+These points have been curated and will appear on the website in a few 
+days. 
+
+On Tuesday, December 4, 2012 8:13:37 PM UTC+1, Robin Monks wrote:
+>
+> From the Member terms:
+>
+>> The Sites will usually be available 24 hours a day, seven days a week or 
+>> as otherwise stated on the Sites.
+>>
+>> Envato may, in its absolute discretion, and for any reason, and at any 
+>> time, with or without notice:
+>>
+>> 1.    interrupt or suspend your right to access the whole or any part of 
+>> the Sites; and/or
+>>
+>> 2.    alter, interrupt or suspend the provision of the whole or any part 
+>> of the content and/or the services available on the Sites.
+>>
+>> You agree that Envato will not be liable to you for any loss that you may 
+>> suffer as a result of any such interruption, suspension or alteration.
+>> When accessing the Sites (as a Member) and using the content and/or the 
+>> services available on the Sites, you must also comply with any directions, 
+>> instructions or protocols posted on the Sites from time to time.
+>>
+>>
+> /Robin 
+>
+> Applies to all of the following domains:
+> http://activeden.net/legal/user
+> http://audiojungle.net/legal/user
+> http://codecanyon.net/legal/user
+> http://graphicriver.net/legal/user
+> http://themeforest.net/legal/user
+> http://videohive.net/legal/user
+> http://3docean.net/legal/user
+> http://marketplace.tutsplus.com/legal/user
+> http://photodune.net/legal/user
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_3_14807019.1355072650965
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+These points have been curated and will appear on the website in a few days=
+.&nbsp;<br><br>On Tuesday, December 4, 2012 8:13:37 PM UTC+1, Robin Monks w=
+rote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8e=
+x;border-left: 1px #ccc solid;padding-left: 1ex;"><p style=3D"margin-top:1e=
+m;line-height:normal">From the Member terms:<br></p><div><blockquote class=
+=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;bo=
+rder-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">=
+<p></p><p></p><p><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height=
+:115%;color:#444444;background:#d2d1d0">The Sites will usually be available=
+ 24 hours
+a day, seven days a week or as otherwise stated on the Sites.</span><span l=
+ang=3D"EN-US"></span></p>
+
+<p><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:115%;color:#4=
+44444;background:#d2d1d0">Envato may, in its absolute discretion, and
+for any reason, and at any time, with or without notice:</span><span lang=
+=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:.5in"><span lang=3D"EN-US">1.<span style=3D"font-si=
+ze:7pt;line-height:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">interrupt or suspend your
+right to access the whole or any part of the Sites; and/or</span><span lang=
+=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:.5in"><span lang=3D"EN-US">2.<span style=3D"font-si=
+ze:7pt;line-height:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">alter, interrupt or suspend
+the provision of the whole or any part of the content and/or the services
+available on the Sites.</span><span lang=3D"EN-US"></span></p>
+
+<p><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:115%;color:#4=
+44444;background:#d2d1d0">You agree that Envato will not be liable to
+you for any loss that you may suffer as a result of any such interruption,
+suspension or alteration.</span><span lang=3D"EN-US"></span></p>
+
+<span lang=3D"EN-US" style=3D"font-size:10.0pt;font-family:&quot;Times New =
+Roman&quot;,&quot;serif&quot;;color:#444444;background:#d2d1d0">When
+accessing the Sites (as a Member) and using the content and/or the services
+available on the Sites, you must also comply with any directions, instructi=
+ons
+or protocols posted on the Sites from time to time.</span><br><p></p><p></p=
+></blockquote><div><br></div><div>/Robin&nbsp;</div><div><br></div>Applies =
+to all of the following domains:<br><a href=3D"http://activeden.net/legal/u=
+ser" target=3D"_blank">http://activeden.net/legal/<wbr>user</a><br><a href=
+=3D"http://audiojungle.net/legal/user" target=3D"_blank">http://audiojungle=
+.net/legal/<wbr>user</a><br><a href=3D"http://codecanyon.net/legal/user" ta=
+rget=3D"_blank">http://codecanyon.net/legal/<wbr>user</a><br><a href=3D"htt=
+p://graphicriver.net/legal/user" target=3D"_blank">http://graphicriver.net/=
+legal/<wbr>user</a><br><a href=3D"http://themeforest.net/legal/user" target=
+=3D"_blank">http://themeforest.net/legal/<wbr>user</a><br><a href=3D"http:/=
+/videohive.net/legal/user" target=3D"_blank">http://videohive.net/legal/<wb=
+r>user</a><br><a href=3D"http://3docean.net/legal/user" target=3D"_blank">h=
+ttp://3docean.net/legal/user</a><br><a href=3D"http://marketplace.tutsplus.=
+com/legal/user" target=3D"_blank">http://marketplace.tutsplus.<wbr>com/lega=
+l/user</a><br><div><a href=3D"http://photodune.net/legal/user" target=3D"_b=
+lank">http://photodune.net/legal/<wbr>user</a></div></div></blockquote>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_3_14807019.1355072650965--

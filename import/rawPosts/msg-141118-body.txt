@@ -1,0 +1,124 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.159 with SMTP id m31csp879439ioi;
+        Sun, 21 Feb 2016 05:20:30 -0800 (PST)
+X-Received: by 10.194.48.111 with SMTP id k15mr25930523wjn.103.1456060830352;
+        Sun, 21 Feb 2016 05:20:30 -0800 (PST)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBG7TU23AKGQEA3BDK2Q@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id df6si31490531wjc.222.2016.02.21.05.20.30
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Feb 2016 05:20:30 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBG7TU23AKGQEA3BDK2Q@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBG7TU23AKGQEA3BDK2Q@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBC3IF2OJ4QORBG7TU23AKGQEA3BDK2Q@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id E4F54FB881
+	for <michiel@unhosted.org>; Sun, 21 Feb 2016 14:20:29 +0100 (CET)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D264F178041
+	for <michiel@unhosted.org>; Sun, 21 Feb 2016 14:20:29 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 4eUXD6aaYGbX for <michiel@unhosted.org>;
+	Sun, 21 Feb 2016 14:20:28 +0100 (CET)
+Received: from mail-wm0-x23e.google.com (mail-wm0-x23e.google.com [IPv6:2a00:1450:400c:c09::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 27BCA17804B
+	for <michiel@michielbdejong.com>; Sun, 21 Feb 2016 14:20:28 +0100 (CET)
+Received: by mail-wm0-x23e.google.com with SMTP id a4sf23270687wme.1
+        for <michiel@michielbdejong.com>; Sun, 21 Feb 2016 05:20:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:subject:to:references:in-reply-to:message-id:mime-version
+         :content-type:content-transfer-encoding:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=2GSnRYMttI2TzSrTD8fj8hm3o/jIfc3TD7C//v2Z2mg=;
+        b=uVebda6bsJvuUng5iUKLbUGwkhzc8lcwb1FHIQC8GlATYK+a026rQrRSx+iEdtguut
+         U5QHw3R+3pWhVpI+kfe+ke8/r0lsabuwRhd0zMJNY8fGkPtJgzsIy5oQibw5BzPCZFG7
+         aZj6rhbX+t0HIY3W8YgUo8e6hECRYX+t0iPBR3FxAzX4cjZn/duO1A2db+OOn3nfMP12
+         ja0oRlRxcKbFSWzsAvi/cdaHsV814KhO6D609SFWsPKNO8p7aMtRLvClH3sz3tyxk+47
+         EBLC50zyD0nMcbAl7rSWkTrfHWnDVVYZ1v1XTcWwuaaeGQi281hS17KxqM/S15eHbHlK
+         jR0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:subject:to:references:in-reply-to
+         :message-id:mime-version:content-type:content-transfer-encoding
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=2GSnRYMttI2TzSrTD8fj8hm3o/jIfc3TD7C//v2Z2mg=;
+        b=iQk0vxgDefRRW+c/eCos1r8LT+vOYiCB564NBPSy+YUcWpitU3XQpPf+vm2Wesg4mD
+         7xQooCDDlWxvwAQRh7QDq2f8niYH1evf2c3WD78YdKzLX35Tawb+vVGNvpgv6MAOXhOH
+         xXG4lGLsnKFkInCtn+DLsEysiirRa4eGCphvxKAv77R4xQATCiM1lIjhDnoKu9ORQp8C
+         Tn3XGpz6+/gpBRrMJs3FrZ1V5taOvSdCprwUBD3r5nczeRfJs74+gFRi7NyamJqqhU6I
+         ZeYp9pgAeGzkvhYVNW5e3uRCHdG1Vpu1f01YqllJI2+zzE/fSYWwGyTe32klVJ6E2TEl
+         CVWw==
+X-Gm-Message-State: AG10YORdgmnrT4Cy1GTa6GMc4K97hKZ5cFJMjIu3rCRL5yGPoofawMUPNatu0rRj4lcb4g==
+X-Received: by 10.25.149.195 with SMTP id x186mr89847lfd.5.1456060827975;
+        Sun, 21 Feb 2016 05:20:27 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.25.22.169 with SMTP id 41ls236910lfw.11.gmail; Sun, 21 Feb
+ 2016 05:20:27 -0800 (PST)
+X-Received: by 10.25.23.105 with SMTP id n102mr2805885lfi.9.1456060827049;
+        Sun, 21 Feb 2016 05:20:27 -0800 (PST)
+Received: from totosh.ampoliros.net (totosh.ampoliros.net. [80.67.179.53])
+        by gmr-mx.google.com with ESMTPS id h126si529159wme.0.2016.02.21.05.20.26
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Feb 2016 05:20:26 -0800 (PST)
+Received-SPF: neutral (google.com: 80.67.179.53 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=80.67.179.53;
+Date: Sun, 21 Feb 2016 13:20:24 +0000
+From: Hugo Roy <hugo@tosdr.org>
+Subject: Re: [tosdr:3774] [Bad] Wikia
+To: tosdr@googlegroups.com, imaginationnandfreedom@gmail.com
+References: <34fa70df-f2bb-4142-a641-6a09ba7210c6@googlegroups.com>
+ <1456018532-astroid-1-dvvqjpj4ww-14081@xps>
+ <1d8798d7-f4a3-4c08-b416-74d14c9722eb@googlegroups.com>
+In-Reply-To: <1d8798d7-f4a3-4c08-b416-74d14c9722eb@googlegroups.com>
+Message-Id: <1456060779-astroid-1-0dhmqmqn9w-17866@xps>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 80.67.179.53 is neither permitted nor denied by best guess
+ record for domain of hugo@tosdr.org) smtp.mailfrom=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+=E2=86=AA f=C3=A9vrier 21, 2016 5:57 , imaginationnandfreedom@gmail.com:
+> I can't seem to get it to work. Is there a special add-on you need?
+
+No, nothing special should be needed. Just subscribe in the top right
+hand corner. What's not working?
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/1456060779-astroid-1-0dhmqmqn9w-17866%40xps.
+For more options, visit https://groups.google.com/d/optout.

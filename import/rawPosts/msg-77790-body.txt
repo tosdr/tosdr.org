@@ -1,0 +1,404 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp154358wfj;
+        Tue, 26 Jun 2012 02:55:02 -0700 (PDT)
+Received: by 10.204.13.82 with SMTP id b18mr4794472bka.32.1340704501328;
+        Tue, 26 Jun 2012 02:55:01 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDzjab_BBoEn21IZg@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id hy14si12820480bkc.59.2012.06.26.02.54.59
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 02:55:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDzjab_BBoEn21IZg@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDzjab_BBoEn21IZg@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDzjab_BBoEn21IZg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fanl9 with SMTP id l9sf3555042fan.29
+        for <multiple recipients>; Tue, 26 Jun 2012 02:54:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :organization:date:mime-version:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=p/8wGXAVabcltdIGl4lKMq15o8UOmqJgKyR4n6hI0u8=;
+        b=5p9W+9zJfgPCzsjunHZioXM2WDW4pSwB9M1QRFvcRQ6jOgQ6p32pzonWxTyMQ5hp3r
+         TAA015FqNIe9hblNq+c+ddGJfk3DkLDTIOifmrX5b9EG8I868LVrz7XSQiEjsiucZWeG
+         2tVGqi15WDW7c9OT1h18QmKGC/2WCf3zPfejk=
+Received: by 10.204.128.198 with SMTP id l6mr794169bks.30.1340704499462;
+        Tue, 26 Jun 2012 02:54:59 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.129.85 with SMTP id n21ls4492198bks.6.gmail; Tue, 26 Jun
+ 2012 02:54:58 -0700 (PDT)
+Received: by 10.204.143.145 with SMTP id v17mr1720180bku.7.1340704498803;
+        Tue, 26 Jun 2012 02:54:58 -0700 (PDT)
+Received: by 10.204.143.145 with SMTP id v17mr1720179bku.7.1340704498768;
+        Tue, 26 Jun 2012 02:54:58 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id hy18si15251725bkc.2.2012.06.26.02.54.58
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 02:54:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 35C2263B508
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 11:54:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id xG6hRtrJhQhr for <tosdr@googlegroups.com>;
+	Tue, 26 Jun 2012 11:54:50 +0200 (CEST)
+Received: from [10.240.68.36] (smb-rsycl-04.wifihubtelecom.net [213.174.124.180])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id CF43A63B4BF
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 11:54:49 +0200 (CEST)
+Message-ID: <1340703938.4413.57.camel@synclavier.lan>
+Subject: Sonic.net (ISP) deletes logs after 2 weeks
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Organization: Free Software Foundation Europe
+Date: Tue, 26 Jun 2012 11:45:38 +0200
+Mime-Version: 1.0
+X-Mailer: Evolution 3.2.2-1+b1
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+http://www.forbes.com/sites/andygreenberg/2012/06/22/ceo-of-internet-provid=
+er-sonic-net-we-delete-user-logs-after-two-weeks-your-internet-provider-sho=
+uld-too/2/
+
+Since the forbes website is really awful to read, you can find a text
+copy here:
+
+CEO Of Internet Provider Sonic.net: We Delete User Logs After Two Weeks.
+Your Internet Provider Should, Too.
+
+
+Sonic.net chief executive Dane Jasper
+
+Dane Jasper=92s tiny Internet service provider Sonic.net briefly took the
+national spotlight last October, when it contested a Department of
+Justice order that it secretly hand over the data of privacy activist
+and WikiLeaks associate Jacob Appelbaum. But Jasper=92s conversion into a
+privacy true believer began earlier, with a less-discussed subpoena: one
+regarding a pornographic film with an unprintable title.
+
+Eighteen months ago, Sonic.net began to see a string of legal requests
+for its users=92 data, mostly for copyright infringement cases involving
+x-rated films with embarrassing names: When given the option to settle
+or have their name attached to a smutty video in a legal case, Jasper
+saw users paying up=96even when they seemed to be innocent.
+
+So he took an unprecedented step to protect the privacy of his 40,000 or
+so Northern California customers: He cut the time that his ISP stores
+logs of users=92 Internet activity to just two weeks=96a tiny period
+compared to the 18-36 months ISPs like Verizon, AT&T, Qwest, Cox,
+Comcast and Time Warner hold onto users=92 private information.
+
+I sat down with Jasper in his Santa Rosa office to talk about his stance
+as a privacy pragmatist, the landmark WikiLeaks case he=92s been involved
+in, and why major ISPs refuse to follow his move to cut data retention
+times. Here=92s an edited transcript of our conversation.
+
+Andy Greenberg: It seems like you=92ve made a point of trying to become
+the most privacy-preserving Internet service provider (ISP) in operation
+in the United States.
+
+Dane Jasper: We have.
+
+AG: Can you tell me what are the concrete ways you=92ve done that?
+
+DJ: So, we=92ve stood up for our customers, at our expense, when we had an
+option not to. We=92ve demonstrated a willingness to put our money where
+our mouth is, and spend resources where we felt it was warranted to
+legally defend our customers. And the other major thing that we=92ve done
+is to make a commitment to limit our logging interval.
+
+AG: What=92s your limit?
+
+DJ: We limit it to two weeks.
+
+AG: Is that the shortest that you know of?
+
+DJ: No, some VPN providers commit to no logs. But it=92s the shortest
+retention period of any facilities-based Internet access provider that I
+know of, yes. Comcast or AT&T or Verizon typically keep their logs for
+18 to 36 months.
+
+AG: And why did you make that decision?
+
+DJ: So, what we saw was a shift towards customers being made part of a
+business model that involved=96I don=92t know if extortion is the right
+word=96but embarassment for gain.
+An individual would download a movie, using bittorrent, and infringe
+copyright. And that might be our customer, like Bob Smith who owns a
+Sonic.net account, or it might be their spouse, or it might be their
+child. Or it might be one of his three roommates in a loft in San
+Francisco, who Bob is not responsible for, and who rent out their loft
+on AirBnB and have couch surfers and buddies from college and so on and
+open Wifi.
+
+When lawyers asked us for these users=92 information, some of our
+customers I spoke with said =93Oh yeah, crap, they caught me,=94 and were
+willing to admit they engaged in piracy and pay a settlement. But in
+other cases, it turned out the roommate did it, or no one would admit to
+doing it. But they would pay the settlement anyway. Because no one wants
+to be named in the public record in a case from So-And-So Productions
+vs. 1,600 names including Bob Smith for downloading a film called =93Don=92=
+t
+Tell My Wife I B=97F=97=97 The Babysitter.=94
+
+AG: Is that a real title?
+
+DJ: Yes. I=92ve read about cases where a lawyer was doing this for the
+movie =93The Expendables,=94 and 5% of people settled. So then he switched
+to representing someone with an embarassing porn title, and like 30% of
+people paid.
+
+It seemed like half the time, the customer wasn=92t the one right one, but
+they rolled over because it would be very embarassing. And I think
+that=92s an abuse of process. I was unwilling to become part of that
+business model. In many cases the lawyers never pursued the case, and it
+was all bluster. But under that threat, you pay.
+
+AG: So when did you decide to limit data retention?
+
+DJ: Well, we saw a big uptake in this problem early last year. The
+=93Don=92t Tell My Wife=94 one was the first, and we laughed about it. But
+then we saw more and more coming in. So I looked at this, and it was a
+cynical, awful business.
+
+I met with my system team, and I said, why are we keeping these logs?
+The primary reasons were law enforcement and spam, so we looked at our
+law enforcement subpoenas, and the spam processing. In the case of spam,
+someone is infected and becomes part of a botnet, somebody kicks off a
+spam job and the customer dumps 20,000 emails in a day. We get
+complaints, and they=92re all about the last day. My systems team also
+only needed logs for a day.
+
+So then I looked at law enforcement subpoenas and tried to balance an
+ability to help law enforcement when it=92s morally right to do so with an
+inability to help anybody beyond a certain window. In the civil
+copyright cases, we=92d get a subpoena from them anywhere from 30-90 days
+later, sometimes longer after the alleged act of piracy has occurred.
+
+We were concerned about cases where there=92s a kidnapping, a threat to
+the human life, and the FBI is trying to find the kidnapper who sent a
+demand email yesterday or a week ago. We felt like two weeks was a good
+window that would allow us to address some things=96both our own needs in
+the long term and the law enforcement=92s dire needs in the mid-term=96whil=
+e
+omitting any ability to assist in what we felt was like an extortion
+racket. And so that was another concrete step we took last year, to
+reduce our logging interval to two weeks.
+
+AG: What was it before?
+
+DJ: Some things we kept for 30 days, other things for years. We didn=92t
+have a defined procedure.
+
+AG: Earlier, you mentioned fighting legal battles on behalf of your
+users. Can you say specifically what battles and which customers?
+
+DJ: I probably can=92t. I can tell you that the case you=92ve probably read
+about regarding Jacob Appelbaum is under seal, and I can=92t comment on
+that case. And obviously Appelbaum spoke with the Wall Street Journal
+reporter and reported that we informed him that we managed to get it
+unsealed enough to inform him. So, however the entire case is still
+under seal, so we can=92t speak to the specific sides informing him.
+
+We=92ve committed to and published a policy of notification of customers
+when their data is subpoenaed. The typical subpoena that we will get
+will say =93This is an ongoing investigation, and to protect the integrity
+of the investigation, we request that you please not inform your
+customer about the details of this subpoena while complying with it, now
+or ever.=94 Sometimes they=92ll say =93and if you are or do tell your
+customer, tell us that you have.=94
+
+I=92m ok with that second part. but I=92m not ok with the first. If
+something belongs under a seal, they should make that case to the judge.
+I shouldn=92t be in the role of deciding whether or not someone should be
+informed about a law enforcement request for their information. So we
+instead say, =93Here=92s our policy document, we notify our customers, if
+that=92s a problem for your investigation, you should make that case to a
+judge and put it under seal.=94
+
+AG: In Appelbaum=92s case, did you actually have the seal raised or did
+you violate the seal?
+
+DJ: We were unable to get the case unsealed, we were able to unseal it
+to a degree that we were allowed to inform our customer about compliance
+with the subpoena.
+
+AG: Are there cases where you=92ve fought not just to tell your customer
+about the subpoena but actually quash it, as Twitter is attempting to do
+in the case of Occupy Wall Street protestor Malcolm Harris?
+
+DJ: I have to answer carefully. I can=92t say anything specific about the
+Appelbaum case, so I can=92t comment on whether we did or didn=92t fight th=
+e
+release of his data. The only thing that we are able to say is to him is
+that we were forced to hand over his data.
+
+AG: Did the Appelbaum case help convince you to limit your data
+retention?
+
+DJ: I would answer that in a general way. All of the subpoenas that we
+receive from the various branches of law enforcement and all of the
+civil cases that we=92ve processed over the last few years have all
+contributed to my outlook on privacy, and so I don=92t want to say that
+there=92s a cause and effect between those things. I will say that
+everything that we have received has been contributory towards our
+position around privacy.
+
+AG: If your ISP is able to operate with only two weeks of logging, why
+can=92t others like Comcast, AT&T, Verizon and Time Warner?
+
+DJ: They should. I think ISPs need to minimize their logging to a degree
+that it works within their business, notify customers about subpoenas
+and, where subpoenas warrant resistance after review, they should resist
+them.
+
+AG: Why don=92t they?
+
+DJ: I could only speculate. Costs. The cost is legal friction and
+lawyers.
+
+AG: I=92m sure it=92s expensive to fight these legal battles over subpoenas=
+.
+But what about logging for just two weeks? That=92s not expensive.
+
+DJ: I would speculate it would be an unpopular move that might result in
+more friction with law enforcement. Law enforcement has been lobbying to
+pass laws that would require service providers to keep 18-36 months of
+logs. It=92s in their interests.
+
+AG: Do ISPs keep the logs that long voluntarily to avoid being
+legislated to do so?
+
+DJ: Or just to be cooperative. They=92re running a business. Picking a
+fight with law enforcement isn=92t part of their business model.
+
+As a small provider, we can make an independent decision like this and
+it doesn=92t matter in the overall ecosystem. But if a very large carrier
+made that decision, it would be much discussed. And potentially
+legislated.
+
+AG: Have you faced friction with law enforcement as a result of your
+logging policy?
+
+DJ: No. We=92ve heard some expressions of surprise. But if they=92re not
+asking us for data, they=92re asking web hosts, websites, or email service
+providers.
+
+I think we had one customer that wrote to us and said =93Don=92t protect th=
+e
+terrorists. Log everything you can. I don=92t care about my privacy,
+because I=92m not a terrorist.=94 But I think that that=92s too simple away=
+ of
+looking at it.
+
+AG: Do you think your privacy policy could be a business advantage? Do
+you market yourselves that way?
+
+DJ: If you look at the marketing material, you won=92t see us pitching
+this as a feature, and that=92s intentional. I=92m trying to protect my
+customers. The overall public. Not the self-selected subset who buys a
+service because they especially care about their privacy, or are an
+activist, or help some greater concern. I don=92t think I can provide them
+adequate protection. Two weeks of logs is two weeks of logs. If they are
+a Chinese dissident living in the US they should be using Tor or
+something.
+
+On the other hand, if I say to the public =93Hey, this is a great place
+because we keep less logs,=94 I don=92t want to attract people who want to
+break the law, and then find that we don=92t have the data and they don=92t
+get caught.
+
+So I don=92t think it=92s appropriate to market on that basis. I think it=
+=92s
+appropriate to do it, but not to market it.
+
+AG: Services like VPNs and proxies clearly build competitive advantage
+out of privacy, don=92t they?
+
+DJ: Are they really?  I think it=92s a cynical perversion. They are using
+privacy as an excuse to create a product that if you were really to get
+their true feelings about it, sells more because of piracy. They create
+a mechanism to enable piracy through total anonymity and they end up
+selling a lot of connections or VPN tunnels, or whatever their =93privacy
+product=94 is. And I think that=92s fraught with risk as well. It=92s throu=
+gh
+that sort of exploitation of copyright holders that you=92re going to get
+legislation around log retention.
+
+AG: You=92ve talked a lot about the effects of the lack of competition
+among ISPs in the U.S. Do you think that monopolistic environment is one
+reason that none of them has a privacy policy like yours?
+
+DJ: If we had a true open access and a vibrant competitive environment,
+it would fix lots of problems. The whole network neutrality issue, that
+whole fight is not an issue if you had 30 service providers to choose
+from, because if one was goofing with your voice over IP, everybody
+would leave.
+
+Similarly, if there were 30 service providers to choose from in every
+market, I think everyone would take better care of consumers=92 privacy,
+too.
+
+In the US, we made a shift in 2002 and decided that we were going to
+pick winners in each industry, and we=92re going to have the incumbent
+cable company compete with the incumbent phone company, and maybe the
+power company will get into the business, and then there=92ll be some
+wireless, and maybe satellite. But realistically, wireless is expensive
+and slow. Satellite is latent. Broadband over powerlines never really
+worked. So you end up with two to choose from, and if you only have two,
+one looks at the other, and they go, that guy is this fast, lets be that
+fast. That guy is $25 let=92s be $20.
+
+AG: That guy logs 18 to 36 months. Why shouldn=92t we?
+
+DJ: Right. Why do we want to pick a fight with law enforcement, or lobby
+congress, argue to pass laws about logging? So in a duopoly environment
+you get a number of effects that aren=92t beneficial to consumers.
+
+In an environment where you=92ve got 30 providers to choose from, do
+privacy policies naturally improve? They might.
+
+=20
+
+
+This article is available online at:=20
+http://www.forbes.com/sites/andygreenberg/2012/06/22/ceo-of-internet-provid=
+er-sonic-net-we-delete-user-logs-after-two-weeks-your-internet-provider-sho=
+uld-too/
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

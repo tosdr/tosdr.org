@@ -1,0 +1,142 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp89601vec;
+        Thu, 6 Dec 2012 07:25:20 -0800 (PST)
+Received: by 10.236.74.198 with SMTP id x46mr2697963yhd.72.1354807520532;
+        Thu, 06 Dec 2012 07:25:20 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBXXRQKDAKGQEIILE5LQ@googlegroups.com>
+Received: from mail-yh0-f62.google.com (mail-yh0-f62.google.com [209.85.213.62])
+        by mx.google.com with ESMTPS id z63si9573702yhd.98.2012.12.06.07.25.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 06 Dec 2012 07:25:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBXXRQKDAKGQEIILE5LQ@googlegroups.com designates 209.85.213.62 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBXXRQKDAKGQEIILE5LQ@googlegroups.com designates 209.85.213.62 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBXXRQKDAKGQEIILE5LQ@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-yh0-f62.google.com with SMTP id k61sf3789923yhk.27
+        for <michiel@unhosted.org>; Thu, 06 Dec 2012 07:25:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=07q7zZM37quipCm28rerp4IQ9MQCwGbiidyqsrZ9f80=;
+        b=IMP717wWpIB1HdheYX3V57GGGGmW2uSWVoTf3pd03Dko8MIFppevADx20eoIoQRD7g
+         EcDxwtGMkZTFkZUse+oqb5pzOyuIHL76UxkgN6BIPrz+dipPnMOE7YKKTCe56To/YbcW
+         AiVyYeWauVuEiOTZpZATMazxSFvyPxlYob8c8sM7ddSmClM7X5a5irecNvfjewaPYmFp
+         gj4LrEkdWinU022YFBy+jR/U8F8A0kqfnvKv5+mQjTrNuw59lfo/BlmSYhjL4kaLC61E
+         FBKPbSRq9JRwle+Ot3Qf+OA4ZQIphfuxbbmnUvyLC9hUkotUh8EoZ0Dp1Ohqp1bThCOR
+         UFyg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=07q7zZM37quipCm28rerp4IQ9MQCwGbiidyqsrZ9f80=;
+        b=u0dM8eBnpL4GnbpevJynxYCtvK7tiT+rhhX11y68R3x0CnN4aoOZ22oK69+dMj6M35
+         wH9qLdAR1g0mkuJrsy7pCuTYT59cEVTzpnfCUMlM71oMVNuvtL4Dl5pKp8xBvwElOWrT
+         nVaxZLRrDJFW5AXNOChz3/b5D0O0JzQ1DkKNyXC4h87njxqyZfz8jyHkUoA4fTtvCCje
+         mtP5iio3dQIU8i2z3TKHSyzuuSIrsCu/87upCq2qPqpaaRH/nhbuN0ZnelmEZtRPLs3z
+         HF5ULAM1ATmTvjYr9ntmo4DeturBPGcKXfL0dKqDjyqZnSAXLPbdfOuj9Hd0L3wDeWD6
+         fikQ==
+Received: by 10.49.38.72 with SMTP id e8mr372847qek.42.1354807520183;
+        Thu, 06 Dec 2012 07:25:20 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.105.38 with SMTP id gj6ls1653458qeb.11.gmail; Thu, 06 Dec
+ 2012 07:25:18 -0800 (PST)
+Received: by 10.49.38.194 with SMTP id i2mr366592qek.30.1354807518757;
+        Thu, 06 Dec 2012 07:25:18 -0800 (PST)
+Date: Thu, 6 Dec 2012 07:25:17 -0800 (PST)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Cc: michiel@michielbdejong.com
+Message-Id: <63617c24-55b4-4d99-be01-de34fe71dc76@googlegroups.com>
+In-Reply-To: <1354788559.2777733403709482@mf14.sendgrid.net>
+References: <1354788559.2777733403709482@mf14.sendgrid.net>
+Subject: [tosdr:1227] Re: [Bad] Yahoo! fails to implement https
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_631_3182514.1354807517871"
+
+------=_Part_631_3182514.1354807517871
+Content-Type: text/plain; charset=ISO-8859-1
+
+It doesn't mean all accounts are vulnerable at once; just that you are 
+incredibly open to man-in-the-middle attacks, correct?
+
+On Thursday, December 6, 2012 6:09:19 AM UTC-4, mic...@michielbdejong.com 
+wrote:
+>
+> Yahoo! has repeatedly been urged by consumer rights organizations to adopt 
+> HTTPS, but has taken no visible steps to do so. 
+> This means criminals can access your user data, without a warrant, for all 
+> Yahoo! accounts. That is pretty bad. 
+>
+> https://www.accessnow.org/blog/2012/11/15/access-civil-society-sign-open-letter-to-yahoo-ceo-urging-implementation-of 
+>
+> Ciao, 
+> Michiel 
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_631_3182514.1354807517871
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+It doesn't mean all accounts are&nbsp;vulnerable&nbsp;at once; just that yo=
+u are incredibly open to man-in-the-middle attacks, correct?<br><br>On Thur=
+sday, December 6, 2012 6:09:19 AM UTC-4, mic...@michielbdejong.com wrote:<b=
+lockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;borde=
+r-left: 1px #ccc solid;padding-left: 1ex;">Yahoo! has repeatedly been urged=
+ by consumer rights organizations to adopt HTTPS, but has taken no visible =
+steps to do so.
+<br>This means criminals can access your user data, without a warrant, for =
+all Yahoo! accounts. That is pretty bad.
+<br><a href=3D"https://www.accessnow.org/blog/2012/11/15/access-civil-socie=
+ty-sign-open-letter-to-yahoo-ceo-urging-implementation-of" target=3D"_blank=
+">https://www.accessnow.org/<wbr>blog/2012/11/15/access-civil-<wbr>society-=
+sign-open-letter-to-<wbr>yahoo-ceo-urging-<wbr>implementation-of</a>
+<br>
+<br>Ciao,
+<br>Michiel
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_631_3182514.1354807517871--

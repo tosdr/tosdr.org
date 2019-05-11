@@ -1,0 +1,704 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp878766iou;
+        Tue, 18 Aug 2015 06:49:25 -0700 (PDT)
+X-Received: by 10.194.110.132 with SMTP id ia4mr13630899wjb.103.1439905765041;
+        Tue, 18 Aug 2015 06:49:25 -0700 (PDT)
+Return-Path: <tosdr+bncBDT5RRVO6IHRBW7PZSXAKGQERMGZH6Q@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id gm10si27344220wib.91.2015.08.18.06.49.24
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 18 Aug 2015 06:49:25 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDT5RRVO6IHRBW7PZSXAKGQERMGZH6Q@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDT5RRVO6IHRBW7PZSXAKGQERMGZH6Q@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBDT5RRVO6IHRBW7PZSXAKGQERMGZH6Q@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 4ABDEA80BC
+	for <michiel@unhosted.org>; Tue, 18 Aug 2015 15:49:24 +0200 (CEST)
+Received: from mfilter33-d.gandi.net (mfilter33-d.gandi.net [217.70.178.164])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3948D1421DE
+	for <michiel@unhosted.org>; Tue, 18 Aug 2015 15:49:24 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter33-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter33-d.gandi.net (mfilter33-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id KbUfcNCzHmHg for <michiel@unhosted.org>;
+	Tue, 18 Aug 2015 15:49:20 +0200 (CEST)
+Received: from mail-qg0-x237.google.com (mail-qg0-x237.google.com [IPv6:2607:f8b0:400d:c04::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0000A1421FB
+	for <michiel@michielbdejong.com>; Tue, 18 Aug 2015 15:49:16 +0200 (CEST)
+Received: by qgdd90 with SMTP id d90sf44345603qgd.0
+        for <michiel@michielbdejong.com>; Tue, 18 Aug 2015 06:49:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:to:subject:mime-version:content-type
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=AMvUYToA8sQ4kOyu10bhqMvuc7Z1MFbbpnfPyc2o6fE=;
+        b=HYyVVxg37/6YzWDgGHOSxbPJfu6xPMdd2/MRQo/mrVwGdTDnv61//69iVwDpfTTZWB
+         KJBTyU0THS4EqjWP+szHzj4O3xalFxtCqSTMkhuLt5d+C1fm605DKD42z6vSJSaN9xlt
+         ++HID+cmPto7obdfT2EKqMB2oTV8lYDQ/S7wIEs6J3K757EIY14U4j7n/rhEQUzbeQqD
+         KdqYnmthiCFQ1S8Kw+lvTQUvnsUNwFt2EgC2oNmymVIk/eoJbGOmb+3Q5npAGD9DKCLk
+         zXbKaDYlLtuN5r+rHBP370GwDFl1icCebAhnBMJzhAEoCdTSM3sMS3JbRjal6cZZ/MWS
+         pdFg==
+X-Received: by 10.50.122.40 with SMTP id lp8mr389627igb.0.1439905755921;
+        Tue, 18 Aug 2015 06:49:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.79.196 with SMTP id l4ls1316655igx.22.canary; Tue, 18 Aug
+ 2015 06:49:15 -0700 (PDT)
+X-Received: by 10.66.243.49 with SMTP id wv17mr5791729pac.18.1439905755398;
+        Tue, 18 Aug 2015 06:49:15 -0700 (PDT)
+Received: from sv4-smtp2.zoho.com (sv4-smtp2.zoho.com. [74.201.84.160])
+        by gmr-mx.google.com with ESMTPS id qa1si1838271pdb.1.2015.08.18.06.49.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 18 Aug 2015 06:49:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of zwriter@zoho.com designates 74.201.84.160 as permitted sender) client-ip=74.201.84.160;
+Received: from 172.31.243.40 ([172.31.243.40])
+	by sv4-smtp2.zoho.com (8.14.4/8.13.1) with ESMTP id t7IDnFDO027145
+	for <tosdr@googlegroups.com>; Tue, 18 Aug 2015 06:49:15 -0700
+Message-ID: <35077499.1439905755072.JavaMail.sas@172.31.243.40>
+Date: Tue, 18 Aug 2015 06:49:15 -0700 (PDT)
+From: Sales Team <email2onlineadvertising@gmail.com>
+To: tosdr@googlegroups.com
+Subject: [tosdr:3594] Are you effectively spending money on Google Adwords?
+Mime-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_4027_1279650372.1439905755071"
+X-Original-Sender: email2onlineadvertising@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of zwriter@zoho.com designates 74.201.84.160 as permitted
+ sender) smtp.mailfrom=zwriter@zoho.com;       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4027_1279650372.1439905755071
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: controlweb
+
+<DIV><DIV class=3D"zw-fixedview zw-page" style=3D"width: 816px; position: r=
+elative; margin-bottom: 0px; margin-top: 0px; border-right-width: 0px; bord=
+er-bottom-width: 0px; border-left-width: 0px; page-break-after: auto; backg=
+round: none rgb(255, 255, 255);"><DIV class=3D"header_primary unselectableS=
+ection" style=3D"position: relative; display: block;"><DIV style=3D"min-hei=
+ght: 1in; padding: 0in 1in; max-height: 844px;"><DIV class=3D"header_conten=
+t" style=3D"padding-top: 0.5in;"><DIV class=3D"zw-paragraph" data-width=3D"=
+624"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: rel=
+ative; height: 24px; margin-left: 0px;"><DIV class=3D"zw-line-content" styl=
+e=3D"padding-top: 0px; padding-bottom: 0px;"></DIV></DIV></DIV></DIV></DIV>=
+</DIV><DIV class=3D"zw-contentpane selectableSection" style=3D"margin-left:=
+ 1in; margin-right: 1in; margin-top: -1px; position: relative;"><DIV class=
+=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-righ=
+t: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space=
+: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=
+=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN=
+ class=3D"zw-portion" data-text-len=3D"3" style=3D"color: rgb(34, 34, 34); =
+font-variant: normal; font-family: Arial, sans-serif; font-weight: normal; =
+font-style: normal; letter-spacing: normal; font-size: 9pt;">Hi,</SPAN></DI=
+V></DIV></DIV><DIV class=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quo=
+t;:&quot;rgb(34, 34, 34)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;ff&q=
+uot;:&quot;Arial, sans-serif&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;=
+fs&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;text&quot;,&quot;cs&quot=
+;:&quot;normal&quot;,&quot;size&quot;:9}" data-width=3D"624" style=3D"margi=
+n-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-d=
+iv" style=3D"white-space: nowrap; position: relative; height: 21px; margin-=
+left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; paddi=
+ng-bottom: 0px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=
+=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;">=
+<DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: relative=
+; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"=
+padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-tex=
+t-len=3D"96" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-fa=
+mily: Arial, sans-serif; font-weight: normal; font-style: normal; letter-sp=
+acing: normal; font-size: 9pt;">Would&nbsp;you&nbsp;like&nbsp;to&nbsp;find&=
+nbsp;a&nbsp;way&nbsp;to&nbsp;gradually&nbsp;reduce&nbsp;the&nbsp;amount&nbs=
+p;of&nbsp;money&nbsp;you&rsquo;re&nbsp;spending&nbsp;on&nbsp;Adwords?</SPAN=
+></DIV><DIV class=3D"spell-error spell-sd3nws52v89c" style=3D"left: 487px; =
+width: 48px; top: 14px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data=
+-textformat=3D"{&quot;fgc&quot;:&quot;rgb(34, 34, 34)&quot;,&quot;fv&quot;:=
+&quot;normal&quot;,&quot;ff&quot;:&quot;Arial, sans-serif&quot;,&quot;fw&qu=
+ot;:&quot;normal&quot;,&quot;fs&quot;:&quot;normal&quot;,&quot;type&quot;:&=
+quot;text&quot;,&quot;cs&quot;:&quot;normal&quot;,&quot;size&quot;:9}" data=
+-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padding-left: =
+0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: re=
+lative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" sty=
+le=3D"padding-top: 0px; padding-bottom: 0px;"></DIV></DIV></DIV><DIV class=
+=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-righ=
+t: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space=
+: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=
+=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN=
+ class=3D"zw-portion" data-text-len=3D"112" style=3D"color: rgb(34, 34, 34)=
+; font-variant: normal; font-family: Arial, sans-serif; font-weight: normal=
+; font-style: normal; letter-spacing: normal; font-size: 9pt;">Adwords&nbsp=
+;traffic&nbsp;is&nbsp;expensive.&nbsp;The&nbsp;money&nbsp;you&nbsp;spend&nb=
+sp;on&nbsp;Adwords&nbsp;ads&nbsp;up&nbsp;fast.&nbsp;We&rsquo;ve&nbsp;been&n=
+bsp;there,&nbsp;and&nbsp;it&rsquo;s&nbsp;expensive.&nbsp;</SPAN></DIV><DIV =
+class=3D"spell-error spell-sd3nws52v89c" style=3D"left: 0px; width: 48px; t=
+op: 14px;"></DIV><DIV class=3D"spell-error spell-sd3nws52v89c" style=3D"lef=
+t: 298px; width: 48px; top: 14px;"></DIV></DIV></DIV><DIV class=3D"zw-parag=
+raph" data-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padd=
+ing-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; po=
+sition: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-co=
+ntent" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-p=
+ortion" data-text-len=3D"114" style=3D"color: rgb(34, 34, 34); font-variant=
+: normal; font-family: Arial, sans-serif; font-weight: normal; font-style: =
+normal; letter-spacing: normal; font-size: 9pt;">I&nbsp;took&nbsp;a&nbsp;lo=
+ok&nbsp;at&nbsp;your&nbsp;website,&nbsp;and&nbsp;my&nbsp;feeling&nbsp;is&nb=
+sp;that&nbsp;you&nbsp;could&nbsp;phase&nbsp;this&nbsp;Adwords&nbsp;spending=
+&nbsp;out&nbsp;over&nbsp;the&nbsp;next&nbsp;few&nbsp;</SPAN></DIV><DIV clas=
+s=3D"spell-error spell-sd3nws52v89c" style=3D"left: 389px; width: 48px; top=
+: 14px;"></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowra=
+p; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-li=
+ne-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D=
+"zw-portion" data-text-len=3D"117" style=3D"color: rgb(34, 34, 34); font-va=
+riant: normal; font-family: Arial, sans-serif; font-weight: normal; font-st=
+yle: normal; letter-spacing: normal; font-size: 9pt;">months.&nbsp;I&nbsp;t=
+hink&nbsp;I&nbsp;can&nbsp;help&nbsp;you&nbsp;gradually&nbsp;replace&nbsp;th=
+e&nbsp;Adwords&nbsp;traffic&nbsp;you&nbsp;purchase&nbsp;with&nbsp;non-paid&=
+nbsp;traffic&nbsp;from&nbsp;Google.&nbsp;</SPAN></DIV><DIV class=3D"spell-e=
+rror spell-sd3nws52v89c" style=3D"left: 278px; width: 48px; top: 14px;"></D=
+IV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position:=
+ relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" =
+style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion"=
+ data-text-len=3D"92" style=3D"color: rgb(34, 34, 34); font-variant: normal=
+; font-family: Arial, sans-serif; font-weight: normal; font-style: normal; =
+letter-spacing: normal; font-size: 9pt;">You&nbsp;can't&nbsp;get&nbsp;rid&n=
+bsp;of&nbsp;your&nbsp;Adwords&nbsp;spending&nbsp;completely.&nbsp;But,&nbsp=
+;we&nbsp;can&nbsp;help&nbsp;you&nbsp;spend&nbsp;much&nbsp;less.</SPAN></DIV=
+><DIV class=3D"spell-error spell-sd3nws52v89c" style=3D"left: 130px; width:=
+ 48px; top: 14px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-textf=
+ormat=3D"{&quot;fgc&quot;:&quot;rgb(34, 34, 34)&quot;,&quot;fv&quot;:&quot;=
+normal&quot;,&quot;ff&quot;:&quot;Arial, sans-serif&quot;,&quot;fw&quot;:&q=
+uot;normal&quot;,&quot;fs&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;t=
+ext&quot;,&quot;cs&quot;:&quot;normal&quot;,&quot;size&quot;:9}" data-width=
+=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;">=
+<DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: relative=
+; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"=
+padding-top: 0px; padding-bottom: 0px;"></DIV></DIV></DIV><DIV class=3D"zw-=
+paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in;=
+ padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowra=
+p; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-li=
+ne-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D=
+"zw-portion" data-text-len=3D"117" style=3D"color: rgb(34, 34, 34); font-va=
+riant: normal; font-family: Arial, sans-serif; font-weight: normal; font-st=
+yle: normal; letter-spacing: normal; font-size: 9pt;">My&nbsp;goal&nbsp;wou=
+ld&nbsp;be&nbsp;for&nbsp;you&nbsp;to&nbsp;be&nbsp;#1&nbsp;(or&nbsp;close&nb=
+sp;to&nbsp;it)&nbsp;in&nbsp;Google&nbsp;for&nbsp;your&nbsp;top&nbsp;keyword=
+s,&nbsp;and&nbsp;for&nbsp;you&nbsp;to&nbsp;see&nbsp;a&nbsp;high&nbsp;return=
+&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: n=
+owrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"z=
+w-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN clas=
+s=3D"zw-portion" data-text-len=3D"111" style=3D"color: rgb(34, 34, 34); fon=
+t-variant: normal; font-family: Arial, sans-serif; font-weight: normal; fon=
+t-style: normal; letter-spacing: normal; font-size: 9pt;">on&nbsp;your&nbsp=
+;investment&nbsp;in&nbsp;30&nbsp;days.&nbsp;Once&nbsp;we&nbsp;help&nbsp;inc=
+rease&nbsp;the&nbsp;non-paid&nbsp;search&nbsp;traffic&nbsp;from&nbsp;Google=
+,&nbsp;the&nbsp;you&nbsp;can&nbsp;stop&nbsp;</SPAN></DIV></DIV><DIV class=
+=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; height: =
+21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-to=
+p: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"4=
+6" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-family: Aria=
+l, sans-serif; font-weight: normal; font-style: normal; letter-spacing: nor=
+mal; font-size: 9pt;">spending&nbsp;so&nbsp;much&nbsp;money&nbsp;on&nbsp;Ad=
+words.&nbsp;Here's&nbsp;how:</SPAN></DIV><DIV class=3D"spell-error spell-sd=
+3nws52v89c" style=3D"left: 160px; width: 48px; top: 14px;"></DIV></DIV></DI=
+V><DIV class=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quot;:&quot;rgb=
+(34, 34, 34)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;ff&quot;:&quot;A=
+rial, sans-serif&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;fs&quot;:&qu=
+ot;normal&quot;,&quot;type&quot;:&quot;text&quot;,&quot;cs&quot;:&quot;norm=
+al&quot;,&quot;size&quot;:9}" data-width=3D"624" style=3D"margin-left: 0in;=
+ margin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D=
+"white-space: nowrap; position: relative; height: 21px; margin-left: 0px;">=
+<DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0=
+px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV =
+class=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; hei=
+ght: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=
+=3D"15" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-family:=
+ Arial, sans-serif; font-weight: normal; font-style: normal; letter-spacing=
+: normal; font-size: 9pt;">CHOOSE&nbsp;KEYWORDS</SPAN></DIV></DIV></DIV><DI=
+V class=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; marg=
+in-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"whit=
+e-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV =
+class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;">=
+<SPAN class=3D"zw-portion" data-text-len=3D"111" style=3D"color: rgb(34, 34=
+, 34); font-variant: normal; font-weight: normal; font-family: Arial, sans-=
+serif; font-style: normal; font-size: 9pt; letter-spacing: normal;">We&nbsp=
+;look&nbsp;for&nbsp;keywords&nbsp;that&nbsp;meet&nbsp;this&nbsp;criteria.&n=
+bsp;They&nbsp;need&nbsp;to&nbsp;have&nbsp;little&nbsp;competition,&nbsp;hig=
+h&nbsp;search&nbsp;demand,&nbsp;strong&nbsp;</SPAN></DIV></DIV><DIV class=
+=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; height: =
+21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-to=
+p: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"1=
+16" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-weight: nor=
+mal; font-family: Arial, sans-serif; font-style: normal; font-size: 9pt; le=
+tter-spacing: normal;">relevance&nbsp;to&nbsp;your&nbsp;industry,&nbsp;and&=
+nbsp;high&nbsp;revenue&nbsp;/&nbsp;visitor.&nbsp;We&nbsp;find&nbsp;keywords=
+&nbsp;where&nbsp;the&nbsp;traffic&nbsp;converts&nbsp;into&nbsp;leads,&nbsp;=
+and&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space=
+: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=
+=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN=
+ class=3D"zw-portion" data-text-len=3D"107" style=3D"color: rgb(34, 34, 34)=
+; font-variant: normal; font-weight: normal; font-family: Arial, sans-serif=
+; font-style: normal; font-size: 9pt; letter-spacing: normal;">more&nbsp;im=
+portantly,&nbsp;sales.&nbsp;It's&nbsp;not&nbsp;about&nbsp;just&nbsp;increas=
+ing&nbsp;traffic.&nbsp;It&rsquo;s&nbsp;about&nbsp;increasing&nbsp;revenue.&=
+nbsp;And&nbsp;Profit.</SPAN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" d=
+ata-width=3D"624"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; =
+position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-=
+content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw=
+-portion" data-text-len=3D"40" style=3D"color: rgb(34, 34, 34); font-varian=
+t: normal; font-family: Arial, sans-serif; font-weight: normal; font-style:=
+ normal; letter-spacing: normal; font-size: 9pt;">We'll&nbsp;build&nbsp;a&n=
+bsp;list&nbsp;of&nbsp;keywords&nbsp;that&nbsp;are:</SPAN></DIV></DIV></DIV>=
+<DIV class=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" s=
+tyle=3D"white-space: nowrap; position: relative; height: 21px; margin-left:=
+ 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bo=
+ttom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"29" style=3D"color:=
+ rgb(34, 34, 34); font-variant: normal; font-weight: normal; font-family: A=
+rial, sans-serif; font-style: normal; font-size: 9pt; letter-spacing: norma=
+l;">1.&nbsp;Relevant&nbsp;to&nbsp;your&nbsp;business,</SPAN></DIV></DIV></D=
+IV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div=
+" style=3D"white-space: nowrap; position: relative; height: 21px; margin-le=
+ft: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding=
+-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"63" style=3D"col=
+or: rgb(34, 34, 34); font-variant: normal; font-weight: normal; font-family=
+: Arial, sans-serif; font-style: normal; font-size: 9pt; letter-spacing: no=
+rmal;">2.&nbsp;A&nbsp;keyword&nbsp;where&nbsp;I&nbsp;you&nbsp;will&nbsp;get=
+&nbsp;a&nbsp;high&nbsp;revenue&nbsp;/&nbsp;visitor,&nbsp;and</SPAN></DIV></=
+DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=3D"margin-le=
+ft: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" =
+style=3D"white-space: nowrap; position: relative; height: 21px; margin-left=
+: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-b=
+ottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"71" style=3D"color=
+: rgb(34, 34, 34); font-variant: normal; font-weight: normal; font-family: =
+Arial, sans-serif; font-style: normal; font-size: 9pt; letter-spacing: norm=
+al;">3.&nbsp;A&nbsp;keyword&nbsp;where&nbsp;you&nbsp;are&nbsp;already&nbsp;=
+close&nbsp;to&nbsp;a&nbsp;top&nbsp;10&nbsp;ranking&nbsp;in&nbsp;Google.</SP=
+AN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=
+=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"=
+zw-line-div" style=3D"white-space: nowrap; position: relative; height: 21px=
+; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0=
+px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"51" s=
+tyle=3D"color: rgb(0, 0, 0); font-variant: normal; font-family: Arial, sans=
+-serif; font-weight: normal; font-style: normal; letter-spacing: normal; fo=
+nt-size: 9pt;">Once&nbsp;we&nbsp;have&nbsp;a&nbsp;list&nbsp;of&nbsp;keyword=
+s,&nbsp;then&nbsp;we&nbsp;need&nbsp;to...</SPAN></DIV></DIV></DIV><DIV clas=
+s=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quot;:&quot;rgb(34, 34, 34=
+)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;ff&quot;:&quot;Arial, sans-=
+serif&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;fs&quot;:&quot;normal&q=
+uot;,&quot;type&quot;:&quot;text&quot;,&quot;cs&quot;:&quot;normal&quot;,&q=
+uot;size&quot;:9}" data-width=3D"624"><DIV class=3D"zw-line-div" style=3D"w=
+hite-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><D=
+IV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px=
+;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV cl=
+ass=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; heigh=
+t: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding=
+-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=
+=3D"19" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-family:=
+ Arial, sans-serif; font-weight: normal; font-style: normal; letter-spacing=
+: normal; font-size: 9pt;">DETERMINE&nbsp;MESSAGING</SPAN></DIV></DIV></DIV=
+><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" =
+style=3D"white-space: nowrap; position: relative; height: 21px; margin-left=
+: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-b=
+ottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"49" style=3D"color=
+: rgb(34, 34, 34); font-variant: normal; font-weight: normal; font-family: =
+Arial, sans-serif; font-style: normal; font-size: 9pt; letter-spacing: norm=
+al;">Our&nbsp;goal&nbsp;here&nbsp;is&nbsp;to&nbsp;ask&nbsp;ourselves&nbsp;t=
+hese&nbsp;questions</SPAN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" dat=
+a-width=3D"624"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; po=
+sition: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-co=
+ntent" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-p=
+ortion" data-text-len=3D"32" style=3D"color: rgb(34, 34, 34); font-variant:=
+ normal; font-weight: normal; font-family: Arial, sans-serif; font-style: n=
+ormal; font-size: 9pt; letter-spacing: normal;">1.&nbsp;Who&nbsp;is&nbsp;yo=
+ur&nbsp;typical&nbsp;customer?</SPAN></DIV></DIV></DIV><DIV class=3D"zw-par=
+agraph" data-width=3D"624"><DIV class=3D"zw-line-div" style=3D"white-space:=
+ nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D=
+"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN cl=
+ass=3D"zw-portion" data-text-len=3D"116" style=3D"color: rgb(34, 34, 34); f=
+ont-variant: normal; font-weight: normal; font-family: Arial, sans-serif; f=
+ont-style: normal; font-size: 9pt; letter-spacing: normal;">2.&nbsp;Are&nbs=
+p;some&nbsp;customers&nbsp;better&nbsp;than&nbsp;others?&nbsp;Describe&nbsp=
+;the&nbsp;ideal&nbsp;customer,&nbsp;and&nbsp;explain&nbsp;why&nbsp;they're&=
+nbsp;different&nbsp;than&nbsp;other&nbsp;</SPAN></DIV></DIV><DIV class=3D"z=
+w-line-div" style=3D"white-space: nowrap; position: relative; height: 21px;=
+ margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0p=
+x; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"115" s=
+tyle=3D"color: rgb(34, 34, 34); font-variant: normal; font-weight: normal; =
+font-family: Arial, sans-serif; font-style: normal; font-size: 9pt; letter-=
+spacing: normal;">customers.&nbsp;In&nbsp;our&nbsp;business&nbsp;(and&nbsp;=
+this&nbsp;is&nbsp;fairly&nbsp;typical)&nbsp;20%&nbsp;of&nbsp;the&nbsp;custo=
+mers&nbsp;provide&nbsp;over&nbsp;80%&nbsp;of&nbsp;your&nbsp;business.&nbsp;=
+We&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space:=
+ nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D=
+"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN cl=
+ass=3D"zw-portion" data-text-len=3D"40" style=3D"color: rgb(34, 34, 34); fo=
+nt-variant: normal; font-weight: normal; font-family: Arial, sans-serif; fo=
+nt-style: normal; font-size: 9pt; letter-spacing: normal;">want&nbsp;to&nbs=
+p;help&nbsp;you&nbsp;find&nbsp;more&nbsp;of&nbsp;that&nbsp;20%.&nbsp;</SPAN=
+></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV clas=
+s=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; height:=
+ 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-t=
+op: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"=
+69" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-weight: nor=
+mal; font-family: Arial, sans-serif; font-style: normal; font-size: 9pt; le=
+tter-spacing: normal;">3.&nbsp;What&nbsp;is&nbsp;their&nbsp;need/problem&nb=
+sp;that&nbsp;you&nbsp;solve&nbsp;for&nbsp;your&nbsp;best&nbsp;customers?</S=
+PAN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV c=
+lass=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; heig=
+ht: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"paddin=
+g-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=
+=3D"106" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-weight=
+: normal; font-family: Arial, sans-serif; font-style: normal; font-size: 9p=
+t; letter-spacing: normal;">4.&nbsp;What&nbsp;is&nbsp;your&nbsp;unique&nbsp=
+;selling&nbsp;proposition?&nbsp;Why&nbsp;should&nbsp;your&nbsp;customers&nb=
+sp;use&nbsp;you&nbsp;instead&nbsp;of&nbsp;your&nbsp;competition?</SPAN></DI=
+V></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=3D"margi=
+n-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-d=
+iv" style=3D"white-space: nowrap; position: relative; height: 21px; margin-=
+left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; paddi=
+ng-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"111" style=3D"=
+color: rgb(34, 34, 34); font-variant: normal; font-weight: normal; font-fam=
+ily: Arial, sans-serif; font-style: normal; font-size: 9pt; letter-spacing:=
+ normal;">5.&nbsp;What&nbsp;messaging&nbsp;do&nbsp;you&nbsp;use&nbsp;(2-3&n=
+bsp;sentences)&nbsp;that&nbsp;explains&nbsp;both&nbsp;what&nbsp;your&nbsp;c=
+ustomers&nbsp;pain&nbsp;is,&nbsp;and&nbsp;how&nbsp;you&nbsp;solve&nbsp;</SP=
+AN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; pos=
+ition: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-con=
+tent" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-po=
+rtion" data-text-len=3D"27" style=3D"color: rgb(34, 34, 34); font-variant: =
+normal; font-weight: normal; font-family: Arial, sans-serif; font-style: no=
+rmal; font-size: 9pt; letter-spacing: normal;">it&nbsp;better&nbsp;than&nbs=
+p;anyone&nbsp;else?</SPAN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" dat=
+a-textformat=3D"{&quot;fgc&quot;:&quot;rgb(34, 34, 34)&quot;,&quot;fv&quot;=
+:&quot;normal&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;ff&quot;:&quot;=
+Arial, sans-serif&quot;,&quot;fs&quot;:&quot;normal&quot;,&quot;type&quot;:=
+&quot;text&quot;,&quot;size&quot;:9,&quot;cs&quot;:&quot;normal&quot;}" dat=
+a-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padding-left:=
+ 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: r=
+elative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" st=
+yle=3D"padding-top: 0px; padding-bottom: 0px;"></DIV></DIV></DIV><DIV class=
+=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" style=3D"wh=
+ite-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><DI=
+V class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;=
+"><SPAN class=3D"zw-portion" data-text-len=3D"30" style=3D"color: rgb(34, 3=
+4, 34); font-variant: normal; font-family: Arial, sans-serif; font-weight: =
+normal; font-style: normal; letter-spacing: normal; font-size: 9pt;">WRITE&=
+nbsp;CONTENT&nbsp;FOR&nbsp;YOUR&nbsp;WEBSITE</SPAN></DIV></DIV></DIV><DIV c=
+lass=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-=
+right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-s=
+pace: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV cla=
+ss=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SP=
+AN class=3D"zw-portion" data-text-len=3D"114" style=3D"color: rgb(34, 34, 3=
+4); font-variant: normal; font-weight: normal; font-family: Arial, sans-ser=
+if; font-style: normal; font-size: 9pt; letter-spacing: normal;">Once&nbsp;=
+we&nbsp;know&nbsp;what&nbsp;to&nbsp;write,&nbsp;then&nbsp;can&nbsp;get&nbsp=
+;started&nbsp;writing&nbsp;it.&nbsp;We'll&nbsp;work&nbsp;with&nbsp;you&nbsp=
+;to&nbsp;ensure&nbsp;you&nbsp;have&nbsp;ample&nbsp;content&nbsp;</SPAN></DI=
+V></DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: =
+relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" s=
+tyle=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" =
+data-text-len=3D"109" style=3D"color: rgb(34, 34, 34); font-variant: normal=
+; font-weight: normal; font-family: Arial, sans-serif; font-style: normal; =
+font-size: 9pt; letter-spacing: normal;">on&nbsp;your&nbsp;website&nbsp;tha=
+t&nbsp;contains&nbsp;the&nbsp;correct&nbsp;keywords&nbsp;and&nbsp;messaging=
+.&nbsp;Our&nbsp;mission&nbsp;is&nbsp;to&nbsp;write&nbsp;content&nbsp;that&n=
+bsp;turns&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white=
+-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV c=
+lass=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><=
+SPAN class=3D"zw-portion" data-text-len=3D"85" style=3D"color: rgb(34, 34, =
+34); font-variant: normal; font-weight: normal; font-family: Arial, sans-se=
+rif; font-style: normal; font-size: 9pt; letter-spacing: normal;">website&n=
+bsp;traffic&nbsp;into&nbsp;revenue.&nbsp;Again&nbsp;traffic&nbsp;is&nbsp;no=
+t&nbsp;good&nbsp;if&nbsp;it&nbsp;doesn&rsquo;t&nbsp;generate&nbsp;sales.</S=
+PAN></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-textformat=3D"{&quot=
+;fgc&quot;:&quot;rgb(34, 34, 34)&quot;,&quot;fv&quot;:&quot;normal&quot;,&q=
+uot;fw&quot;:&quot;normal&quot;,&quot;ff&quot;:&quot;Arial, sans-serif&quot=
+;,&quot;fs&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;text&quot;,&quot=
+;size&quot;:9,&quot;cs&quot;:&quot;normal&quot;}" data-width=3D"624" style=
+=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"=
+zw-line-div" style=3D"white-space: nowrap; position: relative; height: 21px=
+; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0=
+px; padding-bottom: 0px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" dat=
+a-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in; padding-left:=
+ 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: r=
+elative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" st=
+yle=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" d=
+ata-text-len=3D"122" style=3D"color: rgb(0, 0, 0); font-variant: normal; fo=
+nt-family: Arial, sans-serif; font-weight: normal; font-style: normal; lett=
+er-spacing: normal; font-size: 9pt;">In&nbsp;30&nbsp;days&nbsp;or&nbsp;less=
+,&nbsp;we'll&nbsp;increase&nbsp;the&nbsp;revenue&nbsp;/&nbsp;visitor&nbsp;t=
+o&nbsp;your&nbsp;website.&nbsp;As&nbsp;a&nbsp;result,&nbsp;you'll&nbsp;see&=
+nbsp;an&nbsp;increase&nbsp;in&nbsp;revenue.&nbsp;</SPAN></DIV></DIV><DIV cl=
+ass=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; heigh=
+t: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding=
+-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=
+=3D"110" style=3D"color: rgb(0, 0, 0); font-variant: normal; font-family: A=
+rial, sans-serif; font-weight: normal; font-style: normal; letter-spacing: =
+normal; font-size: 9pt;">So,&nbsp;in&nbsp;30&nbsp;days,&nbsp;you'll&nbsp;be=
+&nbsp;able&nbsp;to&nbsp;start&nbsp;reducing&nbsp;the&nbsp;amount&nbsp;of&nb=
+sp;money&nbsp;you're&nbsp;spending&nbsp;on&nbsp;Adwords.&nbsp;Revenue&nbsp;=
+will&nbsp;</SPAN></DIV><DIV class=3D"spell-error spell-sd3nws52v89c" style=
+=3D"left: 472px; width: 48px; top: 14px;"></DIV></DIV><DIV class=3D"zw-line=
+-div" style=3D"white-space: nowrap; position: relative; height: 21px; margi=
+n-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; pad=
+ding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"96" style=3D=
+"color: rgb(0, 0, 0); font-variant: normal; font-family: Arial, sans-serif;=
+ font-weight: normal; font-style: normal; letter-spacing: normal; font-size=
+: 9pt;">continue&nbsp;to&nbsp;increase&nbsp;as&nbsp;your&nbsp;rankings&nbsp=
+;and&nbsp;traffic&nbsp;from&nbsp;Google&nbsp;improves&nbsp;over&nbsp;the&nb=
+sp;next&nbsp;few&nbsp;months.</SPAN></DIV></DIV></DIV><DIV class=3D"zw-para=
+graph" data-textformat=3D"{&quot;fgc&quot;:&quot;rgb(0, 0, 0)&quot;,&quot;f=
+v&quot;:&quot;normal&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;ff&quot;=
+:&quot;Arial, sans-serif&quot;,&quot;fs&quot;:&quot;normal&quot;,&quot;type=
+&quot;:&quot;text&quot;,&quot;size&quot;:9,&quot;cs&quot;:&quot;normal&quot=
+;}" data-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in; paddin=
+g-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; posi=
+tion: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-cont=
+ent" style=3D"padding-top: 0px; padding-bottom: 0px;"></DIV></DIV></DIV><DI=
+V class=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" styl=
+e=3D"white-space: nowrap; position: relative; height: 21px; margin-left: 0p=
+x;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-botto=
+m: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"27" style=3D"color: rg=
+b(34, 34, 34); font-variant: normal; font-family: Arial, sans-serif; font-w=
+eight: normal; font-style: normal; letter-spacing: normal; font-size: 9pt;"=
+>BUILD&nbsp;LINKS&nbsp;TO&nbsp;YOUR&nbsp;WEBSITE</SPAN></DIV></DIV></DIV><D=
+IV class=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; mar=
+gin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"whi=
+te-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV=
+ class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"=
+><SPAN class=3D"zw-portion" data-text-len=3D"114" style=3D"color: rgb(34, 3=
+4, 34); font-variant: normal; font-weight: normal; font-family: Arial, sans=
+-serif; font-style: normal; font-size: 9pt; letter-spacing: normal;">Step&n=
+bsp;2&nbsp;is&nbsp;to&nbsp;increase&nbsp;the&nbsp;number&nbsp;of&nbsp;peopl=
+e&nbsp;talking&nbsp;about&nbsp;your&nbsp;website&nbsp;online.&nbsp;These&nb=
+sp;links&nbsp;will&nbsp;generate&nbsp;increased&nbsp;</SPAN></DIV></DIV><DI=
+V class=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; h=
+eight: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"pad=
+ding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-l=
+en=3D"113" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-weig=
+ht: normal; font-family: Arial, sans-serif; font-style: normal; font-size: =
+9pt; letter-spacing: normal;">non-paid&nbsp;rankings&nbsp;&amp;&nbsp;traffi=
+c&nbsp;from&nbsp;Google,&nbsp;and&nbsp;allow&nbsp;us&nbsp;to&nbsp;further&n=
+bsp;reduce&nbsp;your&nbsp;Adwords&nbsp;spending.&nbsp;I&nbsp;like&nbsp;to&n=
+bsp;work&nbsp;on&nbsp;</SPAN></DIV><DIV class=3D"spell-error spell-sd3nws52=
+v89c" style=3D"left: 409px; width: 48px; top: 14px;"></DIV></DIV><DIV class=
+=3D"zw-line-div" style=3D"white-space: nowrap; position: relative; height: =
+21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-to=
+p: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"1=
+12" style=3D"color: rgb(34, 34, 34); font-variant: normal; font-weight: nor=
+mal; font-family: Arial, sans-serif; font-style: normal; font-size: 9pt; le=
+tter-spacing: normal;">your&nbsp;website&nbsp;first,&nbsp;and&nbsp;create&n=
+bsp;links&nbsp;2nd.&nbsp;The&nbsp;backlinks&nbsp;take&nbsp;a&nbsp;few&nbsp;=
+month&nbsp;to&nbsp;generates&nbsp;increased&nbsp;Google&nbsp;rankings&nbsp;=
+</SPAN></DIV><DIV class=3D"spell-error spell-07sre3mqurv4" style=3D"left: 2=
+37px; width: 51px; top: 14px;"></DIV></DIV><DIV class=3D"zw-line-div" style=
+=3D"white-space: nowrap; position: relative; height: 21px; margin-left: 0px=
+;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom=
+: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"117" style=3D"color: rg=
+b(34, 34, 34); font-variant: normal; font-weight: normal; font-family: Aria=
+l, sans-serif; font-style: normal; font-size: 9pt; letter-spacing: normal;"=
+>and&nbsp;traffic.&nbsp;I&nbsp;don't&nbsp;want&nbsp;to&nbsp;make&nbsp;you&n=
+bsp;wait&nbsp;3-4&nbsp;months&nbsp;to&nbsp;see&nbsp;results.&nbsp;This&nbsp=
+;strategy&nbsp;lets&nbsp;us&nbsp;make&nbsp;sure&nbsp;you&nbsp;see&nbsp;a&nb=
+sp;good&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-s=
+pace: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV cla=
+ss=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SP=
+AN class=3D"zw-portion" data-text-len=3D"32" style=3D"color: rgb(34, 34, 34=
+); font-variant: normal; font-weight: normal; font-family: Arial, sans-seri=
+f; font-style: normal; font-size: 9pt; letter-spacing: normal;">return&nbsp=
+;on&nbsp;investment&nbsp;right&nbsp;away.</SPAN></DIV></DIV></DIV><DIV clas=
+s=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" style=3D"w=
+hite-space: nowrap; position: relative; height: 24px; margin-left: 0px;"><D=
+IV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px=
+;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=
+=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"=
+zw-line-div" style=3D"white-space: nowrap; position: relative; height: 21px=
+; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0=
+px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"121" =
+style=3D"color: rgb(0, 0, 0); font-variant: normal; font-weight: normal; fo=
+nt-family: Arial, sans-serif; font-style: normal; font-size: 9pt; letter-sp=
+acing: normal;">Each&nbsp;industry&nbsp;is&nbsp;different.&nbsp;A&nbsp;link=
+&nbsp;building&nbsp;strategy&nbsp;for&nbsp;someone&nbsp;selling&nbsp;shoes&=
+nbsp;won't&nbsp;work&nbsp;if&nbsp;you&nbsp;sell&nbsp;custom&nbsp;fabricatio=
+n&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: =
+nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"=
+zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN cla=
+ss=3D"zw-portion" data-text-len=3D"117" style=3D"color: rgb(0, 0, 0); font-=
+variant: normal; font-weight: normal; font-family: Arial, sans-serif; font-=
+style: normal; font-size: 9pt; letter-spacing: normal;">systems&nbsp;for&nb=
+sp;offshore&nbsp;drilling&nbsp;platforms.&nbsp;We&nbsp;conduct&nbsp;a&nbsp;=
+competition&nbsp;analysis,&nbsp;and&nbsp;use&nbsp;the&nbsp;results&nbsp;to&=
+nbsp;fine&nbsp;tune&nbsp;or&nbsp;link&nbsp;</SPAN></DIV></DIV><DIV class=3D=
+"zw-line-div" style=3D"white-space: nowrap; position: relative; height: 21p=
+x; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: =
+0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"27" =
+style=3D"color: rgb(0, 0, 0); font-variant: normal; font-weight: normal; fo=
+nt-family: Arial, sans-serif; font-style: normal; font-size: 9pt; letter-sp=
+acing: normal;">building&nbsp;strategy.&nbsp;However,</SPAN></DIV></DIV></D=
+IV><DIV class=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quot;:&quot;rg=
+b(0, 0, 0)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;fw&quot;:&quot;nor=
+mal&quot;,&quot;ff&quot;:&quot;Arial, sans-serif&quot;,&quot;fs&quot;:&quot=
+;normal&quot;,&quot;type&quot;:&quot;text&quot;,&quot;size&quot;:9,&quot;cs=
+&quot;:&quot;normal&quot;}" data-width=3D"624" style=3D"margin-left: 0in; m=
+argin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"w=
+hite-space: nowrap; position: relative; height: 21px; margin-left: 0px;"><D=
+IV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px=
+;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=
+=3D"margin-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"=
+zw-line-div" style=3D"white-space: nowrap; position: relative; height: 21px=
+; margin-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0=
+px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"116" =
+style=3D"color: rgb(0, 0, 0); font-variant: normal; font-family: Arial, san=
+s-serif; font-weight: normal; font-style: normal; letter-spacing: normal; f=
+ont-size: 9pt;">We've&nbsp;identified&nbsp;several&nbsp;techniques&nbsp;whi=
+ch&nbsp;work,&nbsp;but&nbsp;we&nbsp;need&nbsp;to&nbsp;tailor&nbsp;pour&nbsp=
+;approach&nbsp;to&nbsp;your&nbsp;specific&nbsp;industry.&nbsp;What&nbsp;</S=
+PAN></DIV></DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; po=
+sition: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-co=
+ntent" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-p=
+ortion" data-text-len=3D"117" style=3D"color: rgb(0, 0, 0); font-variant: n=
+ormal; font-family: Arial, sans-serif; font-weight: normal; font-style: nor=
+mal; letter-spacing: normal; font-size: 9pt;">we're&nbsp;doing&nbsp;is&nbsp=
+;better&nbsp;described&nbsp;as&nbsp;PR&nbsp;outreach,&nbsp;or&nbsp;online&n=
+bsp;marketing.&nbsp;We're&nbsp;finding,&nbsp;and&nbsp;interacting&nbsp;with=
+&nbsp;people&nbsp;that&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-line-div" s=
+tyle=3D"white-space: nowrap; position: relative; height: 21px; margin-left:=
+ 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; padding-bo=
+ttom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"65" style=3D"color:=
+ rgb(0, 0, 0); font-variant: normal; font-family: Arial, sans-serif; font-w=
+eight: normal; font-style: normal; letter-spacing: normal; font-size: 9pt;"=
+>care&nbsp;about&nbsp;the&nbsp;problem&nbsp;that&nbsp;your&nbsp;firm&nbsp;s=
+olves.&nbsp;This&nbsp;can&nbsp;be&nbsp;either:</SPAN></DIV></DIV></DIV><DIV=
+ class=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quot;:&quot;rgb(0, 0,=
+ 0)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;fw&quot;:&quot;normal&quo=
+t;,&quot;ff&quot;:&quot;Arial, sans-serif&quot;,&quot;fs&quot;:&quot;normal=
+&quot;,&quot;type&quot;:&quot;text&quot;,&quot;size&quot;:9,&quot;cs&quot;:=
+&quot;normal&quot;}" data-width=3D"624" style=3D"margin-left: 0in; margin-r=
+ight: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-sp=
+ace: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV clas=
+s=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"></DI=
+V></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D"624" style=3D"margi=
+n-left: 0in; margin-right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-d=
+iv" style=3D"white-space: nowrap; position: relative; height: 21px; margin-=
+left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; paddi=
+ng-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"106" style=3D"=
+color: rgb(34, 34, 34); font-variant: normal; font-family: Arial, sans-seri=
+f; font-weight: normal; font-style: normal; letter-spacing: normal; font-si=
+ze: 9pt;">We&nbsp;are&nbsp;a&nbsp;small&nbsp;company&nbsp;from&nbsp;Las&nbs=
+p;Vegas,&nbsp;NV&nbsp;that&nbsp;specializes&nbsp;in&nbsp;helping&nbsp;other=
+&nbsp;small&nbsp;businesses&nbsp;create&nbsp;a&nbsp;big&nbsp;</SPAN></DIV><=
+/DIV><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: rel=
+ative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" styl=
+e=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" dat=
+a-text-len=3D"113" style=3D"color: rgb(34, 34, 34); font-variant: normal; f=
+ont-family: Arial, sans-serif; font-weight: normal; font-style: normal; let=
+ter-spacing: normal; font-size: 9pt;">presence&nbsp;online.&nbsp;Could&nbsp=
+;I&nbsp;give&nbsp;you&nbsp;a&nbsp;call&nbsp;to&nbsp;learn&nbsp;more&nbsp;ab=
+out&nbsp;your&nbsp;business,&nbsp;and&nbsp;see&nbsp;if&nbsp;we&nbsp;can&nbs=
+p;help&nbsp;decrease&nbsp;some&nbsp;</SPAN></DIV></DIV><DIV class=3D"zw-lin=
+e-div" style=3D"white-space: nowrap; position: relative; height: 21px; marg=
+in-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; pa=
+dding-bottom: 0px;"><SPAN class=3D"zw-portion" data-text-len=3D"47" style=
+=3D"color: rgb(34, 34, 34); font-variant: normal; font-family: Arial, sans-=
+serif; font-weight: normal; font-style: normal; letter-spacing: normal; fon=
+t-size: 9pt;">of&nbsp;your&nbsp;Adwords&nbsp;budget?&nbsp;I&nbsp;think&nbsp=
+;I&nbsp;can&nbsp;help&nbsp;you.</SPAN></DIV><DIV class=3D"spell-error spell=
+-sd3nws52v89c" style=3D"left: 40px; width: 48px; top: 14px;"></DIV></DIV></=
+DIV><DIV class=3D"zw-paragraph" data-textformat=3D"{&quot;fgc&quot;:&quot;r=
+gb(34, 34, 34)&quot;,&quot;fv&quot;:&quot;normal&quot;,&quot;ff&quot;:&quot=
+;Arial, sans-serif&quot;,&quot;fw&quot;:&quot;normal&quot;,&quot;fs&quot;:&=
+quot;normal&quot;,&quot;type&quot;:&quot;text&quot;,&quot;cs&quot;:&quot;no=
+rmal&quot;,&quot;size&quot;:9}" data-width=3D"624"><DIV class=3D"zw-line-di=
+v" style=3D"white-space: nowrap; position: relative; height: 21px; margin-l=
+eft: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; paddin=
+g-bottom: 0px;"></DIV></DIV></DIV><DIV class=3D"zw-paragraph" data-width=3D=
+"624"><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: re=
+lative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" sty=
+le=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" da=
+ta-text-len=3D"7" style=3D"color: rgb(34, 34, 34); font-variant: normal; fo=
+nt-family: Arial, sans-serif; font-weight: normal; font-style: normal; lett=
+er-spacing: normal; font-size: 9pt;">Cheers,</SPAN></DIV></DIV></DIV><DIV c=
+lass=3D"zw-paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-=
+right: 0in; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-s=
+pace: nowrap; position: relative; height: 21px; margin-left: 0px;"><DIV cla=
+ss=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SP=
+AN class=3D"zw-portion" data-text-len=3D"15" style=3D"color: rgb(34, 34, 34=
+); font-variant: normal; font-weight: normal; font-family: Arial, sans-seri=
+f; font-style: normal; font-size: 9pt; letter-spacing: normal;">Chris&nbsp;=
+Bergstrom</SPAN></DIV><DIV class=3D"spell-error spell-0ikw9ke2gzue" style=
+=3D"left: 32px; width: 56px; top: 14px;"></DIV></DIV></DIV><DIV align=3D"le=
+ft" class=3D"zw-hr" style=3D"margin-top: 0px; margin-bottom: 0px; border-to=
+p-width: 1px; border-top-style: solid; height: 2px;"></DIV><DIV class=3D"zw=
+-paragraph" data-width=3D"624" style=3D"margin-left: 0in; margin-right: 0in=
+; padding-left: 0px;"><DIV class=3D"zw-line-div" style=3D"white-space: nowr=
+ap; position: relative; height: 21px; margin-left: 0px;"><DIV class=3D"zw-l=
+ine-content" style=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=
+=3D"zw-portion" data-text-len=3D"115" style=3D"color: rgb(34, 34, 34); font=
+-variant: normal; font-family: Arial, sans-serif; font-weight: normal; font=
+-style: normal; letter-spacing: normal; font-size: 9pt;">This&nbsp;e-mail&n=
+bsp;contains&nbsp;commercial&nbsp;content.&nbsp;If&nbsp;you&nbsp;don&rsquo;=
+t&nbsp;want&nbsp;us&nbsp;to&nbsp;contact&nbsp;you&nbsp;again&nbsp;then&nbsp=
+;please&nbsp;reply&nbsp;back&nbsp;to&nbsp;us&nbsp;in&nbsp;</SPAN></DIV></DI=
+V><DIV class=3D"zw-line-div" style=3D"white-space: nowrap; position: relati=
+ve; height: 21px; margin-left: 0px;"><DIV class=3D"zw-line-content" style=
+=3D"padding-top: 0px; padding-bottom: 0px;"><SPAN class=3D"zw-portion" data=
+-text-len=3D"52" style=3D"color: rgb(34, 34, 34); font-variant: normal; fon=
+t-family: Arial, sans-serif; font-weight: normal; font-style: normal; lette=
+r-spacing: normal; font-size: 9pt;">this&nbsp;thread&nbsp;with&nbsp;&quot;U=
+NSUBSCRIBE&quot;&nbsp;at&nbsp;your&nbsp;subject&nbsp;line.</SPAN></DIV></DI=
+V></DIV><DIV class=3D"zw-paragraph" data-width=3D"624"><DIV class=3D"zw-lin=
+e-div" style=3D"white-space: nowrap; position: relative; height: 24px; marg=
+in-left: 0px;"><DIV class=3D"zw-line-content" style=3D"padding-top: 0px; pa=
+dding-bottom: 0px;"></DIV></DIV></DIV><DIV class=3D"zw-endnotecontainer" st=
+yle=3D"display: none;"><DIV class=3D"endnotestyl"></DIV><DIV></DIV></DIV></=
+DIV><DIV class=3D"footer_primary unselectableSection" style=3D"position: re=
+lative; display: block;"><DIV class=3D"zw-footnotecontainer" style=3D"displ=
+ay: none; padding: 0in 1in;"><DIV class=3D"endnotestyl"></DIV><DIV></DIV></=
+DIV><DIV style=3D"min-height: 1in; padding: 0in 1in; max-height: 844px;"><D=
+IV class=3D"footer_content" style=3D"padding-bottom: 0.5in;"><DIV class=3D"=
+zw-paragraph" data-width=3D"624"><DIV class=3D"zw-line-div" style=3D"white-=
+space: nowrap; position: relative; height: 24px; margin-left: 0px;"><DIV cl=
+ass=3D"zw-line-content" style=3D"padding-top: 0px; padding-bottom: 0px;"></=
+DIV></DIV></DIV></DIV></DIV></DIV></DIV><LINK href=3D"https://css.zohostati=
+c.com/writer3/Aug_17_2015/styles/editor.css" rel=3D"stylesheet" type=3D"tex=
+t/css"><LINK href=3D"https://css.zohostatic.com/writer3/Aug_17_2015/styles/=
+zshapes.css" rel=3D"stylesheet" type=3D"text/css"><LINK href=3D"https://css=
+.zohostatic.com/writer3/Aug_17_2015/styles/writer_min_all.css" rel=3D"style=
+sheet" type=3D"text/css"><BR></DIV>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4027_1279650372.1439905755071--
+
+

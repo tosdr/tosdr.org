@@ -1,0 +1,131 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp1089731ioi;
+        Fri, 22 Apr 2016 21:33:08 -0700 (PDT)
+X-Received: by 10.98.83.65 with SMTP id h62mr33470462pfb.130.1461385988383;
+        Fri, 22 Apr 2016 21:33:08 -0700 (PDT)
+Return-Path: <tosdr+bncBAABB7PV5O4AKGQEZSCLBQA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id o6si7650491pfj.110.2016.04.22.21.33.07
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 22 Apr 2016 21:33:08 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBAABB7PV5O4AKGQEZSCLBQA@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBAABB7PV5O4AKGQEZSCLBQA@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBAABB7PV5O4AKGQEZSCLBQA@googlegroups.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 31E121720BA
+	for <michiel@unhosted.org>; Sat, 23 Apr 2016 06:33:05 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 210D6142047
+	for <michiel@unhosted.org>; Sat, 23 Apr 2016 06:33:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 8h2eQuHrXE0J for <michiel@unhosted.org>;
+	Sat, 23 Apr 2016 06:33:03 +0200 (CEST)
+Received: from mail-pf0-x23a.google.com (mail-pf0-x23a.google.com [IPv6:2607:f8b0:400e:c00::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3CA34142045
+	for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 06:33:03 +0200 (CEST)
+Received: by mail-pf0-x23a.google.com with SMTP id g132sf16260039pfb.0
+        for <michiel@michielbdejong.com>; Fri, 22 Apr 2016 21:33:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=FEkAOgTHdSJ3l1I5dW6RWqjJPijTY+I1fRArfKkPW5I=;
+        b=lpvFFhgBWBAdGyN1MUoNg+4rOcqQU534UaFC+L/3i60QgjkCmoD7/fFKtqkaIme7JK
+         V9VnU1VRkVnGHF9ZPXYkGnWcGZpKQw7y3YINc1Wc5sjLzCTYLhUcRIMOxyVfv4rREjAo
+         1Yl7USDi4UPH+k83xeG8Pa8PzM59099Jp24+EwpJrQpKaMDZDc7+ZnN5AqSniMFDGbwl
+         DGXD+l5T+OF8fmUZGXWpaEHP1NDqwyinCDuDBq1XqwQhcj7xY32BJrH+X6qNKqO1hXly
+         sRv8z/bWJnt8XFGFvoj7eUO4kbeVKwCT1X+D6s/PMfxrXQiXXPkxAYkWWm8hLR2gyufF
+         Ck4w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:content-transfer-encoding:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=FEkAOgTHdSJ3l1I5dW6RWqjJPijTY+I1fRArfKkPW5I=;
+        b=Tau27bwMi31by4R2Ys1IOEXzpZ44HUdUKvIVP63GYW6BIHrAWDaHlsAmOCXTbLMw4N
+         vCM2WzBmF/Hc5qyjaUlexANMnqVKmyyAaWP5OQutrF8H3AcXTg6jWGGBFRjFcRZ7uLJV
+         hvd1Ak9ig7WmqC+IuDuRvlZRkxRbkHUn9l3bBPLN3NgrYExAutGBv1QSGGWYStQ4/JqP
+         eBkrMMaGfrfCqi8KWm8l5h3xuBfKn/a5Ep5Rx124U+TBkW8ud360S1Bch2ho5FEcKWAR
+         SCY69lxo5ZH8x3XpbqE1Lh7CUViDGY+TVmHfXZcatdZKNiVeWClzf901Yw+K5hz0MdVm
+         viGw==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FWaG6PG/60EA4skNvxqBsCXoi3CT8f3TMncCygq/Vy8gqeG7Y0cLxSMOVHE0c8krw==
+X-Received: by 10.140.108.203 with SMTP id j69mr804424qgf.20.1461385982086;
+        Fri, 22 Apr 2016 21:33:02 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.17.244 with SMTP id 107ls1272328qgd.84.gmail; Fri, 22 Apr
+ 2016 21:33:01 -0700 (PDT)
+X-Received: by 10.31.48.144 with SMTP id w138mr16229893vkw.10.1461385981612;
+        Fri, 22 Apr 2016 21:33:01 -0700 (PDT)
+Received: from o50314942.outbound-mail.sendgrid.net (o50314942.outbound-mail.sendgrid.net. [50.31.49.42])
+        by gmr-mx.google.com with ESMTPS id bc4si320560igb.3.2016.04.22.21.33.01
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 22 Apr 2016 21:33:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.net designates 50.31.49.42 as permitted sender) client-ip=50.31.49.42;
+Received: by filter0815p1mdw1.sendgrid.net with SMTP id filter0815p1mdw1.3223.571AFAFB11
+        2016-04-23 04:32:59.457983582 +0000 UTC
+Received: from tosdr.org (unknown [162.211.64.106])
+	by ismtpd0006p1iad1.sendgrid.net (SG) with ESMTP id YLCmWjykQVK41z8iWs0XfQ
+	for <tosdr@googlegroups.com>; Sat, 23 Apr 2016 04:32:59.174 +0000 (UTC)
+Date: Sat, 23 Apr 2016 00:32:58 -0400
+From: ToSBack <tosback@tosdr.org>
+To: tosdr@googlegroups.com
+Message-ID: <571afafaa1d45_43964f4002a95893@dragon.mail>
+Subject: [tosdr:3838] ToSBack: Policy Changes
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_571afafa9f720_43964f4002a957ba";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SG-EID: QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYvmeiyDyKYAhQ75LZuZR1/lsanfU9ws6wFopW
+ qWHXNRBpbD9JEaNOS8IMNLyIJwGB+qwsuDgzqCnqHGl1Cf2EpwSUUePt8FwxIddmlObZQSYcc3ygxc
+ NC2beI3mfStU2nOBH1t3F1zTXdiXDFaA3JSJC1cSPACbjGqGQ/2XNMJwcg==
+X-SendGrid-Contentd-ID: {"test_id":"1461385981"}
+X-Original-Sender: tosback@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@sendgrid.me;       spf=pass (google.com: domain of
+ bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.net designates
+ 50.31.49.42 as permitted sender) smtp.mailfrom=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.net
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+----==_mimepart_571afafa9f720_43964f4002a957ba
+Content-Type: text/plain; charset=UTF-8
+
+delicious.com: Privacy Policy
+delicious.com: Terms of Service
+ These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/3d7d6044d793826b11c2fb0a8b07f655124eb65d?diff=split to see the differences!
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/571afafaa1d45_43964f4002a95893%40dragon.mail.
+For more options, visit https://groups.google.com/d/optout.
+
+----==_mimepart_571afafa9f720_43964f4002a957ba--

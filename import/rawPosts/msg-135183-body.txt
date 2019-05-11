@@ -1,0 +1,257 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.20.195 with SMTP id 186csp4024542iou;
+        Wed, 26 Aug 2015 14:15:02 -0700 (PDT)
+X-Received: by 10.180.223.100 with SMTP id qt4mr15146865wic.34.1440623702146;
+        Wed, 26 Aug 2015 14:15:02 -0700 (PDT)
+Return-Path: <tosdr+bncBDLZX5PJWMBBBTWY7CXAKGQEJ7QMG2A@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id cz2si902417wjb.167.2015.08.26.14.15.01
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 26 Aug 2015 14:15:02 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDLZX5PJWMBBBTWY7CXAKGQEJ7QMG2A@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDLZX5PJWMBBBTWY7CXAKGQEJ7QMG2A@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBDLZX5PJWMBBBTWY7CXAKGQEJ7QMG2A@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 69789A80AC
+	for <michiel@unhosted.org>; Wed, 26 Aug 2015 23:15:01 +0200 (CEST)
+Received: from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 55993116044
+	for <michiel@unhosted.org>; Wed, 26 Aug 2015 23:15:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter17-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter17-d.gandi.net (mfilter17-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LbtBYiVzirPx for <michiel@unhosted.org>;
+	Wed, 26 Aug 2015 23:14:58 +0200 (CEST)
+Received: from mail-qg0-x23c.google.com (mail-qg0-x23c.google.com [IPv6:2607:f8b0:400d:c04::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 91205116022
+	for <michiel@michielbdejong.com>; Wed, 26 Aug 2015 23:14:55 +0200 (CEST)
+Received: by qgi69 with SMTP id 69sf8192qgi.1
+        for <michiel@michielbdejong.com>; Wed, 26 Aug 2015 14:14:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=R0xLEYlU1KooH6Ux+X0AejnjQZXcA2HfPooCCLZ/1zM=;
+        b=E/vmCKF8E9h48PyA9zxoTtmpjpyVX94nHBIxkiB/v2vtPM/HXsmqv6Q9ssPD2I/W26
+         6/N16JV6un4cPLEBIw24WoGyBu96F8GScl+tVOmaml0ZLzq1KzHVeomkk/9VC+TOVXFe
+         GDgMuk1UvGxsMXgZVCIVJI/jTyxUh++r4kEdTajl9FWWq4Kv7ZZZDWGOCCok31XL0SU7
+         uTeawI1QOjy3Z0qyRYzzxiE2EGS6Hal1bxFgphMoRz3czFyCtln+kdyaTAfS1EwYAvUj
+         Psu2CtXY50VH8Ik8KhhP6imuOqH4KcJrJWcuXe6V666GGBo3XoCkeyWjGPjxbRI8JEB0
+         Wk2g==
+X-Received: by 10.50.62.40 with SMTP id v8mr188386igr.2.1440623694790;
+        Wed, 26 Aug 2015 14:14:54 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.157.65 with SMTP id g62ls269077ioe.82.gmail; Wed, 26 Aug
+ 2015 14:14:54 -0700 (PDT)
+X-Received: by 10.66.140.101 with SMTP id rf5mr608320pab.14.1440623694033;
+        Wed, 26 Aug 2015 14:14:54 -0700 (PDT)
+Received: from mail-qg0-x234.google.com (mail-qg0-x234.google.com. [2607:f8b0:400d:c04::234])
+        by gmr-mx.google.com with ESMTPS id n129si768839ywd.5.2015.08.26.14.14.53
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Aug 2015 14:14:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c04::234 as permitted sender) client-ip=2607:f8b0:400d:c04::234;
+Received: by mail-qg0-x234.google.com with SMTP id g42so4134qge.1
+        for <tosdr@googlegroups.com>; Wed, 26 Aug 2015 14:14:53 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.141.28.2 with SMTP id f2mr1102591qhe.17.1440623693676; Wed,
+ 26 Aug 2015 14:14:53 -0700 (PDT)
+Received: by 10.140.41.232 with HTTP; Wed, 26 Aug 2015 14:14:53 -0700 (PDT)
+In-Reply-To: <20150822090346.GA2333@xps>
+References: <20150822090346.GA2333@xps>
+Date: Wed, 26 Aug 2015 16:14:53 -0500
+Message-ID: <CAADHZvzftySB9exu6h3BbkKcOkPvJGOQMYKxT+Zoq3uL97xWbg@mail.gmail.com>
+Subject: Re: [tosdr:3608] Should ToS;DR support and sign the User Data
+ Manifesto? Answer before Aug. 27
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a11423974844612051e3d5782
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c04::234
+ as permitted sender) smtp.mailfrom=irmcgowan@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--001a11423974844612051e3d5782
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I think this would be a great thing to support!
+
+Ian
+
+On Sat, Aug 22, 2015 at 4:03 AM, Hugo Roy <hugo@tosdr.org> wrote:
+
+>
+> Hello everyone,
+>
+> As contributors to the ToS;DR project, I'd like to ask all of you
+> feedback and opinions about the User Data Manifesto (version 2):
+>
+>          https://userdatamanifesto.org/2.0/
+>
+> We (some of us in the team https://tosdr.org/about.html) are thinking
+> about supporting the manifesto officially in the name of the ToS;DR
+> project community.
+>
+> This manifesto aims at bringing together people and groups working to
+> achieve better protection of users' rights online, by defining core
+> freedoms and rights that users should have on their data online. The
+> manifesto was written collaboratively by many people including two
+> ToS;DR founders (Jan-Christoph and myself).
+>
+> For some context: the only other official parternships to date are with
+> EFF and ISOC, with whom we work on <https://tosback.org/>, and with
+> 5apps.com who provides us with web hosting.
+>
+> I'm looking forward to your feedback, please provide it before August 27.
+>
+> Best regards,
+> Hugo
+>
+> --
+> Hugo Roy
+> Project Lead, Terms of Service; Didn't Read https://www.tosdr.org
+>
+> Please use cryptography for email: see
+> https://emailselfdefense.fsf.org/en/
+> Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email : voir
+> https://emailselfdefense.fsf.org/fr/
+>
+> --
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/d/optout.
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a11423974844612051e3d5782
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I think this would be a great thing to support!<div><br></=
+div><div>Ian</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_=
+quote">On Sat, Aug 22, 2015 at 4:03 AM, Hugo Roy <span dir=3D"ltr">&lt;<a h=
+ref=3D"mailto:hugo@tosdr.org" target=3D"_blank">hugo@tosdr.org</a>&gt;</spa=
+n> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;b=
+order-left:1px #ccc solid;padding-left:1ex"><br>
+Hello everyone,<br>
+<br>
+As contributors to the ToS;DR project, I&#39;d like to ask all of you<br>
+feedback and opinions about the User Data Manifesto (version 2):<br>
+<br>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<a href=3D"https://userdatamanifesto.org/=
+2.0/" rel=3D"noreferrer" target=3D"_blank">https://userdatamanifesto.org/2.=
+0/</a><br>
+<br>
+We (some of us in the team <a href=3D"https://tosdr.org/about.html" rel=3D"=
+noreferrer" target=3D"_blank">https://tosdr.org/about.html</a>) are thinkin=
+g<br>
+about supporting the manifesto officially in the name of the ToS;DR<br>
+project community.<br>
+<br>
+This manifesto aims at bringing together people and groups working to<br>
+achieve better protection of users&#39; rights online, by defining core<br>
+freedoms and rights that users should have on their data online. The<br>
+manifesto was written collaboratively by many people including two<br>
+ToS;DR founders (Jan-Christoph and myself).<br>
+<br>
+For some context: the only other official parternships to date are with<br>
+EFF and ISOC, with whom we work on &lt;<a href=3D"https://tosback.org/" rel=
+=3D"noreferrer" target=3D"_blank">https://tosback.org/</a>&gt;, and with<br=
+>
+<a href=3D"http://5apps.com" rel=3D"noreferrer" target=3D"_blank">5apps.com=
+</a> who provides us with web hosting.<br>
+<br>
+I&#39;m looking forward to your feedback, please provide it before August 2=
+7.<br>
+<br>
+Best regards,<br>
+Hugo<br>
+<span class=3D"HOEnZb"><font color=3D"#888888"><br>
+--<br>
+Hugo Roy<br>
+Project Lead, Terms of Service; Didn&#39;t Read <a href=3D"https://www.tosd=
+r.org" rel=3D"noreferrer" target=3D"_blank">https://www.tosdr.org</a><br>
+<br>
+Please use cryptography for email: see <a href=3D"https://emailselfdefense.=
+fsf.org/en/" rel=3D"noreferrer" target=3D"_blank">https://emailselfdefense.=
+fsf.org/en/</a><br>
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+<a href=3D"https://emailselfdefense.fsf.org/fr/" rel=3D"noreferrer" target=
+=3D"_blank">https://emailselfdefense.fsf.org/fr/</a><br>
+<br>
+--<br>
+<a href=3D"http://tosdr.org" rel=3D"noreferrer" target=3D"_blank">tosdr.org=
+</a> | <a href=3D"http://twitter.com/tosdr" rel=3D"noreferrer" target=3D"_b=
+lank">twitter.com/tosdr</a> | <a href=3D"http://github.com/tosdr" rel=3D"no=
+referrer" target=3D"_blank">github.com/tosdr</a><br>
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr%2Bunsubscribe@googlegroups.com">tosdr+unsub=
+scribe@googlegroups.com</a>.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr" rel=3D=
+"noreferrer" target=3D"_blank">http://groups.google.com/group/tosdr</a>.<br=
+>
+For more options, visit <a href=3D"https://groups.google.com/d/optout" rel=
+=3D"noreferrer" target=3D"_blank">https://groups.google.com/d/optout</a>.<b=
+r>
+</font></span></blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a11423974844612051e3d5782--

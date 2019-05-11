@@ -1,0 +1,160 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.68 with SMTP id j65csp132211ioj;
+        Thu, 3 Dec 2015 10:04:51 -0800 (PST)
+X-Received: by 10.28.46.206 with SMTP id u197mr10979wmu.86.1449165891510;
+        Thu, 03 Dec 2015 10:04:51 -0800 (PST)
+Return-Path: <tosdr+bncBDNLNCEC3UOBBP4IQKZQKGQEVS3CZNA@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [2001:4b98:c:538::194])
+        by mx.google.com with ESMTPS id 1si12820268wjw.32.2015.12.03.10.04.51
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 03 Dec 2015 10:04:51 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDNLNCEC3UOBBP4IQKZQKGQEVS3CZNA@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) client-ip=2001:4b98:c:538::194;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDNLNCEC3UOBBP4IQKZQKGQEVS3CZNA@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) smtp.mailfrom=tosdr+bncBDNLNCEC3UOBBP4IQKZQKGQEVS3CZNA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id 36154C5A53
+	for <michiel@unhosted.org>; Thu,  3 Dec 2015 19:04:51 +0100 (CET)
+Received: from mfilter45-d.gandi.net (mfilter45-d.gandi.net [217.70.178.176])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 220FC11640A
+	for <michiel@unhosted.org>; Thu,  3 Dec 2015 19:04:51 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter45-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter45-d.gandi.net (mfilter45-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 04i-9r2m2Y_c for <michiel@unhosted.org>;
+	Thu,  3 Dec 2015 19:04:49 +0100 (CET)
+Received: from mail-io0-x23e.google.com (mail-io0-x23e.google.com [IPv6:2607:f8b0:4001:c06::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2FCB211602F
+	for <michiel@michielbdejong.com>; Thu,  3 Dec 2015 19:04:48 +0100 (CET)
+Received: by ioc74 with SMTP id 74sf18091444ioc.1
+        for <michiel@michielbdejong.com>; Thu, 03 Dec 2015 10:04:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :content-transfer-encoding:feedback-id:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=xdzsHjxSk/hC+QB3VEPz6TvRIpfIhsQKPXsY1ZtbawA=;
+        b=jYjuChrkM+oVGw4h39K4h9BkK3kKPbERyUzvm4wcVuxf5see9tTOnmRWiGKIWTc1eB
+         OXrMrbDpG1TzqSaIIlV21JqmTfmF3HEUkSpAP6iREOi5msqxeDiaOWiLbvnXGH50TIl1
+         TnELMbLlCwIn6mE1sJURAtXwq7kvTx9BJ1Bzh4sb6zUMq9uFsyHPGDIsC1LFRsZhxmcp
+         r342zlbcoTE78wB8V3JTmmOyUBZmBPLoF2G8z+XYdyEdIzqCahenJtDupYNud6p6eFC2
+         Ya7no5MF3sc9lKTy3Q2lmAIiqeeRqcZoTM2yZw366BNc9m9Y7Bngb1OTzGEB/GzePUr5
+         KZ+w==
+X-Received: by 10.50.142.73 with SMTP id ru9mr339igb.9.1449165887718;
+        Thu, 03 Dec 2015 10:04:47 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.138.165 with SMTP id c37ls890430ioj.109.gmail; Thu, 03 Dec
+ 2015 10:04:47 -0800 (PST)
+X-Received: by 10.98.68.218 with SMTP id m87mr9449978pfi.14.1449165887176;
+        Thu, 03 Dec 2015 10:04:47 -0800 (PST)
+Received: from a27-50.smtp-out.us-west-2.amazonses.com (a27-50.smtp-out.us-west-2.amazonses.com. [54.240.27.50])
+        by gmr-mx.google.com with ESMTPS id 1si1289581pfc.0.2015.12.03.10.04.47
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 03 Dec 2015 10:04:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of 00000151690491df-ac035634-7851-495a-9f1c-106a0729cdb5-000000@us-west-2.amazonses.com designates 54.240.27.50 as permitted sender) client-ip=54.240.27.50;
+Date: Thu, 3 Dec 2015 18:04:45 +0000
+From: etam@jobcombinator.io
+To: =?UTF-8?B?VGVybXMgb2YgU2VydmljZTsgRGlkbuKAmXQgUmVhZA==?= <tosdr@googlegroups.com>
+Message-ID: <00000151690491df-ac035634-7851-495a-9f1c-106a0729cdb5-000000@us-west-2.amazonses.com>
+Subject: [tosdr:3697] Remote and local work opportunities in tech companies
+Mime-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-SES-Outgoing: 2015.12.03-54.240.27.50
+Feedback-ID: 1.us-west-2.HPGKzQj7Hl4G3vbfxB/CeieH3t+2bcv0Vd739cSMHRM=:AmazonSES
+X-Original-Sender: etam@jobcombinator.io
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of 00000151690491df-ac035634-7851-495a-9f1c-106a0729cdb5-000000@us-west-2.amazonses.com
+ designates 54.240.27.50 as permitted sender) smtp.mailfrom=00000151690491df-ac035634-7851-495a-9f1c-106a0729cdb5-000000@us-west-2.amazonses.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'html; charset=3DUTF-8' http-equiv=3D'Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hi Terms,
+    </p>
+    <p>
+      I&#39;m a cofounder at Jobcombinator, a new professional network wher=
+e developers and designers can find high-quality work opportunities        =
+               in selected tech companies: <a href=3D"https://www.jobcombin=
+ator.co/?utm_source=3Df_1">https://www.jobcombinator.co</a>
+    </p>
+    <p>
+      Our professionals network is growing fast and I&#39;d be happy to hav=
+e you in our community of experts.
+    </p>
+    <p>
+      Several skilled developers and designers are already using Jobcombina=
+tor to connect.
+    </p>
+    <p>
+      Let me know if you have the chance to have a look at Jobcombinator. W=
+e&#39;d be glad to see you in our community.
+    </p>
+    <p>
+      Thanks!
+    </p>
+    <p>
+      --
+    </p>
+    <p>
+      <strong>Enrico TAM</strong>
+    <br>
+      Co-founder at <a href=3D"https://www.jobcombinator.co/?utm_source=3Df=
+_1">Jobcombinator</a>
+    <br>
+      Co-organizer at <a href=3D"http://3-beards.com/silicondrinkabout/brus=
+sels">Silicon Drinkabout Brussels</a>
+    <br>
+      <img src=3D"https://www.jobcombinator.co/images/job_combinator_small_=
+logo.png" alt=3D"Jobcombinator" >
+    <br>
+      Find me on <a href=3D"https://twitter.com/EnricoTAM1">Twitter</a> or =
+<a href=3D"https://www.linkedin.com/pub/enrico-tam/5/236/886">Linkedin</a>
+    <br>
+      <i>'"Luck is a dividend of sweat. JC"'</i>
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />

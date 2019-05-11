@@ -1,0 +1,235 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp311703ioi;
+        Sat, 23 Apr 2016 23:02:43 -0700 (PDT)
+X-Received: by 10.50.22.65 with SMTP id b1mr5530067igf.39.1461477763564;
+        Sat, 23 Apr 2016 23:02:43 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBB7OC6G4AKGQESL5CCSA@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by mx.google.com with ESMTPS id b142si17774952ioe.115.2016.04.23.23.02.43
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 23:02:43 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBB7OC6G4AKGQESL5CCSA@googlegroups.com does not designate 217.70.183.195 as permitted sender) client-ip=217.70.183.195;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBB7OC6G4AKGQESL5CCSA@googlegroups.com does not designate 217.70.183.195 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBB7OC6G4AKGQESL5CCSA@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 3D5F6A80BF
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 08:02:40 +0200 (CEST)
+Received: from mfilter35-d.gandi.net (mfilter35-d.gandi.net [217.70.178.166])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 28AD811614F
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 08:02:40 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter35-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter35-d.gandi.net (mfilter35-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id SbKOP9W9bk90 for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 08:02:38 +0200 (CEST)
+Received: from mail-yw0-x237.google.com (mail-yw0-x237.google.com [IPv6:2607:f8b0:4002:c05::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0321311614E
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 08:02:38 +0200 (CEST)
+Received: by mail-yw0-x237.google.com with SMTP id v81sf43767652ywa.0
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 23:02:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=GLIHcbXP9dk4klCbth7c5r4nIJhXAfKQSLZjBZixCAQ=;
+        b=ABFxEV3ykcR9DktfTMB7J1T4cF9vRLo+UdTfIkU0dW13NndLnlbkqHCi18CwmTsHcw
+         lncqv3I/cDN1IyK7Im3RUQ32ngjiQITgAJyvRx3JcdaudiypvGnfvNJwwtswtluOMwxt
+         Z3r60PvCCpC/MZDYIqZW++9daEFCcjeFDz33YOx2iGt4c0LIb/+tXkNTkuxKVGZg/Tsp
+         Aq9DHCqVb9BxgzDIRIeMl2KAMIJcCujtUawd0dfnfe5rOSKHIuPVgGmvzEeYF5C6iWoP
+         jLStpLam4O2wRKniOLZ1+O9xMubN/KTFHMq/DitrFnax5+i6ZzUiZNMSlwAuUnOOYLEZ
+         Bx5g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=GLIHcbXP9dk4klCbth7c5r4nIJhXAfKQSLZjBZixCAQ=;
+        b=dbUTplDOezDXaXR0HEYX92vlAc7RxsJBFh4lahjezOYNm/J69Y+ESBpUXxT/XQN1Tx
+         SHwoJx1pD/c2TZXdnLiIt/TEdbKfmxW4o8LlBuDKzjnJEUQhyK6rz3/qcF485QavXXFe
+         hZ/EybijWGoXrzphGuyC6XyKHSQszRlWTtjLaJjPWO8Q670wcrCdp90shhdymCxEEZH4
+         93y8VYz0RR1cFBaFZywuJAqpR321UbRSKRz9Fgy9ZqZmnHYjtsY+s2Jmifz4z9gIDdGh
+         3rOKx2UqCGIZcC06TcqeTGnUmk4cj+P/EXWOkj/QfFCQYP5Jr6pbFIR77LXwJVDYQaTs
+         Czmg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=GLIHcbXP9dk4klCbth7c5r4nIJhXAfKQSLZjBZixCAQ=;
+        b=AUJxapekQ854sP4TXycL7mAOjTfHKDXYmZ5Y7knoqXy+WdiddhCNzI1zI9Q91cWQUU
+         58qQS2WQehmzyrWaLCgkAWzNCoHc0pUTDD7ZYOnppOz6MQOvn7qGGoWrh2W3OLlA9YqA
+         yeiYtUUnUyBFiVddDjdDqkKUeq6X+EkSi/OOibCCH1pm/LNSkPzA9jR9mTxxw1vhD73A
+         SDNIcfKdLQs6DkyoFQ25Mr7QLAjZZRTmQeFU/59kjX2ixM6AasiOBZkkTKdw2Pg5thdw
+         ExmnrP4ITGlijCfmGZ85fT6peGMv3WdE/UMvNyGym0KtFS5N2H+7q+PSMr3ZbSWyf5TR
+         qoIg==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FV0dEJVzKDSHiMDUBk2JyTXZGJX3o6Hlh+k2TyRkoXrk7xuOKhuWdMU3ofWeBqQOA==
+X-Received: by 10.182.14.74 with SMTP id n10mr12108obc.12.1461477757188;
+        Sat, 23 Apr 2016 23:02:37 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.11.244 with SMTP id 107ls365306oth.19.gmail; Sat, 23 Apr
+ 2016 23:02:36 -0700 (PDT)
+X-Received: by 10.157.34.118 with SMTP id o109mr309984ota.8.1461477756814;
+        Sat, 23 Apr 2016 23:02:36 -0700 (PDT)
+Date: Sat, 23 Apr 2016 23:02:36 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <e5c4f254-b2d0-419c-aac9-0514cd91993e@googlegroups.com>
+Subject: [tosdr:3877] [Good] Pinterest supports the Do Not Track browser setting.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4192_1386294726.1461477756305"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4192_1386294726.1461477756305
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4193_1080793656.1461477756305"
+
+------=_Part_4193_1080793656.1461477756305
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+ https://help.pinterest.com/en/articles/we-support-do-not-track
+
+*=E2=80=9CWe support Do Not Track*=20
+
+Do Not Track (or just DNT) is a privacy preference you can set in most=20
+browsers.
+
+We support Do Not Track because we think it=E2=80=99s really important that=
+ you=20
+have a simple way to control how your info gets used. That=E2=80=99s why in=
+=20
+addition to giving you a number of ways to choose how Pinterest uses your=
+=20
+data=20
+<https://help.pinterest.com/en/articles/personalization-and-data-other-webs=
+ites>,=20
+we honor DNT as a signal for how you want us to use data we collect outside=
+=20
+of Pinterest.=20
+
+=20
+
+For all the details, including how to turn on Do Not Track, visit=20
+donottrack.us=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/e5c4f254-b2d0-419c-aac9-0514cd91993e%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4193_1080793656.1461477756305
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><font color=3D"#000000" face=3D"Times New Roman" size=3D"3=
+">
+
+</font><div style=3D"margin: 0in 0in 0pt;"><a href=3D"https://help.pinteres=
+t.com/en/articles/we-support-do-not-track"><font color=3D"#0088cc" face=3D"=
+Calibri" size=3D"2">https://help.pinterest.com/en/articles/we-support-do-no=
+t-track</font></a></div><div style=3D"margin: 0in 0in 0pt;"><font size=3D"2=
+"><br></font></div><font color=3D"#000000" face=3D"Times New Roman" size=3D=
+"2">
+
+</font><h1 style=3D"margin: 0in 0in 0pt; line-height: 15.45pt;"><strong><fo=
+nt size=3D"2"><font color=3D"#365f91" face=3D"Cambria">=E2=80=9C</font><spa=
+n lang=3D"EN" style=3D"color: rgb(51, 51, 51); font-family: &quot;Arial&quo=
+t;,&quot;sans-serif&quot;; mso-ansi-language: EN;">We
+support Do Not Track</span></font></strong></h1><font color=3D"#000000" fac=
+e=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"line-height: 18pt;"><span lang=3D"EN" style=3D"color: rg=
+b(51, 51, 51); font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-a=
+nsi-language: EN;"><font size=3D"2">Do Not Track (or just
+DNT) is a privacy preference you can set in most browsers.</font></span></p=
+><font color=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt; line-height: 18pt;"><span lang=3D"E=
+N" style=3D"color: rgb(51, 51, 51); font-family: &quot;Arial&quot;,&quot;sa=
+ns-serif&quot;; mso-ansi-language: EN;"><font size=3D"2">We support Do Not
+Track because we think it=E2=80=99s really important that you have a simple=
+ way to
+control how your info gets used. That=E2=80=99s why in addition to giving y=
+ou a number
+of ways to choose </font><a href=3D"https://help.pinterest.com/en/articles/=
+personalization-and-data-other-websites" target=3D"_blank"><font color=3D"#=
+0088cc" size=3D"2">how Pinterest uses your data</font></a><font size=3D"2">=
+, we honor DNT as a signal for
+how you want us to use data we collect outside of Pinterest.=C2=A0</font></=
+span></p><font color=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt; line-height: 18pt;"><span lang=3D"E=
+N" style=3D"color: rgb(51, 51, 51); font-family: &quot;Arial&quot;,&quot;sa=
+ns-serif&quot;; mso-ansi-language: EN;"><font size=3D"2">=C2=A0</font></spa=
+n></p><font color=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt; line-height: 18pt;"><span lang=3D"E=
+N" style=3D"color: rgb(51, 51, 51); font-family: &quot;Arial&quot;,&quot;sa=
+ns-serif&quot;; mso-ansi-language: EN;"><font size=3D"2">For all the detail=
+s,
+including how to turn on Do Not Track, visit </font><a href=3D"http://donot=
+track.us/" target=3D"_blank"><font color=3D"#0088cc" size=3D"2">donottrack.=
+us</font></a><font size=3D"2">=E2=80=9D</font></span></p><font color=3D"#00=
+0000" face=3D"Times New Roman" size=3D"3">
+
+</font></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/e5c4f254-b2d0-419c-aac9-0514cd91993e%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/e5c4f254-b2d0-419c-aac9-0514cd91993e%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4193_1080793656.1461477756305--
+------=_Part_4192_1386294726.1461477756305--

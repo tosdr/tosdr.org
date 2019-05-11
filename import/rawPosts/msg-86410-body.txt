@@ -1,0 +1,147 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.11.16 with SMTP id 16csp310870wfk;
+        Mon, 13 Aug 2012 11:42:44 -0700 (PDT)
+Received: by 10.216.133.90 with SMTP id p68mr6457583wei.105.1344883363690;
+        Mon, 13 Aug 2012 11:42:43 -0700 (PDT)
+Return-Path: <tosdr+bncCJOc1ceUERCilaWBBRoE-o2CyA@googlegroups.com>
+Received: from mail-wi0-f192.google.com (mail-wi0-f192.google.com [209.85.212.192])
+        by mx.google.com with ESMTPS id v5si19749166wiz.13.2012.08.13.11.42.42
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 13 Aug 2012 11:42:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCJOc1ceUERCilaWBBRoE-o2CyA@googlegroups.com designates 209.85.212.192 as permitted sender) client-ip=209.85.212.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCJOc1ceUERCilaWBBRoE-o2CyA@googlegroups.com designates 209.85.212.192 as permitted sender) smtp.mail=tosdr+bncCJOc1ceUERCilaWBBRoE-o2CyA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by wibhm4 with SMTP id hm4sf1616586wib.29
+        for <multiple recipients>; Mon, 13 Aug 2012 11:42:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:reply-to:sender
+         :x-originating-ip:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=dLVtszGqMDbmf8y6C2RNEm/669OAyOYzFgJ8WwZuB3Y=;
+        b=ixW6CjnIZWLIokkl2ECXs3LS23w3wqUp6r954zpi8nsMQzhRlU9hDk+glEIfbfK/TA
+         ZcbpqIEPIXEmj1d7V51DDsiD35FTZFbey7Ne2cP6cCSu34HMW8d/e3YOEgcRjx27kJ9x
+         PjDNBoqhYyGDidUF9WZDdnDDtj0ekVcBYe3Eg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:reply-to:sender
+         :x-originating-ip:date:message-id:subject:from:to:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:list-subscribe:list-unsubscribe:content-type;
+        bh=dLVtszGqMDbmf8y6C2RNEm/669OAyOYzFgJ8WwZuB3Y=;
+        b=W8MD36or7hLoyUqT4sMLNrkprbGbIRxdjYbtFht4koc3aCMt8p6W0ew9RKbVspkpO8
+         FNpA8HZ0Es1X8c7oU3uVG7DIRA3/sdnlf9Q14PXgjDpxRCKXJxezUEzB7QDqhnwqQVXp
+         476sinavRdfVy/KLaRH9zZh5c+roCLRwmc1HP06q12tLucY3DgbUtCz82nb0WF3eE2vY
+         ZWcT18PoYyJ1GVUEQHnkoNxBb59q9wkfNu5GqY0Y7znAFUdF73tJdZmgZSYy2v2Zemlm
+         s50ui7iPylwdfcdzLB2EAaFezd0n7+V78Mf+7YU0JeQ2QqvQoiQz0lbN4PFfJwflRu/7
+         ng6g==
+Received: by 10.204.145.130 with SMTP id d2mr422316bkv.21.1344883362465;
+        Mon, 13 Aug 2012 11:42:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.7.213 with SMTP id e21ls4816656bke.2.gmail; Mon, 13 Aug
+ 2012 11:42:41 -0700 (PDT)
+Received: by 10.204.154.76 with SMTP id n12mr1502884bkw.1.1344883361349;
+        Mon, 13 Aug 2012 11:42:41 -0700 (PDT)
+Received: by 10.204.154.76 with SMTP id n12mr1502883bkw.1.1344883361322;
+        Mon, 13 Aug 2012 11:42:41 -0700 (PDT)
+Received: from mail-lb0-f196.google.com (mail-lb0-f196.google.com [209.85.217.196])
+        by gmr-mx.google.com with ESMTPS id k7si58164bks.2.2012.08.13.11.42.40
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 13 Aug 2012 11:42:41 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.217.196 is neither permitted nor denied by domain of kellywilliamse@zambia.co.zm) client-ip=209.85.217.196;
+Received: by lboj14 with SMTP id j14so474557lbo.3
+        for <tosdr@googlegroups.com>; Mon, 13 Aug 2012 11:42:40 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.152.105.173 with SMTP id gn13mr12952234lab.20.1344883360312;
+ Mon, 13 Aug 2012 11:42:40 -0700 (PDT)
+Reply-To: tosdr@googlegroups.com
+Sender: tosdr@googlegroups.com
+Received: by 10.112.59.130 with HTTP; Mon, 13 Aug 2012 11:42:40 -0700 (PDT)
+X-Originating-IP: [41.82.150.203]
+Date: Mon, 13 Aug 2012 11:42:40 -0700
+Message-ID: <CAEtH-KsC503MJ1J-6Rxz99ox2-+iHDNRBLyBS7KuG_V-EGB4Vg@mail.gmail.com>
+Subject: [tosdr:344] hello my dearest one
+From: mulyana dream <mulyanad@hotmail.com>
+To: mulyanad@hotmail.com
+Bcc: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQldznEQSS9OdEqRfJcwBvCFbwBJuc16UvCdw2e9a6T92zaru3rstXL5SDyXT0iBXYnh2Iar
+X-Original-Sender: kellywilliamse@zambia.co.zm
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.217.196 is neither permitted nor denied by domain of
+ kellywilliamse@zambia.co.zm) smtp.mail=kellywilliamse@zambia.co.zm
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=f46d040714c5f4b00c04c72a0e74
+
+--f46d040714c5f4b00c04c72a0e74
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi my dear good friend i know you will be very surprised to received this
+message from me anyway my name is kelly, i,m single am open minded woman, i
+believe we are going to being a good friend honest respect,trust and
+sincere to one another that,s the most important thing in our friendship.
+
+My hobbies, i love football, swimming, cooking, reading, please contact me
+here,  i have special reason of contacting you and i will also sent you
+some of my photos and i will also like to see yours and at the same time
+you will know more about me. Kindly contact me through this alternative
+email address kellywilliams530@yahoo.com thanks waiting for your respond
+soon.
+Yours sincerely
+kelly
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--f46d040714c5f4b00c04c72a0e74
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi my dear good friend i know you will be very surprised to received this m=
+essage from me anyway my name is kelly, i,m single am open minded woman, i =
+believe we are going to being a good friend honest respect,trust and sincer=
+e to one another that,s the most important thing in our friendship.<br>
+<br>My hobbies, i love football, swimming, cooking, reading, please contact=
+ me here,=A0 i have special reason of contacting you and i will also sent y=
+ou some of my photos and i will also like to see yours and at the same time=
+ you will know more about me. Kindly contact me through this alternative em=
+ail address <a href=3D"mailto:kellywilliams530@yahoo.com">kellywilliams530@=
+yahoo.com</a> thanks waiting for your respond soon.<br>
+Yours sincerely<br>kelly<br><br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--f46d040714c5f4b00c04c72a0e74--

@@ -1,0 +1,137 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB4FKZKQQKGQEWMXO5CA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 119B040910
+	for <anything@michielbdejong.com>; Mon,  6 Oct 2014 15:13:53 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0649D14224B
+	for <anything@michielbdejong.com>; Mon,  6 Oct 2014 15:13:53 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 67ztr-KCTk4A for <anything@michielbdejong.com>;
+	Mon,  6 Oct 2014 15:13:21 +0200 (CEST)
+Received: from mail-la0-x23d.google.com (mail-la0-x23d.google.com [IPv6:2a00:1450:4010:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 908F01422F7
+	for <anything@michielbdejong.com>; Mon,  6 Oct 2014 15:13:21 +0200 (CEST)
+Received: by mail-la0-f61.google.com with SMTP id gq15sf407010lab.26
+        for <anything@michielbdejong.com>; Mon, 06 Oct 2014 06:13:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=edHqEama2mGWsx3DdEkAXzDh7PRfAPp3cY8XadmjjxM=;
+        b=qs51M86eMYUvUU7Bg65dgefxv9oMwAepyiAqd01lklD0HpApudLzGR4+rYxFx5JKTz
+         WTRs2kBBs3rhZlzWllGTl6WvNHiKMyNBfeXfDD33IpPK4sVZ3JG6E6Y2EHTFWRbII/QW
+         yNfNBdqbuLrFi45KDdQNoPh452RUuDtLC9P47ZAPo5R/wbEBgQl2IHlwYlAAt0KSxibE
+         LwVUpWfFf76T8Qlkfpqodg2WsDjeZztIcnllqe63vT4/gEHhy62ccPUTne9AtFzgW33+
+         Wq1eknqy5TmLzaBrkFnhA20pDF/u1LObWQ/g6AjkopDr5hU2VBafdiE2J382cQz2BfMW
+         GBtA==
+X-Received: by 10.152.29.195 with SMTP id m3mr425699lah.1.1412601201039;
+        Mon, 06 Oct 2014 06:13:21 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.6.39 with SMTP id x7ls571027lax.31.gmail; Mon, 06 Oct 2014
+ 06:13:20 -0700 (PDT)
+X-Received: by 10.152.6.9 with SMTP id w9mr287090law.7.1412601200172;
+        Mon, 06 Oct 2014 06:13:20 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id ca20si518309wib.3.2014.10.06.06.13.20
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 06 Oct 2014 06:13:20 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id ABC8663AC3B
+	for <tosdr@googlegroups.com>; Mon,  6 Oct 2014 15:13:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id urZOTlQD3CV2 for <tosdr@googlegroups.com>;
+	Mon,  6 Oct 2014 15:13:18 +0200 (CEST)
+Received: from localhost (p4FD4CBC9.dip0.t-ipconnect.de [79.212.203.201])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id CF15763ABD6
+	for <tosdr@googlegroups.com>; Mon,  6 Oct 2014 15:13:17 +0200 (CEST)
+Date: Mon, 6 Oct 2014 15:13:16 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3276] Re: Please help us improve the submission process to
+ ToS;DR :-)
+Message-ID: <20141006131316.GC8046@xps.fritz.box>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <20140927173742.GA26590@xps.fritz.box>
+ <3afff1d3-b6a4-422f-948b-d31cc99ab516@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="i7F3eY7HS/tUJxUd"
+Content-Disposition: inline
+In-Reply-To: <3afff1d3-b6a4-422f-948b-d31cc99ab516@googlegroups.com>
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--i7F3eY7HS/tUJxUd
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-10-02 Thu 19:18, Dave Crusoe <dhcrusoe@gmail.com>:
+> The submission process was smooth, although the Service Name slot seems=
+=20
+> like it should be formatted as "http://domain" vs. "domain" to make both=
+=20
+> submitting and finding simpler.=20
+
+Hi Dave,
+
+Actually it's not the "domain" for instence soe.com would not be
+"soe" but sonly-online-entertainement (the service id).
+
+Anyway, we will put the Name of the services there, see
+https://github.com/tosdr/tosdr-build/labels/LowHangingFruit
+
+Best,
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--i7F3eY7HS/tUJxUd
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUMpVsAAoJEI0CLJmz17eVzqEIAN9ivf3gif6GKML/gyD1lcGU
+SHfjsMuUJe+VTS1zIXQZL3wZ4UrxnzdjFD1Fc79nXRmhgLLMoywADkGAx+7FCeHZ
+cycShKR9271WRqDpEbR5O3irNxiON3mcuo4vjiOGXMQoqa+YNcPZsu2aLVwG+uUP
+/8EZPA0PjtdAqMXwymTZEXj9jBlgx5k85GfmalUQyqDw5e9iYOlbJ/0thr0NxUPW
+Hd+EkQiWYRNPLhC6t39K9XmK5psJpZ71z8qxb13+ExB0RWXMbGVSkKeMZfd93f21
+xZFOhSZmxs+dlYDJMdIMb8QV6bLzpzhzaNzheCtyZEQMa/A7DJiGpV+KUBXAGlU=
+=LREQ
+-----END PGP SIGNATURE-----
+
+--i7F3eY7HS/tUJxUd--

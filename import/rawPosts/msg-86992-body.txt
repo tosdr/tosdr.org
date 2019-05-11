@@ -1,0 +1,177 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp129445qed;
+        Wed, 15 Aug 2012 10:29:22 -0700 (PDT)
+Received: by 10.14.179.200 with SMTP id h48mr25537861eem.12.1345051762219;
+        Wed, 15 Aug 2012 10:29:22 -0700 (PDT)
+Return-Path: <tosdr+bncCO6f6ZzNBhDwuK-BBRoE6ROwHA@googlegroups.com>
+Received: from mail-ee0-f64.google.com (mail-ee0-f64.google.com [74.125.83.64])
+        by mx.google.com with ESMTPS id m5si1391816een.75.2012.08.15.10.29.20
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 15 Aug 2012 10:29:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCO6f6ZzNBhDwuK-BBRoE6ROwHA@googlegroups.com designates 74.125.83.64 as permitted sender) client-ip=74.125.83.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCO6f6ZzNBhDwuK-BBRoE6ROwHA@googlegroups.com designates 74.125.83.64 as permitted sender) smtp.mail=tosdr+bncCO6f6ZzNBhDwuK-BBRoE6ROwHA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by eekb15 with SMTP id b15sf528525eek.29
+        for <multiple recipients>; Wed, 15 Aug 2012 10:29:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:cc:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=Htum63vnKzJg0gmmTtvZ2+nXrE6z+HZ29P+yKMwZ8bI=;
+        b=agrWdy5oOYM041b6D5PUU/k4eqn6kRiNrs0CjPPu1ZrTl2Bo7PiX9jj0It/7HpJovE
+         GT8E21fOLBA6/xYI2kiwsPVDz/UuhjTmLEH4r9yzUqLeVDmuN0tWTlgZTKRTBN28Tddt
+         oFGZqUg8m1ahGsvXVQuQPFizu2Q0zOItoWRVo=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:cc:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=Htum63vnKzJg0gmmTtvZ2+nXrE6z+HZ29P+yKMwZ8bI=;
+        b=MrHATwwfG/VzOhSiqnZcnhMSpX8dvMay5Un9FPZ7TgjiGBGeoD74mmsw6PUQlDxEBx
+         Exta0nyiSXIWMAJLzIM/WHBXDDtja+LUfw5vtfYIZd7YlZxMQgUnGDniqNay0JLhx4qO
+         N9rQdBkvAvlSBbsMDETPSsq8ZB90/IDydOS6ngwFZ/rURwbAuIIg8DYstHx2aFkt//uU
+         pVb2UikP0qOPAcJjkym4uZG0IOiH0lFk3ADSr2Xz3BqGBVItFOc5I4siVvxSbXJ/Tx/I
+         fg8SW1BD66wd851s/2WO3DcMeRewGmUxcUmdq+oyz8mgqgRt2j8Ld+2RmQZgqIYANJ3p
+         qQVw==
+Received: by 10.216.52.8 with SMTP id d8mr384365wec.68.1345051760760;
+        Wed, 15 Aug 2012 10:29:20 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.81.71 with SMTP id y7ls2031756wix.3.gmail; Wed, 15 Aug
+ 2012 10:29:20 -0700 (PDT)
+Received: by 10.180.82.226 with SMTP id l2mr3018387wiy.1.1345051759982;
+        Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+Received: by 10.180.82.226 with SMTP id l2mr3018386wiy.1.1345051759969;
+        Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+Received: from mail-wi0-f181.google.com (mail-wi0-f181.google.com [209.85.212.181])
+        by gmr-mx.google.com with ESMTPS id hm1si509794wib.3.2012.08.15.10.29.19
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mike@wattpad.com designates 209.85.212.181 as permitted sender) client-ip=209.85.212.181;
+Received: by wibhm2 with SMTP id hm2so1364490wib.4
+        for <tosdr@googlegroups.com>; Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.134.11 with SMTP id r11mr9668132wei.177.1345051759409;
+ Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+Received: by 10.216.230.164 with HTTP; Wed, 15 Aug 2012 10:29:19 -0700 (PDT)
+X-Originating-IP: [99.226.224.53]
+In-Reply-To: <1345046355.18572.18.camel@synclavier.lan>
+References: <1342539277.4043.76.camel@synclavier.lan>
+	<deb6d78e-a57d-42b3-97c3-4532365e192e@googlegroups.com>
+	<1345046355.18572.18.camel@synclavier.lan>
+Date: Wed, 15 Aug 2012 13:29:19 -0400
+Message-ID: <CAM+8rrt69=mqyDvfLrpKF1e4+9W1oVmi46gAAhzmxBeffntOww@mail.gmail.com>
+Subject: Re: [tosdr:470] Re: 500px Store: moral rights waiver (on photographs)
+From: Mike Beltzner <mike@wattpad.com>
+To: Hugo Roy <hugo@fsfe.org>
+Cc: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQlgwPlXW35J/BV46ljyV8WTufHxYE23VyEC8Unou1E9EGzw/vAuA/pKSIBBFnZloskRugbG
+X-Original-Sender: mike@wattpad.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of mike@wattpad.com designates 209.85.212.181 as permitted sender) smtp.mail=mike@wattpad.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=0016e6d7ef8452fb8304c75144d9
+
+--0016e6d7ef8452fb8304c75144d9
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Wed, Aug 15, 2012 at 11:59 AM, Hugo Roy <hugo@fsfe.org> wrote:
+
+> Do we have such examples of jurisprudence and cases based on grounds of
+> moral rights? This seems highly improbable to me.
+>
+
+I certainly do not, no, and suspect that we implemented these terms because
+other services implemented them because some lawyer at some point was
+trying to protect them from any litigation in the future. I agree that I
+can't see it as being very likely, especially given ...
+
+
+> In France and other countries in Europe, a waiver of moral rights is
+> just void. Moral rights are inalienable and perpetual.
+>
+
+... the implication that the clause is unenforceable.
+
+Do you agree, though, that the case we're trying to protect from
+(displaying work A alongside work B, for example, in a way that the author
+of one of the works considers to be injurious to their reputation) is not
+something that's covered by one's "moral rights" as defined in the Berne
+convention?
+
+I'm willing to take the item out of our TOS, honestly, if it's meaningless.
+
+cheers,
+mike
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--0016e6d7ef8452fb8304c75144d9
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, Aug 15, 2012 at 11:59 AM, Hugo Roy <span dir=3D"ltr">&lt;<a href=3D=
+"mailto:hugo@fsfe.org" target=3D"_blank">hugo@fsfe.org</a>&gt;</span> wrote=
+:<br><div class=3D"gmail_quote"><blockquote class=3D"gmail_quote" style=3D"=
+margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+Do we have such examples of jurisprudence and cases based on grounds of<br>
+moral rights? This seems highly improbable to me.<br></blockquote><div><br>=
+I certainly do not, no, and suspect that we implemented these terms because=
+ other services implemented them because some lawyer at some point was tryi=
+ng to protect them from any litigation in the future. I agree that I can&#3=
+9;t see it as being very likely, especially given ...<br>
+=A0</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex">
+In France and other countries in Europe, a waiver of moral rights is<br>
+just void. Moral rights are inalienable and perpetual.<br>
+<span class=3D"HOEnZb"></span></blockquote></div><br>... the implication th=
+at the clause is unenforceable.<br><br>Do you agree, though, that the case =
+we&#39;re trying to protect from (displaying work A alongside work B, for e=
+xample, in a way that the author of one of the works considers to be injuri=
+ous to their reputation) is not something that&#39;s covered by one&#39;s &=
+quot;moral rights&quot; as defined in the Berne convention?<br>
+<br>I&#39;m willing to take the item out of our TOS, honestly, if it&#39;s =
+meaningless.<br><br>cheers,<br>mike<br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--0016e6d7ef8452fb8304c75144d9--

@@ -1,0 +1,255 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp214461vec;
+        Sat, 8 Dec 2012 06:31:27 -0800 (PST)
+Received: by 10.49.108.9 with SMTP id hg9mr17599874qeb.34.1354977087679;
+        Sat, 08 Dec 2012 06:31:27 -0800 (PST)
+Return-Path: <tosdr+bncBDLZX5PJWMBBBPU6RWDAKGQEGBVBXDY@googlegroups.com>
+Received: from mail-qc0-f191.google.com (mail-qc0-f191.google.com [209.85.216.191])
+        by mx.google.com with ESMTPS id p21si5994578qct.61.2012.12.08.06.31.27
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 08 Dec 2012 06:31:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBPU6RWDAKGQEGBVBXDY@googlegroups.com designates 209.85.216.191 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDLZX5PJWMBBBPU6RWDAKGQEGBVBXDY@googlegroups.com designates 209.85.216.191 as permitted sender) smtp.mail=tosdr+bncBDLZX5PJWMBBBPU6RWDAKGQEGBVBXDY@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-qc0-f191.google.com with SMTP id h29sf848706qcu.28
+        for <michiel@unhosted.org>; Sat, 08 Dec 2012 06:31:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=mgTfEfCI6pPebNxn9KHGDNsw899IpfIOMeKhLnZX4iY=;
+        b=NF5KlEeePAhhif5I6coDueIsIlrE9QrgYhqmhRDQBQiiA5kRoio2EiE+CIR2js9w1R
+         v4PD5x66VVyKS+NzPH4mDD/eriMiF8o7j7McEO8KC+VOTD4pmItfBMFCQvhNiFfnHoVr
+         a9lWLfx0WzZc5gUVdYnpYbVO0K7VdeAA2N/V+8Pv5hmNRgJazPLqSZPNj9fMM3GCKmAd
+         d0NbWjG0Pf5fjJhI4pukZ3T/b2WKfMPPsCH7Q24mnNI8/+nPtjw+tgHVejmk2QwIhCCd
+         imleL9PiqQkWfksEbSX/jUQQf+FAUEaz8F9olia7iCWY3K65/cH4LUs4h8EMW/BS9zmc
+         pMUw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=mgTfEfCI6pPebNxn9KHGDNsw899IpfIOMeKhLnZX4iY=;
+        b=h5brTiZ2+aE1fti3rYuTE+vlXmRsOpsUhdgrvEi2r2/8sHqsEhcYSF0P8cWItseYHW
+         AnrOhDzIUYxYBW3RonA+RKhrbTe14j7getS1gfMQHAOIu0cCpS8LZhNZyA/DIfRlmIzx
+         kmnoe74QaangUK2znP/aceO55XZ5K7WvOifopJAn0jzsa6EvuvlwojvKAzKqahcXaANZ
+         QPGtBSEt+1PW1iNN2swLyqsbjTpg2XWSy9q7HbiIguB8tuZ5C+F/wBq+5hSSZakvg2zC
+         DFX+lYMV0BsNeMAt5In6rtPvbJSgWEeP/JCv11WQbLXchG75I3enWOCe1tEVW66ce/mo
+         VyyQ==
+Received: by 10.49.24.164 with SMTP id v4mr2037305qef.6.1354977087112;
+        Sat, 08 Dec 2012 06:31:27 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.0.102 with SMTP id 6ls3078429qed.24.gmail; Sat, 08 Dec 2012
+ 06:31:26 -0800 (PST)
+Received: by 10.49.24.14 with SMTP id q14mr2038034qef.17.1354977086287;
+        Sat, 08 Dec 2012 06:31:26 -0800 (PST)
+Date: Sat, 8 Dec 2012 06:31:26 -0800 (PST)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <2985e980-1edf-43c0-b693-d54640fdd3ca@googlegroups.com>
+In-Reply-To: <32c08b45-fb04-4220-b1b8-ed818aabd72f@googlegroups.com>
+References: <8cd9e75d-4ea2-481d-9df2-8589bd9a505d@googlegroups.com>
+ <32c08b45-fb04-4220-b1b8-ed818aabd72f@googlegroups.com>
+Subject: [tosdr:1284] Re: [ENVATO]No warranty is provided, and any liability
+ is limited to the original cost of goods.
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_306_26238553.1354977086042"
+
+------=_Part_306_26238553.1354977086042
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Thanks again, Robin. This has been noted and will be on the website soon.
+
+On Tuesday, December 4, 2012 7:55:46 PM UTC+1, Robin Monks wrote:
+>
+> Ignore that first sentence, it didn't belong there.
+>
+> On Tuesday, December 4, 2012 2:49:52 PM UTC-4, Robin Monks wrote:
+>>
+>> Site claims ownership of links on other websites pointing to the site an=
+d=20
+>> claim they have the right to request deletion of in-coming links. From t=
+he=20
+>> user terms:
+>>
+>>> 1.    all content and services on the Sites is provided =93as is=94 and=
+=20
+>>> without warranties of any kind, either express or implied;
+>>>
+>> and
+>>
+>> To the fullest extent permitted by law, Envato=92s liability for breach =
+of=20
+>> any implied warranty or condition which cannot be excluded is limited at=
+=20
+>> the option of Envato to the following:
+>>
+>> 1.    in the case of services supplied or offered by Envato:
+>>
+>> a.     the supply of the services again;
+>>
+>> b.    the payment of the cost of having services supplied again; and
+>>
+>> 2.    in the case of goods supplied or offered by us:
+>>
+>> a.     the replacement of the goods or the supply of equivalent goods; o=
+r
+>>
+>>> the payment of the cost of replacing the goods or acquiring equivalent=
+=20
+>>> goods.=20
+>>
+>>
+>> /Robin=20
+>>
+>> Applies to all of the following domains:
+>> http://activeden.net/legal/user
+>> http://audiojungle.net/legal/user
+>> http://codecanyon.net/legal/user
+>> http://graphicriver.net/legal/user
+>> http://themeforest.net/legal/user
+>> http://videohive.net/legal/user
+>> http://3docean.net/legal/user
+>> http://marketplace.tutsplus.com/legal/user
+>> http://photodune.net/legal/user
+>>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_306_26238553.1354977086042
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Thanks again, Robin. This has been noted and will be on the website soon.<b=
+r><br>On Tuesday, December 4, 2012 7:55:46 PM UTC+1, Robin Monks wrote:<blo=
+ckquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-=
+left: 1px #ccc solid;padding-left: 1ex;">Ignore that first sentence, it did=
+n't belong there.<br><br>On Tuesday, December 4, 2012 2:49:52 PM UTC-4, Rob=
+in Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-l=
+eft:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Site claims ownershi=
+p of links on other websites pointing to the site and claim they have the r=
+ight to request deletion of in-coming links. From the user terms:<div><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-=
+width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;paddin=
+g-left:1ex"><h3><p style=3D"margin-left:.5in"><span lang=3D"EN-US">1.<span =
+style=3D"font-size:7pt;line-height:normal;font-family:'Times New Roman'">&n=
+bsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">all content and services on
+the Sites is provided =93as is=94 and without warranties of any kind, eithe=
+r
+express or implied;</span><span lang=3D"EN-US"></span></p></h3></blockquote=
+><div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;b=
+order-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:s=
+olid;padding-left:1ex"><p style=3D"margin-top:1em;line-height:normal"></p><=
+p style=3D"margin-top:1em;line-height:normal"><span lang=3D"EN-US"></span><=
+/p></blockquote><div><div>and</div><div><br></div><p><span lang=3D"EN-US" s=
+tyle=3D"font-size:10.0pt;line-height:115%;color:#444444;background:#d2d1d0"=
+>To the fullest extent permitted by law,
+Envato=92s liability for breach of any implied warranty or condition which =
+cannot
+be excluded is limited at the option of Envato to the following:</span><spa=
+n lang=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:.5in"><span lang=3D"EN-US">1.<span style=3D"font-si=
+ze:7pt;line-height:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">in the case of services
+supplied or offered by Envato:</span><span lang=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:1.0in"><span lang=3D"EN-US" style=3D"font-size:10.0=
+pt;line-height:115%;color:#444444">a.<span style=3D"font-size:7pt;line-heig=
+ht:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">the supply of the services
+again;</span><span lang=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:1.0in"><span lang=3D"EN-US" style=3D"font-size:10.0=
+pt;line-height:115%;color:#444444">b.<span style=3D"font-size:7pt;line-heig=
+ht:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">the payment of the cost of
+having services supplied again; and</span><span lang=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:.5in"><span lang=3D"EN-US">2.<span style=3D"font-si=
+ze:7pt;line-height:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">in the case of goods
+supplied or offered by us:</span><span lang=3D"EN-US"></span></p>
+
+<p style=3D"margin-left:1.0in"><span lang=3D"EN-US" style=3D"font-size:10.0=
+pt;line-height:115%;color:#444444">a.<span style=3D"font-size:7pt;line-heig=
+ht:normal;font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=3D"EN-US" style=3D"font-size:10.0pt;line-height:11=
+5%;color:#444444;background:#d2d1d0">the replacement of the goods
+or the supply of equivalent goods; or</span><span lang=3D"EN-US"></span></p=
+>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;p=
+adding-left:1ex"><span style=3D"background-color:rgb(210,209,208);color:rgb=
+(68,68,68);font-family:'Times New Roman',serif;font-size:10pt">the
+payment of the cost of replacing the goods or acquiring equivalent goods.</=
+span>&nbsp;</blockquote><div><br></div><div>/Robin&nbsp;</div><div><br></di=
+v>Applies to all of the following domains:<br><a href=3D"http://activeden.n=
+et/legal/user" target=3D"_blank">http://activeden.net/legal/<wbr>user</a><b=
+r><a href=3D"http://audiojungle.net/legal/user" target=3D"_blank">http://au=
+diojungle.net/legal/<wbr>user</a><br><a href=3D"http://codecanyon.net/legal=
+/user" target=3D"_blank">http://codecanyon.net/legal/<wbr>user</a><br><a hr=
+ef=3D"http://graphicriver.net/legal/user" target=3D"_blank">http://graphicr=
+iver.net/legal/<wbr>user</a><br><a href=3D"http://themeforest.net/legal/use=
+r" target=3D"_blank">http://themeforest.net/legal/<wbr>user</a><br><a href=
+=3D"http://videohive.net/legal/user" target=3D"_blank">http://videohive.net=
+/legal/<wbr>user</a><br><a href=3D"http://3docean.net/legal/user" target=3D=
+"_blank">http://3docean.net/legal/user</a><br><a href=3D"http://marketplace=
+.tutsplus.com/legal/user" target=3D"_blank">http://marketplace.tutsplus.<wb=
+r>com/legal/user</a><br><div><a href=3D"http://photodune.net/legal/user" ta=
+rget=3D"_blank">http://photodune.net/legal/<wbr>user</a></div></div></div><=
+/div></blockquote></blockquote>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_306_26238553.1354977086042--

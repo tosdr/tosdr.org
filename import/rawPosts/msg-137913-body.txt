@@ -1,0 +1,107 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.148 with SMTP id j142csp689208ioj;
+        Thu, 12 Nov 2015 15:23:16 -0800 (PST)
+X-Received: by 10.28.19.65 with SMTP id 62mr132017wmt.6.1447370596398;
+        Thu, 12 Nov 2015 15:23:16 -0800 (PST)
+Return-Path: <tosdr+bncBDO4L6PD2EIRBWN6SSZAKGQEGCTBMCI@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id 4si8101044wmr.1.2015.11.12.15.23.16
+        for <michiel@unhosted.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 12 Nov 2015 15:23:16 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDO4L6PD2EIRBWN6SSZAKGQEGCTBMCI@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDO4L6PD2EIRBWN6SSZAKGQEGCTBMCI@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBDO4L6PD2EIRBWN6SSZAKGQEGCTBMCI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id F1404A80B5
+	for <michiel@unhosted.org>; Fri, 13 Nov 2015 00:23:15 +0100 (CET)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id DA55A14220B
+	for <michiel@unhosted.org>; Fri, 13 Nov 2015 00:23:15 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id lLSXxSCILXMK for <michiel@unhosted.org>;
+	Fri, 13 Nov 2015 00:23:10 +0100 (CET)
+Received: from mail-pa0-x23f.google.com (mail-pa0-x23f.google.com [IPv6:2607:f8b0:400e:c03::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4F86C1421FB
+	for <michiel@michielbdejong.com>; Fri, 13 Nov 2015 00:23:07 +0100 (CET)
+Received: by pabkj5 with SMTP id kj5sf13736480pab.1
+        for <michiel@michielbdejong.com>; Thu, 12 Nov 2015 15:23:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=wLFR/FckPrJybEcpa8ZHDR94bevC9M2kGg1cMo527wM=;
+        b=tbks/CYpEll+wO2whYg/uGTU46ZINPmnGZdzOpbb5osgenM3swY3iN5dtharMaOqRO
+         TlicQdz7MRzkGLw6QCkOr7e13AHEd8oMeLIeJ2fhHZaSOoAf14W/8t9kAu0/eHCCwATK
+         ydQl0Rvfp8jLHZfBjy+FmdWaC30+0ipa3TCHOtXlNmVmPsrPzMqPRoGgzcWd2JjHGat6
+         pJhBgyOdjNi9XuCAtNxLxMkAWAK3RoMcqYbbr8piFaFrBX++l+iZSkPqbVErcB7LmXrS
+         7XtGV3Afsu9z6gEH8OkQXFDKW1L3PoiGbwHlv6s4fhXnBFTikRfV3g2DVvVvnK6cojUO
+         9idg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=wLFR/FckPrJybEcpa8ZHDR94bevC9M2kGg1cMo527wM=;
+        b=nhZXAmN/sQTDwxB22sOc81JytwdQPZZBSLNI6mQyXoYF8imiUBZPA8JYBVkvYYR/CO
+         E4mVUbuWqSWnBhxzlC/IQodiij3s+9EeE261biHvNmkSP22/KnljEpthdAihOD4+hKrF
+         XiZD2OFF6Yk5Y5Z4dOB8NZ5+yTOcIEuQtE2+9ZLd/D8iANll7w4NbUqrCuMOTG8pZVx2
+         Q9VbtgAXdtUALiB6YScluwIaJAQrlBn6RUNKP4gOEvGS10aDy3NB7NImOAwWkjDuBnGl
+         iYKhJ6CFbrX82IxOEHPUwkFcDh9hK4lTDSOtRGEQ/n+VvzAmkGV1AjP76+rwQ0Lh8bfe
+         /G3Q==
+X-Received: by 10.50.155.101 with SMTP id vv5mr2153igb.8.1447370585953;
+        Thu, 12 Nov 2015 15:23:05 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.156.71 with SMTP id f68ls613612ioe.50.gmail; Thu, 12 Nov
+ 2015 15:23:05 -0800 (PST)
+X-Received: by 10.50.142.39 with SMTP id rt7mr1888igb.7.1447370585561;
+        Thu, 12 Nov 2015 15:23:05 -0800 (PST)
+Date: Thu, 12 Nov 2015 15:23:04 -0800 (PST)
+From: dizieone1623@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <df364b4b-c5f2-4a26-b0c1-d09922eddf2a@googlegroups.com>
+In-Reply-To: <a5f7266c-e53e-4db0-b596-e411a1732e1f@googlegroups.com>
+References: <CADNfgReNnQ+_uNn+8piYVUcac6kzHpnF+wjn+sTGqPvEzRTing@mail.gmail.com>
+ <a5f7266c-e53e-4db0-b596-e411a1732e1f@googlegroups.com>
+Subject: [tosdr:3688] Re: ownership on youtube
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_6373_2029926947.1447370584747"
+X-Original-Sender: Dizieone1623@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_6373_2029926947.1447370584747
+Content-Type: text/plain; charset=UTF-8
+
+https://policies.yahoo.com/us/en/yahoo/terms/utos/index.htm
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_6373_2029926947.1447370584747--

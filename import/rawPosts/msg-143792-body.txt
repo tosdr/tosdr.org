@@ -1,0 +1,203 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp577091ioi;
+        Sat, 14 May 2016 01:54:22 -0700 (PDT)
+X-Received: by 10.107.185.87 with SMTP id j84mr13350846iof.69.1463216062758;
+        Sat, 14 May 2016 01:54:22 -0700 (PDT)
+Return-Path: <tosdr+bncBDUKJBOW7EGRBOGP3O4QKGQELENJNSY@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id n2si3298892iga.78.2016.05.14.01.54.22
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 14 May 2016 01:54:22 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDUKJBOW7EGRBOGP3O4QKGQELENJNSY@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDUKJBOW7EGRBOGP3O4QKGQELENJNSY@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBDUKJBOW7EGRBOGP3O4QKGQELENJNSY@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 91C6F17209C
+	for <michiel@unhosted.org>; Sat, 14 May 2016 10:54:19 +0200 (CEST)
+Received: from mfilter38-d.gandi.net (mfilter38-d.gandi.net [217.70.178.169])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 85545226058
+	for <michiel@unhosted.org>; Sat, 14 May 2016 10:54:19 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter38-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter38-d.gandi.net (mfilter38-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id K_SH0XIWY78g for <michiel@unhosted.org>;
+	Sat, 14 May 2016 10:54:17 +0200 (CEST)
+Received: from mail-oi0-x238.google.com (mail-oi0-x238.google.com [IPv6:2607:f8b0:4003:c06::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 663A922605A
+	for <michiel@michielbdejong.com>; Sat, 14 May 2016 10:54:17 +0200 (CEST)
+Received: by mail-oi0-x238.google.com with SMTP id u185sf21500797oie.0
+        for <michiel@michielbdejong.com>; Sat, 14 May 2016 01:54:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=+qL/vzKOtrRcHfE3waa3J3oxwSz0Rgy2ZWtaDcp8DGE=;
+        b=ARIBEgzyWdxoQ7ze6rlK0i6lK9CvOKpUUb05lq+QPyVd3hUb4H+FW+dF+RpgPBrcsO
+         3cvphIvg+YPuO2z3OsAUyBsIbDBGeWkcjn1DsOMCuKAxsDNYCnzANlG53Oo5B+6bzyt/
+         HvNeMHIkt2alaY5oOK8BIWE+StH+GorAMmqsuAuD95WpFHWInURY2f9I6QQgXfpRbAK1
+         oMcuiKqajorKrva5PR2vZtGa1Bh94+mlNtFmGwicT+Ic1EP56+2riAiurGFYcAcEzQqx
+         40A/p3CH+dWSKz20ls5pYQP1Syz8ZqxK5FgyU1pPhngCTXL3nfqGTHO2mkSOU+ejGywY
+         uiTg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=+qL/vzKOtrRcHfE3waa3J3oxwSz0Rgy2ZWtaDcp8DGE=;
+        b=z3JGJ8SCSRfvX0KYa40tr+QL86Iu43XjPUSE5lMpGmHLno31MVS1mCvz5SQcBZc0SW
+         wSNnWJBsOlIDBnl890FXyAdHTUDkUYUNsGpDBjt3GvFxGd0zFNBIDlrq/Jk496Oz1eEh
+         sCXojbKCMaX0jtguAtJeDnFanIfdCeOndFtgMg5PhSThIqDiEsrsCI+KLZNDbVnAqhpY
+         yOiiNi8tr3iCpsXRvTPVjuUL8CrF48b1QeZRTmHeG6HIUOndG+PzUGChaufLNdGJeyrL
+         6Wa4XU4q01JgtvQzsej2zg5/GJ/7TGbC/ODHqi8YhlMaI9h72IWy2bH9SBSTU6ARNLyr
+         ZRaA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:in-reply-to
+         :references:subject:mime-version:x-original-sender:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=+qL/vzKOtrRcHfE3waa3J3oxwSz0Rgy2ZWtaDcp8DGE=;
+        b=aPHO0isMXzUsGkTF0TF1sYTQg5FokPFThTwD5pznWQWbjibOoQQbLjQ5rTsaYlOl/z
+         ATc6gl/0XjSc4ZVx+DU3DJsXSUu8I2thmAKIwYfdFbp2jElFKZTuFDlLEUuoS6VfoA8t
+         IXJO7hbf68fajtbXhxC12c5lMKGATzTDyAT7enxUvmUfI1j9yzLe0yT+9ttpufIprnet
+         4Nvxx1XMHCu7Tc8upUNv8waYyfj+qIf/T2lZB5LMStNM2AyyRgqA+DOnOnteIyy775H9
+         17NYPaxAhdXzBBeFZ7wPK33iWtW6ey/SXzT79CWJPNRzbUK7EGwB62xG+uJtlcEmhoH+
+         YL+w==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FXnlCnyR5yXNteMgb8QxFSD6jjOo3O02THgOHL07Oz3L9hcK3vW5NtfL1U+mkePzQ==
+X-Received: by 10.157.52.5 with SMTP id v5mr146423otb.9.1463216056377;
+        Sat, 14 May 2016 01:54:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.56.3 with SMTP id i3ls76515otc.77.gmail; Sat, 14 May 2016
+ 01:54:15 -0700 (PDT)
+X-Received: by 10.157.18.175 with SMTP id g44mr240049otg.3.1463216055888;
+        Sat, 14 May 2016 01:54:15 -0700 (PDT)
+Date: Sat, 14 May 2016 01:54:14 -0700 (PDT)
+From: matthewlane027@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <8daf2894-ef45-455e-b425-201f5c8c930c@googlegroups.com>
+In-Reply-To: <CADNfgReEQBfyN+9RT_X_9h8Gke5kjRKSHifOm+xgCcPJFdUBXQ@mail.gmail.com>
+References: <CADNfgReEQBfyN+9RT_X_9h8Gke5kjRKSHifOm+xgCcPJFdUBXQ@mail.gmail.com>
+Subject: [tosdr:3892] Re: Suspension and censorship on youtube
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_3237_1443552140.1463216055220"
+X-Original-Sender: matthewlane027@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_3237_1443552140.1463216055220
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, May 8, 2013 at 3:11:49 AM UTC+12, Suzanne Azmayesh wrote:
+> =C2=A0Youtube can remove an account without prior notice and in its sole =
+discretion.=C2=A0
+>=20
+>=20
+>=20
+>=20
+>=20
+> =C2=A0 =C2=AB=C2=A0YouTube will terminate a user's access to the Service =
+if, under appropriate circumstances, the user is determined to be a repeat =
+infringer.=C2=A0=C2=BB
+>=20
+>=20
+>=20
+>=20
+>=20
+> =C2=A0=C2=AB=C2=A0YouTube reserves the right to decide whether Content vi=
+olates these Terms of Service for reasons other than copyright infringement=
+, such as, but not limited to, pornography, obscenity, or excessive length.=
+ YouTube may at any time, without prior notice and in its sole discretion, =
+remove such Content and/or terminate a user's account for submitting such m=
+aterial in violation of these Terms of Service.=C2=A0=C2=BB
+>=20
+>=20
+>=20
+>=20
+>=20
+> Good point=C2=A0: if you are the target of a copyright holder's take-down=
+ notice, youtube gives you a chance to defend your right. But the exclusive=
+ competence of the jurisdiction of California is not that pertinent=C2=A0:=
+=C2=A0
+>=20
+>=20
+>=20
+>=20
+>=20
+> Counter-Notice. If you believe that your Content that was removed (or to =
+which access was disabled) is not infringing, or that you have the authoriz=
+ation from the copyright owner, the copyright owner's agent, or pursuant to=
+ the law, to post and use the material in your Content, you may send a coun=
+ter-notice containing the following information to the Copyright Agent:
+>=20
+>=20
+> Your physical or electronic signature;
+>=20
+> Identification of the Content that has been removed or to which access ha=
+s been disabled and the location at which the Content appeared before it wa=
+s removed or disabled;
+>=20
+>=20
+> A statement that you have a good faith belief that the Content was remove=
+d or disabled as a result of mistake or a misidentification of the Content;=
+ and
+>=20
+>=20
+> Your name, address, telephone number, and e-mail address, a statement tha=
+t you consent to the jurisdiction of the federal court in San Francisco, Ca=
+lifornia, and a statement that you will accept service of process from the =
+person who provided notification of the alleged infringement.
+>=20
+>=20
+> If a counter-notice is received by the Copyright Agent, YouTube may send =
+a copy of the counter-notice to the original complaining party informing th=
+at person that it may replace the removed Content or cease disabling it in =
+10 business days. Unless the copyright owner files an action seeking a cour=
+t order against the Content provider, member or user, the removed Content m=
+ay be replaced, or access to it restored, in 10 to 14 business days or more=
+ after receipt of the counter-notice, at YouTube's sole discretion.
+
+What would the reason for "YouTube may at any time, without prior notice...=
+ remove such Content and/or terminate a user's account for submitting such =
+material in violation of these Terms of Service."
+
+Should the complainant have the reason given to the alleged perpetrator of =
+rule violation? after all, being barred from your account due to some unkno=
+wn reason may not deter one from creating another account, does it not?
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/8daf2894-ef45-455e-b425-201f5c8c930c%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_3237_1443552140.1463216055220--

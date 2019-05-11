@@ -1,0 +1,131 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.240.2 with SMTP id vw2csp203177vec;
+        Thu, 15 Nov 2012 23:42:44 -0800 (PST)
+Received: by 10.14.194.71 with SMTP id l47mr11325247een.6.1353051763745;
+        Thu, 15 Nov 2012 23:42:43 -0800 (PST)
+Return-Path: <tosdr+bncBC3IF2OJ4QORB4W4S6CQKGQEZM52WCA@googlegroups.com>
+Received: from mail-fa0-f58.google.com (mail-fa0-f58.google.com [209.85.161.58])
+        by mx.google.com with ESMTPS id h41si1329195eeo.92.2012.11.15.23.42.43
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 15 Nov 2012 23:42:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB4W4S6CQKGQEZM52WCA@googlegroups.com designates 209.85.161.58 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB4W4S6CQKGQEZM52WCA@googlegroups.com designates 209.85.161.58 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORB4W4S6CQKGQEZM52WCA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-fa0-f58.google.com with SMTP id s10sf665548fas.13
+        for <michiel@unhosted.org>; Thu, 15 Nov 2012 23:42:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Cq2CkhcN89JhhD7V+zzhNIM4ZcJG2nkFhB2BgwvyhBE=;
+        b=Ty7fSaEQrh8i69/RkOS4gOWRryZTqqnbGKvsgmAhZXCogNpQTPsSEFMNMN8DOhj+em
+         mAGBFUNfuN8BUsoZaH8lwyDa3ctJ+ZPoDlE1AS84NPHG9v8JFx2MshAHf8U7c91OZV1h
+         uI+p6N5SYeI+3cdTFSxA3SBu5XdLvjTMsPzLVzkwcgWsfIU6z8BbTbQLHOc/nfFvYpab
+         t2oMqKmfQm1LWQ4sK3D/GHmTsSnrVW9nkw1eKIfxNQKoX2yatA+MnXWvyYFT+Ys/eXCA
+         waPf5fOeFLq2wgOEW5oGNjt/c8jBUnh49i4iJNrVl+CBwG9y3NY62nOSQDc9bqRxRPGX
+         uiyQ==
+Received: by 10.180.86.163 with SMTP id q3mr383001wiz.12.1353051763228;
+        Thu, 15 Nov 2012 23:42:43 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.104.165 with SMTP id gf5ls345021wib.42.canary; Thu, 15 Nov
+ 2012 23:42:42 -0800 (PST)
+Received: by 10.14.213.135 with SMTP id a7mr4742661eep.2.1353051762308;
+        Thu, 15 Nov 2012 23:42:42 -0800 (PST)
+Received: by 10.14.213.135 with SMTP id a7mr4742660eep.2.1353051762299;
+        Thu, 15 Nov 2012 23:42:42 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id u8si204933een.1.2012.11.15.23.42.42
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 15 Nov 2012 23:42:42 -0800 (PST)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id D619863A636;
+	Fri, 16 Nov 2012 08:42:41 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ATuBVFAetxET; Fri, 16 Nov 2012 08:42:36 +0100 (CET)
+Received: from [10.2.213.207] (pat-address.sciences-po.fr [193.54.67.93])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DAF2A63A622;
+	Fri, 16 Nov 2012 08:42:35 +0100 (CET)
+Message-ID: <1353051754.28322.69.camel@synclavier.lan>
+Subject: [tosdr:1098] Re: [bad] Re: [Good] Facebook sollicited public feedback
+ before launching new ToS
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Fri, 16 Nov 2012 08:42:34 +0100
+In-Reply-To: <1339425105.3829.19.camel@synclavier.lan>
+References: <1339258799.4321.3.camel@synclavier.lan>
+	 <1339411906.4004.5.camel@synclavier.lan>
+	 <1339424583.3829.16.camel@synclavier.lan>
+	 <1339425105.3829.19.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.4-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le vendredi 16 novembre 2012 =E0 08:29 +0800, Michiel de Jong a =E9crit :
+On Fri, Nov 16, 2012 at 2:34 AM, Hugo Roy <hugo@fsfe.org> wrote:
+> > Facebook's is consultative
+>=20
+> also, iirc they say they will ignore any outcome of the consultation
+> unless several hundred million people propose the same thing at the
+> same time. which means Facebook's consultation is basically a puppet
+> show. is there any example of a clause in the Facebook terms that was
+> drafted by someone who is not a Facebook employee?
+>=20
+> i find it quite insulting if they ask for our opinion and then ignore
+> what we say, so imho they should actually get negative points for
+> taking the mickey like that, unless there is some evidence that the
+> whole thing they did was more than a farce.
+>=20
+>=20
+That's pretty extreme. If you compare services where there's absolutely
+no feedback organised, to Facebook's or Wikipedia's terms which makes it
+a requirement to organise the feedback (and in facebook's case, it can
+be binding if a certain ratio is obtained): then there's absolutely no
+reason to give that negative points.
+
+Consultation is better than no feedback at all. There's no reason to put
+evil intentions behind each of facebook's action. (btw, please reply to
+the appropriate thread).
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

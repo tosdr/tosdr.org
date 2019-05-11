@@ -1,0 +1,561 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.193 with SMTP id 62csp1838192ior;
+        Tue, 19 Apr 2016 02:46:00 -0700 (PDT)
+X-Received: by 10.31.169.87 with SMTP id s84mr982843vke.157.1461059160102;
+        Tue, 19 Apr 2016 02:46:00 -0700 (PDT)
+Return-Path: <tosdr+bncBCQKFRHT5AOBBUX4264AKGQEFW6JCFQ@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id g2si14933619uag.21.2016.04.19.02.45.59
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 19 Apr 2016 02:46:00 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCQKFRHT5AOBBUX4264AKGQEFW6JCFQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCQKFRHT5AOBBUX4264AKGQEFW6JCFQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBCQKFRHT5AOBBUX4264AKGQEFW6JCFQ@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 17256FB8D0
+	for <michiel@unhosted.org>; Tue, 19 Apr 2016 11:45:58 +0200 (CEST)
+Received: from mfilter42-d.gandi.net (mfilter42-d.gandi.net [217.70.178.172])
+	by spool.mail.gandi.net (Postfix) with ESMTP id D9ACC178083
+	for <michiel@unhosted.org>; Tue, 19 Apr 2016 11:45:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter42-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter42-d.gandi.net (mfilter42-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 0POGOevdVGO4 for <michiel@unhosted.org>;
+	Tue, 19 Apr 2016 11:45:56 +0200 (CEST)
+Received: from mail-io0-x23a.google.com (mail-io0-x23a.google.com [IPv6:2607:f8b0:4001:c06::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6872C1780A8
+	for <michiel@michielbdejong.com>; Tue, 19 Apr 2016 11:45:56 +0200 (CEST)
+Received: by mail-io0-x23a.google.com with SMTP id v3sf3736326ioe.0
+        for <michiel@michielbdejong.com>; Tue, 19 Apr 2016 02:45:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:from:to:subject:date:message-id:mime-version:thread-index
+         :content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=IZ+flMcHchTYqXKSPcmnI1MdS3M5AG6lG5RYUdAdRHA=;
+        b=JaVMBIODtaiH/n3jbtA79UvUUJumQV63K6Ng7AVrjVFUlZleURvfyRL8lx2DV1Ks2B
+         R0aU1/jw2xHsU3GREhrOMVIf5QNxOh0m4RaG0vcpgM4oSeYFG/+U0uB6HqtNNn28QPuk
+         /4hOAvKdvQhMPZGIA8cEYH+KCDmdMWRdJMLv0Pn/jec9g7slnE5Vsiqaz+Q4D7IIPQD9
+         W9UXYHXPVDZejY01Drm6ElMOqkJmrKsFMrGVYq/mXdZfLC0W8WIi9wXJsi05v+qLF1qO
+         zBWrwDmr8LuJl84UU67oEPlGicvBWoEk7+97A5sNRe6V6EG3hoYpgnTeCBNIVBAaRsBV
+         so8w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=from:to:subject:date:message-id:mime-version:thread-index
+         :content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=IZ+flMcHchTYqXKSPcmnI1MdS3M5AG6lG5RYUdAdRHA=;
+        b=imAi2BGyiEH7MM9JKZMp7JyW7r1ngpURtkdADhGlexPWHvAqvw9mpJKqnQabGsp3Bf
+         vos9lJwNaSOCYHKopEqtdUsv0GgxK7avbp1QdX8TdRzgShrpkmHXDZ+BQbwoZLoComKj
+         qsYtlTzVslGy5tMy+KIh7qAfam+JKrmgdLLugjOeNQAyWGvvhlGXPuWtajS8HLr3lb+Q
+         scvZbRFARbHThuH7agHZXkhHNINC+1WP+R3yku0Mudvlo2aKdyQ/VzLLfIAoh/p+EnS+
+         I47cbyOvk+o3TvgRClXunn/8dsmYVfL+TfDIbuutMbebcPuOFpp5+wT3DR8wnlJe7EMr
+         0CRw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:from:to:subject:date:message-id
+         :mime-version:thread-index:content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=IZ+flMcHchTYqXKSPcmnI1MdS3M5AG6lG5RYUdAdRHA=;
+        b=JcZOL/MLrQkVoB1pV26gCcdstx9nFvpSlK1YMe+jBZfxDhIMzaPS/+5Sa40KYpwCLG
+         46p00APPBERCfvmtc2GYig3zIZqiiMu4JI4faKze8xHGr1Pe0gWM/glRCMO/tsNEeqA1
+         UMnImZNfFZyakOjkZOsW1SypDf9sij3qAKfPOLbfgGT4N3vzmLCdiH/ScgGGgRw9L5zw
+         BDBrDNR/NgGndzFdPlsQJOmytGpcZ9d0FJvsn/Ov/eFF1+VZ3lHN1CrfInIkaRJTXMjN
+         k7lRgrBDsMBBoYGiHStdq5PrSPYb9p98S1zUnN6fowPPuCKHJsucXnf0rcm+qLomJsZE
+         W8VA==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FUFf9VMMtr65UUT+0ORU49XGRt8qsfIaKVnRENbnJgfsyFWY4eVMnLaoSyLaLJiwQ==
+X-Received: by 10.182.88.129 with SMTP id bg1mr10233obb.3.1461059155033;
+        Tue, 19 Apr 2016 02:45:55 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.125.199 with SMTP id ms7ls611834obb.65.gmail; Tue, 19 Apr
+ 2016 02:45:54 -0700 (PDT)
+X-Received: by 10.182.101.163 with SMTP id fh3mr1164474obb.18.1461059154305;
+        Tue, 19 Apr 2016 02:45:54 -0700 (PDT)
+Received: from mail-pa0-x241.google.com (mail-pa0-x241.google.com. [2607:f8b0:400e:c03::241])
+        by gmr-mx.google.com with ESMTPS id ph3si6110602pac.1.2016.04.19.02.45.54
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 19 Apr 2016 02:45:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pratapnegi120@gmail.com designates 2607:f8b0:400e:c03::241 as permitted sender) client-ip=2607:f8b0:400e:c03::241;
+Received: by mail-pa0-x241.google.com with SMTP id vv3so1286334pab.0
+        for <tosdr@googlegroups.com>; Tue, 19 Apr 2016 02:45:54 -0700 (PDT)
+X-Received: by 10.66.66.10 with SMTP id b10mr2730387pat.12.1461059154001;
+        Tue, 19 Apr 2016 02:45:54 -0700 (PDT)
+Received: from InitionTechnolo ([103.55.61.153])
+        by smtp.gmail.com with ESMTPSA id q4sm89499805pfi.94.2016.04.19.02.45.51
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 19 Apr 2016 02:45:52 -0700 (PDT)
+From: "Pratap Negi" <pratapnegi120@gmail.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:3829] Web Development,  Designing  And   Mobile Application
+Date: Tue, 19 Apr 2016 15:12:15 +0530
+Message-ID: <088001d19a20$4457f0e0$cd07d2a0$@com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0881_01D19A4E.5E102CE0"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AdGaH33cko/voN9cTTydV4OPJ2OvPw==
+Content-Language: en-us
+X-Original-Sender: pratapnegi120@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@gmail.com;       spf=pass (google.com: domain of
+ pratapnegi120@gmail.com designates 2607:f8b0:400e:c03::241 as permitted
+ sender) smtp.mailfrom=pratapnegi120@gmail.com;       dmarc=pass (p=NONE
+ dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0881_01D19A4E.5E102CE0
+Content-Type: text/plain; charset=UTF-8
+
+Hello Sir/Madam,
+
+Greeting of the day.
+
+We are India based IT Service providing firm having expertness in following
+areas:
+
+a)      Website Development:  
+
+a)      ECommerce development (Magento, Opencart and standalone application
+in .Net framework)
+
+b)      CMS development. (Using Wordpress and Microsoft Technology).
+
+c)       ERP development.
+
+b)      Website Designing:
+
+a)      Device responsive designing.
+
+b)      SPA (Single Page Application) using AngularJs.
+
+c)    Mobile Application Development:
+
+a)      Android Application (API creation included).
+
+b)      Windows phone application development.
+
+d)    Online Marketing:
+
+a)      Search engine optimization
+
+b)      Social Media Optimization
+
+c)       Bad  review downgrading
+
+d)      Pay Per Click
+
+If you have requirement of any above mentioned services then we can assist
+you to achieve your target in reasonable prices
+
+We are eagerly waiting for your reply.
+
+Best Regards,
+
+Pratap Negi
+
+Note: - If this is something you are interested, please respond to this
+email. If this is not your interest, don't worry, we will not email you
+again.
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/088001d19a20%244457f0e0%24cd07d2a0%24%40com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_NextPart_000_0881_01D19A4E.5E102CE0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><META HTTP-EQUIV=3D"Content-Type" CONTENT=
+=3D"text/html; charset=3Dus-ascii"><meta name=3DGenerator content=3D"Micros=
+oft Word 12 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
+raphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
+agraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
+phCxSpLast
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:32199540;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1838127104 67698711 67698713 67698715 67698703 6769=
+8713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:46227618;
+	mso-list-template-ids:67698717;}
+@list l1:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-text:"\(%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:224754782;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-959016276 67698711 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1062631936;
+	mso-list-template-ids:549354984;}
+@list l3:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1649363222;
+	mso-list-type:hybrid;
+	mso-list-template-ids:410131798 67698711 67698713 67698715 67698703 676987=
+13 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-US link=3Dblue vli=
+nk=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal>Hello Sir/Madam,=
+</p><p class=3DMsoNormal>Greeting of the day.</p><p class=3DMsoNormal>We ar=
+e India based IT Service providing firm having expertness in following area=
+s:</p><p class=3DMsoListParagraphCxSpFirst style=3D'margin-left:.25in;text-=
+indent:-.25in;mso-list:l3 level1 lfo1'><![if !supportLists]><b><span style=
+=3D'mso-list:Ignore'>a)<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><![endif]><b>Website Development:=
+&nbsp; <o:p></o:p></b></p><p class=3DMsoListParagraphCxSpMiddle style=3D'te=
+xt-indent:-.25in;mso-list:l1 level2 lfo2'><![if !supportLists]><span style=
+=3D'mso-list:Ignore'>a)<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>ECommerce development (Mage=
+nto, Opencart and standalone application in .Net framework)</p><p class=3DM=
+soListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:l1 level2 lf=
+o2'><![if !supportLists]><span style=3D'mso-list:Ignore'>b)<span style=3D'f=
+ont:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><=
+![endif]>CMS development. (Using Wordpress and Microsoft Technology).</p><p=
+ class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:l1=
+ level2 lfo2'><![if !supportLists]><span style=3D'mso-list:Ignore'>c)<span =
+style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+ </span></span><![endif]>ERP development.</p><p class=3DMsoListParagraphCxS=
+pMiddle style=3D'margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lf=
+o1'><![if !supportLists]><b><span style=3D'mso-list:Ignore'>b)<span style=
+=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></s=
+pan></b><![endif]><b>Website Designing:<o:p></o:p></b></p><p class=3DMsoLis=
+tParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:l4 level1 lfo3'><=
+![if !supportLists]><span style=3D'mso-list:Ignore'>a)<span style=3D'font:7=
+.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![end=
+if]>Device responsive designing.</p><p class=3DMsoListParagraphCxSpLast sty=
+le=3D'text-indent:-.25in;mso-list:l4 level1 lfo3'><![if !supportLists]><spa=
+n style=3D'mso-list:Ignore'>b)<span style=3D'font:7.0pt "Times New Roman"'>=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>SPA (Single Page App=
+lication) using AngularJs.</p><p class=3DMsoNormal>c)&nbsp;&nbsp;&nbsp; <b>=
+Mobile Application Development:</b></p><p class=3DMsoListParagraphCxSpFirst=
+ style=3D'text-indent:-.25in;mso-list:l0 level1 lfo4'><![if !supportLists]>=
+<span style=3D'mso-list:Ignore'>a)<span style=3D'font:7.0pt "Times New Roma=
+n"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Android Applicat=
+ion (API creation included).</p><p class=3DMsoListParagraphCxSpLast style=
+=3D'text-indent:-.25in;mso-list:l0 level1 lfo4'><![if !supportLists]><span =
+style=3D'mso-list:Ignore'>b)<span style=3D'font:7.0pt "Times New Roman"'>&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Windows phone applicat=
+ion development.</p><p class=3DMsoNormal>d)&nbsp;&nbsp;&nbsp; <b>Online Mar=
+keting:</b></p><p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-.=
+25in;mso-list:l2 level1 lfo5'><![if !supportLists]><span style=3D'mso-list:=
+Ignore'>a)<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp; </span></span><![endif]>Search engine optimization</p><p class=
+=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:l2 level=
+1 lfo5'><![if !supportLists]><span style=3D'mso-list:Ignore'>b)<span style=
+=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></s=
+pan><![endif]>Social Media Optimization</p><p class=3DMsoListParagraphCxSpM=
+iddle style=3D'text-indent:-.25in;mso-list:l2 level1 lfo5'><![if !supportLi=
+sts]><span style=3D'mso-list:Ignore'>c)<span style=3D'font:7.0pt "Times New=
+ Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Bad&n=
+bsp; review downgrading</p><p class=3DMsoListParagraphCxSpLast style=3D'tex=
+t-indent:-.25in;mso-list:l2 level1 lfo5'><![if !supportLists]><span style=
+=3D'mso-list:Ignore'>d)<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Pay Per Click</p><p class=
+=3DMsoNormal>If you have requirement of any above mentioned services then w=
+e can assist you to achieve your target in reasonable prices</p><p class=3D=
+MsoNormal>We are eagerly waiting for your reply.</p><p class=3DMsoNormal><b=
+>Best Regards,<o:p></o:p></b></p><p class=3DMsoNormal>Pratap Negi</p><p cla=
+ss=3DMsoNormal><span style=3D'font-size:10.0pt;line-height:115%;color:#A6A6=
+A6'>Note: - If this is something you are interested, please respond to this=
+ email. If this is not your interest, don't worry, we will not email you ag=
+ain.<o:p></o:p></span></p></div></body></html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/088001d19a20%244457f0e0%24cd07d2a0%24%40com?utm_medium=3De=
+mail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tosdr/088001d19=
+a20%244457f0e0%24cd07d2a0%24%40com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_NextPart_000_0881_01D19A4E.5E102CE0--
+

@@ -1,0 +1,127 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB3HLTOQQKGQERJVHCYY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2614340910
+	for <anything@michielbdejong.com>; Sat, 27 Sep 2014 19:37:51 +0200 (CEST)
+Received: from mfilter32-d.gandi.net (mfilter32-d.gandi.net [217.70.178.163])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 231D7116025
+	for <anything@michielbdejong.com>; Sat, 27 Sep 2014 19:37:51 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter32-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter32-d.gandi.net (mfilter32-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id stRIU9ErdFH7 for <anything@michielbdejong.com>;
+	Sat, 27 Sep 2014 19:37:49 +0200 (CEST)
+Received: from mail-wg0-x239.google.com (mail-wg0-x239.google.com [IPv6:2a00:1450:400c:c00::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id BE03F116059
+	for <anything@michielbdejong.com>; Sat, 27 Sep 2014 19:37:49 +0200 (CEST)
+Received: by mail-wg0-f57.google.com with SMTP id y10sf1012744wgg.2
+        for <anything@michielbdejong.com>; Sat, 27 Sep 2014 10:37:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:mime-version
+         :content-type:content-disposition:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=q8Iit4M81OoBoldWVLJtCxSIK2VmQF9XunXq7VakHVk=;
+        b=bcCPvIHlEcPXPJEFudaqL7xaUk+y+/3B+Ih9qo+v2GzIUmBbA+SF6aIgye3dUOA+P4
+         J+pnOmAe/Efdyp0/1tQpixM6wDqrInOJj0ktmfvBbKcbrAifxqKoDt8JKBg8+vCjTtkS
+         rvdRqASVLiSxHQb9/1ZV0TRWdw7fqYI+3PUJ2FcJnYp9vts0kxVLRZXABKniV86Ix04N
+         2eSEVItV/Uyb9yjQm3m4iw5TiADgq1sLJiwkUkpieJ1t9EbJWl2/AtHVunSE7p1vpdlJ
+         Qp1xWHRduQ5vc+dexoBI4B6RRKEIkPbx3vBYLbOQk67iFnY7cK5sAXK1ej+xCJOcDqnd
+         ttSw==
+X-Received: by 10.152.28.66 with SMTP id z2mr583944lag.3.1411839469591;
+        Sat, 27 Sep 2014 10:37:49 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.5.226 with SMTP id v2ls504383lav.50.gmail; Sat, 27 Sep
+ 2014 10:37:48 -0700 (PDT)
+X-Received: by 10.112.139.231 with SMTP id rb7mr128862lbb.14.1411839468303;
+        Sat, 27 Sep 2014 10:37:48 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id j12si318458wie.2.2014.09.27.10.37.48
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 27 Sep 2014 10:37:48 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id C00B563ABB1
+	for <tosdr@googlegroups.com>; Sat, 27 Sep 2014 19:37:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id uEMxIFtW0uOL for <tosdr@googlegroups.com>;
+	Sat, 27 Sep 2014 19:37:45 +0200 (CEST)
+Received: from localhost (p4FE2BE84.dip0.t-ipconnect.de [79.226.190.132])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 0269363A681
+	for <tosdr@googlegroups.com>; Sat, 27 Sep 2014 19:37:44 +0200 (CEST)
+Date: Sat, 27 Sep 2014 19:37:42 +0200
+From: hugo@tosdr.org
+To: tosdr@googlegroups.com
+Subject: [tosdr:3246] Please help us improve the submission process to ToS;DR :-)
+Message-ID: <20140927173742.GA26590@xps.fritz.box>
+Mail-Followup-To: tosdr@googlegroups.com
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="9jxsPFA5p3P2qPhR"
+Content-Disposition: inline
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--9jxsPFA5p3P2qPhR
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Good news everyone!
+
+Michiel, vincent and I have been working hard  the last couple of
+days, as you can see at https://github.com/tosdr/
+
+As you know, submitting reviews to our project has been slow. We
+are finally beginning to fix this.
+
+So please help us! You shuold be able to submit data points to
+ToS;DR through the web form:
+
+https://tosdr.org/submit-point.html
+
+More coming =F0=9F=98=89
+
+Stay tuned at http://blog.tosdr.org!=20
+
+
+
+--9jxsPFA5p3P2qPhR
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUJvXmAAoJEI0CLJmz17eV8ZcH/ihCSESEy8RBt9G3SOneTaaI
+0X3AbavPlOmTNhAokmzVi/wrETiCGrdxD0NQ/o5jf90mnOL72gobUXEybobRRxoS
+RZhrfJ2aRORxRdx0swX7a6ufe+zpy5mJU41+PrHx1m3IC3bcl7HbtiP2vgAT01do
+QrHAUzglWRqrG5vOjJqUpndVlEWXSrpXcpc/cYtA4zNCH07l1Io7XIm/fWewZBrW
+JtjMzmw717nuVPPisTMBdCK2SMNPiSTJAIy6lLY51e1E2vt4nT0j775tyrvaxr/e
+b8CQUuWsB9to+6dLcO425zIdiCkKshCeX8Xpax1yjvfWKXkj/npsJb2tTNuVAUk=
+=ulfk
+-----END PGP SIGNATURE-----
+
+--9jxsPFA5p3P2qPhR--

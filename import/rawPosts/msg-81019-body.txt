@@ -1,0 +1,215 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp177166wfj;
+        Fri, 13 Jul 2012 20:45:40 -0700 (PDT)
+Received: by 10.229.115.12 with SMTP id g12mr1938942qcq.58.1342237540012;
+        Fri, 13 Jul 2012 20:45:40 -0700 (PDT)
+Return-Path: <tosdr+bncCN_a2dSjBhDi1oOABRoEtbwL_w@googlegroups.com>
+Received: from mail-qa0-f63.google.com (mail-qa0-f63.google.com [209.85.216.63])
+        by mx.google.com with ESMTPS id r8si4040277qct.63.2012.07.13.20.45.38
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 13 Jul 2012 20:45:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCN_a2dSjBhDi1oOABRoEtbwL_w@googlegroups.com designates 209.85.216.63 as permitted sender) client-ip=209.85.216.63;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCN_a2dSjBhDi1oOABRoEtbwL_w@googlegroups.com designates 209.85.216.63 as permitted sender) smtp.mail=tosdr+bncCN_a2dSjBhDi1oOABRoEtbwL_w@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qatk31 with SMTP id k31sf1386254qat.8
+        for <multiple recipients>; Fri, 13 Jul 2012 20:45:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=gR+Bav7FDcNQ/a6IFPVJyP8Ohy4f495YeKKuzGt4Bpg=;
+        b=j8OJ828ysAmRdnn7E0SCbRZlZpb+u7QLP5FFmOh/wiaUz9c0Pk1MayGYTixHi0WQFw
+         eZbIf/81Z70h4I6ZxyDwm9PdU9VIHVBmnHPjJbv4roifcHMFm0m/nSms82NS0g7aqRq4
+         BysLv6OHW3wNQDIIO4wQLXaBhFthtb5bm9uuk=
+Received: by 10.52.66.44 with SMTP id c12mr370206vdt.19.1342237538454;
+        Fri, 13 Jul 2012 20:45:38 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.220.230.193 with SMTP id jn1ls2136526vcb.8.gmail; Fri, 13 Jul
+ 2012 20:45:38 -0700 (PDT)
+Received: by 10.52.97.102 with SMTP id dz6mr369795vdb.2.1342237537750;
+        Fri, 13 Jul 2012 20:45:37 -0700 (PDT)
+Date: Fri, 13 Jul 2012 20:45:37 -0700 (PDT)
+From: Matt Snyder <matt@x2xroads.com>
+To: tosdr@googlegroups.com
+Message-Id: <a9430c53-6700-47b3-b86a-08fbc229d703@googlegroups.com>
+In-Reply-To: <1342201227.4258.23.camel@synclavier.lan>
+References: <1342201227.4258.23.camel@synclavier.lan>
+Subject: Re: Youluh, focusing on EULAs
+MIME-Version: 1.0
+X-Original-Sender: matt@x2xroads.com
+X-Original-Authentication-Results: ls.google.com; spf=pass (google.com: domain of
+ matt@x2xroads.com designates internal as permitted sender)
+ smtp.mail=matt@x2xroads.com; dkim=pass
+ header.i=@x2xroads.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_505_20006419.1342237537097"
+
+------=_Part_505_20006419.1342237537097
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Hugo, thanks for finding Youluh, I'm working on it, and I can tell you 
+it's not operational yet.  We're building a prototype that we can use for a 
+Kickstarter campaign or similar crowd funding.  Because of the way the 
+service will record every agreement uploaded to it in each user's private 
+library, the initial server capacity is budgeted very high, so we'll have a 
+large startup cost.
+
+The patent protection is primarily a hedge, the real plan is to release the 
+code under the GPL, which has a clause which automatically grants a patent 
+license to anyone using the code.  If the funding is successful, then we'll 
+also donate the patent to Open Invention Network<http://www.openinventionnetwork.com/>
+.
+
+The way we attack the "didn't read" part of the problem is this: first we 
+give the user a very easy way to upload a license prior to accepting it, 
+typically an app or an extension that interacts with the clipboard to get 
+the text of the license and send it to the user's private document 
+repository on our service.  The document repository does let users read 
+their license agreements later, if they want, but the real advantage is 
+that we break the license down into clauses and find similar clauses across 
+all the uploaded licenses, and return a report card of statistics to the 
+user.  This way the user knows at a glance, prior to clicking "accept," 
+whether there's anything *uncommon* in the license.
+
+That's the basic benefit of the service, and it isn't great in terms of 
+really informing the user what he's agreeing to.  But it's quick enough 
+that typical users can interact with the service almost as fast as clicking 
+"accept," and it's slightly better than clicking without reading at all. 
+ And the service will also allows users to comment on clauses, so the 
+report card will indicate whether there are comments to read about any of 
+the clauses in the license.  In theory, we can include expert commentary in 
+addition to average user commentary.  Negative comments, especially from 
+experts, will produce a flag on the report card that will hopefully slow 
+the user down and induce them to read the comment, and then maybe even the 
+clause.
+
+On Friday, July 13, 2012 12:40:27 PM UTC-5, Hugo Roy wrote:
+>
+> Hi everyone, 
+>
+> I just discovered another project http://www.x2xroads.com/ which seems 
+> to focus on EULAs. I am not how it works though. They seem to have a 
+> system of "report cards" which allows people to make copies of EULAs so 
+> they can read them afterwards. 
+>
+> They seem to be more focused on developing tools, IA and semantic 
+> analysis, see http://www.x2xroads.com/behind-the-scenes 
+>
+> Apart from saying that they filed a patent (no joke, it's written at 
+> least twice on the main pages) and that the development "will" be open 
+> source, I have no idea whether it actually works already. 
+>
+> If anyone has additional elements about this project, you are welcome to 
+> share them! 
+>
+> Best, 
+> Hugo 
+> -- 
+> Hugo Roy 
+>   French Coordinator, FSFE       
+>
+>
+
+-- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To view this discussion on the web visit https://groups.google.com/d/msg/tosdr/-/lQIbq6LvZ34J.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+
+
+------=_Part_505_20006419.1342237537097
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Hugo, thanks for finding Youluh, I'm working on it, and I can tell you i=
+t's not operational yet. &nbsp;We're building a prototype that we can use f=
+or a Kickstarter campaign or similar crowd funding. &nbsp;Because of the wa=
+y the service will record every agreement uploaded to it in each user's pri=
+vate library, the initial server capacity is budgeted very high, so we'll h=
+ave a large startup cost.<div><br></div><div>The patent protection is prima=
+rily a hedge, the real plan is to release the code under the GPL, which has=
+ a clause which automatically grants a patent license to anyone using the c=
+ode. &nbsp;If the funding is successful, then we'll also donate the patent =
+to <a href=3D"http://www.openinventionnetwork.com/">Open Invention Network<=
+/a>.</div><div><br></div><div>The way we attack the "didn't read" part of t=
+he problem is this: first we give the user a very easy way to upload a lice=
+nse prior to accepting it, typically an app or an extension that interacts =
+with the clipboard to get the text of the license and send it to the user's=
+ private document repository on our service. &nbsp;The document repository =
+does let users read their license agreements later, if they want, but the r=
+eal advantage is that we break the license down into clauses and find simil=
+ar clauses across all the uploaded licenses, and return a report card of st=
+atistics to the user. &nbsp;This way the user knows at a glance, prior to c=
+licking "accept," whether there's anything <i>uncommon</i> in the license.<=
+/div><div><br></div><div>That's the basic benefit of the service, and it is=
+n't great in terms of really informing the user what he's agreeing to. &nbs=
+p;But it's quick enough that typical users can interact with the service al=
+most as fast as clicking "accept," and it's slightly better than clicking w=
+ithout reading at all. &nbsp;And the service will also allows users to comm=
+ent on clauses, so the report card will indicate whether there are comments=
+ to read about any of the clauses in the license. &nbsp;In theory, we can i=
+nclude expert commentary in addition to average user commentary. &nbsp;Nega=
+tive comments, especially from experts, will produce a flag on the report c=
+ard that will hopefully slow the user down and induce them to read the comm=
+ent, and then maybe even the clause.<br><br>On Friday, July 13, 2012 12:40:=
+27 PM UTC-5, Hugo Roy wrote:<blockquote class=3D"gmail_quote" style=3D"marg=
+in: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">Hi=
+ everyone,
+<br>
+<br>I just discovered another project <a href=3D"http://www.x2xroads.com/" =
+target=3D"_blank">http://www.x2xroads.com/</a> which seems
+<br>to focus on EULAs. I am not how it works though. They seem to have a
+<br>system of "report cards" which allows people to make copies of EULAs so
+<br>they can read them afterwards.
+<br>
+<br>They seem to be more focused on developing tools, IA and semantic
+<br>analysis, see <a href=3D"http://www.x2xroads.com/behind-the-scenes" tar=
+get=3D"_blank">http://www.x2xroads.com/<wbr>behind-the-scenes</a>
+<br>
+<br>Apart from saying that they filed a patent (no joke, it's written at
+<br>least twice on the main pages) and that the development "will" be open
+<br>source, I have no idea whether it actually works already.
+<br>
+<br>If anyone has additional elements about this project, you are welcome t=
+o
+<br>share them!
+<br>
+<br>Best,
+<br>Hugo
+<br>--=20
+<br>Hugo Roy=20
+<br>&nbsp; French Coordinator, FSFE &nbsp; &nbsp; &nbsp;&nbsp;<br>
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msg/tosdr/-/lQIbq6LvZ34J">https://groups.google.com/d/msg/tosdr/-/lQIb=
+q6LvZ34J</a>.<br />=20
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.<br />
+
+
+
+------=_Part_505_20006419.1342237537097--

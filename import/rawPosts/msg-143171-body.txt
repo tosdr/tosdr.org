@@ -1,0 +1,271 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp249084ioi;
+        Sat, 23 Apr 2016 18:40:31 -0700 (PDT)
+X-Received: by 10.66.118.106 with SMTP id kl10mr38611715pab.78.1461462031708;
+        Sat, 23 Apr 2016 18:40:31 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBCGI6C4AKGQET6TF2LI@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [2001:4b98:c:538::198])
+        by mx.google.com with ESMTPS id y7si17727842pav.225.2016.04.23.18.40.30
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 18:40:31 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBCGI6C4AKGQET6TF2LI@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) client-ip=2001:4b98:c:538::198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBCGI6C4AKGQET6TF2LI@googlegroups.com does not designate 2001:4b98:c:538::198 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBCGI6C4AKGQET6TF2LI@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 78D1EFB883
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 03:40:28 +0200 (CEST)
+Received: from mfilter27-d.gandi.net (mfilter27-d.gandi.net [217.70.178.155])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 64965116151
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 03:40:28 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter27-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter27-d.gandi.net (mfilter27-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id B9Ljn7aMO4rB for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 03:40:26 +0200 (CEST)
+Received: from mail-pf0-x23e.google.com (mail-pf0-x23e.google.com [IPv6:2607:f8b0:400e:c00::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 01B8411614F
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 03:40:25 +0200 (CEST)
+Received: by mail-pf0-x23e.google.com with SMTP id g132sf19463726pfb.0
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 18:40:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=7LiRoqR5Bk0A/M5EZnOqGG1mgJ7u9M5bG6e5mxA4R2I=;
+        b=B2vUWQYIoFic6zhxvnxooD3J0eqDbQ36IxaNV01E/l8rWxR6laexjxYq75J+AzIfOy
+         Hb6NaOo5zT0yJj9r/J/JRSf0KFajm3E0DMvVxNH7Cte2Vd0XEBlx8/FAjaoHOi/QHnDo
+         gGC7ZVD4NgL6IOH72HMwM7yDYck+UX3QaKt4UcEYVeCZ8eGzM5AKPir4Gjn2vKRjNsis
+         KyE7e4BkRIdHnfdvVQr2C8t6I21unQNk8XIelG/CDKjSguZ8OiMGDr9NPA4EGbJOHfQS
+         NOajWJm6winYXP2IQYiOTNZH/taY3YmbljsVfLAqMTusF1gAYdcycyOuqJLMi1Vej3Eo
+         PJIA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=7LiRoqR5Bk0A/M5EZnOqGG1mgJ7u9M5bG6e5mxA4R2I=;
+        b=t1DMBefRAn3/OjHiWcFgo9Vy7m08BH2i8jU4F69C44CX7W1Y1jlr6M+sjW0ybYIeJS
+         qJsv3aQWcTZ3N0AZihpp67Hb374fIf9HHJSPTC0VGw8WvLEUlTkq+WB4iUn8T4uk3GG8
+         bsj7GRkTvajgHxNJrYYuw3tH9hvod7ta7CvE5GXsc+yIGEwiTXh1ZMVmt2A2aD3nFNn5
+         013oANbzKj+5OcfTvaWpLSs8hyP9U/0enhNmtrL1YCMmpSQhMK8PY5+40jJBzwNJZqpO
+         TKKL0MQReWQnQoG7+5zXhGv/HbLAEVsNa+avBPhaE6BCVoBcl/8CUmS+TryreE0uCPMN
+         m01w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=7LiRoqR5Bk0A/M5EZnOqGG1mgJ7u9M5bG6e5mxA4R2I=;
+        b=OSPsyzHCR3crDl0yVjccsUlAfIkZRHMwopPg1pSRSxZHagV+0BAsZ//oPxaxCt36rA
+         VQMcJ/FAjpO0A7PhkOID0W3R9cej7oLQy7uJluWN3S005dX4+qABfAlOz3zkF2P2MOwf
+         rZPejIUYPKP8UkDur1WBJZBhlVPaycIp4YZY6khP1KzbmO5ygJ/ph9yL8kPmT1SPQZnt
+         2oYhOFnZ/exmcfxYo7sMPcQMVL729O/kwre2hlwIMQ1oLkZ8GQ6pJ9p/X1jr4IoUd2Ck
+         qZ8UypEUnYVDW9Uo7wx/z4hsAC+fN4vzp1ETzrcDp587CsMlq8MxociNqm4FzgEW1B1V
+         ahOA==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FVhKgQlcfEitzSVcsAHYvPwkvyo3fYKKUl4Xv3eBfDh6SnICtglsvz/nk5G0WRsNg==
+X-Received: by 10.182.245.113 with SMTP id xn17mr305533obc.1.1461462024859;
+        Sat, 23 Apr 2016 18:40:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.38.133 with SMTP id g5ls361721obk.43.gmail; Sat, 23 Apr
+ 2016 18:40:24 -0700 (PDT)
+X-Received: by 10.182.113.198 with SMTP id ja6mr305166obb.0.1461462024382;
+        Sat, 23 Apr 2016 18:40:24 -0700 (PDT)
+Date: Sat, 23 Apr 2016 18:40:23 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <80eac4ca-2cdd-4e2c-91a5-2933002be7ca@googlegroups.com>
+Subject: [tosdr:3850] [Good] Tinder Copyright Infringement Policy.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4152_800280508.1461462023807"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4152_800280508.1461462023807
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4153_753474893.1461462023807"
+
+------=_Part_4153_753474893.1461462023807
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+ https://www.gotinder.com/terms
+
+14=E2=80=A6 Notice and Procedure for Making Claims of Copyright Infringemen=
+t
+
+=E2=80=9C=E2=80=A6if you believe that your work has been copied and posted =
+on the Service=20
+in a way that constitutes copyright infringement, please provide our=20
+Copyright Agent with the following information:
+
+an electronic or physical signature of the person authorized to act on=20
+behalf of the owner of the copyright interest;
+
+a description of the copyrighted work that you claim has been infringed;
+
+=E2=80=A6
+
+Notice of claims of copyright infringement should be provided to the=20
+Company=E2=80=99s Copyright Agent at copyright@match.com or the following a=
+ddress:=20
+Copyright Agent=20
+c/o Tinder Legal=20
+P.O. Box 25458=20
+Dallas, Texas 75225.=20
+
+=20
+
+The Company will terminate the accounts of repeat infringers.=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/80eac4ca-2cdd-4e2c-91a5-2933002be7ca%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4153_753474893.1461462023807
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><font color=3D"#000000" face=3D"Times New Roman" size=3D"3=
+">
+
+</font><div style=3D"margin: 0in 0in 0pt;"><font color=3D"#0088cc" face=3D"=
+Calibri" size=3D"2"><span style=3D"color: rgb(52, 52, 52); font-family: &qu=
+ot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-font-family: Calibri; =
+mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-=
+language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><a=
+ href=3D"https://www.gotinder.com/terms">https://www.gotinder.com/terms</a>=
+</span></font></div><div style=3D"margin: 0in 0in 0pt;"><font color=3D"#000=
+000" face=3D"Calibri" size=3D"2"><br></font></div><div style=3D"margin: 0in=
+ 0in 0pt;"><font size=3D"2"><font color=3D"#000000" face=3D"Calibri">14=E2=
+=80=A6 </font><span style=3D"color: rgb(52, 52, 52); font-family: &quot;pro=
+xima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;">Notice and
+Procedure for Making Claims of Copyright Infringement</span></font></div><f=
+ont color=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><font size=3D"2"><font color=3D"#0=
+00000" face=3D"Calibri">=E2=80=9C=E2=80=A6</font><span style=3D"color: rgb(=
+52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-f=
+areast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Aria=
+l; mso-bidi-font-size: 11.0pt;">if you believe that your work has
+been copied and posted on the Service in a way that constitutes copyright
+infringement, please provide our Copyright Agent with the following
+information:</span></font></p><font color=3D"#000000" face=3D"Times New Rom=
+an" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span style=3D"color: rgb(52, 52, =
+52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-f=
+ont-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial; mso-b=
+idi-font-size: 11.0pt;"><font size=3D"2">an electronic or physical signatur=
+e
+of the person authorized to act on behalf of the owner of the copyright
+interest;</font></span></p><font color=3D"#000000" face=3D"Times New Roman"=
+ size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span style=3D"color: rgb(52, 52, =
+52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-f=
+ont-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial; mso-b=
+idi-font-size: 11.0pt;"><font size=3D"2">a description of the copyrighted w=
+ork
+that you claim has been infringed;</font></span></p><font color=3D"#000000"=
+ face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span style=3D"color: rgb(52, 52, =
+52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-fareast-f=
+ont-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial; mso-b=
+idi-font-size: 11.0pt;"><font size=3D"2">=E2=80=A6</font></span></p><font c=
+olor=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><font size=3D"2"><span style=3D"co=
+lor: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quo=
+t;; mso-bidi-font-family: Arial;">Notice of
+claims of copyright infringement should be provided to the Company=E2=80=99=
+s Copyright
+Agent at </span><span style=3D"color: rgb(52, 52, 52); font-family: &quot;p=
+roxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;"><a href=
+=3D"mailto:copyright@match.com"><font color=3D"#0088cc">copyright@match.com=
+</font></a></span><span style=3D"color: rgb(52, 52, 52); font-family: &quot=
+;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-family: Arial;">=C2=A0=
+or the following address: </span></font><span style=3D"color: rgb(52, 52, 5=
+2); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font-=
+family: Arial;"><br><font size=3D"2">
+Copyright Agent <br>
+c/o Tinder Legal <br>
+P.O. Box 25458 <br>
+Dallas, Texas 75225. </font></span></p><font color=3D"#000000" face=3D"Time=
+s New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span style=3D"color: rgb(52, 52, =
+52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;; mso-bidi-font=
+-family: Arial;"><font size=3D"2">=C2=A0</font></span></p><font color=3D"#0=
+00000" face=3D"Times New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><font size=3D"2"><span style=3D"co=
+lor: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quo=
+t;; mso-bidi-font-family: Arial;">The Company
+will terminate the accounts of repeat infringers.</span><span style=3D"colo=
+r: rgb(52, 52, 52); font-family: &quot;proxima-nova&quot;,&quot;serif&quot;=
+; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-famil=
+y: Arial; mso-bidi-font-size: 11.0pt;">=E2=80=9D</span></font></p><font col=
+or=3D"#000000" face=3D"Times New Roman" size=3D"3">
+
+</font></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/80eac4ca-2cdd-4e2c-91a5-2933002be7ca%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/80eac4ca-2cdd-4e2c-91a5-2933002be7ca%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4153_753474893.1461462023807--
+------=_Part_4152_800280508.1461462023807--

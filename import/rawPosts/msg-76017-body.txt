@@ -1,0 +1,124 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp152084wfj;
+        Sat, 16 Jun 2012 09:21:10 -0700 (PDT)
+Received: by 10.52.93.15 with SMTP id cq15mr674220vdb.21.1339863665928;
+        Sat, 16 Jun 2012 09:21:05 -0700 (PDT)
+Return-Path: <dejong.michiel+caf_=michiel=unhosted.org@gmail.com>
+Received: from mail-vc0-f174.google.com (mail-vc0-f174.google.com [209.85.220.174])
+        by mx.google.com with ESMTPS id nr20si2707238vcb.23.2012.06.16.09.21.05
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 16 Jun 2012 09:21:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dejong.michiel+caf_=michiel=unhosted.org@gmail.com designates 209.85.220.174 as permitted sender) client-ip=209.85.220.174;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of dejong.michiel+caf_=michiel=unhosted.org@gmail.com designates 209.85.220.174 as permitted sender) smtp.mail=dejong.michiel+caf_=michiel=unhosted.org@gmail.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbf11 with SMTP id f11so2401042vcb.5
+        for <michiel@unhosted.org>; Sat, 16 Jun 2012 09:21:05 -0700 (PDT)
+Received: by 10.220.149.15 with SMTP id r15mr5063447vcv.1.1339863665013;
+        Sat, 16 Jun 2012 09:21:05 -0700 (PDT)
+X-Forwarded-To: michiel@unhosted.org
+X-Forwarded-For: dejong.michiel@gmail.com michiel@unhosted.org
+Delivered-To: dejong.michiel@gmail.com
+Received: by 10.220.143.135 with SMTP id v7csp22259vcu;
+        Sat, 16 Jun 2012 09:21:04 -0700 (PDT)
+Return-Path: <unhosted+bncCLaC6cnkHRDv5PL-BBoErJjCJw@googlegroups.com>
+Received-SPF: pass (google.com: domain of unhosted+bncCLaC6cnkHRDv5PL-BBoErJjCJw@googlegroups.com designates 10.180.87.34 as permitted sender) client-ip=10.180.87.34;
+Received: from mr.google.com ([10.180.87.34])
+        by 10.180.87.34 with SMTP id u2mr1627wiz.1.1339863663730 (num_hops = 1);
+        Sat, 16 Jun 2012 09:21:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :cc:date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=UsnKshFRkOypDVQtxryWcI+0kLU2ltd/WiFF8swgOiw=;
+        b=ZwFzsjYvqdl5EhAyXNDP6UdqvvFM4rowWYBk7YAXLkt+VmuJbMkY78o6Q+JzWBJLTB
+         rQUHAU6/lw3VVW2LHQ1DH0ZpEjaVwhdRqDrAk97/qxuWSnb7HLU8RV24uVHRHnu5pmYl
+         YE1Z96LhwVyjr0P5EpfdIpbhU3Dna6S/vq5vE=
+Received: by 10.180.87.34 with SMTP id u2mr151wiz.1.1339863663560;
+        Sat, 16 Jun 2012 09:21:03 -0700 (PDT)
+X-BeenThere: unhosted@googlegroups.com
+Received: by 10.14.97.130 with SMTP id t2ls672855eef.5.gmail; Sat, 16 Jun 2012
+ 09:21:01 -0700 (PDT)
+Received: by 10.14.101.2 with SMTP id a2mr3185453eeg.6.1339863661816;
+        Sat, 16 Jun 2012 09:21:01 -0700 (PDT)
+Received: by 10.14.101.2 with SMTP id a2mr3185451eeg.6.1339863661789;
+        Sat, 16 Jun 2012 09:21:01 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id d52si11918672eei.1.2012.06.16.09.21.01
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 16 Jun 2012 09:21:01 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 36A1F63B4BD;
+	Sat, 16 Jun 2012 18:21:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id blLHgODfhcGV; Sat, 16 Jun 2012 18:20:59 +0200 (CEST)
+Received: from [192.168.44.127] (vpn7.hotsplots.net [46.20.42.90])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id C22A763A635;
+	Sat, 16 Jun 2012 18:20:58 +0200 (CEST)
+Message-ID: <1339863658.3506.22.camel@synclavier.lan>
+Subject: Re: [unhosted] first progress on http://tos-dr.info/
+From: Hugo Roy <hugo@fsfe.org>
+To: unhosted@googlegroups.com
+Cc: tosdr@googlegroups.com
+Date: Sat, 16 Jun 2012 18:20:58 +0200
+In-Reply-To: <CAChbWaN4Xxoe=r+znFkWrMn7cn0DMV19Oba8PeUBg9_jq-E6vA@mail.gmail.com>
+References: <1339608495.3829.98.camel@synclavier.lan>
+	 <CA+aD3u1B8T20xF_st+886NQ5_+7AeWBhY7zscDDaOB3CCeAi=w@mail.gmail.com>
+	 <CAJF45PSxJMhnJvjCm_RdnmqaxGd_cnwr06JQicE6whwO8Eiexw@mail.gmail.com>
+	 <CAChbWaN4Xxoe=r+znFkWrMn7cn0DMV19Oba8PeUBg9_jq-E6vA@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: unhosted@googlegroups.com
+Precedence: list
+Mailing-list: list unhosted@googlegroups.com; contact unhosted+owners@googlegroups.com
+List-ID: <unhosted.googlegroups.com>
+X-Google-Group-Id: 937394403095
+List-Post: <http://groups.google.com/group/unhosted/post?hl=en>, <mailto:unhosted@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:unhosted+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/unhosted?hl=en>
+Sender: unhosted@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/unhosted/subscribe?hl=en>, <mailto:unhosted+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/unhosted/subscribe?hl=en>, <mailto:googlegroups-manage+937394403095+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Le mercredi 13 juin 2012 à 18:56 -0500, Thad Guidry a écrit :
+> 
+> Here's one example:  Class A - How can "The Terms" of a service PAY ?
+>   Nothing is intended as a cost there.  Perhaps better to replace the
+> term "pay" with "use" or perhaps... 
+
+I'm obviously not a native English speaker, let alone a writer myself.
+So feel free to correct any weird expression and give git pull request.
+
+To "pay care" is probably not the right expression and comes from the
+French. In this context, it has nothing to do with money or cost. Please
+give the benefit of the doubt a bit more rather than framing it as
+malicious intent.
+
+> The terms of service is well worded for user readability, and also the
+> operator of the service follows best practices.
+
+Readability is only one of many aspects of what makes ToS good. What's
+important is transparency, fairness and adherence to community standards
+(aka "best practice"). Please help us translate that in good (aka
+Simple) English. Thanks
+-- 
+Hugo Roy 
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+

@@ -1,0 +1,119 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp27570qek;
+        Wed, 3 Oct 2012 10:54:26 -0700 (PDT)
+Received: by 10.68.232.70 with SMTP id tm6mr14785677pbc.104.1349286865958;
+        Wed, 03 Oct 2012 10:54:25 -0700 (PDT)
+Return-Path: <tosdr+bncBD4NN35CTIKBBUHXWGBQKGQEU3YQHSA@googlegroups.com>
+Received: from mail-pa0-f64.google.com (mail-pa0-f64.google.com [209.85.220.64])
+        by mx.google.com with ESMTPS id px6si9085102pbc.184.2012.10.03.10.54.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 03 Oct 2012 10:54:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBD4NN35CTIKBBUHXWGBQKGQEU3YQHSA@googlegroups.com designates 209.85.220.64 as permitted sender) client-ip=209.85.220.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBD4NN35CTIKBBUHXWGBQKGQEU3YQHSA@googlegroups.com designates 209.85.220.64 as permitted sender) smtp.mail=tosdr+bncBD4NN35CTIKBBUHXWGBQKGQEU3YQHSA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by padhz11 with SMTP id hz11sf5059439pad.29
+        for <michiel@unhosted.org>; Wed, 03 Oct 2012 10:54:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-yahoo-newman-id:x-yahoo-newman-property
+         :x-ymail-osg:x-yahoo-smtp:from:subject:message-id:date:to
+         :mime-version:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=Ejwq/KzxnFEsk4uznh0jM0IQw9bsgXwjreRqeq/27vQ=;
+        b=BhCtP50o4deMJ7cXhieuZgXBK+uZ2UhOw8POVi9MeAbiFvgjsBMVVTWkw6cLQ9hHaD
+         bY+NR04JXnFXoCYs8vpf3bkdaTV0b1Y4rYo659zQvQdbMWFbvDlFBduffhq5E146WQ5T
+         k/6T9hdVRnltU+Be0n9FAuhkfLpLF0Ki9TiakTan+wm0xYpwfnZnxWsveO/iBrvwzr5/
+         mUbPFh96Yr1rTU4mBeXFPQCf9yVZkGcQ4Y+dxDA1smnuEn1ymlfUzguh4N4ksteI5be/
+         qqySmbatQmB3bsn41hGqAHCNVnicDU8pzEd6TwEWp8IpMPEEl50GVonhZhnbKicZphGb
+         h5jg==
+Received: by 10.236.115.33 with SMTP id d21mr351673yhh.12.1349286865227;
+        Wed, 03 Oct 2012 10:54:25 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.120.244 with SMTP id p80ls2970190yhh.0.gmail; Wed, 03 Oct
+ 2012 10:54:24 -0700 (PDT)
+Received: by 10.66.90.102 with SMTP id bv6mr601002pab.34.1349286864692;
+        Wed, 03 Oct 2012 10:54:24 -0700 (PDT)
+Received: by 10.66.90.102 with SMTP id bv6mr601001pab.34.1349286864643;
+        Wed, 03 Oct 2012 10:54:24 -0700 (PDT)
+Received: from nm16.bullet.mail.ird.yahoo.com (nm16.bullet.mail.ird.yahoo.com. [77.238.189.69])
+        by gmr-mx.google.com with SMTP id o10si1251910pax.0.2012.10.03.10.54.23;
+        Wed, 03 Oct 2012 10:54:24 -0700 (PDT)
+Received-SPF: neutral (google.com: 77.238.189.69 is neither permitted nor denied by best guess record for domain of jones_adam@rocketmail.com) client-ip=77.238.189.69;
+Received: from [77.238.189.231] by nm16.bullet.mail.ird.yahoo.com with NNFMP; 03 Oct 2012 17:54:23 -0000
+Received: from [217.146.188.173] by tm12.bullet.mail.ird.yahoo.com with NNFMP; 03 Oct 2012 17:54:23 -0000
+Received: from [127.0.0.1] by smtp141.mail.ird.yahoo.com with NNFMP; 03 Oct 2012 17:54:23 -0000
+X-Yahoo-Newman-Id: 331878.32711.bm@smtp141.mail.ird.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: ucOsR_UVM1nbeOhFZVLp1wRBJx1U_Tegd7.SQ0ngxZ9.Zym
+ 2vQTljpVmDTamnlUy9FB.UhMYzcOld4Ch_ChD7V6iFlQd96MZWlz7rIYvJsg
+ 7ztLz7.PJ6l83FMGNHa.AC5mAcJzF.cYiYLyKCvnvRedZhBHPLxW6hBAgpQ1
+ C4VpO3NA8SKbLu.yD6HnZwBNycSKcJqiPUuXIGukcpQoNZNCsqfvHtRfCPFn
+ N31G0UGTch_E9swIW2qov9zPd.RjJtVI._9U6TOThSN8YgUaySwAMprBivFc
+ CaUNMqtmZzcyikw63qz2m8ATTL02Yb2o.F0fCK.X_VCI1cZcNM9OyeFnxNSL
+ gvLIDpC_agBS8YAmqqjHDTvclHKp41XV4DBesaMQc7_Dq33WLE5wrzJ2hAF8
+ JCkihxZmthaqJ4ak17OawLBWioqk9uIs1rSFwwzuMpX_QVvXOcSk61s7faur
+ XZLJCHrev1rCrNoKBP99XWlqn6D_NXMOIEeI69XP8iUkoPF3x3CpGCYi13Sy
+ k03KiI.M-
+X-Yahoo-SMTP: HYwFx0SswBCAZPvLU0VQrvGggIqmdV5UMveQwIWUHmZZyw0Ivrc-
+Received: from jones-family-imac.home (jones_adam@86.166.150.16 with plain)
+        by smtp141.mail.ird.yahoo.com with SMTP; 03 Oct 2012 10:54:23 -0700 PDT
+From: Adam Jones <jones_adam@rocketmail.com>
+Subject: [tosdr:968] fivesquids.co.uk
+Message-Id: <59572B5F-4B0B-4DAB-93E2-C0FDD1B50C9F@rocketmail.com>
+Date: Wed, 3 Oct 2012 18:54:21 +0100
+To: tosdr@googlegroups.com
+Mime-Version: 1.0 (Mac OS X Mail 6.1 \(1498\))
+X-Mailer: Apple Mail (2.1498)
+X-Original-Sender: jones_adam@rocketmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 77.238.189.69 is neither permitted nor denied by best guess record for domain
+ of jones_adam@rocketmail.com) smtp.mail=jones_adam@rocketmail.com; dkim=pass header.i=@rocketmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+http://www.fivesquids.co.uk/terms_of_service
+
+Good points:
+Registration free
+Ranks based on buyers feedback
+
+Neutral points:
+Both buyer and seller can cancel the offer
+Must pay/be payed by PayPal
+
+Bad points:
+Fixed =A35
+Lose =A31 per =A35 (Aka receive =A34 for a =A35 job)
+You are responsible to scan items for viruses/malware
+
+
+
+
+
+I hope this improves your brilliant safari plugin :D
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

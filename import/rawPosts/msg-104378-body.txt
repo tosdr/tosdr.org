@@ -1,0 +1,503 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.240.2 with SMTP id vw2csp302697vec;
+        Tue, 4 Dec 2012 11:07:11 -0800 (PST)
+Received: by 10.68.203.198 with SMTP id ks6mr41137498pbc.35.1354648031069;
+        Tue, 04 Dec 2012 11:07:11 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBXUT7GCQKGQEFNVCHKI@googlegroups.com>
+Received: from mail-da0-f63.google.com (mail-da0-f63.google.com [209.85.210.63])
+        by mx.google.com with ESMTPS id yl9si3726283pbc.32.2012.12.04.11.07.10
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 04 Dec 2012 11:07:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBXUT7GCQKGQEFNVCHKI@googlegroups.com designates 209.85.210.63 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBXUT7GCQKGQEFNVCHKI@googlegroups.com designates 209.85.210.63 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBXUT7GCQKGQEFNVCHKI@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-da0-f63.google.com with SMTP id n34sf3309850dal.8
+        for <michiel@unhosted.org>; Tue, 04 Dec 2012 11:07:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=W6wLLVyJGjoBdUl7rn9CChhRs4WmWPCXCLPXSuYOYgc=;
+        b=cTTt7SCC1KAbt0PPCDJvTZU+yNL+y3FuslswbF7WLGO6HrrFRQ2lPAqIdTZwadIZFT
+         HLOO1gONsX9ZTygzHk25SNCwZFQzkI4960u6oCZrycPIiGQe8OugZAX1e8P+Ma4gacGc
+         xHI5E+R19oTa8C2DlT0rSMUSXNATTIM516hHLkXP/GAckkDR9QSJTnD+GSIqIA6Kfx5e
+         7Yw20otE4qXB4YEGu2gg50JkKJ8MZ/5U71MiWVh5PP9T1clQ9yIyv/NdCvw9y+oPvvjE
+         hYYQRu1T/6zf3Atwt6sY66qZdUZR2SdTuR1sGfYFOd4RCN6LVAGdXnHAV7vIIDLGyhvE
+         WfVQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=W6wLLVyJGjoBdUl7rn9CChhRs4WmWPCXCLPXSuYOYgc=;
+        b=lCMJCxj2itlc2Yo2GOm+l0efOIZBVch0nuaYCFV/CmWiskpfm+9A+rY1EK7p0PfVnP
+         C35ufybbVeKcbIrCC8ZlvRlnp2TMMT+dSpxrZYDMgns3P/KirVb43f+YKFfkS/823QyG
+         7ffcr7jCxNWqUNqOjXF7oT5Q0AcrhliTKgLVSe011hcMsZxC/9Z2kr0l/Y9jKY5nJK0v
+         Cb0rVWBa4f3/SjGTXzURgPUXW9jCp+hajlgdLVkiWkJKMOpR5FQx200oLknGsJtUFCJZ
+         F9HpIhDrcrM1TtUOUCEMokr8xrV7Zo3n1lhWtItbaZgBQ1IzQa2SOw5pjBcQCy5srmGl
+         9Kkw==
+Received: by 10.50.47.226 with SMTP id g2mr1603288ign.7.1354648030569;
+        Tue, 04 Dec 2012 11:07:10 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.193.162 with SMTP id hp2ls2973326igc.35.canary; Tue, 04 Dec
+ 2012 11:07:09 -0800 (PST)
+Received: by 10.50.191.131 with SMTP id gy3mr1421274igc.1.1354648029277;
+        Tue, 04 Dec 2012 11:07:09 -0800 (PST)
+Date: Tue, 4 Dec 2012 11:07:07 -0800 (PST)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <d7f85681-359d-40d8-9f43-d542e7122beb@googlegroups.com>
+In-Reply-To: <AD4B1F46-90C7-49A9-A22F-355ABF398A2E@gmail.com>
+References: <fb989d35-e393-41e4-a7fc-a995b1f829eb@googlegroups.com> <6e6f76e9-0a48-4fbf-92ed-e8fcdb169e04@googlegroups.com> <CAB8Z3EeE7PVxPwep3ndnd0WqrYfr_Ab_Os1qeQ1Sd0HhAiJFUw@mail.gmail.com>
+ <AD4B1F46-90C7-49A9-A22F-355ABF398A2E@gmail.com>
+Subject: Re: [tosdr:1191] Re: [meta] Envato domains read through
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1782_23061036.1354648028001"
+
+------=_Part_1782_23061036.1354648028001
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Done!
+
+/Robin
+
+On Tuesday, December 4, 2012 11:55:18 AM UTC-4, Ian McGowan wrote:
+>
+> If that isn't too much trouble, I would appreciate it. Thanks again for=
+=20
+> all your contributions!
+>
+> Ian
+>
+> On Dec 4, 2012, at 2:51 AM, Robin Monks wrote:
+>
+> Would you like me to make a new thread for each of these data points? Tha=
+t=20
+> can pretty easily be arranged.
+>
+> /Robin
+>
+>
+> On Mon, Dec 3, 2012 at 5:51 PM, Ian McGowan <irmc...@gmail.com<javascript=
+:>
+> > wrote:
+>
+>> Hi Robin,
+>>
+>> First off, let me say thanks, this is a ton of data and I'm sure we'll=
+=20
+>> have some good discussions about each of the points.=20
+>>
+>> However, for the purposes of facilitating those discussions, it is easie=
+r=20
+>> if you limit your contributions to one thread per point. That way we don=
+'t=20
+>> have multiple discussions occurring within the same thread, making it=20
+>> difficult for me to extract the data points that have been discussed and=
+=20
+>> resolved.
+>>
+>> Again, this is awesome, it looks like there is a lot of good data here,=
+=20
+>> but for the benefit of clarity within the discussions, one data point pe=
+r=20
+>> thread is preferred. Thanks!
+>>
+>> Ian
+>>
+>>
+>> On Monday, December 3, 2012 10:42:03 PM UTC+1, Robin Monks wrote:
+>>>
+>>> Hey all,
+>>>
+>>>   I'm not sure if this is usually how you like to receive TOS/Privacy=
+=20
+>>> Policy reviews; but I had some time and decided to dissect and run thro=
+ugh=20
+>>> the entire Envato privacy policy, user terms of service and member term=
+s of=20
+>>> service. All three I placed into a SkyDrive document (=20
+>>> https://skydrive.live.com/#!/**view.aspx?cid=3D**B84C72D186B56A8A&resid=
+=3D**
+>>> B84C72D186B56A8A%21587&app=3D**Word<https://skydrive.live.com/#!/view.a=
+spx?cid=3DB84C72D186B56A8A&resid=3DB84C72D186B56A8A%21587&app=3DWord>) with=
+ my notes, which I'll summarize here. Hopefully we can discuss all=20
+>>> the points and folks who know more than I do about the process and mass=
+age=20
+>>> the data into something useful for ToS;DR.
+>>>
+>>> The domains this terms apply to are:
+>>>
+>>>    - activeden.net =20
+>>>    - audiojungle.net=20
+>>>    - codecanyon.net =20
+>>>    - graphicriver.net=20
+>>>    - themeforest.net =20
+>>>    - videohive.net=20
+>>>    - 3docean.net =20
+>>>    - tutsplus.com=20
+>>>    - photodune.net
+>>>   =20
+>>> Here are the main highlights I was able to extract (see the SkyDrive=20
+>>> document for where each of these comes from in the legal documents):
+>>>
+>>>
+>>>    1. INFORMATIVE You may only use content displayed on sites as=20
+>>>    allowed on each product by the product=E2=80=99s author.
+>>>    2. INFORMATIVE Hot-linking is not allowed.
+>>>    3. INFORMATIVE Embedding the site in frames is not allowed.=20
+>>>    4. INFORMATIVE Not responsible for the content of links to external=
+=20
+>>>    sites.
+>>>    5. INFORMATIVE Jurisdiction is New South Wales, Australia.
+>>>    6. INFORMATIVE Age limit of 18.
+>>>    7. INFORMATIVE You do not have to pay a fee to become a member.
+>>>    8. INFORMATIVE This site operates its own virtual currency called=20
+>>>    =E2=80=9CEnvato Credit=E2=80=9D which is equal to 1 US Dollar.
+>>>    9. INFORMATIVE You agree to only sell products you own all rights to=
+.
+>>>    10. INFORMATIVE You are responsible for what you upload.
+>>>    11. INFORMATIVE Promotional communications are opt-out.
+>>>    12. POSITIVE You may request a copy of personal information stored=
+=20
+>>>    and inform Envato of corrections.
+>>>    13. POSITIVE Changes involving the privacy policy will have 30-days=
+=E2=80=99=20
+>>>    notice given.=20
+>>>    14. POSITIVE You stay in control of your copyright.
+>>>    15. POSITIVE Uses temporary session cookies=20
+>>>    16. POSITIVE Collected personal data used for limited purposes=20
+>>>    17. WARNING Terms may be changed any time at their discretion,=20
+>>>    without notice to the user =20
+>>>    18. WARNING Site claims ownership of links on other websites=20
+>>>    pointing to the site and claim they have the right to request deleti=
+on of=20
+>>>    incoming links.
+>>>    19. WARNING No warranty is provided, and any liability is limited to=
+=20
+>>>    the original cost of goods.=20
+>>>    20. WARNING Your account can be terminated for any reason without=20
+>>>    notice.=20
+>>>    21. WARNING You acknowledge and agree that you are liable for, and=
+=20
+>>>    will indemnify Envato and its partners against, any and all claims m=
+ade by=20
+>>>    a third party arising out of your access to, and use of, the Sites a=
+s a=20
+>>>    Member.=20
+>>>    22. WARNING No guarantee of availability, and the service can be=20
+>>>    suspended at any time with or without warning.
+>>>    23. WARNING You must provide your legal name upon registration=20
+>>>    24. WARNING Personal info is used for advertising.=20
+>>>    25. WARNING Personal information is shared with agents and=20
+>>>    contractors.
+>>>    26. WARNING No liability is accepted for improper access to your=20
+>>>    personal information.=20
+>>>    27. WARNING Any monies that you deposit into your account that are=
+=20
+>>>    not used for a period of 12 months, will be forfeited.
+>>>    28. WARNING Purchases of account credit is non-refundable.
+>>>    29. WARNING You may not scrape the site=20
+>>>    30. WARNING No promise to inform about government requests=20
+>>>    31. WARNING No policy for account, content or personal information=
+=20
+>>>    removal.=20
+>>>    32. WARNING You agree to help defend Evanto against third-party=20
+>>>    claims.
+>>>    33. WARNING Third party cookies are used for advertising
+>>>    34. WARNING Data may be stored anywhere without given notice.
+>>>   =20
+>>> I know this is a massive amount, and I'm sorry if this isn't the typica=
+l=20
+>>> way of doing things (I've only posted once before, so, feedback is VERY=
+=20
+>>> helpful in knowing how and where to focus my energy). Looking forward t=
+o=20
+>>> input!
+>>>
+>>> /Robin
+>>>
+>>
+>> --=20
+>> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+>> ---=20
+>> You received this message because you are subscribed to the Google Group=
+s=20
+>> "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to to...@googlegroups.com <javascript:=
+>
+>> .
+>> To unsubscribe from this group, send email to=20
+>> tosdr+un...@googlegroups.com <javascript:>.
+>> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+>> For more options, visit https://groups.google.com/groups/opt_out.
+>> =20
+>> =20
+>>
+>
+>
+>
+> --=20
+> *R=E2=99=82bin Monks <http://robinmonks.com/>*
+> President, Podhurl Inc. <http://podhurl.us/>
+> Drupal Association Individual Member
+> 603.236.7357
+>
+> Live in such a way that those who know you but don't know God, will come=
+=20
+> to know God because they know you.
+>
+>
+> --=20
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+=20
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to to...@googlegroups.com <javascript:>=
+.
+> To unsubscribe from this group, send email to tosdr+un...@googlegroups.co=
+m<javascript:>
+> .
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+>
+>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1782_23061036.1354648028001
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Done!<div><br></div><div>/Robin<br><br>On Tuesday, December 4, 2012 11:55:1=
+8 AM UTC-4, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"ma=
+rgin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">=
+<div style=3D"word-wrap:break-word">If that isn't too much trouble, I would=
+ appreciate it. Thanks again for all your contributions!<div><br></div><div=
+>Ian</div><div><br><div><div>On Dec 4, 2012, at 2:51 AM, Robin Monks wrote:=
+</div><br><blockquote type=3D"cite">Would you like me to make a new thread =
+for each of these data points? That can pretty easily be arranged.<div><br>=
+</div><div>/Robin</div><div><br><br><div class=3D"gmail_quote">On Mon, Dec =
+3, 2012 at 5:51 PM, Ian McGowan <span dir=3D"ltr">&lt;<a href=3D"javascript=
+:" target=3D"_blank" gdf-obfuscated-mailto=3D"p3BlZhDmq7MJ">irmc...@gmail.c=
+om</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Hi Robin,<div><br></div><div>First off, let =
+me say thanks, this is a ton of data and I'm sure we'll have some good disc=
+ussions about each of the points.&nbsp;</div>
+<div><br></div><div>However, for the purposes of facilitating those discuss=
+ions, it is easier if you limit your contributions to one thread per point.=
+ That way we don't have multiple discussions occurring within the same thre=
+ad, making it difficult for me to extract the data points that have been di=
+scussed and resolved.</div>
+<div><br></div><div>Again, this is awesome, it looks like there is a lot of=
+ good data here, but for the benefit of clarity within the discussions, one=
+ data point per thread is preferred. Thanks!</div><span><font color=3D"#888=
+888"><div>
+<br></div></font></span><div><span><font color=3D"#888888">Ian</font></span=
+><div><div><br><br>On Monday, December 3, 2012 10:42:03 PM UTC+1, Robin Mon=
+ks wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.=
+8ex;border-left:1px #ccc solid;padding-left:1ex">
+Hey all,<div><br></div><div>&nbsp; I'm not sure if this is usually how you =
+like to receive TOS/Privacy Policy reviews; but I had some time and decided=
+ to&nbsp;dissect&nbsp;and run through the entire Envato privacy policy, use=
+r terms of service and member terms of service. All three I placed into a S=
+kyDrive document ( <a href=3D"https://skydrive.live.com/#!/view.aspx?cid=3D=
+B84C72D186B56A8A&amp;resid=3DB84C72D186B56A8A%21587&amp;app=3DWord" target=
+=3D"_blank">https://skydrive.live.com/#!/<u></u>v<wbr>iew.aspx?cid=3D<u></u=
+>B84C72D186B56A8A&amp;<wbr>resid=3D<u></u>B84C72D186B56A8A%21587&amp;<wbr>a=
+pp=3D<u></u>Word</a> ) with my notes, which I'll summarize here. Hopefully =
+we can discuss all the points and folks who know more than I do about the p=
+rocess and massage the data into something useful for ToS;DR.</div>
+<div><br></div><div>The domains this terms apply to are:</div><div><ul><li>=
+<span style=3D"line-height:normal"><span style=3D"font-size:medium;font-fam=
+ily:'Times New Roman'"><a href=3D"http://activeden.net/" target=3D"_blank">=
+activeden.net</a>&nbsp;</span></span></li>
+<li><span style=3D"line-height:normal"><span style=3D"font-size:medium;font=
+-family:'Times New Roman'"><a href=3D"http://audiojungle.net/" target=3D"_b=
+lank">audiojungle.net</a>&nbsp;</span></span></li><li><span style=3D"line-h=
+eight:normal"><span style=3D"font-size:medium;font-family:'Times New Roman'=
+"><a href=3D"http://codecanyon.net/" target=3D"_blank">codecanyon.net</a>&n=
+bsp;</span></span></li>
+<li><span style=3D"line-height:normal"><span style=3D"font-size:medium;font=
+-family:'Times New Roman'"><a href=3D"http://graphicriver.net/" target=3D"_=
+blank">graphicriver.net</a>&nbsp;</span></span></li><li><span style=3D"line=
+-height:normal"><span style=3D"font-size:medium;font-family:'Times New Roma=
+n'"><a href=3D"http://themeforest.net/" target=3D"_blank">themeforest.net</=
+a>&nbsp;</span></span></li>
+<li><span style=3D"line-height:normal"><span style=3D"font-size:medium;font=
+-family:'Times New Roman'"><a href=3D"http://videohive.net/" target=3D"_bla=
+nk">videohive.net</a>&nbsp;</span></span></li><li><span style=3D"line-heigh=
+t:normal"><span style=3D"font-size:medium;font-family:'Times New Roman'"><a=
+ href=3D"http://3docean.net/" target=3D"_blank">3docean.net</a>&nbsp;</span=
+></span></li>
+<li><span style=3D"line-height:normal"><span style=3D"font-size:medium;font=
+-family:'Times New Roman'"><a href=3D"http://tutsplus.com/" target=3D"_blan=
+k">tutsplus.com</a>&nbsp;</span></span></li><li><span style=3D"line-height:=
+normal"><span style=3D"font-size:medium;font-family:'Times New Roman'"><a h=
+ref=3D"http://photodune.net/" target=3D"_blank">photodune.net</a></span><br=
+>
+</span></li></ul><div><font color=3D"#000000" face=3D"Times New Roman" size=
+=3D"3">Here are the main highlights I was able to extract (see the SkyDrive=
+ document for where each of these comes from in the legal documents):</font=
+></div>
+</div><br><ol><li><span>INFORMATIVE </span>You may only use content display=
+ed on sites as allowed on each product by the product=E2=80=99s author.<br>=
+</li><li>INFORMATIVE&nbsp;Hot-linking is not allowed.<br></li><li>INFORMATI=
+VE Embedding the site in frames is not allowed.</li>
+<li>INFORMATIVE Not responsible for the content of links to external sites.=
+<br></li><li>INFORMATIVE Jurisdiction is New South Wales, Australia.<br></l=
+i><li>INFORMATIVE Age limit of 18.</li><li>INFORMATIVE You do not have to p=
+ay a fee to become a member.<br>
+</li><li>INFORMATIVE This site operates its own virtual currency called =E2=
+=80=9CEnvato Credit=E2=80=9D which is equal to 1 US Dollar.</li><li>INFORMA=
+TIVE You agree to only sell products you own all rights to.<br></li><li>INF=
+ORMATIVE You are responsible for what you upload.<br>
+</li><li>INFORMATIVE Promotional communications are opt-out.<br></li><li>PO=
+SITIVE You may request a copy of personal information stored and inform Env=
+ato of corrections.<br></li><li>POSITIVE Changes involving the privacy poli=
+cy will have 30-days=E2=80=99 notice given.</li>
+<li>POSITIVE You stay in control of your copyright.<br></li><li>POSITIVE Us=
+es temporary session cookies&nbsp;<br></li><li>POSITIVE Collected personal =
+data used for limited purposes&nbsp;</li><li>WARNING Terms may be changed a=
+ny time at their discretion, without notice to the user&nbsp;</li>
+<li>WARNING Site claims ownership of links on other websites pointing to th=
+e site and claim they have the right to request deletion of incoming links.=
+</li><li>WARNING No warranty is provided, and any liability is limited to t=
+he original cost of goods.</li>
+<li>WARNING Your account can be terminated for any reason without notice.&n=
+bsp;<br></li><li>WARNING You acknowledge and agree that you are liable for,=
+ and will indemnify Envato and its partners against, any and all claims mad=
+e by a third party arising out of your access to, and use of, the Sites as =
+a Member.</li>
+<li>WARNING No guarantee of availability, and the service can be suspended =
+at any time with or without warning.</li><li>WARNING You must provide your =
+legal name upon registration&nbsp;<br></li><li>WARNING Personal info is use=
+d for advertising.&nbsp;<br>
+</li><li>WARNING Personal information is shared with agents and contractors=
+.<br></li><li>WARNING No liability is accepted for improper access to your =
+personal information.&nbsp;<br></li><li>WARNING Any monies that you deposit=
+ into your account that are not used for a period of 12 months, will be for=
+feited.<br>
+</li><li>WARNING Purchases of account credit is non-refundable.</li><li>WAR=
+NING You may not scrape the site&nbsp;</li><li>WARNING&nbsp;No promise to i=
+nform about government requests&nbsp;<br></li><li>WARNING No policy for acc=
+ount, content or personal information removal.</li>
+<li>WARNING You agree to help defend Evanto against third-party claims.</li=
+><li>WARNING Third party cookies are used for advertising</li><li>WARNING D=
+ata may be stored anywhere without given notice.<br></li></ol><div><span st=
+yle=3D"line-height:17px">I know this is a massive amount, and I'm sorry if =
+this isn't the typical way of doing things (I've only posted once before, s=
+o, feedback is VERY helpful in knowing how and where to focus my energy). L=
+ooking forward to input!</span></div>
+<div><span style=3D"line-height:17px"><br></span></div><div><span style=3D"=
+line-height:17px">/Robin</span></div></blockquote></div></div></div><div><d=
+iv><div><br></div>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info/" target=3D"_blank">www.tos-dr.info</a> /=
+/ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.co=
+m/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blan=
+k">www.github.com/didnotread</a><br>
+
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To post to this group, send email to <a href=3D"javascript:" target=3D"_bla=
+nk" gdf-obfuscated-mailto=3D"p3BlZhDmq7MJ">to...@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"javascript:" targe=
+t=3D"_blank" gdf-obfuscated-mailto=3D"p3BlZhDmq7MJ">tosdr+un...@<wbr>google=
+groups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den</a>.<=
+br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com/" targ=
+et=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:cen=
+ter">President, <a href=3D"http://podhurl.us/" target=3D"_blank">Podhurl In=
+c.</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er"><span id=3D"gc-number-1" class=3D"gc-cs-link" title=3D"Call with Google=
+ Voice">603.236.7357</span></div><div><span style=3D"font-size:x-small"></s=
+pan><br><div style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don't know God, will come to know God because they know you.</span></=
+div></div></div><br>
+</div><div><br></div>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To post to this group, send email to <a href=3D"javascript:" target=3D"_bla=
+nk" gdf-obfuscated-mailto=3D"p3BlZhDmq7MJ">to...@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"javascript:" targe=
+t=3D"_blank" gdf-obfuscated-mailto=3D"p3BlZhDmq7MJ">tosdr+un...@<wbr>google=
+groups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/<wbr>group/tosdr?hl=3Den</a>.<=
+br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/<wbr>groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</blockquote></div><br></div></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1782_23061036.1354648028001--

@@ -1,0 +1,128 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBMHH3KRAKGQETT4JFZY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id EF4FB40F5A
+	for <anything@michielbdejong.com>; Sun,  2 Nov 2014 23:44:05 +0100 (CET)
+Received: from mfilter39-d.gandi.net (mfilter39-d.gandi.net [217.70.178.170])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EC11111602E
+	for <anything@michielbdejong.com>; Sun,  2 Nov 2014 23:44:05 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter39-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter39-d.gandi.net (mfilter39-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yEeKWQSilcXi for <anything@michielbdejong.com>;
+	Sun,  2 Nov 2014 23:44:04 +0100 (CET)
+Received: from mail-wi0-x23e.google.com (mail-wi0-x23e.google.com [IPv6:2a00:1450:400c:c05::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 9E260116028
+	for <anything@michielbdejong.com>; Sun,  2 Nov 2014 23:44:01 +0100 (CET)
+Received: by mail-wi0-f190.google.com with SMTP id em10sf351682wid.17
+        for <anything@michielbdejong.com>; Sun, 02 Nov 2014 14:44:01 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:subject:message-id:mail-followup-to:mime-version
+         :content-type:content-disposition:user-agent:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=AuUGmDeQlWbSmwAi3P22o2/z2gf/QVSW7q26iwfKYuE=;
+        b=BPqMJ/f77SrptcXzUTa+FNVQ6SA/gCw+fjDOwcbFrpgZuuFOJPjBsC6U71loI/SNyM
+         xtDU4MeW7IdaTCiV60zU1mpMxykuICUmJrL+svnYsRQ2P9fevFu9eXGGkhzIrfC2AfwK
+         yFUzgEs+fydr/laDZHbjV3w40Dt1kj5L0+itjXhvj36MRVBuBo4wFNnj3Oa2YQAP70bi
+         aoc1SKPang5AtwxJmqeSL0MtCd5oiCu36eAvOtiS2dL2Mb5Hk6vFZg66JT1wyS8u7Dje
+         JuguM+OfnpWIIrGMKAXSDNUY5wNdIYDxQGfUqjFXDLBxQW5ARz9r4wr81cObZbaKEdUT
+         f7aA==
+X-Received: by 10.152.7.143 with SMTP id j15mr528168laa.0.1414968241081;
+        Sun, 02 Nov 2014 14:44:01 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.27.129 with SMTP id t1ls730662lag.53.gmail; Sun, 02 Nov
+ 2014 14:43:59 -0800 (PST)
+X-Received: by 10.112.138.202 with SMTP id qs10mr6474486lbb.5.1414968239870;
+        Sun, 02 Nov 2014 14:43:59 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id p14si249652wie.1.2014.11.02.14.43.59
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sun, 02 Nov 2014 14:43:59 -0800 (PST)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 595FD63B3F6;
+	Sun,  2 Nov 2014 23:43:59 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 3pamL4sVefyV; Sun,  2 Nov 2014 23:43:57 +0100 (CET)
+Received: from localhost (unknown [IPv6:2a01:e35:242d:1bb0:3e77:e6ff:fe18:ed03])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id C6A0A63A005;
+	Sun,  2 Nov 2014 23:43:56 +0100 (CET)
+Date: Sun, 2 Nov 2014 23:43:55 +0100
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Cc: team@tosdr.org
+Subject: [tosdr:3309] Wednesday Nov 5, event in London
+Message-ID: <20141102224355.GA10478@xps>
+Mail-Followup-To: tosdr@googlegroups.com, team@tosdr.org
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="Q68bSM7Ycu6FN28Q"
+Content-Disposition: inline
+User-Agent: Mutt/1.5.23.1-rc1 (2014-03-12)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--Q68bSM7Ycu6FN28Q
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Hi Everyone,
+
+For those of you who are in London or nearby, please join us for
+the afternoon on Wednesday November 5, from 4:30 PM until 20:00 at
+Mozilla's office. We will have a few talks and a hackathon!
+
+More info: https://tosdr.org/conf/london201411.html
+
+Please inform us of your participation,
+
+Best,
+
+-- =20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--Q68bSM7Ycu6FN28Q
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUVrOrAAoJEI0CLJmz17eVIDEIAKFEXy2gFrpyAnN0Cgkh055s
+ZK87RonKAulOTq3kgMdYNIyNT6lXzBas479u3dVOU85DjeRnT/MV//5V5hEkE2y4
+5fPIrYnm24w6nr6lsSwva1PolCvF2tGNk1J+5UgZyOdWq0q1cu6Y8jHzFsyAyfzH
+067yLu4qepTNZf58Yu05mmHX49iCYPE0A3rOcPM2GHx6ScETUDUB6W5UE2nME0n9
+pTloN2h2s9AZtA1Dc6776RqUIq7vr/HVN/Nf5xk0Ovp0zK6Zkbz/fO4XntS+O57Z
+h8c5FP3cBdoL55PS4w29c728jZ0Z4tQhMceXuuCG7txwf216pxVugGWaSF8lRSc=
+=+4jb
+-----END PGP SIGNATURE-----
+
+--Q68bSM7Ycu6FN28Q--

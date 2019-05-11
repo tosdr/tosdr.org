@@ -1,0 +1,179 @@
+Return-Path: <tosdr+bncBCYIVNHJ5EARBSGGUCQQKGQEZQ5DRWQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 1270940910
+	for <anything@michielbdejong.com>; Sun, 28 Sep 2014 17:03:44 +0200 (CEST)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1059A1780A5
+	for <anything@michielbdejong.com>; Sun, 28 Sep 2014 17:03:44 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id hDEfU-5FKurf for <anything@michielbdejong.com>;
+	Sun, 28 Sep 2014 17:03:42 +0200 (CEST)
+Received: from mail-pa0-x237.google.com (mail-pa0-x237.google.com [IPv6:2607:f8b0:400e:c03::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 751E717809E
+	for <anything@michielbdejong.com>; Sun, 28 Sep 2014 17:03:39 +0200 (CEST)
+Received: by mail-pa0-f55.google.com with SMTP id kq14sf577424pab.0
+        for <anything@michielbdejong.com>; Sun, 28 Sep 2014 08:03:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=A4qfZXKkSyDRRevDihGpu1rDWyVFfD3m9mldmp4pWBg=;
+        b=d8vLJ4H5rjasoBOXenZXoO7sDYd7iPGLWimZX8PZzAxFVGjkgqaOsPhSEOFWOKcuyd
+         /h8bjV5w0H+LMmTvEOPBvxGRJRMbJvksnuYU6mnTW1UbR0ifJfmPNkB2Pt7T8DKj/sJy
+         ImVcngCHXQuMWqpzvaMdsqA4mom455ludRjqXmrWpzl4xK630pzNIy1YDMYddwGdHsJN
+         O5bUs7hs9sEeYhnWXA97OQaLUen0yzIam95yURyhT+KhiVTkK/fBMQSCzVope7BqIgme
+         rNx31Y9if6A+Vke2ylZE+eupTykB0U/BkOvOm/v0GdE5vRTPlHQr2daCuPlPxBH3255O
+         KtaA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=A4qfZXKkSyDRRevDihGpu1rDWyVFfD3m9mldmp4pWBg=;
+        b=EHhdHUUjmO40Sf20ZHeoya+d7eIzYx0LGl38Los2gdLvIOIefeS3N+C8gpPFp1OQ9T
+         tFnKNtn8mZGOTGH/hlBCq0MJc5V/63SxqTR/+KDh8NIGKRkCBlxFKDVRmdLySt/Spu5J
+         NmNYVjxohf9Yt+MQrF06LLlzdio5D56PwONE4CmM4/Us02L9qTeV7CtLDjxqQsLB6kqZ
+         GgPD0eHZhhCVohPr+rpqu0LP21XtJjsAxf9b1CKvEu/i/P8ruGfqLxWewR5lfElpk+TU
+         v0SAqHLek0Y0viXZXsdCpgB+6t0+pjjU8Ry7W5uCPFa/MYdTg38EkY2EMq7RnCfdIPne
+         yCvQ==
+X-Received: by 10.140.30.36 with SMTP id c33mr321875qgc.2.1411916616883;
+        Sun, 28 Sep 2014 08:03:36 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.98.183 with SMTP id o52ls67376qge.70.gmail; Sun, 28 Sep
+ 2014 08:03:36 -0700 (PDT)
+X-Received: by 10.140.94.10 with SMTP id f10mr2908qge.11.1411916616724;
+        Sun, 28 Sep 2014 08:03:36 -0700 (PDT)
+Date: Sun, 28 Sep 2014 08:03:36 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <78c6884b-6d70-49e0-af5c-3c457b13d4d9@googlegroups.com>
+In-Reply-To: <20140927173742.GA26590@xps.fritz.box>
+References: <20140927173742.GA26590@xps.fritz.box>
+Subject: [tosdr:3249] Re: Please help us improve the submission process to
+ ToS;DR :-)
+MIME-Version: 1.0
+X-Original-Sender: aanmeldingen49@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2259_91167100.1411916616198"
+
+------=_Part_2259_91167100.1411916616198
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Yay, great job! Will try to submit a view topics in the next couple of days=
+.
+
+Op zaterdag 27 september 2014 19:37:52 UTC+2 schreef Hugo Roy:
+>
+> Good news everyone!=20
+>
+> Michiel, vincent and I have been working hard  the last couple of=20
+> days, as you can see at https://github.com/tosdr/=20
+>
+> As you know, submitting reviews to our project has been slow. We=20
+> are finally beginning to fix this.=20
+>
+> So please help us! You shuold be able to submit data points to=20
+> ToS;DR through the web form:=20
+>
+> https://tosdr.org/submit-point.html=20
+>
+> More coming =F0=9F=98=89=20
+>
+> Stay tuned at http://blog.tosdr.org!=20
+>
+>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2259_91167100.1411916616198
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Yay, great job! Will try to submit a view topics in the ne=
+xt couple of days.<br><br>Op zaterdag 27 september 2014 19:37:52 UTC+2 schr=
+eef Hugo Roy:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-le=
+ft: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">Good news everyon=
+e!
+<br>
+<br>Michiel, vincent and I have been working hard &nbsp;the last couple of
+<br>days, as you can see at <a href=3D"https://github.com/tosdr/" target=3D=
+"_blank" onmousedown=3D"this.href=3D'https://www.google.com/url?q\75https%3=
+A%2F%2Fgithub.com%2Ftosdr%2F\46sa\75D\46sntz\0751\46usg\75AFQjCNGn1e37KZo3I=
+E86zTyYH5lpcOGxNQ';return true;" onclick=3D"this.href=3D'https://www.google=
+.com/url?q\75https%3A%2F%2Fgithub.com%2Ftosdr%2F\46sa\75D\46sntz\0751\46usg=
+\75AFQjCNGn1e37KZo3IE86zTyYH5lpcOGxNQ';return true;">https://github.com/tos=
+dr/</a>
+<br>
+<br>As you know, submitting reviews to our project has been slow. We
+<br>are finally beginning to fix this.
+<br>
+<br>So please help us! You shuold be able to submit data points to
+<br>ToS;DR through the web form:
+<br>
+<br><a href=3D"https://tosdr.org/submit-point.html" target=3D"_blank" onmou=
+sedown=3D"this.href=3D'https://www.google.com/url?q\75https%3A%2F%2Ftosdr.o=
+rg%2Fsubmit-point.html\46sa\75D\46sntz\0751\46usg\75AFQjCNEHi0VMN7sV8dv2HuJ=
+sMscNLzh3Zg';return true;" onclick=3D"this.href=3D'https://www.google.com/u=
+rl?q\75https%3A%2F%2Ftosdr.org%2Fsubmit-point.html\46sa\75D\46sntz\0751\46u=
+sg\75AFQjCNEHi0VMN7sV8dv2HuJsMscNLzh3Zg';return true;">https://tosdr.org/su=
+bmit-<wbr>point.html</a>
+<br>
+<br>More coming =F0=9F=98=89
+<br>
+<br>Stay tuned at <a href=3D"http://blog.tosdr.org" target=3D"_blank" onmou=
+sedown=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%2Fblog.tosd=
+r.org\46sa\75D\46sntz\0751\46usg\75AFQjCNGV8NxY3mBEgy_wELnVE6fd1OR-8Q';retu=
+rn true;" onclick=3D"this.href=3D'http://www.google.com/url?q\75http%3A%2F%=
+2Fblog.tosdr.org\46sa\75D\46sntz\0751\46usg\75AFQjCNGV8NxY3mBEgy_wELnVE6fd1=
+OR-8Q';return true;">http://blog.tosdr.org</a>!=20
+<br>
+<br>
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2259_91167100.1411916616198--

@@ -1,0 +1,339 @@
+Return-Path: <tosdr+bncBCXPJSFL5UPBBNNX2GSAKGQEQ6FPNLY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 3D7FE40F41
+	for <anything@michielbdejong.com>; Fri, 19 Dec 2014 18:09:13 +0100 (CET)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 34C6A22607E
+	for <anything@michielbdejong.com>; Fri, 19 Dec 2014 18:09:13 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id X+kwylcrzjbB for <anything@michielbdejong.com>;
+	Fri, 19 Dec 2014 18:09:11 +0100 (CET)
+Received: from mail-oi0-x237.google.com (mail-oi0-x237.google.com [IPv6:2607:f8b0:4003:c06::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1069F22608F
+	for <anything@michielbdejong.com>; Fri, 19 Dec 2014 18:09:11 +0100 (CET)
+Received: by mail-oi0-f55.google.com with SMTP id a3sf407309oib.0
+        for <anything@michielbdejong.com>; Fri, 19 Dec 2014 09:09:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=N1ggb6MGASeWjv6VHwiRuxj6Bo3af2pWnSqvsbLx27o=;
+        b=ebnO64f5N/nu6m8NlY2OUeSc68TPB4Q9sC5aW74kVOwtiwmSpCCmo8icdqzryk/WLh
+         Ujw6atSU3cTsV39g30mpYLl5yALb4Awo24JELsSW8yAhZo2elTShiBYZTk4eqPDa/vFq
+         g1K4jrlPDxZ7IRat8/CFDBJz8Y3KLLKF6rYowvZL1Kt5yjdnKp2DUd7yHz/bWQ8ZCLC0
+         jM+b8MMu05nK8XOjNoJNTeKVLJVDgU9sLpHJjnbDL25jkZOY1rzqS1x0h07biC05aj1i
+         8vF34/p8fgyAEyXPNx7xRTDPntCGzf2orCnvv+ZNSJhdZERiKAH5IoQHyfSp3/w9cfFJ
+         eoLg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=N1ggb6MGASeWjv6VHwiRuxj6Bo3af2pWnSqvsbLx27o=;
+        b=t37Djw9XLzLHk4YSBeshfpkdjSX34Ym22xj5Hgg4nHDOaugJqU+fXl5DMIybHAVxZL
+         4Dial29WTm7SUtgZcPyx7nMXF6HoX5lnXcBrSDmH695D+9k09UnbZ7wk5cWoE6VidfDf
+         Higck6Lhi74aE51rMybjedvq9Hj/rr1YCkGlIa8hI1NPH8OEcQ24lxkGa9s8LbUySWOE
+         zd3VPqwrFk/lnAZIReCgAr/N43Qp1uEljdVSgJzR9PJzOurzJ+ODXzyCKEmJR9ap/E5d
+         ZUPRNsG9dbVPLUqVONJNG1zekBzMXKW2DibZgmx7jZgXeat2DDIVHblDwUMonJnYLUKN
+         L6vA==
+X-Received: by 10.140.96.85 with SMTP id j79mr176874qge.2.1419008950046;
+        Fri, 19 Dec 2014 09:09:10 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.89.113 with SMTP id u104ls577348qgd.45.gmail; Fri, 19 Dec
+ 2014 09:09:09 -0800 (PST)
+X-Received: by 10.140.108.9 with SMTP id i9mr161435qgf.1.1419008949825;
+        Fri, 19 Dec 2014 09:09:09 -0800 (PST)
+Date: Fri, 19 Dec 2014 09:09:09 -0800 (PST)
+From: Alessandro Carelli <alessandro.carelli.design@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <b9e4d20f-978c-4613-a117-d3bb9a0c44b1@googlegroups.com>
+Subject: [tosdr:3367] Mimo Baby Monitor | Rating proposals
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_805_564449826.1419008949435"
+X-Original-Sender: alessandro.carelli.design@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_805_564449826.1419008949435
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_806_1272956783.1419008949435"
+
+------=_Part_806_1272956783.1419008949435
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi everyone.
+
+Here are my rating proposals for Mimo Baby Monitor=20
+<http://mimobaby.com/legal/>.
+
+[Here is my open question].=20
+<https://groups.google.com/forum/#!topic/tosdr/PExbj62V4jE>
+
+I hope this can help the conversation.
+
+Thanks,
+
+Alessandro
+
+
+
+01
+*Title:*
+You can use our Services without revealing any Personal Information about=
+=20
+yourself.
+*rank:*
+good
+*description:*
+As Rest Device Inc. claims on the privacy policy: =E2=80=9CIn general, you =
+can use=20
+our Services without telling us who you are or revealing any Personal=20
+Information about yourself=E2=80=9D. It probably means that registration is=
+ not=20
+mandatory but =E2=80=9C=E2=80=9Dby doing so, [user] may not be able to take=
+ advantage of=20
+many of our Services' features and functionality=E2=80=9D such as storying =
+user=E2=80=99s=20
+records etc.
+
+02
+*Title:*
+Your child=E2=80=99s biometric information will not share with third partie=
+s
+*Rank:*
+neutral
+*description:*
+Since Mimo is a cloud-base Baby Monitor that collects biometrical data Rest=
+=20
+Device Inc., the organization behind Mimo, claims on the Privacy policy=20
+that such data are not disclosed to third parties.
+
+
+03
+*Title:*
+Log information are not linked to Personal Information
+*Rank:*
+good
+*description:*
+As reported into Mimo=E2=80=99s Privacy policy: =E2=80=9CWe do not link thi=
+s automatically=20
+collected data [e.g. Internet protocol (IP) addresses, browser type,=20
+Internet service provider (ISP), referring/exit pages, operating system,=20
+date/time stamp, and clickstream data.] to Personal Information=E2=80=9D.
+
+04
+*Title:*
+Information stored in cookies are not linked to users Personal information.
+*Rank:*
+good
+*description:*
+As reported into Mimo=E2=80=99s Privacy policy: =E2=80=9Cwe do not link the=
+ information we=20
+store in cookies to any Personal Information you submit while on our=20
+Website=E2=80=9D.
+
+05
+*Title:*
+Information gathered by clear gifs are not linked to our customers'=20
+Personal Information.=20
+*Rank:*
+good
+*description:*
+As reported into Mimo=E2=80=99s Privacy Policy: =E2=80=9CWe use clear gifs =
+in our=20
+HTML-based emails to let us know which emails recipients have opened.=E2=80=
+=9D but =20
+=E2=80=9CWe do not tie the information gathered by clear gifs to our custom=
+ers'=20
+Personal Information=E2=80=9D.=20
+
+06
+*Title:*
+Location information are not shared with third parties (but probably mobile=
+=20
+metadata would be linked to personal information).
+*Rank:*
+neutral/bad
+*description:*
+Information as =E2=80=9C device's type, number and the serial number of its=
+ chip =E2=80=9D=20
+are collected from mobile devices and/or computers .=E2=80=9CWe do not shar=
+e your=20
+location information with third parties=E2=80=9D but whether such data are =
+linked=20
+to Personal information is not specified.
+
+07
+*Title:*
+Registration information is linked to aggregate information=20
+*Rank:*
+neutral
+*description:*
+=E2=80=9CWe may also link your registration information to aggregate inform=
+ation=20
+about your usage of our Services, and we will use that information to=20
+understand how you use our Services and to improve our performance of=20
+Services to you=E2=80=9D.
+
+08
+*Title:*
+Profile information is shared with third parties in aggregated form only
+*Rank:*
+good
+*description:*
+Profiles are made by information gathered from =E2=80=9Ccookies, log files,=
+ clear=20
+gifs, and/or third party sources=E2=80=9D. Such Profile information are not=
+ tied to=20
+Personal Information to =E2=80=9Cprovide tailored promotions and marketing =
+offers=20
+and to improve the content of the Website for you=E2=80=9D.
+
+09
+*Title:*
+When Personal Information is collected by third parties you will be notifie=
+d
+*Rank:*
+neutral
+*Summarize:*
+As reported into Mimo=E2=80=99s Privacy Policy:  =E2=80=9CYou will be notif=
+ied when your=20
+Personal Information is collected by any third party that is not our=20
+agent/service provider, so you can make an informed choice as to whether or=
+=20
+not to share your information with that party.=E2=80=9D
+
+10
+*Title:*
+We reserve the right to modify this Privacy Policy at any time with=20
+retroactive effect.
+*Rank:*
+bad
+*description:*
+As usual into ToS the organization  =E2=80=9Creserves the right to modify t=
+his=20
+Privacy Policy at any time, and such change will apply with respect to=20
+information you provide or your activity on the Website after the change in=
+=20
+policy=E2=80=9D.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_806_1272956783.1419008949435
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi everyone.<br><br>Here are my rating proposals for <a hr=
+ef=3D"http://mimobaby.com/legal/">Mimo Baby Monitor</a>.<br><br><a href=3D"=
+https://groups.google.com/forum/#!topic/tosdr/PExbj62V4jE">[Here is my open=
+ question].</a><br><br>I hope this can help the conversation.<br><br>Thanks=
+,<br><br>Alessandro<br><br><br><br>01<br><b>Title:</b><br><font size=3D"4">=
+You can use our Services without revealing any Personal Information about y=
+ourself.</font><br><b>rank:</b><br>good<br><b>description:</b><br>As Rest D=
+evice Inc. claims on the privacy policy: =E2=80=9CIn general, you can use o=
+ur Services without telling us who you are or revealing any Personal Inform=
+ation about yourself=E2=80=9D. It probably means that registration is not m=
+andatory but =E2=80=9C=E2=80=9Dby doing so, [user] may not be able to take =
+advantage of many of our Services' features and functionality=E2=80=9D such=
+ as storying user=E2=80=99s records etc.<br><br>02<br><b>Title:</b><br><fon=
+t size=3D"4">Your child=E2=80=99s biometric information will not share with=
+ third parties</font><br><b>Rank:</b><br>neutral<br><b>description:</b><br>=
+Since Mimo is a cloud-base Baby Monitor that collects biometrical data Rest=
+ Device Inc., the organization behind Mimo, claims on the Privacy policy th=
+at such data are not disclosed to third parties.<br><br><br>03<br><b>Title:=
+</b><br><font size=3D"4">Log information are not linked to Personal Informa=
+tion</font><br><b>Rank:</b><br>good<br><b>description:</b><br>As reported i=
+nto Mimo=E2=80=99s Privacy policy: =E2=80=9CWe do not link this automatical=
+ly collected data [e.g. Internet protocol (IP) addresses, browser type, Int=
+ernet service provider (ISP), referring/exit pages, operating system, date/=
+time stamp, and clickstream data.] to Personal Information=E2=80=9D.<br><br=
+>04<br><b>Title:</b><br><font size=3D"4">Information stored in cookies are =
+not linked to users Personal information.</font><br><b>Rank:</b><br>good<br=
+><b>description:</b><br>As reported into Mimo=E2=80=99s Privacy policy: =E2=
+=80=9Cwe do not link the information we store in cookies to any Personal In=
+formation you submit while on our Website=E2=80=9D.<br><br>05<br><b>Title:<=
+/b><br><font size=3D"4">Information gathered by clear gifs are not linked t=
+o our customers' Personal Information. </font><br><b>Rank:</b><br>good<br><=
+b>description:</b><br>As reported into Mimo=E2=80=99s Privacy Policy: =E2=
+=80=9CWe use clear gifs in our HTML-based emails to let us know which email=
+s recipients have opened.=E2=80=9D but&nbsp; =E2=80=9CWe do not tie the inf=
+ormation gathered by clear gifs to our customers' Personal Information=E2=
+=80=9D. <br><br>06<br><b>Title:</b><br><font size=3D"4">Location informatio=
+n are not shared with third parties (but probably mobile metadata would be =
+linked to personal information).</font><br><b>Rank:</b><br>neutral/bad<br><=
+b>description:</b><br>Information as =E2=80=9C device's type, number and th=
+e serial number of its chip =E2=80=9D are collected from mobile devices and=
+/or computers .=E2=80=9CWe do not share your location information with thir=
+d parties=E2=80=9D but whether such data are linked to Personal information=
+ is not specified.<br><br>07<br><b>Title:</b><br><font size=3D"4">Registrat=
+ion information is linked to aggregate information </font><br><b>Rank:</b><=
+br>neutral<br><b>description:</b><br>=E2=80=9CWe may also link your registr=
+ation information to aggregate information about your usage of our Services=
+, and we will use that information to understand how you use our Services a=
+nd to improve our performance of Services to you=E2=80=9D.<br><br>08<br><b>=
+Title:</b><br><font size=3D"4">Profile information is shared with third par=
+ties in aggregated form only</font><br><b>Rank:</b><br>good<br><b>descripti=
+on:</b><br>Profiles are made by information gathered from =E2=80=9Ccookies,=
+ log files, clear gifs, and/or third party sources=E2=80=9D. Such Profile i=
+nformation are not tied to Personal Information to =E2=80=9Cprovide tailore=
+d promotions and marketing offers and to improve the content of the Website=
+ for you=E2=80=9D.<br><br>09<br><b>Title:</b><br><font size=3D"4">When Pers=
+onal Information is collected by third parties you will be notified</font><=
+br><b>Rank:</b><br>neutral<br><b>Summarize:</b><br>As reported into Mimo=E2=
+=80=99s Privacy Policy:&nbsp; =E2=80=9CYou will be notified when your Perso=
+nal Information is collected by any third party that is not our agent/servi=
+ce provider, so you can make an informed choice as to whether or not to sha=
+re your information with that party.=E2=80=9D<br><br>10<br><b>Title:</b><br=
+><font size=3D"4">We reserve the right to modify this Privacy Policy at any=
+ time with retroactive effect.</font><br><b>Rank:</b><br>bad<br><b>descript=
+ion:</b><br>As usual into ToS the organization &nbsp;=E2=80=9Creserves the =
+right to modify this Privacy Policy at any time, and such change will apply=
+ with respect to information you provide or your activity on the Website af=
+ter the change in policy=E2=80=9D.<br><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_806_1272956783.1419008949435--
+------=_Part_805_564449826.1419008949435--

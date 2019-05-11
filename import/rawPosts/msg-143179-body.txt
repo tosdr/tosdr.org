@@ -1,0 +1,398 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp269817ioi;
+        Sat, 23 Apr 2016 20:00:50 -0700 (PDT)
+X-Received: by 10.66.231.73 with SMTP id te9mr39910590pac.62.1461466850438;
+        Sat, 23 Apr 2016 20:00:50 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBW7N6C4AKGQEQVXJVAA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id e187si17035335pfe.32.2016.04.23.20.00.49
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 20:00:50 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBW7N6C4AKGQEQVXJVAA@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBW7N6C4AKGQEQVXJVAA@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBW7N6C4AKGQEQVXJVAA@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 3AB7317209B
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 05:00:47 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2FF0C142047
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 05:00:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id VcIclv4VZlzc for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 05:00:45 +0200 (CEST)
+Received: from mail-qk0-x237.google.com (mail-qk0-x237.google.com [IPv6:2607:f8b0:400d:c09::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E4655142040
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 05:00:44 +0200 (CEST)
+Received: by mail-qk0-x237.google.com with SMTP id l68sf45858118qkf.0
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 20:00:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=gwUHkkalJG//VniYQ8e18tPD1QRnaErvEMDJZ4OyJIg=;
+        b=TPEqYC0LvAii687cyvjrTMFNh6/664oKwZjJvcXFxgkPiI7oJYjI5XvKwXHJfOxBpx
+         HIcm+SmrG5xx4bMD8ZXhgihllLhbpYlhkNctzkMQgy4sosQv5LbmvpK2fOfxvu7szJk1
+         qUwztomko3ZuVW4INlV6IVQjaTM7cMy3flf48dL3FOcOAE+ummQr8bFImxgEH6Q+T2/+
+         W/k2Gb3XcbJ0UsbSxLjZ0dWi9YbgsVLcKswI+UPCbwR3P764nrwDyYHZxiDPZWGjQwdR
+         31M0dj601tvv6JSzx+BGko+41A/mIdEhp7f1YY53M6His4GEFPbodutijOKlIqBAXLQV
+         8ieA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=gwUHkkalJG//VniYQ8e18tPD1QRnaErvEMDJZ4OyJIg=;
+        b=aHy6DPm60Phn9yCEH0408LqC54K4HipzojDBOfDENW6i6TvphWHOIHbjJjzHTd0pTu
+         g4PKt5/kIZTjfEf0he6vhuUNuxexfGZufgiseuRQw73+j41mweYD2wA7cAk5Eaceyqg5
+         H/Xi1xJWbC39ZIQwEO5bVKxW18zF+XK/fla1GV3W9/+sib2c63OeZ2JsJpDYk5XFEZhU
+         9qMShJP9u8M4xOBO4hlUlpahxIKjj9IB2XJ7IPanlURp9f0ngSlI/au/YZPWMYgu9hf0
+         xdI7ImZGVPBrBi2/AqMCI+ZD/XVvsD7SE3py0aGP34gkebsksRVG1cd1TGD5/t6kfwuX
+         A+LA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=gwUHkkalJG//VniYQ8e18tPD1QRnaErvEMDJZ4OyJIg=;
+        b=apsfYwjI1l3AXGPKjqWCKYusw0PrCWszxzpMTwjdUgskOd6DsM3N9+wPceZpeIVQTh
+         WikRkf2+Rhxm9GZ0EtxkftnTKcQEW58K16oI5d2hGrGE5VJbWiKGbYzD9luotgqJdAJD
+         HZiG7V6SNUkk5nks0opJeJXIt32IvKe9grahOSPTWXd1VxF+qwxBmh/qdB1ZhSaa0CVM
+         S6TN181WxmX8Exm9lLI+pjCUkvs60D7St4HsAMJ1L/l/K3pUtCmnzNHfJgodkztxvuJn
+         iDeXDefSPkzHcOaWE4bom9boaFzyYHtFEkd77zBiqaFvQEKiEmwHipnC6ZkBeLlJoggd
+         KlLg==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FUxbXZE02O+bFFDupi6QDl89vudayr5NEXl+MF/Ky3Ys2RkwuNJ9yk9Ek4bbeBzjw==
+X-Received: by 10.182.113.198 with SMTP id ja6mr305700obb.0.1461466844134;
+        Sat, 23 Apr 2016 20:00:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.248.130 with SMTP id ym2ls367822obc.16.gmail; Sat, 23 Apr
+ 2016 20:00:43 -0700 (PDT)
+X-Received: by 10.182.176.40 with SMTP id cf8mr297106obc.8.1461466843720;
+        Sat, 23 Apr 2016 20:00:43 -0700 (PDT)
+Date: Sat, 23 Apr 2016 20:00:43 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <7bcb651a-2d80-4ce3-a940-1b5c567570fa@googlegroups.com>
+Subject: [tosdr:3857] [Good] Snapchat offers safety guidelines.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4249_301454303.1461466843118"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4249_301454303.1461466843118
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4250_881254230.1461466843119"
+
+------=_Part_4250_881254230.1461466843119
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+=20
+
+https://www.snapchat.com/terms
+
+*8. Safety*=20
+
+=E2=80=9CWe try hard to keep our Services a safe place for all users. But w=
+e can't=20
+guarantee it. That's where you come in. By using the Services, you agree=20
+that:
+
+   -=20
+  =20
+   You will not use the Services for any purpose that is illegal or=20
+   prohibited in these Terms.
+   -=20
+  =20
+   You will not use any robot, spider, crawler, scraper, or other automated=
+=20
+   means or interface to access the Services or extract other user's=20
+   information.
+   -=20
+  =20
+   You will not use or develop any third-party applications that interact=
+=20
+   with the Services or other users' content or information without our=20
+   written consent.
+   -=20
+  =20
+   You will not use the Services in a way that could interfere with,=20
+   disrupt, negatively affect, or inhibit other users from fully enjoying t=
+he=20
+   Services, or that could damage, disable, overburden, or impair the=20
+   functioning of the Services.
+   -=20
+  =20
+   You will not use or attempt to use another user's account, username, or=
+=20
+   password without their permission.
+   -=20
+  =20
+   You will not solicit login credentials from another user.
+   -=20
+  =20
+   You will not post content that contains pornography, graphic violence,=
+=20
+   threats, hate speech, or incitements to violence.
+   -=20
+  =20
+   You will not upload viruses or other malicious code or otherwise=20
+   compromise the security of the Services.
+   -=20
+  =20
+   You will not attempt to circumvent any content-filtering techniques we=
+=20
+   employ, or attempt to access areas or features of the Services that you =
+are=20
+   not authorized to access.
+   -=20
+  =20
+   You will not probe, scan, or test the vulnerability of our Services or=
+=20
+   any system or network.
+   -=20
+  =20
+   You will not encourage or promote any activity that violates these Terms=
+.
+  =20
+We also care about your safety while using our Services. So do not use our=
+=20
+Services in a way that would distract you from obeying traffic or safety=20
+laws. And never put yourself or others in harm's way just to capture a=20
+Snap.=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/7bcb651a-2d80-4ce3-a940-1b5c567570fa%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4250_881254230.1461466843119
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><font color=3D"#000000" face=3D"Times New Roman" size=
+=3D"3">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><a href=3D"https://www.snapchat.co=
+m/terms"><font color=3D"#0088cc" face=3D"Calibri" size=3D"2">https://www.sn=
+apchat.com/terms</font></a></p><font color=3D"#000000" face=3D"Times New Ro=
+man" size=3D"2">
+
+</font></div><div><font size=3D"2"><br></font></div><div><font color=3D"#00=
+0000" face=3D"Times New Roman" size=3D"2">
+
+</font><h2 style=3D"margin: 10pt 0in 0pt;"><span lang=3D"EN" style=3D"mso-a=
+nsi-language: EN;"><strong><font color=3D"#4f81bd" face=3D"Cambria" size=3D=
+"2">8. Safety</font></strong></span></h2><font color=3D"#000000" face=3D"Ti=
+mes New Roman" size=3D"2">
+
+</font><p><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;s=
+ans-serif&quot;; mso-ansi-language: EN;"><font color=3D"#000000" size=3D"2"=
+>=E2=80=9CWe try hard to keep our Services a safe place for all
+users. But we can&#39;t guarantee it. That&#39;s where you come in. By usin=
+g the
+Services, you agree that:</font></span></p><font color=3D"#000000" face=3D"=
+Times New Roman" size=3D"2">
+
+</font><ul style=3D"list-style-type: disc; direction: ltr;"><li style=3D"fo=
+nt-style: normal; font-weight: normal;"><p style=3D"line-height: 17.15pt; f=
+ont-style: normal; font-weight: normal; margin-top: 0in; margin-bottom: 0pt=
+; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level=
+1 lfo1; tab-stops: list .5in;"><span lang=3D"EN" style=3D"font-family: &quo=
+t;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><font size=3D=
+"2">You will not use the Services for
+any purpose that is illegal or prohibited in these Terms.</font></span></p>=
+</li><li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&q=
+uot;,&quot;serif&quot;; font-style: normal; font-weight: normal;"><p style=
+=3D"color: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot;Calibri&q=
+uot;,&quot;sans-serif&quot;; font-style: normal; font-weight: normal; margi=
+n-top: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-bottom=
+-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><span lang=3D"=
+EN" style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ans=
+i-language: EN;"><font size=3D"2">You will not use any robot, spider,
+crawler, scraper, or other automated means or interface to access the Servi=
+ces
+or extract other user&#39;s information.</font></span></p></li><li style=3D=
+"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;,&quot;serif&=
+quot;; font-style: normal; font-weight: normal;"><p style=3D"color: rgb(0, =
+0, 0); line-height: 17.15pt; font-family: &quot;Calibri&quot;,&quot;sans-se=
+rif&quot;; font-style: normal; font-weight: normal; margin-top: 0in; margin=
+-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-li=
+st: l0 level1 lfo1; tab-stops: list .5in;"><span lang=3D"EN" style=3D"font-=
+family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><=
+font size=3D"2">You will not use or develop any
+third-party applications that interact with the Services or other users&#39=
+;
+content or information without our written consent.</font></span></p></li><=
+li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;,&=
+quot;serif&quot;; font-style: normal; font-weight: normal;"><p style=3D"col=
+or: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot;Calibri&quot;,&q=
+uot;sans-serif&quot;; font-style: normal; font-weight: normal; margin-top: =
+0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: a=
+uto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><span lang=3D"EN" sty=
+le=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-langu=
+age: EN;"><font size=3D"2">You will not use the Services in a
+way that could interfere with, disrupt, negatively affect, or inhibit other
+users from fully enjoying the Services, or that could damage, disable,
+overburden, or impair the functioning of the Services.</font></span></p></l=
+i><li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot=
+;,&quot;serif&quot;; font-style: normal; font-weight: normal;"><p style=3D"=
+color: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot;Calibri&quot;=
+,&quot;sans-serif&quot;; font-style: normal; font-weight: normal; margin-to=
+p: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt=
+: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><span lang=3D"EN" =
+style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-la=
+nguage: EN;"><font size=3D"2">You will not use or attempt to use
+another user&#39;s account, username, or password without their permission.=
+</font></span></p></li><li style=3D"color: rgb(0, 0, 0); font-family: &quot=
+;Times New Roman&quot;,&quot;serif&quot;; font-style: normal; font-weight: =
+normal;"><p style=3D"color: rgb(0, 0, 0); line-height: 17.15pt; font-family=
+: &quot;Calibri&quot;,&quot;sans-serif&quot;; font-style: normal; font-weig=
+ht: normal; margin-top: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; =
+mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in=
+;"><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;sans-ser=
+if&quot;; mso-ansi-language: EN;"><font size=3D"2">You will not solicit log=
+in
+credentials from another user.</font></span></p></li><li style=3D"color: rg=
+b(0, 0, 0); font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; fon=
+t-style: normal; font-weight: normal;"><p style=3D"color: rgb(0, 0, 0); lin=
+e-height: 17.15pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;=
+ font-style: normal; font-weight: normal; margin-top: 0in; margin-bottom: 0=
+pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 lev=
+el1 lfo1; tab-stops: list .5in;"><span lang=3D"EN" style=3D"font-family: &q=
+uot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><font size=
+=3D"2">You will not post content that
+contains pornography, graphic violence, threats, hate speech, or incitement=
+s to
+violence.</font></span></p></li><li style=3D"color: rgb(0, 0, 0); font-fami=
+ly: &quot;Times New Roman&quot;,&quot;serif&quot;; font-style: normal; font=
+-weight: normal;"><p style=3D"color: rgb(0, 0, 0); line-height: 17.15pt; fo=
+nt-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; font-style: normal; =
+font-weight: normal; margin-top: 0in; margin-bottom: 0pt; mso-margin-top-al=
+t: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: =
+list .5in;"><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot=
+;sans-serif&quot;; mso-ansi-language: EN;"><font size=3D"2">You will not up=
+load viruses or other
+malicious code or otherwise compromise the security of the Services.</font>=
+</span></p></li><li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times =
+New Roman&quot;,&quot;serif&quot;; font-style: normal; font-weight: normal;=
+"><p style=3D"color: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot=
+;Calibri&quot;,&quot;sans-serif&quot;; font-style: normal; font-weight: nor=
+mal; margin-top: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-mar=
+gin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><spa=
+n lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot=
+;; mso-ansi-language: EN;"><font size=3D"2">You will not attempt to circumv=
+ent
+any content-filtering techniques we employ, or attempt to access areas or
+features of the Services that you are not authorized to access.</font></spa=
+n></p></li><li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New R=
+oman&quot;,&quot;serif&quot;; font-style: normal; font-weight: normal;"><p =
+style=3D"color: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot;Cali=
+bri&quot;,&quot;sans-serif&quot;; font-style: normal; font-weight: normal; =
+margin-top: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-b=
+ottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><span lan=
+g=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; ms=
+o-ansi-language: EN;"><font size=3D"2">You will not probe, scan, or test
+the vulnerability of our Services or any system or network.</font></span></=
+p></li><li style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman=
+&quot;,&quot;serif&quot;; font-style: normal; font-weight: normal;"><p styl=
+e=3D"color: rgb(0, 0, 0); line-height: 17.15pt; font-family: &quot;Calibri&=
+quot;,&quot;sans-serif&quot;; font-style: normal; font-weight: normal; marg=
+in-top: 0in; margin-bottom: 0pt; mso-margin-top-alt: auto; mso-margin-botto=
+m-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><span lang=3D=
+"EN" style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-an=
+si-language: EN;"><font size=3D"2">You will not encourage or promote
+any activity that violates these Terms.</font></span></p></li></ul><font co=
+lor=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font><p><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;s=
+ans-serif&quot;; mso-ansi-language: EN;"><font color=3D"#000000" size=3D"2"=
+>We also care about your safety while using our Services.
+So do not use our Services in a way that would distract you from obeying tr=
+affic
+or safety laws. And never put yourself or others in harm&#39;s way just to =
+capture
+a Snap.=E2=80=9D</font></span></p><font color=3D"#000000" face=3D"Times New=
+ Roman" size=3D"3">
+
+</font></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/7bcb651a-2d80-4ce3-a940-1b5c567570fa%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/7bcb651a-2d80-4ce3-a940-1b5c567570fa%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4250_881254230.1461466843119--
+------=_Part_4249_301454303.1461466843118--

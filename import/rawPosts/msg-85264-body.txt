@@ -1,0 +1,25 @@
+MIME-Version: 1.0
+Received: by 10.152.10.228 with HTTP; Wed, 8 Aug 2012 02:23:35 -0700 (PDT)
+X-Originating-IP: [91.64.228.42]
+Date: Wed, 8 Aug 2012 11:23:35 +0200
+Delivered-To: michiel@unhosted.org
+Message-ID: <CA+aD3u0vb5p9EgWFVVMaVrm-aOPhg4GXA5s3Z-aOpFW2+Aj1KQ@mail.gmail.com>
+Subject: http://tos-dr.info/ doesn't work in Internet Explorer apparently?
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi!
+
+we were alerted that http://tos-dr.info/ is not working in Internet
+Explorer: https://news.ycombinator.com/item?id=4353207
+
+Does anybody on this list have the skills to fix that? The code is
+quite hacky but what it does is recursively fetch the list of services
+and of data points using XHR. Apparently this is simply not happening
+if you open the site in Internet Explorer. If someone can check why
+this might be then that would be awesome! the code is on
+https://github.com/unhosted/ToS-DR
+
+ciao,
+Michiel

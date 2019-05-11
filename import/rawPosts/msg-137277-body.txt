@@ -1,0 +1,164 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.148 with SMTP id j142csp1200386ioj;
+        Fri, 30 Oct 2015 09:15:30 -0700 (PDT)
+X-Received: by 10.28.10.13 with SMTP id 13mr4204792wmk.8.1446221730118;
+        Fri, 30 Oct 2015 09:15:30 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBGVPZ2YQKGQEHHQUGKA@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id wn7si9870490wjb.200.2015.10.30.09.15.29
+        for <michiel@unhosted.org>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Fri, 30 Oct 2015 09:15:30 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBGVPZ2YQKGQEHHQUGKA@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBC3IF2OJ4QORBGVPZ2YQKGQEHHQUGKA@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBC3IF2OJ4QORBGVPZ2YQKGQEHHQUGKA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id CCF0AA8153
+	for <michiel@unhosted.org>; Fri, 30 Oct 2015 17:15:29 +0100 (CET)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id BEFBC14227D
+	for <michiel@unhosted.org>; Fri, 30 Oct 2015 17:15:29 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 9V0ulY0uPTEy for <michiel@unhosted.org>;
+	Fri, 30 Oct 2015 17:15:27 +0100 (CET)
+Received: from mail-lb0-x237.google.com (mail-lb0-x237.google.com [IPv6:2a00:1450:4010:c04::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 4A49714220C
+	for <michiel@michielbdejong.com>; Fri, 30 Oct 2015 17:15:24 +0100 (CET)
+Received: by lbvc6 with SMTP id c6sf18601299lbv.1
+        for <michiel@michielbdejong.com>; Fri, 30 Oct 2015 09:15:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=U6vpvT1T/N6yepx7Hl0eyMdS70uY2FVYcval7Jzeq04=;
+        b=YoQseLWN2j0HeswXkYYXsfZKV1v1bOQLGDs4LMobUQZptj1I+tIBOFIG1z1I80VQqw
+         PWlzYJUvWupA9IboJmqRgUiCZiry2afFcaRzxVmlsWvKYcVwF9f8KPtphK0UrvKtvoJD
+         lCTQLIszprzHhDnC+YtlSjl852sP/Z1FPC/GXb94UC9klhzdapOsF3os1q+Vm8dCfjBV
+         d40j+7sDEGoBMxURM9AlwLfi5Nx6+VxFOcHImdDyPcTVUbcm+MuY5G0LwvqB3368fvD1
+         QN7b76c/x/sNnYhXIX0G9eKyfenhqdpZ7kLUljXyes9F9HuSQFQKikWuibIkzKGIcSuV
+         SNoQ==
+X-Received: by 10.25.164.20 with SMTP id n20mr106672lfe.2.1446221723657;
+        Fri, 30 Oct 2015 09:15:23 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.25.28.195 with SMTP id c186ls252976lfc.71.gmail; Fri, 30 Oct
+ 2015 09:15:22 -0700 (PDT)
+X-Received: by 10.112.144.105 with SMTP id sl9mr1887718lbb.3.1446221722528;
+        Fri, 30 Oct 2015 09:15:22 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id t2si121482wme.1.2015.10.30.09.15.22
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 30 Oct 2015 09:15:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@tosdr.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 6408F63B6F9
+	for <tosdr@googlegroups.com>; Fri, 30 Oct 2015 17:15:27 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id iwFHiq+4tMra for <tosdr@googlegroups.com>;
+	Fri, 30 Oct 2015 17:15:24 +0100 (CET)
+Received: from localhost (195-132-24-191.rev.numericable.fr [195.132.24.191])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 05E2663B6F7
+	for <tosdr@googlegroups.com>; Fri, 30 Oct 2015 17:15:23 +0100 (CET)
+Date: Fri, 30 Oct 2015 17:15:16 +0100
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3677] League of Legends EULA
+Message-ID: <20151030161516.GL21891@xps>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <CADDVW_9AJa42tYNYxKkqhBej12TaoB2DKo4kisqZLFkroM-2iw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="TnYVF1hk1c8rpHiF"
+Content-Disposition: inline
+In-Reply-To: <CADDVW_9AJa42tYNYxKkqhBej12TaoB2DKo4kisqZLFkroM-2iw@mail.gmail.com>
+User-Agent: Mutt/1.5.23.1 (2014-03-12)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best
+ guess record for domain of hugo@tosdr.org) smtp.mailfrom=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--TnYVF1hk1c8rpHiF
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2015-10-29 Thu 19:26, Cole Pedrick <skeliath@gmail.com>:
+> I'm not sure how legal this part of the EULA is:
+
+
+Hello,
+
+We usually do not analyse the legality of clauses (unless they are
+obvious and apply to many jurisdictions in the world).
+
+The reason why we do this is because the answer depends in which
+jurisdiction and under which law(s) this would be interpreted.
+
+
+However, nothing bars you from pointing out that this provision in
+their terms seem intrusive to you.
+
+You can try to submit this to https://edit.tosdr.org/=20
+
+Thanks,
+Hugo
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read https://www.tosdr.org
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--TnYVF1hk1c8rpHiF
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEcBAEBCgAGBQJWM5eUAAoJEI0CLJmz17eV8YUIALY/JdT6tDWtkZe/7fM6p32G
+Vw33ZlWoQ2COrHmhNRbd7wiLMF0N1yYPPZLnLxd6ZY0CFAICf7J3/HxHC3ymsKPe
+KTK5lL84bKDMtOSJQvu065Uuzjm47DorfOmutyD7rDKvXLMRkWz049avfNSOW0aq
+grbGyNqWnZNj0ZJ5uIfAatM7AVvL4PB7MIknaxnyciCOmY8iJeQbXVS/2LrKtLLL
+fMT1cpqHijkvsTIPOpDEl7amKh2lQL7wshvv44Rl98EkmeCdAUZ4os0l6EcdKtVa
+eSAZ76OVgOkGp029MnITOBVLbjozCp9VXAdBCz30TCX2J7/wU6cN/YXE8/tihk8=
+=n+2I
+-----END PGP SIGNATURE-----
+
+--TnYVF1hk1c8rpHiF--

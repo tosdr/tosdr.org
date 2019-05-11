@@ -1,0 +1,104 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp277089wfj;
+        Tue, 10 Jul 2012 02:11:53 -0700 (PDT)
+Received: by 10.14.95.201 with SMTP id p49mr10373415eef.103.1341911512611;
+        Tue, 10 Jul 2012 02:11:52 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDW4-__BBoESaGikw@googlegroups.com>
+Received: from mail-ee0-f64.google.com (mail-ee0-f64.google.com [74.125.83.64])
+        by mx.google.com with ESMTPS id y6si19446848eef.52.2012.07.10.02.11.51
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 10 Jul 2012 02:11:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDW4-__BBoESaGikw@googlegroups.com designates 74.125.83.64 as permitted sender) client-ip=74.125.83.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDW4-__BBoESaGikw@googlegroups.com designates 74.125.83.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDW4-__BBoESaGikw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by eekd49 with SMTP id d49sf305225eek.29
+        for <multiple recipients>; Tue, 10 Jul 2012 02:11:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=ODbzWWKUG00ZLsAJOuXh/dbrt03yqw0Ra5iioK/CGik=;
+        b=HGIY1leyfifhvckWMZJU2jS1QyLZha+M3V8XkDCEN9lLyt7rjNMOBUa0zeKsiy1EUk
+         ITYbytVCdw1Oie7q9l4eZ0+VKfpUxAuX0I3E2+82cRkjVeQ+EB+ID0Ljm0bXzdiSOeHO
+         zkhqsQ6DxsusY3+k+SfeuW2Q6BODrkB88ebPs=
+Received: by 10.216.139.13 with SMTP id b13mr402498wej.65.1341911510935;
+        Tue, 10 Jul 2012 02:11:50 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.84.68 with SMTP id w4ls4794721wiy.2.canary; Tue, 10 Jul
+ 2012 02:11:50 -0700 (PDT)
+Received: by 10.216.140.219 with SMTP id e69mr1641898wej.1.1341911510384;
+        Tue, 10 Jul 2012 02:11:50 -0700 (PDT)
+Received: by 10.216.140.219 with SMTP id e69mr1641896wej.1.1341911510368;
+        Tue, 10 Jul 2012 02:11:50 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id fb20si3651496wid.3.2012.07.10.02.11.50
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 10 Jul 2012 02:11:50 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 1B1F863B4EE;
+	Tue, 10 Jul 2012 11:11:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4jmgc0B8Yicl; Tue, 10 Jul 2012 11:11:43 +0200 (CEST)
+Received: from [IPv6:2001:67c:28dc:850:8537:1248:b5b:30b7] (unknown [IPv6:2001:67c:28dc:850:8537:1248:b5b:30b7])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 147D663A671;
+	Tue, 10 Jul 2012 11:11:43 +0200 (CEST)
+Message-ID: <1341911502.3920.10.camel@synclavier.lan>
+Subject: Re: [good] Twitter does not requrie cookies
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 10 Jul 2012 11:11:42 +0200
+In-Reply-To: <CA+aD3u1AZvcWa4=g95jb0b4GopG_Tfq1sxFvgiN29hURe3jyCg@mail.gmail.com>
+References: <1339773352.21271.22.camel@synclavier.lan>
+	 <CA+aD3u1z_R44i07s3Mwi+VaLF65GLF4DfuDa6JD8KRxAywGhyw@mail.gmail.com>
+	 <1340124209.5340.78.camel@synclavier.lan>
+	 <CA+aD3u1AZvcWa4=g95jb0b4GopG_Tfq1sxFvgiN29hURe3jyCg@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le mardi 10 juillet 2012 =E0 08:56 +0300, Michiel de Jong a =E9crit :
+> i think maybe we should not give class A unless a website has an
+> explicit "we don't track you" policy.=20
+
+agreed
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

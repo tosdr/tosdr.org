@@ -1,0 +1,139 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp413wfj;
+        Wed, 20 Jun 2012 17:27:05 -0700 (PDT)
+Received: by 10.68.225.6 with SMTP id rg6mr83204700pbc.100.1340238425081;
+        Wed, 20 Jun 2012 17:27:05 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxDY1In_BBoES6ZF7g@googlegroups.com>
+Received: from mail-pb0-f64.google.com (mail-pb0-f64.google.com [209.85.160.64])
+        by mx.google.com with ESMTPS id hw8si2494277pbc.326.2012.06.20.17.27.04
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 17:27:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxDY1In_BBoES6ZF7g@googlegroups.com designates 209.85.160.64 as permitted sender) client-ip=209.85.160.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxDY1In_BBoES6ZF7g@googlegroups.com designates 209.85.160.64 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxDY1In_BBoES6ZF7g@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by pbbrp2 with SMTP id rp2sf930853pbb.29
+        for <multiple recipients>; Wed, 20 Jun 2012 17:27:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip
+         :in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=72NvQNC1MSHbcYp7UxafEhYcYZ75i9GVWz6/ILx8Qhc=;
+        b=jI9glLg86ZSsPLinIBn5YDmcKXGbHFtfWCvRILqUbLEf1xzHWmzKdeEoA2OL7X+2Mm
+         VEUuOgen76+eFI2iPIiClycA2P8pEgvwDtB1z7pnB4lmIQ2tUOSHqGYrmqVKDBkzeMqS
+         DGSvAE6EPzUlSnvF+UJeBpw1Tx3n7SF/utiDI=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip
+         :in-reply-to:references:from:date:message-id:subject:to
+         :x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=72NvQNC1MSHbcYp7UxafEhYcYZ75i9GVWz6/ILx8Qhc=;
+        b=gCBKYP+g4qQbeXW8BpIWnucCp5b/tm/OTm1NVp4i2e/Y7/+qWT3hGwgyDF3a/ZRYqc
+         1lQuMXSTUqjp/lCmfAH0nY+8b0kh4uIxV3lN7u/i6alW1vS9mjRr0FSlsdootd8u+Pjx
+         VEPKTvmIlSU6h4HsDgAu3z9JCXkVP8DXMiG6LPiVSHNhVWRvkadh22LuBdk1Rat0n1BS
+         aYyOXjWKQtCAQCW2Zwm15Rca2Fh3klBj4eT0Iuuq9wBbAW/OASwHjzK0o2sVBMOXdvup
+         CV6asaXCbZlXIANf2+ph3Hw7BeIjABZzYUjeNjbMA2AJpdmT/GmoeB8Rvajuc6bh0RlP
+         yGEg==
+Received: by 10.68.236.170 with SMTP id uv10mr3546691pbc.11.1340238424897;
+        Wed, 20 Jun 2012 17:27:04 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.229.8 with SMTP id sm8ls653687pbc.0.gmail; Wed, 20 Jun 2012
+ 17:27:03 -0700 (PDT)
+Received: by 10.68.196.232 with SMTP id ip8mr24300674pbc.6.1340238423690;
+        Wed, 20 Jun 2012 17:27:03 -0700 (PDT)
+Received: by 10.68.196.232 with SMTP id ip8mr24300672pbc.6.1340238423681;
+        Wed, 20 Jun 2012 17:27:03 -0700 (PDT)
+Received: from mail-pb0-f41.google.com (mail-pb0-f41.google.com [209.85.160.41])
+        by gmr-mx.google.com with ESMTPS id ph6si3784727pbc.2.2012.06.20.17.27.03
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 17:27:03 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.160.41 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.160.41;
+Received: by pbbrp2 with SMTP id rp2so1701054pbb.14
+        for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 17:27:03 -0700 (PDT)
+Received: by 10.68.225.170 with SMTP id rl10mr81072237pbc.13.1340238423097;
+ Wed, 20 Jun 2012 17:27:03 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Wed, 20 Jun 2012 17:26:42 -0700 (PDT)
+X-Originating-IP: [76.126.240.28]
+In-Reply-To: <1340204741.11576.31.camel@synclavier.lan>
+References: <1340200389.11576.12.camel@synclavier.lan> <CA+aD3u3UkXqSe3hBVoZFF1-HBOjZoojEmKqV7=NpE=eQoLkb5w@mail.gmail.com>
+ <1340204741.11576.31.camel@synclavier.lan>
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Wed, 20 Jun 2012 17:26:42 -0700
+Message-ID: <CABQMFTR8QeGHM31EpOVvSBVALpeKBFn8m5-uz5OfAY1h_PEEaw@mail.gmail.com>
+Subject: Re: [good] SeenThis allows you to export your data in XML
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQkbsXXBndN6/ViUChO/ciyk6TBQp2/fCyDqri/vMAhemO7xjaQRUGG4jC0f/g16cArqmOj0
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.160.41 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+With exporting, having some random XML file or other dump is obviously
+not enough. The service has to export it into a common format. For
+contacts, that would be VCF, for events ICAL, for feeds OPML and so
+on.
+
+Just having your data in a technical file without knowing what to do
+with it is a good start but not really worth much.
+
+
+On Wed, Jun 20, 2012 at 8:05 AM, Hugo Roy <hugo@fsfe.org> wrote:
+> Le mercredi 20 juin 2012 =E0 16:55 +0200, Michiel de Jong a =E9crit :
+>> this is also true of google and facebook, you can download a zip file
+>> with all your data
+>
+> "all your data" really?
+>
+> I've tried several tools from Google. It is not always the case. The
+> problem is that there are so many services, we need to check a lot of
+> things.
+>
+> As for Facebook, the "download your data" feature is a JOKE. You might
+> as well do CTRL+S on your facebook profile's pages and get more data (at
+> least when I tried it=85 maybe a year ago?)
+> --
+> Hugo Roy
+> =A0French Coordinator, FSFE =A0 =A0 =A0 chat: hugo@jabber.fsfe.org
+> =A0www.fsfe.org/about/roy =A0 =A0 =A0 =A0 mobile: +336 08 74 13 41
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 mobile DE=
+: +49 151 143 56 563
+>
+> --
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> For more options, visit this group at http://groups.google.com/group/tosd=
+r?hl=3Den.
+>
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,37 @@
+MIME-Version: 1.0
+Received: by 10.49.17.196 with HTTP; Wed, 15 Aug 2012 23:42:42 -0700 (PDT)
+X-Originating-IP: [89.204.137.138]
+Date: Thu, 16 Aug 2012 08:42:42 +0200
+Delivered-To: michiel@unhosted.org
+Message-ID: <CA+aD3u1cXcxZKjiGkjDVi1SzgO=oW8Wq42PCqmx-Xd4Cw-W=dQ@mail.gmail.com>
+Subject: pre-generated html for the website
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+
+hi,
+
+This message is mainly for Hugo, but you're invited to read along if
+you're interested in our website operations:
+
+i added a node script 'render.js' that generates the full index.html
+into static html. hopefully it helps to fix some of the browser
+problems and endless spinners that people have been having.
+
+it takes index-prefix.html and index-suffix.html and puts the services
+list and the popup elements in the middle. it writes its output to
+index-gen.html and currently takes its services list from
+index/services2.json
+
+Hugo, please see if index-gen.html looks OK to you and then you can
+copy it to index.html so that it's what people see when they visit the
+site. do note that now each time after you run 'node buildIndexes.js'
+you have to run 'node render.js' to make the new data visible in the
+pre-generated page.
+
+Also, if you want to make html changes to the index page, you'll have
+to do them in index-prefix.html or index-suffix.html as appropriate.
+
+
+HTH,
+Michiel

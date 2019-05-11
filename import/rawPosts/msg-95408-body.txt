@@ -1,0 +1,140 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp148693qek;
+        Fri, 21 Sep 2012 10:54:44 -0700 (PDT)
+Received: by 10.220.220.203 with SMTP id hz11mr3413426vcb.50.1348250084798;
+        Fri, 21 Sep 2012 10:54:44 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBY6T6KBAKGQE2ZED4TI@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id a14si5728534vcw.69.2012.09.21.10.54.44
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 21 Sep 2012 10:54:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBY6T6KBAKGQE2ZED4TI@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBY6T6KBAKGQE2ZED4TI@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBY6T6KBAKGQE2ZED4TI@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbf13 with SMTP id f13sf2657064vcb.29
+        for <michiel@unhosted.org>; Fri, 21 Sep 2012 10:54:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-originating-ip:x-virus-scanned
+         :x-originating-ip:message-id:subject:from:to:date:mime-version
+         :x-mailer:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=6wqyg2y9AAefxaVi1DzzHkKraHv0mPDv8L99SnBKtxQ=;
+        b=nt/pzKABU/LBchdOGnV7/sdNIH1OzgMEnOUQ+VAWhS52ixZzPm1Zy7NKss+MwTufXr
+         TX1QRV0VRIgfF2AzKq0KTuLU8d+31Gzk/AfuO6vmEm8sgQUI6j5VrXCrT2vNQ8OSgzO+
+         uKdW2SgZbNYxtp95qUPfFP8Fs27bWlbhO1/ZZBbwmHIVf0Qfh+R7nO43b4R3yfDOftpa
+         kyv64iWE8z4xvgexjdwsZa0ti7awwjp+MRwi7jSEaFgcV3Y+lGg5ArcGzCvX9kVeK+V2
+         UjtC6FXFNUrGMGJyEcTjCbVH1fnLWoiWRT93M2o5etkZY8VU5QSyAoyoZaqaRjfYethS
+         YfSg==
+Received: by 10.224.180.74 with SMTP id bt10mr1764661qab.7.1348250084460;
+        Fri, 21 Sep 2012 10:54:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.229.106.130 with SMTP id x2ls2790619qco.3.gmail; Fri, 21 Sep
+ 2012 10:54:43 -0700 (PDT)
+Received: by 10.224.207.197 with SMTP id fz5mr4184356qab.3.1348250083579;
+        Fri, 21 Sep 2012 10:54:43 -0700 (PDT)
+Received: by 10.224.207.197 with SMTP id fz5mr4184355qab.3.1348250083566;
+        Fri, 21 Sep 2012 10:54:43 -0700 (PDT)
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by gmr-mx.google.com with ESMTP id t29si2987511qcz.1.2012.09.21.10.54.43;
+        Fri, 21 Sep 2012 10:54:43 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning hugo@hugoroy.eu does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+X-Originating-IP: 217.70.178.136
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id EF2DB172090
+	for <tosdr@googlegroups.com>; Fri, 21 Sep 2012 19:54:32 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from relay4-d.mail.gandi.net ([217.70.183.196])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id l8l+8sTeS54P for <tosdr@googlegroups.com>;
+	Fri, 21 Sep 2012 19:54:31 +0200 (CEST)
+X-Originating-IP: 80.67.177.11
+Received: from [192.168.1.40] (reverse-177-11.fdn.fr [80.67.177.11])
+	(Authenticated sender: hugo@ampoliros.net)
+	by relay4-d.mail.gandi.net (Postfix) with ESMTPSA id 92B6917209D
+	for <tosdr@googlegroups.com>; Fri, 21 Sep 2012 19:54:31 +0200 (CEST)
+Message-ID: <1348235979.29925.9.camel@synclavier.lan>
+Subject: =?windows-1252?Q?=5Btosdr=3A847=5D_=5BFwd=3A_New_feedback_for_=22Terms_of_Service?=
+	=?windows-1252?Q?=3B_Didn=92t_Read=22=5D?=
+From: Hugo Roy <hugo@hugoroy.eu>
+To: tosdr@googlegroups.com
+Date: Fri, 21 Sep 2012 15:59:39 +0200
+Mime-Version: 1.0
+X-Mailer: Evolution 3.4.3-1
+X-Original-Sender: hugo@hugoroy.eu
+X-Original-Authentication-Results: gmr-mx.google.com; spf=softfail
+ (google.com: domain of transitioning hugo@hugoroy.eu does not designate
+ 217.70.183.196 as permitted sender) smtp.mail=hugo@hugoroy.eu
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hi,=20
+
+This is a kind of comment that we had a lot. This might be a cultural
+difference, but I would lie to know what you think.
+
+Most of the time, my reasoning for rating these as "bad" is that for a
+lot of people, using a pseudonym is the only way to enjoy freedom of
+expression, usually because of their profession, etc.  Unless there's a
+valid reason for requiring the legal name to be published, I don't
+really see why we should consider it "a good thing."
+
+Comments welcome.
+
+PS: we usually don't give a big weight to these, right now it's 10 out
+of 100.
+
+-------- Message transf=E9r=E9 --------
+De: 5apps <develop@5apps.com>
+=C0: hugo@fsfe.org
+Sujet: New feedback for "Terms of Service; Didn=92t Read"
+Date: Thu, 06 Sep 2012 08:08:12 +0000
+
+Hi hugo,
+
+you received new feedback for your app "Terms of Service; Didn=92t Read":
+
+> Why do you rate have to provide your real name a bad thing. I consider it=
+ to be
+> a good thing.
+
+Manage all feedback for this app at http://5apps.com/develop/apps/4fd06274c=
+439346fd700005e/feedback.
+
+---
+
+If you have any questions, don't hesitate to use our support site at
+http://help.5apps.com or just reply to this email.
+
+--=20
+Hugo Roy=20
+  www.hugoroy.eu=20
+  chat: hugo@jabber.fsfe.org=20
+  mobile: +33 6 08 74 13 41 /
+  mobile DE: +49 151 143 56 563
+ =20
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

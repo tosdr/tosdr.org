@@ -1,0 +1,225 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.159 with SMTP id m31csp722886ioi;
+        Sat, 20 Feb 2016 20:57:46 -0800 (PST)
+X-Received: by 10.194.248.200 with SMTP id yo8mr20976200wjc.38.1456030666633;
+        Sat, 20 Feb 2016 20:57:46 -0800 (PST)
+Return-Path: <tosdr+bncBDBPFH5LXYBRBR4HUW3AKGQESMUZ3UI@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id qo6si29364901wjc.79.2016.02.20.20.57.46
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 20 Feb 2016 20:57:46 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDBPFH5LXYBRBR4HUW3AKGQESMUZ3UI@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDBPFH5LXYBRBR4HUW3AKGQESMUZ3UI@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBDBPFH5LXYBRBR4HUW3AKGQESMUZ3UI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 55D47FB881
+	for <michiel@unhosted.org>; Sun, 21 Feb 2016 05:57:46 +0100 (CET)
+Received: from mfilter33-d.gandi.net (mfilter33-d.gandi.net [217.70.178.164])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 42120142041
+	for <michiel@unhosted.org>; Sun, 21 Feb 2016 05:57:46 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter33-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter33-d.gandi.net (mfilter33-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id EjRiYBgtblR4 for <michiel@unhosted.org>;
+	Sun, 21 Feb 2016 05:57:44 +0100 (CET)
+Received: from mail-ig0-x237.google.com (mail-ig0-x237.google.com [IPv6:2607:f8b0:4001:c05::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1E59E14203E
+	for <michiel@michielbdejong.com>; Sun, 21 Feb 2016 05:57:44 +0100 (CET)
+Received: by mail-ig0-x237.google.com with SMTP id hb3sf10119686igb.1
+        for <michiel@michielbdejong.com>; Sat, 20 Feb 2016 20:57:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=JAG0ecwQg9twbJXK7x//TjSMMl8AZxEHkS/ZUFY112A=;
+        b=LBNHbZrnnbUl93IhNtKLjdw6/7ZielSvuMLh06FIaWLHIwgI81hh/mNzCtyTKn6ZoD
+         45hMm8fAEmcrnbfnuPjMCCovSiSeLA6jlhI8vJdVl16SMz9hELq4UlimNQH30AdfJ2pl
+         GuLj9rnXT90TvqwEywNxCloeZi6/jE9pKGPjtIku4eiznZZWDwP8M2vHovWF1tej7nJp
+         oilbvbDcLuwPnm6kmMVjbUw/vYT0FtC8vywryMgMcet7In+FSRF7EYhPwgN95cLVRub1
+         IiRfRLBb5bYAOUdwIPfRTLyMPbGFR8GykxJYt1xZv585hgJxXLT44f7bzbypqGUE+LsB
+         y7Pw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=JAG0ecwQg9twbJXK7x//TjSMMl8AZxEHkS/ZUFY112A=;
+        b=jWMwrMvMHHPDMkEQexp4zvsCL7Q4/VLie6t6Kgb7c+wFXvhhEVhOYFSsleVFNg7Wvo
+         FeBEQR6blmtWqjG0COMNaHM//ORZ8dFufc9lS0tarujNxDdsFC3uZaF5kFZ+VXmTpPLy
+         6YpXaaChCYDHoI1fFuJtIzqqpVZusprfPq+Lxa8Sak9bYi+RRxwCB3o1hbWvpqhdXaP7
+         KQiSkBue8KWEcuHN8msbWZGD7Yd9v1u1lNoUm9hS7nAyUrC8YKQ+EOqR5NppXO18TbTV
+         u1U+//8RqWwRntCDaEsDuuJQWnLxDHQa+FPYQ29hpacbsakuYAYxjUIzSTtFq8szUzhd
+         fd0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version:content-type:x-original-sender:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=JAG0ecwQg9twbJXK7x//TjSMMl8AZxEHkS/ZUFY112A=;
+        b=ck8ylpUJv0jjCmEoC3Pr6Hjen4qIwvEYewXNykN4VjdrwZWI9g5fr6i9fCN4ueVUm1
+         +CNYC4M07O6r7MQlwfMPjZucVYXpMMqic1xq+ZJ5YamOHf9RSfRFhwl87uFlV1iO5L0d
+         10LGrWQPddzCU0XB9c9Ay9ZnQUEjTpViK+IWCjrZLtxEh9lOkEy+nDH2ayHt/u4ZMgHZ
+         7uvskpAVrq7b7kyP2JPi/UJqHbBiLQgmaAmX4DBWEa5MZkgJoJoTXV0CE9NocbCpLOW+
+         UuI9zQXkuNW22ggCklZqLnItuTRO1LEaN8zZTNv6TuLBhTRFgD6LC9ci0fuKwIaxEstv
+         U4Qg==
+X-Gm-Message-State: AG10YOTN0i4QjMolZCwST6ToeIKRF5hsIIkU4hDqwpl6wiYfBeBb6wwAe5skx2K95/AQfA==
+X-Received: by 10.50.142.103 with SMTP id rv7mr66536igb.4.1456030663255;
+        Sat, 20 Feb 2016 20:57:43 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.66.69 with SMTP id d5ls312354igt.12.canary; Sat, 20 Feb
+ 2016 20:57:42 -0800 (PST)
+X-Received: by 10.50.103.68 with SMTP id fu4mr12829igb.9.1456030662879;
+        Sat, 20 Feb 2016 20:57:42 -0800 (PST)
+Date: Sat, 20 Feb 2016 20:57:42 -0800 (PST)
+From: imaginationnandfreedom@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <1d8798d7-f4a3-4c08-b416-74d14c9722eb@googlegroups.com>
+In-Reply-To: <1456018532-astroid-1-dvvqjpj4ww-14081@xps>
+References: <34fa70df-f2bb-4142-a641-6a09ba7210c6@googlegroups.com>
+ <1456018532-astroid-1-dvvqjpj4ww-14081@xps>
+Subject: Re: [tosdr:3774] [Bad] Wikia
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4065_278630190.1456030662299"
+X-Original-Sender: imaginationnandfreedom@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4065_278630190.1456030662299
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4066_475510734.1456030662299"
+
+------=_Part_4066_475510734.1456030662299
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I can't seem to get it to work. Is there a special add-on you need?
+
+On Sunday, February 21, 2016 at 12:36:07 PM UTC+11, Hugo Roy wrote:
+>
+> =E2=86=AA f=C3=A9vrier 21, 2016 12:07 , imagination...@gmail.com <javascr=
+ipt:>:=20
+> > (Apologies if I've made a mistake with formatting. I'm new to this.)=20
+> >=20
+> > Source: http://www.wikia.com/Terms_of_Use=20
+> >=20
+> > (Copied directly from the Terms of Use)=20
+> >=20
+> > - The Company may terminate your account, delete your profile and any=
+=20
+> content or information that you have posted on the Service and/or prohibi=
+t=20
+> you from using or accessing the Service for any reason, or no reason, at=
+=20
+> any time in its sole discretion, with or without notice.=20
+> >=20
+>
+> That's very interesting. Can you submit that to edit.tosdr.org?=20
+>
+> Thanks=20
+>
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/1d8798d7-f4a3-4c08-b416-74d14c9722eb%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4066_475510734.1456030662299
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I can&#39;t seem to get it to work. Is there a special add=
+-on you need?<br><br>On Sunday, February 21, 2016 at 12:36:07 PM UTC+11, Hu=
+go Roy wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-le=
+ft: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">=E2=86=AA f=C3=A9=
+vrier 21, 2016 12:07 , <a href=3D"javascript:" target=3D"_blank" gdf-obfusc=
+ated-mailto=3D"dRRYbHTPEQAJ" rel=3D"nofollow" onmousedown=3D"this.href=3D&#=
+39;javascript:&#39;;return true;" onclick=3D"this.href=3D&#39;javascript:&#=
+39;;return true;">imagination...@gmail.<wbr>com</a>:
+<br>&gt; (Apologies if I&#39;ve made a mistake with formatting. I&#39;m new=
+ to this.)
+<br>&gt;=20
+<br>&gt; Source: <a href=3D"http://www.wikia.com/Terms_of_Use" target=3D"_b=
+lank" rel=3D"nofollow" onmousedown=3D"this.href=3D&#39;http://www.google.co=
+m/url?q\75http%3A%2F%2Fwww.wikia.com%2FTerms_of_Use\46sa\75D\46sntz\0751\46=
+usg\75AFQjCNH1P_mwrP91pb7PrcPgDBxxUF1RnA&#39;;return true;" onclick=3D"this=
+.href=3D&#39;http://www.google.com/url?q\75http%3A%2F%2Fwww.wikia.com%2FTer=
+ms_of_Use\46sa\75D\46sntz\0751\46usg\75AFQjCNH1P_mwrP91pb7PrcPgDBxxUF1RnA&#=
+39;;return true;">http://www.wikia.com/Terms_of_<wbr>Use</a>
+<br>&gt;=20
+<br>&gt; (Copied directly from the Terms of Use)
+<br>&gt;=20
+<br>&gt; - The Company may terminate your account, delete your profile and =
+any content or information that you have posted on the Service and/or prohi=
+bit you from using or accessing the Service for any reason, or no reason, a=
+t any time in its sole discretion, with or without notice.
+<br>&gt;=20
+<br>
+<br>That&#39;s very interesting. Can you submit that to <a href=3D"http://e=
+dit.tosdr.org" target=3D"_blank" rel=3D"nofollow" onmousedown=3D"this.href=
+=3D&#39;http://www.google.com/url?q\75http%3A%2F%2Fedit.tosdr.org\46sa\75D\=
+46sntz\0751\46usg\75AFQjCNGXXYQywFoBE9pLCC3se-BLzKFZqw&#39;;return true;" o=
+nclick=3D"this.href=3D&#39;http://www.google.com/url?q\75http%3A%2F%2Fedit.=
+tosdr.org\46sa\75D\46sntz\0751\46usg\75AFQjCNGXXYQywFoBE9pLCC3se-BLzKFZqw&#=
+39;;return true;">edit.tosdr.org</a>?
+<br>
+<br>Thanks
+<br></blockquote></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/1d8798d7-f4a3-4c08-b416-74d14c9722eb%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/1d8798d7-f4a3-4c08-b416-74d14c9722eb%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4066_475510734.1456030662299--
+------=_Part_4065_278630190.1456030662299--

@@ -1,0 +1,107 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp147103wfj;
+        Sat, 28 Jul 2012 12:14:53 -0700 (PDT)
+Received: by 10.216.213.37 with SMTP id z37mr3363363weo.132.1343502892780;
+        Sat, 28 Jul 2012 12:14:52 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCs9NCABRoEjl-59Q@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id 44si7245900wew.1.2012.07.28.12.14.52
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 28 Jul 2012 12:14:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCs9NCABRoEjl-59Q@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCs9NCABRoEjl-59Q@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCs9NCABRoEjl-59Q@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fada11 with SMTP id a11sf2185442fad.29
+        for <michiel@unhosted.org>; Sat, 28 Jul 2012 12:14:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=sV9jP4KdWPB1pHp2IwYGOHpt5ruEZyOCqYhcAqF8+0c=;
+        b=HtCzH7fpUudh8xmLvYQ7O+2C2Liw+3ClcXAlXtZDOSmciTB5YbYOlCnd/K40PZhU9n
+         2JGIJh+TFBRaklJRl/sX9kxcANohqhsAWHLi4l6EqmxZ78HchxOcKzLZLgVXy32UkoZh
+         zMUjuVo/s8Pa6wHNSgOeL7Dqm2jKUnxdhrBq0=
+Received: by 10.180.105.232 with SMTP id gp8mr737807wib.0.1343502892010;
+        Sat, 28 Jul 2012 12:14:52 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.90.195 with SMTP id by3ls610528wib.4.gmail; Sat, 28 Jul
+ 2012 12:14:50 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr1026317wib.0.1343502890236;
+        Sat, 28 Jul 2012 12:14:50 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr1026316wib.0.1343502890228;
+        Sat, 28 Jul 2012 12:14:50 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id fa8si682445wid.1.2012.07.28.12.14.50
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 28 Jul 2012 12:14:50 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id AA85063AF7A;
+	Sat, 28 Jul 2012 21:14:49 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bPGbtb2z+yAr; Sat, 28 Jul 2012 21:14:47 +0200 (CEST)
+Received: from [192.168.0.105] (91-64-228-42-dynip.superkabel.de [91.64.228.42])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id DB46E63A006;
+	Sat, 28 Jul 2012 21:14:46 +0200 (CEST)
+Message-ID: <1343502886.8116.3.camel@synclavier.lan>
+Subject: Re: [tosdr:230] Roadmap, your help and feedback is needed!
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Sat, 28 Jul 2012 21:14:46 +0200
+In-Reply-To: <1343226691.3786.13.camel@synclavier.lan>
+References: <1343226691.3786.13.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi everyone,
+
+I went on to implement the comparison by topics and category.
+http://tos-dr.info/topics.html It is not perfect yet, still a few bugs
+that I have to fix.
+
+Please give me your feedback on this :-)  Is it useful?
+
+Thanks,
+Hugo
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups T=
+erms of Service; Didn't Read group. To post to this group, send email to to=
+sdr@googlegroups.com. To unsubscribe from this group, send email to tosdr+u=
+nsubscribe@googlegroups.com. For more options, visit this group at https://=
+groups.google.com/d/forum/tosdr?hl=3Den
+
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+
+

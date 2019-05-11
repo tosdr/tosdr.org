@@ -1,0 +1,153 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.4.16 with SMTP id 16csp1785039ioe;
+        Thu, 14 May 2015 19:12:27 -0700 (PDT)
+X-Received: by 10.68.129.198 with SMTP id ny6mr13594176pbb.27.1431655947752;
+        Thu, 14 May 2015 19:12:27 -0700 (PDT)
+Return-Path: <tosback2-bounces+michiel=unhosted.org@lists.eff.org>
+Received: from lists.eff.org (lists.eff.org. [173.239.79.202])
+        by mx.google.com with ESMTPS id iz4si184924pbc.245.2015.05.14.19.12.27
+        for <michiel@unhosted.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 May 2015 19:12:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosback2-bounces+michiel=unhosted.org@lists.eff.org designates 173.239.79.202 as permitted sender) client-ip=173.239.79.202;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of tosback2-bounces+michiel=unhosted.org@lists.eff.org designates 173.239.79.202 as permitted sender) smtp.mail=tosback2-bounces+michiel=unhosted.org@lists.eff.org;
+       dkim=fail header.i=@eff.org;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from lists.eff.org (localhost [127.0.0.1])
+	by lists.eff.org (Postfix) with ESMTP id 0E5F01E084F
+	for <michiel@unhosted.org>; Thu, 14 May 2015 19:12:27 -0700 (PDT)
+X-Original-To: tosback2@lists.eff.org
+Delivered-To: tosback2@lists.eff.org
+Received: from localhost (localhost [127.0.0.1])
+ by lists.eff.org (Postfix) with ESMTP id B34CA1E07F6
+ for <tosback2@lists.eff.org>; Thu, 18 Sep 2014 15:35:05 -0700 (PDT)
+Received: from lists.eff.org ([127.0.0.1])
+ by localhost (lists.eff.org [127.0.0.1]) (amavisd-new, port 10024)
+ with LMTP id SL09EAbUqiNN for <tosback2@lists.eff.org>;
+ Thu, 18 Sep 2014 15:35:05 -0700 (PDT)
+Received: from mail2.eff.org (mail2.eff.org [173.239.79.204])
+ by lists.eff.org (Postfix) with ESMTPS id 74FC41E07F4
+ for <tosback2@lists.eff.org>; Thu, 18 Sep 2014 15:35:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=eff.org;
+ s=mail2; 
+ h=Content-Type:MIME-Version:Subject:References:In-Reply-To:Message-Id:Cc:To:From:Date;
+ bh=gHiKKGVkrgXN2uGK0XlZAkYRgsdmWZC8GA/WWKo7p+Q=; 
+ b=mMBk4awwndUgjZtwf1d56oaK537UOrNJib9LGA3R/JWXC1IKZW8L70UsvFKAyleTNY2njq+aeAuAVFJkXB8Ag3AWDQIFyx+CyUJs8Wcv38mxeF42jmpFfSMR/IAygoaHFW12sPNXGhcIc4M61qjuRSyJzP3aCXOLO5ncz9SVZPU=;
+Received: from relay5-d.mail.gandi.net ([217.70.183.197]:34558)
+ by mail2.eff.org with esmtps (TLS1.0:DHE_RSA_AES_256_CBC_SHA1:256)
+ (Exim 4.80) (envelope-from <aanmeldingen49@gmail.com>)
+ id 1XUkI4-0000pL-U6
+ for tosback2@eff.org; Thu, 18 Sep 2014 15:35:05 -0700
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+ by relay5-d.mail.gandi.net (Postfix) with ESMTP id 6917E41C056;
+ Fri, 19 Sep 2014 00:35:01 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+ by spool.mail.gandi.net (Postfix) with ESMTP id 58943142267;
+ Fri, 19 Sep 2014 00:35:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+ by mfilter20-d.gandi.net (mfilter20-d.gandi.net [10.0.15.180]) (amavisd-new,
+ port 10024)
+ with ESMTP id QCZj0GCDpVnY; Fri, 19 Sep 2014 00:34:59 +0200 (CEST)
+Received: from mail-yk0-x23c.google.com (mail-yk0-x23c.google.com
+ [IPv6:2607:f8b0:4002:c07::23c])
+ by spool.mail.gandi.net (Postfix) with ESMTPS id 5475A142258
+ for <tosback@tosdr.org>; Fri, 19 Sep 2014 00:34:56 +0200 (CEST)
+Received: by mail-yk0-f188.google.com with SMTP id 200so69996ykr.5
+ for <tosback@tosdr.org>; Thu, 18 Sep 2014 15:34:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+ h=date:from:to:cc:message-id:in-reply-to:references:subject
+ :mime-version:content-type;
+ bh=gHiKKGVkrgXN2uGK0XlZAkYRgsdmWZC8GA/WWKo7p+Q=;
+ b=wPTmJSl5Ye5LIdMVieC0S2uGTzHVS67dgpormPMR52CTtb/9nK7EDg1MuDBhsl3XMO
+ WRADuwuXsxeT5/hRgWdfq596dn/zh4XSB1YIzWyfK7DWYATluV/4WpejjYThMcerIBjM
+ eyv/JDRa4u96vQiYeoddae1YmhpFCpkoiF3qSr8rd3K10XZBRdFYidIvrWVfFPIw8c/e
+ hDG0erbLWb9BEqv7cEPIn5MfOQPCat2mNcf2u7eQAhR8+roQmkBVFndthEDsD2nOIclc
+ o2IMlv5JkwKxWHlGgZiiXEvH7wFFwS8+SD1SoTXMHHUnjcxNXGjMPb4XXIdUHkd8t3gO
+ 8nvg==
+X-Received: by 10.140.94.34 with SMTP id f31mr13442qge.11.1411079695109;
+ Thu, 18 Sep 2014 15:34:55 -0700 (PDT)
+X-Google-Doc-Id: f0d64fb8bdf6c99a
+X-Google-Web-Client: true
+Date: Thu, 18 Sep 2014 15:34:54 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <39bb51ae-b48b-46bd-824c-285b0bf26ae5@googlegroups.com>
+In-Reply-To: <541a601a20773_36d441998221755b@dragon.mail>
+References: <541a601a20773_36d441998221755b@dragon.mail>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+ boundary="----=_Part_2213_1475361466.1411079694599"
+X-Google-Token: EI687aAFNVvc3ssI9ew0
+X-Google-IP: 2001:980:1b0b:1:8c3e:985b:8344:9759
+Received-SPF: softfail client-ip=217.70.183.197;
+ envelope-from=aanmeldingen49@gmail.com; helo=relay5-d.mail.gandi.net
+X-Mailman-Approved-At: Thu, 14 May 2015 19:11:58 -0700
+Cc: tosback@tosdr.org
+Subject: Re: [Tosback2] ToSBack: Policy Changes
+X-BeenThere: tosback2@lists.eff.org
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: "A system for achiving privacy policies, terms of service,
+ and similar documents" <tosback2.lists.eff.org>
+List-Unsubscribe: <https://lists.eff.org/mailman/options/tosback2>,
+ <mailto:tosback2-request@lists.eff.org?subject=unsubscribe>
+List-Archive: <https://lists.eff.org/pipermail/tosback2/>
+List-Post: <mailto:tosback2@lists.eff.org>
+List-Help: <mailto:tosback2-request@lists.eff.org?subject=help>
+List-Subscribe: <https://lists.eff.org/mailman/listinfo/tosback2>,
+ <mailto:tosback2-request@lists.eff.org?subject=subscribe>
+Errors-To: tosback2-bounces+michiel=unhosted.org@lists.eff.org
+Sender: "Tosback2" <tosback2-bounces+michiel=unhosted.org@lists.eff.org>
+
+------=_Part_2213_1475361466.1411079694599
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2214_1553970800.1411079694599"
+
+------=_Part_2214_1553970800.1411079694599
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Damn, Apple really knows how to make vague terms (37 and further):
+
+We may collect and store details of how you use our services, including 
+search queries. This information may be used to improve the relevancy of 
+results provided by our services. *Except in limited instances to ensure 
+quality of our services over the Internet*, such information will not be 
+associated with your IP address.
+
+
+
+
+Op donderdag 18 september 2014 06:31:26 UTC+2 schreef ToSBack:
+>
+> live.com: Privacy Policy 
+> apple.com: Privacy Policy 
+> apple.com: iCloud Terms of Service 
+> apple.com: iTunes Terms of Service 
+> xing.com: Terms and Conditions 
+> microsoft.com: Privacy Policy 
+> msn.com: Privacy Policy 
+>  These were changed in last night's crawl. Please have a look at the 
+> commit at 
+> https://github.com/tosdr/tosback2/commit/bac70978534c98f76394a49dff8c220788583d4c 
+> to see the differences!
+
+
+------=_Part_2214_1553970800.1411079694599
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<div dir="ltr">Damn, Apple really knows how to make vague terms (37 and further):<br><br><table class="diff-table  tab-size-8 file-diff-split"><tbody><tr><td class="blob-code blob-code-addition head">We may collect and store details of how you use our services, including search queries. This information may be used to improve the relevancy of results provided by our services. <b>Except in limited instances to ensure quality of our services over the 
+Internet</b>, such information will not be associated with your IP address.</td></tr><tr><td class="blob-code blob-code-empty base empty-cell"><br></td><td class="blob-code blob-code-addition head"><br></td></tr><tr><td class="blob-code blob-code-empty base empty-cell"></td><td class="blob-code blob-code-addition head"><br></td></tr></tbody></table><br><br>Op donderdag 18 september 2014 06:31:26 UTC+2 schreef ToSBack:<blockquote class="gmail_quote" style="margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><a href="http://live.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Flive.com\46sa\75D\46sntz\0751\46usg\75AFQjCNE5zGdITUHEl4Duty1IgOjnQUy8Qw';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Flive.com\46sa\75D\46sntz\0751\46usg\75AFQjCNE5zGdITUHEl4Duty1IgOjnQUy8Qw';return true;">live.com</a>: Privacy Policy
+<br><a href="http://apple.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.com</a>: Privacy Policy
+<br><a href="http://apple.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.com</a>: iCloud Terms of Service
+<br><a href="http://apple.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fapple.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGKdUqi0u53CLxe9HJZGevUkqtljg';return true;">apple.com</a>: iTunes Terms of Service
+<br><a href="http://xing.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fxing.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGxcZbh8uSoOQQGKAza-S6HyymIaw';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fxing.com\46sa\75D\46sntz\0751\46usg\75AFQjCNGxcZbh8uSoOQQGKAza-S6HyymIaw';return true;">xing.com</a>: Terms and Conditions
+<br><a href="http://microsoft.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fmicrosoft.com\46sa\75D\46sntz\0751\46usg\75AFQjCNFZ1ZUQgvPRZ7hk39CTh6Zoll3cuA';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fmicrosoft.com\46sa\75D\46sntz\0751\46usg\75AFQjCNFZ1ZUQgvPRZ7hk39CTh6Zoll3cuA';return true;">microsoft.com</a>: Privacy Policy
+<br><a href="http://msn.com" target="_blank" onmousedown="this.href='http://www.google.com/url?q\75http%3A%2F%2Fmsn.com\46sa\75D\46sntz\0751\46usg\75AFQjCNHZLJJjaih5Su-F46m-fJGfxXyErw';return true;" onclick="this.href='http://www.google.com/url?q\75http%3A%2F%2Fmsn.com\46sa\75D\46sntz\0751\46usg\75AFQjCNHZLJJjaih5Su-F46m-fJGfxXyErw';return true;">msn.com</a>: Privacy Policy
+<br>&nbsp;These were changed in last night's crawl. Please have a look at the commit at <a href="https://github.com/tosdr/tosback2/commit/bac70978534c98f76394a49dff8c220788583d4c" target="_blank" onmousedown="this.href='https://www.google.com/url?q\75https%3A%2F%2Fgithub.com%2Ftosdr%2Ftosback2%2Fcommit%2Fbac70978534c98f76394a49dff8c220788583d4c\46sa\75D\46sntz\0751\46usg\75AFQjCNErsXAmmLSu9qm-WJ5p_furRr3ANA';return true;" onclick="this.href='https://www.google.com/url?q\75https%3A%2F%2Fgithub.com%2Ftosdr%2Ftosback2%2Fcommit%2Fbac70978534c98f76394a49dff8c220788583d4c\46sa\75D\46sntz\0751\46usg\75AFQjCNErsXAmmLSu9qm-WJ5p_furRr3ANA';return true;">https://github.com/tosdr/<wbr>tosback2/commit/<wbr>bac70978534c98f76394a49dff8c22<wbr>0788583d4c</a> to see the differences!</blockquote></div>
+------=_Part_2214_1553970800.1411079694599--
+
+------=_Part_2213_1475361466.1411079694599--

@@ -1,0 +1,364 @@
+Return-Path: <tosdr+bncBAABBMVRXSNAKGQEN3VYIZI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2F03840F31
+	for <anything@michielbdejong.com>; Thu, 17 Apr 2014 01:56:41 +0200 (CEST)
+Received: from mfilter7-d.gandi.net (mfilter7-d.gandi.net [217.70.178.136])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 2C114142BD0
+	for <anything@michielbdejong.com>; Thu, 17 Apr 2014 01:56:41 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter7-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter7-d.gandi.net (mfilter7-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id PBwiK6-LzQX9 for <anything@michielbdejong.com>;
+	Thu, 17 Apr 2014 01:56:39 +0200 (CEST)
+Received: from mail-yh0-x23d.google.com (mail-yh0-x23d.google.com [IPv6:2607:f8b0:4002:c01::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E738B143016
+	for <anything@michielbdejong.com>; Thu, 17 Apr 2014 01:56:35 +0200 (CEST)
+Received: by mail-yh0-f61.google.com with SMTP id f73sf2480931yha.26
+        for <anything@michielbdejong.com>; Wed, 16 Apr 2014 16:56:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:thread-index:date:message-id:accept-language
+         :mime-version:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe
+         :content-language:content-type;
+        bh=DIu9aVaj0m18lTZVT316QoD/iMiIMKNJPkxBynwTJTA=;
+        b=nfmseGPTS3OsB7CTOr79s6NWnogxWXUOpjHdH6lhw9dO35YIU6erSsMMUCtYgfpFF7
+         F442ETOk5i1lcd9jgzeFrQoWacbumrUCg1YVDHiNubtX6Sr0WipndMDsa5IfoBCc5z8O
+         ZBpC3Q2GCsFZDi97y/ID3nO4DNBxRZysC9CO0LSsPsvxDUvWJRetsh3w2h7KPw7HBn/a
+         oRgrLE8v0wddAB0Cpb3TUpIjsaFs9nZP18IrX2YdTeEImh1EaARqVK5QRzfoxonkeGyx
+         LrefEk3hWbAXIaXdp+l7d1GquBqFz5ycqoRsJucy6UL5StjuPN9xNYksPeAuf1mYk++V
+         kRgQ==
+X-Received: by 10.140.93.180 with SMTP id d49mr86297qge.22.1397692594754;
+        Wed, 16 Apr 2014 16:56:34 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.25.144 with SMTP id 16ls821153qgt.62.gmail; Wed, 16 Apr
+ 2014 16:56:34 -0700 (PDT)
+X-Received: by 10.52.2.129 with SMTP id 1mr3109173vdu.4.1397692594279;
+        Wed, 16 Apr 2014 16:56:34 -0700 (PDT)
+Received: from na01-by2-obe.outbound.protection.outlook.com (mail-by2lp0240.outbound.protection.outlook.com. [207.46.163.240])
+        by gmr-mx.google.com with ESMTPS id fj1si5925669vdc.3.2014.04.16.16.56.33
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 16 Apr 2014 16:56:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 207.46.163.240 is neither permitted nor denied by domain of larry.harrell@sykes.com) client-ip=207.46.163.240;
+Received: from DM2PR06MB573.namprd06.prod.outlook.com (10.141.176.15) by
+ DM2PR06MB576.namprd06.prod.outlook.com (10.141.176.26) with Microsoft SMTP
+ Server (TLS) id 15.0.918.8; Wed, 16 Apr 2014 23:56:32 +0000
+Received: from DM2PR06MB576.namprd06.prod.outlook.com (10.141.176.26) by
+ DM2PR06MB573.namprd06.prod.outlook.com (10.141.176.15) with Microsoft SMTP
+ Server (TLS) id 15.0.918.8; Wed, 16 Apr 2014 23:56:29 +0000
+Received: from DM2PR06MB576.namprd06.prod.outlook.com ([10.141.176.26]) by
+ DM2PR06MB576.namprd06.prod.outlook.com ([10.141.176.26]) with mapi id
+ 15.00.0918.000; Wed, 16 Apr 2014 23:56:29 +0000
+From: "Harrell, Larry" <larry.harrell@sykes.com>
+To: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+Subject: [tosdr:2995] 
+Thread-Index: Ac9Zz3qDS1oJ/pTdSAiILkmdJQNRyQ==
+Date: Wed, 16 Apr 2014 23:56:29 +0000
+Message-ID: <0ca700f5e39e4ced8b46522d6e446ed2@DM2PR06MB576.namprd06.prod.outlook.com>
+Accept-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: 
+x-originating-ip: [151.213.165.230]
+x-forefront-prvs: 01834E39B7
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009001)(428001)(199002)(189002)(2656002)(558084003)(92566001)(15202345003)(79102001)(46102001)(66066001)(80022001)(81542001)(85852003)(74502001)(31966008)(87936001)(74662001)(81342001)(83072002)(15975445006)(33646001)(19613025002)(18206015023)(20776003)(77982001)(86362001)(19580405001)(17760045001)(80976001)(19580395003)(25636003)(19300405004)(83322001)(99936001)(50986999)(4396001)(76576001)(5406001)(16236675002)(76482001)(74316001)(77096999)(99286001)(54356999)(99396002)(569964003)(24736002)(5416002);DIR:OUT;SFP:1101;SCL:1;SRVR:DM2PR06MB573;H:DM2PR06MB576.namprd06.prod.outlook.com;FPR:FEFA4CA6.A6AE4708.52D4B988.DCCA7147.20054;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+received-spf: None (: sykes.com does not designate permitted sender hosts)
+MIME-Version: 1.0
+X-OriginatorOrg: sykes.com
+X-Original-Sender: larry.harrell@sykes.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: 207.46.163.240 is neither permitted nor denied by domain of
+ larry.harrell@sykes.com) smtp.mail=larry.harrell@sykes.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Language: en-US
+Content-Type: multipart/related;
+	boundary="_004_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_";
+	type="multipart/alternative"
+
+--_004_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_
+Content-Type: multipart/alternative;
+	boundary="_000_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_"
+
+--_000_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+The rough idea behind ToS;DR emerged during the 2011 Chaos Communication Camp<http://events.ccc.de/camp/2011/wiki/ToS;DR> near Berlin
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--_000_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:dt=3D"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:m=3D"http://sc=
+hemas.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-=
+html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Microsoft Theme 2.00" content=3D"Aftrnoon 011">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+h1
+	{mso-style-priority:9;
+	mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+h2
+	{mso-style-priority:9;
+	mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:normal;}
+h3
+	{mso-style-priority:9;
+	mso-style-link:"Heading 3 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:normal;}
+h4
+	{mso-style-priority:9;
+	mso-style-link:"Heading 4 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:normal;}
+h5
+	{mso-style-priority:9;
+	mso-style-link:"Heading 5 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:normal;}
+h6
+	{mso-style-priority:9;
+	mso-style-link:"Heading 6 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#983738;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#703637;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	color:black;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 1";
+	font-family:"Verdana","sans-serif";
+	color:black;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 2";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 3";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 4";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 5";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 6";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body bgcolor=3D"white" background=3D"cid:image001.gif@01CF59AD.EF14DD50" l=
+ang=3D"EN-US" link=3D"#983738" vlink=3D"#703637">
+<img src=3D"cid:image001.gif@01CF59AD.EF14DD50" v:src=3D"cid:image001.gif@0=
+1CF59AD.EF14DD50" v:shapes=3D"_x0000_Mail" width=3D"0" height=3D"0" class=
+=3D"shape" style=3D"display:none;width:0;height:0"><!--[if gte mso 9]><xml>
+<v:background id=3D"_x0000_s1025" o:bwmode=3D"white" o:targetscreensize=3D"=
+1024,768">
+<v:fill src=3D"cid:image001.gif@01CF59AD.EF14DD50" o:title=3D"background_af=
+trnoon" type=3D"frame" />
+</v:background></xml><![endif]-->
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">The rough idea behind ToS;DR emerged during the <a h=
+ref=3D"http://events.ccc.de/camp/2011/wiki/ToS;DR">
+<span style=3D"color:blue">2011 Chaos Communication Camp</span></a> near Be=
+rlin<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--_000_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_--
+--_004_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_
+Content-Type: image/gif; name="image001.gif"
+Content-Description: image001.gif
+Content-Disposition: inline; filename="image001.gif"; size=2051;
+	creation-date="Wed, 16 Apr 2014 23:56:28 GMT";
+	modification-date="Wed, 16 Apr 2014 23:56:28 GMT"
+Content-ID: <image001.gif@01CF59AD.EF14DD50>
+Content-Transfer-Encoding: base64
+
+R0lGODlhuAsQAPcAAP///uLNMf/+/P///eTQPf7++/7++v388v799+7iiOTRQP79+eXRQ/r22Pj0
+z/bwwOfWVPr11u/kkPfyxeLOM+fVUvjzzO7hhvTts/jzzfLnn+LPNvPrrv389PXuuvz66PTtsf79
++P/+/fXvvfv44/799fz77ePQOu/ii/377+3hf/Loovv43/HmmOrbbObVT/Dlk+vdc+naZ/n00+jX
+W/bwvufWV+fUUOrbau7hgu3hhOnaZv799vr22/n11+/kj/fyx/j00fPrrPfwwuXSSezfefLnnuvb
+bunZYunYYPz77uvdceXSRf388/fyyerZZPPqquvedPXut/buu/XttvTssPLppO3gfuLONeXTSvr2
+2uzed/z66fv44vDllOPPOOLPOOfWVf388O3fe+PNMu/jjfr33vn11ObUTffzyvfwxPv34fz67Pz6
+6/v55vLmm/HnmvPppfz55+TSQeXSR/7++fr33ejXXvLqp+fXWv///wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAuAsQAAAI/gADCAxA
+hgKWDV/AnCBAQMEcBkzoEMmC5sWNChDC2MhD404SJE92yMDh4siSGFG2FBlzRUUOHRcSoCjzQwIM
+Ly3gvDGiYYWVOHigCOFQBQQGKlI8TBlR48EQNROAOEljIYODIDPORPDRQEsPO2ZYrOlCwo2cD1za
+sDGhJIWYAweadCjBAwGCEAvqGDBQoICAvyIGDABAuLCew4gTK17MuLHjx5AjS55MubLly5gza97M
+ubPnz6BDix5NurTp06hTq17NurXr17Bjy55Nu7bt27hz697Nu7fv38CDCx9OvLjx48iTK1/OvLnz
+59AjDyRoEKFChg4hSqRoEaNGjh5B/ookaRKlSpYuYcqkaROnTp4+gQolahSpUqZOoUqlahWrVq5e
+gSUWWWahpRZbbsElF1124aUXX34BJlhhhkVn4YUYZqjhhhx26OGHIIYo4ogklmjiiSimqOKKLLbo
+4oswxijjjK1NV9BBCS3U0EMRTVTRRRlt1NFHIY1U0kkprdTSSzHNVNNNOe3U009BDVXUUUkt1dRT
+UU1V1VVZbdXVV2GNVdZZaa3V1ltxzVXXXXnt1ddfAgQ2GIUA0Kjnnnz26eefgAYq6KCEFmrooYgm
+quiijDbq6KOQXmZjdTlix+N2P3onZHhFkofkeUuq52R7UcJH5XxX2qdlfl3yB+Z//mMKaGaBaSLI
+5oJvOihnhHVOiGekwAYr7LDEFmvsscgmq+yyzDbr7LPQRittbpPieN2O2vnYXZDgETnekeYpmV6T
+7EH53pTyWVlflvhxud+X/okZYJkEonngmgq62WCcENJpJ555TivwwAQXbPDBCCes8MIMN+zwwxBH
+jHC11umYXY/cAfndkOIZWV6S6DG53pPuSRlflfRhed+W+nnZX5gAkjngmQaqmWCbDML54JwS3kmh
+xEAHLfTQRBdt9NFIJ6300kw37fRuFFeKLcaZcstxp+CCHCq5JJeKLsqpsstyq/DCHCu9NNeKL865
+8stzrz5X+PTcdNdt99145633/t589+3333tHfe3FmG67MafffgzquCOTeu7JqK67MqvvvgzrvDPT
+eu/NuO67M6///gr46KSXbvrpqKeu+uqst+5664JbfKm2Gm/qrcefiivyqOaafKq6Kq/qrsuvyivz
+rPbafKu+Ou/qr68/vy799NRXb/312Gev/fbcd1/jQDdWbGm2GWvabceehhuyqOWWbGq6Kavabsuu
+xhuzrPXWbGu+Oevab88A854AB0jAAhrwgAhMoAIXyEA9xW58VDOc7dCXtcXtrn1egxzw5De2yhXv
+fmjTnPL417bPPS9uhGmgClfIwha68IUwjKEMZ/i6B06tcLU7H9YUpzv2de1x7L+Ln9goRzz7nS1z
+ydsf2zznPACKjoZQjKIUp0jFKlrxiljMYohsSDjame9qicvd+rjmON/BL2yTG179zIY55OlvbZ1r
+3v/gFkAt2vGOeMyjHvfIxz76sYFcnF35rIY43Klva43r3fvAJjnh0a9slzte/tTGOeb5722hi94f
+N8nJTnryk6AMpShHOaxAkq9qh7td+rTGON6572uRC978yGY54+EvbZtbXv/cBjroyY2UwAymMIdJ
+zGIa85jIPI0pI5hDMBqSlRf8oRkZKcsOFpGNksTlCJcoR0z6MoXJDKc4x0nOcprznOhUYEAAADs=
+
+--_004_0ca700f5e39e4ced8b46522d6e446ed2DM2PR06MB576namprd06pro_--

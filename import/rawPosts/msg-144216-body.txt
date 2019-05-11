@@ -1,0 +1,341 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.11 with SMTP id z11csp1267453ioi;
+        Wed, 25 May 2016 10:17:53 -0700 (PDT)
+X-Received: by 10.107.9.167 with SMTP id 39mr4915809ioj.139.1464196673850;
+        Wed, 25 May 2016 10:17:53 -0700 (PDT)
+Return-Path: <tosdr+bncBAABBON4S65AKGQEEOQB5RQ@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id 17si12130346igh.17.2016.05.25.10.17.53
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 May 2016 10:17:53 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBAABBON4S65AKGQEEOQB5RQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBAABBON4S65AKGQEEOQB5RQ@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBAABBON4S65AKGQEEOQB5RQ@googlegroups.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 8A5F0FB8C6
+	for <michiel@unhosted.org>; Wed, 25 May 2016 19:17:50 +0200 (CEST)
+Received: from mfilter43-d.gandi.net (mfilter43-d.gandi.net [217.70.178.174])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 78CBB226048
+	for <michiel@unhosted.org>; Wed, 25 May 2016 19:17:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter43-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter43-d.gandi.net (mfilter43-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id BsZVybYzygF7 for <michiel@unhosted.org>;
+	Wed, 25 May 2016 19:17:48 +0200 (CEST)
+Received: from mail-yw0-x23e.google.com (mail-yw0-x23e.google.com [IPv6:2607:f8b0:4002:c05::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 20053226078
+	for <michiel@michielbdejong.com>; Wed, 25 May 2016 19:17:48 +0200 (CEST)
+Received: by mail-yw0-x23e.google.com with SMTP id n16sf17642033ywd.0
+        for <michiel@michielbdejong.com>; Wed, 25 May 2016 10:17:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:from:to:subject:date:message-id:mime-version:importance
+         :thread-index:content-language:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=nzFUWjN2GUSdN+twr9cf2ENKf4C6I3rjBQicoR1L5PM=;
+        b=BYrtlKsGLbtI2qoJPAx6+qNISl7Gp7UlhonlT8asX4k4lsZ9Aq9DY4ag5wAFY3/0Gq
+         Myaa/yc/RWQYbONB/doFgiJ3rU8JjGVke+8FH3nmOAXkqUNhA2w94P9f0ODoVFkgDVZ7
+         T/c31GgFT/B62BlPY/u4+nmAuY+SpNpdmYzxUr0JUibwIr2vefbDidpHs+ERVnNYYJ3n
+         UYr7yr3MY4xQO7b9IlSQURdS3Z4hd7Bd2El/sXaaeys88bRe8NpUYSyji1JrOTPCZy7Z
+         QFQzfqrvLvXF7Gt2wq1UrtAhWguHCp8dVfzmARWGR9IaLxxutxq1RHtf839U8Meo4Q54
+         Tc/w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:from:to:subject:date:message-id
+         :mime-version:importance:thread-index:content-language
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=nzFUWjN2GUSdN+twr9cf2ENKf4C6I3rjBQicoR1L5PM=;
+        b=MDvpMeb1xI2S8wBKIVIRNLwAT0tv4YGQJn2JFoqmtEKAoYaztLfGN/1byfLUcdjvoB
+         lqVWYiSTyyZAPctokU6cL8Xgo++khsQiAluylxAdZHSMge29ByOGx44uHBsbozTWLSgP
+         BmUrf/KSCOTRhosK5SOc+p0HN0UAJhB3tkkBbDk2BAg6hIdTAlO5pCRwiGBoSUcTtVBf
+         KpUBp4SvSAt6tuBu/H5oJBhNn/lIsHu6d6FvMaiE9w8tU5axOl6k2xNxCxJJPFNpDGT/
+         8pNFOEi31a31rVxKWCzFmdkG1YHg4nZTYD/lX+p6aoPB0YINLD1HqxBF7POwhCHBf7oc
+         d/KQ==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: ALyK8tJz8xOrXnO6WUR/8gtnpf+Vyytu3DSLTO16H2PvCGiLDBsasujITdGAcSJMNN1uSw==
+X-Received: by 10.50.112.5 with SMTP id im5mr329491igb.9.1464196666106;
+        Wed, 25 May 2016 10:17:46 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.36.131.5 with SMTP id d5ls1266769ite.13.canary; Wed, 25 May
+ 2016 10:17:45 -0700 (PDT)
+X-Received: by 10.98.100.149 with SMTP id y143mr3146316pfb.3.1464196665324;
+        Wed, 25 May 2016 10:17:45 -0700 (PDT)
+Received: from smtp106.biz.mail.bf1.yahoo.com (smtp106.biz.mail.bf1.yahoo.com. [98.139.244.54])
+        by gmr-mx.google.com with ESMTPS id c2si3049410ywf.5.2016.05.25.10.17.45
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Wed, 25 May 2016 10:17:45 -0700 (PDT)
+Received-SPF: neutral (google.com: 98.139.244.54 is neither permitted nor denied by best guess record for domain of mary@edataflow.com) client-ip=98.139.244.54;
+Received: (qmail 28010 invoked from network); 25 May 2016 17:17:44 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: GMVkE7QVM1mhdA1HxDi7kgtodbF0W2KfX99a5_mvQOq4Qh4
+ d8989YhceANCfAPw9CLYunGnDG71cLbRUddaOhOm3CTd23Gc2kF9mjgr3cZl
+ IC9juW4k.xesZ5vrFc644G3twgCLvZIrojK_6FSgiKcOnc8gWLoQn0h0hxh0
+ qXnvwPhz8hA6BQat6GlRjHEvzPDgnKoilldtAxEPhKYOAJBldk15KvZl7BCx
+ ImoB.wWjIEt24Ymhdw_Wet77dcmCOAb_iQescqZ0zqIk9nisLPyd3Ze8fSbh
+ 4swvGy74MRuW0AQDKSFdoE2y.BXVAqwBBMJTt2MSxuuVdtEFnPqlQICVnNZ9
+ n5Ot9PQGt3tyBTVcH.AHdtTbXHFMo7xHRthf5PKvALQ7hXFCCQdhasR0RUBf
+ EXGXCPiDC3koIqwbQXRqmEyIyjTpkM4TYMvjxNCaNaMVGqBAxmkBoDRHk5zU
+ .j.GfNJvLAy5PC9s225GtbjqaspAzQBu.4UsKki6_uFwKa_.kpDttAyTOlII
+ EYPApCxDvadofVEG.MnUN
+X-Yahoo-SMTP: dpb9bSeswBAJCvgPB5CchyqxNbo_p9aAuQ--
+From: "Mary" <mary@edataflow.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:3895] Accounting and Financial software Users
+Date: Wed, 25 May 2016 18:17:33 +0100
+Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAACtT4G49X7xOgRq0TMTAU13CgAAAEAAAAAvDswuVCfJOhSeKSnkNEO4BAAAAAA==@edataflow.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0103_01D1B6B1.B7048B50"
+X-Priority: 1 (Highest)
+X-MSMail-Priority: High
+X-Mailer: Microsoft Office Outlook 12.0
+Importance: High
+Thread-Index: AdG2qVKd5CuIwXmzQ1uBVZe56nthRA==
+Content-Language: en-us
+x-cr-hashedpuzzle: AiiT BNE9 Bnj+ CXFU CasD CrmO Ct8M DDEr DjJ7 EmVT EvV5 FL9h F9zQ GQoH GniF IGZW;1;dABvAHMAZAByAEAAZwBvAG8AZwBsAGUAZwByAG8AdQBwAHMALgBjAG8AbQA=;Sosha1_v1;7;{212968AF-4B38-4D5D-96C4-C34FA69186C2};bQBhAHIAeQBAAGUAZABhAHQAYQBmAGwAbwB3AC4AYwBvAG0A;Wed, 25 May 2016 17:17:32 GMT;QQBjAGMAbwB1AG4AdABpAG4AZwAgAGEAbgBkACAARgBpAG4AYQBuAGMAaQBhAGwAIABzAG8AZgB0AHcAYQByAGUAIABVAHMAZQByAHMA
+x-cr-puzzleid: {212968AF-4B38-4D5D-96C4-C34FA69186C2}
+X-Original-Sender: mary@edataflow.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@yahoo.com;       spf=neutral (google.com: 98.139.244.54 is neither
+ permitted nor denied by best guess record for domain of mary@edataflow.com) smtp.mailfrom=mary@edataflow.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0103_01D1B6B1.B7048B50
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+ 
+
+Would you be interested in acquiring Accounting and Financial software
+Users, Resellers, Distributors, Competitors
+
+ contact list from across Global?
+
+ 
+
+We can also provide you with a sample list to check the fields available. 
+
+ 
+
+Please help me understand your goal audience details, so that I shall get
+back to you with the accurate counts and other related information
+accordingly. 
+
+ 
+
+Target Industry: ______________
+
+Target Geography: ______________
+
+Target Job titles: ______________
+
+ 
+
+Looking forward!
+
+ 
+
+Regards,
+
+Mary
+
+Demand Generation Executive
+
+ 
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/!%26!AAAAAAAAAAAYAAAAAAAAACtT4G49X7xOgRq0TMTAU13CgAAAEAAAAAvDswuVCfJOhSeKSnkNEO4BAAAAAA%3D%3D%40edataflow.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_NextPart_000_0103_01D1B6B1.B7048B50
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dus-ascii">
+<meta name=3DGenerator content=3D"Microsoft Word 12 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Hi,<o:p></o:p></span></p=
+>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Would you be interested =
+in
+acquiring <b>Accounting and Financial software </b></span><b><span
+style=3D'color:#1F497D'>Users,</span></b><span style=3D'color:#1F497D'> <b>=
+Resellers,
+Distributors,</b></span><b> </b><b><span style=3D'color:#1F497D'>Competitor=
+s</span></b><span
+style=3D'color:#1F497D'><o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>&nbsp;contact list from =
+across
+Global?<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#002060'>We can also provide you =
+with a
+sample list to check the fields available. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Please help me understan=
+d your
+goal audience details, so that I shall get back to you with the accurate co=
+unts
+and other related information accordingly. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Target Industry: _______=
+_______<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Target Geography: ______=
+________<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Target Job titles:
+______________<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Looking forward!<o:p></o=
+:p></span></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'><o:p>&nbsp;</o:p></span>=
+</p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Regards,<o:p></o:p></spa=
+n></p>
+
+<p class=3DMsoNormal><b><span style=3D'color:#1F497D'>Mary<o:p></o:p></span=
+></b></p>
+
+<p class=3DMsoNormal><span style=3D'color:#1F497D'>Demand Generation Execut=
+ive<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/!%26!AAAAAAAAAAAYAAAAAAAAACtT4G49X7xOgRq0TMTAU13CgAAAEAAAA=
+AvDswuVCfJOhSeKSnkNEO4BAAAAAA%3D%3D%40edataflow.com?utm_medium=3Demail&utm_=
+source=3Dfooter">https://groups.google.com/d/msgid/tosdr/!%26!AAAAAAAAAAAYA=
+AAAAAAAACtT4G49X7xOgRq0TMTAU13CgAAAEAAAAAvDswuVCfJOhSeKSnkNEO4BAAAAAA%3D%3D=
+%40edataflow.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_NextPart_000_0103_01D1B6B1.B7048B50--
+

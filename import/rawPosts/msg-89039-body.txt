@@ -1,0 +1,435 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp101920qek;
+        Sun, 26 Aug 2012 10:32:52 -0700 (PDT)
+Received: by 10.68.224.73 with SMTP id ra9mr28334598pbc.85.1346002372029;
+        Sun, 26 Aug 2012 10:32:52 -0700 (PDT)
+Return-Path: <tosdr+bncCLrs17b8HBDBu-mBBRoEfOPBaw@googlegroups.com>
+Received: from mail-pz0-f64.google.com (mail-pz0-f64.google.com [209.85.210.64])
+        by mx.google.com with ESMTPS id vn9si16281894pbc.257.2012.08.26.10.32.50
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 26 Aug 2012 10:32:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLrs17b8HBDBu-mBBRoEfOPBaw@googlegroups.com designates 209.85.210.64 as permitted sender) client-ip=209.85.210.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLrs17b8HBDBu-mBBRoEfOPBaw@googlegroups.com designates 209.85.210.64 as permitted sender) smtp.mail=tosdr+bncCLrs17b8HBDBu-mBBRoEfOPBaw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by dadz9 with SMTP id z9sf2374408dad.29
+        for <multiple recipients>; Sun, 26 Aug 2012 10:32:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=RE6F5zkOtFiNVy8xJvyMmJ8xxnXx8FnFZuoEkayamC8=;
+        b=tbS2lKf20ws/JaX6X/YUfGs+DVQtqQ8iXsG/Z8Xg0nlJ+Ciye/Nsemg22ZNaVz8Nfm
+         HKLnc6WvZ/nKm/pbnvDAEKNcXS7B8yGMTFwR01+VuzJWVE3ccb/bg+gTznUIC+fGIO2Z
+         rQNoj5z9xGUP9MX8K6ZkXBOaio+1gHiWKkwtOELhUOEv7Wj6B3ECJdkDYcyZJb+fY0n7
+         OglMDWCWlPAvXv3sGbblrKpOYMHLqT5QyqI3yn112HfUIIYhLvGc2N09N9jNqbqctFE/
+         /1YYP15NpCxd1c++niM3puCpVLaSnQknCF0CWuOe9Imnh1m9JbmcSm1e39afhsVh7yng
+         DC/A==
+Received: by 10.52.37.74 with SMTP id w10mr1482579vdj.8.1346002369810;
+        Sun, 26 Aug 2012 10:32:49 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.52.92.107 with SMTP id cl11ls2547609vdb.4.gmail; Sun, 26 Aug
+ 2012 10:32:49 -0700 (PDT)
+Received: by 10.52.99.73 with SMTP id eo9mr1468545vdb.10.1346002369037;
+        Sun, 26 Aug 2012 10:32:49 -0700 (PDT)
+Date: Sun, 26 Aug 2012 10:32:48 -0700 (PDT)
+From: Jorge Morell Ramos <mr.pequod@gmail.com>
+To: tosdr@googlegroups.com
+Cc: mehdi medjaoui <mehdi.medjaoui@gmail.com>, 
+	"mr.pequod@gmail.com" <mr.pequod@gmail.com>, reneelloyd@me.com
+Message-Id: <4f60ee13-5ce9-4dbd-a3bd-6e92dd192a0d@googlegroups.com>
+In-Reply-To: <A7161BB2-74E7-4DD3-A49A-707A5A41410C@me.com>
+References: <3F1EE1CC-9976-4E0C-8A8A-C7043B035BFA@me.com>
+ <6eeaeee5-e9ba-41e3-a556-ea21063c778f@googlegroups.com>
+ <FF74B8D0-CBF0-4A6B-90B6-236A619031A4@me.com>
+ <0f3e13f5-4f2d-4aa2-af4c-f6190f69d994@googlegroups.com>
+ <2e09cab2-29de-45f6-814b-c13fd7664ab3@googlegroups.com>
+ <526c8131-95f6-4d9a-8b57-b0b3fc757bc4@googlegroups.com>
+ <b9c12423-6233-49e7-ba3f-5571a94817fc@googlegroups.com>
+ <A7161BB2-74E7-4DD3-A49A-707A5A41410C@me.com>
+Subject: [tosdr:678] Re: API agreements
+MIME-Version: 1.0
+X-Original-Sender: mr.pequod@gmail.com
+X-Original-Authentication-Results: ls.google.com; spf=pass (google.com: domain of
+ mr.pequod@gmail.com designates internal as permitted sender)
+ smtp.mail=mr.pequod@gmail.com; dkim=pass
+ header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2049_29271331.1346002368762"
+
+------=_Part_2049_29271331.1346002368762
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi again!
+
+A little too busy these past days.
+
+Silly question! :P How do I join the new group the same way I've done it=20
+with this one? It's always asking me for a Captcha and then it opens the=20
+client mail.
+
+Or are we going to work only through email?
+
+Thanks!
+
+
+El jueves, 23 de agosto de 2012 03:04:10 UTC+2, Renee Lloyd escribi=F3:
+>
+> This is wonderfully exciting!  =20
+>
+> Renee Lloyd
+> Sent from my iPhone
+>
+> On Aug 22, 2012, at 8:54 PM, mehdi medjaoui <mehdi.m...@gmail.com<javascr=
+ipt:>>=20
+> wrote:
+>
+> Hi Jorge,
+>
+> happy to have you onboard !
+>
+> I just finished the global Google API Tos...not so easy !=20
+> I think we need to add to thse each Google API Tos=20
+> Specifications..(analytics, maps, charts, spreadsheet, custom search etc.=
+..)
+>
+> Cheers,
+>
+> Le mercredi 22 ao=FBt 2012 22:59:46 UTC+2, Jorge Morell Ramos a =E9crit :
+>>
+>> Thanks a lot Mehdi! ;-)
+>>
+>> I'm in! :D
+>>
+>> I think the API Tos are quite important although they are even less know=
+n=20
+>> than the main ones of a service. That's why I'm also analyzing the API T=
+os=20
+>> if the service has them. As I said, they are usually more unfair, and th=
+ey=20
+>> change even more than the general ones. Facebook is changing the Tos for=
+=20
+>> developers almost weekly. Twitter is going to change them big time.=20
+>> Linkedin already did it. And probably more that we don't know about.
+>>
+>> So, there we go!
+>>
+>> I have the Spotify and Instagram ones done. We could probably begin with=
+=20
+>> Instagram, there are plenty of new services using them right now. Then=
+=20
+>> Spotify and almost simultaneously the Twitter ones, they are going to=20
+>> change quite a bit and there are a lot of apps using the Twitter API.   =
+ =20
+>>
+>> I'll start tomorrow with Instagram.
+>>
+>> Regards, Jorge.
+>>
+>> El mi=E9rcoles, 22 de agosto de 2012 10:19:52 UTC+2, mehdi medjaoui=20
+>> escribi=F3:
+>>>
+>>> Hello Jorge,
+>>>
+>>> I just checked your work on www.terminosycondiciones.es , and you seems=
+=20
+>>> to have done a great work on Tos and *API Tos !* I understand a little=
+=20
+>>> spanish but in a suffisant way to understand details of what you did. ;=
+)
+>>>
+>>> I opened a specific group api-...@googlegroups.com for talking about=20
+>>> specific API Tos issues, following Hugo Roy recomandations for specific=
+=20
+>>> APIs Tos (one of the lead project of Tos;dr)
+>>>
+>>> Your work on spotify and Instagram could be great in this API oriented=
+=20
+>>> group , in english please !
+>>> Tell me whan you want to participate.
+>>>
+>>> Cheers,
+>>>
+>>>
+>>> Le mardi 21 ao=FBt 2012 23:11:05 UTC+2, Jorge Morell Ramos a =E9crit :
+>>>>
+>>>> El martes, 21 de agosto de 2012 22:51:46 UTC+2, Renee Lloyd  escribi=
+=F3:=20
+>>>> > Thank you!  Your observations are interesting. Like you I find them=
+=20
+>>>> more difficult to locate and more restrictive. Also, what I've seen=20
+>>>> conflicts with the site TOS.  =20
+>>>> >=20
+>>>> >=20
+>>>> >=20
+>>>> >=20
+>>>> >=20
+>>>> > Renee Lloyd=20
+>>>> >=20
+>>>> > Sent from my iPhone=20
+>>>> >=20
+>>>> >=20
+>>>> >=20
+>>>> > On Aug 21, 2012, at 4:44 PM, Jorge wrote:=20
+>>>> >=20
+>>>> >=20
+>>>> >=20
+>>>> > > Hi everyone,=20
+>>>> >=20
+>>>> > >=20
+>>>> >=20
+>>>> > > In www.terminosycondiciones.es, the website (in Spanish) where I=
+=20
+>>>> analyze the TOS of digitals services and products paragraph by paragra=
+ph,=20
+>>>> as well as giving notice of updates, I've checked the API TOS of Insta=
+gram=20
+>>>> and Spotify (and a little bit of LinkedIn, they changed them almost=20
+>>>> completely a few weeks ago by the way).=20
+>>>> >=20
+>>>> > >=20
+>>>> >=20
+>>>> > > They are a little different from the usual ones, harder to find an=
+d=20
+>>>> more abusive too as far as I've seen.  =20
+>>>> >=20
+>>>> > >=20
+>>>> >=20
+>>>> > > So if I can help with that, it will be my pleasure. :-)=20
+>>>> >=20
+>>>> > >=20
+>>>> >=20
+>>>> > > El mi=E9rcoles, 15 de agosto de 2012 17:37:06 UTC+2, Renee Lloyd=
+=20
+>>>>  escribi=F3:=20
+>>>> >=20
+>>>> > >> API's are sometimes governed by the download site's TOS, a=20
+>>>> separate API click agree or other agreement.  Do you want to have us n=
+ote=20
+>>>> that the TOS applies to an API?  Also does this project include review=
+ of=20
+>>>> TOS-like API agreements?=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >> Best=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >> Renee  =20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >> Renee Lloyd=20
+>>>> >=20
+>>>> > >>=20
+>>>> >=20
+>>>> > >> Sent from my iPhone=20
+>>>>
+>>>> ;-)=20
+>>>>
+>>>> Yeah, they are definitively more unfair, full of undefined terms, don'=
+t=20
+>>>> get along that well with the site TOS, establish the brand guidelines =
+for=20
+>>>> the software you are developing...=20
+>>>>
+>>>> The API terms are something a little bit different from the usual TOS=
+=20
+>>>> of the site.=20
+>>>>
+>>>> Regards, Jorge.
+>>>
+>>>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_2049_29271331.1346002368762
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi again!<div><br></div><div>A little too busy these past days.</div><div><=
+br></div><div>Silly question! :P How do I join the new group the same way I=
+'ve done it with this one? It's always asking me for a Captcha and then it =
+opens the client mail.<br></div><div><br></div><div>Or are we going to work=
+ only through email?</div><div><br></div><div>Thanks!</div><div><br></div><=
+div><br>El jueves, 23 de agosto de 2012 03:04:10 UTC+2, Renee Lloyd  escrib=
+i=F3:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8e=
+x;border-left: 1px #ccc solid;padding-left: 1ex;"><div bgcolor=3D"#FFFFFF">=
+<div>This is wonderfully exciting! &nbsp;&nbsp;<br><br><div>Renee Lloyd</di=
+v>Sent from my iPhone</div><div><br>On Aug 22, 2012, at 8:54 PM, mehdi medj=
+aoui &lt;<a href=3D"javascript:" target=3D"_blank" gdf-obfuscated-mailto=3D=
+"-kE4ZzDsYGQJ">mehdi.m...@gmail.com</a>&gt; wrote:<br><br></div><div></div>=
+<blockquote type=3D"cite"><div>Hi Jorge,<div><br></div><div>happy to have y=
+ou onboard !</div><div><br></div><div>I just finished the global Google API=
+ Tos...not so easy !&nbsp;</div><div>I think we need to add to thse each Go=
+ogle API Tos Specifications..(analytics, maps, charts, spreadsheet, custom =
+search etc...)</div><div><br></div><div>Cheers,<br><br>Le mercredi 22 ao=FB=
+t 2012 22:59:46 UTC+2, Jorge Morell Ramos a =E9crit&nbsp;:<blockquote class=
+=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc s=
+olid;padding-left:1ex">Thanks a lot Mehdi! ;-)<div><br></div><div>I'm in! :=
+D</div><div><br></div><div>I think the API Tos are quite important although=
+ they are even less known than the main ones of a service. That's why I'm a=
+lso analyzing the API Tos if the service has them. As I said, they are usua=
+lly more unfair, and they change even more than the general ones. Facebook =
+is changing the Tos for developers almost weekly. Twitter is going to chang=
+e them big time. Linkedin already did it. And probably more that we don't k=
+now about.</div><div><br></div><div>So, there we go!</div><div><br></div><d=
+iv>I have the Spotify and Instagram ones done. We could probably begin with=
+ Instagram, there are plenty of new services using them right now. Then Spo=
+tify and almost simultaneously the Twitter ones, they are going to change q=
+uite a bit and there are a lot of apps using the Twitter API. &nbsp; &nbsp;=
+&nbsp;</div><div><br></div><div>I'll start tomorrow with Instagram.</div><d=
+iv><br></div><div>Regards, Jorge.<br><br>El mi=E9rcoles, 22 de agosto de 20=
+12 10:19:52 UTC+2, mehdi medjaoui  escribi=F3:<blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding=
+-left:1ex">Hello Jorge,<div><br></div><div>I just checked your work on
+<a href=3D"http://www.terminosycondiciones.es/" target=3D"_blank">www.termi=
+nosycondiciones.es</a>&nbsp;, and you seems to have done a great work on To=
+s and <b>API Tos !</b> I understand a little spanish but in a suffisant way=
+ to understand details of what you did. ;)</div><div><br></div><div>I opene=
+d a specific group <a>api-...@googlegroups.com</a> for talking about specif=
+ic API Tos issues, following Hugo Roy recomandations for specific APIs Tos =
+(one of the lead project of Tos;dr)</div><div><br></div><div>Your work on s=
+potify and Instagram could be great in this API oriented group , in english=
+ please !</div><div>Tell me whan you want to participate.</div><div><br></d=
+iv><div>Cheers,</div><div><br><br>Le mardi 21 ao=FBt 2012 23:11:05 UTC+2, J=
+orge Morell Ramos a =E9crit&nbsp;:<blockquote class=3D"gmail_quote" style=
+=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"=
+>El martes, 21 de agosto de 2012 22:51:46 UTC+2, Renee Lloyd &nbsp;escribi=
+=F3:
+<br>&gt; Thank you! &nbsp;Your observations are interesting. Like you I fin=
+d them more difficult to locate and more restrictive. Also, what I've seen =
+conflicts with the site TOS. &nbsp;
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt; Renee Lloyd
+<br>&gt;=20
+<br>&gt; Sent from my iPhone
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt; On Aug 21, 2012, at 4:44 PM, Jorge wrote:
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt;=20
+<br>&gt; &gt; Hi everyone,
+<br>&gt;=20
+<br>&gt; &gt;=20
+<br>&gt;=20
+<br>&gt; &gt; In <a href=3D"http://www.terminosycondiciones.es" target=3D"_=
+blank">www.terminosycondiciones.es</a>, the website (in Spanish) where I an=
+alyze the TOS of digitals services and products paragraph by paragraph, as =
+well as giving notice of updates, I've checked the API TOS of Instagram and=
+ Spotify (and a little bit of LinkedIn, they changed them almost completely=
+ a few weeks ago by the way).
+<br>&gt;=20
+<br>&gt; &gt;=20
+<br>&gt;=20
+<br>&gt; &gt; They are a little different from the usual ones, harder to fi=
+nd and more abusive too as far as I've seen. &nbsp;=20
+<br>&gt;=20
+<br>&gt; &gt;=20
+<br>&gt;=20
+<br>&gt; &gt; So if I can help with that, it will be my pleasure. :-)
+<br>&gt;=20
+<br>&gt; &gt;=20
+<br>&gt;=20
+<br>&gt; &gt; El mi=E9rcoles, 15 de agosto de 2012 17:37:06 UTC+2, Renee Ll=
+oyd &nbsp;escribi=F3:
+<br>&gt;=20
+<br>&gt; &gt;&gt; API's are sometimes governed by the download site's TOS, =
+a separate API click agree or other agreement. &nbsp;Do you want to have us=
+ note that the TOS applies to an API? &nbsp;Also does this project include =
+review of TOS-like API agreements?
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt; Best
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt; Renee &nbsp;
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt; Renee Lloyd
+<br>&gt;=20
+<br>&gt; &gt;&gt;=20
+<br>&gt;=20
+<br>&gt; &gt;&gt; Sent from my iPhone
+<br>
+<br>;-)
+<br>
+<br>Yeah, they are definitively more unfair, full of undefined terms, don't=
+ get along that well with the site TOS, establish the brand guidelines for =
+the software you are developing...
+<br>
+<br>The API terms are something a little bit different from the usual TOS o=
+f the site.
+<br>
+<br>Regards, Jorge.</blockquote></div></blockquote></div></blockquote></div=
+></div></blockquote></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_2049_29271331.1346002368762--

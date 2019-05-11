@@ -1,0 +1,36 @@
+MIME-Version: 1.0
+Received: by 10.142.125.4 with HTTP; Fri, 29 Jun 2012 03:39:41 -0700 (PDT)
+X-Originating-IP: [37.6.117.29]
+Date: Fri, 29 Jun 2012 13:39:41 +0300
+Delivered-To: michiel@unhosted.org
+Message-ID: <CA+aD3u38njseAKCOae5tEVxGPgc03zT+zO0pjWtjh5YkLALKTw@mail.gmail.com>
+Subject: is using webserver logs ok?
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+
+There's a campaign called WirSpeichernNicht.de, which aims to convince
+websites to not keep identifiable data in webserver logs. i think
+logging should be switched off by default (that's better for
+performance anyway), and only be used to mitigate DoS attacks and
+such.
+
+The use of webserver logs to determine demographics of a website's
+visitors is, i guess, *only* acceptable if data is anonymized before
+it is stored. And anonymizing is not very easy technically, so should
+be done with some care, and by people who know what they're doing,
+before any logs are published to marketing departments or third
+parties etcetera.
+
+right now, the default is that you're being tracked all the time, and
+this creates a slippery slope. if we promote privacy by default, then
+users can still opt-in to be counted in tracking experiments. this
+also relates to the DoNotTrack header, i guess?
+
+just had a discussion with Hugo and Erkan about this, Hugo in
+particular doesn't at all agree with me that this is a consumer's
+right we should be defending... curious how important other people
+find this topic!
+
+Cheers,
+Michiel

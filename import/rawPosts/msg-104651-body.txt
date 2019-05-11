@@ -1,0 +1,468 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp274389vec;
+        Sun, 9 Dec 2012 11:08:48 -0800 (PST)
+Received: by 10.52.100.232 with SMTP id fb8mr6663673vdb.126.1355080127715;
+        Sun, 09 Dec 2012 11:08:47 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBPODSODAKGQEXS2P7ZA@googlegroups.com>
+Received: from mail-vb0-f57.google.com (mail-vb0-f57.google.com [209.85.212.57])
+        by mx.google.com with ESMTPS id q2si14375789vdv.97.2012.12.09.11.08.47
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 09 Dec 2012 11:08:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBPODSODAKGQEXS2P7ZA@googlegroups.com designates 209.85.216.178 as permitted sender) client-ip=209.85.216.178;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBPODSODAKGQEXS2P7ZA@googlegroups.com designates 209.85.216.178 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBPODSODAKGQEXS2P7ZA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-vb0-f57.google.com with SMTP id ez10sf1597491vbb.2
+        for <michiel@unhosted.org>; Sun, 09 Dec 2012 11:08:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:sender:in-reply-to:references
+         :date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=xxYj0mLkBUTI41dAs9m6EiHtW8vJMt5AhW6o8JRPcUk=;
+        b=tTC+wtAJ7J2TGmDqj0P8Vn2Tt9o9qwudGY4A+PyMvSCxkrCpJr15HKqV9Z4UBaTN+U
+         FfDzUOYSPjPx6qPtTIknQieVsV6xYDnp++GxMS3efJg/N5UOAT/7Rvnd5YycYdFmgD65
+         +Ve+2J4YAoR2VUdlkSfed/8SAZ8+5Wis1l/8xXwnulGUT3H/fTz6hdagVNqItD9r3byK
+         xKUC4agsnn92MImuWD0LJvANDdVqU/nA+QNnyVKa6FgsX6/QjRU0/zS6HTDsX86Hq4YV
+         rA9xeOvQZaimvYwwwQkMbzL0NdEqVM7yzs6kQDpPRejksBxQYfMItwc+N6x6gldPYtmI
+         olYg==
+Received: by 10.49.48.41 with SMTP id i9mr2582315qen.36.1355080127138;
+        Sun, 09 Dec 2012 11:08:47 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.110.102 with SMTP id hz6ls3546578qeb.67.gmail; Sun, 09 Dec
+ 2012 11:08:45 -0800 (PST)
+Received: by 10.224.207.66 with SMTP id fx2mr9832546qab.7.1355080125621;
+        Sun, 09 Dec 2012 11:08:45 -0800 (PST)
+Received: by 10.224.207.66 with SMTP id fx2mr9832544qab.7.1355080125594;
+        Sun, 09 Dec 2012 11:08:45 -0800 (PST)
+Received: from mail-qc0-f178.google.com (mail-qc0-f178.google.com [209.85.216.178])
+        by gmr-mx.google.com with ESMTPS id y1si4585516qco.0.2012.12.09.11.08.45
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 09 Dec 2012 11:08:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of devlinks@gmail.com designates 209.85.216.178 as permitted sender) client-ip=209.85.216.178;
+Received: by mail-qc0-f178.google.com with SMTP id j34so1322346qco.23
+        for <tosdr@googlegroups.com>; Sun, 09 Dec 2012 11:08:45 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.49.96.1 with SMTP id do1mr25345211qeb.26.1355080124998; Sun,
+ 09 Dec 2012 11:08:44 -0800 (PST)
+Sender: tosdr@googlegroups.com
+Received: by 10.49.25.5 with HTTP; Sun, 9 Dec 2012 11:08:44 -0800 (PST)
+In-Reply-To: <CALcVDVLW8i0=HnOkH5YxSuo6CEwaQPkaogpVqjp8o-E3qSQ3xg@mail.gmail.com>
+References: <CA+aD3u19m+S4+D5E=GrRi2J9es43RSU2hrm+OTz7vY8mGMxMGA@mail.gmail.com>
+	<3ded95b9-d676-4404-a57a-277783894e8d@googlegroups.com>
+	<8aca0767-9cb0-4ebb-9f3c-beb6ec003214@googlegroups.com>
+	<5068A64A.3480.38809AB1@pm.YourIPAttorney.com>
+	<CA+aD3u0ebzaDC1bHS9zBWR+Xnt70r=FsiU=STCvkaEtAvt1xEQ@mail.gmail.com>
+	<1349519527.22715.6.camel@synclavier.lan>
+	<7f97194a-6873-426a-a3e8-effcb952fce1@googlegroups.com>
+	<b5b3e1b0-f621-4759-a9fb-a5992f056475@googlegroups.com>
+	<CALcVDVLW8i0=HnOkH5YxSuo6CEwaQPkaogpVqjp8o-E3qSQ3xg@mail.gmail.com>
+Date: Sun, 9 Dec 2012 15:08:44 -0400
+Message-ID: <CAB8Z3Ect_-rcznxXU+He7Vm1ao8MtPs6xXXzuCGNeFfk1UbziA@mail.gmail.com>
+Subject: Re: [tosdr:1316] Re: [Bad] CouchSurfing may revoke the right to link
+ to them
+From: Robin Monks <robin@robinmonks.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: devlinks@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of devlinks@gmail.com designates 209.85.216.178 as permitted sender)
+ smtp.mail=devlinks@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b6757e07e259d04d0702d1d
+
+--047d7b6757e07e259d04d0702d1d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I'm guessing their logic here would be to see a page to link to use must
+use their website which makes you automatically agree to their terms. If
+that's enforceable in court it's horribly unfair to the user.
+
+
+On Sun, Dec 9, 2012 at 2:53 PM, Aidan F <duckjr159@gmail.com> wrote:
+
+> They can't "give you the right" to link, but they can make you agree not
+> to link.
+>
+> ----
+> *Aidan "Duck X" Fitzgerald*
+> Promoting freedom on #ourweb, everyday.
+> Website: qzekrom.net16.net
+> Facebook <http://www.facebook.com/aidan.fitzgerald.7169> | YouTube<http:/=
+/www.youtube.com/user/vionicle> |
+> Tel: (347) 637-9428
+> Disclaimers<http://includes.qzekrom.net16.net/telecom/email-disclaimer.ph=
+p>
+>
+>
+>
+> On Sun, Dec 9, 2012 at 1:12 PM, Ian McGowan <irmcgowan@gmail.com> wrote:
+>
+>> I've made a note of this ridiculous point. Consider it curated.
+>>
+>>
+>> On Wednesday, December 5, 2012 2:44:42 PM UTC+1, Robin Monks wrote:
+>>>
+>>> I see these kinds of terms in a lot of ToS; it seems incredibly stupid
+>>> and a large attempt and hindering free speech rights by companies.  If
+>>> there is a entry in tos;dr for this, it should likely contain a small
+>>> "article" explaining fair use and free speech in a few targeted countri=
+es
+>>> to allow people to remain informed.
+>>>
+>>> /Robin
+>>>
+>>> On Saturday, October 6, 2012 7:32:12 AM UTC-3, Hugo Roy wrote:
+>>>>
+>>>> Le samedi 06 octobre 2012 =C3=A0 11:01 +0200, Michiel de Jong a =C3=A9=
+crit :
+>>>> > ok, i got a reply from them, what this is about is travel websites
+>>>> > that have 'accomodation search' linking to couchsurfing. they don't
+>>>> > want that to happen. they will not use this clause against you if yo=
+u
+>>>> > just blog about them.
+>>>>
+>>>> We should not get fooled. This is not what the clause says. This
+>>>> interpretation is not binding and seems like just an excuse for terms
+>>>> of
+>>>> bad quality.
+>>>>
+>>>> > i guess this is about deeplinking to specific offers and/or iframing
+>>>> > couchsurfing's content in a context, not about linking to the
+>>>> > couchsurfing home page i think.
+>>>>
+>>>> The clause says linking, right? Is there a definition of linking
+>>>> anywhere? If not, then assume it's the standard definition of linking,
+>>>> i.e. to write somewhere on the web a <a
+>>>> href=3D"http://couchsurfing.org"**>link</a>.
+>>>>
+>>>> > i think a couchsurfing offer is not a historical or newsworthy fact,
+>>>> > and i think this exposes the absurdity of web 2.0, where publishing
+>>>> > tools claim copyright over user content.
+>>>> >
+>>>> > i guess they can prohibit other sites from quoting copyrighted
+>>>> > information only if they are the owners/authors, right?
+>>>>
+>>>> No because quoting text is covered by the exceptions to copyright law
+>>>> (or fair use in the US).
+>>>>
+>>>> >  if they only
+>>>> > get a non-exclusive license to user content, then how can they have
+>>>> > anything to say over others displaying it?
+>>>> >
+>>>> > can you prohibit other sites from deeplinking to specific search
+>>>> > results on your site?
+>>>> >
+>>>> > i think there was a similar case where google was displaying tweets
+>>>> > from twitter as 'real time results' on their search results page, an=
+d
+>>>> > iirc, twitter was able to stop them from doing that.
+>>>>
+>>>> IIRC there was an agreement between google and twitter, then they
+>>>> didn't
+>>>> pursue it. But I think seriously this issue is getting too far. We're
+>>>> trying to make assumptions, whereas if you read the clause in question=
+,
+>>>> it's rather simple and stupid. There was actually a website making fun
+>>>> of all these silly clauses forbidding people to make links.
+>>>>
+>>>> I propose, if we summarise this point, to write a title like:
+>>>>         Absurd: they claim the right to forbid you to link to them
+>>>>
+>>>> or something like this.
+>>>>
+>>>> --
+>>>> Hugo Roy
+>>>>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org
+>>>>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+>>>>                                  mobile DE: +49 151 143 56 563
+>>>>
+>>>>  --
+>> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+>> ---
+>> You received this message because you are subscribed to the Google Group=
+s
+>> "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to tosdr@googlegroups.com.
+>> To unsubscribe from this group, send email to
+>> tosdr+unsubscribe@googlegroups.com.
+>> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+>> For more options, visit https://groups.google.com/groups/opt_out.
+>>
+>>
+>>
+>
+>  --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+
+
+--=20
+*R=E2=99=82bin Monks <http://robinmonks.com>*
+President, Podhurl Inc. <http://podhurl.us>
+Drupal Association Individual Member
+603.236.7357
+
+Live in such a way that those who know you but don't know God, will come to
+know God because they know you.
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b6757e07e259d04d0702d1d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I&#39;m guessing their logic here would be to see a page to link to use mus=
+t use their website which makes you automatically agree to their terms. If =
+that&#39;s=C2=A0enforceable=C2=A0in court it&#39;s horribly unfair to the u=
+ser.<div class=3D"gmail_extra">
+<br><br><div class=3D"gmail_quote">On Sun, Dec 9, 2012 at 2:53 PM, Aidan F =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:duckjr159@gmail.com" target=3D"_bla=
+nk">duckjr159@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail=
+_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:=
+1ex">
+<font color=3D"#333333"><font face=3D"tahoma,sans-serif">They can&#39;t &qu=
+ot;give you the right&quot; to link, but they can make you agree not to lin=
+k.</font></font><div class=3D"gmail_extra"><br clear=3D"all"><div><div styl=
+e=3D"text-align:left">
+
+
+<font face=3D"tahoma, sans-serif">----</font></div><div style=3D"text-align=
+:left"><b><font face=3D"tahoma, sans-serif">Aidan &quot;Duck X&quot; Fitzge=
+rald</font></b></div><div style=3D"text-align:left"><font face=3D"tahoma, s=
+ans-serif"><font size=3D"1" color=3D"#666666">Promoting freedom on </font><=
+font size=3D"1" color=3D"#3333ff">#ourweb</font><font size=3D"1" color=3D"#=
+666666">, everyday.</font></font></div>
+
+
+<div style=3D"text-align:left"><font size=3D"1" color=3D"#666666" face=3D"t=
+ahoma, sans-serif">Website: <a href=3D"http://qzekrom.net16.net" target=3D"=
+_blank">qzekrom.net16.net</a></font></div><div style=3D"text-align:left"><f=
+ont size=3D"1" color=3D"#666666" face=3D"tahoma, sans-serif"><a href=3D"htt=
+p://www.facebook.com/aidan.fitzgerald.7169" target=3D"_blank">Facebook</a>=
+=C2=A0|=C2=A0<a href=3D"http://www.youtube.com/user/vionicle" target=3D"_bl=
+ank">YouTube</a>=C2=A0| Tel: <a href=3D"tel:%28347%29%20637-9428" value=3D"=
++13476379428" target=3D"_blank">(347) 637-9428</a></font></div>
+
+
+<div style=3D"text-align:left"><a href=3D"http://includes.qzekrom.net16.net=
+/telecom/email-disclaimer.php" style=3D"font-family:tahoma,sans-serif;font-=
+size:x-small" target=3D"_blank">Disclaimers</a><br></div></div><div><div cl=
+ass=3D"h5">
+<br>
+<br><br><div class=3D"gmail_quote">On Sun, Dec 9, 2012 at 1:12 PM, Ian McGo=
+wan <span dir=3D"ltr">&lt;<a href=3D"mailto:irmcgowan@gmail.com" target=3D"=
+_blank">irmcgowan@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex">
+
+
+I&#39;ve made a note of this ridiculous point. Consider it curated.<div><di=
+v><br><br>On Wednesday, December 5, 2012 2:44:42 PM UTC+1, Robin Monks wrot=
+e:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;bor=
+der-left:1px #ccc solid;padding-left:1ex">
+
+
+I see these kinds of terms in a lot of ToS; it seems incredibly stupid and =
+a large attempt and hindering free speech rights by=C2=A0companies. =C2=A0I=
+f there is a entry in tos;dr for this, it should likely contain a small &qu=
+ot;article&quot; explaining fair use and free speech in a few targeted coun=
+tries to allow people to remain informed.<div>
+
+
+<br></div><div>/Robin<br><br>On Saturday, October 6, 2012 7:32:12 AM UTC-3,=
+ Hugo Roy wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-=
+left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">Le samedi 06 octobr=
+e 2012 =C3=A0 11:01 +0200, Michiel de Jong a =C3=A9crit :
+<br>&gt; ok, i got a reply from them, what this is about is travel websites
+<br>&gt; that have &#39;accomodation search&#39; linking to couchsurfing. t=
+hey don&#39;t
+<br>&gt; want that to happen. they will not use this clause against you if =
+you
+<br>&gt; just blog about them.
+<br>
+<br>We should not get fooled. This is not what the clause says. This
+<br>interpretation is not binding and seems like just an excuse for terms o=
+f
+<br>bad quality.
+<br>
+<br>&gt; i guess this is about deeplinking to specific offers and/or iframi=
+ng
+<br>&gt; couchsurfing&#39;s content in a context, not about linking to the
+<br>&gt; couchsurfing home page i think.
+<br>
+<br>The clause says linking, right? Is there a definition of linking
+<br>anywhere? If not, then assume it&#39;s the standard definition of linki=
+ng,
+<br>i.e. to write somewhere on the web a &lt;a
+<br>href=3D&quot;<a href=3D"http://couchsurfing.org" target=3D"_blank">http=
+://couchsurfing.org</a>&quot;<u></u>&gt;link&lt;/a&gt;.
+<br>
+<br>&gt; i think a couchsurfing offer is not a historical or newsworthy fac=
+t,
+<br>&gt; and i think this exposes the absurdity of web 2.0, where publishin=
+g
+<br>&gt; tools claim copyright over user content.
+<br>&gt;=20
+<br>&gt; i guess they can prohibit other sites from quoting copyrighted
+<br>&gt; information only if they are the owners/authors, right?
+<br>
+<br>No because quoting text is covered by the exceptions to copyright law
+<br>(or fair use in the US).
+<br>
+<br>&gt; =C2=A0if they only
+<br>&gt; get a non-exclusive license to user content, then how can they hav=
+e
+<br>&gt; anything to say over others displaying it?
+<br>&gt;=20
+<br>&gt; can you prohibit other sites from deeplinking to specific search
+<br>&gt; results on your site?
+<br>&gt;=20
+<br>&gt; i think there was a similar case where google was displaying tweet=
+s
+<br>&gt; from twitter as &#39;real time results&#39; on their search result=
+s page, and
+<br>&gt; iirc, twitter was able to stop them from doing that.
+<br>
+<br>IIRC there was an agreement between google and twitter, then they didn&=
+#39;t
+<br>pursue it. But I think seriously this issue is getting too far. We&#39;=
+re
+<br>trying to make assumptions, whereas if you read the clause in question,
+<br>it&#39;s rather simple and stupid. There was actually a website making =
+fun
+<br>of all these silly clauses forbidding people to make links.
+<br>
+<br>I propose, if we summarise this point, to write a title like:
+<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 Absurd: they claim the right to forbid you =
+to link to them
+<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=20
+<br>or something like this.
+<br>
+<br>--=20
+<br>Hugo Roy=20
+<br>=C2=A0 French Coordinator, FSFE =C2=A0 =C2=A0 =C2=A0 chat: <a>hu...@jab=
+ber.fsfe.org</a>
+<br>=C2=A0 <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.=
+fsfe.org/about/roy</a> =C2=A0 =C2=A0 =C2=A0 =C2=A0 mobile: <a href=3D"tel:%=
+2B336%2008%2074%2013%2041" value=3D"+33608741341" target=3D"_blank">+336 08=
+ 74 13 41</a>
+<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0mobile DE: <a href=3D"tel:%=
+2B49%20151%20143%2056%20563" value=3D"+4915114356563" target=3D"_blank">+49=
+ 151 143 56 563</a>
+<br>
+<br></blockquote></div></blockquote>
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+
+
+--- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om" target=3D"_blank">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com" target=3D"_blank">tosdr+unsubscribe@googlegroups=
+.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+=C2=A0<br>
+=C2=A0<br>
+</div></div></blockquote></div><br></div></div></div><div class=3D"HOEnZb">=
+<div class=3D"h5">
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+--- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om" target=3D"_blank">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com" target=3D"_blank">tosdr+unsubscribe@googlegroups=
+.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+=C2=A0<br>
+=C2=A0<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com" targe=
+t=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:cent=
+er">President, <a href=3D"http://podhurl.us" target=3D"_blank">Podhurl Inc.=
+</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er">603.236.7357</div><div><span style=3D"font-size:x-small"></span><br><di=
+v style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don&#39;t know God, will come to know God because they know you.</spa=
+n></div></div></div><br>
+</div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b6757e07e259d04d0702d1d--

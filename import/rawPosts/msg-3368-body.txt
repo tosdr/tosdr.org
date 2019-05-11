@@ -1,0 +1,166 @@
+Return-Path: <tosdr+bncBDFPVJU7ZMJRBVFIXCGAKGQEH2AAMHQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 6FFA0161735
+	for <anything@michielbdejong.com>; Sat, 11 May 2013 11:50:16 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 6AB941161A6
+	for <anything@michielbdejong.com>; Sat, 11 May 2013 11:50:16 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qeCNSetcg8j8 for <anything@michielbdejong.com>;
+	Sat, 11 May 2013 11:50:14 +0200 (CEST)
+Received: from mail-ea0-x238.google.com (mail-ea0-x238.google.com [IPv6:2a00:1450:4013:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5E84E1162D3
+	for <anything@michielbdejong.com>; Sat, 11 May 2013 11:50:14 +0200 (CEST)
+Received: by mail-ea0-f184.google.com with SMTP id z16sf136695ead.21
+        for <anything@michielbdejong.com>; Sat, 11 May 2013 02:50:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:received-spf:mime-version
+         :x-received:sender:in-reply-to:references:date:message-id:subject
+         :from:to:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=yshCkra8TyN3fjvb/+WOAHQazGKw5LPlFava1fF7pa4=;
+        b=yOCZ+8Y/BFTBNRJ/yvu8Z0wuQ22z+eGOLrpdGnDGO7Q3uiJ8qq3CMD0bHA0VXDrBkj
+         Cje6G3xiz4ohOQ7tiCxFhKV6RRa9MSdPL8eDNesdto0mJkE2uT5+QLk+ekYfWqafM0oU
+         VTua6cXJQLKqRiP8MSdvENuKem1Kt4JUEOitIUmYkep73eKu+EM3dZ7qTEKmKTyqC2Wl
+         j/O3riGfyMWMQwt+m8PpEdSpb0uDcIl5Y/2d0kwWCRuB5KwG1SUCagtOBpxeammMfv+L
+         AK4acfFt9OUggfjIetrfqDJ3nxYdupZ4AQqOnNo89a16VWYeGqZEWzRJF5xHw1gPgZuG
+         ff8w==
+X-Received: by 10.180.96.193 with SMTP id du1mr11409wib.7.1368265813086;
+        Sat, 11 May 2013 02:50:13 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.72.211 with SMTP id f19ls401129wiv.6.canary; Sat, 11 May
+ 2013 02:50:12 -0700 (PDT)
+X-Received: by 10.204.71.134 with SMTP id h6mr952436bkj.8.1368265811909;
+        Sat, 11 May 2013 02:50:11 -0700 (PDT)
+Received: from mail-lb0-f182.google.com (mail-lb0-f182.google.com [209.85.217.182])
+        by gmr-mx.google.com with ESMTPS id cm16si437492bkb.0.2013.05.11.02.50.11
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sat, 11 May 2013 02:50:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suzanne.azmayesh@gmail.com designates 209.85.217.182 as permitted sender) client-ip=209.85.217.182;
+Received: by mail-lb0-f182.google.com with SMTP id r11so4982920lbv.27
+        for <tosdr@googlegroups.com>; Sat, 11 May 2013 02:50:11 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.112.219.9 with SMTP id pk9mr2244056lbc.3.1368265811532; Sat,
+ 11 May 2013 02:50:11 -0700 (PDT)
+Sender: tosdr@googlegroups.com
+Received: by 10.114.177.97 with HTTP; Sat, 11 May 2013 02:50:11 -0700 (PDT)
+In-Reply-To: <CADNfgRcRXP1jcCfmSqwhbfqLgbcO4ZywUKsMjOTqneNHP1gUWA@mail.gmail.com>
+References: <CADNfgRcJ7syqS7+bBDNZdwb=45sfVad1DAwRCJrw5FWRmnNKnQ@mail.gmail.com>
+	<CADNfgRcRXP1jcCfmSqwhbfqLgbcO4ZywUKsMjOTqneNHP1gUWA@mail.gmail.com>
+Date: Sat, 11 May 2013 11:50:11 +0200
+Message-ID: <CADNfgRfpi0tvc8MhzuvCqS-6tRVO61ixeHk_OJb1EKF2cgsXGA@mail.gmail.com>
+Subject: [tosdr:2073] Re: third parties on youtube
+From: Suzanne Azmayesh <suzanne@azmayesh.fr>
+To: tosdr@googlegroups.com
+X-Original-Sender: suzanne@azmayesh.fr
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of suzanne.azmayesh@gmail.com designates 209.85.217.182
+ as permitted sender) smtp.mail=suzanne.azmayesh@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=001a11c3c630a7a2ee04dc6e3592
+
+--001a11c3c630a7a2ee04dc6e3592
+Content-Type: text/plain; charset=ISO-8859-1
+
+(good)
+
+
+2013/5/11 Suzanne Azmayesh <suzanne@azmayesh.fr>
+
+> Title: Youtube does not share your data with third parties
+>
+> Topic : Third Parties
+>
+> Summary : The terms of services of Yoube cannot be deemed to confer any
+> third-party any rights or benefits
+>
+> Score : 40
+>
+>
+> 2013/5/7 Suzanne Azmayesh <suzanne@azmayesh.fr>
+>
+>> This clause is quite positive from Youtube : it offers some sort of
+>> guarantee for the user.
+>>
+>> "Nothing in these Terms of Service shall be deemed to confer any
+>> third-party rights or benefits."
+>>
+>>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--001a11c3c630a7a2ee04dc6e3592
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">(good)</div><div class=3D"gmail_extra"><br><br><div class=
+=3D"gmail_quote">2013/5/11 Suzanne Azmayesh <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:suzanne@azmayesh.fr" target=3D"_blank">suzanne@azmayesh.fr</a>&g=
+t;</span><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr">Title: Youtube does not sha=
+re your data with third parties<div><br></div><div>Topic : Third Parties</d=
+iv>
+<div><br></div><div>Summary : The terms of services of Yoube cannot be deem=
+ed to confer any third-party any rights or benefits</div>
+<div><br></div><div>Score : 40</div></div><div class=3D"HOEnZb"><div class=
+=3D"h5"><div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">2013/=
+5/7 Suzanne Azmayesh <span dir=3D"ltr">&lt;<a href=3D"mailto:suzanne@azmaye=
+sh.fr" target=3D"_blank">suzanne@azmayesh.fr</a>&gt;</span><br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr">This clause is quite positi=
+ve from Youtube : it offers some sort of guarantee for the user.<div><span =
+style=3D"color:rgb(51,50,51);font-family:Arial;font-size:20px"><br>
+
+</span></div><div>&quot;<span style=3D"color:rgb(51,50,51);font-family:Aria=
+l;font-size:20px">Nothing in these Terms of Service shall be deemed to conf=
+er any third-party rights or benefits.&quot;</span><div>
+<br></div></div></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--001a11c3c630a7a2ee04dc6e3592--

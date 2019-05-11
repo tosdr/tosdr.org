@@ -1,0 +1,426 @@
+Return-Path: <tosdr+bncBCXPJSFL5UPBBFNKZSSAKGQEECJUILI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 5F20E40F41
+	for <anything@michielbdejong.com>; Thu, 18 Dec 2014 18:55:37 +0100 (CET)
+Received: from mfilter8-d.gandi.net (mfilter8-d.gandi.net [217.70.178.137])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5C63417807F
+	for <anything@michielbdejong.com>; Thu, 18 Dec 2014 18:55:37 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter8-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter8-d.gandi.net (mfilter8-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id N2Et74iHSWd6 for <anything@michielbdejong.com>;
+	Thu, 18 Dec 2014 18:55:35 +0100 (CET)
+Received: from mail-pa0-x23c.google.com (mail-pa0-x23c.google.com [IPv6:2607:f8b0:400e:c03::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 22BCB17809B
+	for <anything@michielbdejong.com>; Thu, 18 Dec 2014 18:55:35 +0100 (CET)
+Received: by mail-pa0-f60.google.com with SMTP id rd3sf196222pab.25
+        for <anything@michielbdejong.com>; Thu, 18 Dec 2014 09:55:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=Cy/1XILJmOfw4sqOFnD1HOqs8KOlJcRz8tGaAsEiYmA=;
+        b=c3s14kGBs0iVSp+9YYv6F7T4bZOwKuZjlm85dss+1yV0mxb+bx4H93s6DcO9uSwbCf
+         Mi98KBsx96B+rfmGIiI3piRM52KkWhPC2VQQtAbhTN+50jRO7UBh5D7f8diwt/3wmRLl
+         HSjLUEa86bGw0ztz4NYQqev1HTIGX6NlBIyVkSBrXBeRnaC1o/pA2dcMJqKEiKu1Gxp9
+         Pa2nQGOg5t6Xt2cLlIMXxRsvAjsWGE9oTWVhTiQtHmb3V7C7OjsuKMq0QhXFObEyd/3Y
+         kYVbL9rZoNFl1ihjztpGfoB+b/TRrBLTfWNcx9V4ZR9E9Z0ZYYrzg9fIYe098qr1UB3A
+         q8Fw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=Cy/1XILJmOfw4sqOFnD1HOqs8KOlJcRz8tGaAsEiYmA=;
+        b=i8jxfd8vwV9A97LGOzi/i2wK9s9pvZON19tJM3boLLPG3JQyuByv4S5E0VSOdDF870
+         Y4t9/RxcnLB+CCRBAUSJMrNuOa0H1cZK11I6aQZEGuPtBICszYRzevu4XDTmEkuwWuEK
+         jjyEgnTlBBanf4t2vg+xLwiWaCIu/2xTMOBmHe0Ps3CEjJ/vYiySTVCWQy3jOp+xUoJ0
+         OaN1IEoNz89RoCVK1INRu/8SsFuazL5ggEmCojfg0B3ZWF7xTQexo+4pFTufg2lywig1
+         TJdF2l0sALq1SD8cUf3JehFIkdTKJMIe0QqT1tF+yNKxHXDp3l5DCqchJU4gfAQlLrtg
+         SKdQ==
+X-Received: by 10.140.81.169 with SMTP id f38mr55145qgd.3.1418925333858;
+        Thu, 18 Dec 2014 09:55:33 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.20.166 with SMTP id 35ls3751077qgj.62.gmail; Thu, 18 Dec
+ 2014 09:55:31 -0800 (PST)
+X-Received: by 10.140.98.66 with SMTP id n60mr16613qge.40.1418925331932;
+        Thu, 18 Dec 2014 09:55:31 -0800 (PST)
+Date: Thu, 18 Dec 2014 09:55:31 -0800 (PST)
+From: Alessandro Carelli <alessandro.carelli.design@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <a044ed28-fe3a-4dc7-ab3a-d3d1731c4903@googlegroups.com>
+Subject: [tosdr:3363] Mimo Privacy Policy | Open question
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_516_907461406.1418925331467"
+X-Original-Sender: alessandro.carelli.design@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_516_907461406.1418925331467
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_517_366205592.1418925331471"
+
+------=_Part_517_366205592.1418925331471
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Dear ToS;DN community,
+
+As I am a new user, this is my occasion to introduce myself. I am a=20
+designer and a Ph.D student researching in the area of user privacy issues=
+=20
+in digital services and embedded sensing technologies.
+
+Since my research interests covers ToS and Privacy policies I would like to=
+=20
+use the ToS;DN platform as a tool to understand privacy issues related to=
+=20
+the usage of some 'smart devices' such as the ones listed here=20
+<http://enchantedobjects.com/wp-content/uploads/EnchantedObjectsPoster.png>=
+.
+
+My first experiment is with Mimo's Privacy policy=20
+<http://mimobaby.com/legal/#PrivacyPolicy>. In order to better understand=
+=20
+Privacy Policy (PP) I will forward my rating proposals using the new=20
+ToS;DN's platform form (when I will be able to use it=20
+<https://groups.google.com/d/msg/tosdr/t4Rb8pX88rU/1Q5uOFmDbYoJ>). In=20
+addition, I have an open question regarding a particular aspect of the PP,=
+=20
+for those in the community interested to answer.
+
+
+I apologize for the length of my email.
+
+In order to ease the reading I have put some descriptors.=20
+
+*The final questions are at the end* (/// questions).
+
+Thanks in advance to everyone that will take this into consideration and=20
+give their opinion.
+
+
+
+/// What is Mimo
+
+Mimo is a cloud base baby monitor that, using the company's words: =E2=80=
+=9C[helps=20
+parents to] get real-time audio and insights about [their] baby=E2=80=99s s=
+leep=20
+activity, right on [the] smart device, from anywhere in the world=E2=80=9D.
+
+/// brief introduction to Mimo's Privacy Policy
+
+It seems that Rest Device Inc., who is the organization owning Mimo,=20
+collects 3 principal kind of user information: (1) *personal information*,=
+=20
+(2) *aggregated information* and (3) *profile*, which is a combination of=
+=20
+both the information gathered from users and acquired from third parties.=
+=20
+Even though privacy policy (PP) related to Personal Information are clear=
+=20
+and well explained, PP for =E2=80=98Profile=E2=80=99 looks to be more ambig=
+uous.
+
+(1) *Personal Information* "means information that specifically identifies=
+=20
+an individual (such as a name, address, telephone number, mobile number or=
+=20
+e-mail address) or other information about that individual that is directly=
+=20
+linked to Personal Information. Except for some 'features that give [users]=
+=20
+the option to share certain of your information with friends and other=20
+third parties, [the service] do not share Personal Information with third=
+=20
+parties. Moreover, Personal Information does not include "aggregate"=20
+information=E2=80=99.
+
+
+(2) *Aggregated information* are not linked to Personal Information but can=
+=20
+be shared with affiliates organizations and business associates e.g.=20
+'aggregated demographic information about our user'.
+
+The situation is more complicated for the *Profile* (3). As claimed by the=
+=20
+company: It is made ' by storing 'information that we collect through=20
+cookies, log files, clear gifs, and/or third party sources to create a=20
+"profile" of your preferences'. Moreover, Profile information is shared=20
+with third parties in aggregated form only.
+
+Again, at least for the moment Mimo 'does not tie users Personal=20
+Information, or purchasing history, to information in the profile, in order=
+=20
+to provide tailored promotions' etc. that it should means that Profile and=
+=20
+Personal Information are kept separately.
+
+/// the controversial part
+
+The more controversial part came at this point: 'To *enrich our profiles*=
+=20
+of individual customers, we tie [information purchased *from third parties*=
+]=20
+to the *Personal Information* [that users/individual customers] have=20
+provided to us. For me, such sentence sounds like a negation of what has=20
+been claimed above, when the company told that Profile and Personal=20
+Information are not tied together, and now they are.
+
+/// questions
+
+*[1] If that is true it means that Profile is a combination of Personal=20
+Information and aggregated data that was not supposed to be linked together=
+=20
+(?).*
+
+*[2] Finally, even though Profile is shared with third parties in=20
+aggregated form only, does it mean that Rest Device Inc. does not share=20
+users personal data* with third parties?*
+
+I am sorry if I made some ingenuity during my explanation and/or if my=20
+summary of the Mimo's privacy policy is not so clearly explained.
+
+
+*with =E2=80=98Personal Data=E2=80=99 I am taking into consideration the de=
+finitions in=20
+Article 2 of EU Directive 95/46/EC: Any information relating to an=20
+identified or identifiable natural person (=E2=80=9Cdata subject=E2=80=9D);=
+ an identifiable=20
+person is one who can be identified, directly or indirectly, in particular=
+=20
+by reference to an identification number or to one or more factors specific=
+=20
+to his physical, physiological, mental, economic, cultural or social=20
+identity.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_517_366205592.1418925331471
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;ma=
+rgin-bottom:0pt;" id=3D"docs-internal-guid-9a6b9a30-5e7f-47a6-9ae3-4e4c0284=
+8d1a"><span style=3D"font-size:15px;font-family:Cambria;color:#000000;backg=
+round-color:transparent;font-weight:normal;font-style:normal;font-variant:n=
+ormal;text-decoration:none;vertical-align:baseline;">Dear ToS;DN community,=
+</span></p><br><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;marg=
+in-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#00=
+0000;background-color:transparent;font-weight:normal;font-style:normal;font=
+-variant:normal;text-decoration:none;vertical-align:baseline;">As I am a ne=
+w user, this is my occasion to introduce myself. I am a designer and a Ph.D=
+ student researching in the area of user privacy issues in digital services=
+ and embedded sensing technologies.</span></p><p dir=3D"ltr" style=3D"line-=
+height:1.15;margin-top:0pt;margin-bottom:0pt;"><span style=3D"font-size:15p=
+x;font-family:Cambria;color:#000000;background-color:transparent;font-weigh=
+t:normal;font-style:normal;font-variant:normal;text-decoration:none;vertica=
+l-align:baseline;">Since my research interests covers ToS and Privacy polic=
+ies I would like to use the ToS;DN platform as a tool to understand privacy=
+ issues related to the usage of some 'smart devices' such as the ones liste=
+d </span><a href=3D"http://enchantedobjects.com/wp-content/uploads/Enchante=
+dObjectsPoster.png" style=3D"text-decoration:none;"><span style=3D"font-siz=
+e:15px;font-family:Cambria;color:#1155cc;background-color:transparent;font-=
+weight:normal;font-style:normal;font-variant:normal;text-decoration:underli=
+ne;vertical-align:baseline;">here</span></a><span style=3D"font-size:15px;f=
+ont-family:Cambria;color:#000000;background-color:transparent;font-weight:n=
+ormal;font-style:normal;font-variant:normal;text-decoration:none;vertical-a=
+lign:baseline;">.</span></p><br><p dir=3D"ltr" style=3D"line-height:1.15;ma=
+rgin-top:0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-family:=
+Cambria;color:#000000;background-color:transparent;font-weight:normal;font-=
+style:normal;font-variant:normal;text-decoration:none;vertical-align:baseli=
+ne;">My first experiment is with </span><a href=3D"http://mimobaby.com/lega=
+l/#PrivacyPolicy" style=3D"text-decoration:none;"><span style=3D"font-size:=
+15px;font-family:Cambria;color:#1155cc;background-color:transparent;font-we=
+ight:normal;font-style:normal;font-variant:normal;text-decoration:underline=
+;vertical-align:baseline;">Mimo's Privacy policy</span></a><span style=3D"f=
+ont-size:15px;font-family:Cambria;color:#000000;background-color:transparen=
+t;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:=
+none;vertical-align:baseline;">. In order to better understand Privacy Poli=
+cy (PP) I will forward my rating proposals using the new ToS;DN's platform =
+form (</span><a href=3D"https://groups.google.com/d/msg/tosdr/t4Rb8pX88rU/1=
+Q5uOFmDbYoJ" style=3D"text-decoration:none;"><span style=3D"font-size:15px;=
+font-family:Cambria;color:#1155cc;background-color:transparent;font-weight:=
+normal;font-style:normal;font-variant:normal;text-decoration:underline;vert=
+ical-align:baseline;">when I will be able to use it</span></a><span style=
+=3D"font-size:15px;font-family:Cambria;color:#000000;background-color:trans=
+parent;font-weight:normal;font-style:normal;font-variant:normal;text-decora=
+tion:none;vertical-align:baseline;">). In addition, I have an open question=
+ regarding a particular aspect of the PP, for those in the community intere=
+sted to answer.</span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-t=
+op:0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambri=
+a;color:#000000;background-color:transparent;font-weight:normal;font-style:=
+normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><=
+br></span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;margi=
+n-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#000=
+000;background-color:transparent;font-weight:normal;font-style:normal;font-=
+variant:normal;text-decoration:none;vertical-align:baseline;">I apologize f=
+or the length of my email.</span></p><p dir=3D"ltr" style=3D"line-height:1.=
+15;margin-top:0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-fa=
+mily:Cambria;color:#000000;background-color:transparent;font-weight:normal;=
+font-style:normal;font-variant:normal;text-decoration:none;vertical-align:b=
+aseline;">In order to ease the reading I have put some descriptors. </span>=
+</p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;margin-bottom:0=
+pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#000000;backgr=
+ound-color:transparent;font-weight:normal;font-style:normal;font-variant:no=
+rmal;text-decoration:none;vertical-align:baseline;"><b>The final questions =
+are at the end</b> (<span style=3D"color: rgb(56, 118, 29);">/// questions<=
+/span>).</span></p><br><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:=
+0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;c=
+olor:#000000;background-color:transparent;font-weight:normal;font-style:nor=
+mal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Than=
+ks in advance to everyone that will take this into consideration and give t=
+heir opinion.</span></p><br><br><br><p dir=3D"ltr" style=3D"line-height:1.1=
+5;margin-top:0pt;margin-bottom:0pt;"><span style=3D"color: rgb(56, 118, 29)=
+;"><span style=3D"font-size: 15px; font-family: Cambria; background-color: =
+transparent; font-weight: normal; font-style: normal; font-variant: normal;=
+ text-decoration: none; vertical-align: baseline;">/// What is Mimo</span><=
+/span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;margin-bo=
+ttom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#000000;=
+background-color:transparent;font-weight:normal;font-style:normal;font-vari=
+ant:normal;text-decoration:none;vertical-align:baseline;">Mimo is a cloud b=
+ase baby monitor that, using the company's words: =E2=80=9C[helps parents t=
+o] get real-time audio and insights about [their] baby=E2=80=99s sleep acti=
+vity, right on [the] smart device, from anywhere in the world=E2=80=9D.</sp=
+an></p><br><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;margin-b=
+ottom:0pt;"><span style=3D"color: rgb(56, 118, 29);"><span style=3D"font-si=
+ze: 15px; font-family: Cambria; background-color: transparent; font-weight:=
+ normal; font-style: normal; font-variant: normal; text-decoration: none; v=
+ertical-align: baseline;">/// brief introduction to Mimo's Privacy Policy</=
+span></span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;mar=
+gin-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#0=
+00000;background-color:transparent;font-weight:normal;font-style:normal;fon=
+t-variant:normal;text-decoration:none;vertical-align:baseline;">It seems th=
+at Rest Device Inc., who is the organization owning Mimo, collects 3 princi=
+pal kind of user information: (1) <b>personal information</b>, (2) <b>aggre=
+gated information</b> and (3) <b>profile</b>, which is a combination of bot=
+h the information gathered from users and acquired from third parties. Even=
+ though privacy policy (PP) related to Personal Information are clear and w=
+ell explained, PP for =E2=80=98Profile=E2=80=99 looks to be more ambiguous.=
+</span></p><br><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;marg=
+in-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#00=
+0000;background-color:transparent;font-weight:normal;font-style:normal;font=
+-variant:normal;text-decoration:none;vertical-align:baseline;">(1) <b>Perso=
+nal Information</b> "means information that specifically identifies an indi=
+vidual (such as a name, address, telephone number, mobile number or e-mail =
+address) or other information about that individual that is directly linked=
+ to Personal Information. Except for some 'features that give [users] the o=
+ption to share certain of your information with friends and other third par=
+ties, [the service] do not share Personal Information with third parties. M=
+oreover, Personal Information does not include "aggregate" information=E2=
+=80=99.</span></p><br><br><p dir=3D"ltr" style=3D"line-height:1.15;margin-t=
+op:0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambri=
+a;color:#000000;background-color:transparent;font-weight:normal;font-style:=
+normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">(=
+2) <b>Aggregated information</b> are not linked to Personal Information but=
+ can be shared with affiliates organizations and business associates e.g. '=
+aggregated demographic information about our user'.</span></p><br><p dir=3D=
+"ltr" style=3D"line-height:1.15;margin-top:0pt;margin-bottom:0pt;"><span st=
+yle=3D"font-size:15px;font-family:Cambria;color:#000000;background-color:tr=
+ansparent;font-weight:normal;font-style:normal;font-variant:normal;text-dec=
+oration:none;vertical-align:baseline;">The situation is more complicated fo=
+r the <b>Profile</b> (3). As claimed by the company: It is made ' by storin=
+g 'information that we collect through cookies, log files, clear gifs, and/=
+or third party sources to create a "profile" of your preferences'. Moreover=
+, Profile information is shared with third parties in aggregated form only.=
+</span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;margin-b=
+ottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#000000=
+;background-color:transparent;font-weight:normal;font-style:normal;font-var=
+iant:normal;text-decoration:none;vertical-align:baseline;">Again, at least =
+for the moment Mimo 'does not tie users Personal Information, or purchasing=
+ history, to information in the profile, in order to provide tailored promo=
+tions' etc. that it should means that Profile and Personal Information are =
+kept separately.</span></p><br><p dir=3D"ltr" style=3D"line-height:1.15;mar=
+gin-top:0pt;margin-bottom:0pt;"><span style=3D"color: rgb(56, 118, 29);"><s=
+pan style=3D"font-size: 15px; font-family: Cambria; background-color: trans=
+parent; font-weight: normal; font-style: normal; font-variant: normal; text=
+-decoration: none; vertical-align: baseline;">/// the controversial part</s=
+pan></span></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0pt;marg=
+in-bottom:0pt;"><span style=3D"font-size:15px;font-family:Cambria;color:#00=
+0000;background-color:transparent;font-weight:normal;font-style:normal;font=
+-variant:normal;text-decoration:none;vertical-align:baseline;">The more con=
+troversial part came at this point: 'To <b>enrich our profiles</b> of indiv=
+idual customers, we tie [information purchased <b>from third parties</b>] t=
+o the <b>Personal Information</b> [that users/individual customers] have pr=
+ovided to us. For me, such sentence sounds like a negation of what has been=
+ claimed above, when the company told that Profile and Personal Information=
+ are not tied together, and now they are.</span></p><br><span style=3D"colo=
+r: rgb(56, 118, 29);"><span style=3D"font-size: 15px; font-family: Cambria;=
+ background-color: transparent; font-weight: normal; font-style: normal; fo=
+nt-variant: normal; text-decoration: none; vertical-align: baseline;">/// q=
+uestions</span></span><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0=
+pt;margin-bottom:0pt;"><b><span style=3D"font-size:15px;font-family:Cambria=
+;color:#000000;background-color:transparent;font-weight:normal;font-style:n=
+ormal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><b=
+>[1]</b> If that is true it means that Profile is a combination of Personal=
+ Information and aggregated data that was not supposed to be linked togethe=
+r (?).</span></b></p><p dir=3D"ltr" style=3D"line-height:1.15;margin-top:0p=
+t;margin-bottom:0pt;"><b><span style=3D"font-size:15px;font-family:Cambria;=
+color:#000000;background-color:transparent;font-weight:normal;font-style:no=
+rmal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><b>=
+[2]</b> Finally, even though Profile is shared with third parties in aggreg=
+ated form only, does it mean that Rest Device Inc. does not share users per=
+sonal data* with third parties?</span></b></p><br><p dir=3D"ltr" style=3D"l=
+ine-height:1.15;margin-top:0pt;margin-bottom:0pt;"><span style=3D"font-size=
+:15px;font-family:Cambria;color:#000000;background-color:transparent;font-w=
+eight:normal;font-style:normal;font-variant:normal;text-decoration:none;ver=
+tical-align:baseline;">I am sorry if I made some ingenuity during my explan=
+ation and/or if my summary of the Mimo's privacy policy is not so clearly e=
+xplained.</span></p><br><br><p dir=3D"ltr" style=3D"line-height:1.15;margin=
+-top:0pt;margin-bottom:0pt;"><span style=3D"font-size:15px;font-family:Camb=
+ria;color:#000000;background-color:transparent;font-weight:normal;font-styl=
+e:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"=
+>*with =E2=80=98Personal Data=E2=80=99 I am taking into consideration the d=
+efinitions in Article 2 of EU Directive 95/46/EC: Any information relating =
+to an identified or identifiable natural person (=E2=80=9Cdata subject=E2=
+=80=9D); an identifiable person is one who can be identified, directly or i=
+ndirectly, in particular by reference to an identification number or to one=
+ or more factors specific to his physical, physiological, mental, economic,=
+ cultural or social identity.</span></p><br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_517_366205592.1418925331471--
+------=_Part_516_907461406.1418925331467--

@@ -1,0 +1,134 @@
+Return-Path: <tosdr+bncBCUKXCUIWEPRBWV522QQKGQEDVVYX6Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 59EA740910
+	for <anything@michielbdejong.com>; Wed,  8 Oct 2014 22:30:25 +0200 (CEST)
+Received: from mfilter14-d.gandi.net (mfilter14-d.gandi.net [217.70.178.142])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 5601617806F
+	for <anything@michielbdejong.com>; Wed,  8 Oct 2014 22:30:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter14-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter14-d.gandi.net (mfilter14-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 0I8sIgwAy3kz for <anything@michielbdejong.com>;
+	Wed,  8 Oct 2014 22:30:24 +0200 (CEST)
+Received: from mail-pa0-x240.google.com (mail-pa0-x240.google.com [IPv6:2607:f8b0:400e:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A016D1780A0
+	for <anything@michielbdejong.com>; Wed,  8 Oct 2014 22:30:20 +0200 (CEST)
+Received: by mail-pa0-f64.google.com with SMTP id hz1sf1601313pad.19
+        for <anything@michielbdejong.com>; Wed, 08 Oct 2014 13:30:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:subject:message-id:date:to:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=c2fCWnh7gfruUM7yfgUX3GIpqbCtmpVK1+5iPW1aN10=;
+        b=bg4P9K19NyNW/GhQ+543ilqsZ4OGnR4lSbYiah6TEZ7W1lJqZ+hWxYFz56uj28HRw4
+         WjkycY6pUP2pLzsLcmEx5vd/B+ZxgsRXFBaiNqbZeo0tkKu0CRcPK37m+H5rypdynVrU
+         Hz2O9lq+b/xx/mXx7oGqGT+A4cwW+Yy4YqaKmJLyAgL3vSP/3TrYDD/HBTzGH0x3UUht
+         +HuacMmatUx/gZSi4ucsR4PcwjIRhBBB4/WRUiV+HnvXte/udjiktO5aCIf2miglmTRD
+         Dxpxma+MFQ+SaqaE83SZZkurEojO9ljwwhKaGWH7CjEp4S60TdfBuQrnMmgwfH/1kFdP
+         DIuw==
+X-Received: by 10.50.134.229 with SMTP id pn5mr544igb.0.1412800218887;
+        Wed, 08 Oct 2014 13:30:18 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.61.225 with SMTP id t1ls686790igr.2.gmail; Wed, 08 Oct 2014
+ 13:30:18 -0700 (PDT)
+X-Received: by 10.66.233.200 with SMTP id ty8mr8478214pac.20.1412800218121;
+        Wed, 08 Oct 2014 13:30:18 -0700 (PDT)
+Received: from mail-ig0-x22d.google.com (mail-ig0-x22d.google.com [2607:f8b0:4001:c05::22d])
+        by gmr-mx.google.com with ESMTPS id w5si32739igz.3.2014.10.08.13.30.18
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 08 Oct 2014 13:30:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of cameronstewart131@gmail.com designates 2607:f8b0:4001:c05::22d as permitted sender) client-ip=2607:f8b0:4001:c05::22d;
+Received: by mail-ig0-f173.google.com with SMTP id h18so8808966igc.6
+        for <tosdr@googlegroups.com>; Wed, 08 Oct 2014 13:30:18 -0700 (PDT)
+X-Received: by 10.43.66.19 with SMTP id xo19mr122917icb.31.1412800217983;
+        Wed, 08 Oct 2014 13:30:17 -0700 (PDT)
+Received: from ?IPv6:2607:fcc8:bd25:db00:a0e6:c6dc:6c2:f60e? ([2607:fcc8:bd25:db00:a0e6:c6dc:6c2:f60e])
+        by mx.google.com with ESMTPSA id a4sm2131784igv.1.2014.10.08.13.30.17
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 08 Oct 2014 13:30:17 -0700 (PDT)
+From: Cameron Stewart <cameronstewart131@gmail.com>
+Subject: [tosdr:3277] Please review paypal
+Message-Id: <E3BD867A-C580-4518-9CFF-3C294D002671@gmail.com>
+Date: Wed, 8 Oct 2014 16:30:14 -0400
+To: tosdr@googlegroups.com
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+X-Mailer: Apple Mail (2.1878.6)
+X-Original-Sender: cameronstewart131@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of cameronstewart131@gmail.com designates
+ 2607:f8b0:4001:c05::22d as permitted sender) smtp.mail=cameronstewart131@gmail.com;
+       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_1C9A56A3-D06C-4809-9F42-FAAD09C876B1"
+
+--Apple-Mail=_1C9A56A3-D06C-4809-9F42-FAAD09C876B1
+Content-Type: text/plain; charset=ISO-8859-1
+
+I get emails from paypal about policy updates and find this to be quite positive. Id appreciate a review of Paypal to see how this company deals with my information.
+
+Electronic Communications Delivery Policy
+
+https://www.paypal.com/us/webapps/mpp/ua/useragreement-full
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--Apple-Mail=_1C9A56A3-D06C-4809-9F42-FAAD09C876B1
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=ISO-8859-1
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html charset=
+=3Dus-ascii"></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode=
+: space; -webkit-line-break: after-white-space;">I get emails from paypal a=
+bout policy updates and find this to be quite positive. Id appreciate a rev=
+iew of <b style=3D"font-family: 'Adobe Caslon Pro'; font-size: small;">Payp=
+al </b><font face=3D"Times" size=3D"2">to see how this company deals with m=
+y information.</font><div><font face=3D"Times" size=3D"2"><br></font></div>=
+<div><h3 style=3D"letter-spacing: 0.01em; font-weight: 300; color: rgb(51, =
+51, 51); margin: 0.1em 0px; padding-top: 0px; padding-bottom: 0px; font-siz=
+e: 1.167em; font-family: Arial, Helvetica, sans-serif;">Electronic Communic=
+ations Delivery Policy</h3><div><br></div><div style=3D"font-size: 13px;"><=
+a href=3D"https://www.paypal.com/us/webapps/mpp/ua/useragreement-full">http=
+s://www.paypal.com/us/webapps/mpp/ua/useragreement-full</a></div></div></bo=
+dy></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--Apple-Mail=_1C9A56A3-D06C-4809-9F42-FAAD09C876B1--

@@ -1,0 +1,187 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp162838vec;
+        Fri, 7 Dec 2012 08:23:26 -0800 (PST)
+Received: by 10.14.203.2 with SMTP id e2mr18281255eeo.20.1354897406106;
+        Fri, 07 Dec 2012 08:23:26 -0800 (PST)
+Return-Path: <tosdr+bncBC3IF2OJ4QORB65PRCDAKGQEWOV3LSY@googlegroups.com>
+Received: from mail-ee0-f59.google.com (mail-ee0-f59.google.com [74.125.83.59])
+        by mx.google.com with ESMTPS id i42si25274747eem.112.2012.12.07.08.23.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:23:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB65PRCDAKGQEWOV3LSY@googlegroups.com designates 74.125.83.59 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB65PRCDAKGQEWOV3LSY@googlegroups.com designates 74.125.83.59 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORB65PRCDAKGQEWOV3LSY@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-ee0-f59.google.com with SMTP id c13sf219250eek.14
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 08:23:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :cc:date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=M3WHPRbqWh5tfKJISROQztkSRoZnlGk11bWsglBHrzc=;
+        b=ZlLZWHh5kXV1IfPAU7V+OGGpjZw2JyknH8kVGkN6BMXeh4Emt30brAOLRvtAtO3aRs
+         DT6sFSaNP1zKHo8b5VHGJeaaGB2go6OYn8rSQc7MAupet5A4TsKV35oGeqH0TgANwjYa
+         UqUrfKCk1W+9lCpnydD5CV5LnzroNLO+vcqwNT6cQIz0nRQttoOIEM14o6D+uo8oUmdN
+         qoQoq/NMYJtq+ahcj/4o0Iv6FVwmk93kmGSkdmnd5Y1ggzul8ZOc/GZu+HHTkxC2t8Lj
+         gguvvrC65K2mCuQRVD+JYM+fRG+2UmbDOlCxaxLbA6l7fmXaZhHH/hor0Xz8sX3krQwJ
+         x8Uw==
+Received: by 10.180.7.226 with SMTP id m2mr1091815wia.14.1354897405623;
+        Fri, 07 Dec 2012 08:23:25 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.93.232 with SMTP id cx8ls2710884wib.4.canary; Fri, 07 Dec
+ 2012 08:23:23 -0800 (PST)
+Received: by 10.14.204.199 with SMTP id h47mr5250431eeo.4.1354897403487;
+        Fri, 07 Dec 2012 08:23:23 -0800 (PST)
+Received: by 10.14.204.199 with SMTP id h47mr5250430eeo.4.1354897403473;
+        Fri, 07 Dec 2012 08:23:23 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id g9si2393660eeo.1.2012.12.07.08.23.23
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:23:23 -0800 (PST)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id D1AD663AF66;
+	Fri,  7 Dec 2012 17:23:22 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id V1Dm3NyHyfEE; Fri,  7 Dec 2012 17:23:19 +0100 (CET)
+Received: from [10.2.205.179] (pat-address.sciences-po.fr [193.54.67.93])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id ADC6B63A61B;
+	Fri,  7 Dec 2012 17:23:19 +0100 (CET)
+Message-ID: <1354897399.4621.79.camel@synclavier.lan>
+Subject: Re: [tosdr:1259] Re: Change in https://tos-dr.info/legal.html
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Cc: michiel@michielbdejong.com
+Date: Fri, 07 Dec 2012 17:23:19 +0100
+In-Reply-To: <b8fd992a-d97e-4766-9194-814da8b115a7@googlegroups.com>
+References: <1354871875.967591277816096@mf57.sendgrid.net>
+	 <b8fd992a-d97e-4766-9194-814da8b115a7@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.4-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le vendredi 07 d=E9cembre 2012 =E0 04:43 -0800, Robin Monks a =E9crit :
+> How about...
+>=20
+> Votes=20
+> >             All polls shall be organised by Unhosted e.V.=20
+> >         (http://www.unhosted.org) and announced on www.tos-dr.info; and=
+=20
+> >         announced at least 10 days in advance by email to the public=20
+> >         group.=20
+> >
+>=20
+> to
+> =20
+>=20
+> > Votes=20
+> >             All polls shall be organized by a Contributor announcing th=
+e=20
+> > intention to create a poll to the public email group. The poll shall oc=
+cur=20
+> > if not less than three people agree to a vote using the final text of t=
+he=20
+> > given poll within a seven day period of the final text being posted. Th=
+e=20
+> > poll shall take place and be officiated by a Team member no less than 1=
+0=20
+> > days from a poll being organized, and no more than 25 days. Team member=
+s=20
+> > maintain special privilege to call a poll at any time as long as said p=
+oll=20
+> > is announced 10 days prior. No poll shall be valid if less than three=
+=20
+> > Contributors cast votes.
+>=20
+>=20
+> Keeping Hugo's re-definition of contributor (repeated for sanity)
+>=20
+>         Definition of contributor=20
+> >             A "contributor" is any person, excluding legal persons (e.g=
+.=20
+> >         corporations), who wrote at least one email to the group at=20
+> >         least 30 days before the start of the poll.=20
+> >        =20
+> > and move that section after the "vote" to=20
+> >         Definition of Contributor=20
+> >             A Contributor is any person, excluding legal persons (e.g.=
+=20
+> >         corporations), who wrote at least one email to the group at=20
+> >         least 90 days before the start of the poll. =20
+>=20
+>=20
+> Finally an addition,
+>=20
+> Definition of Team member
+> A Team member is any person, excluding legal persons:
+> a) who is listed on the team page of the project website=20
+> (http://tos-dr.info/about.html#team)=20
+
+or
+
+> b) who has been granted write access to the project's source code=20
+> repository (https://github.com/didnotread?tab=3Dmembers)
+
+This next paragraph is a bit strange to me.
+
+> In a special circumstance, where no team member posts a poll within 26=20
+> days of its valid creation, a Team member can be created by a 70% voting =
+in=20
+> an announcement to the public email group. Such a Team member shall have=
+=20
+> the roll of Team member for a period of 180 days.
+
+
+I would just leave that out. We will sort out later when we have a good
+structure how to handle changes. For now, we just make a small fix
+because the Unhosted e.v. is going to stop its legal existence.
+
+Anyway we have to delay this to a new vote, as the vote was supposed to
+be today but there was no clear proposal.
+
+Best regards,
+Hugo
+
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

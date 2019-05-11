@@ -1,0 +1,220 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp163360vec;
+        Fri, 7 Dec 2012 08:31:56 -0800 (PST)
+Received: by 10.52.35.37 with SMTP id e5mr3513190vdj.115.1354897915967;
+        Fri, 07 Dec 2012 08:31:55 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBB65TRCDAKGQEXBC3DQA@googlegroups.com>
+Received: from mail-vb0-f57.google.com (mail-vb0-f57.google.com [209.85.212.57])
+        by mx.google.com with ESMTPS id a4si10366601vdi.120.2012.12.07.08.31.55
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:31:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBB65TRCDAKGQEXBC3DQA@googlegroups.com designates 209.85.216.52 as permitted sender) client-ip=209.85.216.52;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBB65TRCDAKGQEXBC3DQA@googlegroups.com designates 209.85.216.52 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBB65TRCDAKGQEXBC3DQA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-vb0-f57.google.com with SMTP id ez10sf345095vbb.12
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 08:31:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:sender:in-reply-to:references
+         :date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=T5K7ATOdjTPRcQLGFk5pWiREMpaW1RYxSEGVRwt6HDQ=;
+        b=up/PbrBGNfjKyc+P1ejZj8JEZOX2MtqaHqE3nNLx+Y36RuLgRAmGNJJuPxduE4WyUO
+         phfGLSCjylr6sRgagIBYBdbUdEy1gg8bPCYJGtj4RM/KppYBF1mDbRUAmVZpjxJWkTHV
+         h4VP9SzkyOrOBp2WMWESZfVIPm8NgDwTAcmQpIlHX4jQmDwFMyxWturspeLWvrPcqvwP
+         +cCR05FfM8Q333DzhwkDABIFLRzF6i6c373i3HtNEU1teEGz4i7q6ii9+9qeIm/WF6aK
+         AM0nRDTBeiNbjG05dc9A+FR/pV6hHc5VKqueXyPrCurEix11U+Vr9lh6AwVPIGBc6GNz
+         5vcQ==
+Received: by 10.49.71.6 with SMTP id q6mr1263586qeu.10.1354897915692;
+        Fri, 07 Dec 2012 08:31:55 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.24.19 with SMTP id q19ls2473228qef.84.gmail; Fri, 07 Dec
+ 2012 08:31:54 -0800 (PST)
+Received: by 10.224.183.16 with SMTP id ce16mr4579899qab.8.1354897914946;
+        Fri, 07 Dec 2012 08:31:54 -0800 (PST)
+Received: by 10.224.183.16 with SMTP id ce16mr4579897qab.8.1354897914900;
+        Fri, 07 Dec 2012 08:31:54 -0800 (PST)
+Received: from mail-qa0-f52.google.com (mail-qa0-f52.google.com [209.85.216.52])
+        by gmr-mx.google.com with ESMTPS id fg3si2698196qcb.2.2012.12.07.08.31.53
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:31:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of devlinks@gmail.com designates 209.85.216.52 as permitted sender) client-ip=209.85.216.52;
+Received: by mail-qa0-f52.google.com with SMTP id d13so675160qak.4
+        for <tosdr@googlegroups.com>; Fri, 07 Dec 2012 08:31:53 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.49.96.1 with SMTP id do1mr11126027qeb.26.1354897913713; Fri,
+ 07 Dec 2012 08:31:53 -0800 (PST)
+Sender: tosdr@googlegroups.com
+Received: by 10.49.25.5 with HTTP; Fri, 7 Dec 2012 08:31:53 -0800 (PST)
+In-Reply-To: <1354897845.2788111732166703@mf58.sendgrid.net>
+References: <1354897845.2788111732166703@mf58.sendgrid.net>
+Date: Fri, 7 Dec 2012 12:31:53 -0400
+Message-ID: <CAB8Z3EeSLRi3fc5LCYiagX8tZRnc37RfXRFjZ6=jAoAwN2P=tw@mail.gmail.com>
+Subject: Re: [tosdr:1262] Re: Are ToS;DR reviews and ratings stored in a database?
+From: Robin Monks <robin@robinmonks.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: devlinks@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of devlinks@gmail.com designates 209.85.216.52 as permitted sender)
+ smtp.mail=devlinks@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b6757e0da960704d045c06d
+
+--047d7b6757e0da960704d045c06d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Christmas prep is becoming a bit of a hassle; but if I can I'm going to try
+and import this data into a Cloudant table and see if I can do any cool
+things with the data... it's very tempting :P
+
+/Robin
+
+
+On Fri, Dec 7, 2012 at 12:30 PM, <michiel@michielbdejong.com> wrote:
+
+> Hi Brian, it is currently stored in javascript format, so flat JSON files=
+,
+> from which the html is generated using nodejs scripts. See the
+> buildIndexes.js and render.js scripts in
+> https://github.com/didnotread/didnotread.org
+>
+> For javascript programmers this format is much easier to use than various
+> spreadsheet formats, which is why we chose it. Maybe your spreadsheet
+> software is capable of importing JSON - or maybe you can do the thing you
+> want to do in javascript?
+> Anyway, all the data is there in the github repository, you can clone it
+> and reuse it however you want.
+>
+> HTH,
+> Michiel
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+
+--=20
+*R=E2=99=82bin Monks <http://robinmonks.com>*
+President, Podhurl Inc. <http://podhurl.us>
+Drupal Association Individual Member
+603.236.7357
+
+Live in such a way that those who know you but don't know God, will come to
+know God because they know you.
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b6757e0da960704d045c06d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Christmas prep is becoming a bit of a hassle; but if I can I&#39;m going to=
+ try and import this data into a Cloudant table and see if I can do any coo=
+l things with the data... it&#39;s very tempting :P<div><br></div><div>/Rob=
+in</div>
+<div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">On Fri, Dec 7=
+, 2012 at 12:30 PM,  <span dir=3D"ltr">&lt;<a href=3D"mailto:michiel@michie=
+lbdejong.com" target=3D"_blank">michiel@michielbdejong.com</a>&gt;</span> w=
+rote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Hi Brian, it is currently stored in javascri=
+pt format, so flat JSON files, from which the html is generated using nodej=
+s scripts. See the buildIndexes.js and render.js scripts in <a href=3D"http=
+s://github.com/didnotread/didnotread.org" target=3D"_blank">https://github.=
+com/didnotread/didnotread.org</a><br>
+
+<br>
+For javascript programmers this format is much easier to use than various s=
+preadsheet formats, which is why we chose it. Maybe your spreadsheet softwa=
+re is capable of importing JSON - or maybe you can do the thing you want to=
+ do in javascript?<br>
+
+Anyway, all the data is there in the github repository, you can clone it an=
+d reuse it however you want.<br>
+<br>
+HTH,<br>
+Michiel<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+--<br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+<br>
+<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com" targe=
+t=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:cent=
+er">President, <a href=3D"http://podhurl.us" target=3D"_blank">Podhurl Inc.=
+</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er">603.236.7357</div><div><span style=3D"font-size:x-small"></span><br><di=
+v style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don&#39;t know God, will come to know God because they know you.</spa=
+n></div></div></div><br>
+</div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b6757e0da960704d045c06d--

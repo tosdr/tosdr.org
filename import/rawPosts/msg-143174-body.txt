@@ -1,0 +1,262 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp268668ioi;
+        Sat, 23 Apr 2016 19:55:59 -0700 (PDT)
+X-Received: by 10.66.153.209 with SMTP id vi17mr39452951pab.0.1461466559473;
+        Sat, 23 Apr 2016 19:55:59 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBOHL6C4AKGQEISOIPHQ@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by mx.google.com with ESMTPS id c195si16996932pfb.219.2016.04.23.19.55.59
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 19:55:59 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBOHL6C4AKGQEISOIPHQ@googlegroups.com does not designate 217.70.183.195 as permitted sender) client-ip=217.70.183.195;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBOHL6C4AKGQEISOIPHQ@googlegroups.com does not designate 217.70.183.195 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBOHL6C4AKGQEISOIPHQ@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 684B5A80CB
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 04:55:56 +0200 (CEST)
+Received: from mfilter34-d.gandi.net (mfilter34-d.gandi.net [217.70.178.165])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 56888142071
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 04:55:56 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter34-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter34-d.gandi.net (mfilter34-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LZ1NP5hwejJc for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 04:55:54 +0200 (CEST)
+Received: from mail-io0-x23f.google.com (mail-io0-x23f.google.com [IPv6:2607:f8b0:4001:c06::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 25EFF14203E
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 04:55:54 +0200 (CEST)
+Received: by mail-io0-x23f.google.com with SMTP id v3sf38724729ioe.0
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 19:55:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=PQmA53kkuqFaJSOzVXVIUeZPhvsRUz4LSKL3B9TeYJ0=;
+        b=PZoB/AHDZqMJdgFnsxME0J8psljZ99ITOjVFyaITn6945dlxWvIuMJ94VGgy1Wam7x
+         +ScfICrzDRv6NaHPWRDFfybC6HZwnyophChIkCFFQecUCHOs8WYCaxK5I2kettHiP/bF
+         1fUp7ubHRpt0mf3Em9L4SHBuHL9SDlbekXNKlKJWkzUoGuJa4GFFIg32e9C3bgXqw7Ay
+         zRzrbtEBGkgS1Ayi21A6zI7U0fh4PTVj4CRO0qHjUpKKD2ZOcVQdIWOi6mBiI55j+G8t
+         Mt4tgNViIIFCZit1Fqpxwd/QC0yZ3DYWeceX1LqkjZZc5864ArQmRB7HgN5AKg9kJQBl
+         IvPg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=PQmA53kkuqFaJSOzVXVIUeZPhvsRUz4LSKL3B9TeYJ0=;
+        b=XHnWq7TAdEV0Xpvv7T5gM83Do/bjqdEdrK+D32q4SFd0tWm36fA6wAZr8ezewQ5rLt
+         QADNXOadUlvz1tRO1XBXIOCvP2yISlNHkUNohMkL2COWAPQEdTniRCUjI21g2+smBKHi
+         QnZM/gurp9mMGfgxN1MIEm40o0FXzLdrSWvqDntnvqq9dowlZgG2rG+7IoOACGBusDBX
+         TpeVUuPRjXONb/J7pUd+RneOFSxbMBTMzuaPpgDzV76MIDk3hHjfKvDIbN5I1LRrE4Uk
+         6Llrw89ozIjtloMOm3zO0DVVwynlwXQ6wU/hLGpqT4yZon4LTIlzufhkECitFafId7Lc
+         a+1w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=PQmA53kkuqFaJSOzVXVIUeZPhvsRUz4LSKL3B9TeYJ0=;
+        b=BPAQ9lTay827guPNNyBBC1eJv9BVuJM2o8T3b30Kj0t3IJ4Lgkp0ZyPNZtM+C5nLDA
+         b5VtTyW7MW2UXtO98I8AOMmQMZX0iHuU8e09zXGVv6wmMPzLw9L5vVBTdSxCPkvkvsJu
+         ZVeDd+dI+Zz8flRcie9E68bhzeWyWNOl3EaJDXHnf3YwX+5UyqKFy9+Ppl5l0tlhKKtY
+         GFvdhZ2N/xtpfpwcRMk78AgPtRLNTqw2/3mMvPXMh/rlblS4+GXlEhtmS9pHV3lwfX47
+         oIJ1gzF8gyyfkFVSCSWkStkF5tmuTzOUmUMd5HoGmYi9r0lxmcELtmwO93oEQtn5R2ld
+         pyeQ==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FXES9ilupemBz6oDAxKsHMlZl5B2kIU02mz6EqFtZ2rn1lQyhmJDB/RgpRsrwGCLA==
+X-Received: by 10.182.144.226 with SMTP id sp2mr306690obb.13.1461466553232;
+        Sat, 23 Apr 2016 19:55:53 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.13.229 with SMTP id 92ls392230ots.8.gmail; Sat, 23 Apr
+ 2016 19:55:52 -0700 (PDT)
+X-Received: by 10.157.3.52 with SMTP id 49mr306160otv.19.1461466552648;
+        Sat, 23 Apr 2016 19:55:52 -0700 (PDT)
+Date: Sat, 23 Apr 2016 19:55:52 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <11cb608b-d312-4799-a46c-d6656914c2c5@googlegroups.com>
+Subject: [tosdr:3853] [Bad] You grant Snapchat license to use your content.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4265_1088823250.1461466552171"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_4265_1088823250.1461466552171
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4266_392681781.1461466552172"
+
+------=_Part_4266_392681781.1461466552172
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+ https://www.snapchat.com/terms*3. Rights You Grant Us*=20
+
+=E2=80=9CMany of our Services let you create, upload, post, send, receive, =
+and=20
+store content. When you do that, you retain whatever ownership rights in=20
+that content you had to begin with. But you grant us a license to use that=
+=20
+content=E2=80=A6
+
+For all Services other than Live, Local, and any other crowd-sourced=20
+Service, you grant Snapchat a worldwide, royalty-free, sublicensable, and=
+=20
+transferable license to host, store, use, display, reproduce, modify,=20
+adapt, edit, publish, and distribute that content=E2=80=A6.
+
+Because Live, Local, and any other crowd-sourced Services are inherently=20
+public and chronicle matters of public interest, the license you grant us=
+=20
+for content submitted to those Services is broader. In addition to the=20
+rights you grant us in connection with other Services, you also grant us a=
+=20
+perpetual license to create derivative works from, promote, exhibit,=20
+broadcast, syndicate, publicly perform, and publicly display content=20
+submitted to Live, Local, or any other crowd-sourced Services in any form=
+=20
+and in any and all media or distribution methods (now known or later=20
+developed). To the extent it's necessary, you also grant Snapchat and our=
+=20
+business partners the unrestricted, worldwide, perpetual right and license=
+=20
+to use your name, likeness, and voice solely in Live, Local, or other=20
+crowd-sourced content that you appear in, create, upload, post, or send.=20
+This means, among other things, that you will not be entitled to any=20
+compensation from Snapchat or our business partners if your name, likeness,=
+=20
+or voice is conveyed through Live, Local, or other crowd-sourced Services.=
+=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/11cb608b-d312-4799-a46c-d6656914c2c5%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_4266_392681781.1461466552172
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><font color=3D"#000000" face=3D"Times New Roman" size=3D"3=
+"><strong>
+
+</strong></font><h2 style=3D"margin: 10pt 0in 0pt;"><span lang=3D"EN" style=
+=3D"mso-ansi-language: EN;"><font color=3D"#0088cc" face=3D"Cambria" size=
+=3D"2"><span style=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&quo=
+t;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; ms=
+o-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-b=
+idi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bi=
+di; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-languag=
+e: AR-SA;"><a href=3D"https://www.snapchat.com/terms">https://www.snapchat.=
+com/terms</a></span></font></span></h2><h2 style=3D"margin: 10pt 0in 0pt;">=
+<span lang=3D"EN" style=3D"mso-ansi-language: EN;"><strong><font color=3D"#=
+4f81bd" face=3D"Cambria" size=3D"2">3. Rights You Grant Us</font></strong><=
+/span></h2><font color=3D"#000000" face=3D"Times New Roman" size=3D"2">
+
+</font><p><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;s=
+ans-serif&quot;; mso-ansi-language: EN;"><font color=3D"#000000" size=3D"2"=
+>=E2=80=9CMany of our Services let you create, upload, post, send,
+receive, and store content. When you do that, you retain whatever ownership
+rights in that content you had to begin with. But you grant us a license to=
+ use
+that content=E2=80=A6</font></span></p><font color=3D"#000000" face=3D"Time=
+s New Roman" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span lang=3D"EN" style=3D"font-fa=
+mily: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><fo=
+nt color=3D"#000000" size=3D"2">For all Services other than Live, Local, an=
+d any other
+crowd-sourced Service, you grant Snapchat a worldwide, royalty-free,
+sublicensable, and transferable license to host, store, use, display,
+reproduce, modify, adapt, edit, publish, and distribute that content=E2=80=
+=A6.</font></span></p><font color=3D"#000000" face=3D"Times New Roman" size=
+=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><span lang=3D"EN" style=3D"font-fa=
+mily: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><fo=
+nt color=3D"#000000" size=3D"2">Because Live, Local, and any other crowd-so=
+urced Services
+are inherently public and chronicle matters of public interest, the license=
+ you
+grant us for content submitted to those Services is broader. In addition to=
+ the
+rights you grant us in connection with other Services, you also grant us a
+perpetual license to create derivative works from, promote, exhibit, broadc=
+ast,
+syndicate, publicly perform, and publicly display content submitted to Live=
+,
+Local, or any other crowd-sourced Services in any form and in any and all m=
+edia
+or distribution methods (now known or later developed). To the extent it&#3=
+9;s
+necessary, you also grant Snapchat and our business partners the unrestrict=
+ed,
+worldwide, perpetual right and license to use your name, likeness, and voic=
+e
+solely in Live, Local, or other crowd-sourced content that you appear in,
+create, upload, post, or send. This means, among other things, that you wil=
+l
+not be entitled to any compensation from Snapchat or our business partners =
+if
+your name, likeness, or voice is conveyed through Live, Local, or other
+crowd-sourced Services.=E2=80=9D</font></span></p><font color=3D"#000000" f=
+ace=3D"Times New Roman" size=3D"3">
+
+</font></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/11cb608b-d312-4799-a46c-d6656914c2c5%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/11cb608b-d312-4799-a46c-d6656914c2c5%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_4266_392681781.1461466552172--
+------=_Part_4265_1088823250.1461466552171--

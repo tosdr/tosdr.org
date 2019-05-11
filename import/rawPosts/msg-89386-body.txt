@@ -1,0 +1,123 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp166533qek;
+        Tue, 28 Aug 2012 05:39:49 -0700 (PDT)
+Received: by 10.204.154.214 with SMTP id p22mr5005829bkw.111.1346157588581;
+        Tue, 28 Aug 2012 05:39:48 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCT-PKBBRoERO7Ahw@googlegroups.com>
+Received: from mail-bk0-f64.google.com (mail-bk0-f64.google.com [209.85.214.64])
+        by mx.google.com with ESMTPS id fo13si12820132bkc.14.2012.08.28.05.39.47
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 05:39:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCT-PKBBRoERO7Ahw@googlegroups.com designates 209.85.214.64 as permitted sender) client-ip=209.85.214.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCT-PKBBRoERO7Ahw@googlegroups.com designates 209.85.214.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCT-PKBBRoERO7Ahw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by bkty15 with SMTP id y15sf1744168bkt.29
+        for <multiple recipients>; Tue, 28 Aug 2012 05:39:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Ews5zukO0Ksf/InfzrGCnhBK3fW9c3ofTuxQ9EAUQCU=;
+        b=wAJwkv6E2HbpQaVjXntDiD0c/bXkfkhUhG3+rgGKgIsLD5GYIiE+4HNAm7AjoMd0Fu
+         wSj06VXTXh0o6pbveTGuUHTHIa9so54kKQr5WXdzC/aTg/ojmgj62UvYRaeq3tqj1Ih2
+         YqRodlG/U+euFRH5gDhAO4Sw0DP1GDWrLCfzaYkF0Z956kTeOQBUDUs99sIN6LeEdwvQ
+         UN+yhQuQAB2JAq/OQ01xAhc4Y24NmJW+bEZSJ7penxojR3eNeraBz5PJw7aCZxAZ8KZp
+         Mv48WaXCJdqpKtuLsYUw3XcHWT3Y9/5kb7chPqwHQNH0DjeDK6r0hSaBn215wAiO1qzn
+         O5tg==
+Received: by 10.216.34.71 with SMTP id r49mr346090wea.87.1346157587565;
+        Tue, 28 Aug 2012 05:39:47 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.2.133 with SMTP id 5ls115465eef.1.gmail; Tue, 28 Aug 2012
+ 05:39:47 -0700 (PDT)
+Received: by 10.14.173.68 with SMTP id u44mr12234721eel.3.1346157586983;
+        Tue, 28 Aug 2012 05:39:46 -0700 (PDT)
+Received: by 10.14.173.68 with SMTP id u44mr12234719eel.3.1346157586946;
+        Tue, 28 Aug 2012 05:39:46 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id v3si29296883eep.1.2012.08.28.05.39.46
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 05:39:46 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 9A71163A683;
+	Tue, 28 Aug 2012 14:39:44 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id XwEFiQQQy4Ge; Tue, 28 Aug 2012 14:39:34 +0200 (CEST)
+Received: from [192.168.2.114] (unknown [178.19.216.162])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 00EBB63ACAF;
+	Tue, 28 Aug 2012 14:39:33 +0200 (CEST)
+Message-ID: <1346157573.19155.110.camel@synclavier.lan>
+Subject: Re: [tosdr:694] [Bad] WhatsApp may release personal information
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 28 Aug 2012 14:39:33 +0200
+In-Reply-To: <bf656550-4f3c-4f02-87d5-cf436bbb840b@googlegroups.com>
+References: <bf656550-4f3c-4f02-87d5-cf436bbb840b@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Le jeudi 23 ao=FBt 2012 =E0 10:00 -0700, Sebasti=E1n Waisbrot a =E9crit :
+> http://www.whatsapp.com/legal/
+>=20
+> > We may collect and release Personally Identifiable Information and/or=
+=20
+> > non-personally-identifiable information if required to do so by law, or=
+ in=20
+> > the good-faith belief that such action is necessary to comply with stat=
+e=20
+> > and federal laws (such as U.S. Copyright Law), international law or res=
+pond=20
+> > to a court order, subpoena, or search warrant or equivalent, or where i=
+n=20
+> > our reasonable belief, an individual=92s physical safety may be at risk=
+ or=20
+> > threatened.
+>=20
+>=20
+> The conditions are too wide.
+
+Why do you think that?
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

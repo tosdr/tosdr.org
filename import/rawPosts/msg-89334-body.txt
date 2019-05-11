@@ -1,0 +1,118 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp161848qek;
+        Tue, 28 Aug 2012 03:02:33 -0700 (PDT)
+Received: by 10.152.104.44 with SMTP id gb12mr17954166lab.29.1346148152812;
+        Tue, 28 Aug 2012 03:02:32 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRC3rvKBBRoERhMvLA@googlegroups.com>
+Received: from mail-lpp01m010-f64.google.com (mail-lpp01m010-f64.google.com [209.85.215.64])
+        by mx.google.com with ESMTPS id e2si4048072lbm.68.2012.08.28.03.02.31
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 03:02:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRC3rvKBBRoERhMvLA@googlegroups.com designates 209.85.215.64 as permitted sender) client-ip=209.85.215.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRC3rvKBBRoERhMvLA@googlegroups.com designates 209.85.215.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRC3rvKBBRoERhMvLA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lahl5 with SMTP id l5sf1704978lah.29
+        for <multiple recipients>; Tue, 28 Aug 2012 03:02:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=VtC3+M6Chbiwg6AO1c6HygISrMWtiEVl0BpxdCyOO8M=;
+        b=Z2NLRtFo9NNiftPzRY73nD+7OdBsP61HCqBrTqN1tcqZRDQjRkjR5YFeR01AI+i4gx
+         u8cTZCZJXf/clXQMswFuAhcoDDmiagjpZUAMrW0sLrzt5nZPFrvFMrarH1hIoxU6uX5k
+         e1os9/UpAeI/52EJrXAgm3eZ+K9dkEoMjHEcnQtS98u7HcaoDrJXjReIMqSmEEg5xqV9
+         6ZBt6tVtumnZbk5icwT0k2TJiN2dvyY0vy4ndQyVnTsE1/rBbzXHMC7oKATIs0E+8YpM
+         DKDAG2CtaoCQLIHCkf5YhSlCG03vvRcLdy58v7jaIyw8iLQ0AGsRtfeuKpuXpxP8lvQ+
+         CVuw==
+Received: by 10.216.242.2 with SMTP id h2mr412150wer.13.1346148151277;
+        Tue, 28 Aug 2012 03:02:31 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.198.197 with SMTP id v45ls76009een.3.gmail; Tue, 28 Aug
+ 2012 03:02:30 -0700 (PDT)
+Received: by 10.14.178.1 with SMTP id e1mr11627526eem.7.1346148150415;
+        Tue, 28 Aug 2012 03:02:30 -0700 (PDT)
+Received: by 10.14.178.1 with SMTP id e1mr11627525eem.7.1346148150408;
+        Tue, 28 Aug 2012 03:02:30 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id d5si28873379eep.0.2012.08.28.03.02.30
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 03:02:30 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 2AF1E63A641;
+	Tue, 28 Aug 2012 12:02:30 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id e20scGCkf0gy; Tue, 28 Aug 2012 12:02:24 +0200 (CEST)
+Received: from [192.168.2.114] (unknown [178.19.216.162])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 137AC63A5F3;
+	Tue, 28 Aug 2012 12:02:24 +0200 (CEST)
+Message-ID: <1346148143.19155.23.camel@synclavier.lan>
+Subject: Re: [tosdr:682] API agreements
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 28 Aug 2012 12:02:23 +0200
+In-Reply-To: <525106ca-bd2e-421b-b559-60f431a35221@googlegroups.com>
+References: <3F1EE1CC-9976-4E0C-8A8A-C7043B035BFA@me.com>
+	 <1345045691.18572.9.camel@synclavier.lan>
+	 <B875EAA9-A9DF-48F1-9779-96F659D8C315@me.com>
+	 <1345047466.18572.30.camel@synclavier.lan>
+	 <525106ca-bd2e-421b-b559-60f431a35221@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le mardi 21 ao=FBt 2012 =E0 07:27 -0700, mehdi medjaoui a =E9crit :
+> But Hugo, how will we merge what we will do on API tos with general
+> users=20
+> Tos you make? 2 differents sites? Or the API tos;dr will be
+> independant and=20
+> a subdivision of the global tos;dr? Please give me your vision
+>=20
+>=20
+
+Let's please discuss the technical details on github.
+
+Thank you
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

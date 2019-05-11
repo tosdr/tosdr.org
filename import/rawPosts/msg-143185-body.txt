@@ -1,0 +1,227 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp282418ioi;
+        Sat, 23 Apr 2016 20:55:18 -0700 (PDT)
+X-Received: by 10.66.184.40 with SMTP id er8mr40025505pac.134.1461470118239;
+        Sat, 23 Apr 2016 20:55:18 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBH4H6G4AKGQEGREFE2I@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [217.70.183.196])
+        by mx.google.com with ESMTPS id u11si18448033pas.102.2016.04.23.20.55.17
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 20:55:18 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBH4H6G4AKGQEGREFE2I@googlegroups.com does not designate 217.70.183.196 as permitted sender) client-ip=217.70.183.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBH4H6G4AKGQEGREFE2I@googlegroups.com does not designate 217.70.183.196 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBH4H6G4AKGQEGREFE2I@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 4AC1E1720AC
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 05:55:15 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 3EAA7116153
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 05:55:15 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id n_cPw2eL_mFN for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 05:55:13 +0200 (CEST)
+Received: from mail-pf0-x23d.google.com (mail-pf0-x23d.google.com [IPv6:2607:f8b0:400e:c00::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E963611614F
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 05:55:12 +0200 (CEST)
+Received: by mail-pf0-x23d.google.com with SMTP id g132sf19698742pfb.0
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 20:55:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=mWpcVezSXFLLeZXrQ06FG/xAeY1w9968M4IXcGcv2CU=;
+        b=cp5dxbH3IQgM/O42Su2I0LBteg+NaRbRCyVTotS2is7p0tlPru1Mwh1kQHDs2MU5H1
+         m3qTHDecardqJn5/PU8ZSivKDAhdrFshoH2iiNO1cjyBJa3/x0oFe8M8Gp85pGaJTBiu
+         7f+04/5maK47BTBIxY2ZUAOdAY3KHO95xbJU7JpTbxKg21XDzF4h08rQX+PcjerBp2zv
+         lnDZK1FsBrrgy8mqk0u/4oSB/pKYLamrACri83WXpbku0zcVS2Xtw/KAezH93H1YROwv
+         UvL7K+zpWKo5WqtfMVgA0UFyS0+ba2hLsnXAOj9/iSY9K5ZU6bOnxyrJ/4Fb8Nl0H1Wm
+         d/4Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=mWpcVezSXFLLeZXrQ06FG/xAeY1w9968M4IXcGcv2CU=;
+        b=hdlHJgygoACKyK3T6HlYdB4IxayWRSOtivW4ZZg+eP4phoMx4TTj12ge0cZBm+bNBv
+         xVVqPpexLi4MdFd/7hSgAj5N0B6lmrpuzpggeVE1eNtCPSE/F9qs2RP3BKjVSkIiAoYg
+         ly2sQS7oep/E+5vEc4k/SwWbwXVRtVZwvuKCCz8SNjP0tIpaHNLcwOMsZy0UW9k/PoNB
+         UanY8CUQ7jZOpYZTStnRVqAnZyop2KF07jp89WZbIucNz3c/5UF460wsXKjCsovpNVLQ
+         Z5u5ifDBH93qqEKyDxgStYlS8+Mp7B0POSJujxwp2SnT15nr2GbzUEyk1E6MLtonBsNS
+         lPeA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=mWpcVezSXFLLeZXrQ06FG/xAeY1w9968M4IXcGcv2CU=;
+        b=QWBowQkA3DFndnRtC7vtyzgtiWzQVDx03T+5epXlLBPIhNjLWf3j++nkOQZw15FiDP
+         bixpcyNvIP8H6iDuuVlbwO7ZL1cSZt+zxisgTxS4t0W1pctZ8qdMz3SHxgpEDabfIWjR
+         psu3XE5hJ7gNjIc6cBlB8LoVKG3C2mBBu9Bkwd9qOlBKRW2txYeSqQVIhzeX0ZVBDqMr
+         IdhO2Gln1ReMLAbmqucpl2Ph8eR+wFC6/0fIRCtEI7xlT4qiZdMr1Z9SwaglnYMlrZjO
+         A8QC5kLfjdoRGDYy9danweOfA88h6k9sSoYsPr/Ed1dt7dEdmgUrRWM6frR6tSH42qSc
+         Wikw==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FVjVkWAL/OqLq45e5LF8hsh/jZGvZXiWh2QnYMb0aPhXCYBRkXMRmIM8Jvvj+VNew==
+X-Received: by 10.182.27.8 with SMTP id p8mr306326obg.19.1461470111817;
+        Sat, 23 Apr 2016 20:55:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.33.83 with SMTP id l19ls385171otd.7.gmail; Sat, 23 Apr
+ 2016 20:55:11 -0700 (PDT)
+X-Received: by 10.182.91.2 with SMTP id ca2mr306154obb.14.1461470111371;
+        Sat, 23 Apr 2016 20:55:11 -0700 (PDT)
+Date: Sat, 23 Apr 2016 20:55:10 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <4fca5aa7-120c-414f-9162-3cde4155d1cf@googlegroups.com>
+Subject: [tosdr:3864] [Bad] Snapchat does not currently respond to
+ do-not-track signals that may be sent from your device.
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_2561_984386844.1461470110899"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_2561_984386844.1461470110899
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2562_755886235.1461470110899"
+
+------=_Part_2562_755886235.1461470110899
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Snapchat does not currently respond to do-not-track signals that may be=20
+sent from your device, but offers link to learn about opting out of ads.
+
+https://www.snapchat.com/privacy
+
+=E2=80=9CFor more information about interest-based ads, including how to op=
+t out of=20
+having your web-browsing information used for behavioral-advertising=20
+purposes, please visit www.aboutads.info/choices.=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/4fca5aa7-120c-414f-9162-3cde4155d1cf%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2562_755886235.1461470110899
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><span style=3D"font-family: &quot;Calibri&quot;,&quot=
+;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-fami=
+ly: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: min=
+or-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme=
+-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; m=
+so-bidi-language: AR-SA;"><font color=3D"#0088cc" size=3D"2"><div><span sty=
+le=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-th=
+eme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-=
+font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family:=
+ &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-lan=
+guage: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font=
+ size=3D"2"><br></font></span></div><div><span style=3D"font-family: &quot;=
+Calibri&quot;,&quot;sans-serif&quot;; font-size: 11pt; mso-ascii-theme-font=
+: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: mi=
+nor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;T=
+imes New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: E=
+N-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font color=
+=3D"#000000" face=3D"Times New Roman" size=3D"2"></font><p><span lang=3D"EN=
+" style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-=
+language: EN;"><font color=3D"#000000" size=3D"2">Snapchat does not current=
+ly respond to do-not-track signals that may be sent from your device, but o=
+ffers link to learn about opting out of ads.</font></span></p></span></div>=
+</font></span></div><div><span style=3D"font-family: &quot;Calibri&quot;,&q=
+uot;sans-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-f=
+amily: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: =
+minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-th=
+eme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US=
+; mso-bidi-language: AR-SA;"><font color=3D"#0088cc" size=3D"2"><br></font>=
+</span></div><div><span style=3D"font-family: &quot;Calibri&quot;,&quot;san=
+s-serif&quot;; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: =
+Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-l=
+atin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-fon=
+t: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-b=
+idi-language: AR-SA;"><font color=3D"#0088cc" size=3D"2"><a href=3D"https:/=
+/www.snapchat.com/privacy">https://www.snapchat.com/privacy</a></font></spa=
+n></div><span style=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareast-font-f=
+amily: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: =
+minor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-th=
+eme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US=
+; mso-bidi-language: AR-SA;"><div><span lang=3D"EN" style=3D"font-family: &=
+quot;Arial&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN;"><font colo=
+r=3D"#000000" size=3D"2"><br></font></span></div><div><font color=3D"#00000=
+0" face=3D"Times New Roman" size=3D"2">
+
+</font><p><span lang=3D"EN" style=3D"font-family: &quot;Arial&quot;,&quot;s=
+ans-serif&quot;; mso-ansi-language: EN;"><font color=3D"#000000" size=3D"2"=
+>=E2=80=9CFor more information about interest-based ads, including
+how to opt out of having your web-browsing information used for
+behavioral-advertising purposes, please visit </font><a href=3D"http://www.=
+aboutads.info/choices" target=3D"_blank"><font color=3D"#0088cc" size=3D"2"=
+>www.aboutads.info/choices</font></a><font color=3D"#000000" size=3D"2">.=
+=E2=80=9D</font></span></p><font color=3D"#000000" face=3D"Times New Roman"=
+ size=3D"3">
+
+</font></div></span><div><br></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/4fca5aa7-120c-414f-9162-3cde4155d1cf%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/4fca5aa7-120c-414f-9162-3cde4155d1cf%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2562_755886235.1461470110899--
+------=_Part_2561_984386844.1461470110899--

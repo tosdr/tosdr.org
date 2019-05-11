@@ -1,0 +1,121 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp59341qek;
+        Thu, 4 Oct 2012 05:05:02 -0700 (PDT)
+Received: by 10.204.7.88 with SMTP id c24mr1525672bkc.118.1349352301792;
+        Thu, 04 Oct 2012 05:05:01 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORB3HWWWBQKGQER2VCBLQ@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id is5si12305585bkc.5.2012.10.04.05.05.01
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 04 Oct 2012 05:05:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB3HWWWBQKGQER2VCBLQ@googlegroups.com designates 209.85.161.64 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORB3HWWWBQKGQER2VCBLQ@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORB3HWWWBQKGQER2VCBLQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-fa0-f64.google.com with SMTP id m1sf225661fam.29
+        for <michiel@unhosted.org>; Thu, 04 Oct 2012 05:05:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :cc:date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=o0L74W1jo6N1pmPPcNW4zuZK70/UaP1G0x1SrS9cMmc=;
+        b=U31SOJ0k5K2C1o1KxQLQEB+zSfWTm46qFZkwhOFN5h8GV1jq4dObVF5bgwa4n9zxFu
+         tPl6R/akT5jah7cFQmxrqnu40JLYBN3Unig4j38DUknxWaSStsb0VVd4Qsr2YU3Y1X+2
+         V855OB4EqVhcSiyo8ouEbr7oUwalb7resgXcKmt/JtmFCGJRNJViJ8M3morwC3RkyZgm
+         pez5PDIFClDeyyTS2ojYs8Gl0bohNwtaETicTHp1P74qi5GpqvSg1Djj+QJxpw6fR0Cb
+         Pc/NO1kVj8jlwPwBSb1A+diAmydguyaJro4OoxSRjOwG4zTrGcNt5jmeuBAPQ0OvCqm3
+         PbrA==
+Received: by 10.180.101.6 with SMTP id fc6mr1269134wib.4.1349352301099;
+        Thu, 04 Oct 2012 05:05:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.73.226 with SMTP id o2ls7030721wiv.0.gmail; Thu, 04 Oct
+ 2012 05:05:00 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr1456764wib.0.1349352300570;
+        Thu, 04 Oct 2012 05:05:00 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr1456763wib.0.1349352300560;
+        Thu, 04 Oct 2012 05:05:00 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id hm1si755764wib.3.2012.10.04.05.05.00
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 04 Oct 2012 05:05:00 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 24ED563A6A6;
+	Thu,  4 Oct 2012 14:05:00 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id UY6NIuuxbZll; Thu,  4 Oct 2012 14:04:54 +0200 (CEST)
+Received: from [192.168.1.14] (APuteaux-552-1-107-74.w90-35.abo.wanadoo.fr [90.35.6.74])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 2853463A67E;
+	Thu,  4 Oct 2012 14:04:51 +0200 (CEST)
+Message-ID: <1349352289.4304.4.camel@synclavier.lan>
+Subject: Re: [tosdr:983] Re: standardizing data point texts
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Cc: =?ISO-8859-1?Q?P=E4r_Lanner=F6?= <parlannero@gmail.com>
+Date: Thu, 04 Oct 2012 14:04:49 +0200
+In-Reply-To: <CAGT43G9k=Dv_kB4g+pME+zTPWGGXC8pTFokjtDeALS2hfnt5Sw@mail.gmail.com>
+References: <CA+aD3u05iJSkJtL2fgO=UeVjYjec1N4Ssb1mRWM6vG29xaGg9w@mail.gmail.com>
+	 <3ee86880-b655-435b-9924-6ff26b819af9@googlegroups.com>
+	 <ed202447-10f6-491e-a674-6329970f2713@googlegroups.com>
+	 <CAGT43G8+jvMS5PFo3yaOHoaaN2LSqtsjo+u_Y9S93D9SCKxOJg@mail.gmail.com>
+	 <1347292880.9323.140661126012825.64CF1047@webmail.messagingengine.com>
+	 <CAGT43G9k=Dv_kB4g+pME+zTPWGGXC8pTFokjtDeALS2hfnt5Sw@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi P=E4r,
+
+I have created a standard point about services changing their terms with
+no delay and without giving notification to the user:
+https://github.com/didnotread/didnotread.org/blob/master/points/any-time-wi=
+thout-notice.json
+
+However, there were a few points in CommonTerms patterns related to
+that. But I couldn't find exactly what I was looking for. So maybe this
+should be another pattern?
+
+What do you think?
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

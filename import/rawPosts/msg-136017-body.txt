@@ -1,0 +1,1505 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.51.17 with SMTP id z17csp901560ioz;
+        Wed, 23 Sep 2015 02:46:29 -0700 (PDT)
+X-Received: by 10.180.103.2 with SMTP id fs2mr3155108wib.9.1443001589608;
+        Wed, 23 Sep 2015 02:46:29 -0700 (PDT)
+Return-Path: <tosdr+bncBCWIVTODH4IOP2MJWACRUBBTY4GHM@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id hg7si10061365wib.23.2015.09.23.02.46.29
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 23 Sep 2015 02:46:29 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCWIVTODH4IOP2MJWACRUBBTY4GHM@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCWIVTODH4IOP2MJWACRUBBTY4GHM@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBCWIVTODH4IOP2MJWACRUBBTY4GHM@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 1A3B241C31F
+	for <michiel@unhosted.org>; Wed, 23 Sep 2015 11:46:29 +0200 (CEST)
+Received: from mfilter10-d.gandi.net (mfilter10-d.gandi.net [217.70.178.139])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0E27A1780A5
+	for <michiel@unhosted.org>; Wed, 23 Sep 2015 11:46:29 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter10-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter10-d.gandi.net (mfilter10-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id TzCyMZ-WVald for <michiel@unhosted.org>;
+	Wed, 23 Sep 2015 11:46:19 +0200 (CEST)
+Received: from mail-wi0-x23d.google.com (mail-wi0-x23d.google.com [IPv6:2a00:1450:400c:c05::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id DE1BE178099
+	for <michiel@michielbdejong.com>; Wed, 23 Sep 2015 11:46:16 +0200 (CEST)
+Received: by wiku15 with SMTP id u15sf17235918wik.1
+        for <michiel@michielbdejong.com>; Wed, 23 Sep 2015 02:46:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:content-type:content-transfer-encoding:subject:message-id:date
+         :to:mime-version:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=XNK0NHUvxA/1/YpRQ94dYDE0Q/zo/f0Q+NrZGy0I6Lc=;
+        b=NxIQyf+DrYP+/u7GJKtyQpUfC5+0SzDS1Iafw9FGaO4CXAUgt0WCqi9QRh5LSrt84R
+         cjM1zLDjeq/ylQnLx8YtulKjt2UwBUce8gCtR21OIXWC8h19cCs/ndbgEjGOfcqaLTMR
+         ShxPFYgVJWvX2yfRexn3ghJQhwWDB/InXSvMNiI2gefcs5Liy6Htq44i6acHL04/wMmr
+         Vu6SrlFe/bB6UXAXjVD02ZFojqHZkShJtNexno0Bt6SrFuV57v+AA6XQejY5HmSDgiHJ
+         YTq6YqXBycMSwbDxvLxdmnNZcShqDy3paGXww9Fgz2vf3yDwUOCrBUjupReWr4KGWcC0
+         Zy+A==
+X-Received: by 10.180.184.229 with SMTP id ex5mr7556wic.13.1443001576695;
+        Wed, 23 Sep 2015 02:46:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.103.72 with SMTP id fu8ls1081069wib.3.canary; Wed, 23 Sep
+ 2015 02:46:15 -0700 (PDT)
+X-Received: by 10.194.118.65 with SMTP id kk1mr5123420wjb.5.1443001575498;
+        Wed, 23 Sep 2015 02:46:15 -0700 (PDT)
+Received: from mail-wi0-x236.google.com (mail-wi0-x236.google.com. [2a00:1450:400c:c05::236])
+        by gmr-mx.google.com with ESMTPS id i10si224654wix.3.2015.09.23.02.46.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2015 02:46:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mickeytgm@gmail.com designates 2a00:1450:400c:c05::236 as permitted sender) client-ip=2a00:1450:400c:c05::236;
+Received: by mail-wi0-x236.google.com with SMTP id ge5so197310509wic.0
+        for <tosdr@googlegroups.com>; Wed, 23 Sep 2015 02:46:15 -0700 (PDT)
+X-Received: by 10.180.101.163 with SMTP id fh3mr3145509wib.94.1443001575306;
+        Wed, 23 Sep 2015 02:46:15 -0700 (PDT)
+Received: from [192.168.1.16] (213.37.68.227.dyn.user.ono.com. [213.37.68.227])
+        by smtp.gmail.com with ESMTPSA id i9sm6337890wjz.20.2015.09.23.02.46.13
+        for <tosdr@googlegroups.com>
+        (version=TLS1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 23 Sep 2015 02:46:14 -0700 (PDT)
+From: Mickey <mickeytgm@gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Subject: [tosdr:3636] 
+Message-Id: <ED08EC47-E339-4EF1-B020-D8D90166CB5F@gmail.com>
+Date: Wed, 23 Sep 2015 11:46:12 +0200
+To: tosdr@googlegroups.com
+Mime-Version: 1.0 (Mac OS X Mail 8.2 \(2102\))
+X-Mailer: Apple Mail (2.2102)
+X-Original-Sender: mickeytgm@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of mickeytgm@gmail.com designates 2a00:1450:400c:c05::236
+ as permitted sender) smtp.mailfrom=mickeytgm@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+        The MathWorks, Inc. Software License Agreement
+
+
+IMPORTANT NOTICE
+
+
+READ THE TERMS AND CONDITIONS OF YOUR LICENSE AGREEMENT CAREFULLY BEFORE CO=
+PYING, INSTALLING, OR USING THE PROGRAMS OR DOCUMENTATION.
+
+THE LICENSE AGREEMENT TOGETHER WITH ANY APPLICABLE ADDENDUM REPRESENTS THE =
+ENTIRE AGREEMENT BETWEEN YOU (THE "LICENSEE") AND THE MATHWORKS, INC. ("MAT=
+HWORKS") CONCERNING THE PROGRAM(S) AND DOCUMENTATION.
+
+BY COPYING, INSTALLING, OR USING THE PROGRAMS AND DOCUMENTATION, YOU ACCEPT=
+ THE TERMS OF THIS AGREEMENT. IF YOU ARE NOT WILLING TO DO SO, DO NOT COPY,=
+ INSTALL, OR USE THE PROGRAMS AND DOCUMENTATION.
+
+_________________________________________________________________
+
+The MathWorks, Inc. Software License Agreement
+
+Installation and Use Addendum (if applicable)
+
+Academic Installation and Use Addendum (if applicable)
+
+Student License and Home License Installation and Use Addendum (if applicab=
+le)
+
+Deployment Addendum
+
+
+
+
+The MathWorks, Inc. Software License Agreement
+
+
+1. DEFINITIONS.
+
+1.1. "Licensee" means you, whether an individual or an entity, to whom Math=
+Works grants the License, and who is responsible for complying with the con=
+tractual obligations of the License, and ensuring that anyone permitted acc=
+ess to the Programs also complies with such obligations.
+
+1.2. "Affiliate" means a legal entity which is controlled by, or controls, =
+or is under common control with Licensee. Control means (i) beneficial owne=
+rship of at least fifty percent (50%) of the voting securities of a corpora=
+tion or other business organization with voting securities, or (ii) a fifty=
+ percent (50%) or greater interest in the profits and capital of a partners=
+hip or other business organization without voting securities, provided that=
+ no other individual or entity other than the Licensee also has an equal fi=
+fty percent (50%) ownership or interest in the legal entity. Notwithstandin=
+g the foregoing, unless MathWorks provides its express written consent to t=
+reat the entity as an Affiliate, an Affiliate shall not include any entity =
+that MathWorks has expressly refused to license (or grant access under a li=
+cense to) its software products or that had a license for MathWorks softwar=
+e products that MathWorks expressly terminated.
+
+1.3. "Application" shall have the meaning ascribed to it in Section 4.1 of =
+the Deployment Addendum anywhere the term is used in the upper case in this=
+ Agreement.
+
+1.4. "Computer" means either (i) a single physical hardware system containi=
+ng a single motherboard running an operating system, or (ii) a virtual mach=
+ine running an operating system.
+
+1.5. "Documentation" means the user guides, if any, accompanying delivery o=
+f a Program on DVD or made available at mathworks.com/help, as may be updat=
+ed from time to time, including the bug reports made available at mathworks=
+.com/support/bugreports. Documentation may be delivered in any medium or la=
+nguage.
+
+1.6. "Internal Operations" means the use of a Program by employees, consult=
+ants, student interns, and software administration contractors of Licensee =
+or an Affiliate on behalf of the Licensee or Affiliate.
+
+1.7. "Licensed User" means an individual authorized by MathWorks or the Lic=
+ensee to use the Programs for Licensee's Internal Operations, to the extent=
+ permitted by the License Option acquired.
+
+1.8. "License Manager" means the FlexNet license management software, or th=
+e MathWorks Hosted License Manager ("MHLM"), provided with the Program(s).
+
+1.9. "License Option" means the specific rights, restrictions, and obligati=
+ons under which Licensee may install and use a Program pursuant to this Agr=
+eement, including those related to the permitted Activation Type associated=
+ with the License Option acquired, as described in the applicable Installat=
+ion and Use Addendum, and including restrictions associated with the Licens=
+e being an "Annual License," "Term License," "Perpetual License," "Student =
+License," "Home License" or "Certain MATLAB Distributed Computing Server ("=
+MDCS") Uses," as described under Article 10 of this Agreement.
+
+1.10. "Licensor" means the person who, or entity which, grants a license to=
+ MathWorks to redistribute that person's or entity's intellectual property.
+
+1.11. "Perpetual License" means the right to use the License indefinitely p=
+rovided that the Licensee always remains in compliance with the terms of th=
+is Agreement.
+
+1.12. "Program" means the software licensed hereunder, including Documentat=
+ion, enhancements and error corrections. Each product licensed hereunder is=
+ a separate Program.
+
+1.13. "Third Party" means any person or legal entity that is not MathWorks,=
+ the Licensee, or an Affiliate.
+
+1.14. "Third Party Software" means the software referenced in Article 8 of =
+this Agreement.
+
+2. ACCEPTANCE AND REFUNDS. If Licensee does not accept the terms and condit=
+ions of this License and any applicable Addendum, or if Licensee terminates=
+ this License, for any reason, within thirty (30) days of Program delivery =
+(the "Acceptance Period"), then Licensee shall immediately return the Progr=
+ams licensed hereunder to MathWorks or the authorized distributor from whom=
+ Licensee acquired the Programs and, if returned within the Acceptance Peri=
+od, shall receive a full refund. By retaining a Program throughout the Acce=
+ptance Period, Licensee accepts the applicable rights, and agrees to be bou=
+nd by the applicable obligations and restrictions, of this Agreement includ=
+ing the License Option acquired with respect to that Program.
+
+3. PROGRAM TRIAL EVALUATION. Licensee agrees to use any Program provided to=
+ Licensee as a trial or evaluation only for the period of the trial evaluat=
+ion which may be controlled by a license key code, only to evaluate it indi=
+vidually for potential purchase of a license to the Program as an end-user,=
+ to conduct no business with it, and to remove it and all result files prod=
+uced from any of Licensee's computers at the end of the trial or evaluation=
+ period and to comply with all other obligations and restrictions in this A=
+greement.
+
+4. LICENSE GRANT. The MathWorks Programs are licensed, not sold. MathWorks =
+hereby grants to Licensee, subject to the terms of this Agreement, a nonexc=
+lusive license (the "License") to:
+
+4.1. install and use the Programs solely on Computers controlled by License=
+e, in accordance with the License Option acquired and associated permitted =
+Activation Type provisions contained in the relevant Installation and Use A=
+ddendum, and solely for Internal Operations;
+
+4.2. provide access to online Documentation on Licensee's intranet, provide=
+d it is not accessible over the open Internet;
+
+4.3. print portions of the online Documentation for reasonable use by Licen=
+sed Users; and
+
+4.4. use the Programs as expressly set forth in the Deployment Addendum.
+
+5. LICENSE RESTRICTIONS. The License is subject to the express restrictions=
+ set forth below and any other restrictions set forth in any signed agreeme=
+nt between MathWorks and Licensee. Licensee shall not, and shall not cause =
+or permit any Affiliate or any Third Party to, directly or indirectly:
+
+5.1. modify or create any derivative work of, a Program or any part of a Pr=
+ogram, except as expressly permitted in Article 8 of this Agreement and in =
+the Deployment Addendum. Notwithstanding anything to the contrary contained=
+ herein, any such permitted modifications must be consistent with all other=
+ terms of this Agreement;
+
+5.2. use a Program or any part of a Program, for any act which infringes co=
+pyright of a Program including developing, producing, or testing a computer=
+ program containing a feature or functionality that is substantially simila=
+r in its expression to the expression contained in a Program or any part of=
+ a Program;
+
+
+5.3. adapt, translate, copy, or convert all or any part of a Program in ord=
+er to create software, a principal purpose of which is to perform the same =
+or similar functions to a Program or to replace a Program or any component =
+of a Program;
+
+5.4. rent, lease, or loan the Programs; use the Programs for supporting Thi=
+rd Parties' use of the Programs, time share the Programs, or provide servic=
+e bureau or similar service use;
+
+5.5. disassemble, decompile, reverse engineer a Program, or any portion the=
+reof, or attempt to gain access to its method of operation or source code;
+
+5.6. sell, license, sublicense, provide access, publish, display, distribut=
+e, disseminate, assign, or otherwise transfer (whether by sale, exchange, l=
+ease, gift, or otherwise) to a Third Party the Programs, any copy or portio=
+n thereof, or any License or other rights thereto, in whole or in part, wit=
+hout MathWorks' prior written consent, except as expressly permitted in the=
+ Deployment Addendum;
+5.7. alter, remove, or obscure any copyright, trade secret, patent, tradema=
+rk, logo, proprietary and/or other legal notices on or in copies of the Pro=
+grams;
+
+5.8. use MathWorks' name, trade names, logos, or other trademarks of MathWo=
+rks or any of its Affiliates or Licensors in any advertising, promotional l=
+iterature or any other material, whether in written, electronic, or other f=
+orm, distributed to any Third Party, except in the form provided by MathWor=
+ks, and then solely for purposes of identifying MathWorks' Programs;
+
+5.9. provide access (directly or indirectly) to the Programs via a web or n=
+etwork Application, except as permitted in Article 8 of the Deployment Adde=
+ndum;
+
+5.10. copy, make available for copy, or otherwise reproduce the Programs, i=
+n whole or in part, except either (a) as may be required for their installa=
+tion for the purpose of executing the Program in accordance with the Licens=
+e Option and associated permitted Activation Type, (b) as expressly permitt=
+ed in the Deployment Addendum, or (c) to make a reasonable number of copies=
+ solely for back-up purposes provided that any such permitted copies shall =
+reproduce all copyright, trade secret, patent, logo, proprietary and/or oth=
+er legal notices contained in the original copy obtained from MathWorks;
+
+5.11. access or use Programs that Licensee is not currently licensed to acc=
+ess or to use;
+
+5.12. allow the Programs to be accessed or used by a Third Party except as =
+specifically provided in this Agreement;
+
+5.13. disclose or transfer the activation key, login credentials, and/or li=
+cense file to a Third Party, or allow them to be used by a Third Party exce=
+pt as provided herein;
+
+5.14. republish the Documentation, except as expressly permitted in Article=
+ 4 of this Agreement;
+
+5.15. create a server for code generation or deployment Applications;
+
+5.16. disable or circumvent any technical limitations in the Programs or di=
+sregard other limitations as set forth in mathworks.com/ineligible_programs=
+ including those limitations that prevent certain Programs or Program compo=
+nents from being compiled, distributed, called from a web application, or u=
+sed with the MATLAB Distributed Computing Server, as the case may be. Licen=
+see agrees not to work around these limitations;
+
+5.17. access, enable access to, modify, translate, or deploy temporary inte=
+rmediate files produced by a Program;
+
+5.18. make any use of the License on behalf of or for the benefit of a Thir=
+d Party or an Affiliate in any manner that would constitute a violation of =
+this License if such use were directly made by the Third Party or the Affil=
+iate or cause any Third Party or Affiliate to make any use of the License o=
+n behalf of or for the benefit of Licensee or an Affiliate in any manner th=
+at would constitute a violation of this License if such use were directly m=
+ade by Licensee or Affiliate;
+
+5.19. acquire the License if a principal purpose of the acquisition is to t=
+ransfer or assign the License to a Third Party unless expressly permitted b=
+y MathWorks;
+
+5.20. mechanize or automate the process of checking out or in license keys =
+for one or more Programs, including by running a second session of a Progra=
+m, running a Program to serve multiple users, or rebooting the License Mana=
+ger, for a principal purpose of minimizing the License check out time of an=
+y Programs, or otherwise circumventing the intended License Manager operati=
+on;
+
+5.21. use a License Manager other than the one delivered with the Programs;
+
+5.22. take any action that requires any portion of the Programs to be made =
+subject to end-user rights incompatible or inconsistent with the restrictio=
+ns set forth in this Agreement; and/or
+
+5.23. with respect to a complimentary License that is awarded by MathWorks =
+for student and similar competitions, course support, research, fellowship =
+participation, and teaching assistance, contravene any additional restricti=
+ons set forth in the award letter provided to Licensee.
+
+6. ADDITIONAL FEES. The fees for the License are determined based upon the =
+country where all Licensed User(s) are principally located. Additional fees=
+ may apply to a transfer of the License, or the principal location of      =
+any Licensed User, to another country, or to contract for global use. MathW=
+orks may restrict a transfer of a License to another country or restrict it=
+s use in another country if MathWorks reasonably believes that such transfe=
+r or use will result in a breach of this Agreement.
+
+7. RETENTION OF RIGHT, TITLE AND INTEREST BY MATHWORKS AND ITS LICENSORS. T=
+he Programs shall at all times remain the property of MathWorks and/or Math=
+Works' Licensors and Licensee shall have no right, title, or interest there=
+in, except as expressly set forth in this Agreement. Licensee shall take ap=
+propriate action by instruction, agreement, or otherwise with any persons p=
+ermitted access to the Programs, so as to enable Licensee to satisfy its ob=
+ligations under the terms of this Agreement, including disabling access to =
+the Programs, in the event of a transfer of the License.
+
+8. LICENSES FOR THIRD PARTY SOFTWARE, SERVICES, AND DATA. MathWorks has bee=
+n granted licenses to distribute certain Third Party Software as part of or=
+ included with the Programs licensed. These licenses require MathWorks to d=
+istribute the software to Licensee subject to specific terms and conditions=
+, which may provide rights and impose restrictions for use of the Programs,=
+ including deployment of Applications, that are different from or additiona=
+l to those contained herein. Should such Third Party Software be provided u=
+nder the Lesser General Public License, Licensee may make modifications of =
+the work identified in Section 6 of the Lesser General Public License for L=
+icensee's own use and reverse engineering for debugging such modifications.=
+ Licensee agrees that acceptance of this Agreement also confirms Licensee's=
+ acceptance of any applicable Third Party Software licenses. Such Third Par=
+ty licenses may be viewed at mathworks.com/thirdpartylicenseagreementsR2015=
+b. Certain MathWorks Programs may also provide an interface to facilitate L=
+icensee's use of Third Party services and data governed by the terms and co=
+nditions set forth in such Third Party's applicable agreements with License=
+e. This Agreement does not grant any additional rights to access or use suc=
+h Third Party services or data made accessible through the use of MathWorks=
+ Programs.
+
+9. SOFTWARE MAINTENANCE SERVICE. During any paid Software Maintenance Servi=
+ce term, if applicable, MathWorks shall provide its customary Software Main=
+tenance Service for the licensed Programs which consists of: delivering sub=
+sequent releases of the Programs, if any, that are not charged for separate=
+ly; exerting reasonable efforts to both (a) provide, within a reasonable ti=
+me, workarounds for any material programming errors in the current release =
+of the Programs that are directly attributable to MathWorks, and (b) correc=
+t such errors in the next available release, provided Licensee provides Mat=
+hWorks with sufficient information to identify the errors. During this same=
+ paid Software Maintenance Service term, Licensee shall also be entitled to=
+      receive technical support for the current release. Technical support =
+means assistance by telephone, web, and e-mail with the installation and/or=
+ use of the then-current release of the licensed Programs, including all av=
+ailable bug fixes and patches, and their interaction with supported hardwar=
+e and operating systems ("Platforms"). Software Maintenance Service may pro=
+vide access to certain online features and services made available by MathW=
+orks from time to time. Licensee understands and agrees that access to such=
+ online capabilities shall expire unless Licensee renews its Software Maint=
+enance Service. MathWorks reserves the option to discontinue, in whole or i=
+n part, and at any time, offering Software Maintenance Service and/or techn=
+ical support for any Program, feature of a Program, or Platform or to refus=
+e to provide Software Maintenance Service to a Licensee whom it reasonably =
+believes is in breach of this Agreement.
+
+10. LICENSE DURATION ("TERM"). This Agreement shall continue until the earl=
+ier of (a) termination by MathWorks or Licensee as provided below, or (b) s=
+uch time as there are no Programs being licensed to Licensee hereunder.
+
+10.1. For Annual Licenses: Licensee understands and agrees that each Annual=
+ License and associated Software Maintenance Service will expire automatica=
+lly and the Programs will stop operating promptly after its corresponding o=
+ne (1) year period, unless Licensee renews its License by remitting the the=
+n-current annual License fee and provided the Licensee always remains in co=
+mpliance with the terms of this Agreement.
+
+10.2. For Term Licenses: Licensee understands and agrees that each Term Lic=
+ense and associated Software Maintenance Service will expire automatically =
+and the Programs will stop operating promptly after the corresponding perio=
+d of the term licensed, unless Licensee renews its License by remitting the=
+ then-current term License fee and provided the Licensee always remains in =
+compliance with the terms of this Agreement.
+
+10.3. For Perpetual Licenses: Licensee shall have the right to use the Prog=
+rams indefinitely, subject to the termination provisions in this Agreement.=
+ Licensee understands and agrees that the Software Maintenance Service for =
+each Perpetual License will terminate automatically upon expiration of the =
+initial Software Maintenance Service term included with the acquisition of =
+the License. Thereafter, the Software Maintenance Service term may be renew=
+ed for any Program, at the then-current price, and for the then-applicable =
+term, as long as MathWorks offers such Software Maintenance Service for suc=
+h Program and provided the Licensee always remains in compliance with the t=
+erms of this Agreement.
+
+10.4. For Student Licenses and Home Licenses: See the Student License and H=
+ome License Installation and Use Addendum for the License Term.
+
+10.5. For Certain MDCS Uses: Licensee's use of MDCS in the manner described=
+ in Section 3.3.2 of either the Installation and Use Addendum or the Academ=
+ic Installation and Use Addendum may be terminated at any time upon sixty d=
+ays' notice, or sooner if, for any reason, MathWorks is involuntarily requi=
+red to terminate the availability of such use.
+
+11. TERMINATION. MathWorks may terminate this Agreement and all Licenses gr=
+anted hereunder by written notice to Licensee if Licensee breaches any mate=
+rial term of this Agreement, including failure to pay any License fees due,=
+ and Licensee has not cured such breach within sixty (60) days of written n=
+otification. MathWorks may immediately terminate this Agreement and all Lic=
+enses granted hereunder if, after requesting and failing to receive from th=
+e Licensee adequate assurances of compliance with the terms of this Agreeme=
+nt, MathWorks reasonably believes that Licensee is or is intending to breac=
+h any material term of this Agreement. MathWorks may immediately terminate =
+upon notice this Agreement and all Licenses granted hereunder should Licens=
+ee breach the terms and conditions of Articles 4, 5, 7, and/or 12. If Licen=
+see or any of its Affiliates commences or participates in any legal proceed=
+ing against MathWorks or any of MathWorks' Affiliates challenging or assert=
+ing any intellectual property rights in or against any of the Programs lice=
+nsed hereunder, then MathWorks may, without waiving any other legal rights =
+or remedies available to it, immediately terminate this License. The forego=
+ing sentence only applies to (a) a Licensee who has as its principal busine=
+ss the holding of patents and who does not engage, either directly or throu=
+gh an Affiliate, in any material active business of making products that em=
+body the patents or (b) a Licensee who engages, either directly or through =
+an Affiliate, in a principal business of licensing or making available comm=
+ercial off the shelf ("COTS") software to Third Parties. Licensee may termi=
+nate this License at any time, for any reason. Licensee shall not be entitl=
+ed to any refund if this License is terminated, except for License fees pai=
+d for any Programs for which the Acceptance Period has not expired at the t=
+ime of termination. Upon termination for any reason, Licensee shall promptl=
+y return all but archival copies of the Programs in Licensee's possession o=
+r control, or promptly provide written certification of their destruction.
+
+12. EXPORT CONTROL. The Programs may be subject to U.S. export control laws=
+ or other (U.S. and non-U.S.) governmental export and import laws and regul=
+ations. Notwithstanding any other term of this Agreement or Third Party agr=
+eement, Licensee's rights under this Agreement may not be exercised by Lice=
+nsee or any Third Party in violation of such laws and regulations, nor may =
+this Agreement be transferred to any party where doing so would result in s=
+uch a violation. The terms of any limitation on the use, transfer or re-exp=
+ort of the Programs imposed by MathWorks in any Destination Control Stateme=
+nt or other document for the purpose of export control shall prevail over a=
+ny term in this Agreement. It shall be Licensee's responsibility to comply =
+with the latest United States or other governmental export and import regul=
+ations.
+
+13. FEDERAL ACQUISITION. This provision applies to all acquisitions of the =
+Programs and Documentation by, for, or through the federal government of th=
+e United States. By accepting delivery of the Programs or Documentation, th=
+e government hereby agrees that this software or documentation qualifies as=
+ commercial computer software or commercial computer software documentation=
+ as such terms are used or defined in FAR 12.212, DFARS Part 227.72, and DF=
+ARS 252.227-7014. Accordingly, the terms and conditions of this Agreement a=
+nd only those rights specified in this Agreement, shall pertain to and gove=
+rn the use, modification, reproduction, release, performance, display, and =
+disclosure of the Programs and Documentation by the federal government (or =
+other entity acquiring for or through the federal government) and shall sup=
+ersede any conflicting contractual terms or conditions. If this License fai=
+ls to meet the government's needs or is inconsistent in any respect with fe=
+deral procurement law, the government agrees to return the Programs and Doc=
+umentation, unused, to MathWorks.
+
+14. EUROPEAN UNION SOFTWARE DIRECTIVE. For any Licensed User properly licen=
+sed to use the Programs within the European Union, any contractual provisio=
+ns of this Agreement contrary to laws implemented pursuant to Article 6 of =
+Directive 2009/24/EC of the European Parliament and of the Council of 23 Ap=
+ril 2009 on the legal protection of computer programs or to the exceptions =
+provided for in Article 5(2) and (3) of such Directive shall be null and vo=
+id solely to the extent decompiling, disassembling, or otherwise reverse-en=
+gineering of the Programs is necessary to enable the Licensee to achieve th=
+e interoperability of an independently created program with the Programs or=
+ any other permitted objectives specified by such laws implemented under su=
+ch Directive (collectively, the "Permitted Objectives"), consistent with th=
+e Directive, provided that any such information gained is used solely for s=
+uch Permitted Objectives and solely in the European Union.
+
+15. TAXES, DUTIES, CUSTOMS. Absent appropriate exemption certificates or ot=
+her conclusive proof of tax exempt status, Licensee shall pay all applicabl=
+e sales, use, excise, value-added, and other taxes, duties, levies, assessm=
+ents, and governmental charges payable in connection with this Agreement or=
+ the Licenses granted hereunder, excluding taxes based on or measured by Ma=
+thWorks' income, for which MathWorks shall be solely responsible.
+
+16. ASSIGNMENT. Licensee may not assign or otherwise transfer this Agreemen=
+t and any License hereunder, by operation of law or otherwise, without the =
+written consent of MathWorks. Licensee agrees that MathWorks may withhold s=
+uch consent if it determines, in its sole discretion, that a principal purp=
+ose of the acquisition of this License was to assign the License to a Third=
+ Party. In the case of any permitted or other lawful assignment or transfer=
+, the terms of this Agreement including any License hereunder shall be bind=
+ing upon, and inure to the benefit of, the transferee or assignee.
+
+17. LIMITATION OF LIABILITY. The Programs should not be relied on as the so=
+le basis to solve a problem or implement a design whose incorrect solution =
+or implementation could result in injury to person or property. If a Progra=
+m is employed in such a manner, it is at the Licensee's own risk and MathWo=
+rks and its Licensors explicitly disclaim all liability for such misuse to =
+the extent allowed by law. MathWorks' and MathWorks' Licensors' liability f=
+or death or personal injury resulting from negligence or for any other matt=
+er in relation to which liability by law cannot be excluded or limited shal=
+l not be excluded or limited. Except as aforesaid, (a) any other liability =
+of MathWorks and its Licensors (whether in relation to breach of contract, =
+negligence or otherwise) shall not in total exceed the amount paid to MathW=
+orks under this Agreement in the twelve month period preceding the claim in=
+ question, for the Program with respect to which the liability in question =
+arises; and (b) MathWorks and its Licensors shall have no liability for any=
+ indirect or consequential loss (whether foreseeable or otherwise and inclu=
+ding loss of profits, loss of business, loss of opportunity, and loss of us=
+e of any computer hardware or software). Some states do not allow the exclu=
+sion or limitation of incidental or consequential damages, so the above exc=
+lusion or limitation may not apply to Licensee.
+
+18. LIMITED WARRANTY/LIMITATION OF REMEDIES. MathWorks warrants that MathWo=
+rks, on its own behalf or through its Licensors, has the right to grant the=
+ License rights hereunder. MathWorks warrants that the physical media provi=
+ded shall be free from defects in material and workmanship for a period of =
+ninety (90) days from delivery, or it will be replaced by MathWorks at no c=
+ost to Licensee. MathWorks further warrants, for a period of one (1) year f=
+rom delivery or for the term of the License, whichever is less, that each c=
+opy of each Program will conform in all material respects to the descriptio=
+n of such Program's operation in the Documentation. In the event that a Pro=
+gram does not operate as warranted, Licensee's exclusive remedy and MathWor=
+ks' sole liability under this warranty shall be the correction or workaroun=
+d by MathWorks of major defects within a reasonable time. Should such corre=
+ction or workaround be impractical, MathWorks may, at its option, terminate=
+ the relevant License and refund the initial License fee paid to MathWorks =
+for such Program. All requests for warranty assistance should be directed t=
+o The MathWorks, Inc., 3 Apple Hill Drive, Natick, MA 01760-2098, U.S.A.
+
+19. DISCLAIMER OF WARRANTIES. Except for warranties expressly set forth in =
+Article 18 of this Agreement (or as implied by law where the law provides t=
+hat the particular terms implied cannot be excluded by contract), any and a=
+ll Programs, Documentation, and Software Maintenance Services are delivered=
+ "as is" and MathWorks makes and the Licensee receives no additional expres=
+s or implied warranties. MathWorks and its Licensors hereby expressly discl=
+aim any and all other conditions, warranties, or other terms of any kind or=
+ nature concerning the Programs, Documentation, and Software Maintenance Se=
+rvices (including, without limitation, any with regard to infringement, mer=
+chantability, quality, accuracy, or fitness for a particular purpose or Lic=
+ensee's purpose). MathWorks also expressly disclaims any warranties that ma=
+y be implied from usage of trade, course of dealing, or course of performan=
+ce. Except for the express warranties stated in Article 18 of this Agreemen=
+t, the Programs, Documentation, and Software Maintenance Services are provi=
+ded with all faults, and the entire risk of satisfactory quality, performan=
+ce, accuracy, and effort is with Licensee. MathWorks does not warrant that =
+the Programs and Documentation will operate without interruption or be erro=
+r free. Some states and countries do not allow limitations on how long an i=
+mplied warranty lasts, so the above limitation may not apply to Licensee. T=
+he warranty in Article 18 gives Licensee specific legal rights and Licensee=
+ may also have other rights which vary from state to state and country to c=
+ountry. Licensee accepts responsibility for its use of the Programs and the=
+ results obtained therefrom.
+
+20. GOVERNING LAW; JURISDICTION. This Agreement shall be interpreted, enfor=
+ced and construed and the rights of the parties hereunder governed in all r=
+espects by the laws of the State of Delaware United States of America, with=
+out regard to its conflicts of law provisions, and both parties consent to =
+the jurisdiction of the federal and state courts located in said State and =
+consent to the service of process, pleadings and notices in connection with=
+ any and all actions initiated in such courts. The parties agree that a fin=
+al judgment in any such action or proceeding shall be conclusive and bindin=
+g and may be enforced in any other jurisdiction. To the extent any governin=
+g law, treaty, or regulation is in conflict with this Agreement, the confli=
+cting terms of this Agreement shall be superseded only to the extent requir=
+ed by such law, treaty, or regulation. If any provision of this Agreement s=
+hall be otherwise unlawful, void, or otherwise unenforceable, that provisio=
+n shall be enforced to the maximum extent permissible. In either case, the =
+remainder of this Agreement shall not be affected. The parties agree that t=
+he U.N. Convention on Contracts for the International Sale of Goods shall n=
+ot apply to this Agreement. The parties further agree that the Uniform Comp=
+uter Information Transactions Act, or any version thereof, adopted by any s=
+tate, in any form ("UCITA"), shall not apply to this Agreement. To the exte=
+nt that UCITA is applicable, the parties agree to opt out of the applicabil=
+ity of UCITA pursuant to the Opt-Out provision(s) contained therein.
+
+21. COMPLIANCE WITH LICENSES. Licensee agrees to notify MathWorks promptly =
+upon discovery of any failure to comply with this Agreement. Licensee agree=
+s that, no more than once every twelve (12) months or within a reasonable t=
+ime after a transfer, in addition to any other remedies at law or in equity=
+, MathWorks or its authorized representative shall, upon reasonable prior n=
+otice, have the right to inspect Licensee's and Licensee's Affiliates' reco=
+rds, systems, and facilities, during normal business hours, to verify that =
+Licensee's and its Affiliates' use of the Programs is in conformity with va=
+lid licenses and otherwise comply with this Agreement. If a verification di=
+scloses that Licensee's or any of its Affiliates' use is not in conformity =
+with a valid license, Licensee shall immediately take all necessary steps t=
+o cure any past defaults, including paying any unpaid license fees, to brin=
+g Licensee's or any of its Affiliates' use into conformity.
+
+22. LICENSE MANAGEMENT. The Programs contain technology for the prevention =
+of unlicensed use. The Programs require activation to exercise your rights =
+under this Agreement. You may also need to activate if you redesignate the =
+Programs on your License or modify your hardware.
+
+Activation associates the use of the Programs with a specific Computer, and=
+ in some cases the Licensed User. During activation, data about the Program=
+s and the Computer will be transmitted to MathWorks. This data includes the=
+ License information, Computer identification, and location. Some License O=
+ptions may require the MathWorks Account information and the operating syst=
+em user name for the Licensed User. A License file will be provided to comp=
+lete activation.
+
+23. HEADINGS. The inclusion of headings is for convenience of reference onl=
+y and shall not affect the construction or interpretation of this Agreement=
+.
+
+24. ENTIRE AGREEMENT. This Agreement, and any applicable Addendum thereto i=
+ncluding any documents referenced therein are incorporated herein by refere=
+nce, and contain the entire understanding of the parties and may not be mod=
+ified or amended or superseded except by a written agreement signed by Math=
+Works and Licensee. Such written agreement may include, in addition to any =
+other terms, restrictions on Licensee's use of the Programs that are in add=
+ition to or inconsistent with the terms set forth in this Agreement includi=
+ng any addendum to this Agreement. In the event of any conflict between thi=
+s Agreement and any purchase order executed by Licensee (whether executed b=
+efore or after this Agreement), this Agreement shall prevail.
+
+The MathWorks, Inc. Software License Agreement - Installation and Use Adden=
+dum
+
+This is an Addendum to The MathWorks, Inc. Software License Agreement (the =
+"Agreement"), and the terms and conditions of this Addendum are incorporate=
+d therein. Each capitalized term used herein and not defined herein shall h=
+ave the meaning ascribed to it in the Agreement.
+
+1. SCOPE. The Installation and Use provisions of this Addendum apply to eac=
+h Program licensed under the Agreement. The applicable provisions are deter=
+mined by the particular License Option that Licensee acquired, including th=
+ose related to the permitted Activation Type associated with the License Op=
+tion acquired.
+
+2. DEFINITIONS.
+
+2.1. Activation Type. One of the Standalone Named User, Designated Computer=
+, Network Named User, or Network Concurrent User Activation Types available=
+ with respect to the License Option acquired.
+
+2.2. Licensed User. An individual authorized by the Licensee to use the Pro=
+grams for Licensee's Internal Operations, to the extent permitted by the Li=
+cense Option acquired.
+
+2.3. License Option. The specific rights, restrictions, and obligations und=
+er which Licensee may install and use a Program pursuant to the Agreement, =
+including those related to the permitted Activation Type associated with th=
+e License Option acquired.
+
+2.4. Named User. A Licensed User designated and identified by Licensee as t=
+he "Named User" for a License to      a Program under either the "Standalon=
+e Named User" or "Network Named User" Activation Type.
+
+3. INSTALLATION AND USE. Specific rights, obligations, and restrictions app=
+ly to each License Option. Licensee's right to install and use the Programs=
+ is determined by the License Option acquired, including the permitted Acti=
+vation Type with respect to such License Option. By accepting the terms and=
+ conditions of the Agreement, Licensee also accepts the License Option acqu=
+ired.
+
+3.1. License Options.
+
+3.1.1. Individual. Except as specifically set forth in Section 3.3 hereof, =
+the Individual License Option permits one Activation Type, either the Stand=
+alone Named User Activation Type or the Designated Computer Activation Type=
+.
+
+3.1.2. Network Named User. Except as specifically set forth in Section 3.3 =
+hereof, the Network Named User License Option permits only the Network Name=
+d User Activation Type.
+
+3.1.3. Concurrent. Except as specifically set forth in Section 3.3 hereof, =
+the Concurrent License Option permits only the Network Concurrent User Acti=
+vation Type.
+
+3.2. Activation Types.
+
+3.2.1. Standalone Named User. Program use is restricted to the single, desi=
+gnated Named User. Programs may be activated and used on one or more indivi=
+dual Computers, provided the Programs are only accessible to, and used by, =
+the Named User for that License. The physical locations of the Computers us=
+ed by the Named User to run the Programs are not limited; the Computers may=
+ be located at work, home, in a laboratory, or on a laptop. Licensee may on=
+ly designate one Licensed User access to or use of the Programs under each =
+Named User License. A Computer login of a Named User may not be shared with=
+ any other individual. Licensee may redesignate the Named User for a Progra=
+m, whether temporarily or not, no more than four (4) times in any twelve (1=
+2) month period. A Named User may not use a Program on more than two (2) Co=
+mputers simultaneously. In the case of Standalone Named User Licenses licen=
+sed as part of a group, Licensee shall be responsible for, and shall assign=
+ an administrator the task of, administering the Licenses and Programs, inc=
+luding new versions of the Programs delivered during any paid Software Main=
+tenance Service term.
+
+3.2.2. Designated Computer. The Programs may only be activated and used on =
+a single, physical (not virtual) designated Computer, provided the Programs=
+ are only operated from that Computer's console by only one Licensed User a=
+t any given time. Licensee may redesignate the Computer for a Program to a =
+different Computer, whether temporarily or not, no more than four (4) times=
+ in any twelve (12) month period. In the case of Designated Computer Licens=
+es licensed as part of a group, Licensee shall be responsible for, and shal=
+l assign an administrator the task of, administering the Licenses and Progr=
+ams, including new versions of the Programs delivered during any paid Softw=
+are Maintenance Service term.
+
+3.2.3. Network Named User. Programs must be activated on a single Computer.=
+ Licensee must run the License Manager and edit the Local License Options f=
+ile to maintain a list of Named Users authorized to use each Program. Licen=
+see may redesignate Named Users for a Program, whether temporarily or not, =
+no more than four (4) times in any twelve (12) month period, provided the n=
+umber of Named Users never exceeds the number licensed per Program. Program=
+s may be installed in a central location or on individual Computers to acce=
+lerate startup times, as long as the use on all Computers is controlled by =
+the License Manager. A Named User may not use a Program on more than two (2=
+) Computers simultaneously. A Computer login of a Named User may not be sha=
+red with any other individual.
+
+3.2.4. Network Concurrent User. Programs must be activated on a single Comp=
+uter. Licensee must run the License Manager and may have only as many Licen=
+sed Users simultaneously using a Program at any given time as the number of=
+ Concurrent keys acquired for that Program. Subject to the foregoing, a Lic=
+ensed User of the Concurrent License Option may utilize the Programs on any=
+ number of Computers served by a single License Manager provided that, befo=
+re using a Program on any Computer, the Licensed User checks out a separate=
+ Concurrent key from the License Manager for that Computer. Programs may be=
+ installed in a central location or on individual Computers to accelerate s=
+tartup times as long as the use on all Computers is controlled by the Licen=
+se Manager. Licensees of the Concurrent License Option are prohibited from =
+providing Program access to users located outside a single country unless L=
+icensee has contracted for global use. For the purposes of the immediately =
+preceding sentence, member countries of the North American Free Trade Agree=
+ment ("NAFTA") shall be treated as a single country, and Iceland, Norway, S=
+witzerland, and any member countries of the European Union ("EU") shall als=
+o be treated as a single country.
+
+3.3. MATLAB Distributed Computing Server.
+
+3.3.1. Licensees of the MDCS are permitted to install and make available Pr=
+ograms, other than Programs that are technically limited or otherwise limit=
+ed as set forth at mathworks.com/ineligible_programs, on one or more Comput=
+ers ("Computer Cluster") solely for use through the MDCS, provided that (1)=
+ the Programs on the Computer Cluster are controlled by a single License Ma=
+nager for each MDCS, (2) the number of simultaneous Program sessions does n=
+ot exceed the number of MDCS workers acquired, (3) access to any Program, w=
+hether in the MDCS or otherwise, remains limited to those persons who are L=
+icensed Users of such Programs and the Parallel Computing Toolbox ("PCT"); =
+(4) access to any worker must be enabled through a validly licensed use of =
+the PCT; and (5) access to any Program, including the MDCS, is not made ava=
+ilable (i) to any Third Party without the advance written consent of MathWo=
+rks, or (ii) to any user outside the country for which the MDCS is licensed=
+, unless the Licensee has contracted for global use. For the purposes of th=
+e immediately preceding sentence, member countries of the North American Fr=
+ee Trade Agreement ("NAFTA") shall be treated as a single country, and Icel=
+and, Norway, Switzerland, and any member countries of the European Union ("=
+EU") shall also be treated as a single country.
+
+3.3.2. Notwithstanding the restriction contained in Section 3.3.1(2) immedi=
+ately above but subject to all other restrictions in Section 3.3.1, License=
+d Users of MDCS may also scale the number of MDCS workers on the following =
+additional terms: (1) Licensee employs the MathWorks Hosted License Manager=
+ ("MHLM") for its license management; and (2) Licensee agrees, on behalf of=
+ its Licensed Users, to the terms of use at mathworks.com/cloudcenterandond=
+emandtermsofuse, including the obligation to pay all MDCS on-demand fees in=
+curred by its Licensed Users applicable to their on-demand use, if any, of =
+MDCS workers. Any fees that may be due to any cloud providers for use of th=
+eir platforms, products, or services are separate and are the responsibilit=
+y of the Licensee.
+
+3.4. MATLAB Production Server. Licensees of the MATLAB Production Server ("=
+MPS") are permitted to install and use MPS for the sole purpose of scheduli=
+ng and running Applications generated with Licensee's validly licensed MATL=
+AB Compiler Program, provided that the number of workers running simultaneo=
+usly on one or more computers does not exceed the number of MPS workers acq=
+uired. Licensee may make the Applications running on MPS accessible to end =
+users globally, including Third Parties, via a web interface, or other inte=
+rface provided by Licensee, subject to the restrictions of Section 5.2 of t=
+he Deployment Addendum.
+
+3.5. Polyspace Bug Finder and Polyspace Code Prover. Notwithstanding the pr=
+ovisions of Section 3.2 above, the number of Polyspace verification runs th=
+at a Licensed User may simultaneously execute using the Polyspace Code Prov=
+er or the Polyspace Bug Finder shall not exceed the number of keys availabl=
+e for the respective Polyspace Program.
+
+4. REMOTE AND SHARED OPERATION Subject also to the foregoing:
+
+4.1. Remote Access to the Desktop: Using the Microsoft Remote Desktop conne=
+ction feature or similar technologies:
+
+4.1.1. Named Users and Network Named Users may remotely access Programs for=
+ which they are licensed.
+
+4.1.2. Network Concurrent Users may remotely access Programs served by the =
+License Manager for the License under which they are operating.
+
+4.1.3. The Licensee of a Designated Computer Activation Type may designate =
+one Licensed User to remotely access the Programs licensed on the Designate=
+d Computer for operation on that Designated Computer. Licensee may redesign=
+ate such Licensed User, whether temporarily or not, no more than four (4) t=
+imes in any twelve (12) month period.
+
+4.2. Shared Access to the Desktop:
+
+4.2.1. A Licensed User using Microsoft Remote Assistance technology, NetMee=
+ting conferencing software, or similar technologies may share remotely the =
+desktop view of a Program session with another individual for assistive or =
+demonstrative purposes only.
+
+
+The MathWorks, Inc. Software License Agreement - Academic Installation and =
+Use Addendum
+
+This is an Addendum to The MathWorks, Inc. Software License Agreement (the =
+"Agreement"), and the terms and conditions of this Addendum are incorporate=
+d therein. Each capitalized term used herein and not defined herein shall h=
+ave the meaning ascribed to it in the Agreement.
+
+1. SCOPE. The provisions of this Academic Installation and Use Addendum app=
+ly to each Program licensed under the Agreement at prices offered only to d=
+egree-granting educational institutions ("Academic prices") for Academic In=
+ternal Operations only, as defined below. Research and development division=
+s and centers of universities, U.S. government agencies and other not-for-p=
+rofit organizations do not qualify for Academic prices. This Addendum impos=
+es certain additional obligations and restrictions with respect to the Prog=
+rams licensed at such Academic prices that are not contained in the Agreeme=
+nt. The applicable provisions are determined by the particular Academic Lic=
+ense Option that Licensee acquires for each Program, including those relate=
+d to the permitted Activation Type associated with the Academic License Opt=
+ion acquired. In the event of a conflict between the provisions of this Add=
+endum and the Agreement, these Addendum provisions shall apply.
+
+2. DEFINITIONS.
+
+2.1. Academic Internal Operations. The installation and use of the Programs=
+ by Licensed Users, in accordance with the Academic License Option acquired=
+, for the purpose of (i) in the case of employees (faculty and academic sta=
+ff), performing software administration, teaching, and noncommercial, acade=
+mic research in their ordinary course as Licensee's employees; and (ii) in =
+the case of enrolled students, meeting classroom requirements of courses an=
+d study offered by the Licensee. Any other use is expressly prohibited.
+
+2.2. Activation Type. One of the Standalone Named User, Designated Computer=
+, or Network Concurrent User Activation Types available with respect to the=
+ Academic License Option acquired.
+
+2.3. Licensed Users. All enrolled students and employees (faculty and acade=
+mic staff) of the Licensee who are authorized by Licensee to use the Progra=
+ms for Academic Internal Operations in accordance with the Agreement, as re=
+vised from time to time, and to the extent permitted by the Academic Licens=
+e Option acquired. As used herein, "employees" excludes subcontractors and =
+consultants of the Licensee. Individuals under thirteen (13) years of age m=
+ay be Licensed Users if their parent or guardian has previously consented t=
+o such individual's use of the Programs. Licensee agrees to collect such co=
+nsent prior to providing any such individuals with access to the Products, =
+and to store such consent in a retrievable way.
+
+2.4. Academic License Option. The specific rights, restrictions, and obliga=
+tions under which Licensee may install and use a Program pursuant to the Ag=
+reement, including those related to the permitted Activation Type associate=
+d with the Academic License Option acquired.
+
+2.5. Named User. Licensed User designated and identified by Licensee as the=
+ "Named User" for a License to a Program under the "Standalone Named User" =
+Activation Type.
+
+3. INSTALLATION AND USE. Specific rights, obligations, and restrictions app=
+ly to each Academic License Option. Licensee's right to install and use the=
+ Programs is determined by the Academic License Option acquired, including =
+the permitted Activation Type with respect to such Academic License Option.=
+ By accepting the terms and conditions of the Agreement, Licensee also acce=
+pts the Academic License Option acquired, and agrees to use the Programs on=
+ly for Academic Internal Operations.
+
+3.1. Academic License Options.
+
+3.1.1. Individual. Except as specifically set forth in Section 3.3 hereof, =
+the Individual License Option permits one Activation Type, either the Stand=
+alone Named User Activation Type or the Designated Computer Activation Type=
+.
+
+3.1.2. Concurrent. Except as specifically set forth in Section 3.3 hereof, =
+the Concurrent License Option permits only the Network Concurrent User Acti=
+vation Type.
+
+3.1.3. Classroom. Except as specifically set forth in Section 3.3 hereof, t=
+he Classroom License Option permits one Activation Type, either the Network=
+ Concurrent User Activation Type or the Designated Computer Activation Type=
+. Notwithstanding the foregoing definition of Academic Internal Operations,=
+ Programs licensed under the Classroom License Option are further restricte=
+d to use in connection with on-campus computing facilities that are used so=
+lely in support of classroom instruction of students. Research use is not p=
+ermitted. Notwithstanding the restrictions contained in Sections 2.1 and 2.=
+3 above but subject to all other restrictions in Sections 2.1 and 2.3, Lice=
+nsed Users of the Classroom License may also include visiting instructors a=
+nd contractors solely for the purpose of classroom instruction or preparati=
+on for classroom instruction.
+
+3.1.4. Primary and Secondary Schools. Primary and secondary schools located=
+ at a single physical address may authorize their faculty, academic staff, =
+and students to use the License on teachers' computers, school-owned comput=
+ers or student-owned computers, under the Designated Computer Activation Ty=
+pe, for Academic Internal Operations only. Technical support is available f=
+or faculty and academic staff, but not for students.
+
+3.1.5. Total Academic Headcount. Programs may be installed and used by Lice=
+nsed Users both on institution-owned or leased Computers and on personally-=
+owned or leased Computers. Technical support is available for faculty and a=
+cademic staff, but not for students.
+
+3.1.6. Total Student Headcount. Programs may be installed and used by Licen=
+see's students only on their personally-owned or leased Computers. Student =
+Licensed Users may not use a Program on more than two (2) Computers simulta=
+neously. Programs licensed under the Total Student Headcount License Option=
+ may not be used by Licensee's faculty and academic staff. Technical suppor=
+t is not available.
+
+3.2. Activation Types.
+
+3.2.1. Standalone Named User. Program use is restricted to the single, desi=
+gnated Named User. Programs may be activated and used on one or more indivi=
+dual Computers, provided the Programs are only accessible to, and used by, =
+the Named User for that License. The physical locations of the Computers us=
+ed by the Named User to run the Programs are not limited; the Computers may=
+ be located at work, home, in a laboratory, or on a laptop. Licensee may on=
+ly designate one Licensed User access to or use of the Programs under each =
+Named User License. A Computer login of a Named User may not be shared with=
+ any other individual. Licensee may redesignate the Named User for a Progra=
+m, whether temporarily or not, no more than four (4) times in any twelve (1=
+2) month period. A Named User may not use a Program on more than two (2) Co=
+mputers simultaneously.
+
+3.2.2. Designated Computer. The Programs may only be activated and used on =
+a single, physical (not virtual) designated Computer, provided the Programs=
+ are only operated from that Computer's console by only one Licensed User a=
+t any given time. Licensee may redesignate the Computer for a Program to a =
+different Computer, whether temporarily or not, no more than four (4) times=
+ in any twelve (12) month period. In the case of Designated Computer Licens=
+es licensed as part of a group, Licensee shall be responsible for, and shal=
+l assign an administrator the task of, administering the Licenses and Progr=
+ams, including new versions of the Programs delivered during any paid Softw=
+are Maintenance Service term.
+
+3.2.3. Network Concurrent User. Programs must be activated on a single Comp=
+uter. Licensee must run the License Manager and may have only as many Licen=
+sed Users simultaneously operating a Program at any given time as the numbe=
+r of Concurrent keys acquired for that Program. Subject to the foregoing, a=
+ Licensed User of the Concurrent License Option may utilize the Programs on=
+ any number of Computers served by a single License Manager provided that, =
+before using a Program on any Computer, the Licensed User checks out a sepa=
+rate Concurrent key from the License Manager for that Computer. Programs ma=
+y be installed in a central      location, on institution-owned or Licensee=
+'s faculty, research and academic staff personally-owned computers to accel=
+erate startup times, as long as the installations on the individual Compute=
+rs are controlled by the License Manager. Licensee is prohibited from allow=
+ing installation of the Programs on students' own computers. Licensees of t=
+he Concurrent License Option are prohibited from providing Program access t=
+o users located outside a single country.
+
+3.3. MATLAB Distributed Computing Server.
+
+3.3.1. Licensees of the MDCS are permitted to install and make available Pr=
+ograms, other than Programs that are technically limited or otherwise limit=
+ed as set forth at mathworks.com/ineligible_programs, on one or more Comput=
+ers ("Computer Cluster") solely for use through the MDCS, provided that (1)=
+ the Programs on the Computer Cluster are controlled by a single License Ma=
+nager for each MDCS; (2) the number of simultaneous Program sessions does n=
+ot exceed the number of MDCS workers acquired, except as set forth in Secti=
+on 3.3.2 and 3.3.3; (3) access to any Program, whether in the MDCS or other=
+wise, remains limited to those persons who are Licensed Users of such Progr=
+ams and the Parallel Computing Toolbox ("PCT"); (4) access to any worker mu=
+st be enabled through a validly licensed use of the PCT; and (5) access to =
+any Program, including the MDCS, is not made available (i) to any Third Par=
+ty without the advance written consent of MathWorks, or (ii) to any user ou=
+tside the country for which the MDCS is licensed.
+
+3.3.2. Subject to all other restrictions in Section 3.3.1, Licensed Users o=
+f MDCS may also scale the number of MDCS workers on the following additiona=
+l terms: (1) Licensee employs the MathWorks Hosted License Manager ("MHLM")=
+ for its license management; and (2) Licensee agrees, on behalf of its Lice=
+nsed Users, to the terms of use at mathworks.com/cloudcenterandondemandterm=
+sofuse, including the obligation to pay all MDCS on-demand fees incurred by=
+ its Licensed Users applicable to their on-demand use, if any, of MDCS work=
+ers. Any fees that may be due to any cloud providers for use of their platf=
+orms, products, or services are separate and are the responsibility of the =
+Licensee.
+
+3.3.3. Subject to the restrictions in Sections 3.3.1(3), 3.3.1(4) and 3.3.1=
+(5), if MDCS is acquired by Licensee for the Total Academic Headcount Licen=
+se Option, the number of simultaneous Program sessions per Licensed User ma=
+y not exceed the number of MDCS workers licensed.
+
+3.4. MATLAB Production Server. Licensees of the MATLAB Production Server ("=
+MPS") are permitted to install and use MPS for the sole purpose of scheduli=
+ng and running Applications generated with Licensee's validly licensed MATL=
+AB Compiler Program, provided that the number of workers running simultaneo=
+usly on one or more computers does not exceed the number of MPS workers acq=
+uired. Licensee may make the Applications running on MPS accessible to end =
+users globally, including Third Parties, via a web interface, or other inte=
+rface provided by Licensee, subject to the restrictions of Section 5.2 of t=
+he Deployment Addendum.
+
+4. REMOTE AND SHARED OPERATIONS
+
+Subject also to the foregoing:
+
+4.1. Remote Desktop Access: Using the Microsoft Remote Desktop connection f=
+eature or similar technologies:
+4.1.1. Named Users may remotely access Programs for which they are licensed=
+.
+
+4.1.2. Network Concurrent Users may remotely access Programs served by the =
+License Manager for the License under which they are operating.
+
+4.1.3. The Licensee of a Designated Computer Activation Type may designate =
+one Licensed User to remotely access the Programs licensed on the Designate=
+d Computer for operation on that Designated Computer. Licensee may redesign=
+ate such Licensed User, whether temporarily or not, no more than four (4) t=
+imes in any twelve (12) month period.
+
+4.1.4. Licensed Users of the Total Academic Headcount License Option and To=
+tal Student Headcount License Option may remotely access Programs for which=
+ they are licensed.
+
+4.2. Shared Access to the Desktop:
+
+4.2.1. A Licensed User using Microsoft Remote Assistance technology, NetMee=
+ting conferencing software, or similar technologies may share remotely the =
+desktop view of a Program session with another individual for assistive or =
+demonstrative purposes only.
+
+
+The MathWorks, Inc. Software License Agreement - Student License and Home L=
+icense Installation and Use Addendum
+
+This is an Addendum to The MathWorks, Inc. Software License Agreement (the =
+"Agreement"), and the terms and conditions of this Addendum are incorporate=
+d therein. Each capitalized term used herein and not defined herein shall h=
+ave the meaning ascribed to it in the Agreement.
+
+1. SCOPE. The provisions of this Student License and Home License Installat=
+ion and Use Addendum apply to the MATLAB and Simulink Programs and to any o=
+ther Programs licensed under the Agreement at prices offered to students en=
+rolled in degree-granting educational institutions ("Student Use prices") o=
+r to individuals for personal use ("Home Use Prices"). This Addendum impose=
+s certain additional obligations and restrictions with respect to the Progr=
+ams licensed at such Student Use and Home Use prices that are not contained=
+ in the Agreement.
+
+2. In the event of a conflict between the provisions of this Addendum and t=
+he Agreement, these Addendum provisions shall apply. In this Addendum, the =
+license provided to students is referred to as a "Student License", and the=
+ license provided to individuals for personal use is referred to as the "Ho=
+me License".
+
+3. RETURNS AND REFUNDS. Returns and refunds of Student License and Home Lic=
+ense purchases are subject to the refund policies at the time and point of =
+purchase.
+
+4. REGISTRATION AND ACTIVATION. The Programs contain technology for the pre=
+vention of unlicensed or illegal use of the Programs. Licensee agrees to th=
+e use and application of such technology in the Programs (a) to limit the u=
+se of the Programs by Licensee to a finite number of Computers, and (b) to =
+require Licensee's registration of the Student License and activation of th=
+e Programs in advance of the use of the Programs (other than for temporary =
+use) as further described in this Addendum and in the Documentation for the=
+ Programs.
+
+5. ELIGIBILITY, INSTALLATION, AND USE. Licensee agrees to the following eli=
+gibility and use restrictions of the Student License and the Home License: =
+a Licensee of a Student License must be a student enrolled in a degree-gran=
+ting educational institution or participating in a continuing education pro=
+gram at a degree-granting educational institution and may use the license o=
+nly for student activities that are not commercial, for profit, professiona=
+l, or revenue generating activities for the period of such student use; a L=
+icensee of a Home License must be an individual and may use the license onl=
+y for personal use and not for professional, academic, or commercial use, i=
+ncluding for profit or revenue generating activities, and only for the peri=
+od of such personal use.
+
+The Student License and Home License each permit the Licensee to use the Pr=
+ograms on one Computer that Licensee owns or leases provided (i) the Progra=
+ms are only accessible to, and used by, Licensee, and (ii) Licensee has pro=
+vided machine-specific identification for such Computer through the registr=
+ation and activation      process. Network installation is prohibited.
+
+6. PARENTAL CONSENT. Individuals under thirteen (13) years of age may be Li=
+censed Users if their parent or guardian has previously consented to such i=
+ndividual's use of the Programs. Licensee agrees to collect such consent pr=
+ior to providing any such individuals with access to the Programs, and to s=
+tore such consent in a retrievable way.
+
+7. TECHNICAL SUPPORT. Technical support for Licensees of Student Licenses a=
+nd Home Licenses is limited to installation and activation support.
+
+8. ASSIGNMENT. Neither a Student License nor a Home License is transferable=
+.
+
+9. PRIMARY AND SECONDARY SCHOOL USE. Teachers and students at primary and s=
+econdary education schools may license the Student License. Teachers may al=
+so use the Student License on the teacher's computer or school-owned comput=
+ers. The MathWorks, Inc. Software License Agreement - Deployment Addendum
+
+This is an Addendum to The MathWorks, Inc. Software License Agreement (the =
+"Agreement"), and the terms and conditions of this Addendum are incorporate=
+d therein for use of the Programs. Each capitalized term used herein and no=
+t defined herein shall have the meaning ascribed to it in the Agreement.
+
+1. PURPOSES. The Agreement contains restrictions prohibiting Licensee from =
+modifying, distributing, or providing access to the Programs or any Program=
+ Components (as defined below), except as expressly provided in this Addend=
+um. Because the Programs licensed by Licensee under the Agreement contain S=
+ource Code or Object Code Program Components, this Addendum sets forth the =
+Licensee's rights with respect to creating software or applications using t=
+he Programs or any Program Component, as well as certain additional obligat=
+ions related thereto. This Addendum also states restrictions and obligation=
+s with respect to the use of the Programs or any Program Component, which a=
+lso may have a bearing on the creation or distribution of software or appli=
+cations.
+
+MathWorks or its Licensors retain all right, title, and interest in its Pro=
+grams, Program Components, and Derivative Forms of its Programs.
+
+2. USER CREATED FILES. This Addendum does not apply to MATLAB code files, S=
+imulink model files, MEX-files, MAT-files, VHDL-files, Verilog-files, FIG-f=
+iles and P-files that are created by Licensee and that do not include any c=
+ode obtained from MATLAB code files, Simulink model files, MAT-files, P-cod=
+e, C/C++ files, VHDL-files, Verilog-files, TLC-files, or other Source Code =
+files supplied with the Programs ("User Files"). Licensee may distribute or=
+ sublicense without restriction, User Files provided that a principal purpo=
+se of the distribution or sublicense is not to replace or replicate a Progr=
+am or any part of a Program.
+
+3. NONCOMPETITION. Notwithstanding anything else contained in this Agreemen=
+t, Licensee agrees not to use, test, benchmark, reverse engineer or determi=
+ne the expression or design of, the Programs, Derivative Forms, Generated F=
+orms, or Program Components to make, or distribute its own or a Third Party=
+'s application or software, a principal purpose of which, as reasonably det=
+ermined by MathWorks, is to perform the same or similar functions as Progra=
+ms licensed by MathWorks or which replaces any component of the Programs. L=
+icensee shall not otherwise use the Programs to compete with the products o=
+r businesses of MathWorks, including by distributing Libraries, or any form=
+ of an entire Program or a substantial portion of a Program.
+
+4. DEFINITIONS.
+
+4.1. Application. A software file that Licensee has created by either (a) u=
+sing a MathWorks Program to compile or translate Licensee created Source Co=
+de or (b) incorporating or linking any part of any Source Code, library fil=
+e, or other Program Component provided with the Program. An Application mus=
+t contain original code developed by Licensee and must provide substantial =
+functionality not contained in, or provided by, the Program Components that=
+ are incorporated into such Application. If a software file created by a Li=
+censee incorporates Program Components, but does not meet the requirements =
+of the previous sentence, then it is a Derivative Form (as defined below). =
+An Application may contain Linked Object Code which, if such Object Code wa=
+s not Linked to the Application and was a standalone file, would otherwise =
+have been deemed a Derivative Form.
+
+4.2. Application License. A license provided by Licensee to its end-users f=
+or the installation and use of Licensee's Application and any Third Party S=
+oftware made available for use with the Application.
+
+4.3. Generated Forms. The output of the MATLAB Compiler, the MathWorks Code=
+r Programs, and other MathWorks' code generation Programs in the form of So=
+urce Code or Object Code, as well as such Source Code converted to Object C=
+ode or Linked forms.
+
+4.4. Derivative Forms. A software file that Licensee has derived from one o=
+r more Program Components (including without limitation by incorporating, t=
+ranslating, or modifying, in whole or in part, any Program Component), and =
+which, if modified or copied without MathWorks' authorization, would consti=
+tute a copyright infringement or breach of the Agreement. A software file c=
+reated by Licensee which qualifies as an "Application" under the above defi=
+nition shall not be deemed a Derivative Form.
+
+4.5. Linked. An executable or loadable file created by a compiler or linker=
+ program combining Object Code module files.
+
+4.6. MAT-file. The file format in which MATLAB stores data.
+
+4.7. MATLAB Runtime. MATLAB Runtime support libraries and other files for d=
+eployment of Applications created with the MATLAB Compiler.
+
+4.8. Object Code. The code created by a system compiler from source code; a=
+lso called "machine-readable code". Object Code can be Linked with an appro=
+priate linker to resolve address references and may be combined with other =
+Object Code for targeted execution on a specific processor. Object Code inc=
+ludes "Object Code libraries" and "shared libraries," which are groupings o=
+f Object Code for specific purposes.
+
+4.9. Program Component. Any portion of, or file provided with, a Program.
+
+4.10. Source Code. Human-readable program code written in a higher-level la=
+nguage such as C, C++, Java, MATLAB, MDL, VHDL, Verilog, or Fortran, which =
+must be translated or compiled into machine-readable language before it can=
+ be executed by a computer. Source Code also includes header files and othe=
+r human-readable files necessary for a Program to be compiled in the higher=
+-level language.
+
+4.11. Standalone Application. An Application created using programming lang=
+uages and tools other than the Programs, which executes outside of the Prog=
+rams.
+
+4.12. Deployment Program. The MATLAB Compiler, MATLAB Compiler SDK, and any=
+ of MathWorks Coder Programs as defined in Section 4.13 below.
+
+4.13. MathWorks Coder Programs. MATLAB Coder, Filter Design HDL Coder, Simu=
+link Coder, HDL Coder, Simulink PLC Coder, and Embedded Coder.
+
+5. DEPLOYMENT PROGRAMS. Licensed Users of MathWorks' Deployment Programs ma=
+y automatically generate code from MATLAB code files, Simulink/Stateflow di=
+agrams, and other representations, into Generated Forms. Furthermore, Licen=
+see may copy and deploy these Generated Forms for use outside of the Progra=
+ms.
+
+5.1. Deployment from MathWorks Coder Programs. MathWorks provides directori=
+es of C, C++, Assembly, linker command files, template makefiles, project f=
+iles, and TLC source code files with Programs that implement the real-time =
+framework. Such files made available in any of the MathWorks Coder Programs=
+ may only be modified and deployed in Source Code or Linked Object Code for=
+m for different development targets when used with such Programs or with co=
+de generated by such Programs as part of, and only as required by, a larger=
+ Standalone Application. MathWorks Coder Programs cannot be used to create =
+an Application (a) providing capability similar to the capabilities of any =
+of the Programs; (b) providing functionality or behavior similar to that of=
+ the MATLAB command line or scripting and programming capabilities; (c) all=
+owing operation of the code generation capabilities of Programs; (d) provid=
+ing access to an entire Program or a substantial portion of a Program; or (=
+e) enabling evaluation of end-user code or expressions.
+
+5.1.1. Licensee may copy and deploy these files outside of the Programs in =
+Linked Object Code form or Source Code form, if only used in combination wi=
+th code generated by those Programs as part of a larger standalone Applicat=
+ion.
+5.1.2. No further fees shall be due to MathWorks for such deployment within=
+ Licensee's Application, regardless of whether the Application is deployed =
+solely for Licensee's Internal Operations or to Third Parties.
+
+5.2. Deployment from MATLAB Compiler. Licensed Users may deploy copies of A=
+pplications generated by the MATLAB Compiler that incorporate compiled vers=
+ions of MATLAB code files from licensed Programs required for such Applicat=
+ions. Licensee may also use and distribute the MATLAB Runtime together with=
+ such Applications for the sole purpose of running the Applications. Licens=
+ee is prohibited from making copies of the MATLAB Runtime accessible to any=
+ Third Party separate from or for use other than with a Licensed User's App=
+lication, or provide the MATLAB Runtime for service bureau or similar servi=
+ce use.
+Licensee agrees to employ the same security measures to protect the MATLAB =
+Runtime as it uses to safeguard Licensee's own proprietary intellectual pro=
+perty, but in no event less than reasonable care.
+
+No additional license fees shall be due to MathWorks for the distribution o=
+f the required MATLAB code files incorporated in the generated Application,=
+ or for the distribution of the MATLAB Runtime when deployed together with =
+such Applications, regardless of whether the Application and the MATLAB Run=
+time are distributed for the purposes of Licensee's Internal Operations or =
+to Third Parties.
+5.2.1. Licensed User may include, by compilation for deployment, only those=
+ select MATLAB code files from the licensed Programs required for the Appli=
+cation.
+
+5.2.2. In no event shall Licensee distribute any library header files.
+
+5.2.3. Licensee's Application may not provide capability similar to the cap=
+abilities of any of the Programs or provide functionality or behavior simil=
+ar to that of the MATLAB command line or scripting and programming capabili=
+ties, nor may Licensee's Application enable evaluation of end-user code or =
+expressions.
+
+5.2.4. Licensee's Application may not allow operation of the code generatio=
+n capabilities of Programs.
+
+5.2.5. Licensee's Application may not provide access to an entire Program o=
+r a substantial portion of a Program.
+
+5.2.6. Licensee's Application incorporating any functionality of the Parall=
+el Computing Toolbox ("PCT") may enable the same or fewer number of local w=
+orkers provided by the PCT used to build the Application, even if the Appli=
+cation's end user does not possess a license to the PCT.
+
+5.2.7. Licensee shall include the notice "MATLAB(r). (c) 1984 - [INSERT YEA=
+R MATLAB VERSION PUBLISHED] The MathWorks, Inc." in the deployed Applicatio=
+n's About Box, or similar visible location, and in the applicable documenta=
+tion distributed with each copy of the Application.
+
+5.2.8. Licensee may not modify or remove any proprietary notice or license =
+file that is included with the MATLAB Runtime.
+
+5.3. Simulink Desktop Real-Time. Licensee may not incorporate Simulink Desk=
+top Real-Time into an Application for deployment without contracting with M=
+athWorks for an OEM or VAR agreement.
+
+5.4. Simulink Real-Time. Licensee may develop Applications that incorporate=
+ Object Code derived from Program Components of Simulink Real-Time which ar=
+e required for the Application and that have been compiled or otherwise obt=
+ained from Simulink Coder on a single development PC, download that Applica=
+tion to a target PC, and distribute that Application beyond the target PC.
+
+No further fees shall be due to MathWorks for such distribution of Licensee=
+'s Application, regardless of whether the Application is distributed solely=
+ for Licensee's Internal Operations or to Third Parties. Additionally, the =
+Simulink Real-Time Program allows for the distribution beyond the developme=
+nt PC of API DLLs as part of the Application and other Applications exporte=
+d from Simulink Real-Time Explorer. No further fees shall be due to MathWor=
+ks for such distribution, regardless of whether the API DLLs are distribute=
+d solely for Licensee's Internal Operations or to Third Parties.
+6. OTHER SOURCE CODE AND SHARED OBJECT CODE LIBRARIES.
+
+6.1. Programs may include selected Source Code and shared Object Code libra=
+ry files that implement various documented application programming interfac=
+e capabilities of the Programs for which the Source Code or shared library =
+file is part.
+
+6.1.1. Licensed User may use and modify the selected Source Code files sole=
+ly for creation of Licensee's own Applications. Licensee may copy and distr=
+ibute Object Code compiled from this Source Code, but only as either standa=
+lone Object Code file (regardless whether a Derivative Form) or Object Code=
+ Linked to the Application, and only for use with and deployment of License=
+e's own Application.
+
+6.1.2. Licensee may use, copy and distribute shared Object Code library fil=
+es (regardless whether a Derivative Form) for deployment of Licensee's own =
+Application, but only if a header file exists in the Program for the shared=
+ library file. Licensee may not copy or distribute header files themselves.
+
+6.1.3. Licensee may not transfer Source Code, development rights, or develo=
+pment capabilities for any Source Code or Object Code to any Third Party.
+
+6.2. MAT-files. Licensed User may create and distribute Applications that r=
+ead MAT-files using the MAT-file API, however, if such Applications are dis=
+tributed to Third Parties, they must also implement MAT-file write capabili=
+ty.
+
+7. DERIVATIVE FORMS. A Licensee shall only be permitted to distribute a Der=
+ivative Form to Third Parties (a) to the extent expressly permitted under A=
+rticles 5 or 6 of this Addendum, or (b) subject to the requirements of this=
+ Article 7. A Licensee may only distribute a Derivative Form to a Third Par=
+ty under this Article 7 if such Third Party is bound by a Software License =
+Agreement with MathWorks that requires such Third Party to treat such Deriv=
+ative Forms received from Licensee as such Third Party's own Derivative For=
+m thereunder. Licensee agrees that if such a Third Party provides Licensee =
+with software that is a Derivative Form under the terms of such Third Party=
+'s Software License Agreement with MathWorks (or would otherwise be a Deriv=
+ative Form under the terms of this Agreement), then Licensee shall treat su=
+ch software as a Derivative Form hereunder as if Licensee has modified or g=
+enerated the software itself.
+
+8. WEB APPLICATIONS. Programs licensed under the Network Concurrent User, t=
+he Network Named User, and the Standalone Named User Activation Types may b=
+e called by means of a web interface in accordance with the following condi=
+tions. Programs licensed under any other Activation Type may not be called =
+via a web interface.
+
+For the Network Concurrent User Activation Type. Programs licensed under th=
+e Network Concurrent User Activation Type may be called via a web applicati=
+on, provided the web application does not provide access to the MATLAB comm=
+and line, or any of the licensed Programs with code generation capabilities=
+. In addition, Licensed Users may not provide access to an entire Program o=
+r a substantial portion of a Program, nor may such application enable evalu=
+ation of end-user code or expressions. Such operation of an application via=
+ a web interface may be provided to an unlimited number of web browser clie=
+nts, at no additional cost, for Licensee's own use for its Internal Operati=
+ons, and for use by Third Parties.
+For the Network Named User and Standalone Named User Activation Types. Prog=
+rams licensed under the Network Named User and Standalone Named User Activa=
+tion Types may be called via a web application, provided the web applicatio=
+n does not provide access to the MATLAB command line, or any of the license=
+d Programs with code generation capabilities, and such application is only =
+accessed by designated Network Named User or Standalone Named User licensee=
+s of such Programs. In addition, Licensed Users may not provide access to a=
+n entire Program or a substantial portion of a Program, nor may such applic=
+ation enable evaluation of end-user code or expression.
+
+9. APPLICATION LICENSING. For any distribution of Applications containing O=
+bject Code or Generated Forms to:
+
+9.1. Licensee's internal organization: Licensee shall take appropriate acti=
+on by instruction, agreement, or otherwise with any recipients of the Appli=
+cation, so as to enable Licensee to satisfy its obligations under the terms=
+ of this Addendum and the Agreement.
+
+9.2. Third Parties: Your Application shall require acceptance of an Applica=
+tion License whose terms and conditions are at least as restrictive as the =
+Agreement, unless the Application is part of an embedded system that has no=
+ provision for licensing to its end users.
+
+9.2.1. The Application license for Third Parties must explicitly exclude Ma=
+thWorks and its Licensors from all liability for damages or any obligation =
+to provide remedial actions. In no circumstance shall Licensee include a wa=
+rranty for any form of a Program that is inconsistent with or additional to=
+ the warranty contained in the Agreement.
+
+9.2.2. The additional translation, use, and deployment rights granted in th=
+is Addendum are nontransferable without MathWorks' consent and shall not be=
+ conveyed in Licensee's Application license.
+
+9.2.3. All copyright and proprietary notices for the Programs that appear i=
+n the original form delivered to Licensee shall be duplicated and included =
+with Licensee's own copyright notices for the Application, wherever they ap=
+pear.
+
+9.2.4. Licensee may not remove any copyright, trademark, logo, proprietary =
+rights, disclaimer or warning notice included on or embedded in any part of=
+ the deployed Application.
+
+9.2.5. If Licensee's Application is generated with the MATLAB Compiler, the=
+n Licensee's Application License shall include or incorporate by reference =
+the terms of the MATLAB Runtime License included in a text file at [MCR Ins=
+tall Directory]\[version_number]\MCR_license.txt located within the install=
+ation for the MATLAB Runtime.
+
+9.3. Notwithstanding the termination of the Agreement, all valid Applicatio=
+n licenses shall remain and continue in full force and effect, and, if the =
+Agreement was not terminated due to: (a) Licensee's failure to pay the appl=
+icable fees to MathWorks, (b) Licensee's violation of the License restricti=
+ons, or (c) violation of MathWorks' proprietary rights in the Programs; the=
+n Licensee may continue to use the Programs to support Applications that ha=
+ve been placed in use pursuant to an Application License prior to the effec=
+tive date of termination.
+
+10. DISCLAIMER OF OBLIGATIONS AND LIABILITY.
+
+10.1. MathWorks shall have no support or warranty obligations, and disclaim=
+s all liability, for Applications developed or distributed by Licensee.
+
+10.2. Licensee agrees that prior to using, incorporating, or distributing t=
+he Programs in any Application, it will thoroughly test and validate the Ap=
+plication and the functionality of the Programs in that Application and be =
+solely responsible for any problems or failures.
+
+10.3. Licensee will defend, indemnify, and hold harmless MathWorks and its =
+Licensors, officers, directors, employees, agents and resellers from and ag=
+ainst any damages, liabilities, costs and expenses (including reasonable fe=
+es of MathWorks' attorneys) arising out of any Third Party claim or demand =
+based on or arising from, out of or in connection with (i) the creation, us=
+e, or distribution of any Applications by Licensee or any of its Affiliates=
+ or (ii) the use of the Programs by Licensee or any of its Affiliates.
+
+11. GENERAL. Licensee acknowledges and agrees that a breach of the obligati=
+ons set forth in this Addendum shall be a material breach of the Agreement.
+
+
+09/2015
+
+PN 20362
+
+
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

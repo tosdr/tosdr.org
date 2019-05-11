@@ -1,0 +1,332 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBENLX2GAKGQEUIEKLFI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 34F77161735
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:13:58 +0200 (CEST)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 304C7142070
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:13:58 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yJ9dAsuQMye0 for <anything@michielbdejong.com>;
+	Sun, 12 May 2013 15:13:56 +0200 (CEST)
+Received: from mail-pd0-f189.google.com (mail-pd0-f189.google.com [209.85.192.189])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C0841142090
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:13:55 +0200 (CEST)
+Received: by mail-pd0-f189.google.com with SMTP id x10sf1473259pdj.6
+        for <anything@michielbdejong.com>; Sun, 12 May 2013 06:13:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=nlcx1vmeTq1YZJr96EhLu2yfttkfo8OQAssQBUosHS8=;
+        b=sHg8nfD6OjLFvS6meHOgdeczb90PPSxIxGWnsIpX3hHvWC4GwJL0sQbu6FaR+/G9aG
+         x303rPxYcuIM8XwkgUEi3FknrK+oPkDxx5FDaZD0hPH7nQCOzCRlP8ksNR+dwlcoEie2
+         0H3IISEQuQStfdGuKBuHJUsXiALYBZqWQ/v8pj1UEx2/uRwpejYc9O7mZqDw7+PL33Rt
+         MmIt8TH1B0gDgt29SyZG9wI2vSMAPeBk9vKf7odpiE+01u6fRbk5eTjppbWXOYABj3vk
+         /HVbMJB110LZVC+n56mZ1XlbuMRbT9JUkbP0NmHgtSZXnI3QjtTcrBhz/1jVng12aUsz
+         B65A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=nlcx1vmeTq1YZJr96EhLu2yfttkfo8OQAssQBUosHS8=;
+        b=XOco33GfuDm2CS3OeQ0DDBrWzux3yR66lYt+08eMkZSCPm5Z+7+OndmjJZmG7SGbGW
+         XI2h1gUrrEx9UraVcxWHx/kP9PmdoXcq+jTgZfJi+ad1RitqpQrPxwbf7tA1LfaAw5/u
+         Jv76xW55QAspWaeM1trc2E59LvjcgBeQUgnQvUyuMpo/3JMNTHy+cQL72eWb+992cBbz
+         PUd0iW9G6f4GZ/Zpg9EQfS966PZl4vic/f92qP6nbwLQbxNqcCHKr8pS5kyQI4ODlJGy
+         o2tmDl5Qty02mrpkloCZJRb4xo+sbtd7Pyfe2WBBAP4UNhvFx2eYznLeLHbAIkIsRCzI
+         SH7w==
+X-Received: by 10.49.24.145 with SMTP id u17mr371335qef.21.1368364433658;
+        Sun, 12 May 2013 06:13:53 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.105.7 with SMTP id gi7ls147624qeb.56.gmail; Sun, 12 May
+ 2013 06:13:53 -0700 (PDT)
+X-Received: by 10.49.86.98 with SMTP id o2mr1778854qez.4.1368364433122;
+        Sun, 12 May 2013 06:13:53 -0700 (PDT)
+Date: Sun, 12 May 2013 06:13:52 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Cc: mcharlesr@gmail.com
+Message-Id: <bd96b164-227b-4561-a10e-83864b98ddb3@googlegroups.com>
+In-Reply-To: <0aeab8d6-bc1a-4779-bcf2-5fd113a3fb19@googlegroups.com>
+References: <1349291817.21837.5.camel@synclavier.lan>
+ <9bff6d99-9498-4113-95d7-e8bbca2a7185@googlegroups.com>
+ <7ddc2f7b-20ff-4483-93a6-37a49d8abcbe@googlegroups.com>
+ <0aeab8d6-bc1a-4779-bcf2-5fd113a3fb19@googlegroups.com>
+Subject: [tosdr:2083] Re: Terms may be changed any time at their discretion,
+ without notice to the user
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1067_14529152.1368364432636"
+
+------=_Part_1067_14529152.1368364432636
+Content-Type: text/plain; charset=ISO-8859-1
+
+MicrosoftStore.com as well:
+
+Microsoft may change the Terms of Use and Sale at any time and without 
+> notice to you. The Terms of Use and Sale in force at the time you place 
+> your order will govern your purchase and serve as the purchase contract 
+> between us. Before your next purchase, Microsoft may have updated the Terms 
+> of Use and Sale without notice to you. Please be sure to review the current Terms 
+> of Use and Sale<http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/> each 
+> time you visit the Microsoft Store. We recommend that you save or print a 
+> copy of the Terms of Use and Sale for future reference when you make a 
+> purchase.
+
+http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/
+ 
+
+On Friday, May 10, 2013 5:45:51 PM UTC-3, Robin Monks wrote:
+>
+> Windows.com
+>>
+>> The services that Microsoft provides to you are subject to the following 
+>> Terms of Use ("TOU"). Microsoft reserves the right to update the TOU at any 
+>> time without notice to you. The most current version of the TOU can be 
+>> reviewed by clicking on the "Terms of Use" hypertext link located at the 
+>> bottom of our Web pages.
+>>
+>>  
+>>
+>> From <
+>> http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx
+>> > 
+>>
+>
+>
+> Also outlook.com skydrive.com, live.com, account.live.com, 
+> profile.microsoft.com, msn.com, bing.com, office.com, Windows Photo 
+> Gallery, Windows Movie Maker, Microsoft Mail, Windows Live Writer and 
+> "other Microsoft Services" that link to these terms.
+>
+>> 1.4. Can Microsoft change these terms after I have accepted them? Yes. 
+>> From time to time, Microsoft may change or amend these terms. If we do, 
+>> we will notify you, either through the user interface, in an email 
+>> notification, or through other reasonable means. Your use of the services 
+>> after the date the change becomes effective will be your consent to the 
+>> changed terms. If you do not agree to the changes, you must stop using the 
+>> services and cancel any paid services by following the instructions in 
+>> section 9.10. Otherwise, the new terms will apply to you.
+>>
+>>  
+>>
+>> From <
+>> http://windows.microsoft.com/en-us/windows-live/microsoft-services-agreement
+>> > 
+>>
+>
+> On Friday, May 10, 2013 2:37:42 PM UTC-3, Robin Monks wrote:
+>>
+>> Microsoft.com as well:
+>>
+>> The services that Microsoft provides to you are subject to the following 
+>> Terms of Use ("TOU"). Microsoft reserves the right to update the TOU at any 
+>> time without notice to you. The most current version of the TOU can be 
+>> reviewed by clicking on the "Terms of Use" hypertext link located at the 
+>> bottom of our Web pages.
+>>
+>>  
+>>
+>> From <
+>> http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx
+>> > 
+>>
+>> On Thursday, January 24, 2013 2:22:12 PM UTC-4, mcha...@gmail.com wrote:
+>>>
+>>> On Wednesday, October 3, 2012 3:17:07 PM UTC-4, Hugo Roy wrote:
+>>> > This is a unified point for common terms about how services apply
+>>> > changes to their terms.
+>>> > 
+>>> > 
+>>> > 
+>>> >         They can change the terms of service any time they see fit, 
+>>> even
+>>> >         without notification to the user. Your use of the service
+>>> >         supposedly constitutes acceptance of the changes in the terms.
+>>>
+>>> netflix may have recently changed this.
+>>> I got a request on my wii last night to accept some terms of service.
+>>> Very hard to read, research/etc. on my wii, and netflix offered to email 
+>>> me the link.  It was just:  
+>>>    http://www.netflix.com/TermsOfUse
+>>> plus some query parameters, and I'm not sure what they did.
+>>> The date on that ToS is Sept. 2012, so I'm guessing that they didn't 
+>>> change.
+>>>
+>>>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1067_14529152.1368364432636
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+MicrosoftStore.com as well:<div><br></div><div><blockquote class=3D"gmail_q=
+uote" style=3D"margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-le=
+ft-color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;"=
+><span style=3D"color: rgb(0, 0, 0); font-family: 'Segoe UI', Segoe, Arial,=
+ sans-serif; font-size: 12px; line-height: 17px;">Microsoft may change the =
+Terms of Use and Sale at any time and without notice to you. The Terms of U=
+se and Sale in force at the time you place your order will govern your purc=
+hase and serve as the purchase contract between us. Before your next purcha=
+se, Microsoft may have updated the Terms of Use and Sale without notice to =
+you. Please be sure to review the current&nbsp;</span><a href=3D"http://www=
+.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.2=
+7659600/" title=3D"Terms of Use and Sale" target=3D"_blank" style=3D"font-s=
+ize: 12px; color: rgb(210, 72, 14); font-family: 'Segoe UI', Segoe, Arial, =
+sans-serif; line-height: 17px;">Terms of Use and Sale</a><span style=3D"col=
+or: rgb(0, 0, 0); font-family: 'Segoe UI', Segoe, Arial, sans-serif; font-s=
+ize: 12px; line-height: 17px;">&nbsp;each time you visit the Microsoft Stor=
+e. We recommend that you save or print a copy of the Terms of Use and Sale =
+for future reference when you make a purchase.</span></blockquote><div><a h=
+ref=3D"http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndS=
+alePage/ThemeID.27659600/">http://www.microsoftstore.com/store/msca/en_CA/D=
+isplayTermsOfUseAndSalePage/ThemeID.27659600/</a>&nbsp;</div><br>On Friday,=
+ May 10, 2013 5:45:51 PM UTC-3, Robin Monks wrote:<blockquote class=3D"gmai=
+l_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;=
+padding-left: 1ex;">Windows.com<blockquote class=3D"gmail_quote" style=3D"m=
+argin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204=
+,204);border-left-style:solid;padding-left:1ex"><p style=3D"margin:0in;font=
+-size:11pt;line-height:normal;font-family:Calibri">The services that Micros=
+oft provides to you are subject to the following Terms of Use ("TOU"). Micr=
+osoft reserves the right to update the TOU at any time without notice to yo=
+u. The most current version of the TOU can be reviewed by clicking on the "=
+Terms of Use" hypertext link located at the bottom of our Web pages.</p><p =
+lang=3D"en-CA" style=3D"margin:0in;font-size:11pt;line-height:normal;font-f=
+amily:Calibri">&nbsp;</p><p style=3D"margin:0in;font-size:9pt;line-height:n=
+ormal;font-family:Calibri;color:rgb(89,89,89)">From &lt;<a href=3D"http://w=
+ww.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx" t=
+arget=3D"_blank">http://www.microsoft.com/en-<wbr>us/legal/intellectualprop=
+erty/<wbr>copyright/default.aspx</a>&gt;&nbsp;</p></blockquote><div><br></d=
+iv><div><br></div><div><span style=3D"background-repeat:initial initial" la=
+ng=3D"en-US">Also <a href=3D"http://outlook.com" target=3D"_blank">outlook.=
+com</a> <a href=3D"http://skydrive.com" target=3D"_blank">skydrive.com</a>,
+<a href=3D"http://live.com" target=3D"_blank">live.com</a>, <a href=3D"http=
+://account.live.com" target=3D"_blank">account.live.com</a></span><span sty=
+le=3D"background-repeat:initial initial" lang=3D"en-CA">,
+<a href=3D"http://profile.microsoft.com" target=3D"_blank">profile.microsof=
+t.com</a>, <a href=3D"http://msn.com" target=3D"_blank">msn.com</a>, <a hre=
+f=3D"http://bing.com" target=3D"_blank">bing.com</a>, <a href=3D"http://off=
+ice.com" target=3D"_blank">office.com</a>, Windows Photo Gallery,
+Windows Movie Maker, Microsoft Mail, Windows Live Writer and "other
+Microsoft Services" that link to these terms.</span><br></div><div><blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-wid=
+th:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-l=
+eft:1ex"><p style=3D"margin:0in"><span style=3D"font-weight:bold;font-famil=
+y:'Segoe UI';font-size:9.75pt;color:rgb(69,69,69);background-repeat:initial=
+ initial" lang=3D"en-US">1.4. Can</span><span style=3D"font-weight:bold;fon=
+t-family:'Segoe UI';font-size:9.75pt;color:rgb(69,69,69);background-repeat:=
+initial initial" lang=3D"en-CA">&nbsp;Microsoft&nbsp;</span><span style=3D"=
+font-weight:bold;font-family:'Segoe UI';font-size:9.75pt;color:rgb(69,69,69=
+);background-repeat:initial initial" lang=3D"en-US">change these terms afte=
+r I have accepted them?</span><span style=3D"font-family:Calibri;font-size:=
+11.0pt" lang=3D"en-CA">&nbsp;Yes. From time to
+time,&nbsp;</span><span style=3D"font-family:'Segoe UI';font-size:9.75pt;co=
+lor:rgb(69,69,69);background-repeat:initial initial" lang=3D"en-CA">Microso=
+ft</span><span style=3D"font-family:Calibri;font-size:11.0pt" lang=3D"en-CA=
+">&nbsp;may change or
+amend these terms. If we do, we will notify you, either through the user
+interface, in an email notification, or through other reasonable means. You=
+r
+use of the services after the date the change becomes effective will be you=
+r
+consent to the changed terms. If you do not agree to the changes, you must =
+stop
+using the services and cancel any paid services by following the instructio=
+ns
+in section 9.10. Otherwise, the new terms will apply to you.</span></p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://windows.microsoft.com/en-us/windows-live/microsoft-se=
+rvices-agreement" target=3D"_blank">http://windows.microsoft.com/<wbr>en-us=
+/windows-live/microsoft-<wbr>services-agreement</a>&gt;&nbsp;</p></blockquo=
+te><br>On Friday, May 10, 2013 2:37:42 PM UTC-3, Robin Monks wrote:<blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1=
+px #ccc solid;padding-left:1ex">Microsoft.com as well:<div><br></div><div><=
+p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt">The services th=
+at
+Microsoft provides to you are subject to the following Terms of Use
+("TOU"). Microsoft reserves the right to update the TOU at any time
+without notice to you. The most current version of the TOU can be reviewed =
+by
+clicking on the "Terms of Use" hypertext link located at the bottom
+of our Web pages.</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoft.com/en-us/legal/intellectualproperty/co=
+pyright/default.aspx" target=3D"_blank">http://www.microsoft.com/en-<wbr>us=
+/legal/intellectualproperty/<wbr>copyright/default.aspx</a>&gt;&nbsp;</p><b=
+r>On Thursday, January 24, 2013 2:22:12 PM UTC-4, <a>mcha...@gmail.com</a> =
+wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex=
+;border-left:1px #ccc solid;padding-left:1ex">On Wednesday, October 3, 2012=
+ 3:17:07 PM UTC-4, Hugo Roy wrote:<br>&gt; This is a unified point for comm=
+on terms about how services apply<br>&gt; changes to their terms.<br>&gt; <=
+br>&gt; <br>&gt; <br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; They can change the t=
+erms of service any time they see fit, even<br>&gt; &nbsp; &nbsp; &nbsp; &n=
+bsp; without notification to the user. Your use of the service<br>&gt; &nbs=
+p; &nbsp; &nbsp; &nbsp; supposedly constitutes acceptance of the changes in=
+ the terms.<p>netflix may have recently changed this.<br>I got a request on=
+ my wii last night to accept some terms of service.<br>Very hard to read, r=
+esearch/etc. on my wii, and netflix offered to email me the link. &nbsp;It =
+was just: &nbsp;<br>&nbsp; &nbsp;<a href=3D"http://www.netflix.com/TermsOfU=
+se" target=3D"_blank">http://www.netflix.com/<wbr>TermsOfUse</a><br>plus so=
+me query parameters, and I'm not sure what they did.<br>The date on that To=
+S is Sept. 2012, so I'm guessing that they didn't change.</p><p></p><p></p>=
+</blockquote></div></blockquote></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1067_14529152.1368364432636--

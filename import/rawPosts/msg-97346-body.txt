@@ -1,0 +1,141 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp68254qek;
+        Fri, 28 Sep 2012 07:57:41 -0700 (PDT)
+Received: by 10.68.232.163 with SMTP id tp3mr21025472pbc.44.1348844261095;
+        Fri, 28 Sep 2012 07:57:41 -0700 (PDT)
+Return-Path: <tosdr+bncBCVILA45QIKBBZHVS2BQKGQEJNXU4BI@googlegroups.com>
+Received: from mail-pa0-f64.google.com (mail-pa0-f64.google.com [209.85.220.64])
+        by mx.google.com with ESMTPS id f9si3024409paz.177.2012.09.28.07.57.40
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 28 Sep 2012 07:57:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBCVILA45QIKBBZHVS2BQKGQEJNXU4BI@googlegroups.com designates 209.85.220.64 as permitted sender) client-ip=209.85.220.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBCVILA45QIKBBZHVS2BQKGQEJNXU4BI@googlegroups.com designates 209.85.220.64 as permitted sender) smtp.mail=tosdr+bncBCVILA45QIKBBZHVS2BQKGQEJNXU4BI@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by padhz11 with SMTP id hz11sf1641471pad.29
+        for <michiel@unhosted.org>; Fri, 28 Sep 2012 07:57:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=sPqUgY93FImvEJjeCioPyBRs9FBthi+H66CLGikKhUo=;
+        b=xU6KPCE+ggVmD0QNNPQ/emfg0u+v1VPKX1X+8xmKgxij41SWiVapvTzwFBYO/aMLSX
+         ed2wdH5VZ+TvwypRHHiO6CfQLVZHJBSCidpNnbStfH/xd++ws+yUYWG70bxL+8MSBqAk
+         BtWT4RppA0BwsMmsGtsYwT96FSMN+3MuQBkYJDGlblEXOcJpfVXY2RVEexfNb1fPt71j
+         kEOp3d6iHt8dtMJDocLod429BmQsvq5F9utjwMzQwUiPk4dYRGvjAn7rK0SoR/HEKLpQ
+         Z/iRUVgFWfdmrY1bOMLvOWIQwINcXcnMZjpdPmvgQG/892JAslz/dIc7meSHxB53Hzrl
+         dqNQ==
+Received: by 10.52.93.229 with SMTP id cx5mr1489803vdb.19.1348844260306;
+        Fri, 28 Sep 2012 07:57:40 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.52.92.207 with SMTP id co15ls3308489vdb.5.gmail; Fri, 28 Sep
+ 2012 07:57:39 -0700 (PDT)
+Received: by 10.58.229.73 with SMTP id so9mr2503151vec.9.1348844259863;
+        Fri, 28 Sep 2012 07:57:39 -0700 (PDT)
+Received: by 10.58.229.73 with SMTP id so9mr2503149vec.9.1348844259852;
+        Fri, 28 Sep 2012 07:57:39 -0700 (PDT)
+Received: from mail-vc0-f180.google.com (mail-vc0-f180.google.com [209.85.220.180])
+        by gmr-mx.google.com with ESMTPS id bn19si520471vdb.0.2012.09.28.07.57.39
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 28 Sep 2012 07:57:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of marcus.ps@gmail.com designates 209.85.220.180 as permitted sender) client-ip=209.85.220.180;
+Received: by mail-vc0-f180.google.com with SMTP id fl13so3107169vcb.11
+        for <tosdr@googlegroups.com>; Fri, 28 Sep 2012 07:57:39 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.52.27.82 with SMTP id r18mr3373300vdg.120.1348844259541; Fri,
+ 28 Sep 2012 07:57:39 -0700 (PDT)
+Received: by 10.220.69.200 with HTTP; Fri, 28 Sep 2012 07:57:39 -0700 (PDT)
+In-Reply-To: <CA+aD3u1wi5ggg-q1wE+FsWRYf3i6PU=ZVWsdPX8hsQOXugAPWA@mail.gmail.com>
+References: <eb30f9c4-a4b7-4375-8235-b4d713478fae@googlegroups.com>
+	<CA+aD3u1wi5ggg-q1wE+FsWRYf3i6PU=ZVWsdPX8hsQOXugAPWA@mail.gmail.com>
+Date: Fri, 28 Sep 2012 10:57:39 -0400
+Message-ID: <CANsqPL32Ni4xFAvfVoPdZzKse1esEVGQ-UxLogRLhnRGLeP5iw@mail.gmail.com>
+Subject: Re: [tosdr:914] Subtle issue with not being able to delete an account
+ in a service
+From: Marcus P S <marcus.ps@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: marcus.ps@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of marcus.ps@gmail.com designates 209.85.220.180 as permitted sender)
+ smtp.mail=marcus.ps@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+I will have to dig it up later today.
+
+Marcus
+
+On Fri, Sep 28, 2012 at 10:51 AM, Michiel de Jong <michiel@unhosted.org> wrote:
+> hi! yes, this is the correct way to bring it up. github issues are
+> only for bugs in the website's code, the content it displays is
+> entirely derived from the threads on this mailing list.
+>
+> in fact, if you click on any of the 'Expand' buttons, you will see
+> exactly to which mailing list thread each data point is traced back
+> (the 'discussion' links).
+>
+> i think in cases where an account is an identity, as is definitely the
+> case for an email provider like Hotmail, then it's good if there is a
+> grace period in which the identifier of a closed account remains
+> 'squatted', to prevent risk of identity theft.
+>
+> So i think it's good if a service would offer such a grace period, but
+> we would have to see which ones do and which ones don't, and whether
+> anything about this is said in the actual ToS you agree to, or whether
+> this is an 'additional' data point about how services behave in
+> practice, regardless of what the ToS agreement binds them to.
+>
+> Do you have a link to the news article you refer to?
+>
+> On Fri, Sep 28, 2012 at 4:27 PM,  <marcus.ps@gmail.com> wrote:
+>> I think that it may be important to look into the ability of deleting an account while ensuring that no one can claim ownership of the corresponding user id after the original owner has deleted his/her account.
+>>
+>> After seeing this as an issue with Hotmail (recent news, I believe), it may be important to look for any indications of this as a possibility in TOSs.
+>>
+>> Is it possible to file this as an "issue" on GitHub? It does not seem to be appropriate for the website repository, so I figured I'd bring it up here.
+>>
+>> Marcus
+>>
+>> --
+>> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+>> ---
+>> You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to tosdr@googlegroups.com.
+>> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+>> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+>> For more options, visit https://groups.google.com/groups/opt_out.
+>>
+>>
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+> ---
+> You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

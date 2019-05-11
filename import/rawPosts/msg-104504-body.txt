@@ -1,0 +1,281 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp150100vec;
+        Fri, 7 Dec 2012 04:56:46 -0800 (PST)
+Received: by 10.101.3.23 with SMTP id f23mr2049924ani.84.1354885006195;
+        Fri, 07 Dec 2012 04:56:46 -0800 (PST)
+Return-Path: <tosdr+bncBDV4LNESIYIIZT4HQYCRUBH2LM3QU@googlegroups.com>
+Received: from mail-gg0-f185.google.com (mail-gg0-f185.google.com [209.85.161.185])
+        by mx.google.com with ESMTPS id k8si11798823yhc.113.2012.12.07.04.56.45
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 04:56:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDV4LNESIYIIZT4HQYCRUBH2LM3QU@googlegroups.com designates 209.85.216.177 as permitted sender) client-ip=209.85.216.177;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDV4LNESIYIIZT4HQYCRUBH2LM3QU@googlegroups.com designates 209.85.216.177 as permitted sender) smtp.mail=tosdr+bncBDV4LNESIYIIZT4HQYCRUBH2LM3QU@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-gg0-f185.google.com with SMTP id q6sf246372ggc.22
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 04:56:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:subject:mime-version:from:x-mailer
+         :message-id:date:cc:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=UN2C7lYws2Eem8mw+YXqlECvPwC7uNjnOF8Zefxb09g=;
+        b=xa8fWxQef+zbUWoU/S+u3RP9dcQzUVCTiVqbulyFH3dqidW81aa8KrStQcnKLpDOe1
+         IL+xkPhDqAGUlmtSHWcMTfCtbJd4p432okIqyBW+ccetwqd3Mk4Hk/sz8Y5Mo2PM5yEc
+         MUmGUxBkAAW6V7aQjmQSVHs/izKlJbTjAE6kmbURhdaKz2CkQKjxpqpX1gyEYLp7raxY
+         DB0Y1t+m7yCGCoWspkbc0fa7/gyh49mwJkcPtDgfgK1zsQ6B/jsH/btVa8DAh3ZQYJhV
+         6Km+SUmNE85ewe2L5d3cB6/RgJLDMszzs1cieNEOZNFS35MCyTGdOM1fSw+m1oCUXT3j
+         KzmA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:received-spf:subject:mime-version:from:x-mailer
+         :message-id:date:cc:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=UN2C7lYws2Eem8mw+YXqlECvPwC7uNjnOF8Zefxb09g=;
+        b=nNg3An7sHi7AslpVgR1K2/wBgW4by1aWpTOnrvBRnpnGlAhv5QDrBEDWGCnelIoPwF
+         U3MXkuBwn0anANonF6qFhTt9cxPFwgmN7gsECDpwoZfXQou7WrB8Kogcen4kPZuKxwFG
+         ckhzp8JeidzFCJkkq0+fQaNvTPMDWX2iHdju1KPY9gDutgDEIyWDJQZFvuA3yKo6oJvx
+         PyivAdGSScVwGatLzGfmT9JT8Zs74RkOAoVqBeZIhcPJkEHeNgmga5o52QmdyVtR+YjB
+         NfBn6/IQOYT1PHcxXp1O52cJXZWQaev2g/rsqHXdHrRNnyfu6r8WiVMzl9XrUcclN1Uk
+         OhaQ==
+Received: by 10.49.128.233 with SMTP id nr9mr987423qeb.27.1354885005447;
+        Fri, 07 Dec 2012 04:56:45 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.116.139 with SMTP id jw11ls2206514qeb.37.gmail; Fri, 07 Dec
+ 2012 04:56:44 -0800 (PST)
+Received: by 10.224.189.16 with SMTP id dc16mr4126815qab.0.1354885004337;
+        Fri, 07 Dec 2012 04:56:44 -0800 (PST)
+Received: by 10.224.189.16 with SMTP id dc16mr4126813qab.0.1354885004302;
+        Fri, 07 Dec 2012 04:56:44 -0800 (PST)
+Received: from mail-qc0-f177.google.com (mail-qc0-f177.google.com [209.85.216.177])
+        by gmr-mx.google.com with ESMTPS id eb7si2491243qcb.3.2012.12.07.04.56.44
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 04:56:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of brian.erdelyi@gmail.com designates 209.85.216.177 as permitted sender) client-ip=209.85.216.177;
+Received: by mail-qc0-f177.google.com with SMTP id u28so238788qcs.8
+        for <tosdr@googlegroups.com>; Fri, 07 Dec 2012 04:56:44 -0800 (PST)
+Received: by 10.224.31.20 with SMTP id w20mr9187318qac.3.1354885003939;
+        Fri, 07 Dec 2012 04:56:43 -0800 (PST)
+Received: from [10.25.0.30] ([199.172.216.67])
+        by mx.google.com with ESMTPS id cu14sm7562702qab.1.2012.12.07.04.56.41
+        (version=SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 04:56:43 -0800 (PST)
+Subject: Re: [tosdr:1242] Are ToS;DR reviews and ratings stored in a database?
+Mime-Version: 1.0 (1.0)
+From: Brian Erdelyi <brian.erdelyi@gmail.com>
+X-Mailer: iPhone Mail (10A403)
+Message-Id: <5D42658D-9A14-4ADC-9D0C-64DCD2B5B27E@gmail.com>
+Date: Fri, 7 Dec 2012 08:53:46 -0400
+Cc: "tosdr@googlegroups.com" <tosdr@googlegroups.com>
+To: Robin Monks <robin@robinmonks.com>
+X-Original-Sender: brian.erdelyi@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of brian.erdelyi@gmail.com designates 209.85.216.177 as permitted
+ sender) smtp.mail=brian.erdelyi@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative;
+	boundary=Apple-Mail-8E661A03-F41D-474D-BEA8-202D46ABE742
+Content-Transfer-Encoding: 7bit
+
+--Apple-Mail-8E661A03-F41D-474D-BEA8-202D46ABE742
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Is that where reviews are now or is each review manually posted?
+
+Sent from my iPhone
+
+On Dec 7, 2012, at 8:10 AM, Robin Monks <robin@robinmonks.com> wrote:
+
+> Tos;DR would fit nicely into a CouchDB database... Cloudant++
+>=20
+> /Robin
+>=20
+>=20
+> On Fri, Dec 7, 2012 at 7:59 AM, Brian Erdelyi <brian.erdelyi@gmail.com> w=
+rote:
+>> Good Morning,
+>>=20
+>> Are ToS;DR reviews and ratings stored in a DB?  If so, is it possible to=
+ get these in a spreadsheet?
+>>=20
+>> Looking at the ratings this DB schema would look something like:
+>>=20
+>> Service Name | Service URL | Term | Term rating
+>>=20
+>> A second table could be used to store the ToS;DR Class.
+>>=20
+>> If this doesn't exist, I'll just copy/paste into a spreadsheet so I can =
+review the terms and see what can be done to normalize those terms.  I'd al=
+so like to consider using this with a web based form to gather results.
+>>=20
+>> Brian Erdelyi
+>> www.clearware.org
+>>=20
+>> --=20
+>> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+>> ---=20
+>> You received this message because you are subscribed to the Google Group=
+s "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to tosdr@googlegroups.com.
+>> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegr=
+oups.com.
+>> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+>> For more options, visit https://groups.google.com/groups/opt_out.
+>=20
+>=20
+>=20
+> --=20
+> R=E2=99=82bin Monks
+> President, Podhurl Inc.
+> Drupal Association Individual Member
+> 603.236.7357
+>=20
+> Live in such a way that those who know you but don't know God, will come =
+to know God because they know you.
+>=20
+> --=20
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--Apple-Mail-8E661A03-F41D-474D-BEA8-202D46ABE742
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=
+=3Dutf-8"></head><body dir=3D"auto"><div>Is that where reviews are now or i=
+s each review manually posted?<br><br>Sent from my iPhone</div><div><br>On =
+Dec 7, 2012, at 8:10 AM, Robin Monks &lt;<a href=3D"mailto:robin@robinmonks=
+.com">robin@robinmonks.com</a>&gt; wrote:<br><br></div><blockquote type=3D"=
+cite"><div>Tos;DR would fit nicely into a CouchDB database... Cloudant++<di=
+v><br></div><div>/Robin</div><div class=3D"gmail_extra"><br><br><div class=
+=3D"gmail_quote">On Fri, Dec 7, 2012 at 7:59 AM, Brian Erdelyi <span dir=3D=
+"ltr">&lt;<a href=3D"mailto:brian.erdelyi@gmail.com" target=3D"_blank">bria=
+n.erdelyi@gmail.com</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Good Morning,<div><br></div><div>Are ToS;DR =
+reviews and ratings stored in a DB? &nbsp;If so, is it possible to get thes=
+e in a spreadsheet?</div>
+<div><br></div><div>Looking at the ratings this DB schema would look someth=
+ing like:</div><div><br></div><div>Service Name | Service URL | Term | Term=
+ rating</div><div><br></div><div>A second table could be used to store the =
+ToS;DR Class.</div>
+<div><br></div><div>If this doesn't exist, I'll just copy/paste into a spre=
+adsheet so I can review the terms and see what can be done to normalize tho=
+se terms. &nbsp;I'd also like to consider using this with a web based form =
+to gather results.</div>
+<span class=3D"HOEnZb"><font color=3D"#888888"><div><br></div><div>Brian Er=
+delyi</div><div><a href=3D"http://www.clearware.org" target=3D"_blank">www.=
+clearware.org</a></div><div><br></div>
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om" target=3D"_blank">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com" target=3D"_blank">tosdr+unsubscribe@googlegroups=
+.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
+r><div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com" tar=
+get=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:ce=
+nter">President, <a href=3D"http://podhurl.us" target=3D"_blank">Podhurl In=
+c.</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er">603.236.7357</div><div><span style=3D"font-size:x-small"></span><br><di=
+v style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don't know God, will come to know God because they know you.</span></=
+div></div></div><br>
+</div>
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info">www.tos-dr.info</a> // <a href=3D"http:/=
+/www.twitter.com/tosdr">www.twitter.com/tosdr</a> // <a href=3D"http://www.=
+github.com/didnotread">www.github.com/didnotread</a><br>
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr+unsub=
+scribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</div></blockquote></body></html>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--Apple-Mail-8E661A03-F41D-474D-BEA8-202D46ABE742--

@@ -1,0 +1,112 @@
+Return-Path: <tosdr+bncBCD2HQ7SWEMBBUWJTWQQKGQEGMSEKOY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 6454E40910
+	for <anything@michielbdejong.com>; Sun, 28 Sep 2014 03:31:05 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 622AF11601D
+	for <anything@michielbdejong.com>; Sun, 28 Sep 2014 03:31:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Sbw5ocOaZdT4 for <anything@michielbdejong.com>;
+	Sun, 28 Sep 2014 03:31:04 +0200 (CEST)
+Received: from mail-yk0-x23e.google.com (mail-yk0-x23e.google.com [IPv6:2607:f8b0:4002:c07::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C67A2116025
+	for <michiel@michielbdejong.com>; Sun, 28 Sep 2014 03:31:00 +0200 (CEST)
+Received: by mail-yk0-f190.google.com with SMTP id 142sf2000898ykq.7
+        for <michiel@michielbdejong.com>; Sat, 27 Sep 2014 18:30:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=Tenfq3hR3590zN2HkFf32iF2Imdw4mGX28POvfQQTKE=;
+        b=iiBSARW79K4jIDEGursHkYZM2k8NNX81vyGB42wjbxQtMZ2Q88sto6pDmevM9+7QPG
+         w+PraqxPSts2GyZ+UukKhcuuGMGck7IhKcgKLtjiSsKtyMfW4BUvyade8t+OKMBbHa15
+         D6/cHQ9NEL0m19ffVbD+8hsCnbdlXLDQRE7oZdR4CDMbmWJ5QW/K5zWidA5od9oPoW9E
+         DADHsE8iIgLK/uSPsXQP2O4ReyhsRnwK07J7FQlIHsaj+HwgQ28Oft75jnoYg10toNdV
+         txzQFkvz+0eyC7EcJwuUpZRhNlLRP326USIqCz4UvPMSm7q9y8hJq/D6kEv54HSdz/L9
+         2gEg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=Tenfq3hR3590zN2HkFf32iF2Imdw4mGX28POvfQQTKE=;
+        b=uJVBe9D2WzEDEWdwi7fdBzkZn9Y4EVIV5VdxgvgrJY6D5w08A7ypwMDM6KurRk4usF
+         J/c9+wXBS+n8eqB+r4M/jPKVENqI8+ayWaeilT75aH47spdVM6bBGyz34tc4GAWm6hUc
+         yUXnwRm7K3lyYXo+ndJMWzvCWZRVp7qqkUiJ6owV2vCL5qfD5aSI5i1Ffug/jve88jjA
+         74n+yhv0o4szC7gSVFyfOf/eNXoKlb+FrrfklB28HYUFGA/dySvp0RCG91DR83mH+PUO
+         XenZRgH9XE8kgeVJuE8ytsB+btuM0xwLMR6PGKadf3BEg/mwxYaOZzEy1kiJnrlalh4n
+         Xn5w==
+X-Received: by 10.50.62.20 with SMTP id u20mr639137igr.15.1411867859324;
+        Sat, 27 Sep 2014 18:30:59 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.20.132 with SMTP id n4ls1425263ige.10.canary; Sat, 27 Sep
+ 2014 18:30:58 -0700 (PDT)
+X-Received: by 10.50.30.38 with SMTP id p6mr641145igh.8.1411867858791;
+        Sat, 27 Sep 2014 18:30:58 -0700 (PDT)
+Date: Sat, 27 Sep 2014 18:30:55 -0700 (PDT)
+From: coathangerman@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <934027ea-4985-40cd-8502-1b62b4aaf886@googlegroups.com>
+In-Reply-To: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+References: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+Subject: [tosdr:3248] Re: Steam Subscriber Agreement & Privacy Policy
+MIME-Version: 1.0
+X-Original-Sender: coathangerman@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+> [10] (bad) Subscriptions (purchased games) cancelled because of account c=
+ancellation can't be transferred or refunded.
+>=20
+> Section 10:B
+> You may cancel your Account at any time.  You may cease use of a=20
+> Subscription at any time or, if you choose, you may request that we=20
+> terminate your access to a Subscription.  However, Subscriptions are not
+>  transferable, and even if your access to a Subscription for a=20
+> particular game or application is terminated, the original activation=20
+> key will not be able to be registered to any other account, even if the=
+=20
+> game or application was purchased in a retail store.  Access to=20
+> Subscriptions purchased as a part of a pack or bundle cannot be=20
+> terminated individually, termination of access to one game within the=20
+> bundle will result in termination of access to all games purchased in=20
+> the pack will be removed from the account.  Your cancellation of an=20
+> Account, or your cessation of use of any Subscription or request that=20
+> access to a Subscription be terminated, will not entitle you to any=20
+> refund, including of any Subscription fees.
+
+In response to Valve's refund policy the Australian Competition and Consume=
+r Commission (ACCC) have launched legal action as it breaches Australian Co=
+nsumer Law for more info see http://www.accc.gov.au/media-release/full-stea=
+m-ahead-accc-institutes-proceedings-against-valve-for-making-alleged-mislea=
+ding-consumer-guarantee-representations
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

@@ -1,0 +1,164 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.48.135 with SMTP id l7csp152880qen;
+        Wed, 10 Oct 2012 15:36:16 -0700 (PDT)
+Received: by 10.236.149.143 with SMTP id x15mr20136909yhj.112.1349908576262;
+        Wed, 10 Oct 2012 15:36:16 -0700 (PDT)
+Return-Path: <tosdr+bncBDD2FZMDRAHRBX7Q26BQKGQEMVMGC6A@googlegroups.com>
+Received: from mail-gg0-f192.google.com (mail-gg0-f192.google.com [209.85.161.192])
+        by mx.google.com with ESMTPS id o21si2842658yhl.91.2012.10.10.15.36.16
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 10 Oct 2012 15:36:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBDD2FZMDRAHRBX7Q26BQKGQEMVMGC6A@googlegroups.com designates 209.85.212.49 as permitted sender) client-ip=209.85.212.49;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDD2FZMDRAHRBX7Q26BQKGQEMVMGC6A@googlegroups.com designates 209.85.212.49 as permitted sender) smtp.mail=tosdr+bncBDD2FZMDRAHRBX7Q26BQKGQEMVMGC6A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-gg0-f192.google.com with SMTP id k6sf827596ggd.29
+        for <michiel@unhosted.org>; Wed, 10 Oct 2012 15:36:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=jhXvca8QgZlUYrHUhy0/oai2De1OBCVIRC0qpPCI6ZA=;
+        b=NZ3uoLWQVc6sbCVneecZTV6luyp+GRUOBMIv8sptCJhED6aFAFig/4sWpD/k/a11Sz
+         z+qFJMBFq1EPhCGCOjlL9q4zaQ/E4MWzX9M9Uqu0ByMaSzikFCeNpUxgEcTrKiKaXBYO
+         TqXNm45KbA3Ab1TCQDrOjqODbarCbELrkdDBLYB7kT3+SqFavCYtHDc+s9Gja2ooKVBz
+         8nAA5MZJ5pKuezAgxN2SLJs/RWhYVcWj6h9OIfL2Sv6ohVHUCsJ/3ZelBsSpIS6BCriE
+         j/Lg5b/IItvAFkBWZH0rVCpzNti2pQNPeuRRogmHAH7ir2EpRoZv6lQNAezPeUZICVy6
+         n6ig==
+Received: by 10.52.19.201 with SMTP id h9mr700930vde.0.1349908575993;
+        Wed, 10 Oct 2012 15:36:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.221.0.70 with SMTP id nl6ls898536vcb.5.gmail; Wed, 10 Oct 2012
+ 15:36:15 -0700 (PDT)
+Received: by 10.58.249.3 with SMTP id yq3mr368777vec.27.1349908575433;
+        Wed, 10 Oct 2012 15:36:15 -0700 (PDT)
+Received: by 10.58.249.3 with SMTP id yq3mr368776vec.27.1349908575417;
+        Wed, 10 Oct 2012 15:36:15 -0700 (PDT)
+Received: from mail-vb0-f49.google.com (mail-vb0-f49.google.com [209.85.212.49])
+        by gmr-mx.google.com with ESMTPS id s13si200048vde.2.2012.10.10.15.36.15
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 10 Oct 2012 15:36:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jeremy.huet@gmail.com designates 209.85.212.49 as permitted sender) client-ip=209.85.212.49;
+Received: by mail-vb0-f49.google.com with SMTP id fo1so1334547vbb.22
+        for <tosdr@googlegroups.com>; Wed, 10 Oct 2012 15:36:15 -0700 (PDT)
+Received: by 10.52.27.2 with SMTP id p2mr11944460vdg.85.1349908575174; Wed, 10
+ Oct 2012 15:36:15 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.58.220.69 with HTTP; Wed, 10 Oct 2012 15:35:54 -0700 (PDT)
+In-Reply-To: <CAANpKmzUe2H6YeBVyVEy=HCvFOxv3TnDLXdmFEADHeo36XvbAw@mail.gmail.com>
+References: <CAANpKmzUe2H6YeBVyVEy=HCvFOxv3TnDLXdmFEADHeo36XvbAw@mail.gmail.com>
+From: =?ISO-8859-1?Q?J=E9r=E9my_Huet?= <jeremy.huet@gmail.com>
+Date: Thu, 11 Oct 2012 00:35:54 +0200
+Message-ID: <CAANpKmwfWxr0JP5poWg8PxePLQTQqzaSD-hMbCNVLOaFOzb35w@mail.gmail.com>
+Subject: [tosdr:1047] Re: PrivacyFix
+To: tosdr@googlegroups.com
+X-Original-Sender: jeremy.huet@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of jeremy.huet@gmail.com designates 209.85.212.49 as permitted sender)
+ smtp.mail=jeremy.huet@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=20cf307d00741a414f04cbbc1553
+
+--20cf307d00741a414f04cbbc1553
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I take it back, it's not exactly the same. They don't analyse ToS to
+display the use of personnal data, they actually get information directly
+from browsers using the extension. They scan the url and verify if the
+browser does not contain tracker cookies for it. If so then they make other
+users of the extension aware of it.
+
+J=E9r=E9my <http://glpl.us/jhuet>.
+
+
+On Thu, Oct 11, 2012 at 12:22 AM, J=E9r=E9my Huet <jeremy.huet@gmail.com> w=
+rote:
+
+> Hi all,
+>
+> I don't think i've seen it on the list but i just heard of PrivacyFix<htt=
+ps://www.privacyfix.com/start>release and its Chrome extension has what the=
+y call a
+> *healthbar* wich basically is what ToS:DR extensions are doing. There's a
+> video on the website presenting what it is about. The healthbar is at 40
+> sec.
+>
+> Ciao,
+>
+> J=E9r=E9my <http://glpl.us/jhuet>.
+>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--20cf307d00741a414f04cbbc1553
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I take it back, it&#39;s not exactly the same. They don&#39;t analyse ToS t=
+o display the use of personnal data, they actually get information directly=
+ from browsers using the extension. They scan the url and verify if the bro=
+wser does not contain tracker cookies for it. If so then they make other us=
+ers of the extension aware of it.<br clear=3D"all">
+
+<div><br></div><a href=3D"http://glpl.us/jhuet" target=3D"_blank">J=E9r=E9m=
+y</a>.<br>
+<br><br><div class=3D"gmail_quote">On Thu, Oct 11, 2012 at 12:22 AM, J=E9r=
+=E9my Huet <span dir=3D"ltr">&lt;<a href=3D"mailto:jeremy.huet@gmail.com" t=
+arget=3D"_blank">jeremy.huet@gmail.com</a>&gt;</span> wrote:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex">
+
+Hi all,<br clear=3D"all"><div><br></div><div>I don&#39;t think i&#39;ve see=
+n it on the list but i just heard of <a href=3D"https://www.privacyfix.com/=
+start" target=3D"_blank">PrivacyFix</a> release and its Chrome extension ha=
+s what they call a <i>healthbar</i>=A0wich basically is what ToS:DR extensi=
+ons are doing. There&#39;s a video on the website presenting what it is abo=
+ut. The healthbar is at 40 sec.</div>
+
+
+<div><br></div><div>Ciao,</div><div><br></div><a href=3D"http://glpl.us/jhu=
+et" target=3D"_blank">J=E9r=E9my</a>.<br><br>
+</blockquote></div><br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--20cf307d00741a414f04cbbc1553--

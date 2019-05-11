@@ -1,0 +1,145 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp436320wfj;
+        Mon, 23 Jul 2012 09:02:28 -0700 (PDT)
+Received: by 10.152.147.33 with SMTP id th1mr17768807lab.9.1343059347349;
+        Mon, 23 Jul 2012 09:02:27 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCR67WABRoEB_85mA@googlegroups.com>
+Received: from mail-lb0-f192.google.com (mail-lb0-f192.google.com [209.85.217.192])
+        by mx.google.com with ESMTPS id s5si17251932lbz.46.2012.07.23.09.02.25
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 23 Jul 2012 09:02:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCR67WABRoEB_85mA@googlegroups.com designates 209.85.217.192 as permitted sender) client-ip=209.85.217.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCR67WABRoEB_85mA@googlegroups.com designates 209.85.217.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCR67WABRoEB_85mA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lbok6 with SMTP id k6sf3810649lbo.29
+        for <multiple recipients>; Mon, 23 Jul 2012 09:02:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=gxFKwyTVthAr7P5YPhY73ud4gY7bA9nB+DhGdtCHRQw=;
+        b=HEzeX//txfc/Og0Ct6dl9cQsKCfVdbEeDa+JYu9uhUEiOv2MyNKj8/jKA9Vw34+vEF
+         xTnbzIoNTpTp59N4s7wPzT1teHWd3YGupFKV6I6CjCpIPktGikou73hlWdXR2I8iZnOp
+         6rza0NjtlSsgrrmM+vztKI2kLCEXzgatfsox8=
+Received: by 10.216.52.84 with SMTP id d62mr164820wec.91.1343059345234;
+        Mon, 23 Jul 2012 09:02:25 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.82.230 with SMTP id l6ls3070997wiy.4.canary; Mon, 23 Jul
+ 2012 09:02:24 -0700 (PDT)
+Received: by 10.180.96.42 with SMTP id dp10mr5865827wib.2.1343059344277;
+        Mon, 23 Jul 2012 09:02:24 -0700 (PDT)
+Received: by 10.180.96.42 with SMTP id dp10mr5865826wib.2.1343059344268;
+        Mon, 23 Jul 2012 09:02:24 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id i17si2487307wiw.0.2012.07.23.09.02.24
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 23 Jul 2012 09:02:24 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 7052863B4F4;
+	Mon, 23 Jul 2012 18:02:23 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id TxuiCkoeXQVf; Mon, 23 Jul 2012 18:02:17 +0200 (CEST)
+Received: from [192.168.2.196] (p5797A902.dip.t-dialin.net [87.151.169.2])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 86ACC63B4C8;
+	Mon, 23 Jul 2012 18:02:17 +0200 (CEST)
+Message-ID: <1343059336.8033.60.camel@synclavier.lan>
+Subject: [tosdr:214] Re: [good enough?] Twitter notifies users by a tweet or
+ by email when ToS are changed
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Mon, 23 Jul 2012 18:02:16 +0200
+In-Reply-To: <1340122972.5340.77.camel@synclavier.lan>
+References: <1339260327.4321.13.camel@synclavier.lan>
+	 <1340122972.5340.77.camel@synclavier.lan>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hi,=20
+
+I have decided to give a look back at Twitter's practice regarding
+changing their ToS.
+
+Le mardi 19 juin 2012 =E0 18:22 +0200, Hugo Roy a =E9crit :
+> I decided to put together the two issues: the fact that Twitter can
+> change the ToS at any time when they see fit, without really involving
+> the user or anything (which is pretty standard and not very evil) ;
+> with the fact that Twitter did critical changes to the ToS in the past
+> (Sept 2009) without involving users at all=B9 (please prove me wrong if
+> you have more context on this, but I haven't been able to find
+> anything at the time, and no,i don't consider that this
+> http://blog.twitter.com/2009/09/twitters-new-terms-of-service.html is
+> enough)
+>=20
+> Do you think I went too far with the score?
+
+So, one thing is they don't organise user feedback like Facebook, and
+they don't give a minimum delay for users to review the changes (as
+Google, Facebook and Soundcloud do for instance).
+
+One of the problematic thing was the notification. As I said, there was
+a blogpost the very same day the terms got changed (so no delay at all)
+and an email:
+> -- 1. except for an email, as they claim in the blogpost. But I can't
+> find any email of the sort in September 2009.=20
+
+I have asked around on Twitter if anybody had received such email.
+Someone got it and forwarded it to me. The email is very, very light (no
+information about the changes, just information that the terms have
+changed and a link to blog.twitter.com)
+
+The blog post is very light:
+http://blog.twitter.com/2009/09/twitters-new-terms-of-service.html and
+the key sentence about the change in copyright licenses is synthesised
+as:
+        Ownership=97Twitter is allowed to "use, copy, reproduce, process,
+        adapt, modify, publish, transmit, display and distribute" your
+        tweets because that's what we do. However, they are your tweets
+        and they belong to you.
+
+Curiously enough, no mention that this includes also the right to
+sublicense, which to me is an important aspect.
+
+In order to reflect this I have changed slightly the point.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups T=
+erms of Service; Didn't Read group. To post to this group, send email to to=
+sdr@googlegroups.com. To unsubscribe from this group, send email to tosdr+u=
+nsubscribe@googlegroups.com. For more options, visit this group at https://=
+groups.google.com/d/forum/tosdr?hl=3Den
+
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+
+

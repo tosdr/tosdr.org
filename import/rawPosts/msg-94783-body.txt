@@ -1,0 +1,179 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp96442qek;
+        Thu, 20 Sep 2012 05:31:20 -0700 (PDT)
+Received: by 10.14.184.133 with SMTP id s5mr2029103eem.31.1348144280151;
+        Thu, 20 Sep 2012 05:31:20 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBFUZ5SBAKGQE6KK6ACY@googlegroups.com>
+Received: from mail-ey0-f192.google.com (mail-ey0-f192.google.com [209.85.215.192])
+        by mx.google.com with ESMTPS id m5si3601122een.75.2012.09.20.05.31.19
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 20 Sep 2012 05:31:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBFUZ5SBAKGQE6KK6ACY@googlegroups.com designates 209.85.215.192 as permitted sender) client-ip=209.85.215.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBFUZ5SBAKGQE6KK6ACY@googlegroups.com designates 209.85.215.192 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBFUZ5SBAKGQE6KK6ACY@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by eaal12 with SMTP id l12sf642157eaa.29
+        for <multiple recipients>; Thu, 20 Sep 2012 05:31:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=JtduXaFtcafGRNP2pDF8QQcGx16jay0rWJhlW+7rSWc=;
+        b=oKfaSkxob9OD7T9ueNhH4o3buuQPAid2OPuRtAY7Jh6oOrr6jXPgSTT8m1bQsGFs4y
+         7393GUUFnazq+y5isdnLGFCjCOfrB3hw5uZMruA1S4LbKBQq51vitg9mBey2+5g2i8ur
+         e4hU5G+kLG+3JWlsvr8EW4XVR4yC8md8ISyPDd4v81A8M/ATY1s/qJEmRZZKyAq6qP3r
+         X+iJiKIFPFLY9HfGDGmzFtJUMdTbBlCoKn18uC2G/ki/A6xPGM/PxseNMbFVQ+AtzR7l
+         l+aTlrx07UmIW0l1uEouilvBT+te/zGzqw3p7xWehrW4ARZbE+7lvLkst9vRU4LW6vwu
+         3Bjg==
+Received: by 10.216.216.132 with SMTP id g4mr41788wep.59.1348144279190;
+        Thu, 20 Sep 2012 05:31:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.96.67 with SMTP id dq3ls859459wib.1.gmail; Thu, 20 Sep
+ 2012 05:31:18 -0700 (PDT)
+Received: by 10.180.104.33 with SMTP id gb1mr723291wib.1.1348144278080;
+        Thu, 20 Sep 2012 05:31:18 -0700 (PDT)
+Received: by 10.180.104.33 with SMTP id gb1mr723288wib.1.1348144277776;
+        Thu, 20 Sep 2012 05:31:17 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id cx9si576085wib.0.2012.09.20.05.31.17
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 20 Sep 2012 05:31:17 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 533E263A651;
+	Thu, 20 Sep 2012 14:31:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id vckB69pCJfVC; Thu, 20 Sep 2012 14:31:14 +0200 (CEST)
+Received: from [10.2.213.207] (pat-address.sciences-po.fr [193.54.67.93])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 86FFE63A608;
+	Thu, 20 Sep 2012 14:31:14 +0200 (CEST)
+Message-ID: <1348144273.5395.13.camel@synclavier.lan>
+Subject: Re: [tosdr:835] Creative Commons as a TOS
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Thu, 20 Sep 2012 14:31:13 +0200
+In-Reply-To: <24db05b5-36b4-46ea-8320-c5c24b17cd12@googlegroups.com>
+References: <24db05b5-36b4-46ea-8320-c5c24b17cd12@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le mercredi 19 septembre 2012 =E0 22:25 -0700, James Michael Dupont a
+=E9crit :
+> Hello,
+>=20
+> I would like raise an issue here, many sites dont have a TOS directly the=
+y=20
+> use creative commons copyleft or another form of copyleft.
+>=20
+> The argument is that this is not a contract you agree with, but a license=
+=20
+> you accept if you exercise it and create derived works.
+> It is not a contract because you have no agreement between parties.=20
+
+That is largely dependent upon a very specific kind of contract law, and
+even if you call them differently, it does not change anything. In
+Germany and in France, we call the GNU GPL a contract, even if it's a
+license. The only difference that you may have between contract and
+license is that in the contract it's an agreement where both parties are
+doing something (we call that "contrat synallagmatique" in French) and
+license an agreement where only one party is doing something and the
+other parties are just enjoying the benefits.
+
+Now, with the GPL, it's a license with conditions. You have to respect
+the conditions. So the distinction between license and contract is
+really subtle, and frankly only matters to legal discussions which are
+not really at core with our discussion here.
+
+As I wrote to you on twitter, copyleft has always been contractual, even
+if with "license" it doesn't say its name. Copyleft is not in the law,
+you have to write a legal text (a contract or license, whatever you call
+it, or terms) where you are creating your own set of conditions,
+supplementing conditions set forth by law.
+
+To put it simply, if you don't have the contract with copyleft, then you
+juste have the plain application of legal copyright (which isn't
+copyleft, because in copyright the author keeps the exclusive right to
+make copies, make changes to the work etc.)
+
+> my point is that copyleft gives you greater freedom, for example to share=
+=20
+> data from many sources with no contract with them. you can collect these=
+=20
+> sources together.
+
+But you have to respect a set of conditions (copyleft conditions and
+other conditions)! Of course copyleft gives you greater freedom than
+copyright, that's the whole point.
+
+> when you then introduce Contributor terms with the right to change the=20
+> license in the future such as osmf has done, the entire copyleft breaks=
+=20
+> down because a third party cannot agree to the those terms.
+
+It really depends on what the contributor terms say! in the case of Open
+Street Map, they can only license them under free and open source
+licenses (ODBL and CC BY or CC BY SA -- I don't remember) or future
+licenses agreed by 2/3 of the active contributors.
+
+Copyright assignment or fiduciary agreements sometimes are necessary
+with copyright because you may need better way to manage the copyrights.
+For instance, look at Linux. There is no copyright assignment, no
+"contributor terms". The downside is that Linux is stuck with GPLv2
+forever! It's okay because GPLv2 and Linux are pretty straightfoward to
+deal with. But for Open street map it's way more complicated: database
+rights, etc.
+
+So again, you need to analyse what the Contributor terms say and so far,
+I don't understand your concerns over these terms as they only make
+possible the use of free/open licenses.
+
+[of course, the way OSMF dealt with the whole change is also a subject,
+but I don't know a lot about it]
+
+Best,
+Hugo
+
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

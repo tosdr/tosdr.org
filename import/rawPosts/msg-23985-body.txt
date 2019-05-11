@@ -1,0 +1,128 @@
+Return-Path: <tosdr+bncBCTK7O5Z5YIRB76M5CSQKGQE62BUIOI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id B1BFF40EE7
+	for <anything@michielbdejong.com>; Sat, 17 Jan 2015 10:08:21 +0100 (CET)
+Received: from mfilter23-d.gandi.net (mfilter23-d.gandi.net [217.70.178.151])
+	by spool.mail.gandi.net (Postfix) with ESMTP id AEEBE226088
+	for <anything@michielbdejong.com>; Sat, 17 Jan 2015 10:08:21 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter23-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter23-d.gandi.net (mfilter23-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id I3PSAUIOF-0G for <anything@michielbdejong.com>;
+	Sat, 17 Jan 2015 10:08:20 +0100 (CET)
+Received: from mail-pa0-x240.google.com (mail-pa0-x240.google.com [IPv6:2607:f8b0:400e:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 0DAB4226064
+	for <anything@michielbdejong.com>; Sat, 17 Jan 2015 10:08:17 +0100 (CET)
+Received: by mail-pa0-f64.google.com with SMTP id ey11sf3464473pad.9
+        for <anything@michielbdejong.com>; Sat, 17 Jan 2015 01:08:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=0pfUUWtpfPpSSAWOgvglOE08hD6JJEWJB6lsoLYKRGE=;
+        b=MZ9RbarXEQy1A2F/eyHCu3xkkEtby3uQiqy346JntYSHzUOSYZzCw1nlJVbPCaOZzn
+         iBQ9kN0k2DA/7EnNHyE45Vd+345Lm2ylwRr8dbmIrmzYp9gx40rv2jE+aUJs63e9j2tx
+         +Cl60cL3hIEosvqdoJ9VEGiZJw7hnaf1PBEzc8z69F4D5/RfS2jQDvRGstFTjWalD3Es
+         TdRcoTeO75m+vKI+7NqpT3pGiYgOFlU8DB06zaVpRjLqZZNhHf2BDvx/Wjy/Xa/eAE8Q
+         mM6oosSeoXlMhb9UkjZOdAtUVl1IcDYMrL+u6dZ9rjta3FfDT89Jl/rHILnKcShGRNMx
+         tpXg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=0pfUUWtpfPpSSAWOgvglOE08hD6JJEWJB6lsoLYKRGE=;
+        b=WrgfoHj44trQyUlek7YSMuIuWWBlurqyyB5fthGsOCUkBHIWp8EomqGt93CrEhWTb9
+         taDZhPZl2XKg4TQGE0FxJCeOF2zeTYTI/U/nY/mGyudlK/8Idz08t5dxWcApTq/icbnv
+         YOrwp7P4IiSOXW+er98spyuWwjp3DwJON2bx7TktGg6kbvIyPe1Z/nhGsxNypaMYl6DS
+         kwZG0ue2PRIiTDbRatEn9GsoaHYkpgK6dMjbQjwe183f26UL7+15OfUJlevBV1dF16qy
+         vdbTF9WgCszHCXSBju9ejLVr07auoAxXh9hmcfeCJYryo5UJytYL4pBAi5xb0D1JQM3v
+         nalw==
+X-Received: by 10.140.28.11 with SMTP id 11mr4260qgy.21.1421485695785;
+        Sat, 17 Jan 2015 01:08:15 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.29.7 with SMTP id a7ls1801091qga.87.gmail; Sat, 17 Jan
+ 2015 01:08:15 -0800 (PST)
+X-Received: by 10.140.104.166 with SMTP id a35mr3856qgf.20.1421485695200;
+        Sat, 17 Jan 2015 01:08:15 -0800 (PST)
+Date: Sat, 17 Jan 2015 01:08:14 -0800 (PST)
+From: mrgfarr@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <c7365018-0a0f-4034-add7-ccdf07fcbed3@googlegroups.com>
+In-Reply-To: <1349367994.4304.20.camel@synclavier.lan>
+References: <1349367994.4304.20.camel@synclavier.lan>
+Subject: [tosdr:3394] Re: You must provide your legal name upon registration
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_66_263820986.1421485694843"
+X-Original-Sender: mrgfarr@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_66_263820986.1421485694843
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Thursday, October 4, 2012 at 5:26:47 PM UTC+1, Hugo Roy wrote:
+> Hi,
+>=20
+> This is a standard point when the user must provide their legal name
+> upon registration to the service.
+>         [informative]
+>         You agree to provide your full legal name when you register to
+>         the service. It does not prevent you from using a pseudonym.
+>        =20
+> This point supersedes the specific points from:
+>       * Yahoo
+>         https://groups.google.com/d/msg/tosdr/JNjOO0gHWX0/dKIFW9tjhLIJ
+>         =E2=80=9CSection 3 *You also agree to: (a) provide true, accurate=
+,
+>         current and complete information about yourself as prompted by
+>         the Yahoo! Service's registration form (the "Registration Data")
+>         and (b) maintain and promptly update the Registration Data to
+>         keep it true, accurate, current and complete. If you provide any
+>         information that is untrue, inaccurate, not current or
+>         incomplete, or Yahoo! has reasonable grounds to suspect that
+>         such information is untrue, inaccurate, not current or
+>         incomplete, Yahoo! has the right to suspend or terminate your
+>         account and refuse any and all current or future use of the
+>         Yahoo! Services.*"
+>       * Github
+>         https://groups.google.com/d/topic/tosdr/2zjqOmS3FC4/discussion
+>         =E2=80=9CYou must provide your legal full name,=E2=80=9D when you=
+ register.=20
+> --=20
+
+I think that a service provider that can be called upon to provide informat=
+ion about their users under legal obligation should have the users real nam=
+e. But solely for the purpose of aiding in legal investigations and not for=
+ general sale to advertisers or marketing. As much as we love our anonymity=
+ on the web we should be held to account for our actions if they fall outsi=
+de the law.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_66_263820986.1421485694843--

@@ -1,0 +1,459 @@
+Return-Path: <tosdr+bncBC3YVYFPYYORB4M4UWRQKGQEJZY45HY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 92D6640F41
+	for <anything@michielbdejong.com>; Mon, 17 Nov 2014 02:25:14 +0100 (CET)
+Received: from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 8E98C17808B
+	for <anything@michielbdejong.com>; Mon, 17 Nov 2014 02:25:14 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter30-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter30-d.gandi.net (mfilter30-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id ounFmwOiTTYX for <anything@michielbdejong.com>;
+	Mon, 17 Nov 2014 02:25:10 +0100 (CET)
+Received: from mail-yk0-x239.google.com (mail-yk0-x239.google.com [IPv6:2607:f8b0:4002:c07::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id DDB9417807E
+	for <michiel@michielbdejong.com>; Mon, 17 Nov 2014 02:25:06 +0100 (CET)
+Received: by mail-yk0-f185.google.com with SMTP id 142sf1362710ykq.22
+        for <michiel@michielbdejong.com>; Sun, 16 Nov 2014 17:25:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=docrtLFi88xZBipP77sq/eMvp4ItQIH7I3khSsmmcNQ=;
+        b=QjumJiTBQ8vIV7WmI1D5agDLG+x/VlDy5Xl97JgSirmOQ6ilWALHYgVR9z6D2XKoai
+         p0HcpMqf2uKRLrb2b/yAZzI/B7aLxx7qC9yps2O054dFxGsX/1DKuAlUNdpfZpAI/bzK
+         BbMSpbQd4obOC2NJIlr0/f1gngZi/FuviCXkQbzjgx//34Fj/nDBa3IvwCB3cZrWOxSA
+         TMo4WvcZWPVttoXGteFgxu1XjUg5M7EstlNg2J1X5GptAlXSZbvhzccosSuvHMdalfi5
+         kc2fSzXQjpntPBYuw5UFBXaCu/QNEu5aUK0vikc1xjoVnxoOgh/fwSk655tPO9afo5ei
+         4yMA==
+X-Received: by 10.140.101.13 with SMTP id t13mr1033qge.14.1416187505747;
+        Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.89.149 with SMTP id v21ls4843666qgd.77.gmail; Sun, 16 Nov
+ 2014 17:25:05 -0800 (PST)
+X-Received: by 10.236.0.231 with SMTP id 67mr62784057yhb.8.1416187505432;
+        Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+Received: from mail-ie0-x22f.google.com (mail-ie0-x22f.google.com. [2607:f8b0:4001:c03::22f])
+        by gmr-mx.google.com with ESMTPS id f4si777717igt.2.2014.11.16.17.25.05
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of navarrete.alvarado@gmail.com designates 2607:f8b0:4001:c03::22f as permitted sender) client-ip=2607:f8b0:4001:c03::22f;
+Received: by mail-ie0-f175.google.com with SMTP id at20so5463482iec.6
+        for <tosdr@googlegroups.com>; Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.107.137.84 with SMTP id l81mr191674iod.61.1416187505284;
+ Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+Received: by 10.64.223.202 with HTTP; Sun, 16 Nov 2014 17:25:05 -0800 (PST)
+Date: Sun, 16 Nov 2014 19:25:05 -0600
+Message-ID: <CAOAYAWGc=Vi-U6qdvTwGu=9KNGwyFCdA6aSnKBkdEKys7EjiMQ@mail.gmail.com>
+Subject: [tosdr:3327] www.pushbullet.com
+From: israel navarrete <navarrete.alvarado@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: navarrete.alvarado@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of navarrete.alvarado@gmail.com designates
+ 2607:f8b0:4001:c03::22f as permitted sender) smtp.mail=navarrete.alvarado@gmail.com;
+       dkim=pass header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; boundary=001a113ec536301c80050803d99e
+
+--001a113ec536301c80050803d99e
+Content-Type: text/plain; charset=UTF-8
+
+Terms of Service
+
+The following terms and conditions govern all use of the PushBullet.com
+website and the related mobile app (collectively, the "Service"). The
+Service is owned and operated by PushBullet Inc ("PushBullet"). The Website
+is offered subject to your acceptance without modification of all of the
+terms and conditions contained herein and all other operating rules,
+policies (including, without limitation, PushBullet's Privacy Policy) and
+procedures that may be published from time to time on this Site by
+PushBullet (collectively, the "Agreement").
+
+Please read this Agreement carefully before accessing or using the Service.
+By accessing or using any part of the web site, you agree to become bound
+by the terms and conditions of this agreement. If you do not agree to all
+the terms and conditions of this agreement, then you may not access the
+Service or use any services. If these terms and conditions are considered
+an offer by PushBullet, acceptance is expressly limited to these terms. The
+Service is available only to individuals who are at least 13 years old.
+Your PushBullet Account and Site
+
+If you create an Account on the Service, you are responsible for
+maintaining the security of your account, and you are fully responsible for
+all activities that occur under the account and any other actions taken in
+connection with the account. You must immediately notify PushBullet of any
+unauthorized uses of your account or any other breaches of security.
+PushBullet will not be liable for any acts or omissions by You, including
+any damages of any kind incurred as a result of such acts or omissions.
+Responsibility of Website Visitors
+
+PushBullet has not reviewed, and cannot review, all of the material,
+including computer software, posted to the Service, and cannot therefore be
+responsible for that material's content, use or effects. By operating the
+Service, PushBullet does not represent or imply that it endorses the
+material there posted, or that it believes such material to be accurate,
+useful or non-harmful. You are responsible for taking precautions as
+necessary to protect yourself and your computer systems from viruses,
+worms, Trojan horses, and other harmful or destructive content. The Service
+may contain content that is offensive, indecent, or otherwise
+objectionable, as well as content containing technical inaccuracies,
+typographical mistakes, and other errors. The Service may also contain
+material that violates the privacy or publicity rights, or infringes the
+intellectual property and other proprietary rights, of third parties, or
+the downloading, copying or use of which is subject to additional terms and
+conditions, stated or unstated. PushBullet disclaims any responsibility for
+any harm resulting from the use by visitors of the Service, or from any
+downloading by those visitors of content there posted.
+Content Posted on Other Websites
+
+We have not reviewed, and cannot review, all of the material, including
+computer software, made available through the websites and webpages to
+which PushBullet.com links, and that link to PushBullet.com. PushBullet
+does not have any control over those non-PushBullet websites and webpages,
+and is not responsible for their contents or their use. By linking to a
+non-PushBullet website or webpage, PushBullet does not represent or imply
+that it endorses such website or webpage. You are responsible for taking
+precautions as necessary to protect yourself and your computer systems from
+viruses, worms, Trojan horses, and other harmful or destructive content.
+PushBullet disclaims any responsibility for any harm resulting from your
+use of non-PushBullet websites and webpages.
+Intellectual Property
+
+This Agreement does not transfer from PushBullet to you any PushBullet or
+third party intellectual property, and all right, title and interest in and
+to such property will remain (as between the parties) solely with
+PushBullet. PushBullet, PushBullet.com, the PushBullet.com logo, and all
+other trademarks, service marks, graphics and logos used in connection with
+PushBullet.com, or the Service are trademarks or registered trademarks of
+PushBullet or PushBullet licensors. Other trademarks, service marks,
+graphics and logos used in connection with the Service may be the
+trademarks of other third parties. Your use of the Service grants you no
+right or license to reproduce or otherwise use any PushBullet or
+third-party trademarks.
+Changes
+
+PushBullet reserves the right, at its sole discretion, to modify or replace
+any part of this Agreement. It is your responsibility to check this
+Agreement periodically for changes. Your continued use of or access to the
+Service following the posting of any changes to this Agreement constitutes
+acceptance of those changes. PushBullet may also, in the future, offer new
+services and/or features through the Service (including, the release of new
+tools and resources). Such new features and/or services shall be subject to
+the terms and conditions of this Agreement.
+Termination
+
+PushBullet may terminate your access to all or any part of the Website at
+any time, with or without cause, with or without notice, effective
+immediately. If you wish to terminate this Agreement or your PushBullet.com
+account (if you have one), you may simply discontinue using the Service.
+All provisions of this Agreement which by their nature should survive
+termination shall survive termination, including, without limitation,
+ownership provisions, warranty disclaimers, indemnity and limitations of
+liability.
+Disclaimer of Warranties
+
+The Service is provided "as is". PushBullet and its suppliers and licensors
+hereby disclaim all warranties of any kind, express or implied, including,
+without limitation, the warranties of merchantability, fitness for a
+particular purpose and non-infringement. Neither PushBullet nor its
+suppliers and licensors, makes any warranty that the Service will be error
+free or that access thereto will be continuous or uninterrupted. You
+understand that you download from, or otherwise obtain content or services
+through, the Service at your own discretion and risk.
+Limitation of Liability
+
+In no event will PushBullet, or its suppliers or licensors, be liable with
+respect to any subject matter of this agreement under any contract,
+negligence, strict liability or other legal or equitable theory for: (i)
+any special, incidental or consequential damages; (ii) the cost of
+procurement for substitute products or services; (iii) for interruption of
+use or loss or corruption of data; or (iv) for any amounts that exceed the
+fees paid by you to PushBullet under this agreement during the twelve (12)
+month period prior to the cause of action. PushBullet shall have no
+liability for any failure or delay due to matters beyond their reasonable
+control. The foregoing shall not apply to the extent prohibited by
+applicable law.
+General Representation and Warranty
+
+You represent and warrant that (i) your use of the Service will be in
+strict accordance with the PushBullet Privacy Policy, with this Agreement
+and with all applicable laws and regulations (including without limitation
+any local laws or regulations in your country, state, city, or other
+governmental area, regarding online conduct and acceptable content, and
+including all applicable laws regarding the transmission of technical data
+exported from the United States or the country in which you reside) and
+(ii) your use of the Service will not infringe or misappropriate the
+intellectual property rights of any third party.
+Indemnification
+
+You agree to indemnify and hold harmless PushBullet, its contractors, and
+its licensors, and their respective directors, officers, employees and
+agents from and against any and all claims and expenses, including
+attorneys' fees, arising out of your use of the Service, including but not
+limited to your violation of this Agreement.
+Miscellaneous
+
+This Agreement constitutes the entire agreement between PushBullet and you
+concerning the subject matter hereof, and they may only be modified by a
+written amendment signed by an authorized executive of PushBullet, or by
+the posting by PushBullet of a revised version. Except to the extent
+applicable law, if any, provides otherwise, this Agreement, any access to
+or use of the Service will be governed by the laws of the state of
+California, U.S.A., excluding its conflict of law provisions, and the
+proper venue for any disputes arising out of or relating to any of the same
+will be the state and federal courts located in San Francisco County,
+California. Except for claims for injunctive or equitable relief or claims
+regarding intellectual property rights (which may be brought in any
+competent court without the posting of a bond), any dispute arising under
+this Agreement shall be finally settled in accordance with the
+Comprehensive Arbitration Rules of the Judicial Arbitration and Mediation
+Service, Inc. ("JAMS") by three arbitrators appointed in accordance with
+such Rules. The arbitration shall take place in San Francisco, California,
+in the English language and the arbitral decision may be enforced in any
+court. The prevailing party in any action or proceeding to enforce this
+Agreement shall be entitled to costs and attorneys' fees. If any part of
+this Agreement is held invalid or unenforceable, that part will be
+construed to reflect the parties' original intent, and the remaining
+portions will remain in full force and effect. A waiver by either party of
+any term or condition of this Agreement or any breach thereof, in any one
+instance, will not waive such term or condition or any subsequent breach
+thereof. You may assign your rights under this Agreement to any party that
+consents to, and agrees to be bound by, its terms and conditions;
+PushBullet may assign its rights under this Agreement without condition.
+This Agreement will be binding upon and will inure to the benefit of the
+parties, their successors and permitted assigns.
+
+Some portions of this document are borrowed--with permission--from here
+<http://en.wordpress.com/tos/> under a Creative Commons license.
+
+This Agreement was last modified on 01/31/2013
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a113ec536301c80050803d99e
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><div class=""><div class=""><h1>Terms of Service</h1>
+
+<p>The following terms and conditions govern all use of the 
+PushBullet.com website and the related mobile app (collectively, the 
+&quot;Service&quot;). The Service is owned and operated by PushBullet Inc 
+(&quot;PushBullet&quot;). The Website is offered subject to your acceptance 
+without modification of all of the terms and conditions contained herein
+ and all other operating rules, policies (including, without limitation,
+ PushBullet&#39;s Privacy Policy) and procedures that may be published from 
+time to time on this Site by PushBullet (collectively, the &ldquo;Agreement&rdquo;).</p>
+
+<p>Please read this Agreement carefully before accessing or using the 
+Service. By accessing or using any part of the web site, you agree to 
+become bound by the terms and conditions of this agreement. If you do 
+not agree to all the terms and conditions of this agreement, then you 
+may not access the Service or use any services. If these terms and 
+conditions are considered an offer by PushBullet, acceptance is 
+expressly limited to these terms. The Service is available only to 
+individuals who are at least 13 years old.</p>
+
+<h2>Your PushBullet Account and Site</h2>
+
+<p>If you create an Account on the Service, you are responsible for 
+maintaining the security of your account, and you are fully responsible 
+for all activities that occur under the account and any other actions 
+taken in connection with the account. You must immediately notify 
+PushBullet of any unauthorized uses of your account or any other 
+breaches of security. PushBullet will not be liable for any acts or 
+omissions by You, including any damages of any kind incurred as a result
+ of such acts or omissions.</p>
+
+<h2>Responsibility of Website Visitors</h2>
+
+<p>PushBullet has not reviewed, and cannot review, all of the material, 
+including computer software, posted to the Service, and cannot therefore
+ be responsible for that material&rsquo;s content, use or effects. By 
+operating the Service, PushBullet does not represent or imply that it 
+endorses the material there posted, or that it believes such material to
+ be accurate, useful or non-harmful. You are responsible for taking 
+precautions as necessary to protect yourself and your computer systems 
+from viruses, worms, Trojan horses, and other harmful or destructive 
+content. The Service may contain content that is offensive, indecent, or
+ otherwise objectionable, as well as content containing technical 
+inaccuracies, typographical mistakes, and other errors. The Service may 
+also contain material that violates the privacy or publicity rights, or 
+infringes the intellectual property and other proprietary rights, of 
+third parties, or the downloading, copying or use of which is subject to
+ additional terms and conditions, stated or unstated. PushBullet 
+disclaims any responsibility for any harm resulting from the use by 
+visitors of the Service, or from any downloading by those visitors of 
+content there posted.</p>
+
+<h2>Content Posted on Other Websites</h2>
+
+<p>We have not reviewed, and cannot review, all of the material, 
+including computer software, made available through the websites and 
+webpages to which PushBullet.com links, and that link to PushBullet.com.
+ PushBullet does not have any control over those non-PushBullet websites
+ and webpages, and is not responsible for their contents or their use. 
+By linking to a non-PushBullet website or webpage, PushBullet does not 
+represent or imply that it endorses such website or webpage. You are 
+responsible for taking precautions as necessary to protect yourself and 
+your computer systems from viruses, worms, Trojan horses, and other 
+harmful or destructive content. PushBullet disclaims any responsibility 
+for any harm resulting from your use of non-PushBullet websites and 
+webpages.</p>
+
+<h2>Intellectual Property</h2>
+
+<p>This Agreement does not transfer from PushBullet to you any 
+PushBullet or third party intellectual property, and all right, title 
+and interest in and to such property will remain (as between the 
+parties) solely with PushBullet. PushBullet, PushBullet.com, the 
+PushBullet.com logo, and all other trademarks, service marks, graphics 
+and logos used in connection with PushBullet.com, or the Service are 
+trademarks or registered trademarks of PushBullet or PushBullet 
+licensors. Other trademarks, service marks, graphics and logos used in 
+connection with the Service may be the trademarks of other third 
+parties. Your use of the Service grants you no right or license to 
+reproduce or otherwise use any PushBullet or third-party trademarks.</p>
+
+<h2>Changes</h2>
+
+<p>PushBullet reserves the right, at its sole discretion, to modify or 
+replace any part of this Agreement. It is your responsibility to check 
+this Agreement periodically for changes. Your continued use of or access
+ to the Service following the posting of any changes to this Agreement 
+constitutes acceptance of those changes. PushBullet may also, in the 
+future, offer new services and/or features through the Service 
+(including, the release of new tools and resources). Such new features 
+and/or services shall be subject to the terms and conditions of this 
+Agreement.</p>
+
+<h2>Termination</h2>
+
+<p>PushBullet may terminate your access to all or any part of the 
+Website at any time, with or without cause, with or without notice, 
+effective immediately. If you wish to terminate this Agreement or your 
+PushBullet.com account (if you have one), you may simply discontinue 
+using the Service. All provisions of this Agreement which by their 
+nature should survive termination shall survive termination, including, 
+without limitation, ownership provisions, warranty disclaimers, 
+indemnity and limitations of liability.</p>
+
+<h2>Disclaimer of Warranties</h2>
+
+<p>The Service is provided &ldquo;as is&rdquo;. PushBullet and its suppliers and 
+licensors hereby disclaim all warranties of any kind, express or 
+implied, including, without limitation, the warranties of 
+merchantability, fitness for a particular purpose and non-infringement. 
+Neither PushBullet nor its suppliers and licensors, makes any warranty 
+that the Service will be error free or that access thereto will be 
+continuous or uninterrupted. You understand that you download from, or 
+otherwise obtain content or services through, the Service at your own 
+discretion and risk.</p>
+
+<h2>Limitation of Liability</h2>
+
+<p>In no event will PushBullet, or its suppliers or licensors, be liable
+ with respect to any subject matter of this agreement under any 
+contract, negligence, strict liability or other legal or equitable 
+theory for: (i) any special, incidental or consequential damages; (ii) 
+the cost of procurement for substitute products or services; (iii) for 
+interruption of use or loss or corruption of data; or (iv) for any 
+amounts that exceed the fees paid by you to PushBullet under this 
+agreement during the twelve (12) month period prior to the cause of 
+action. PushBullet shall have no liability for any failure or delay due 
+to matters beyond their reasonable control. The foregoing shall not 
+apply to the extent prohibited by applicable law.</p>
+
+<h2>General Representation and Warranty</h2>
+
+<p>You represent and warrant that (i) your use of the Service will be in
+ strict accordance with the PushBullet Privacy Policy, with this 
+Agreement and with all applicable laws and regulations (including 
+without limitation any local laws or regulations in your country, state,
+ city, or other governmental area, regarding online conduct and 
+acceptable content, and including all applicable laws regarding the 
+transmission of technical data exported from the United States or the 
+country in which you reside) and (ii) your use of the Service will not 
+infringe or misappropriate the intellectual property rights of any third
+ party.</p>
+
+<h2>Indemnification</h2>
+
+<p>You agree to indemnify and hold harmless PushBullet, its contractors,
+ and its licensors, and their respective directors, officers, employees 
+and agents from and against any and all claims and expenses, including 
+attorneys&rsquo; fees, arising out of your use of the Service, including but 
+not limited to your violation of this Agreement.</p>
+
+<h2>Miscellaneous</h2>
+
+<p>This Agreement constitutes the entire agreement between PushBullet 
+and you concerning the subject matter hereof, and they may only be 
+modified by a written amendment signed by an authorized executive of 
+PushBullet, or by the posting by PushBullet of a revised version. Except
+ to the extent applicable law, if any, provides otherwise, this 
+Agreement, any access to or use of the Service will be governed by the 
+laws of the state of California, U.S.A., excluding its conflict of law 
+provisions, and the proper venue for any disputes arising out of or 
+relating to any of the same will be the state and federal courts located
+ in San Francisco County, California. Except for claims for injunctive 
+or equitable relief or claims regarding intellectual property rights 
+(which may be brought in any competent court without the posting of a 
+bond), any dispute arising under this Agreement shall be finally settled
+ in accordance with the Comprehensive Arbitration Rules of the Judicial 
+Arbitration and Mediation Service, Inc. (&ldquo;JAMS&rdquo;) by three arbitrators 
+appointed in accordance with such Rules. The arbitration shall take 
+place in San Francisco, California, in the English language and the 
+arbitral decision may be enforced in any court. The prevailing party in 
+any action or proceeding to enforce this Agreement shall be entitled to 
+costs and attorneys&rsquo; fees. If any part of this Agreement is held invalid
+ or unenforceable, that part will be construed to reflect the parties&rsquo; 
+original intent, and the remaining portions will remain in full force 
+and effect. A waiver by either party of any term or condition of this 
+Agreement or any breach thereof, in any one instance, will not waive 
+such term or condition or any subsequent breach thereof. You may assign 
+your rights under this Agreement to any party that consents to, and 
+agrees to be bound by, its terms and conditions; PushBullet may assign 
+its rights under this Agreement without condition. This Agreement will 
+be binding upon and will inure to the benefit of the parties, their 
+successors and permitted assigns.</p>
+
+<p>Some portions of this document are borrowed&mdash;with permission&mdash;from <a href="http://en.wordpress.com/tos/">here</a> under a Creative Commons license.</p>
+
+<p>This Agreement was last modified on 01/31/2013</p></div></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an email to <a href="mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href="mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr">http://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href="https://groups.google.com/d/optout">https://groups.google.com/d/optout</a>.<br />
+
+--001a113ec536301c80050803d99e--

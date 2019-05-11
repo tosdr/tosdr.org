@@ -1,0 +1,143 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp46466wfj;
+        Thu, 21 Jun 2012 10:19:05 -0700 (PDT)
+Received: by 10.52.18.244 with SMTP id z20mr11096306vdd.87.1340299144657;
+        Thu, 21 Jun 2012 10:19:04 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxCHr43_BBoEkQqc4w@googlegroups.com>
+Received: from mail-vb0-f64.google.com (mail-vb0-f64.google.com [209.85.212.64])
+        by mx.google.com with ESMTPS id el6si1603322vdb.116.2012.06.21.10.19.03
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 21 Jun 2012 10:19:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxCHr43_BBoEkQqc4w@googlegroups.com designates 209.85.212.64 as permitted sender) client-ip=209.85.212.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxCHr43_BBoEkQqc4w@googlegroups.com designates 209.85.212.64 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxCHr43_BBoEkQqc4w@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vbnl22 with SMTP id l22sf786915vbn.29
+        for <multiple recipients>; Thu, 21 Jun 2012 10:19:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=VRgmvVwCuJiksfvzMId7lT/2Oi3nDjsFwkaJCAqZxJE=;
+        b=y2EihTZ9kc46ZJThc2DWThz7/ddcQC3rhoJm94qUb3Ysl2JqjYjS7bn2/XpFvjc8s5
+         DKFWmZSjjIi2yaRDAjYwjlbMZx3x14LvlT3l438wG6XjaBVSxgAMdpOWW0TVF6k9gpT/
+         IhyH8zcFWq9S6HxPw18fSuobuqQH7RHdudkfg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=VRgmvVwCuJiksfvzMId7lT/2Oi3nDjsFwkaJCAqZxJE=;
+        b=UEOr0K4fdUCSBDakCTGkqE5umEZhp8qHlRynxvD/SzLYx39wFD+gj1geU+xby+dyq3
+         2ss4y6hY4k3KanBnVBm9OdnhcWu3NeJ9JrXwAp5eajp9xnOHg914pscPq8VdfbGTXlcK
+         IDk4lnNXkXuOIC57kao3zLYmEvGzVDdkEEWvq7UnWwAlviK0kZOy2Z3C/jD+pe2+zor1
+         jt0+PjffEIg/xQ5SKCF/DyHVyAAIG4GXMhKp/IfokNSE0Cd4Y3V5YVpbLx0n0cTsInQM
+         jXr/boH0h8tCdJOn8oMRgQqLSmqFL8s5l4n4LJif88Diu9iw2csnXbxIQER6hII0+WpT
+         8URA==
+Received: by 10.68.134.71 with SMTP id pi7mr131236pbb.19.1340299143316;
+        Thu, 21 Jun 2012 10:19:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.222.134 with SMTP id qm6ls3052617pbc.6.gmail; Thu, 21 Jun
+ 2012 10:19:02 -0700 (PDT)
+Received: by 10.68.223.40 with SMTP id qr8mr315567pbc.0.1340299142907;
+        Thu, 21 Jun 2012 10:19:02 -0700 (PDT)
+Received: by 10.68.223.40 with SMTP id qr8mr315566pbc.0.1340299142898;
+        Thu, 21 Jun 2012 10:19:02 -0700 (PDT)
+Received: from mail-pb0-f54.google.com (mail-pb0-f54.google.com [209.85.160.54])
+        by gmr-mx.google.com with ESMTPS id iq5si509143pbc.1.2012.06.21.10.19.02
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 21 Jun 2012 10:19:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.160.54 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.160.54;
+Received: by mail-pb0-f54.google.com with SMTP id ro2so2655955pbb.13
+        for <tosdr@googlegroups.com>; Thu, 21 Jun 2012 10:19:02 -0700 (PDT)
+Received: by 10.68.231.10 with SMTP id tc10mr555507pbc.107.1340299142443; Thu,
+ 21 Jun 2012 10:19:02 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Thu, 21 Jun 2012 10:18:42 -0700 (PDT)
+X-Originating-IP: [76.126.240.28]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Thu, 21 Jun 2012 10:18:42 -0700
+Message-ID: <CABQMFTRaDy7mt-9aH+AzOSfOBnsr+MiPFxDNtJwpnm9BR-_Nig@mail.gmail.com>
+Subject: =?windows-1252?Q?Re=3A_=5BGood=5D_Facebook_educate_their_users_about_how_to?=
+	=?windows-1252?Q?_be_safe=2C_=5BBad=5D_doesn=92t_use_https_by_default?=
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQlYzHnODNNc2QTM7BYApkvBeCgCqJvYXK/ywWlQNx/O54Yi2Hqyg9TYk1sAram8EFiFxjz0
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.160.54 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+These user-facing safety tips are cool and all, but apparently
+Facebook still doesn=92t use https =96 you have to enable =BBsafe browsing=
+=AB.
+For a communication platform this big that=92s downright irresponsible.
+Sure, many people might read those tips (and forget them also) but it
+seems like a pacifier compared to no https and tracking and all that.
+
+(Right, by the way =96 what about storing info/passwords not encrypted,
+that should be a data point right?)
+
+
+On Thu, Jun 21, 2012 at 2:59 AM, Michiel de Jong <michiel@unhosted.org> wro=
+te:
+> i just got prompted by facebook (during normal use) to 'read these
+> security tips' http://www.facebook.com/about/security?mp=3D2
+>
+> I've seen several other websites do this (airbnb, wg-gesucht, tuenti,
+> ing bank, gmail), and for some services it's more relevant than for
+> others, but i think it's important from a consumer rights point of
+> view that a service takes reasonable efforts to make the service safer
+> to use for consumers.
+>
+> even if the service is aimed at tech savvy users, it should at the
+> very least warn people when they choose a weak password (the little
+> strength meter), and if there is valuable data, two-factor passwords,
+> https, and other security measures should be a consumer right i think.
+>
+> if a service puts users at risk of oversharing (no, i won't shut up
+> about it ;) or scams, i would say it is the duty of the service to
+> warn about this.
+>
+> of course more "be safer online" education is needed if a service is
+> aimed at non-technical people and especially minors.
+>
+> so i think facebook did not do this very well in the past, but is
+> doing a good job at it now.
+>
+> --
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn&#39;t Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to tosdr+unsubscribe@googlegro=
+ups.com.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

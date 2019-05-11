@@ -1,0 +1,110 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp551868wfj;
+        Wed, 25 Jul 2012 08:04:14 -0700 (PDT)
+Received: by 10.216.74.21 with SMTP id w21mr12681205wed.77.1343228653409;
+        Wed, 25 Jul 2012 08:04:13 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRDrlcCABRoEZXMQxA@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id n21si24697124wee.115.2012.07.25.08.04.11
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 25 Jul 2012 08:04:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRDrlcCABRoEZXMQxA@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRDrlcCABRoEZXMQxA@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRDrlcCABRoEZXMQxA@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fada11 with SMTP id a11sf554561fad.29
+        for <multiple recipients>; Wed, 25 Jul 2012 08:04:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=gfsaLks4T4ewX2tWwoKpeEbMr3GMrJs6INjX+QV6Urg=;
+        b=SEeTJXFdK9jVcPDuviovKVqJkgJrhwdlGoHUSByu3uYHlZWDBa6ssRZ0uUUQB6c3Ud
+         dEgtDbsYH+IEOiFGUG8XDFS00N1ZxNOjllaBOwmDIFU8W0mC5bC7l75A6uXIpoWe7XX4
+         lgEVOJ/gUFf8nfJ0frTCqGMVS6m73Gmaev3FE=
+Received: by 10.180.105.232 with SMTP id gp8mr277285wib.0.1343228651810;
+        Wed, 25 Jul 2012 08:04:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.216.143.147 with SMTP id l19ls871435wej.4.gmail; Wed, 25 Jul
+ 2012 08:04:11 -0700 (PDT)
+Received: by 10.181.11.234 with SMTP id el10mr549460wid.2.1343228651451;
+        Wed, 25 Jul 2012 08:04:11 -0700 (PDT)
+Received: by 10.181.11.234 with SMTP id el10mr549459wid.2.1343228651441;
+        Wed, 25 Jul 2012 08:04:11 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id ce10si415070wib.1.2012.07.25.08.04.11
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 25 Jul 2012 08:04:11 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 1C6BB63B4ED;
+	Wed, 25 Jul 2012 17:04:11 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id lItFLYNYZIKe; Wed, 25 Jul 2012 17:04:04 +0200 (CEST)
+Received: from [192.168.1.236] (i59F7B502.versanet.de [89.247.181.2])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id AFC2863B4AF;
+	Wed, 25 Jul 2012 17:04:04 +0200 (CEST)
+Message-ID: <1343228644.3786.29.camel@synclavier.lan>
+Subject: [tosdr:223] Github explains why hte information is used and collected
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr <tosdr@googlegroups.com>
+Date: Wed, 25 Jul 2012 17:04:04 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+https://help.github.com/privacy-policy=20
+        We collect the e-mail addresses of those who communicate with us
+        via e-mail, aggregate information on what pages consumers access
+        or visit, and information volunteered by the consumer (such as
+        survey information and/or site registrations). The information
+        we collect is used to improve the content of our Web pages and
+        the quality of our service, and is not shared with or sold to
+        other organizations for commercial purposes, except to provide
+        products or services you=92ve requested, when we have your
+        permission,
+        [=85]
+        GitHub uses collected information for the following general
+        purposes: products and services provision, billing,
+        identification and authentication, services improvement,
+        contact, and research.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups T=
+erms of Service; Didn't Read group. To post to this group, send email to to=
+sdr@googlegroups.com. To unsubscribe from this group, send email to tosdr+u=
+nsubscribe@googlegroups.com. For more options, visit this group at https://=
+groups.google.com/d/forum/tosdr?hl=3Den
+
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+
+

@@ -1,0 +1,238 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.79 with SMTP id z76csp309801ioi;
+        Sat, 23 Apr 2016 22:55:20 -0700 (PDT)
+X-Received: by 10.66.67.11 with SMTP id j11mr40192447pat.45.1461477320942;
+        Sat, 23 Apr 2016 22:55:20 -0700 (PDT)
+Return-Path: <tosdr+bncBD5MX4XJ4UBBBQN76G4AKGQEKJ4VHKY@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [2001:4b98:c:538::194])
+        by mx.google.com with ESMTPS id q90si16825035pfa.239.2016.04.23.22.55.20
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Apr 2016 22:55:20 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBQN76G4AKGQEKJ4VHKY@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) client-ip=2001:4b98:c:538::194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBD5MX4XJ4UBBBQN76G4AKGQEKJ4VHKY@googlegroups.com does not designate 2001:4b98:c:538::194 as permitted sender) smtp.mailfrom=tosdr+bncBD5MX4XJ4UBBBQN76G4AKGQEKJ4VHKY@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id 08086C5A51
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:55:17 +0200 (CEST)
+Received: from mfilter13-d.gandi.net (mfilter13-d.gandi.net [217.70.178.141])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C77911421DA
+	for <michiel@unhosted.org>; Sun, 24 Apr 2016 07:55:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter13-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter13-d.gandi.net (mfilter13-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id XQYfr0wERWc4 for <michiel@unhosted.org>;
+	Sun, 24 Apr 2016 07:55:15 +0200 (CEST)
+Received: from mail-pf0-x23f.google.com (mail-pf0-x23f.google.com [IPv6:2607:f8b0:400e:c00::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 3B9D91421DE
+	for <michiel@michielbdejong.com>; Sun, 24 Apr 2016 07:55:15 +0200 (CEST)
+Received: by mail-pf0-x23f.google.com with SMTP id d4sf22682442pfd.1
+        for <michiel@michielbdejong.com>; Sat, 23 Apr 2016 22:55:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:message-id:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=aFG9DHBEjsdykMbh9+DSpzeBeq0UzHYkUmJ/0CTBlXA=;
+        b=chEwVx+rq3pDKVQqR5GztLnny+sU6+NFkVxgdoaOIxnhXmHlTXkz46i0DQ2WZ5bGCo
+         57Qd/aUNMF9B/tOfZpNwmPoGQoYKEW9fb9HmvT8RZh1mDG6CtIZnnXEulm52huN4DagV
+         /fiY/e0XNLjSc8Qf/fn7C8HOZAqsawiZXNApV2KC23J/Nb6Xnc2upL1Qu4tiY5+f9fHj
+         IjL8FlsxijNt7mG9yvAHL+qp5F/L79XiKux5jUzr7G//PazaJXG5Ko/LK+MXEqSy/6U+
+         wEqEVlwbgqhWts5c+8v8pfHaMELg3UAIHfvv//8Nf6Z+DnkOAn0rFjweJ70dUXjVd1rV
+         kC/Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=aFG9DHBEjsdykMbh9+DSpzeBeq0UzHYkUmJ/0CTBlXA=;
+        b=u3oDTsOMLWLnw3OC8cEDvUnetv/OW6wZcAn+issKg38KWT8KkJ+ZohsKzac3KsHdHl
+         x74HlwZEuxnY4TggSdqZCqhPX+QUUtSxmajMlupK8gcZ0hhnzY2VzaRFY6bwayp3iUs7
+         tP8lDiqC7MJGblpwhce78jhrHkUINpTsENJafO3b7Fc74gbGsttKS1cNw/49fVtagW3m
+         Mx602t/O10ulrF0YavpZutEjyN1lYtCZdN/jOGYu+Ru85ZMP5wndA56A+efCZ3mTNV60
+         11NE/q2zQElfScgdL3WUA3RYBjcer9VynVB2YEdoYO2rQdJWpeOcSdN/t6MoEDEH5RgQ
+         OmWw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=aFG9DHBEjsdykMbh9+DSpzeBeq0UzHYkUmJ/0CTBlXA=;
+        b=LG2S2e8gBlTeuDPrJub0E7uhZ6OzXrOYR3AY/oq7Ci/FDpg1jFQ/BM+YuHImND9EG6
+         lgq8eUE1THyuVYRPbuztrDmDW9ohShEPom6CwxWNpfk+cwuL99EnFafpOKCNEf3DwmqG
+         M0LfcR2NbC4faDE21+Gs6Q0CSP3cRFl8PErEdfNy6nQvaLAGqk6Ls7LyhxehPQSalJjp
+         w10xEU0YHVviFRCVdz4Gip9oZ76BDsGj5FfRQ7yBBJBOcSI3J5G1m4yPppCOe6RiOaTT
+         nhHGPj1TmD9mpE1NIJ1g2gSWAKb2L5VbmH8iSdnq8x+znNkqAFa+9l2qY/DtLmtu5RyY
+         GWWw==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FWgiYxgekVJXlvcUVp7iMV+ZpS+LDNfEH4rc+ABk1NJQ1+R05BBvEptqdFLpA5J7Q==
+X-Received: by 10.157.45.79 with SMTP id v73mr308950ota.9.1461477314030;
+        Sat, 23 Apr 2016 22:55:14 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.49.55 with SMTP id e52ls391832otc.62.gmail; Sat, 23 Apr
+ 2016 22:55:13 -0700 (PDT)
+X-Received: by 10.182.102.73 with SMTP id fm9mr308664obb.9.1461477313597;
+        Sat, 23 Apr 2016 22:55:13 -0700 (PDT)
+Date: Sat, 23 Apr 2016 22:55:13 -0700 (PDT)
+From: Lauren Thai <laurenthai@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <5f4b4408-2345-4595-8c33-68bed910ec5b@googlegroups.com>
+Subject: [tosdr:3867] [Bad] Pinterest retains your User Content
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_156_57655311.1461477313031"
+X-Original-Sender: laurenthai@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_156_57655311.1461477313031
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_157_935000660.1461477313032"
+
+------=_Part_157_935000660.1461477313032
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Pinterest retains your User Content even after you delete either the=20
+content from your account, or your account altogether.
+
+https://about.pinterest.com/en/terms-service
+
+2(c)  =E2=80=9CFollowing termination or deactivation of your account, or if=
+ you=20
+remove any User Content from Pinterest, we may retain your User Content for=
+=20
+a commercially reasonable period of time for backup, archival, or audit=20
+purposes. Furthermore, Pinterest and its users may retain and continue to=
+=20
+use, store, display, reproduce, re-pin, modify, create derivative works,=20
+perform, and distribute any of your User Content that other users have=20
+stored or shared through Pinterest.=E2=80=9D
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/5f4b4408-2345-4595-8c33-68bed910ec5b%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_157_935000660.1461477313032
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><font color=3D"#000000"><font size=3D"2"><span style=
+=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-them=
+e-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-fo=
+nt: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &=
+quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-langu=
+age: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Pintere=
+st </span><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans-seri=
+f&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-la=
+tin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-lan=
+guage: EN-US; mso-bidi-language: AR-SA;">retains your User
+Content even after you delete either the content from your account, or your
+account altogether.</span></font></font></div><div><font color=3D"#000000" =
+size=3D"2"><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans-ser=
+if&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-l=
+atin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-la=
+nguage: EN-US; mso-bidi-language: AR-SA;"><br></span></font></div><div><fon=
+t color=3D"#0088cc" size=3D"2"><span style=3D"font-family: &quot;Helvetica&=
+quot;,&quot;sans-serif&quot;; mso-fareast-font-family: Calibri; mso-fareast=
+-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-ansi-language: E=
+N-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><span style=
+=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-them=
+e-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-fo=
+nt: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &=
+quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-langu=
+age: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><a href=
+=3D"https://about.pinterest.com/en/terms-service">https://about.pinterest.c=
+om/en/terms-service</a></span></span></font></div><div><font color=3D"#0088=
+cc" size=3D"2"><span style=3D"font-family: &quot;Helvetica&quot;,&quot;sans=
+-serif&quot;; mso-fareast-font-family: Calibri; mso-fareast-theme-font: min=
+or-latin; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareas=
+t-language: EN-US; mso-bidi-language: AR-SA;"><span style=3D"font-family: &=
+quot;Calibri&quot;,&quot;sans-serif&quot;; mso-ascii-theme-font: minor-lati=
+n; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; m=
+so-hansi-theme-font: minor-latin; mso-bidi-font-family: &quot;Times New Rom=
+an&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fa=
+reast-language: EN-US; mso-bidi-language: AR-SA;"><br></span></span></font>=
+</div><div><font color=3D"#0088cc"><span style=3D"font-family: &quot;Helvet=
+ica&quot;,&quot;sans-serif&quot;; font-size: 5pt; mso-fareast-font-family: =
+Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Arial; =
+mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: A=
+R-SA;"><span style=3D"font-family: &quot;Calibri&quot;,&quot;sans-serif&quo=
+t;; font-size: 11pt; mso-ascii-theme-font: minor-latin; mso-fareast-font-fa=
+mily: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: m=
+inor-latin; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-the=
+me-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US;=
+ mso-bidi-language: AR-SA;"><font color=3D"#000000" face=3D"Times New Roman=
+" size=3D"2">
+
+</font><p style=3D"margin: 0in 0in 0pt;"><font size=3D"2"><font color=3D"#0=
+00000">2(c)<span style=3D"mso-spacerun: yes;">=C2=A0 </span></font><font co=
+lor=3D"#000000">=E2=80=9C</font><span style=3D"font-family: &quot;Helvetica=
+&quot;,&quot;sans-serif&quot;; mso-bidi-font-family: Arial;"><font color=3D=
+"#000000">Following termination or deactivation of your account, or if you =
+remove
+any User Content from Pinterest, we may retain your User Content for a
+commercially reasonable period of time for backup, archival, or audit purpo=
+ses.
+Furthermore, Pinterest and its users may retain and continue to use, store,
+display, reproduce, re-pin, modify, create derivative works, perform, and
+distribute any of your User Content that other users have stored or shared
+through Pinterest.=E2=80=9D</font></span></font></p><font color=3D"#000000"=
+ face=3D"Times New Roman" size=3D"3">
+
+</font></span></span></font></div></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/5f4b4408-2345-4595-8c33-68bed910ec5b%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/5f4b4408-2345-4595-8c33-68bed910ec5b%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_157_935000660.1461477313032--
+------=_Part_156_57655311.1461477313031--

@@ -1,0 +1,248 @@
+Return-Path: <tosdr+bncBCG7Z4EO7ENBBGMBX6GAKGQEUISG5KA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id C6942161735
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 18:17:34 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C30AC178086
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 18:17:34 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 40SHMBrWXqst for <anything@michielbdejong.com>;
+	Sun, 12 May 2013 18:17:33 +0200 (CEST)
+Received: from mail-pa0-f60.google.com (mail-pa0-f60.google.com [209.85.220.60])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id AC26F178088
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 18:17:31 +0200 (CEST)
+Received: by mail-pa0-f60.google.com with SMTP id bj3sf1496503pad.25
+        for <anything@michielbdejong.com>; Sun, 12 May 2013 09:17:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=delFutu57012EJ00s8vylNPR6AOP0ZauedCKSK8yN2w=;
+        b=xSOAqSqyUQ6cYUC6OjMY5W5MIlW5osKtZLOkBEQFQvh6OFa5Biwv5zoWVq3YlfLr4i
+         OIpnCeUOf6ANOLsBE7V4SCnxnf2Ji5lF8aaReAHPYXbh1+cbW7/PtuSzjZPfe9lieo+n
+         VD45f4Qy+xqu2SZH/RamVr6hfIRMa4dSKD4cacGRQRVSUBcIJ+NVYxDpVAB6Wvih+ou7
+         w8k3bYI0I9RQLnwkM/MFcbCkIiZ8hR4BEfgq1SQaqWGmrc62VLMgVAtT4vecdQK1oWB9
+         jHB/WP6Skjje/JochmnZb6taGVx4w7ep4UzLKZaw83SnfXMO4iubYLeIXUMD4RM9HjyO
+         hF2Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=delFutu57012EJ00s8vylNPR6AOP0ZauedCKSK8yN2w=;
+        b=K85ekwrgwJM4110aikQ9xyXSMSs+FJKq2xokvOXv0Gyhi/wgcSEUPwELhdhX+gvwiW
+         fyYbqxKAYKQhdkQLv+lSaHYXgFJSA/SphGDruTERAobhuoDtDv9l2WL5+rKPSdg8FRkl
+         JTFqHUNMsqNXxe8+dwLG+ZcxoLfaOyKGAMN2Sq/4qrRoksIArRCKMR76gRir8fbKkx1R
+         X3HJ7OfzVuB7J42zOxl54tsMYkTJqiEZXHmqRpjfmONvoAT459UMhxForpOvoy2ZPtaH
+         d3tMkuyGWvBa7uOK47tidh0e1kCbiAyYHMRUhL6Faq10no5gwYT6XgGcl4qXmRJ5rTZo
+         EV1A==
+X-Received: by 10.49.1.197 with SMTP id 5mr1821074qeo.24.1368375449514;
+        Sun, 12 May 2013 09:17:29 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.74.105 with SMTP id s9ls779041qev.0.gmail; Sun, 12 May 2013
+ 09:17:29 -0700 (PDT)
+X-Received: by 10.49.95.137 with SMTP id dk9mr1805075qeb.34.1368375449189;
+        Sun, 12 May 2013 09:17:29 -0700 (PDT)
+Date: Sun, 12 May 2013 09:17:28 -0700 (PDT)
+From: Jimm Stout <jamesstout1@gmail.com>
+To: tosdr@googlegroups.com
+Cc: jimm <jimm@tosdr.org>, jesse@wefu.org
+Message-Id: <2d2b969f-3dab-461c-afb1-8b91770d0878@googlegroups.com>
+In-Reply-To: <1368261192.2840.50.camel@zareason>
+References: <1368261192.2840.50.camel@zareason>
+Subject: [tosdr:2105] Re: Sites that block Tosback2
+MIME-Version: 1.0
+X-Original-Sender: jamesstout1@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_357_12617869.1368375448901"
+
+------=_Part_357_12617869.1368375448901
+Content-Type: text/plain; charset=ISO-8859-1
+
+Most of you have probably seen the email reply, but here's a copy/paste:
+
+Hi!
+
+Also, Jimm, I know you're in the process of moving, but can you (or
+someone else) upload some more recent crawl data? -- the last one is
+from May 6th, a week ago...
+
+
+It stopped because Jesse's changes were pulled into the github repo, but 
+not to the crawler server. (It's basically trying to push to a repo that's 
+more than a commit ahead of it). I'll begin testing and adding xpath to the 
+~50 or so new rules today or tomorrow (if starbucks doesn't kick me out; 
+should take me around ~4 hours), but it would be nice to keep 
+*untested/unfinished* rules separate from the working/tested to avoid this 
+later on. 
+
+It's probably still scraping, and after I merge the commits, I'll push them 
+up.
+
+I'm in favor of splitting it if that's needed, but I'm not so
+git-skilled as to be able to do it myself. We should also divide off the
+crawl and log directories from the rest of the code, at a minimum.
+
+Michiel, can you do that?
+
+i'd rather leave it to Jimm. we should also mention it on the tosback 
+mailing list
+
+
+I would rather focus on ToSBack3. TB2 was just a way to get a set of rules 
+and working scraper for TB3, right?
+
+It appears that some sites are blocking tosback2's crawler -- we might
+> consider adding user-agent spoofing to deal with this.
+>
+
+A huge amount of time has already gone into dealing with problems like 
+these. It's not even just the user-agent (although that's already been 
+added: 
+https://github.com/tosdr/tosback2/blob/master/rubycode/tosback.rb#L187 ) 
+but it's also been SSL issues, network hiccups, and just general file 
+handling (e.g. 
+http://jimmstout.com/2012/adding-a-default-content-type-to-mechanize-agent/)! 
+Not to mention the madness of dealing with all the different page encodings 
+(ugh ugh ugh). In other words, I'm super happy that we have *this many* 
+working :P. 
+
+Anyway, I totally agree that we need to get them _all_ working, but it 
+could be any number of unimaginable things, haha. But right now, all the 
+other work isn't really being used, and I would rather focus on that. 
+
+Thanks,
+
+Jimm
+
+
+
+On Saturday, May 11, 2013 10:33:12 AM UTC+2, Jesse Weinstein wrote:
+>
+> It appears that some sites are blocking tosback2's crawler -- we might 
+> consider adding user-agent spoofing to deal with this. 
+>
+> They appear to include: 
+>
+> http://www.cooks.com/rec/privacy.html 
+> http://www.peoplesmart.com/?_act=privacy 
+> http://www.ticketmaster.com/h/privacy.html 
+> http://pinterest.com/about/privacy/ 
+>
+>
+> Also, Jimm, I know you're in the process of moving, but can you (or 
+> someone else) upload some more recent crawl data? -- the last one is 
+> from May 6th, a week ago... 
+>
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_357_12617869.1368375448901
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Most of you have probably seen the email reply, but here's a copy/paste:<br=
+><br>Hi!<br><br><blockquote>Also, Jimm, I know you're in the process of mov=
+ing, but can you (or<br>someone else) upload some more recent crawl data? -=
+- the last one is<br>from May 6th, a week ago...<br></blockquote><br>It sto=
+pped because Jesse's changes were pulled into the github repo, but not to t=
+he crawler server. (It's basically trying to push to a repo that's more tha=
+n a commit ahead of it). I'll begin testing and adding xpath to the ~50 or =
+so new rules today or tomorrow (if starbucks doesn't kick me out; should ta=
+ke me around ~4 hours), but it would be nice to keep *untested/unfinished* =
+rules separate from the working/tested to avoid this later on. <br><br>It's=
+ probably still scraping, and after I merge the commits, I'll push them up.=
+<br><br><blockquote>I'm in favor of splitting it if that's needed, but I'm =
+not so<br>git-skilled as to be able to do it myself. We should also divide =
+off the<br>crawl and log directories from the rest of the code, at a minimu=
+m.<br><br>Michiel, can you do that?<br><br>i'd rather leave it to Jimm. we =
+should also mention it on the tosback mailing list<br></blockquote><br>I wo=
+uld rather focus on ToSBack3. TB2 was just a way to get a set of rules and =
+working scraper for TB3, right?<br><br><blockquote style=3D"margin: 0px 0px=
+ 0px 0.8ex; border-left: 1px solid rgb(204, 204, 204); padding-left: 1ex;" =
+class=3D"gmail_quote">It appears that some sites are blocking tosback2's cr=
+awler -- we might<br>consider adding user-agent spoofing to deal with this.=
+<br></blockquote><br>A huge amount of time has already gone into dealing wi=
+th problems like these. It's not even just the user-agent (although that's =
+already been added: https://github.com/tosdr/tosback2/blob/master/rubycode/=
+tosback.rb#L187 ) but it's also been SSL issues, network hiccups, and just =
+general file handling (e.g. http://jimmstout.com/2012/adding-a-default-cont=
+ent-type-to-mechanize-agent/)! Not to mention the madness of dealing with a=
+ll the different page encodings (ugh ugh ugh). In other words, I'm super ha=
+ppy that we have *this many* working :P. <br><br>Anyway, I totally agree th=
+at we need to get them _all_ working, but it could be any number of unimagi=
+nable things, haha. But right now, all the other work isn't really being us=
+ed, and I would rather focus on that. <br><br>Thanks,<br><br>Jimm<br><br><b=
+r><br>On Saturday, May 11, 2013 10:33:12 AM UTC+2, Jesse Weinstein wrote:<b=
+lockquote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;borde=
+r-left: 1px #ccc solid;padding-left: 1ex;">It appears that some sites are b=
+locking tosback2's crawler -- we might
+<br>consider adding user-agent spoofing to deal with this.
+<br>
+<br>They appear to include:
+<br>
+<br><a href=3D"http://www.cooks.com/rec/privacy.html" target=3D"_blank">htt=
+p://www.cooks.com/rec/<wbr>privacy.html</a>
+<br><a href=3D"http://www.peoplesmart.com/?_act=3Dprivacy" target=3D"_blank=
+">http://www.peoplesmart.com/?_<wbr>act=3Dprivacy</a>
+<br><a href=3D"http://www.ticketmaster.com/h/privacy.html" target=3D"_blank=
+">http://www.ticketmaster.com/h/<wbr>privacy.html</a>
+<br><a href=3D"http://pinterest.com/about/privacy/" target=3D"_blank">http:=
+//pinterest.com/about/<wbr>privacy/</a>
+<br>
+<br>
+<br>Also, Jimm, I know you're in the process of moving, but can you (or
+<br>someone else) upload some more recent crawl data? -- the last one is
+<br>from May 6th, a week ago...
+<br>
+<br>
+<br></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_357_12617869.1368375448901--

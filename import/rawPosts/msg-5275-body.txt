@@ -1,0 +1,151 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBPGT3WGQKGQELZSXF5Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 381F9161740
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 20:17:36 +0200 (CEST)
+Received: from mfilter27-d.gandi.net (mfilter27-d.gandi.net [217.70.178.155])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 32B321163E7
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 20:17:36 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter27-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter27-d.gandi.net (mfilter27-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id kQ3mKehySsZZ for <anything@michielbdejong.com>;
+	Tue, 11 Jun 2013 20:17:34 +0200 (CEST)
+Received: from mail-vb0-x23f.google.com (mail-vb0-x23f.google.com [IPv6:2607:f8b0:400c:c02::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8743E1163AB
+	for <anything@michielbdejong.com>; Tue, 11 Jun 2013 20:17:34 +0200 (CEST)
+Received: by mail-vb0-f63.google.com with SMTP id e12sf1430670vbg.8
+        for <anything@michielbdejong.com>; Tue, 11 Jun 2013 11:17:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1nc/Lj77jGRo4UJWSSM6GxaGCqKEwB9oL1OwzTS4p9I=;
+        b=YlZrG8QtIWVn+dziILjhqSaKg2MJv7i6E7t8ZDpdsQ4gkmZqE2qANrSC0fY08NoaTC
+         BecAFFZqFBRP864felmloHd58ygnMldeEFDQ8P2E8vOQ6wXglMGmtZGzOiD55C/m7Ebx
+         FJhWSQ9Vst3OJI11Ygm7uQjPIJzJ8xBWaxg37HCBfgw1CfShsmQCe9m2pFuyy2SSU2fO
+         J7JXGXj6WYS+kMYwaGJuriOc7V3ad0/gwxswz85PEZQq8yUpmiFr0lrvtVmXcZ9GSEPh
+         qrAyxvBPrIM1maf3Is3LuO94iaZ+aH5aBikPIAfxHbwos7O5RgokRpnVT86Nz3dLshTY
+         hzSw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1nc/Lj77jGRo4UJWSSM6GxaGCqKEwB9oL1OwzTS4p9I=;
+        b=pCLUCS0KrBQHQuPzMcjSZmweAkKwWv6JP+RSAdS9dNvJFILGFByAci6rutdPs4hxWk
+         gM7xH1TJIHmRVvW2My0mq2Fh51Y7pLNt4xxehHO+Tiy/UMTZCWro+B142PVlJ02igz6C
+         pfAkFK9whNToQyGZ+wfPbc3RnZP1tl7QPH3FBT98+SvLG1aijHALkqVrXVDhcAL2Xhnw
+         VQVJKhdYdoM1eWkvztbskdn5CcG5XYfGw+aze7HMbU4537ovgM7SqL5WhHUoXFFN5bGF
+         RC0ZrB+kN8ynDFHcbHT9Ruxa6Q9oxvKcHFuKpwnqNzdplP0TtcGecGT597xuoj4kUvEt
+         Azuw==
+X-Received: by 10.50.98.1 with SMTP id ee1mr518008igb.5.1370974653117;
+        Tue, 11 Jun 2013 11:17:33 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.134.71 with SMTP id pi7ls3125198igb.13.gmail; Tue, 11 Jun
+ 2013 11:17:32 -0700 (PDT)
+X-Received: by 10.50.112.105 with SMTP id ip9mr521703igb.1.1370974652245;
+        Tue, 11 Jun 2013 11:17:32 -0700 (PDT)
+Date: Tue, 11 Jun 2013 11:17:30 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <7225852d-5a93-49a6-a8af-c2312166c625@googlegroups.com>
+In-Reply-To: <23c1d4a7-1678-4ee8-8898-ba61f2ba26b7@googlegroups.com>
+References: <d8d2b0de-b503-4821-85a6-fe1e38168f50@googlegroups.com>
+ <23c1d4a7-1678-4ee8-8898-ba61f2ba26b7@googlegroups.com>
+Subject: [tosdr:2280] Re: [Info] Dropbox has a no refund policy
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_381_32221198.1370974650993"
+
+------=_Part_381_32221198.1370974650993
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Dropbox has a no-refund policy
+
+Topic: User information
+
+Summary: Dropbox Premium Accounts are prepaid and non-refundable.
+
+Score: 10
+
+On Tuesday, November 27, 2012 5:34:07 AM UTC-6, Ian McGowan wrote:
+>
+> This point has been curated and will be on the website shortly.
+>
+> On Thursday, August 23, 2012 5:35:31 PM UTC+2, Sebasti=E1n Waisbrot wrote=
+:
+>>
+>> https://www.dropbox.com/pricing_terms
+>>
+>>> Dropbox Premium Accounts are prepaid and are non-refundable
+>>
+>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_381_32221198.1370974650993
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Title: Dropbox has a no-refund policy<div><br></div><div>Topic: User inform=
+ation</div><div><br></div><div>Summary: Dropbox Premium Accounts are prepai=
+d and non-refundable.</div><div><br></div><div>Score: 10<br><br>On Tuesday,=
+ November 27, 2012 5:34:07 AM UTC-6, Ian McGowan wrote:<blockquote class=3D=
+"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc s=
+olid;padding-left: 1ex;">This point has been curated and will be on the web=
+site shortly.<br><br>On Thursday, August 23, 2012 5:35:31 PM UTC+2, Sebasti=
+=E1n Waisbrot wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;mar=
+gin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"><div><a href=3D=
+"https://www.dropbox.com/pricing_terms" target=3D"_blank">https://www.dropb=
+ox.com/<wbr>pricing_terms</a></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(20=
+4,204,204);border-left-style:solid;padding-left:1ex">Dropbox Premium Accoun=
+ts are prepaid and are non-refundable</blockquote></blockquote></blockquote=
+></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_381_32221198.1370974650993--

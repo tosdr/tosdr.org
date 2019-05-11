@@ -1,0 +1,138 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.16.42 with SMTP id c10csp8064qed;
+        Fri, 5 Oct 2012 03:05:13 -0700 (PDT)
+Received: by 10.14.1.69 with SMTP id 45mr12172837eec.23.1349431512778;
+        Fri, 05 Oct 2012 03:05:12 -0700 (PDT)
+Return-Path: <tosdr+bncBCFKVO5H5AHBBWHBXKBQKGQEV7OSUCI@googlegroups.com>
+Received: from mail-ee0-f64.google.com (mail-ee0-f64.google.com [74.125.83.64])
+        by mx.google.com with ESMTPS id h44si1552376eeo.85.2012.10.05.03.05.12
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 05 Oct 2012 03:05:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBCFKVO5H5AHBBWHBXKBQKGQEV7OSUCI@googlegroups.com designates 74.125.83.64 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBCFKVO5H5AHBBWHBXKBQKGQEV7OSUCI@googlegroups.com designates 74.125.83.64 as permitted sender) smtp.mail=tosdr+bncBCFKVO5H5AHBBWHBXKBQKGQEV7OSUCI@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-ee0-f64.google.com with SMTP id c13sf652383eek.29
+        for <michiel@unhosted.org>; Fri, 05 Oct 2012 03:05:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:date:from
+         :organization:user-agent:mime-version:to:subject:references
+         :in-reply-to:x-enigmail-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=yDZTjxfnjuRH6XAdsOktUNU1N48lZ6Zzb7JQnwtJgOY=;
+        b=vwrGG8RuELGfuqpEMAH7J0Kvc2zPJGXo2INtQdflqrQmWXt0rcjXqDLHQzqvZd53KA
+         FnYQNjS3XeK51Lra5PjDO/e04pdxNuQSXzdN4URol1fhJVCizvA6PZ+fSt/8I0QKd8vY
+         /TIO+dTZm/1NQtszEUeH93da7c/gTktKxo5AUx6AQzwxn4eW4v5LJZDf8O8JCFyoDg8r
+         NFq/YtcngmxoMtO02o6xAr9ldnGLqyScB827btVKHTeyhcKFhzSuMPDYaIwnEG+PZNSS
+         Sjt6FAEDV1UHNiFOP5uFOa34PavBC+UE+dB/FDfO1pI9Gm3Ut7OTf6iG6XwUT6VerdSy
+         vMTw==
+Received: by 10.180.97.194 with SMTP id ec2mr176299wib.0.1349431512339;
+        Fri, 05 Oct 2012 03:05:12 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.76.178 with SMTP id l18ls771268wiw.4.canary; Fri, 05 Oct
+ 2012 03:05:11 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr269733wib.0.1349431511817;
+        Fri, 05 Oct 2012 03:05:11 -0700 (PDT)
+Received: by 10.180.107.167 with SMTP id hd7mr269731wib.0.1349431511803;
+        Fri, 05 Oct 2012 03:05:11 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id e5si90507wiw.0.2012.10.05.03.05.11
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 05 Oct 2012 03:05:11 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of eal@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4D09263A629
+	for <tosdr@googlegroups.com>; Fri,  5 Oct 2012 12:05:11 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id qwz0zqyA4WDs for <tosdr@googlegroups.com>;
+	Fri,  5 Oct 2012 12:05:01 +0200 (CEST)
+Received: from [192.168.141.151] (p54BD50B3.dip.t-dialin.net [84.189.80.179])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: eal)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 0166663A617
+	for <tosdr@googlegroups.com>; Fri,  5 Oct 2012 12:05:00 +0200 (CEST)
+Message-ID: <506EB0CC.9080400@fsfe.org>
+Date: Fri, 05 Oct 2012 12:05:00 +0200
+From: Erik Albers <eal@fsfe.org>
+Organization: Free Software Foundation Europe
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20120912 Thunderbird/15.0.1
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:1004] Propaganda posters
+References: <CABQMFTQoO_E6V2crecxcGySDfmLPTYcg8sO_dJs4MZTmEoMzUA@mail.gmail.com>
+In-Reply-To: <CABQMFTQoO_E6V2crecxcGySDfmLPTYcg8sO_dJs4MZTmEoMzUA@mail.gmail.com>
+X-Enigmail-Version: 1.4.4
+X-Original-Sender: eal@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of eal@fsfe.org) smtp.mail=eal@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 10/04/2012 01:17 AM, Jan-Christoph Borchardt wrote:
+> Here=92s some propaganda posters for unhosted web apps,
+> remotestorage and Terms of Service; Didn=92t Read:=20
+> https://github.com/unhosted/design/commit/5df258df57d46f3429caf7adcc3eb7b=
+366e2ea36
+why
+>=20
+"and it's illegal"? doesn't make sense to me
+
+
+
+- --=20
+Erik Albers | http://fsfe.org/about/albers/albers.en.html
+Free Software Foundation Europe (FSFE) - Campaigns & Community
+Your support is just a few clicks away: http://fsfe.org/support/?eal
+
+		Free as in Freedom!
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Mozilla - http://www.enigmail.net/
+
+iQIcBAEBAgAGBQJQbrDMAAoJEBho/C6GOdyBI7YP/1M+Sl85INmyH26Hk41uaOBh
+dJeJ7abI4DMUSpexAVTa7EaHPp0iYADCEsPe6PnnwP5s937P3hcYRiSkm61Y0eCI
+Bypue7kkQziq3jGIOvzTy3nQ8TJppnklXZln0/rwbW4WHh8wjbqnaNrex7hlZJBz
+ut3ds/NvNmPAhyA21RHDKmM2gcOyb1+h/ussRBjIOY48trRx2Hzz3SK9+uD6Q/LW
+LHRWeuQFXcT1ues6j8j+pLE3sTaJ53JG/BM0pP0XZkEXABkSnfGNa87nSR5u00cR
+ryQwtlTcBuI9rqCemBBPQsBADxH7+YMRvUFyT+CwqHB1rlAGhmdBvIr5Fnx7LAqP
+El08fFU3ip1TMc3P+aT5ry4H5Hn1wPX3KXc41didtqrIU0tT+gHlXYV4k6eBtS28
+ctd8s4u7SNfNTn8mk9lIjk3FOgKjt4/boMiu/Q4v/rNHHLrhBcESfQGrc0PTxAn5
+WiOSslv7dgeKWhBWcCk6T2MmJG5Hb4rLYMK57jfYWUmnYnI9x0dt6DBthtB84LiH
+F+LQGSYoUfHMSCZf2P8QwMbBq/VAZ6MPE7AidspX1sRky0sQA3zCPhhxuBjgg4iE
+d90i2Ldt4Pfddpmri7UiV43ZuZbFRO5D5hqqysm7Ta4oaVakPpIPMaWN+UR/YBUk
+8WqMcDRtLt25uCm9+49q
+=3DDZV4
+-----END PGP SIGNATURE-----
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,156 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp12094wfj;
+        Wed, 20 Jun 2012 23:35:46 -0700 (PDT)
+Received: by 10.236.161.2 with SMTP id v2mr2897649yhk.26.1340260545799;
+        Wed, 20 Jun 2012 23:35:45 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxDAgYv_BBoEfO_MFQ@googlegroups.com>
+Received: from mail-gh0-f192.google.com (mail-gh0-f192.google.com [209.85.160.192])
+        by mx.google.com with ESMTPS id k28si1840460yhj.153.2012.06.20.23.35.45
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 23:35:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxDAgYv_BBoEfO_MFQ@googlegroups.com designates 209.85.160.192 as permitted sender) client-ip=209.85.160.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxDAgYv_BBoEfO_MFQ@googlegroups.com designates 209.85.160.192 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxDAgYv_BBoEfO_MFQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by ghrr16 with SMTP id r16sf192679ghr.29
+        for <multiple recipients>; Wed, 20 Jun 2012 23:35:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=fmGzEQqQ98Cc6o5wSWrF/QtDoPdwhQC+9d4iAFaVmAM=;
+        b=zMcu4YfC55at7qaJDmA4Sb1FNBzaBNqjIZtX/f7DkFnHr/tral+PlcX7DGalMLtBpk
+         r2gJoMi6t0Aai5KOcQR13c2JOQ2Ypx7KqCjYk+qNNNHZ7/2Sou6WJXz37MkysOsh/B+3
+         PP52pXulC9BQ/nqxEvEicYOkAYBAE7J0tB/Og=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=fmGzEQqQ98Cc6o5wSWrF/QtDoPdwhQC+9d4iAFaVmAM=;
+        b=QvTk/87kYZEWP0TeiHsmCP+qPhCwVnEXpIhlwxIf0hDGYvmsdcfI1WoO+nHL0nCL11
+         jh0a+NI4Q1q+G8uBmizyt1KMydPejiIkWSxOP2zBian0WnFRP24Z607a6bXHY4LQns5/
+         /VONBN5o3zxIs04c1FROLNXMvsvVQACEsJvk8P/NGLdytGRL1Cc4fKGMWaCUXKquS0BB
+         /OZWcnRJSf6g0JC+DN08Sn54u5HzAisZdVWxPuOywSrOkqBsa80KXn4OUNHxdEhk14Ym
+         SDIjVYrZMzZT9YVXkGnbkJ995FdwjmFTentRmT0GIjq+AHk4krJW37rx25pTlVRU1fCq
+         FdLA==
+Received: by 10.68.135.99 with SMTP id pr3mr498689pbb.5.1340260544766;
+        Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.240.172 with SMTP id wb12ls1361055pbc.3.gmail; Wed, 20 Jun
+ 2012 23:35:44 -0700 (PDT)
+Received: by 10.68.190.104 with SMTP id gp8mr25221324pbc.4.1340260544622;
+        Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+Received: by 10.68.190.104 with SMTP id gp8mr25221323pbc.4.1340260544612;
+        Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+Received: from mail-pz0-f52.google.com (mail-pz0-f52.google.com [209.85.210.52])
+        by gmr-mx.google.com with ESMTPS id tf10si3834986pbc.0.2012.06.20.23.35.44
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.210.52 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.210.52;
+Received: by dano14 with SMTP id o14so472536dan.39
+        for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+Received: by 10.68.217.40 with SMTP id ov8mr84727218pbc.131.1340260544503;
+ Wed, 20 Jun 2012 23:35:44 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Wed, 20 Jun 2012 23:35:24 -0700 (PDT)
+X-Originating-IP: [76.126.240.28]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Wed, 20 Jun 2012 23:35:24 -0700
+Message-ID: <CABQMFTQB435A4_oimtvB3y1M71a2m10+Ajp=BG_p7R=hL-ee-g@mail.gmail.com>
+Subject: [good] reddit.com
+To: =?windows-1252?Q?Terms_of_Service=2C_Didn=92t_Read?= <tosdr@googlegroups.com>
+X-Gm-Message-State: ALoCoQnZHtKupyaAo9mI39Tr2g9Viz29RtQh+J15O1qSksWGu4hd19M8H+QwYCtDkYUflkq74XTy
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.210.52 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Reddit, reddit.com, pretty reasonable terms I=92d say, for being a
+public community site. Not entirely sure how to rate the individual
+points though.
+
+First of all, you can use most of the site=92s functionality pretty much
+without registration. Only for the obviously personal stuff like
+commenting, upvoting, submitting.
+
+
+Privacy Policy: http://www.reddit.com/help/privacypolicy
+
+Collection: If you provide personally identifiable information, it
+will be used to provide you with the service you have requested.
+
+Third parties: We also allow access to our database by third parties
+that provide us with services, such as technical maintenance or forums
+and job search software, but only for the purpose of and to the extent
+necessary to provide those services. [=85] While Service Provider will
+seek to require such third parties to follow appropriate privacy
+policies and will not authorize them to use this information except
+for the express purpose for which it is provided, Service Provider
+does not bear any responsibility for any actions or policies of third
+parties.
+
+Law: We may also provide access to our database in order to cooperate
+with official investigations or legal proceedings, including, for
+example, in response to subpoenas, search warrants, court orders, or
+other legal process.
+
+Cookies: We may use cookies to control the display of ads, to track
+usage patterns on the site, to deliver editorial content, and to
+record registration and personalization information. For example, if
+you register on any part of the Website and are given the option to
+save your user name and password on your computer, we can provide this
+convenience to you by placing a cookie on your computer. Our cookies
+may contain personally identifiable information and such cookies may
+be shared with our affiliates and other companies.
+
+
+User Agreement: http://www.reddit.com/help/useragreement
+
+Content rights (makes sense for a public community forum, private
+messages get used very rarely): Except as expressly provided otherwise
+in the Privacy Policy, you agree that by posting messages, uploading
+files, inputting data, or engaging in any other form of communication
+with or through the Website, you grant us a royalty-free, perpetual,
+non-exclusive, unrestricted, worldwide license to use, reproduce,
+modify, adapt, translate, enhance, transmit, distribute, publicly
+perform, display, or sublicense any such communication in any medium
+(now in existence or hereinafter developed) and for any purpose,
+including commercial purposes, and to authorize others to do so.
+
+Ending service: Service Provider has the right to terminate and/or
+suspend your ability to access the Website or any portion thereof, for
+any or no reason, without notice. (haven=92t heard of any enforcement
+really yet, especially not in unwarranted cases.)
+
+
+The code is open source: https://github.com/reddit/reddit, Common
+Public Attribution License Version 1.0 (CPAL)
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

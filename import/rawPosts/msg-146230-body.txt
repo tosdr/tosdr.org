@@ -1,0 +1,143 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.137.199 with SMTP id l190csp581040vkd;
+        Mon, 8 Aug 2016 05:38:25 -0700 (PDT)
+X-Received: by 10.28.199.4 with SMTP id x4mr15065314wmf.70.1470659905428;
+        Mon, 08 Aug 2016 05:38:25 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBPP2UG6QKGQEUXRK24Y@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by mx.google.com with ESMTPS id v132si20378872wma.120.2016.08.08.05.38.24
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Aug 2016 05:38:25 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbc3if2oj4qorbpp2ug6qkgqeuxrk24y@googlegroups.com does not designate 217.70.183.195 as permitted sender) client-ip=217.70.183.195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbc3if2oj4qorbpp2ug6qkgqeuxrk24y@googlegroups.com does not designate 217.70.183.195 as permitted sender) smtp.mailfrom=tosdr+bncBC3IF2OJ4QORBPP2UG6QKGQEUXRK24Y@googlegroups.com
+Received: from spool.mail.gandi.net (mspool9-d.mgt.gandi.net [10.0.21.140])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id D2557A80BF
+	for <michiel@unhosted.org>; Mon,  8 Aug 2016 14:38:24 +0200 (CEST)
+Received: from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161])
+	by spool.mail.gandi.net (Postfix) with ESMTP id C49E259D71
+	for <michiel@unhosted.org>; Mon,  8 Aug 2016 14:38:24 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter30-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.140])
+	by mfilter30-d.gandi.net (mfilter30-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 3M3xQFZ7Kt-8 for <michiel@unhosted.org>;
+	Mon,  8 Aug 2016 14:38:22 +0200 (CEST)
+Received: from mail-wm0-f58.google.com (mail-wm0-f58.google.com [74.125.82.58])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E2D9D59DA1
+	for <michiel@michielbdejong.com>; Mon,  8 Aug 2016 14:38:22 +0200 (CEST)
+Received: by mail-wm0-f58.google.com with SMTP id i5sf42101661wmg.0
+        for <michiel@michielbdejong.com>; Mon, 08 Aug 2016 05:38:22 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:sender:date:from:subject:to:references
+         :in-reply-to:message-id:mime-version:content-transfer-encoding
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=REqbMkYTXIpLSv0uW4CtUTYJA7561NnLukKw6gIgMTE=;
+        b=NNnKL58kQXh65IGhX3D3snGTiaw+vlH92gZM9+rLMXRMsYw5lyJY81TD2NSsr7xaq8
+         MJ5wtmYPNOFXNzwFLlDkJTn2NyXmTQBL4xrPSI00JO/diuYqXuCE3bKlXul5hXXSr+rs
+         EhVbBH+Gesb786WhwYNoTNK96BgMmucSmKFO5soPbqhi6CcFPmJhm2+INHuML5xQbasL
+         lmf8tKtTSUdQzrheKrxiIyxdD5Y5B+78qp1immjOl+35t1fxxTb1aQhq/Q5KaJON6TP9
+         7kXlb9qtWI4NN88NDWwi187FW2W5Voyv89LL3/e8H4BTr522W+l9zThzJkdHRpxYSFH5
+         0SSA==
+X-Gm-Message-State: AEkooutNUn3ckOkbv8vRxG4wBJWioekvImPCOM8dnSRytgGTYaXYAQ6CWVJ/9uh8ejDf2g==
+X-Received: by 10.46.9.66 with SMTP id 63mr449883ljj.18.1470659902684;
+        Mon, 08 Aug 2016 05:38:22 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.46.71.147 with SMTP id u141ls550975lja.34.gmail; Mon, 08 Aug
+ 2016 05:38:21 -0700 (PDT)
+X-Received: by 10.46.1.25 with SMTP id 25mr12815233ljb.10.1470659901571;
+        Mon, 08 Aug 2016 05:38:21 -0700 (PDT)
+Received: from totosh.ampoliros.net (totosh.ampoliros.net. [80.67.179.53])
+        by gmr-mx.google.com with ESMTPS id o10si1017002wme.0.2016.08.08.05.38.21
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Aug 2016 05:38:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of hugo@hugoroy.eu designates 80.67.179.53 as permitted sender) client-ip=80.67.179.53;
+Sender: hugo@ampoliros.net
+Date: Mon, 08 Aug 2016 12:38:17 +0000
+From: Hugo Roy <hugo@hugoroy.eu>
+Subject: Re: [tosdr:3937] TOS for Protonmail
+To: tosdr@googlegroups.com, kevin.petrosenko.counsel@gmail.com
+References: <2510d024-37b0-421c-8391-4f191bea41d2@googlegroups.com>
+In-Reply-To: <2510d024-37b0-421c-8391-4f191bea41d2@googlegroups.com>
+Message-Id: <1470659848.astroid.yokzttkgkq@xps>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Original-Sender: hugo@hugoroy.eu
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of hugo@hugoroy.eu designates 80.67.179.53 as permitted
+ sender) smtp.mailfrom=hugo@hugoroy.eu
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+Can you please add this to https://edit.tosdr.org?
+
+Thank you,
+Hugo
+
+=E2=86=AA ao=C3=BBt 8, 2016 4:27 =E2=80=94 Kevin Petrosenko:
+> I have been following a new e-mail service provider called Protonmail for=
+=20
+> quite some time, and I think it would be beneficial for an awesome projec=
+t=20
+> like TOS to add a TOS;DR review for it.=20
+>=20
+>=20
+>    - Here is the URL to the Protonmail homepage: https://protonmail.com=
+=20
+>    - URL for Protonmail Terms of=20
+>    Service: https://protonmail.com/terms-and-conditions
+>    - Protonmail Privacy Agreement: https://protonmail.com/privacy-policy=
+=20
+>=20
+>=20
+> Regards,
+>=20
+> -- Kevin
+>=20
+> --=20
+> [!!] Please see https://edit.tosdr.org -- this is where new contributions=
+ should be submitted and discussed
+>=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at https://groups.google.com/group/tosdr.
+> To view this discussion on the web visit https://groups.google.com/d/msgi=
+d/tosdr/2510d024-37b0-421c-8391-4f191bea41d2%40googlegroups.com.
+> For more options, visit https://groups.google.com/d/optout.
+>=20
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/1470659848.astroid.yokzttkgkq%40xps.
+For more options, visit https://groups.google.com/d/optout.

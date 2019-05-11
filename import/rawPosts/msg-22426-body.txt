@@ -1,0 +1,717 @@
+Return-Path: <tosdr+bncBC7ILM64Y4HBBB6J3KQAKGQELBFZJ2Y@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 1917840F80
+	for <anything@michielbdejong.com>; Mon, 15 Sep 2014 10:34:25 +0200 (CEST)
+Received: from mfilter31-d.gandi.net (mfilter31-d.gandi.net [217.70.178.162])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 1560622606C
+	for <anything@michielbdejong.com>; Mon, 15 Sep 2014 10:34:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter31-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter31-d.gandi.net (mfilter31-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id EHxCrp+HNyKg for <anything@michielbdejong.com>;
+	Mon, 15 Sep 2014 10:34:20 +0200 (CEST)
+Received: from mail-qc0-x240.google.com (mail-qc0-x240.google.com [IPv6:2607:f8b0:400d:c01::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id F133F226067
+	for <anything@michielbdejong.com>; Mon, 15 Sep 2014 10:34:16 +0200 (CEST)
+Received: by mail-qc0-f192.google.com with SMTP id m20sf798033qcx.9
+        for <anything@michielbdejong.com>; Mon, 15 Sep 2014 01:34:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:date:keywords:organization:message-id:mime-version
+         :thread-index:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type
+         :content-language;
+        bh=jgo1TNptkmZr5B01AZ+LhTeruXe7gOUZs1gsmbP8hlY=;
+        b=xbcbmJkr+SNXIb/eQqIAfPvTXJtdX5QeEpwm1EChs6XN2CAMMsL09SvaKBxheJyULV
+         6fr5EfrLE6HB/Aya8z8V4eUIpYdzbsm3NIsKsDaCTGblIdTQeOT+yT2aGclTP5Y5NOK2
+         AMcThrtfTM2tgiYXnV3AATbPKdHMYY5RSobkKcRNhWeGNQvO9sr/sKNPpxRPrz7VAmp0
+         1XNN93HXpt0iFyt5zprX6Su5U5TjMc6zF28t5jZPbTl7aHK7pxyeMZ/4NX8b+5WAx5Hy
+         irB87axKFE6zHJQTGTyF2dr38Sn6iA5k1C9ocJPv2Lt1GkYbUS5sua/o53zLxMBV3sxY
+         o2WA==
+X-Received: by 10.140.23.228 with SMTP id 91mr15022qgp.19.1410770055936;
+        Mon, 15 Sep 2014 01:34:15 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.106.7 with SMTP id d7ls137531qgf.50.gmail; Mon, 15 Sep
+ 2014 01:34:15 -0700 (PDT)
+X-Received: by 10.236.104.199 with SMTP id i47mr14514675yhg.33.1410770055523;
+        Mon, 15 Sep 2014 01:34:15 -0700 (PDT)
+Received: from smtprelay.hostedemail.com (smtprelay0082.hostedemail.com. [216.40.44.82])
+        by gmr-mx.google.com with ESMTP id s20si833907igd.0.2014.09.15.01.34.14
+        for <tosdr@googlegroups.com>;
+        Mon, 15 Sep 2014 01:34:14 -0700 (PDT)
+Received-SPF: none (google.com: default@treacy.co.uk does not designate permitted sender hosts) client-ip=216.40.44.82;
+Received: from filter.hostedemail.com (ff-bigip1 [10.5.19.254])
+	by smtprelay01.hostedemail.com (Postfix) with ESMTP id 85CA2235AE
+	for <tosdr@googlegroups.com>; Mon, 15 Sep 2014 08:34:14 +0000 (UTC)
+X-Session-Marker: 73656E64696E672E64656661756C74407472656163792E636F2E756B
+X-Spam-Summary: 50,0,0,,d41d8cd98f00b204,default@treacy.co.uk,:,RULES_HIT:10:16:41:72:327:334:355:368:369:379:541:542:800:960:962:966:967:973:983:988:989:1021:1029:1155:1189:1208:1212:1221:1256:1260:1308:1309:1313:1314:1345:1381:1394:1395:1431:1436:1437:1516:1517:1518:1575:1587:1588:1589:1594:1605:1617:1691:1730:1775:1792:2068:2069:2194:2196:2197:2198:2199:2200:2201:2202:2380:2525:2526:2527:2528:2538:2540:2553:2568:2610:2631:2682:2685:2691:2693:2731:2734:2741:2840:2859:2861:2890:2891:2892:2895:2896:2898:2899:2900:2901:2902:2906:2910:2911:2913:2916:2917:2922:2923:2924:2925:2926:2933:2937:2939:2942:2945:2947:2951:2954:3022:3138:3139:3140:3141:3142:3148:3653:3747:3865:3866:3867:3868:3870:3871:3872:3873:3874:3889:3934:3936:3938:3941:3944:3947:3950:3953:3956:3959:4042:4048:4184:4321:4361:4379:4385:4425:4605:4641:4700:4823:4837:5007:6117:6119:6238:6261:6300:6658:6660:6668:6678:6688:6690:7208:7688:7809:7875:7882:7903:8531:8550:8603:8784:8957:8985:9009:9010:9025:9040:9072:9121:9149:9
+ 163:9388
+X-HE-Tag: touch28_7b6a0f3aef1d
+X-Filterd-Recvd-Size: 27994
+Received: from scolap2 (host86-176-162-181.range86-176.btcentralplus.com [86.176.162.181])
+	(Authenticated sender: sending.default@treacy.co.uk)
+	by omf02.hostedemail.com (Postfix) with ESMTPA
+	for <tosdr@googlegroups.com>; Mon, 15 Sep 2014 08:34:12 +0000 (UTC)
+From: "Default Treacy" <default@treacy.co.uk>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:3232] Firefox Sync.... URL https://accounts.firefox.com/legal/terms
+Date: Mon, 15 Sep 2014 09:34:14 +0100
+Keywords: Egress Switch: Unprotected
+Organization: Treacy Group
+Message-ID: <036401cfd0bf$d70d7cb0$85287610$@treacy.co.uk>
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: Ac/Qv9Rx9LJwV0LKQKa9PgBCPm1o7Q==
+X-Original-Sender: default@treacy.co.uk
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: default@treacy.co.uk does not designate permitted sender hosts) smtp.mail=default@treacy.co.uk
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0365_01CFD0C8.38D58E30"
+Content-Language: en-gb
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0365_01CFD0C8.38D58E30
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+ 
+
+https://accounts.firefox.com/legal/terms & also about:accounts
+
+ 
+
+Below is the terms of service for creating an account to use "Firefox Sync".
+Point 5 is wholly unacceptable. These are my bookmarks yet they are
+effectively saying 1/ we can use them however we want and 2/ they better not
+contain something we deem inappropriate!
+
+ 
+
+Regards
+
+Scott
+
+
+ 
+
+
+Firefox cloud services
+
+
+Terms of Service
+
+
+Last Updated March 26, 2014
+
+
+Summary
+
+
+This top section summarizes the terms below. This summary is provided to
+help your understanding of the terms, but be sure to read the entire
+document, because when you agree to it, you are indicating you accept all of
+the terms, not just this summary.
+
+*	Firefox cloud services (the "Services") are a suite of services
+provided to you by Mozilla.
+*	The Services are provided "as is" and there are no warranties of any
+kind. There are significant limits on Mozilla's liability for any damages
+arising from your use of the Services.
+
+
+Terms of Service
+
+
+1.      Introduction
+
+
+These Terms of Service ("Terms") govern your use of Firefox cloud services,
+a suite of online services provided by Mozilla (the "Services").
+
+
+2.      Firefox Accounts
+
+
+In order to use the Services, you'll need to create a Firefox Account.
+During registration, you will be asked to set a password. You are
+responsible for keeping your password confidential and for the activity that
+happens through your Firefox account. Mozilla is not responsible for any
+losses arising out of unauthorized use of your Firefox account.
+
+
+3.      Features
+
+
+Firefox Sync lets you access information stored in Firefox across devices,
+including your tabs, awesome bar, passwords, bookmarks, and browser
+preferences. You can enable and disable Firefox Sync through the Tools
+section of Firefox.
+
+
+4.      Privacy Policy
+
+
+The Firefox Cloud Services Privacy Notice
+<http://www.mozilla.org/en-US/privacy/firefox-cloud/>  describes details on
+what we receive from your use of the Services and how we use that
+information. We use the information we receive through the Services as
+described in our Mozilla Privacy Policy <http://www.mozilla.org/privacy/> .
+
+
+5.      Your Content in our Services
+
+
+You may upload content as part of the features of the Services. By uploading
+content, you hereby grant us a nonexclusive, royalty-free, worldwide license
+to use your content in connection with the provision of the Services. You
+hereby represent and warrant that your content will not infringe the rights
+of any third party and will comply with any content guidelines presented by
+Mozilla.
+
+
+6.      Mozilla's Proprietary Rights
+
+
+Mozilla does not grant you any intellectual property rights in the Services
+that are not specifically stated in these Terms. For example, these Terms do
+not provide the right to use any of Mozilla's copyrights, trade names,
+trademarks, service marks, logos, domain names, or other distinctive brand
+features. The Services are distributed under and subject to the current
+version of the Mozilla Public License <http://www.mozilla.org/MPL/> .
+
+
+7.      Term; Termination
+
+
+These Terms will continue to apply until ended by either you or Mozilla. You
+can choose to end them at any time for any reason by deactivating your
+Firefox account and discontinuing your use of the Services.
+
+We may suspend or terminate your access to the Services at any time for any
+reason, including, but not limited to, if we reasonably believe: (i) you
+have violated these Terms, (ii) you create risk or possible legal exposure
+for us; or (iii) our provision of the Services to you is no longer
+commercially viable. We will make reasonable efforts to notify you by the
+email address associated with your Firefox account or the next time you
+attempt to access the Services.
+
+In all such cases, these Terms shall terminate, including, without
+limitation, your license to use the Services, except that the following
+sections shall continue to apply: Indemnification, Disclaimer; Limitation of
+Liability, Miscellaneous.
+
+
+8.      Indemnification
+
+
+You agree to defend, indemnify and hold harmless Mozilla, its contractors,
+contributors, licensors, and partners, and their respective directors,
+officers, employees and agents ("Indemnified Parties") from and against any
+and all third party claims and expenses, including attorneys' fees, arising
+out of or related to your use of the Services (including, but not limited
+to, from any content uploaded by you).
+
+
+9.      Disclaimer; Limitation of Liability
+
+
+THE SERVICES ARE PROVIDED "AS IS" WITH ALL FAULTS. TO THE EXTENT PERMITTED
+BY LAW, MOZILLA AND THE INDEMNIFIED PARTIES HEREBY DISCLAIM ALL WARRANTIES,
+WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES THAT THE
+SERVICES ARE FREE OF DEFECTS, MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE,
+AND NON-INFRINGING. YOU BEAR THE ENTIRE RISK AS TO SELECTING THE SERVICES
+FOR YOUR PURPOSES AND AS TO THE QUALITY AND PERFORMANCE OF THE SERVICES,
+INCLUDING WITHOUT LIMITATION THE RISK THAT YOUR CONTENT IS DELETED OR
+CORRUPTED OR THAT SOMEONE ELSE ACCESSES YOUR ACCOUNT. THIS LIMITATION WILL
+APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY REMEDY. SOME
+JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF IMPLIED
+WARRANTIES, SO THIS DISCLAIMER MAY NOT APPLY TO YOU.
+
+EXCEPT AS REQUIRED BY LAW, MOZILLA AND THE INDEMNIFIED PARTIES WILL NOT BE
+LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY
+DAMAGES ARISING OUT OF OR IN ANY WAY RELATING TO THESE TERMS OR THE USE OF
+OR INABILITY TO USE THE SERVICES, INCLUDING WITHOUT LIMITATION DIRECT AND
+INDIRECT DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, LOST PROFITS, LOSS OF
+DATA, AND COMPUTER FAILURE OR MALFUNCTION, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF THE THEORY (CONTRACT, TORT, OR
+OTHERWISE) UPON WHICH SUCH CLAIM IS BASED. THE COLLECTIVE LIABILITY OF
+MOZILLA AND THE INDEMNIFIED PARTIES UNDER THIS AGREEMENT WILL NOT EXCEED
+$500 (FIVE HUNDRED DOLLARS). SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION
+OR LIMITATION OF INCIDENTAL, CONSEQUENTIAL, OR SPECIAL DAMAGES, SO THIS
+EXCLUSION AND LIMITATION MAY NOT APPLY TO YOU.
+
+
+10.  Modifications to these Terms
+
+
+Mozilla may update these Terms from time to time to address a new feature of
+the Services or to clarify a provision. The updated Terms will be posted
+online. If the changes are substantive, we will announce the update through
+Mozilla's usual channels for such announcements such as blog posts and
+forums. Your continued use of the Services after the effective date of such
+changes constitutes your acceptance of such changes. To make your review
+more convenient, we will post an effective date at the top of this page.
+
+
+11.  Miscellaneous
+
+
+These Terms constitute the entire agreement between you and Mozilla
+concerning the Services and are governed by the laws of the state of
+California, U.S.A., excluding its conflict of law provisions. If any portion
+of these Terms is held to be invalid or unenforceable, the remaining
+portions will remain in full force and effect. In the event of a conflict
+between a translated version of these terms and the English language
+version, the English language version shall control.
+
+
+12.  Contact Us
+
+
+Contact Mozilla at
+
+
+Mozilla Corporation
+Attn: Mozilla - Legal Notices
+331 E. Evelyn Ave.,
+Mountain View, CA 94041
+
+ 
+
+--
+Scott Treacy CISSP
+
+Principal Consultant
+
+Treacy Consulting Services Ltd
+Phone: +44 131 618 9700    Mobile: +44 7894 30 10 20    Email:
+scott@treacy.co.uk
+
+ 
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_NextPart_000_0365_01CFD0C8.38D58E30
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta name=3DGenerator content=3D"Microso=
+ft Word 14 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-priority:9;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+h4
+	{mso-style-priority:9;
+	mso-style-link:"Heading 4 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+address
+	{mso-style-priority:99;
+	mso-style-link:"HTML Address Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 1";
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:EN-GB;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:EN-GB;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:EN-GB;
+	font-weight:bold;}
+span.HTMLAddressChar
+	{mso-style-name:"HTML Address Char";
+	mso-style-priority:99;
+	mso-style-link:"HTML Address";
+	font-family:"Times New Roman","serif";
+	mso-fareast-language:EN-GB;
+	font-style:italic;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1183862633;
+	mso-list-template-ids:1278621886;}
+@list l1
+	{mso-list-id:1420756003;
+	mso-list-template-ids:-554914880;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-GB link=3D"#0563C1=
+" vlink=3D"#954F72"><div class=3DWordSection1><p class=3DMsoNormal>Hi,<o:p>=
+</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal><a=
+ href=3D"https://accounts.firefox.com/legal/terms">https://accounts.firefox=
+.com/legal/terms</a> &amp; also about:accounts<o:p></o:p></p><p class=3DMso=
+Normal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Below is the terms of serv=
+ice for creating an account to use &#8220;Firefox Sync&#8221;. Point 5 is w=
+holly unacceptable. These are my bookmarks yet they are effectively saying =
+1/ we can use them however we want and 2/ they better not contain something=
+ we deem inappropriate!<o:p></o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p=
+></p><p class=3DMsoNormal>Regards<o:p></o:p></p><p class=3DMsoNormal>Scott<=
+o:p></o:p></p><h3><o:p>&nbsp;</o:p></h3><h3>Firefox cloud services<o:p></o:=
+p></h3><h1 id=3Dfxa-tos-header>Terms of Service<o:p></o:p></h1><p>Last Upda=
+ted March 26, 2014<o:p></o:p></p><h4 id=3Dsummary>Summary<o:p></o:p></h4><p=
+>This top section summarizes the terms below. This summary is provided to h=
+elp your understanding of the terms, but be sure to read the entire documen=
+t, because when you agree to it, you are indicating you accept all of the t=
+erms, not just this summary.<o:p></o:p></p><ul type=3Ddisc><li class=3DMsoN=
+ormal style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;mso-list:=
+l1 level1 lfo1'>Firefox cloud services (the &quot;Services&quot;) are a sui=
+te of services provided to you by Mozilla.<o:p></o:p></li><li class=3DMsoNo=
+rmal style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;mso-list:l=
+1 level1 lfo1'>The Services are provided &quot;as is&quot; and there are no=
+ warranties of any kind. There are significant limits on Mozilla's liabilit=
+y for any damages arising from your use of the Services.<o:p></o:p></li></u=
+l><h4 id=3Dterms-of-service>Terms of Service<o:p></o:p></h4><h4 style=3D'ma=
+rgin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dintroduc=
+tion><![if !supportLists]><span style=3D'mso-list:Ignore'>1.<span style=3D'=
+font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>=
+<![endif]>Introduction<o:p></o:p></h4><p style=3D'margin-left:36.0pt'>These=
+ Terms of Service (&quot;<u>Terms</u>&quot;) govern your use of Firefox clo=
+ud services, a suite of online services provided by Mozilla (the &quot;Serv=
+ices&quot;).<o:p></o:p></p><h4 style=3D'margin-left:36.0pt;text-indent:-18.=
+0pt;mso-list:l0 level1 lfo2' id=3Dfirefox-accounts><![if !supportLists]><sp=
+an style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'=
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Firefox Accounts<o:=
+p></o:p></h4><p style=3D'margin-left:36.0pt'>In order to use the Services, =
+you'll need to create a Firefox Account. During registration, you will be a=
+sked to set a password. You are responsible for keeping your password confi=
+dential and for the activity that happens through your Firefox account. Moz=
+illa is not responsible for any losses arising out of unauthorized use of y=
+our Firefox account.<o:p></o:p></p><h4 style=3D'margin-left:36.0pt;text-ind=
+ent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dfeatures><![if !supportLists]><sp=
+an style=3D'mso-list:Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'=
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Features<o:p></o:p>=
+</h4><p style=3D'margin-left:36.0pt'>Firefox Sync lets you access informati=
+on stored in Firefox across devices, including your tabs, awesome bar, pass=
+words, bookmarks, and browser preferences. You can enable and disable Firef=
+ox Sync through the Tools section of Firefox.<o:p></o:p></p><h4 style=3D'ma=
+rgin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dprivacy-=
+policy><![if !supportLists]><span style=3D'mso-list:Ignore'>4.<span style=
+=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></s=
+pan><![endif]>Privacy Policy<o:p></o:p></h4><p style=3D'margin-left:36.0pt'=
+>The <a href=3D"http://www.mozilla.org/en-US/privacy/firefox-cloud/">Firefo=
+x Cloud Services Privacy Notice</a> describes details on what we receive fr=
+om your use of the Services and how we use that information. We use the inf=
+ormation we receive through the Services as described in our <a href=3D"htt=
+p://www.mozilla.org/privacy/">Mozilla Privacy Policy</a>.<o:p></o:p></p><h4=
+ style=3D'margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' i=
+d=3Dyour-content-in-our-services><![if !supportLists]><span style=3D'mso-li=
+st:Ignore'>5.<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp; </span></span><![endif]>Your Content in our Services<o:p></o:=
+p></h4><p style=3D'margin-left:36.0pt'>You may upload content as part of th=
+e features of the Services. By uploading content, you hereby grant us a non=
+exclusive, royalty-free, worldwide license to use your content in connectio=
+n with the provision of the Services. You hereby represent and warrant that=
+ your content will not infringe the rights of any third party and will comp=
+ly with any content guidelines presented by Mozilla.<o:p></o:p></p><h4 styl=
+e=3D'margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dm=
+ozilla-s-proprietary-rights><![if !supportLists]><span style=3D'mso-list:Ig=
+nore'>6.<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp; </span></span><![endif]>Mozilla's Proprietary Rights<o:p></o:p></h=
+4><p style=3D'margin-left:36.0pt'>Mozilla does not grant you any intellectu=
+al property rights in the Services that are not specifically stated in thes=
+e Terms. For example, these Terms do not provide the right to use any of Mo=
+zilla's copyrights, trade names, trademarks, service marks, logos, domain n=
+ames, or other distinctive brand features. The Services are distributed und=
+er and subject to the current version of the <a href=3D"http://www.mozilla.=
+org/MPL/">Mozilla Public License</a>.<o:p></o:p></p><h4 style=3D'margin-lef=
+t:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dterm-termination=
+><![if !supportLists]><span style=3D'mso-list:Ignore'>7.<span style=3D'font=
+:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![e=
+ndif]>Term; Termination<o:p></o:p></h4><p style=3D'margin-left:36.0pt'>Thes=
+e Terms will continue to apply until ended by either you or Mozilla. You ca=
+n choose to end them at any time for any reason by deactivating your Firefo=
+x account and discontinuing your use of the Services.<o:p></o:p></p><p styl=
+e=3D'margin-left:36.0pt'>We may suspend or terminate your access to the Ser=
+vices at any time for any reason, including, but not limited to, if we reas=
+onably believe: (i) you have violated these Terms, (ii) you create risk or =
+possible legal exposure for us; or (iii) our provision of the Services to y=
+ou is no longer commercially viable. We will make reasonable efforts to not=
+ify you by the email address associated with your Firefox account or the ne=
+xt time you attempt to access the Services.<o:p></o:p></p><p style=3D'margi=
+n-left:36.0pt'>In all such cases, these Terms shall terminate, including, w=
+ithout limitation, your license to use the Services, except that the follow=
+ing sections shall continue to apply: Indemnification, Disclaimer; Limitati=
+on of Liability, Miscellaneous.<o:p></o:p></p><h4 style=3D'margin-left:36.0=
+pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dindemnification><![if =
+!supportLists]><span style=3D'mso-list:Ignore'>8.<span style=3D'font:7.0pt =
+"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>I=
+ndemnification<o:p></o:p></h4><p style=3D'margin-left:36.0pt'>You agree to =
+defend, indemnify and hold harmless Mozilla, its contractors, contributors,=
+ licensors, and partners, and their respective directors, officers, employe=
+es and agents (&quot;Indemnified Parties&quot;) from and against any and al=
+l third party claims and expenses, including attorneys' fees, arising out o=
+f or related to your use of the Services (including, but not limited to, fr=
+om any content uploaded by you).<o:p></o:p></p><h4 style=3D'margin-left:36.=
+0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Ddisclaimer-limitation=
+-of-liability><![if !supportLists]><span style=3D'mso-list:Ignore'>9.<span =
+style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </spa=
+n></span><![endif]>Disclaimer; Limitation of Liability<o:p></o:p></h4><p st=
+yle=3D'margin-left:36.0pt'>THE SERVICES ARE PROVIDED &quot;AS IS&quot; WITH=
+ ALL FAULTS. TO THE EXTENT PERMITTED BY LAW, MOZILLA AND THE INDEMNIFIED PA=
+RTIES HEREBY DISCLAIM ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING=
+ WITHOUT LIMITATION WARRANTIES THAT THE SERVICES ARE FREE OF DEFECTS, MERCH=
+ANTABLE, FIT FOR A PARTICULAR PURPOSE, AND NON-INFRINGING. YOU BEAR THE ENT=
+IRE RISK AS TO SELECTING THE SERVICES FOR YOUR PURPOSES AND AS TO THE QUALI=
+TY AND PERFORMANCE OF THE SERVICES, INCLUDING WITHOUT LIMITATION THE RISK T=
+HAT YOUR CONTENT IS DELETED OR CORRUPTED OR THAT SOMEONE ELSE ACCESSES YOUR=
+ ACCOUNT. THIS LIMITATION WILL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTI=
+AL PURPOSE OF ANY REMEDY. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR =
+LIMITATION OF IMPLIED WARRANTIES, SO THIS DISCLAIMER MAY NOT APPLY TO YOU.<=
+o:p></o:p></p><p style=3D'margin-left:36.0pt'>EXCEPT AS REQUIRED BY LAW, MO=
+ZILLA AND THE INDEMNIFIED PARTIES WILL NOT BE LIABLE FOR ANY INDIRECT, SPEC=
+IAL, INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR IN A=
+NY WAY RELATING TO THESE TERMS OR THE USE OF OR INABILITY TO USE THE SERVIC=
+ES, INCLUDING WITHOUT LIMITATION DIRECT AND INDIRECT DAMAGES FOR LOSS OF GO=
+ODWILL, WORK STOPPAGE, LOST PROFITS, LOSS OF DATA, AND COMPUTER FAILURE OR =
+MALFUNCTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND REGARDL=
+ESS OF THE THEORY (CONTRACT, TORT, OR OTHERWISE) UPON WHICH SUCH CLAIM IS B=
+ASED. THE COLLECTIVE LIABILITY OF MOZILLA AND THE INDEMNIFIED PARTIES UNDER=
+ THIS AGREEMENT WILL NOT EXCEED $500 (FIVE HUNDRED DOLLARS). SOME JURISDICT=
+IONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL, CONSEQUENTIAL,=
+ OR SPECIAL DAMAGES, SO THIS EXCLUSION AND LIMITATION MAY NOT APPLY TO YOU.=
+<o:p></o:p></p><h4 style=3D'margin-left:36.0pt;text-indent:-18.0pt;mso-list=
+:l0 level1 lfo2' id=3Dmodifications-to-these-terms><![if !supportLists]><sp=
+an style=3D'mso-list:Ignore'>10.<span style=3D'font:7.0pt "Times New Roman"=
+'>&nbsp; </span></span><![endif]>Modifications to these Terms<o:p></o:p></h=
+4><p style=3D'margin-left:36.0pt'>Mozilla may update these Terms from time =
+to time to address a new feature of the Services or to clarify a provision.=
+ The updated Terms will be posted online. If the changes are substantive, w=
+e will announce the update through Mozilla's usual channels for such announ=
+cements such as blog posts and forums. Your continued use of the Services a=
+fter the effective date of such changes constitutes your acceptance of such=
+ changes. To make your review more convenient, we will post an effective da=
+te at the top of this page.<o:p></o:p></p><h4 style=3D'margin-left:36.0pt;t=
+ext-indent:-18.0pt;mso-list:l0 level1 lfo2' id=3Dmiscellaneous><![if !suppo=
+rtLists]><span style=3D'mso-list:Ignore'>11.<span style=3D'font:7.0pt "Time=
+s New Roman"'>&nbsp; </span></span><![endif]>Miscellaneous<o:p></o:p></h4><=
+p style=3D'margin-left:36.0pt'>These Terms constitute the entire agreement =
+between you and Mozilla concerning the Services and are governed by the law=
+s of the state of California, U.S.A., excluding its conflict of law provisi=
+ons. If any portion of these Terms is held to be invalid or unenforceable, =
+the remaining portions will remain in full force and effect. In the event o=
+f a conflict between a translated version of these terms and the English la=
+nguage version, the English language version shall control.<o:p></o:p></p><=
+h4 style=3D'margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2'=
+ id=3Dcontact-us><![if !supportLists]><span style=3D'mso-list:Ignore'>12.<s=
+pan style=3D'font:7.0pt "Times New Roman"'>&nbsp; </span></span><![endif]>C=
+ontact Us<o:p></o:p></h4><p style=3D'margin-left:36.0pt'>Contact Mozilla at=
+<o:p></o:p></p><address style=3D'margin-left:36.0pt'><br>Mozilla Corporatio=
+n<br>Attn: Mozilla &#8211; Legal Notices<br>331 E. Evelyn Ave.,<br>Mountain=
+ View, CA 94041<o:p></o:p></address><p class=3DMsoNormal><o:p>&nbsp;</o:p><=
+/p><p class=3DMsoNormal><span style=3D'color:black;mso-fareast-language:EN-=
+GB'>--<br>Scott Treacy CISSP<o:p></o:p></span></p><p class=3DMsoNormal><spa=
+n style=3D'color:black;mso-fareast-language:EN-GB'>Principal Consultant<o:p=
+></o:p></span></p><p class=3DMsoNormal><span style=3D'color:black;mso-farea=
+st-language:EN-GB'>Treacy Consulting Services Ltd<br>Phone: +44 131 618 970=
+0&nbsp;&nbsp;&nbsp; Mobile: +44 7894 30 10 20&nbsp;&nbsp;&nbsp; Email: scot=
+t@treacy.co.uk<o:p></o:p></span></p><p class=3DMsoNormal><o:p>&nbsp;</o:p><=
+/p></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_NextPart_000_0365_01CFD0C8.38D58E30--
+

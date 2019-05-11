@@ -1,0 +1,99 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.11.16 with SMTP id 16csp352601wfk;
+        Tue, 14 Aug 2012 03:58:08 -0700 (PDT)
+Received: by 10.58.68.4 with SMTP id r4mr11799523vet.21.1344941887869;
+        Tue, 14 Aug 2012 03:58:07 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxC_3qiBBRoE5FL9cw@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id de5si1367523vdc.126.2012.08.14.03.58.07
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 14 Aug 2012 03:58:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxC_3qiBBRoE5FL9cw@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxC_3qiBBRoE5FL9cw@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxC_3qiBBRoE5FL9cw@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbgb30 with SMTP id gb30sf212913vcb.29
+        for <multiple recipients>; Tue, 14 Aug 2012 03:58:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=vxQxfXKpq/wRnY1TO/os1cSuCRcRM+wVtg9B9YLQjF0=;
+        b=LWcHxy0UJZP/Lfl46Rvq/zzmg2wg2gwmHvxkaLger2EJtNcrg7FxmwiXgbj6K/4bEK
+         0ovEZOQLPFJWn4w3LiJ6QjETn5zXqN6HEF75UQekgwIVb/FXiSwHLkENSjW3WUzdMdeL
+         AElPPutHqnBk5+xOiugtQAkceMIeM+ARa20kw=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=vxQxfXKpq/wRnY1TO/os1cSuCRcRM+wVtg9B9YLQjF0=;
+        b=G4GjBMRP4v0WrI0JPRosIHxwO4X2ajNkd3ltzorem11bBbUMNA+wtoYjv4/tnhVX1A
+         VTaFDRE6B61Io8b2pVqlFVbo8pvfmceG9UGz+HyYvfINxoANCf4CFxyJs94GmjGNGK9e
+         FIjZcImfGCEr8rKeZhpRJoG9EG0fn/GmAAFbTgpwrK7Az/3aOoGGx0ZI5rn/qWDh+8xC
+         pn3O+Q6xJB+zEF5uv3MmiPvGGcks4gFMy8D3sagKAU+UKVLb5yTd4959ec7NWHpIQtNw
+         lsX3nsolFCF4tBDGlGVTNYsM0ghVyrPp+rtN2mdldGLU1MeqLpMZ9VqEsk10fJeGk6kw
+         SjDA==
+Received: by 10.224.40.18 with SMTP id i18mr3318356qae.8.1344941887030;
+        Tue, 14 Aug 2012 03:58:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.229.178.68 with SMTP id bl4ls356992qcb.9.gmail; Tue, 14 Aug
+ 2012 03:58:06 -0700 (PDT)
+Received: by 10.224.138.146 with SMTP id a18mr10641683qau.6.1344941886583;
+        Tue, 14 Aug 2012 03:58:06 -0700 (PDT)
+Received: by 10.224.18.72 with SMTP id v8msqaa;
+        Thu, 9 Aug 2012 05:53:54 -0700 (PDT)
+Received: by 10.236.136.202 with SMTP id w50mr11764316yhi.47.1344516834446;
+        Thu, 09 Aug 2012 05:53:54 -0700 (PDT)
+Received: by 10.236.136.202 with SMTP id w50mr11764313yhi.47.1344516834433;
+        Thu, 09 Aug 2012 05:53:54 -0700 (PDT)
+Received: from mail-yw0-f46.google.com (mail-yw0-f46.google.com [209.85.213.46])
+        by gmr-mx.google.com with ESMTPS id i24si95495anh.2.2012.08.09.05.53.54
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 09 Aug 2012 05:53:54 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.213.46 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.213.46;
+Received: by yhmm54 with SMTP id m54so424758yhm.5
+        for <tosdr@googlegroups.com>; Thu, 09 Aug 2012 05:53:54 -0700 (PDT)
+Received: by 10.50.170.3 with SMTP id ai3mr908296igc.9.1344516834028; Thu, 09
+ Aug 2012 05:53:54 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.64.73.70 with HTTP; Thu, 9 Aug 2012 05:53:33 -0700 (PDT)
+X-Originating-IP: [76.126.160.147]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Thu, 9 Aug 2012 05:53:33 -0700
+Message-ID: <CABQMFTRJhN7Fb0HS4Q-7fP_wayqtra+vcYgnjymS4JHaA8D_sA@mail.gmail.com>
+Subject: [tosdr:369] 
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQnROgSKC04bBfKBzF5LUv3dvEdG4zo6fiMoFgoaKWAOMHqmPAtJ1hF0o+/q/7GsJCXpuO33
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.213.46 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

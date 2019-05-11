@@ -1,0 +1,231 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.5.16 with SMTP id 16csp78679iof;
+        Fri, 16 Oct 2015 11:55:14 -0700 (PDT)
+X-Received: by 10.194.202.137 with SMTP id ki9mr18137539wjc.16.1445021714382;
+        Fri, 16 Oct 2015 11:55:14 -0700 (PDT)
+Return-Path: <tosdr+bncBCKP5C4PRMERBBUQQWYQKGQEWHBTW7Y@googlegroups.com>
+Received: from relay5-d.mail.gandi.net (relay5-d.mail.gandi.net. [2001:4b98:c:538::197])
+        by mx.google.com with ESMTPS id dm12si6726685wid.39.2015.10.16.11.55.14
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 16 Oct 2015 11:55:14 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBBUQQWYQKGQEWHBTW7Y@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) client-ip=2001:4b98:c:538::197;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBBUQQWYQKGQEWHBTW7Y@googlegroups.com does not designate 2001:4b98:c:538::197 as permitted sender) smtp.mailfrom=tosdr+bncBCKP5C4PRMERBBUQQWYQKGQEWHBTW7Y@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by relay5-d.mail.gandi.net (Postfix) with ESMTP id 21D4D41C04E
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 20:55:14 +0200 (CEST)
+Received: from mfilter35-d.gandi.net (mfilter35-d.gandi.net [217.70.178.166])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0E93B2260AD
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 20:55:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter35-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.131])
+	by mfilter35-d.gandi.net (mfilter35-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id xP7wEaVP-dAy for <michiel@unhosted.org>;
+	Fri, 16 Oct 2015 20:55:07 +0200 (CEST)
+Received: from mail-ob0-x240.google.com (mail-ob0-x240.google.com [IPv6:2607:f8b0:4003:c01::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5CE30226093
+	for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 20:55:04 +0200 (CEST)
+Received: by obbhq1 with SMTP id hq1sf17904180obb.0
+        for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 11:55:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=NXeFuuhPNxK9b/RyZzUDZTzSxj/t0VKO8rWeQ39FZC0=;
+        b=TNDXHsWZYuARAYM7gm/hxRXxzlgr50Dyjjnqpp3ThEGl6Ok+hoKUehHc50XffALtAd
+         rHkg6j8en1hmyNUy7DTmttuUn4oYFTytuD9PbYP1y6QGiKdxq3SnKfh9OK9aVtn5SibH
+         JdM5uA0leQmqKSn1lC32FSvBOK9OJYQJTlwEMddL+N9BZxtqxZFdiaX6YJD0czN8eKXs
+         rLcOV8u8nSA28I6GTKaqL836XiP09Ob7lw8vvZXk9s9eG3NEs8EV0OiN1Y6eJPgzuY0n
+         TLVlb3vTp3H8Aw18A+J6Hxzgb2UgSqn/0gtGhUSfb1XhYuTKh1zz9zj15lDzGqK8cjAR
+         L51A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=NXeFuuhPNxK9b/RyZzUDZTzSxj/t0VKO8rWeQ39FZC0=;
+        b=rMcSo4mftRfoOqvFwXAJA9lGt2CPssiFkqjawTaMVt2T2oHahY6uvADi3Y9b8jxZ+i
+         O+yQmudjTdhg/ycet+T613w4Fs6POv5DQzo0cEQusJ7SUaoP0lDWDEUBB/h2/Yfiqs/k
+         dZpMDyzy6lH5+Pga3Z8ziXHkU8gfspf7F0KAPFiXMqznzZnX14Kt/xFRAyKjaFnjjF8j
+         twVQsjvDG4V59aGGbnYl1Q1RJS32VhQXSDzRshkz30f1pVfnPHK8ISLZxOBjutkb4lTl
+         sNB1m96qdvF2xfBfd5m9iB/L+FkSvdC54rQMTfEUlSVBmDicyUG5D1g7eJblpHUuUNyW
+         QyEA==
+X-Received: by 10.50.124.69 with SMTP id mg5mr40964igb.10.1445021703257;
+        Fri, 16 Oct 2015 11:55:03 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.163.7 with SMTP id m7ls925374ioe.61.gmail; Fri, 16 Oct
+ 2015 11:55:02 -0700 (PDT)
+X-Received: by 10.50.164.167 with SMTP id yr7mr161618igb.2.1445021702688;
+        Fri, 16 Oct 2015 11:55:02 -0700 (PDT)
+Date: Fri, 16 Oct 2015 11:55:01 -0700 (PDT)
+From: natalcastilio8@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: dhlcourier_deliveryservice85@rocketmail.com, 
+	pmessias@policiamilitar.sp.gov.br, natalcastilio8@gmail.com
+Message-Id: <8b38fc3a-a7e0-49d7-9426-fea9e697e86f@googlegroups.com>
+In-Reply-To: <f74570105df0525d99ab010b9beb5176@policiamilitar.sp.gov.br>
+References: <f74570105df0525d99ab010b9beb5176@policiamilitar.sp.gov.br>
+Subject: [tosdr:3659] Re: dhl Senior Delivery Officer
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_850_3505531.1445021701980"
+X-Original-Sender: natalcastilio8@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_850_3505531.1445021701980
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Em quinta-feira, 1 de novembro de 2012 02:12:55 UTC-2, DHL EXPRESS  escreve=
+u:
+> =C2=A0
+>=20
+> =C2=A0
+>=20
+>=20
+> --=20
+> You have a package in our office which was sent to you by the combination=
+ all Banks that operate Western Union Money Transfer in their Banks.
+>=20
+> Provide the following details:
+> FULL NAME:
+> RESIDENTIAL ADDRESS:
+> OCCUPATION:
+> COUNTRY :
+> Marital status:
+> City/Zip code:
+> TEL NO:
+> FAX:
+> Gender:
+> SCANNED COPY OF YOUR INTERNATIONAL PASSPORT OR ANY=20
+> RELEVANT
+> IDENTIFICATION PASSPORT.
+>=20
+> Yours Sincerely,
+> Mr. Mc Donald
+> dhl Senior Delivery Officer
+
+
+
+Em quinta-feira, 1 de novembro de 2012 02:12:55 UTC-2, DHL EXPRESS  escreve=
+u:
+> =C2=A0
+>=20
+> =C2=A0
+>=20
+>=20
+> --=20
+> You have a package in our office which was sent to you by the combination=
+ all Banks that operate Western Union Money Transfer in their Banks.
+>=20
+> Provide the following details:
+> FULL NAME:
+> RESIDENTIAL ADDRESS:
+> OCCUPATION:
+> COUNTRY :
+> Marital status:
+> City/Zip code:
+> TEL NO:
+> FAX:
+> Gender:
+> SCANNED COPY OF YOUR INTERNATIONAL PASSPORT OR ANY=20
+> RELEVANT
+> IDENTIFICATION PASSPORT.
+>=20
+> Yours Sincerely,
+> Mr. Mc Donald
+> dhl Senior Delivery Officer
+
+
+
+Em quinta-feira, 1 de novembro de 2012 02:12:55 UTC-2, DHL EXPRESS  escreve=
+u:
+> =C2=A0
+>=20
+> =C2=A0
+>=20
+>=20
+> --=20
+> You have a package in our office which was sent to you by the combination=
+ all Banks that operate Western Union Money Transfer in their Banks.
+>=20
+> Provide the following details:
+> FULL NAME:
+> RESIDENTIAL ADDRESS:
+> OCCUPATION:
+> COUNTRY :
+> Marital status:
+> City/Zip code:
+> TEL NO:
+> FAX:
+> Gender:
+> SCANNED COPY OF YOUR INTERNATIONAL PASSPORT OR ANY=20
+> RELEVANT
+> IDENTIFICATION PASSPORT.
+>=20
+> Yours Sincerely,
+> Mr. Mc Donald
+> dhl Senior Delivery Officer
+
+
+
+Em quinta-feira, 1 de novembro de 2012 02:12:55 UTC-2, DHL EXPRESS  escreve=
+u:
+> =C2=A0
+>=20
+> =C2=A0
+>=20
+>=20
+> --=20
+> You have a package in our office which was sent to you by the combination=
+ all Banks that operate Western Union Money Transfer in their Banks.
+>=20
+> Provide the following details:
+> FULL NAME:
+> RESIDENTIAL ADDRESS:
+> OCCUPATION:
+> COUNTRY :
+> Marital status:
+> City/Zip code:
+> TEL NO:
+> FAX:
+> Gender:
+> SCANNED COPY OF YOUR INTERNATIONAL PASSPORT OR ANY=20
+> RELEVANT
+> IDENTIFICATION PASSPORT.
+>=20
+> Yours Sincerely,
+> Mr. Mc Donald
+> dhl Senior Delivery Officer
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_850_3505531.1445021701980--

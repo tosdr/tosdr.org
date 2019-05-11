@@ -1,0 +1,90 @@
+Return-Path: <tosdr+bncBCCZL2G36YCRBR4BSGLQKGQETK2SK5A@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 5784C41439
+	for <anything@michielbdejong.com>; Sat, 25 Jan 2014 23:55:06 +0100 (CET)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 540B31164D2
+	for <anything@michielbdejong.com>; Sat, 25 Jan 2014 23:55:06 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id bkFoq5JCob44 for <anything@michielbdejong.com>;
+	Sat, 25 Jan 2014 23:55:05 +0100 (CET)
+Received: from mail-ve0-x238.google.com (mail-ve0-x238.google.com [IPv6:2607:f8b0:400c:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E696F1164BE
+	for <michiel@michielbdejong.com>; Sat, 25 Jan 2014 23:55:04 +0100 (CET)
+Received: by mail-ve0-f184.google.com with SMTP id db12sf910969veb.1
+        for <michiel@michielbdejong.com>; Sat, 25 Jan 2014 14:55:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=aC/p1+JutU/eTmLVMVbci8N59jSNWJop/EeLeGpvtoQ=;
+        b=nVWIVVUWDRQwpENNcuISuEA/y60UVtD2rUc0Gkjn6hX6VdsuRgpOyh4ll9jtEnlbkV
+         Q91VpCCR1sNNit6RNHsbCN3PseU6INGziTh4HGdF+kcnVK5bN/FEd/dcSFbX7bmO+yWU
+         OY7Rdnr2pYevy+pLAsPtu6hRPXI5TeqIo/faE84wdp/5oAivNgYcA2cQb1Brqz6q/4N9
+         ouID3N+dFgiMws2Lq2rZ/mJJqOjSDaw8kmKhktZ3pq4F6wF4YCaYFwHHIhf2RFVDTtNV
+         2v0rFNjtiSxHvb5cq5cEViG1sFmXINH58B3AkjAh0nZc8EhAUCsDE0nb8w5/bbJWT3XF
+         VxYA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=aC/p1+JutU/eTmLVMVbci8N59jSNWJop/EeLeGpvtoQ=;
+        b=fdfAacjkQ8rJgUCUdzX8iKd71rFXx+fayoLWT7MNOkAvt8e4wzpxHv9SlIBJc9KQ8I
+         htEbqf7XF3B6b9GE98mcYToG96zjLbUfxvtFGPIfoLgNJKV2gvm29R9IoEJPhfRBNlzE
+         qnQoxtduDYN6oEEEOpxM3Pjlf/wcmWrAQLwwFgWDvp50+VQw12Uv7TTGD1DfsrRDAsSD
+         mm3AV/zKMba/mXp81toSnLcQ/tR6HtZlWbzjBb9yFo1geFeIRxsfZr5lpaQegPTm9S3R
+         5eq/762oQWKy/t5Y1fsy+CJtqHkp+y6LE2swEUH31H9ses1c31amBpy4Pjf+nvZcz33W
+         AbFg==
+X-Received: by 10.140.47.43 with SMTP id l40mr11691qga.11.1390690503930;
+        Sat, 25 Jan 2014 14:55:03 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.48.161 with SMTP id o30ls1178808qga.94.gmail; Sat, 25 Jan
+ 2014 14:55:03 -0800 (PST)
+X-Received: by 10.140.94.11 with SMTP id f11mr45336qge.7.1390690503711;
+        Sat, 25 Jan 2014 14:55:03 -0800 (PST)
+Date: Sat, 25 Jan 2014 14:55:03 -0800 (PST)
+From: kissaki0@gmail.com
+To: tosdr@googlegroups.com
+Cc: kissaki0@gmail.com
+Message-Id: <2191b0da-300e-40d8-801b-a37a68ebb202@googlegroups.com>
+In-Reply-To: <5dc9d934-71e0-4b27-9774-b5fc4c411b8e@googlegroups.com>
+References: <5dc9d934-71e0-4b27-9774-b5fc4c411b8e@googlegroups.com>
+Subject: [tosdr:2922] Re: Twitch [Bad] Broadcasters allow twitch to use
+ content for anything.
+MIME-Version: 1.0
+X-Original-Sender: kissaki0@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+
+The following paragraph goes:
+
+> Except for Broadcaster Content already downloaded by users, the foregoing license granted by you terminates as to a specific piece of Broadcaster Content once you remove or delete such Broadcaster Content from the Twitch Service. 
+
+So at least once you delete your stuff, they can no longer do stuff with it.
+The target seems to clearly be just the delivering of the content.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.

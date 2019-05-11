@@ -1,0 +1,155 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBGFN5SHAKGQENTRSWDY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 016F8161740
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 21:44:31 +0200 (CEST)
+Received: from mfilter11-d.gandi.net (mfilter11-d.gandi.net [217.70.178.131])
+	by spool.mail.gandi.net (Postfix) with ESMTP id F279B1164DE
+	for <anything@michielbdejong.com>; Mon,  8 Jul 2013 21:44:30 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter11-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter11-d.gandi.net (mfilter11-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 9OsNT8qhoXHi for <anything@michielbdejong.com>;
+	Mon,  8 Jul 2013 21:44:29 +0200 (CEST)
+Received: from mail-oa0-x23d.google.com (mail-oa0-x23d.google.com [IPv6:2607:f8b0:4003:c02::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 321231161D4
+	for <michiel@michielbdejong.com>; Mon,  8 Jul 2013 21:44:26 +0200 (CEST)
+Received: by mail-oa0-f61.google.com with SMTP id i4sf1476338oah.26
+        for <michiel@michielbdejong.com>; Mon, 08 Jul 2013 12:44:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1ovL+q4SXUmxHYHvTeguxzqQZOdJ7LwGolkF7xoPAnA=;
+        b=RmKkBfgya3oh6nYHQSXTD4LLP0Fe/dn8sEp9noW1kdaSaYq/Pu3uKPXqmiYYtNYEQx
+         EMFr/q8S3N0oy4KV5nMetN8L4pU4pMJQX3CZ3z7MbPRlw8r5RzHBhOBa7HVhjJ88r36G
+         wsZ6KQnOL3NKxNCKSXgefl62sjI/8GaYhiM0Gmrmrpcz5MGuoPNyGI5AVJNW9XFZR4eb
+         70gPCtOf0fM5ZgAA7uid74ZFObr7rhqDkdLn43pPKlxhAG5pkvVgoSLYMNc5yEPuxWFb
+         VhRaU5lDl2dxfTKDxoC7hsbGUwLJAKbBK78eZvUkeSSIogUvKdBdQKip9ugMop6OwHBZ
+         MyfQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=1ovL+q4SXUmxHYHvTeguxzqQZOdJ7LwGolkF7xoPAnA=;
+        b=MOgcUZJlmVy5K75/N076CUxApj3ifcE7ZYJPYGrRMJcnr1Xu3H4WImdxdQviIkd1KR
+         Hhc2qB65UbunS8MMIUY2Mgs048VSNiTKZ8Oav2835UADWZwfyZUR7jdN7BlyYLy33rjY
+         rES3XnGIlcNb4uLTIiGXuUgnR/yNxNzg7D0q4X+U+5KL7gdnkVfHCMPZ4OqERk/F19f0
+         0vdhmHgck7fQouOZLjAcHXpYpd+xkCbon7pgt9bmSdm2UeODsPNaVUSK1nQXqpPXIXN/
+         zjXGuczs9de1tk7ys2sctrhqPSLuik4xdAB/hUsEZU82vqvuihJzSjFOkaDU1Gk23Ji0
+         5PkQ==
+X-Received: by 10.49.120.67 with SMTP id la3mr575038qeb.35.1373312664782;
+        Mon, 08 Jul 2013 12:44:24 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.39.201 with SMTP id r9ls2010165qek.72.gmail; Mon, 08 Jul
+ 2013 12:44:24 -0700 (PDT)
+X-Received: by 10.49.58.242 with SMTP id u18mr570857qeq.23.1373312664364;
+        Mon, 08 Jul 2013 12:44:24 -0700 (PDT)
+Date: Mon, 8 Jul 2013 12:44:24 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <e84bf59d-cca4-4038-abac-a671969e0e61@googlegroups.com>
+In-Reply-To: <da1aec88-be1a-442a-91fc-0efd1c914969@googlegroups.com>
+References: <da1aec88-be1a-442a-91fc-0efd1c914969@googlegroups.com>
+Subject: [tosdr:2467] Re: Tumblr TOS and Privacy Policy only available in English
+MIME-Version: 1.0
+X-Original-Sender: irmcgowan@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_478_19608619.1373312664053"
+
+------=_Part_478_19608619.1373312664053
+Content-Type: text/plain; charset=ISO-8859-1
+
+I think this is important enough to mention, mostly because their reasoning 
+is ridiculous. Spanish speakers will be overtaking English speakers within 
+the next decade, or at least be equal in number. Not to mention the fact 
+that the internet doesn't have linguistic boundaries.
+
+Title: Tumblr's Terms of Service and Privacy Policy are only available in 
+English
+
+Topic: readability
+
+Summary: Because Tumblr is a U.S. company, and subject only to U.S. laws 
+and jurisdiction, they only provide their terms in English.
+
+Score: 10 (alert)
+
+On Monday, May 6, 2013 6:40:11 AM UTC-5, Ian McGowan wrote:
+>
+> Tumblr is a U.S. company and subject only to U.S. laws and jurisdiction, 
+>> so for the moment these documents are only available in English.
+>
+>
+> http://www.tumblr.com/policy/en/terms_of_service 
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_478_19608619.1373312664053
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I think this is important enough to mention, mostly because their reasoning=
+ is ridiculous. Spanish speakers will be overtaking English speakers within=
+ the next decade, or at least be equal in number. Not to mention the fact t=
+hat the internet doesn't have linguistic boundaries.<div><br></div><div>Tit=
+le: Tumblr's Terms of Service and Privacy Policy are only available in Engl=
+ish</div><div><br></div><div>Topic: readability</div><div><br></div><div>Su=
+mmary: Because Tumblr is a U.S. company, and subject only to U.S. laws and =
+jurisdiction, they only provide their terms in English.</div><div><br></div=
+><div>Score: 10 (alert)<br><br>On Monday, May 6, 2013 6:40:11 AM UTC-5, Ian=
+ McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin-=
+left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;=
+border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex=
+"><span style=3D"color:rgb(68,68,68);font-family:'Helvetica Neue',Helvetica=
+,sans-serif;font-size:12px;line-height:19px">Tumblr is a U.S. company and s=
+ubject only to U.S. laws and jurisdiction, so for the moment these document=
+s are only available in English.</span></blockquote><div><br></div><div><a =
+href=3D"http://www.tumblr.com/policy/en/terms_of_service" target=3D"_blank"=
+>http://www.tumblr.com/policy/<wbr>en/terms_of_service</a>&nbsp;</div></blo=
+ckquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_478_19608619.1373312664053--

@@ -1,0 +1,260 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.11.16 with SMTP id 16csp18360wfk;
+        Wed, 8 Aug 2012 08:06:54 -0700 (PDT)
+Received: by 10.224.59.199 with SMTP id m7mr30434950qah.13.1344438414129;
+        Wed, 08 Aug 2012 08:06:54 -0700 (PDT)
+Return-Path: <tosdr+bncCInL68joHRCNgYqBBRoEkPQWyQ@googlegroups.com>
+Received: from mail-qa0-f64.google.com (mail-qa0-f64.google.com [209.85.216.64])
+        by mx.google.com with ESMTPS id ep1si13667580qab.98.2012.08.08.08.06.53
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 08 Aug 2012 08:06:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCInL68joHRCNgYqBBRoEkPQWyQ@googlegroups.com designates 209.85.216.64 as permitted sender) client-ip=209.85.216.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCInL68joHRCNgYqBBRoEkPQWyQ@googlegroups.com designates 209.85.216.64 as permitted sender) smtp.mail=tosdr+bncCInL68joHRCNgYqBBRoEkPQWyQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qabg24 with SMTP id g24sf1051913qab.29
+        for <michiel@unhosted.org>; Wed, 08 Aug 2012 08:06:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:from:to:subject:date:message-id
+         :mime-version:x-mailer:thread-index:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type:content-language;
+        bh=9FWhfiDR5N7rVF0OFbnK+LmUFZrG4mWtgc2WRm4aU8I=;
+        b=W3Ot/sgrQNP4rxRjXjomX9uk6NHaLcS5rUJcqcNn6AD7+OHs5NVsAkVhJXUJJpVbik
+         stj5MLnf4j6itQdo8KtrBBhNbv6emex/AnPJLGaV70GsWQGSMgMJjS/Kg/B9lTokK7qy
+         NwEnoNo1jycFfupZ+s4HrVMpwSx0FZaR7HK0U=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:from:to:subject:date:message-id
+         :mime-version:x-mailer:thread-index:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-language;
+        bh=9FWhfiDR5N7rVF0OFbnK+LmUFZrG4mWtgc2WRm4aU8I=;
+        b=kH5oRrUjDPfQmghJyw+jjYXrZRGdTKlxVRVqfZFqTmyytkPwIPGBQ7pOMLslRGxJX0
+         gv1PIQqRE6dP/OZywZsg08oqKGZ9zlEmDc5gdA8h21jYKoSG1SwX1IxSPldgXqYk2zJ1
+         88XCg65jqV5+a/sdYGVqSYhYkn1r6NXwE0FDp46g7hJzCQCghpPU+p9UeLnJzs3y98kP
+         glPUChDTc3acZcgrf0SoknZxoFpOCAZgVnYYTirZfEZipZGyKIgty1HgJ3yRPw4Ej5G9
+         1c1aB19IkkG5IitUeEdLK32hvXz0feb2FQV18m4lvwcmymsTD430am3mlVcINWTEYaOr
+         2bNw==
+Received: by 10.236.74.38 with SMTP id w26mr3590584yhd.18.1344438413661;
+        Wed, 08 Aug 2012 08:06:53 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.126.33 with SMTP id a21ls3155256yhi.3.gmail; Wed, 08 Aug
+ 2012 08:06:53 -0700 (PDT)
+Received: by 10.236.79.98 with SMTP id h62mr9983232yhe.16.1344438413113;
+        Wed, 08 Aug 2012 08:06:53 -0700 (PDT)
+Received: by 10.236.79.98 with SMTP id h62mr9983230yhe.16.1344438412990;
+        Wed, 08 Aug 2012 08:06:52 -0700 (PDT)
+Received: from mail-yw0-f49.google.com (mail-yw0-f49.google.com [209.85.213.49])
+        by gmr-mx.google.com with ESMTPS id t29si5967934yha.0.2012.08.08.08.06.52
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 08 Aug 2012 08:06:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.213.49 is neither permitted nor denied by best guess record for domain of sergiu.geamanu@kilovera.com) client-ip=209.85.213.49;
+Received: by yhjj52 with SMTP id j52so1008491yhj.8
+        for <tosdr@googlegroups.com>; Wed, 08 Aug 2012 08:06:52 -0700 (PDT)
+Received: by 10.66.90.67 with SMTP id bu3mr568937pab.26.1344438412366;
+        Wed, 08 Aug 2012 08:06:52 -0700 (PDT)
+Received: from SONYVAIO (r180-216-29-3.cpe.vividwireless.net.au. [180.216.29.3])
+        by mx.google.com with ESMTPS id or1sm8415610pbb.10.2012.08.08.08.06.47
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 08 Aug 2012 08:06:50 -0700 (PDT)
+From: "Sergiu Geamanu" <sergiu.geamanu@kilovera.com>
+To: <tosdr@googlegroups.com>
+Subject: [tosdr:261] Congratulations
+Date: Wed, 8 Aug 2012 23:06:40 +0800
+Message-ID: <006f01cd7577$6ea864a0$4bf92de0$@kilovera.com>
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: Ac11dr6FeAvz5XIFR6iSGVrVSTGl8g==
+X-Gm-Message-State: ALoCoQkZrwgxarX4cc984djnkUc5fzYjJXpxvc4gpOuTLTAosrBglHIJKj73sjHE+Ityn8odrGXc
+X-Original-Sender: sergiu.geamanu@kilovera.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.213.49 is neither permitted nor denied by best guess record for domain
+ of sergiu.geamanu@kilovera.com) smtp.mail=sergiu.geamanu@kilovera.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0070_01CD75BA.7CCD5250"
+Content-Language: en-au
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0070_01CD75BA.7CCD5250
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+ 
+
+I salute your great initiative. I believe ToS;DR is a great idea, which
+comes at the right time.
+
+ 
+
+Myself and my team are in the middle of launching a product, and we would
+like to be honest and fair to our future users. Do you have any
+recommendations, given your expertise?
+
+ 
+
+I have other transparency ideas, but for now I am looking forward to your
+reply.
+
+ 
+
+ 
+
+ 
+
+Best,
+
+SG
+
+ 
+
+Sergiu Geamanu
+
+Project Manager
+
+KiloveraT
+
++61 431 767 407
+
+ <mailto:sergiu.geamanu@kilovera.com> sergiu.geamanu@kilovera.com
+
+ <http://www.kilovera.com> www.kilovera.com
+
+Please consider the environment before printing this email 
+
+ 
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_NextPart_000_0070_01CD75BA.7CCD5250
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3Dus-ascii"><meta name=3DGenerator content=3D"Micros=
+oft Word 14 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-AU link=3Dblue vli=
+nk=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal>Hi,<o:p></o:p></=
+p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>I salute y=
+our great initiative. I believe ToS;DR is a great idea, which comes at the =
+right time.<o:p></o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p clas=
+s=3DMsoNormal>Myself and my team are in the middle of launching a product, =
+and we would like to be honest and fair to our future users. Do you have an=
+y recommendations, given your expertise?<o:p></o:p></p><p class=3DMsoNormal=
+><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>I have other transparency ideas,=
+ but for now I am looking forward to your reply.<o:p></o:p></p><p class=3DM=
+soNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Best,<o:p></o:p=
+></p><p class=3DMsoNormal>SG<o:p></o:p></p><p class=3DMsoNormal><o:p>&nbsp;=
+</o:p></p><p class=3DMsoNormal><b><span style=3D'font-size:10.0pt;font-fami=
+ly:"Tahoma","sans-serif";mso-fareast-language:EN-AU'>Sergiu Geamanu</span><=
+/b><span style=3D'font-size:10.0pt;mso-fareast-language:EN-AU'><o:p></o:p><=
+/span></p><p class=3DMsoNormal><b><span style=3D'font-size:7.5pt;font-famil=
+y:"Tahoma","sans-serif";mso-fareast-language:EN-AU'>Project Manager</span><=
+/b><span style=3D'mso-fareast-language:EN-AU'><o:p></o:p></span></p><p clas=
+s=3DMsoNormal><span style=3D'font-size:7.5pt;font-family:"Tahoma","sans-ser=
+if";mso-fareast-language:EN-AU'>Kilovera&#8482;</span><span style=3D'mso-fa=
+reast-language:EN-AU'><o:p></o:p></span></p><p class=3DMsoNormal><span styl=
+e=3D'font-size:7.5pt;font-family:"Tahoma","sans-serif";mso-fareast-language=
+:EN-AU'>+61 431 767 407</span><span style=3D'mso-fareast-language:EN-AU'><o=
+:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:7.5pt;fon=
+t-family:"Tahoma","sans-serif";mso-fareast-language:EN-AU'><a href=3D"mailt=
+o:sergiu.geamanu@kilovera.com" target=3D"_blank"><span style=3D'color:blue'=
+>sergiu.geamanu@kilovera.com</span></a></span><span style=3D'mso-fareast-la=
+nguage:EN-AU'><o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'fon=
+t-size:7.5pt;font-family:"Tahoma","sans-serif";mso-fareast-language:EN-AU'>=
+<a href=3D"http://www.kilovera.com" target=3D"_blank"><span style=3D'color:=
+blue'>www.kilovera.com</span></a></span><span style=3D'mso-fareast-language=
+:EN-AU'><o:p></o:p></span></p><p class=3DMsoNormal><b><span style=3D'font-s=
+ize:7.5pt;color:#00B050;mso-fareast-language:EN-AU'>Please consider the env=
+ironment before printing this email</span></b><b><span style=3D'color:#00B0=
+50;mso-fareast-language:EN-AU'> <o:p></o:p></span></b></p><p class=3DMsoNor=
+mal><o:p>&nbsp;</o:p></p></div></body></html>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_NextPart_000_0070_01CD75BA.7CCD5250--
+

@@ -1,0 +1,138 @@
+MIME-Version: 1.0
+Received: by 10.49.1.78 with HTTP; Tue, 2 Oct 2012 05:19:45 -0700 (PDT)
+X-Originating-IP: [93.142.160.62]
+In-Reply-To: <3ee86880-b655-435b-9924-6ff26b819af9@googlegroups.com>
+References: <CA+aD3u05iJSkJtL2fgO=UeVjYjec1N4Ssb1mRWM6vG29xaGg9w@mail.gmail.com>
+	<3ee86880-b655-435b-9924-6ff26b819af9@googlegroups.com>
+Date: Tue, 2 Oct 2012 14:19:45 +0200
+Delivered-To: michiel@unhosted.org
+Message-ID: <CA+aD3u1c0H2TTDLDpAhnNimtou9Lf5Qm841vKG5qCYB28Q-orA@mail.gmail.com>
+Subject: Re: [tosdr:780] Re: standardizing data point texts
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+as an exercise, let's try to use this to for the clauses we have
+started assigning standards weights to, for changes:
+
+- terms may change at any time with immediate effect, and it is your
+responsibility to discover this
+- term changes are published silently X days in advance, you will not
+be notified
+- you will be notified, but the effect is immediate from the moment
+the notification is sent
+- you will be notified at least X days in advance
+
+I would map all of these to
+http://www.commonterms.net/patterns/change_of_terms/at_providers_discretion
+
+and for indemnification:
+
+- you will defend, indemnify them [, and hold them harmless] and this
+survives the termination of the agreement
+- you will indemnify them (but no mention of defending them)
+- you will indemnify them (but no mention of defending them) and this
+survives the termination of the agreement
+
+I would map all four of these to
+http://www.commonterms.net/patterns/indemnity/procedure_described
+
+How can we distinguish them? i think it's clear we need to add
+something more here, but it's not totally clear to me what or how yet.
+
+I will think about it myself as well. P=E4r, other, what do you think?
+
+
+Cheers,
+Michiel
+
+On Fri, Sep 7, 2012 at 1:31 PM, P=E4r Lanner=F6 <par@lannero.com> wrote:
+> Hi!
+>
+> If you like, the CommonTerms database of common terms can be used as a
+> master repository for such standardized patterns.
+>
+> We already have a database of some 450 patterns, and can easily add TOS;D=
+R
+> data points, and adapt the API to consequent requirements.
+> See http://www.commonterms.net/patterns
+> Every pattern gets assigned a unique URI, and when an HTTP call is made t=
+o
+> that address, a serialization of the pattern is returned.
+> When somebody (eg. after discussing the issue on the mailinglist) wants t=
+o
+> assign a data point to a website, they should start by searching the
+> database for a suitable pattern.
+> If they find one, they can assign the URI of the pattern to the website.
+> If they don't find one, they can add a new pattern to the database. This
+> will create a new URI, which they can assign to the website.
+> API methods for searching and adding to the database are under developmen=
+t.
+> URI structure needs to be discussed.
+>
+> I can see that the idea of having a master repository of patterns conflic=
+ts
+> slightly with the Unhosted ideal of being independent of any single host.
+> But all patterns could be exported regularly as json files for offline
+> storage...
+>
+> Best regards
+> P=E4r Lanner=F6, Commonterms.net
+>
+>
+> Den torsdagen den 6:e september 2012 kl. 20:19:58 UTC+2 skrev Michiel de
+> Jong:
+>>
+>> Hi,
+>>
+>> this is something that came up in the opennotice confcall just now -
+>> if you look at for instance http://tos-dr.info/topics.html#track you
+>> see the following data point texts:
+>>
+>> You must use your real name (yahoo)
+>> You must use your real name (facebook)
+>> You must use your real name (xing)
+>> You must provide your legal name (github)
+>>
+>> These (at least the first three) are obviously the same thing (even
+>> though we could weigh them differently depending on the type of
+>> service).
+>>
+>> Right now, we are not reflecting that, as data point texts are just
+>> free texts. But we could start doing that, and that way we would build
+>> up a valuable ontology of typical data points that we see recurring a
+>> lot.
+>>
+>> Once we have such a list, sites could pro-actively auto-review
+>> themselves, and in particular, if sites use templated ToS texts like
+>> the ones Docracy works on, then these could come pre-reviewed with
+>> such standardized data point texts. The weighing would then still
+>> depend on the specific service type, although even that could default
+>> to a common suggested value.
+>>
+>> Of course you could also then try to detect commonly used phrases in
+>> ToS texts, trying to treat human-readable texts as if they were
+>> machine-readable, but that's another extra step. For now just
+>> standardizing the data point texts would already be a very valuable
+>> thing, i think.
+>>
+>> Thanks Veronica Par and others on the confcall for the suggestion!
+>>
+>>
+>> Ciao,
+>> Michiel
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>

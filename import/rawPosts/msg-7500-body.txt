@@ -1,0 +1,103 @@
+Return-Path: <tosdr+bncBAABBO45ZKHQKGQE6BL2YOY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 7A65C161747
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 16:59:11 +0200 (CEST)
+Received: from mfilter25-d.gandi.net (mfilter25-d.gandi.net [217.70.178.153])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 776581421B6
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 16:59:11 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter25-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter25-d.gandi.net (mfilter25-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id fFZXW2lLkkXs for <anything@michielbdejong.com>;
+	Fri, 26 Jul 2013 16:59:09 +0200 (CEST)
+Received: from mail-vb0-x23d.google.com (mail-vb0-x23d.google.com [IPv6:2607:f8b0:400c:c02::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 53773142139
+	for <anything@michielbdejong.com>; Fri, 26 Jul 2013 16:59:09 +0200 (CEST)
+Received: by mail-vb0-f61.google.com with SMTP id x13sf369322vbb.16
+        for <anything@michielbdejong.com>; Fri, 26 Jul 2013 07:59:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:x-beenthere:date:from:to:message-id:subject:mime-version
+         :x-sg-eid:x-sendgrid-contentd-id:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=nsFKAPU/uChSo5jJuHzPprNfmtFdDDKBWDCUmbO4Ae0=;
+        b=PswJ/OqX83RjfUGgZTtKVp2xRf37/16vbQgAMz0e71pE/pLFZKMs3gN4LyFhJklhvR
+         Pyi9fZKB5ho9OC/s6pbz9a/oxEBvj2/Lv10iyMosa05IXTQnpsPndHfYvInBOpGKP5Q/
+         NFW6FPpSakcDnjrDKn+fmhjHyrdM7sO4ygSujnsmshOBWGKIMoepi/F/FMX+X+B3F0DK
+         HLo0v6UurjV3pe2vJ0Llq6PFPYsHPPWVAAjtPZNmP0aR+HfnLgUy1y3UHiwZ5XZQ/ct2
+         zFRehjzFZKBFfZvHgUsF0I3GHJ0CsEYj4QuQSNP+BY1/mhzfMpOscqieMaDFBhXzd9IF
+         wXIA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:date:from:to:message-id:subject:mime-version:x-sg-eid
+         :x-sendgrid-contentd-id:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=nsFKAPU/uChSo5jJuHzPprNfmtFdDDKBWDCUmbO4Ae0=;
+        b=hab4IQZcIEPA54Irjv8o4vnt3i3Ji33DZ+uDrWdG2OpbMPhl0ZL2hbpKRksRQqj3aY
+         xBQlhb86pb5H7Lt12478I0rcjLqs8TmP6izgx2gbhgZmi6xbUV6oetGiLcn+A/eGh4Fq
+         Qv/RFW2kccj+qQ9fMyzwQZVf4H6mZBtQ3Ki1aO5N7ml9SQ7EHvkJ034luUhit+SvQUIK
+         JhhbDju5oZmJ/QYjeeLpvdrRaeJ1Ww17CtibyPq/9VnGAtDoo63QzWzBBBm5Yus2ROGg
+         OhpIaewIflFodjg6Uesdbf+OODZ5HJcc0S1T6DD8U3JGI91/an3twoT/haJz9Gn9zqmq
+         b9Sw==
+X-Received: by 10.50.57.1 with SMTP id e1mr549024igq.10.1374850748058;
+        Fri, 26 Jul 2013 07:59:08 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.44.108 with SMTP id d12ls430473igm.10.gmail; Fri, 26 Jul
+ 2013 07:59:07 -0700 (PDT)
+X-Received: by 10.42.80.206 with SMTP id w14mr32422836ick.24.1374850747654;
+        Fri, 26 Jul 2013 07:59:07 -0700 (PDT)
+Received: from o17.shared.sendgrid.net (o17.shared.sendgrid.net. [74.63.231.250])
+        by gmr-mx.google.com with SMTP id f1si426724igq.2.2013.07.26.07.59.07
+        for <tosdr@googlegroups.com>;
+        Fri, 26 Jul 2013 07:59:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info designates 74.63.231.250 as permitted sender) client-ip=74.63.231.250;
+Received: by 10.16.240.38 with SMTP id mf17.15472.51F28EB97
+        Fri, 26 Jul 2013 14:59:05 +0000 (GMT)
+Received: from tosdr.org (unknown [162.211.64.106])
+	by mi17 (SG) with ESMTP id 1401b7d845e.12eb.a0aef1
+	for <tosdr@googlegroups.com>; Fri, 26 Jul 2013 14:59:05 +0000 (UTC)
+Date: Fri, 26 Jul 2013 10:59:05 -0400
+From: ToSBack <tosback@tosdr.org>
+To: tosdr@googlegroups.com
+Message-ID: <51f28eb91cbcd_45794e3780e1563c@dragon.mail>
+Subject: [tosdr:2566] ToSBack: Policy Changes
+Mime-Version: 1.0
+X-SG-EID: QFP3EwogDP+5VrMSA5bWds5CEI9xlehMCSh19N9doYvlImBOcB06yk2ohDHP0Yah1Zrol4VEHTw50hy0rnrAgAqRwJDLzzsjyl50dOZsiLOqdEl4MqhmNLi7ARNHYpsA
+X-SendGrid-Contentd-ID: {"test_id":"1374850747"}
+X-Original-Sender: tosback@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info
+ designates 74.63.231.250 as permitted sender) smtp.mail=bounces+423142-1a12-tosdr=googlegroups.com@sendgrid.info;
+       dkim=pass header.i=@sendgrid.me
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+amazon.com: Amazon App Suite Legal Notices
+att.com: Wireless Plan Terms
+ These were changed in last night's crawl. Please have a look at the commit at https://github.com/tosdr/tosback2/commit/92084d1704a3f2836bec45d52be7f898755065f7 to see the differences!
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,752 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.147.213 with SMTP id v204csp1139046vkd;
+        Mon, 25 Jul 2016 06:32:44 -0700 (PDT)
+X-Received: by 10.66.138.108 with SMTP id qp12mr29514772pab.65.1469453563956;
+        Mon, 25 Jul 2016 06:32:43 -0700 (PDT)
+Return-Path: <tosdr+bncBDAM3DMZSAJBB45J3C6AKGQE744PN7I@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by mx.google.com with ESMTPS id p189si33744235pfb.299.2016.07.25.06.32.42
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 25 Jul 2016 06:32:43 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbdam3dmzsajbb45j3c6akgqe744pn7i@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) client-ip=2001:4b98:c:538::195;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbdam3dmzsajbb45j3c6akgqe744pn7i@googlegroups.com does not designate 2001:4b98:c:538::195 as permitted sender) smtp.mailfrom=tosdr+bncBDAM3DMZSAJBB45J3C6AKGQE744PN7I@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 59267A80E3
+	for <michiel@unhosted.org>; Mon, 25 Jul 2016 15:32:40 +0200 (CEST)
+Received: from mfilter20-d.gandi.net (mfilter20-d.gandi.net [217.70.178.148])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 47F3D17809A
+	for <michiel@unhosted.org>; Mon, 25 Jul 2016 15:32:40 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter20-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter20-d.gandi.net (mfilter20-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id WM98YELz9LRq for <michiel@unhosted.org>;
+	Mon, 25 Jul 2016 15:32:36 +0200 (CEST)
+Received: from mail-qt0-x23a.google.com (mail-qt0-x23a.google.com [IPv6:2607:f8b0:400d:c0d::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 58378178077
+	for <michiel@michielbdejong.com>; Mon, 25 Jul 2016 15:32:36 +0200 (CEST)
+Received: by mail-qt0-x23a.google.com with SMTP id q11sf35764458qtb.0
+        for <michiel@michielbdejong.com>; Mon, 25 Jul 2016 06:32:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:to:from:subject:message-id:date:user-agent:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=O1KVXAaCMMTp7CriSDQxPd9+EwCczSPC06apdMnbtpo=;
+        b=FTGEQ1Xww2JPqFvy9nrkq6W0msp1HfVGoq7WK+4r+5Na0CmluyXsRO1bT64UnliXgT
+         7insiHwOt3RdH4tZ/mdMer28Kt4EL/5bUSoq6njcEuH4257T23qCMoZoziFMO4gbAhz4
+         ArCNB+kDLigTO08QmHJIfa3RrFd0kALifbsIjLEp9QdZ8V8rc79rdcwX9d2l+RmrPP2G
+         QpJSEhDTZ5mMU6NDD7acGq84cBMP4KKISi1bT5iwaMfOQY9VsP4NP1ZUGU4gEtNeSaPv
+         9AQgvI2QtkVX7FavZPIJKTg9n61DfBqeVl9qmnkXRyzB5QuhKDFfzdo/BQbpeErPX04O
+         mJiQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=to:from:subject:message-id:date:user-agent:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=O1KVXAaCMMTp7CriSDQxPd9+EwCczSPC06apdMnbtpo=;
+        b=pz2jmSPZK+s92y7Eyx67502Cx/JVO/uy2tFdDRpFP/9KKipRv/TB/vA3C97mw4T4Sy
+         9cHL2srGkOxJjWMsPBpuQQRFXjiQKuajGF0y8mqp/xiAw+n7TlIH6pqShA0zHyNt7uVJ
+         yqqaB/A/XFD8dMQ7eUxzMLECy8EO9rlaZY4MXh6xLGqlGkCMINTCO58DZbKRZmiBD37q
+         DImK+x118muZjm0Mbnl42OMKZE4ZWrhvK8yxFXSdB1HpBq0D5o0/6muDksYD3of/vrrr
+         OKfowS9LgEfUMkDcU8M1fATovdit6yHuC8GNLE67i/AKnvBgjP/hp7ngoVm5IKh4WiCx
+         VK0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:to:from:subject:message-id:date
+         :user-agent:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=O1KVXAaCMMTp7CriSDQxPd9+EwCczSPC06apdMnbtpo=;
+        b=bb2a2Zbw1Von2IpxdhOT/w59OgwDc958ronFFct/465qQ3kOZTK/Aoeiial/fw6AUg
+         vyIoSB/In7zyHIxltXJtSV96d4Aap93FYmwoIF0F6uFCPaaJwtlaIlGEYgkwLQdyGjjc
+         XONHFlR6lArX3Q+hAGUHdQq82r94obt/Kyp72doGZFd8qbxnKD0fh46pC0tVECfDgzW0
+         57QcLL/meMHlbtJCSBUmQ3ZKXTCabir/Mt6Pwow03lwc2yDDMMAHLbf0rbDcwNFrHXJR
+         yvTpU34UqKhe5FJvUovV1gO5u5dOTA2JL0lyQhHAL9X44O3BFPaPrNvWM+W5zMeCQvj+
+         LqyA==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkoouvOXXkBFXe3E51buHjMh5eZVWFLlKUseOfHjr3mjhh4mJbHL9oLeoR9Ttmo6mYpmQ==
+X-Received: by 10.157.11.162 with SMTP id 31mr788797oth.16.1469453555412;
+        Mon, 25 Jul 2016 06:32:35 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.157.49.43 with SMTP id e40ls7262076otc.0.gmail; Mon, 25 Jul
+ 2016 06:32:34 -0700 (PDT)
+X-Received: by 10.237.44.38 with SMTP id f35mr15675254qtd.18.1469453554908;
+        Mon, 25 Jul 2016 06:32:34 -0700 (PDT)
+Received: from mail-io0-x229.google.com (mail-io0-x229.google.com. [2607:f8b0:4001:c06::229])
+        by gmr-mx.google.com with ESMTPS id d6si1355899ith.1.2016.07.25.06.32.34
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 25 Jul 2016 06:32:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of olsubscription@gmail.com designates 2607:f8b0:4001:c06::229 as permitted sender) client-ip=2607:f8b0:4001:c06::229;
+Received: by mail-io0-x229.google.com with SMTP id b62so161105606iod.3
+        for <tosdr@googlegroups.com>; Mon, 25 Jul 2016 06:32:34 -0700 (PDT)
+X-Received: by 10.107.22.66 with SMTP id 63mr18694611iow.195.1469453553848;
+        Mon, 25 Jul 2016 06:32:33 -0700 (PDT)
+Received: from [192.168.1.15] (8-20-214-77.netecin.net. [8.20.214.77])
+        by smtp.gmail.com with ESMTPSA id j39sm11556874iod.1.2016.07.25.06.32.31
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 25 Jul 2016 06:32:32 -0700 (PDT)
+To: tosdr@googlegroups.com
+From: Oleander <olsubscription@gmail.com>
+Subject: [tosdr:3920] Terms and Conditions, USACarry.com
+Message-ID: <0508bec0-57a7-2f6a-0cef-5cc2493e5169@gmail.com>
+Date: Mon, 25 Jul 2016 07:32:31 -0600
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.2.0
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="------------92BD06BC746B4FA49005440B"
+X-Original-Sender: OLSubscription@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@gmail.com;       spf=pass (google.com: domain of
+ olsubscription@gmail.com designates 2607:f8b0:4001:c06::229 as permitted
+ sender) smtp.mailfrom=olsubscription@gmail.com;       dmarc=pass (p=NONE
+ dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+This is a multi-part message in MIME format.
+--------------92BD06BC746B4FA49005440B
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+*http://www.usacarry.com
+*
+
+*
+*
+
+*Forum Rules*
+
+Registration to this forum is free! We do insist that you abide by the
+rules and policies detailed below. If you agree to the terms, please
+check the 'I agree' checkbox and press the 'Complete Registration'
+button below. If you would like to cancel the registration, click here
+<http://www.usacarry.com/forums/> to return to the forums index.
+
+*USACarry.com Terms & Conditions*
+
+*INTRODUCTION*
+
+Welcome to USA Carry, one of the best concealed carry sites in the web.
+This Agreement contains the complete terms and conditions that apply to
+your participation in our forums, chats and discussions and accessing
+our message boards. By using this Web site, its tools and services, you
+agree to be bound by its terms of use and shall comply thereof. This
+Agreement describes and encompasses the entire agreement between us and
+you, and supersedes all prior or contemporaneous agreements,
+representations, warranties and understandings with respect to the Site,
+the content and computer programs provided by or through the Site, and
+the subject matter of this Agreement. Amendments to this agreement can
+be made and effected by us from time to time without specific notice to
+you end. Agreement posted on the Site reflects the latest agreement and
+you should carefully review the same before you use our site.
+
+*USE OF THE SITE & PROHIBITIONS*
+
+This site allows you to join forums, chat, make comments and discussion
+and send messages to members of this website. You understand and agree
+that you will use this site including its tools and services with full
+sense of responsibility and in a manner that is consistent with these
+Terms and in such a way as to ensure compliance with all applicable laws
+and regulations.
+
+However, you are prohibited to do the following acts, to wit: (a) use
+our sites, including its services and or tools if you are not able to
+form legally binding contracts, are under the age of 18, or are
+temporarily or indefinitely suspended from using our sites, services, or
+tools (b) posting of an items, messages, and or contents that are
+inappropriate and fails to observe decency; (c) collecting information
+about users=E2=80=99 personal information; (d) post false, inaccurate,
+misleading, defamatory, or libelous content; (e) take any action that
+may damage the rating system.
+
+*NO RESALE OF THE SERVICE*
+
+You agree and understand that you will not to reproduce, duplicate,
+copy, sell, trade, resell or exploit for any commercial purposes any
+portion of the site including its tools and services.
+
+*REGISTRATION INFORMATION*
+
+For you to complete the sign-up process in our site, you must provide a
+valid email address, member name and any other information needed in
+order to complete the signup process. You must qualify that you are 18
+years or older and must be responsible for keeping your password secure
+and be responsible for all activities and contents that are uploaded
+under your account. You must not transmit any worms or viruses or any
+code of a destructive nature. Any information provided by you or
+gathered by the site or third parties during any visit to the site shall
+be subject to the terms of USA Carry=E2=80=99s Privacy Policy.
+
+*ACKNOWLEDGMENT OF RIGHTS*
+
+The Web allows people throughout the world to share valuable
+information, ideas and creative works. To ensure continued open access
+to such materials, we all need to protect the rights of those who share
+their creations with us. Although we make the Site freely accessible, we
+don't intend to give up our rights, or anyone else's rights, to the
+materials appearing on them. The materials available on the site shall
+remain the property of USA Carry and/or its licensors, and are protected
+by copyright, trademark and other intellectual property laws. You
+acquire no proprietary interest in any such rights. Furthermore, you may
+not remove or obscure the copyright notice or any other notices
+contained in the site or anything retrieved or downloaded from them.
+
+You hereby acknowledge that all rights, titles and interests, including
+but not limited to rights covered by the Intellectual Property Rights,
+in and to the site, and that You will not acquire any right, title, or
+interest in or to the site except as expressly set forth in this
+Agreement. You will not modify, adapt, translate, prepare derivative
+works from, decompile, reverse engineer, disassemble or otherwise
+attempt to derive source code from any of our services, software, or
+documentation, or create or attempt to create a substitute or similar
+service or product through use of or access to the Program or
+proprietary information related thereto.
+
+*LINKS / HYPERLINKS*
+
+Links are welcome to the site and you are allowed to establish hyperlink
+to appropriate part within the site provided that: (i) you post your
+link only within the forum, chat or message board section; (ii) you do
+not remove or obscure any advertisements, copyright notices or other
+notices on the placed at the site; (iii) the link does not state or
+imply any sponsorship or endorsement of your site and (iv) you
+immediately stop providing any links to the site on written notice from
+us. However, you must check the copyright notice on the homepage to
+which you wish to link to make sure that one of our content providers
+does not have its own policies regarding direct links to their content
+on our sites.
+
+
+*CHAT ROOMS, FORUMS AND OTHER MATERIALS POSTED BY YOU*
+
+You are responsible for the content of your messages and posts, and its
+consequences. We reserves the right to terminate your registration if it
+becomes aware and determines, in its sole discretion, that you are
+violating any of the guidelines set forth in this agreement and privacy
+policy. While we want to encourage an open exchange of information and
+ideas, yet, we do not review postings made in any chat rooms, forums and
+other public-posting areas on the site. You can expect these areas to
+include information and opinions from a variety of individuals and
+organizations other than us. We do not endorse or guarantee the
+accuracy, integrity or quality of any posting, regardless of whether the
+posting comes from a user, from a celebrity or "expert" guest, or from a
+member of our staff.
+
+By participating in this forum site, you understand and agree not to
+post or transmit any material that, in our judgment, is defamatory,
+abusive, obscene, threatening or unlawful in any way, or any material
+that infringes on the rights of others or contains any virus or other
+computer programming routine which may interfere with or damage the site
+or otherwise interrupt on the ability of others to use or enjoy the
+same. We reserve the right to delete, move or edit any postings that
+come to our attention that we consider unacceptable or inappropriate,
+whether for legal or for any other reason. Furthermore, we reserve the
+right to deny access to anyone who we believe, in our sole discretion,
+has in any way breached these Terms or where we reasonably believe a
+user does not comply with any relevant age restrictions on the site.
+
+*WARRANTY DISCLAIMER AND EXCLUSIONS / LIMITATIONS OF LIABILITY*
+
+We make no express or implied warranties or representations with respect
+to the Program or any products sold through the Program (including,
+without limitation, warranties of fitness, merchantability,
+non-infringement, or any implied warranties arising out of a course of
+performance, dealing, or trade usage). In addition, we make no
+representation that the operation of our site will be uninterrupted or
+error-free, and we will not be liable for the consequences of any
+interruptions or errors. We may change, restrict access to, suspend or
+discontinued the site or any part of it at anytime. The information,
+content and services on the site are provided on an =E2=80=9Cas is=E2=80=9D=
+ basis. When
+you use the site and or participate therein, you understand and agree
+that you participate at your own risk.
+
+USA Carry shall in no way be liable to you or anyone else, whether from
+any sources of obligations or in any other way, except in respect of
+death or personal injury arising from their own negligence, for any
+claims, losses, demand or damages arising directly or indirectly out or
+in any way connected with your use of the site. You hereby agree that
+the liability of USA Carry, if there is any, arising out of any kind of
+legal claim in any connected to the site shall not exceed the amount you
+paid to the site for the use of the same.
+
+*CONFIDENTIALITY*
+
+You agree not to disclose information you obtain from us and or from our
+clients, advertisers, suppliers and forum members. All information
+submitted to by an end-user customer pursuant to a Program is
+proprietary information of USA Carry. Such customer information is
+confidential and may not be disclosed. Publisher agrees not to
+reproduce, disseminate, sell, distribute or commercially exploit any
+such proprietary information in any manner.
+
+
+*NON-WAIVER*
+
+Failure of USA Carry to insist upon strict performance of any of the
+terms, conditions and covenants hereof shall not be deemed a
+relinquishment or waiver of any rights or remedy that the we may have,
+nor shall it be construed as a waiver of any subsequent breach of the
+terms, conditions or covenants hereof, which terms, conditions and
+covenants shall continue to be in full force and effect.
+
+No waiver by either party of any breach of any provision hereof shall be
+deemed a waiver of any subsequent or prior breach of the same or any
+other provision.
+
+*MISCELLANEOUS*
+
+This Agreement shall be governed by and construed in accordance with the
+substantive laws of Louisiana, without any reference to conflict-of-laws
+principles.
+
+Any dispute, controversy or difference which may arise between the
+parties out of, in relation to or in connection with this Agreement is
+hereby irrevocably submitted to the exclusive jurisdiction of the courts
+of Louisiana, to the exclusion of any other courts without giving effect
+to its conflict of laws provisions or your actual state or country of
+residence.
+
+The entire agreement between the parties with respect to the subject
+matter hereof is embodied on this agreement and no other agreement
+relative hereto shall bind either party herein.
+
+Your rights of whatever nature cannot be assigned nor transferred to
+anybody, and any such attempt may result in termination of this
+Agreement, without liability to us. However, we may assign this
+Agreement to any person at any time without notice.
+
+In the event that any provision of these Terms and Conditions is found
+invalid or unenforceable pursuant to any judicial decree or decision,
+such provision shall be deemed to apply only to the maximum extent
+permitted by law, and the remainder of these Terms and Conditions shall
+remain valid and enforceable according to its terms.
+
+In order to keep the forums growing and to prevent conflicts we have
+created some rules for the site. These rules were created to help limit
+the flaming and common disagreements that can occur on public forums.
+They are also a way to ensure that we do not offend other users.
+
+General Rules:
+
+1. Attacks - As with any large groups of people there will be
+disagreements. This is understandable, but we will not tolerate flaming
+other members. We are all adults and in such should be able to keep our
+emotions in check. There will not be any personal/insulting attacks or
+inflammatory posts. You can disagree, but do it politely.
+
+2. Language - No dirty language. We are trying to create a place where
+you don=E2=80=99t have to worry if your child is sitting next to you while
+reading. Please keep your language clean. The friendly workarounds on
+using crude language will not be tolerated also. We are not talking
+about damn, hell, and other small ones, we are talking about the major
+ones and you know what they are.
+
+3. Opposite Sex - We are starting to pick up more female users. These
+females offer an insight that we =E2=80=9Cmales=E2=80=9D cannot offer, so m=
+ake sure to
+keep derogatory comments about the opposite sex in check. If you are not
+willing to say it face to face, don=E2=80=99t think it is ok from behind th=
+e
+keyboard.
+
+4. Post Count - You want to up your membership status, please help us
+out by saying hello to new members. No multiple or repeat postings to
+get your post count up.
+
+5. Advertising =E2=80=93 There are many users that want to advertise their
+products or products of others. If you are not a contributing member to
+the forum these advertisements will not be tolerated. For those who are
+promoting products please ensure they are related to the 2nd Amendment.
+
+6. Accounts =E2=80=93 You are only allowed one account. If your account is
+suspended or deleted you are not allowed to create another account. If
+multiple accounts are discovered they will be deleted!
+
+7. Content =E2=80=93 This site is for the carrying of firearms for personal
+protection and the protection of the 2nd Amendment. There are many
+issues out there that can get out of hand real quick. Keep this in mind
+when opening a thread that does not contain pertinent info to the site=E2=
+=80=99s
+purpose. We will keep a close eye on threads that run the risk of
+getting out of hand quickly and will close it down if it starts going
+bad. Do not create a thread or post about anything illegal such as
+carrying concealed illegally. Your thread/post will be deleted and you
+will be warned.
+
+8. Photos - Members are allowed and encouraged to post on topic
+pictures. Please keep your picture appropriate and clean. Photos that
+are considered inappropriate will be removed and you will be notified of
+such. If this problem continues you will risk having your account
+suspended or deleted. This includes your avatar.
+
+These are some of the basic rules to govern the forums. We cannot think
+of everything so we reserve the right to create new rules or contact you
+on a case by case base. Remember keep it civil and be nice. If things
+are getting out of hand we will have to jump in and give warnings, close
+threads, or suspend/delete accounts.
+
+Marketplace Rules:erm
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/0508bec0-57a7-2f6a-0cef-5cc2493e5169%40gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--------------92BD06BC746B4FA49005440B
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8=
+">
+  </head>
+  <body bgcolor=3D"#FFFFFF" text=3D"#000000">
+    <p><strong><a class=3D"moz-txt-link-freetext" href=3D"http://www.usacar=
+ry.com">http://www.usacarry.com</a><br>
+      </strong></p>
+    <p><strong><br>
+      </strong></p>
+    <p><strong>Forum Rules</strong></p>
+    <p>Registration to this forum is free! We do insist that you abide
+      by the rules and policies detailed
+      below. If you agree to the terms, please check the 'I agree'
+      checkbox and press the 'Complete Registration' button below.
+      If you would like to cancel the registration, click <a
+        href=3D"http://www.usacarry.com/forums/">here</a>
+      to return to the forums index.</p>
+    <p><b>USACarry.com Terms &amp; Conditions</b><br>
+      <br>
+      <b>INTRODUCTION</b></p>
+    <p> Welcome to USA Carry, one of the best concealed carry sites in
+      the web. This Agreement contains the complete terms and conditions
+      that apply to your participation in our forums, chats and
+      discussions and accessing our message boards. By using this Web
+      site, its tools and services, you agree to be bound by its terms
+      of use and shall comply thereof. This Agreement describes and
+      encompasses the entire agreement between us and you, and
+      supersedes all prior or contemporaneous agreements,
+      representations, warranties and understandings with respect to the
+      Site, the content and computer programs provided by or through the
+      Site, and the subject matter of this Agreement. Amendments to this
+      agreement can be made and effected by us from time to time without
+      specific notice to you end. Agreement posted on the Site reflects
+      the latest agreement and you should carefully review the same
+      before you use our site. </p>
+    <p><strong>USE OF THE SITE &amp; PROHIBITIONS</strong></p>
+    <p>This site allows you to join forums, chat, make comments and
+      discussion and send messages to members of this website. You
+      understand and agree that you will use this site including its
+      tools and services with full sense of responsibility and in a
+      manner that is consistent with these Terms and in such a way as to
+      ensure compliance with all applicable laws and regulations.<br>
+      <br>
+      However, you are prohibited to do the following acts, to wit: (a)
+      use our sites, including its services and or tools if you are not
+      able to form legally binding contracts, are under the age of 18,
+      or are temporarily or indefinitely suspended from using our sites,
+      services, or tools (b) posting of an items, messages, and or
+      contents that are inappropriate and fails to observe decency; (c)
+      collecting information about users=E2=80=99 personal information; (d)=
+ post
+      false, inaccurate, misleading, defamatory, or libelous content;
+      (e) take any action that may damage the rating system.</p>
+    <p><strong>NO RESALE OF THE SERVICE</strong><br>
+      <br>
+      You agree and understand that you will not to reproduce,
+      duplicate, copy, sell, trade, resell or exploit for any commercial
+      purposes any portion of the site including its tools and services.</p=
+>
+    <p><strong>REGISTRATION INFORMATION</strong><br>
+      <br>
+      For you to complete the sign-up process in our site, you must
+      provide a valid email address, member name and any other
+      information needed in order to complete the signup process. You
+      must qualify that you are 18 years or older and must be
+      responsible for keeping your password secure and be responsible
+      for all activities and contents that are uploaded under your
+      account. You must not transmit any worms or viruses or any code of
+      a destructive nature. Any information provided by you or gathered
+      by the site or third parties during any visit to the site shall be
+      subject to the terms of USA Carry=E2=80=99s Privacy Policy.</p>
+    <p><strong>ACKNOWLEDGMENT OF RIGHTS</strong></p>
+    <p>The Web allows people throughout the world to share valuable
+      information, ideas and creative works. To ensure continued open
+      access to such materials, we all need to protect the rights of
+      those who share their creations with us. Although we make the Site
+      freely accessible, we don't intend to give up our rights, or
+      anyone else's rights, to the materials appearing on them. The
+      materials available on the site shall remain the property of USA
+      Carry and/or its licensors, and are protected by copyright,
+      trademark and other intellectual property laws. You acquire no
+      proprietary interest in any such rights. Furthermore, you may not
+      remove or obscure the copyright notice or any other notices
+      contained in the site or anything retrieved or downloaded from
+      them.<br>
+      <br>
+      You hereby acknowledge that all rights, titles and interests,
+      including but not limited to rights covered by the Intellectual
+      Property Rights, in and to the site, and that You will not acquire
+      any right, title, or interest in or to the site except as
+      expressly set forth in this Agreement. You will not modify, adapt,
+      translate, prepare derivative works from, decompile, reverse
+      engineer, disassemble or otherwise attempt to derive source code
+      from any of our services, software, or documentation, or create or
+      attempt to create a substitute or similar service or product
+      through use of or access to the Program or proprietary information
+      related thereto.</p>
+    <p><strong>LINKS / HYPERLINKS</strong></p>
+    <p>Links are welcome to the site and you are allowed to establish
+      hyperlink to appropriate part within the site provided that: (i)
+      you post your link only within the forum, chat or message board
+      section; (ii) you do not remove or obscure any advertisements,
+      copyright notices or other notices on the placed at the site;
+      (iii) the link does not state or imply any sponsorship or
+      endorsement of your site and (iv) you immediately stop providing
+      any links to the site on written notice from us. However, you must
+      check the copyright notice on the homepage to which you wish to
+      link to make sure that one of our content providers does not have
+      its own policies regarding direct links to their content on our
+      sites.</p>
+    <p><br>
+      <strong>CHAT ROOMS, FORUMS AND OTHER MATERIALS POSTED BY YOU</strong>=
+</p>
+    <p>You are responsible for the content of your messages and posts,
+      and its consequences. We reserves the right to terminate your
+      registration if it becomes aware and determines, in its sole
+      discretion, that you are violating any of the guidelines set forth
+      in this agreement and privacy policy. While we want to encourage
+      an open exchange of information and ideas, yet, we do not review
+      postings made in any chat rooms, forums and other public-posting
+      areas on the site. You can expect these areas to include
+      information and opinions from a variety of individuals and
+      organizations other than us. We do not endorse or guarantee the
+      accuracy, integrity or quality of any posting, regardless of
+      whether the posting comes from a user, from a celebrity or
+      "expert" guest, or from a member of our staff.<br>
+      <br>
+      By participating in this forum site, you understand and agree not
+      to post or transmit any material that, in our judgment, is
+      defamatory, abusive, obscene, threatening or unlawful in any way,
+      or any material that infringes on the rights of others or contains
+      any virus or other computer programming routine which may
+      interfere with or damage the site or otherwise interrupt on the
+      ability of others to use or enjoy the same. We reserve the right
+      to delete, move or edit any postings that come to our attention
+      that we consider unacceptable or inappropriate, whether for legal
+      or for any other reason. Furthermore, we reserve the right to deny
+      access to anyone who we believe, in our sole discretion, has in
+      any way breached these Terms or where we reasonably believe a user
+      does not comply with any relevant age restrictions on the site.</p>
+    <p><strong>WARRANTY DISCLAIMER AND EXCLUSIONS / LIMITATIONS OF
+        LIABILITY</strong></p>
+    <p>We make no express or implied warranties or representations with
+      respect to the Program or any products sold through the Program
+      (including, without limitation, warranties of fitness,
+      merchantability, non-infringement, or any implied warranties
+      arising out of a course of performance, dealing, or trade usage).
+      In addition, we make no representation that the operation of our
+      site will be uninterrupted or error-free, and we will not be
+      liable for the consequences of any interruptions or errors. We may
+      change, restrict access to, suspend or discontinued the site or
+      any part of it at anytime. The information, content and services
+      on the site are provided on an =E2=80=9Cas is=E2=80=9D basis. When yo=
+u use the
+      site and or participate therein, you understand and agree that you
+      participate at your own risk.</p>
+    <p> USA Carry shall in no way be liable to you or anyone else,
+      whether from any sources of obligations or in any other way,
+      except in respect of death or personal injury arising from their
+      own negligence, for any claims, losses, demand or damages arising
+      directly or indirectly out or in any way connected with your use
+      of the site. You hereby agree that the liability of USA Carry, if
+      there is any, arising out of any kind of legal claim in any
+      connected to the site shall not exceed the amount you paid to the
+      site for the use of the same.</p>
+    <p><strong>CONFIDENTIALITY</strong><br>
+      <br>
+      You agree not to disclose information you obtain from us and or
+      from our clients, advertisers, suppliers and forum members. All
+      information submitted to by an end-user customer pursuant to a
+      Program is proprietary information of USA Carry. Such customer
+      information is confidential and may not be disclosed. Publisher
+      agrees not to reproduce, disseminate, sell, distribute or
+      commercially exploit any such proprietary information in any
+      manner.</p>
+    <p> <br>
+      <strong>NON-WAIVER</strong><br>
+      <br>
+      Failure of USA Carry to insist upon strict performance of any of
+      the terms, conditions and covenants hereof shall not be deemed a
+      relinquishment or waiver of any rights or remedy that the we may
+      have, nor shall it be construed as a waiver of any subsequent
+      breach of the terms, conditions or covenants hereof, which terms,
+      conditions and covenants shall continue to be in full force and
+      effect.<br>
+      <br>
+      No waiver by either party of any breach of any provision hereof
+      shall be deemed a waiver of any subsequent or prior breach of the
+      same or any other provision.</p>
+    <p><strong> MISCELLANEOUS</strong><br>
+      <br>
+      This Agreement shall be governed by and construed in accordance
+      with the substantive laws of Louisiana, without any reference to
+      conflict-of-laws principles.<br>
+      <br>
+      Any dispute, controversy or difference which may arise between the
+      parties out of, in relation to or in connection with this
+      Agreement is hereby irrevocably submitted to the exclusive
+      jurisdiction of the courts of Louisiana, to the exclusion of any
+      other courts without giving effect to its conflict of laws
+      provisions or your actual state or country of residence.<br>
+      <br>
+      The entire agreement between the parties with respect to the
+      subject matter hereof is embodied on this agreement and no other
+      agreement relative hereto shall bind either party herein.<br>
+      <br>
+      Your rights of whatever nature cannot be assigned nor transferred
+      to anybody, and any such attempt may result in termination of this
+      Agreement, without liability to us. However, we may assign this
+      Agreement to any person at any time without notice.<br>
+      <br>
+      In the event that any provision of these Terms and Conditions is
+      found invalid or unenforceable pursuant to any judicial decree or
+      decision, such provision shall be deemed to apply only to the
+      maximum extent permitted by law, and the remainder of these Terms
+      and Conditions shall remain valid and enforceable according to its
+      terms.</p>
+    <p> In order to keep the forums growing and to prevent conflicts we
+      have created some rules for the site. These rules were created to
+      help limit the flaming and common disagreements that can occur on
+      public forums. They are also a way to ensure that we do not offend
+      other users.<br>
+      <br>
+      General Rules:<br>
+      <br>
+      1. Attacks - As with any large groups of people there will be
+      disagreements. This is understandable, but we will not tolerate
+      flaming other members. We are all adults and in such should be
+      able to keep our emotions in check. There will not be any
+      personal/insulting attacks or inflammatory posts. You can
+      disagree, but do it politely.<br>
+      <br>
+      2. Language - No dirty language. We are trying to create a place
+      where you don=E2=80=99t have to worry if your child is sitting next t=
+o you
+      while reading. Please keep your language clean. The friendly
+      workarounds on using crude language will not be tolerated also. We
+      are not talking about damn, hell, and other small ones, we are
+      talking about the major ones and you know what they are.<br>
+      <br>
+      3. Opposite Sex - We are starting to pick up more female users.
+      These females offer an insight that we =E2=80=9Cmales=E2=80=9D cannot=
+ offer, so
+      make sure to keep derogatory comments about the opposite sex in
+      check. If you are not willing to say it face to face, don=E2=80=99t t=
+hink
+      it is ok from behind the keyboard.<br>
+      <br>
+      4. Post Count - You want to up your membership status, please help
+      us out by saying hello to new members. No multiple or repeat
+      postings to get your post count up. <br>
+      <br>
+      5. Advertising =E2=80=93 There are many users that want to advertise =
+their
+      products or products of others. If you are not a contributing
+      member to the forum these advertisements will not be tolerated.
+      For those who are promoting products please ensure they are
+      related to the 2nd Amendment.<br>
+      <br>
+      6. Accounts =E2=80=93 You are only allowed one account. If your accou=
+nt is
+      suspended or deleted you are not allowed to create another
+      account. If multiple accounts are discovered they will be deleted!<br=
+>
+      <br>
+      7. Content =E2=80=93 This site is for the carrying of firearms for
+      personal protection and the protection of the 2nd Amendment. There
+      are many issues out there that can get out of hand real quick.
+      Keep this in mind when opening a thread that does not contain
+      pertinent info to the site=E2=80=99s purpose. We will keep a close ey=
+e on
+      threads that run the risk of getting out of hand quickly and will
+      close it down if it starts going bad. Do not create a thread or
+      post about anything illegal such as carrying concealed illegally.
+      Your thread/post will be deleted and you will be warned.<br>
+      <br>
+      8. Photos - Members are allowed and encouraged to post on topic
+      pictures. Please keep your picture appropriate and clean. Photos
+      that are considered inappropriate will be removed and you will be
+      notified of such. If this problem continues you will risk having
+      your account suspended or deleted. This includes your avatar.<br>
+      <br>
+      These are some of the basic rules to govern the forums. We cannot
+      think of everything so we reserve the right to create new rules or
+      contact you on a case by case base. Remember keep it civil and be
+      nice. If things are getting out of hand we will have to jump in
+      and give warnings, close threads, or suspend/delete accounts.<br>
+      <br>
+      Marketplace Rules:erm</p>
+  </body>
+</html>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/0508bec0-57a7-2f6a-0cef-5cc2493e5169%40gmail.com?utm_mediu=
+m=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tosdr/0508=
+bec0-57a7-2f6a-0cef-5cc2493e5169%40gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--------------92BD06BC746B4FA49005440B--

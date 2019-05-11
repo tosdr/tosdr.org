@@ -1,0 +1,210 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp183235vec;
+        Fri, 7 Dec 2012 14:49:39 -0800 (PST)
+Received: by 10.14.0.71 with SMTP id 47mr21563804eea.19.1354920579427;
+        Fri, 07 Dec 2012 14:49:39 -0800 (PST)
+Return-Path: <tosdr+bncBDV4LNESIYIIFZMJQYCRUBBSMUWHY@googlegroups.com>
+Received: from mail-ea0-f189.google.com (mail-ea0-f189.google.com [209.85.215.189])
+        by mx.google.com with ESMTPS id j49si27496009eep.45.2012.12.07.14.49.39
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 14:49:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDV4LNESIYIIFZMJQYCRUBBSMUWHY@googlegroups.com designates 209.85.215.179 as permitted sender) client-ip=209.85.215.179;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDV4LNESIYIIFZMJQYCRUBBSMUWHY@googlegroups.com designates 209.85.215.179 as permitted sender) smtp.mail=tosdr+bncBDV4LNESIYIIFZMJQYCRUBBSMUWHY@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-ea0-f189.google.com with SMTP id e11sf333661eaa.16
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 14:49:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=omRJ/hCSiClblU2V2o7R7PFok544LjamdN/vWMFkFTU=;
+        b=IMlW2qYJM3fqFDWdYmXi0l0QwuwDNh/IiQXI4R01Htrd7vw2bkAjWcdLk44ZCPq36N
+         zvIEhSh3JjC/XR7T7OfVNJGUTf6mqA4prrU+Jb+WA9BDwVLp1GCKnilofLXh5AURWNbG
+         vs+DQ9MAQNqt/IUwhU3mTRrCq8qVzXB9kgAocIsfcgjQHNONERpBH8cGHGxA7NY5yljF
+         6rkDqhwzpBIXqhxrAK3V2U6YvYo0Iu+429WRbGz6qvYJR1VBN1KJu2C6vrYLRlH8/NCt
+         LZ/reN44k0saPkD3WW0Jz/WLYi313eLZ702ta6qAuo4GOPoNXQO0fZNDX3zl4GpU8Gf+
+         fyrQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=omRJ/hCSiClblU2V2o7R7PFok544LjamdN/vWMFkFTU=;
+        b=xBS8mKYdPcKnK8iRvoCwt7hc2Fwz1SCqTVP/7zK3AT1tVyM3CTQRP9AsLH8FGct04a
+         kAXxRQnhhhV1+5zw7kyKcdlSFQ5HNOVY3dJ+1MFamBHfpscAD2/x7dNYwCnH6z8yyCgw
+         K2KEgeBXwLsoE7lk8OLTOnBIu0alZDdK/UD/usLwgyDw3tObzLvKHn1eV6T3znsLVq/F
+         XQo1KxR0V4i5PkfTJzZB1w7Jwpuryoe6NPiLtomukzvTnlK8l2bTChq7kPUelPD9I8gL
+         wQsT6PpVZWYXUIdp2ujaDpcexNV4qW1PvYQzOb309rovWC2wCV4aANgdnNak2EYW7EC8
+         8XBA==
+Received: by 10.180.105.131 with SMTP id gm3mr110335wib.12.1354920578910;
+        Fri, 07 Dec 2012 14:49:38 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.8.226 with SMTP id u2ls17515wia.34.canary; Fri, 07 Dec
+ 2012 14:49:37 -0800 (PST)
+Received: by 10.14.208.198 with SMTP id q46mr6475646eeo.0.1354920577891;
+        Fri, 07 Dec 2012 14:49:37 -0800 (PST)
+Received: by 10.14.208.198 with SMTP id q46mr6475644eeo.0.1354920577876;
+        Fri, 07 Dec 2012 14:49:37 -0800 (PST)
+Received: from mail-ea0-f179.google.com (mail-ea0-f179.google.com [209.85.215.179])
+        by gmr-mx.google.com with ESMTPS id z44si3863590een.0.2012.12.07.14.49.37
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 14:49:37 -0800 (PST)
+Received-SPF: pass (google.com: domain of brian.erdelyi@gmail.com designates 209.85.215.179 as permitted sender) client-ip=209.85.215.179;
+Received: by mail-ea0-f179.google.com with SMTP id i12so358029eaa.24
+        for <tosdr@googlegroups.com>; Fri, 07 Dec 2012 14:49:37 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.14.176.66 with SMTP id a42mr21672257eem.34.1354920577742; Fri,
+ 07 Dec 2012 14:49:37 -0800 (PST)
+Received: by 10.14.223.196 with HTTP; Fri, 7 Dec 2012 14:49:37 -0800 (PST)
+In-Reply-To: <1354897845.2788111732166703@mf58.sendgrid.net>
+References: <1354897845.2788111732166703@mf58.sendgrid.net>
+Date: Fri, 7 Dec 2012 18:49:37 -0400
+Message-ID: <CAE3efOW738Os-PV4NkKWs1VV43uNstQ7Ga+wPpmXo1PmE6aoJg@mail.gmail.com>
+Subject: Re: [tosdr:1269] Re: Are ToS;DR reviews and ratings stored in a database?
+From: Brian Erdelyi <brian.erdelyi@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: brian.erdelyi@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of brian.erdelyi@gmail.com designates 209.85.215.179 as permitted
+ sender) smtp.mail=brian.erdelyi@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b6222d0bc360a04d04b075b
+
+--047d7b6222d0bc360a04d04b075b
+Content-Type: text/plain; charset=ISO-8859-1
+
+What I'm trying to do is create a table like the one here:
+
+https://docs.google.com/spreadsheet/ccc?key=0AgbU00tN6I0tdE8tYTlyNGtTOWJxTzliT1l4Z1RXLXc
+
+In this format it's easier for me to sort and do analysis.  How can I et it
+to that format?
+
+
+On Fri, Dec 7, 2012 at 12:30 PM, <michiel@michielbdejong.com> wrote:
+
+> Hi Brian, it is currently stored in javascript format, so flat JSON files,
+> from which the html is generated using nodejs scripts. See the
+> buildIndexes.js and render.js scripts in
+> https://github.com/didnotread/didnotread.org
+>
+> For javascript programmers this format is much easier to use than various
+> spreadsheet formats, which is why we chose it. Maybe your spreadsheet
+> software is capable of importing JSON - or maybe you can do the thing you
+> want to do in javascript?
+> Anyway, all the data is there in the github repository, you can clone it
+> and reuse it however you want.
+>
+> HTH,
+> Michiel
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b6222d0bc360a04d04b075b
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+What I&#39;m trying to do is create a table like the one here:<div><br></di=
+v><div><a href=3D"https://docs.google.com/spreadsheet/ccc?key=3D0AgbU00tN6I=
+0tdE8tYTlyNGtTOWJxTzliT1l4Z1RXLXc">https://docs.google.com/spreadsheet/ccc?=
+key=3D0AgbU00tN6I0tdE8tYTlyNGtTOWJxTzliT1l4Z1RXLXc</a><br>
+</div><div><br></div><div>In this format it&#39;s easier for me to sort and=
+ do analysis. =A0How can I et it to that format?</div><div class=3D"gmail_e=
+xtra"><br><br><div class=3D"gmail_quote">On Fri, Dec 7, 2012 at 12:30 PM,  =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:michiel@michielbdejong.com" target=
+=3D"_blank">michiel@michielbdejong.com</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Hi Brian, it is currently stored in javascri=
+pt format, so flat JSON files, from which the html is generated using nodej=
+s scripts. See the buildIndexes.js and render.js scripts in <a href=3D"http=
+s://github.com/didnotread/didnotread.org" target=3D"_blank">https://github.=
+com/didnotread/didnotread.org</a><br>
+
+<br>
+For javascript programmers this format is much easier to use than various s=
+preadsheet formats, which is why we chose it. Maybe your spreadsheet softwa=
+re is capable of importing JSON - or maybe you can do the thing you want to=
+ do in javascript?<br>
+
+Anyway, all the data is there in the github repository, you can clone it an=
+d reuse it however you want.<br>
+<br>
+HTH,<br>
+Michiel<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+--<br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+<br>
+<br>
+</div></div></blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b6222d0bc360a04d04b075b--

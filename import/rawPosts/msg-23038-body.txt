@@ -1,0 +1,208 @@
+Return-Path: <tosdr+bncBC5ITJ5RSMJBBDPIZWRAKGQE7QQ76QY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id F394B40F81
+	for <anything@michielbdejong.com>; Fri, 31 Oct 2014 12:35:47 +0100 (CET)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id F09611780A1
+	for <anything@michielbdejong.com>; Fri, 31 Oct 2014 12:35:47 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id b4Gb93kg-hYX for <anything@michielbdejong.com>;
+	Fri, 31 Oct 2014 12:35:46 +0100 (CET)
+Received: from mail-qa0-x237.google.com (mail-qa0-x237.google.com [IPv6:2607:f8b0:400d:c00::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 2370E178073
+	for <anything@michielbdejong.com>; Fri, 31 Oct 2014 12:35:43 +0100 (CET)
+Received: by mail-qa0-f55.google.com with SMTP id w8sf919443qac.20
+        for <anything@michielbdejong.com>; Fri, 31 Oct 2014 04:35:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe:content-type;
+        bh=SXpZj/VpJwBr16ZzudzULqAspJVBzw/YrXs5J+ELziQ=;
+        b=h5HkmCnSjsrrDoHoZjntlc3vLzpeLib1ZwzkKaBH6HQIcRLImsgQUfwscVXkZl1zkN
+         7GIoBzmFToNgrG5LQwoQ5BQzfr8CfVHG+KgCxTpOT3t9sW8rU+m0YV+HlIiQ+eHjefoG
+         7I/mK7H4f8GRtLYMI6QC0WZhT5SoBEZMpxfHDJ74/67lyc9GnB3LSpak5i8PlzVyYGUZ
+         6Z4aG/gKibw6QeHEpnHy4SZinsnEA355gwYYZNa43zuARL/rqCMFWbDod+0raU+Ql+f1
+         mz1AYc2GYeJ0UJw+3Gg3Oc/TX/E19TugDgl4cJW0Fu1mRxk0iDsDDC9jpuKvsvJULdlO
+         FXUw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:cc:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=SXpZj/VpJwBr16ZzudzULqAspJVBzw/YrXs5J+ELziQ=;
+        b=OK4MM+J1sFgwZp4rwI+ujUYAg0X9gH/xKCn/UY+DBehiKSHK+Moql/haSD4x/buA0T
+         gsL/jEas3PCjBon0gAVWBwpGmH+pvsQyFHJM/XoBi8Sou1FY2Ri6EFQ2+vJa0WNQz4MO
+         JdsOoK6+BBzouiSaQ0BaIF37losumxjhTW4Tn9JYMz6TTmarJDC42rCTfhoz34DDVkTr
+         IkLNd5Sx+r/iaDlg2N3Y0t1CAybjPbwug10rBy+goXk/lXhpIT5oWI80TM4M/f5svro3
+         AQMwkeUjYoeLOS4zphhcQDTxGl1bUL/AKFBxGLZ+U/lrnol99SayfxCGrOZ49elnFqgT
+         cuSw==
+X-Received: by 10.50.114.134 with SMTP id jg6mr34806igb.13.1414755342062;
+        Fri, 31 Oct 2014 04:35:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.6.34 with SMTP id 34ls1154859iog.9.gmail; Fri, 31 Oct 2014
+ 04:35:41 -0700 (PDT)
+X-Received: by 10.66.90.129 with SMTP id bw1mr15628585pab.2.1414755341005;
+        Fri, 31 Oct 2014 04:35:41 -0700 (PDT)
+Received: from mail-ie0-f174.google.com (mail-ie0-f174.google.com. [209.85.223.174])
+        by gmr-mx.google.com with ESMTPS id u15si453407igr.3.2014.10.31.04.35.40
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 31 Oct 2014 04:35:40 -0700 (PDT)
+Received-SPF: none (google.com: michiel@unhosted.org does not designate permitted sender hosts) client-ip=209.85.223.174;
+Received: by mail-ie0-f174.google.com with SMTP id x19so1036664ier.5
+        for <tosdr@googlegroups.com>; Fri, 31 Oct 2014 04:35:40 -0700 (PDT)
+X-Gm-Message-State: ALoCoQnmjC27CTDId2LJk7+wts6amGEinPIcMKOPcmgh+3yqCii7qdzQuCvVJAxSLBHFa+virPJm
+MIME-Version: 1.0
+X-Received: by 10.42.5.72 with SMTP id 8mr22712090icv.27.1414755340680; Fri,
+ 31 Oct 2014 04:35:40 -0700 (PDT)
+Received: by 10.43.111.10 with HTTP; Fri, 31 Oct 2014 04:35:40 -0700 (PDT)
+X-Originating-IP: [89.154.10.130]
+In-Reply-To: <B5EDF7348CF07545A25BD3098C82E721BCA61696@EXMDB01.org.aalto.fi>
+References: <B5EDF7348CF07545A25BD3098C82E721BCA61696@EXMDB01.org.aalto.fi>
+Date: Fri, 31 Oct 2014 11:35:40 +0000
+Message-ID: <CA+aD3u1JznNKqQNUeVXqPEKAyKuY8Xs30vaksEP3NdpyRdf6aw@mail.gmail.com>
+Subject: [tosdr:3304] Fwd: Research on privacy of digital photos
+From: Michiel de Jong <michiel@unhosted.org>
+To: tosdr@googlegroups.com
+Cc: Malik Aqdas <aqdas.malik@aalto.fi>
+X-Original-Sender: michiel@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: michiel@unhosted.org does not designate permitted sender hosts) smtp.mail=michiel@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; boundary=001a113475c286b6a90506b6653d
+
+--001a113475c286b6a90506b6653d
+Content-Type: text/plain; charset=UTF-8
+
+FYI (via fedsocweb mailing list)
+
+---------- Forwarded message ----------
+From: Malik Aqdas <aqdas.malik@aalto.fi>
+Date: Tue, Oct 28, 2014 at 2:39 PM
+Subject: Research on privacy of digital photos
+To: "public-fedsocweb@w3.org" <public-fedsocweb@w3.org>
+
+
+ Hello,
+
+An academic research on the privacy of digital photos is being conducted by
+Aalto University, Finland. The main aim of this research is to understand
+the privacy practices, attitudes, and concerns of digital photo sharing by
+social media users. Completing the survey takes approximately 10 minutes.
+Your input is highly appreciated. Feel free to share the mail content on
+appropriate forums.
+By completing the survey you get a chance to participate in the random
+draw: 10 gifts valuing 50 euros each.
+
+https://www.webropolsurveys.com/S/7110BA381403B169.par
+<https://www.linkedin.com/redirect?url=https%3A%2F%2Fwww%2Ewebropolsurveys%2Ecom%2FS%2F7110BA381403B169%2Epar&urlhash=2HvP&_t=tracking_anet>
+
+
+
+Best regards,
+
+Aqdas Malik
+
+Doctoral candidate
+
+School of Science, Aalto University
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a113475c286b6a90506b6653d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">FYI (via fedsocweb mailing list)<br><br><div><div class=3D=
+"gmail_quote">---------- Forwarded message ----------<br>From: <b class=3D"=
+gmail_sendername">Malik Aqdas</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:a=
+qdas.malik@aalto.fi">aqdas.malik@aalto.fi</a>&gt;</span><br>Date: Tue, Oct =
+28, 2014 at 2:39 PM<br>Subject: Research on privacy of digital photos<br>To=
+: &quot;<a href=3D"mailto:public-fedsocweb@w3.org">public-fedsocweb@w3.org<=
+/a>&quot; &lt;<a href=3D"mailto:public-fedsocweb@w3.org">public-fedsocweb@w=
+3.org</a>&gt;<br><br><br>
+
+
+
+
+
+<div link=3D"#0563C1" vlink=3D"#954F72" lang=3D"FI">
+<div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Hello,<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">An academic research on the pri=
+vacy of digital photos is being conducted by Aalto University, Finland. The=
+ main aim of this research is to understand the privacy practices, attitude=
+s, and concerns of digital photo sharing
+ by social media users. Completing the survey takes approximately 10 minute=
+s. Your input is highly appreciated. Feel free to share the mail content on=
+ appropriate forums.
+<br>
+By completing the survey you get a chance to participate in the random draw=
+: 10 gifts valuing 50 euros each.
+<br>
+<br>
+</span><a href=3D"https://www.linkedin.com/redirect?url=3Dhttps%3A%2F%2Fwww=
+%2Ewebropolsurveys%2Ecom%2FS%2F7110BA381403B169%2Epar&amp;urlhash=3D2HvP&am=
+p;_t=3Dtracking_anet" target=3D"_blank"><span lang=3D"EN-US">https://www.we=
+bropolsurveys.com/S/7110BA381403B169.par</span></a><span lang=3D"EN-US"><u>=
+</u><u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Best regards,<u></u><u></u></sp=
+an></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Aqdas Malik<u></u><u></u></span=
+></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Doctoral candidate<u></u><u></u=
+></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">School of Science, Aalto Univer=
+sity</span><span style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,=
+sans-serif;color:#1f497d" lang=3D"EN-US"><u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif" lang=3D"EN-US"><u></u>=C2=A0<u></u></span></p>
+</div>
+</div>
+
+</div><br></div></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a113475c286b6a90506b6653d--

@@ -1,0 +1,211 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp67304qek;
+        Thu, 4 Oct 2012 08:43:09 -0700 (PDT)
+Received: by 10.112.39.161 with SMTP id q1mr2878679lbk.131.1349365388576;
+        Thu, 04 Oct 2012 08:43:08 -0700 (PDT)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBC65W2BQKGQEY6XFGMQ@googlegroups.com>
+Received: from mail-la0-f64.google.com (mail-la0-f64.google.com [209.85.215.64])
+        by mx.google.com with ESMTPS id tp6si4831243lab.63.2012.10.04.08.43.08
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 04 Oct 2012 08:43:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBC65W2BQKGQEY6XFGMQ@googlegroups.com designates 209.85.215.64 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBC65W2BQKGQEY6XFGMQ@googlegroups.com designates 209.85.215.64 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBC65W2BQKGQEY6XFGMQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-la0-f64.google.com with SMTP id e6sf209514lah.29
+        for <michiel@unhosted.org>; Thu, 04 Oct 2012 08:43:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Vo65Slhs4xkouiNMujYmr7pJNHlIoKX7H5ETtXa/mnA=;
+        b=iVm4a638sOx53dxTMlFa+MnjrhVRfKI8i5Ab4yRE1DQy/KbXC8le5d24MD1snGbBbg
+         EhVHk8z60VEY5rYfPFD7h3jetI2rJE9O08SDv/0HjI+mIEdZ+30FzpaPjhvcxD/4dPSB
+         YpmPLbk8OFJLwuZ25kU0Jr03s78XR8Lz1XxMBowt+cVbROi0RLRSY3iMxn4bds1BaZ66
+         FvKK0G5VqbVa6E2Sg/9rujJ0GMmUduVkxidtXpq87awZ6edwRQZKLQoztUxzpG/h2EuL
+         vZ70KT36xUjPCQOSqBS98lNSox9SeInE01ap2xD/TD6R45nr5TOHz9U/+I1cwKp5V128
+         OXPQ==
+Received: by 10.216.196.147 with SMTP id r19mr322919wen.58.1349365387645;
+        Thu, 04 Oct 2012 08:43:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.73.226 with SMTP id o2ls7651809wiv.0.gmail; Thu, 04 Oct
+ 2012 08:43:06 -0700 (PDT)
+Received: by 10.180.84.74 with SMTP id w10mr4720779wiy.4.1349365386814;
+        Thu, 04 Oct 2012 08:43:06 -0700 (PDT)
+Received: by 10.180.84.74 with SMTP id w10mr4720778wiy.4.1349365386776;
+        Thu, 04 Oct 2012 08:43:06 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id bu8si809347wib.2.2012.10.04.08.43.06
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 04 Oct 2012 08:43:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 47F2263A69B;
+	Thu,  4 Oct 2012 17:43:06 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id V5U3mbBlHOGD; Thu,  4 Oct 2012 17:42:59 +0200 (CEST)
+Received: from [192.168.1.14] (APuteaux-552-1-107-74.w90-35.abo.wanadoo.fr [90.35.6.74])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 0434E63A67E;
+	Thu,  4 Oct 2012 17:42:58 +0200 (CEST)
+Message-ID: <1349365378.4304.16.camel@synclavier.lan>
+Subject: =?windows-1252?Q?Re=3A_=5Btosdr=3A987=5D_Re=3A_blogpost=3A_7_Surprising_Things_Lu?=
+	=?windows-1252?Q?rking_In_Online_=91Terms_of_Service=92_Agreements?=
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Thu, 04 Oct 2012 17:42:58 +0200
+In-Reply-To: <472facd2-ba44-4983-84d8-2f1dc9d4c36b@googlegroups.com>
+References: <CA+aD3u3aRYhHR3PH-RJoyoZ7KiodhHSO2gZrhXaOZFoXOX=49Q@mail.gmail.com>
+	 <472facd2-ba44-4983-84d8-2f1dc9d4c36b@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.3-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le jeudi 04 octobre 2012 =E0 08:29 -0700, Hannah Poteat a =E9crit :
+> Hi, Michiel. I'd like to highlight three things about the blog post -- on=
+e=20
+> point I think is in error, one I think will not be useful for ToS:DR unle=
+ss=20
+> we approach it in a more fine-tuned way, and one I think will be very=20
+> useful indeed.
+>=20
+> The first point, "Your Photos May Be For Sale," suggests, erroneously, th=
+at=20
+> if a Terms of Service agreement reserves the right to *publicly display *=
+copyrighted=20
+> material (such as photos), that's a bad thing. This could not be more=20
+> wrong: any site that's hosting copyrighted material *must* reserve the=20
+> right to publicly display that material. Otherwise, it won't have the rig=
+ht=20
+> to, you know, display that material publicly. Like, on the internet. The=
+=20
+> right to public display doesn't affect whether or not a website can sell=
+=20
+> its users' content; the ability to sublicense or transfer the rights=20
+> granted by the ToS does. If you're concerned about an online service=20
+> selling your content, don't look for the right to publicly display, look=
+=20
+> for the right to sublicense and transfer.=20
+
+Yes, exactly.
+
+> *Caveat: nearly every ToS grants the rights to sublicense and transfer,=
+=20
+> because most online services / websites would like the ability to be boug=
+ht=20
+> by a larger company. If an online service is bought, the value is in thei=
+r=20
+> content, and they need the ability to legally transfer that content to=20
+> their new owner.=20
+
+Well, I don't think it makes it less bad. Look at Instagram's copyright
+license. It doesn't include sublicense and right to transfer. It didn't
+prevent them from selling it 1 billion to facebook.
+
+> The fifth point, "You Could Be Banned from Filing Class Action Lawsuits,"=
+=20
+> is not incorrect, but is, according to the Supreme Court, the way things=
+=20
+> are supposed to work (I don't agree with them, but the Supreme Court=20
+> doesn't often ask me). We have, in the US, a Federal Arbitration Act that=
+=20
+> is designed to take some of the burden off the court system and lower cos=
+ts=20
+> by encouraging arbitration. Some states, most notably California, had=20
+> previously held that Terms of Service clauses requiring arbitration (thus=
+=20
+> shutting users out of filing lawsuits) were generally unfair, but the=20
+> Supreme Court overturned that last year. In short: the vast majority of=
+=20
+> Terms of Service will have clauses requiring arbitration, after the Supre=
+me=20
+> Court's ruling. I suggest, for the purposes of ToS: DR, you don't have a=
+=20
+> blanket "Arbitration yes/no" checkbox, because that won't help anyone.=20
+> Instead, look at the *terms* of the arbitration clause. Is the arbitratio=
+n=20
+> clause overly burdensome on the user? Does it require the user to travel =
+to=20
+> a certain state to arbitrate, for instance?
+
+I think both should be taken into account.=20
+
+It's not because the supreme court decided these clauses are valid that
+it's making their clause fair for the user. In most cases, I'd say it's
+not fair. We don't have class-actions in France, so I know how it feels
+to see big corporations getting away with things because the potential
+plaintiffs are simply all too small. Imagine if tomorrow, Facebook or
+Google ask their users to waive their right to file a class-action. How
+would people react, considering that it's thanks to class-action
+lawsuits that their privacy issues have been taken to court?
+
+> Finally, the seventh point, "Whether the Terms Are Fair or Not, They Coul=
+d=20
+> Change At Any Moment," is one I think ToS: DR should really highlight.=20
+> There have been a number of court cases (*Roling v. E*Trade Securities LL=
+C*;=20
+> *Harris v. Blockbuster, Inc*; *Douglas v. U.S. Dist. Court ex rel Talk=20
+> America*) holding that companies that claim the ability to change their=
+=20
+> Terms of Service without getting a new assent from their users are creati=
+ng=20
+> an unenforceable illusory contract, a situation that could invalidate the=
+=20
+> entire changed terms. Companies that would like to change their Terms of=
+=20
+> Service must take steps to notify their users about material changes and=
+=20
+> allow their users to assent to the new agreement. This is something that=
+=20
+> would be very good to highlight, because if a company is not informing it=
+s=20
+> users about material changes to its terms, both the users *and the compan=
+y=20
+> itself* are being harmed.
+
+Totally.
+
+Best,
+Hugo
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

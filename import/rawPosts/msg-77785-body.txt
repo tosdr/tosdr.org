@@ -1,0 +1,235 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp150666wfj;
+        Tue, 26 Jun 2012 01:31:58 -0700 (PDT)
+Received: by 10.216.196.218 with SMTP id r68mr6923737wen.122.1340699517026;
+        Tue, 26 Jun 2012 01:31:57 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRD75qX_BBoEOmY5oQ@googlegroups.com>
+Received: from mail-we0-f192.google.com (mail-we0-f192.google.com [74.125.82.192])
+        by mx.google.com with ESMTPS id y7si18892700wef.80.2012.06.26.01.31.55
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 01:31:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRD75qX_BBoEOmY5oQ@googlegroups.com designates 74.125.82.192 as permitted sender) client-ip=74.125.82.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRD75qX_BBoEOmY5oQ@googlegroups.com designates 74.125.82.192 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRD75qX_BBoEOmY5oQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by werg55 with SMTP id g55sf3505317wer.29
+        for <multiple recipients>; Tue, 26 Jun 2012 01:31:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:organization:x-mailer:mime-version:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=dDhToZ/eEVEnF86Zg68G+WAfwaCrRQRW0YVwxpPUbxE=;
+        b=qsl/rpFUVVO2Ud3lzkFVlmhot5s1DzXUufvjkDgS20nyxKhNXqWcffSAkbz5OYZGxq
+         HI+JlME9YN1HgPO9UrCcBhtf5Ot7HBnyknRsoxoJA9AdtyXT2PcKAbQkBxdV7FISPuVX
+         fwywYwqUw53gtbb2NklbxLnzn9Ww5tQq8aZuI=
+Received: by 10.204.153.205 with SMTP id l13mr788417bkw.15.1340699515419;
+        Tue, 26 Jun 2012 01:31:55 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.8.149 with SMTP id h21ls4461639bkh.3.gmail; Tue, 26 Jun
+ 2012 01:31:45 -0700 (PDT)
+Received: by 10.204.149.210 with SMTP id u18mr1678164bkv.1.1340699505218;
+        Tue, 26 Jun 2012 01:31:45 -0700 (PDT)
+Received: by 10.204.149.210 with SMTP id u18mr1678143bkv.1.1340699502768;
+        Tue, 26 Jun 2012 01:31:42 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id hy18si15100484bkc.2.2012.06.26.01.31.42
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 26 Jun 2012 01:31:42 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 48C1B63B4FA
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 10:31:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6LooLCLLnGfE for <tosdr@googlegroups.com>;
+	Tue, 26 Jun 2012 10:31:39 +0200 (CEST)
+Received: from [10.240.27.20] (smb-rsycl-02.wifihubtelecom.net [213.174.124.178])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id E5AB863B4BF
+	for <tosdr@googlegroups.com>; Tue, 26 Jun 2012 10:31:38 +0200 (CEST)
+Message-ID: <1340699493.4413.40.camel@synclavier.lan>
+Subject: Twitter's practice to notify changes in ToS [Fwd: [IFOSSLR Ed-Com]
+ Updates to Twitter and Our Policies]
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Tue, 26 Jun 2012 10:31:33 +0200
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+
+-------- Message transf=E9r=E9 --------
+De: Twitter <n-rq-pbz=3Dvsbffye.bet-13516@postmaster.twitter.com>
+=C0: ed-com@ifosslr.org
+Sujet: [IFOSSLR Ed-Com] Updates to Twitter and Our Policies
+Date: Mon, 21 May 2012 16:10:35 +0000 (UTC)
+
+                                   =20
+                                   =20
+                                   =20
+                                  Hi,
+                                 IFOSS
+                                   L.
+                                 Rev.=20
+                                 IFOSS
+                                   L.
+                                  Rev.
+                                   =20
+                                   =20
+                                   =20
+                                   =20
+                                   =20
+                                   =20
+                                   =20
+                               New things
+                               are always
+                               happening
+                                here at
+                              Twitter HQ.
+                                 We're
+                              growing at a
+                              rapid pace,
+                                and our
+                               commitment
+                                   to
+                              simplicity,
+transparency, and reaching every person on the planet continues. We thought=
+ you might be interested in knowing about some of our most recent developme=
+nts:=20
+                                     * A
+                                      new
+        weekly email that delivers the most interesting news and items you =
+might have missed from the people you're connected to on Twitter.=20
+                                    * Now
+        Twitter is in more languages than ever. Check for your preferred la=
+nguage and change your setting.=20
+      * Download the latest Twitter mobile apps at twitter.com/download.=20
+      * There's more to Discover on Twitter.com - try out the new Discover =
+tab.=20
+                              In addition,
+                              we've made a
+                               number of
+                               updates to
+                              our Privacy
+                               Policy and
+                                Terms of
+                               Service.=20
+                                Here are
+                              some of the
+                              main changes
+                                 to our
+                                Privacy
+                              Policy, with
+                               links for
+                                  more
+                             information:=20
+      * We've provided more details about the information we collect and ho=
+w we use it to deliver our services and to improve Twitter. One example: ou=
+r new tailored suggestions feature, which is based on your recent visits to=
+ websites that integrate Twitter buttons or widgets, is an experiment that =
+we're beginning to roll out to some users in a number of countries. Learn m=
+ore here.=20
+      * We've noted the many ways you can set your preferences to limit, mo=
+dify or remove the information we collect. For example, we now support the =
+Do Not Track (DNT) browser setting, which stops the collection of informati=
+on used for tailored suggestions.=20
+      * We've clarified the limited circumstances in which your information=
+ may be shared with others (for example, when you've given us permission to=
+ do so, or when the data itself is not private or personal). Importantly, o=
+ur privacy policy is not intended to limit your rights to object to a third=
+ party's request for your information.=20
+                              In our Terms
+                              of Service,
+                                 we've
+                               clarified
+                                how your
+                              relationship
+                              with Twitter
+                               works and
+                                 made a
+                               number of
+                                 small
+                              changes and
+                               formatting
+improvements, such as new headings for easy reference and updated descripti=
+ons of our services.=20
+                                 Take a
+                               moment to
+                              read our new
+                                Privacy
+                               Policy and
+                                Terms of
+                              Service, and
+                               thanks for
+                                 using
+                               Twitter.=20
+                              The Twitter
+                                 Team=20
+                                   =20
+                                   =20
+                                   =20
+                                   =20
+                              Forgot your
+                                Twitter
+                               password?
+                                  Get
+                              instructions
+                               on how to
+                               reset it.=20
+                                You can
+                              change your
+                              notification
+                               settings.
+                              Need help?=20
+                                Twitter,
+                                Inc. 795
+                              Folsom St.,
+                               Suite 600
+                                  San
+                               Francisco,
+                               CA 94107=20
+                                   =20
+                                   =20
+_______________________________________________
+IFOSS L. Rev. Editorial Committee Private Discussion List
+ed-com@ifosslr.org
+http://lists.ifosslr.org/cgi-bin/mailman/listinfo/ed-com
+PRIVATE AND CONFIDENTIAL
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,114 @@
+Return-Path: <tosdr+bncBCYIVNHJ5EARBXM6YKQAKGQEAOSULWY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id ABDFA40910
+	for <anything@michielbdejong.com>; Wed, 10 Sep 2014 19:50:27 +0200 (CEST)
+Received: from mfilter12-d.gandi.net (mfilter12-d.gandi.net [217.70.178.129])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A8A0914221C
+	for <anything@michielbdejong.com>; Wed, 10 Sep 2014 19:50:27 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter12-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter12-d.gandi.net (mfilter12-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id bZuZPyEIqO4B for <anything@michielbdejong.com>;
+	Wed, 10 Sep 2014 19:50:26 +0200 (CEST)
+Received: from mail-qg0-x23e.google.com (mail-qg0-x23e.google.com [IPv6:2607:f8b0:400d:c04::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 30FDF14226A
+	for <anything@michielbdejong.com>; Wed, 10 Sep 2014 19:50:23 +0200 (CEST)
+Received: by mail-qg0-f62.google.com with SMTP id j107sf1161440qga.17
+        for <anything@michielbdejong.com>; Wed, 10 Sep 2014 10:50:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=wEPHDkJbc8CCLHphXxoiGal6aKPQOz3eIucHPIQ1vjo=;
+        b=M3mPArvQvSKFSkPkBP9srpgJz1m/KWN2hRn/XD69XMIN48/NwOEYsJuKzuLW80APu2
+         qYPMvhVKgxARz2Y9oMfwtiATks7XEl7rLToNf12+98HM1Mi3oGkefb0k2LKzxo8bsZYF
+         wluug/oU0vgiQIRRRl7hlO1lsUqHrrJevubmf19QKamLUeC8u77cpHZyEXDtf/6NJ5gf
+         s15novfQ3xdF9w2sidn92RUDYYpqtU7TDrZEEcid+bmUiWcfvg4+x8zafz0Ct7FeZAtT
+         udZeN5w7HbNuQ++MEPEniXX+6Y5kSjy0/PGSS4XHdmgbclUvW2rMBGsgpTFufrvdXYdw
+         Ve/g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=wEPHDkJbc8CCLHphXxoiGal6aKPQOz3eIucHPIQ1vjo=;
+        b=mxkDRUPKNOMM5YK9Fwj0Bk6cKTq99kNEJZL3C82Q3SMLTZ5vUxfFuspcdxuHvU8Y6j
+         IprNeMmOn2mnlHr+XRErXx/h7M8EKMHvWVV70Rv/98eSEspp+Uf0GDv1n8WVjqENkTA9
+         nZT5YXFlEkG1dVTExM7O8iwokAbkJ5vyuodkmwdRaXBqX1JwIdjFlcjiFjY68h3lVcwM
+         ZTyCXSNKFnNlDYHiTysoSYYHvUI5UHExPipJsKl15gqraf8qJcgmBXx8DgV6F4P+6Ur5
+         c7OIsWDV+QH9KNFjMME+O72fY9MzM8YnvdnbSiUE1GNRSNEXDSFVdTa8Rl8Zo5bJzS8j
+         XSew==
+X-Received: by 10.140.85.17 with SMTP id m17mr27068qgd.20.1410371421898;
+        Wed, 10 Sep 2014 10:50:21 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.92.133 with SMTP id b5ls1461078qge.88.gmail; Wed, 10 Sep
+ 2014 10:50:21 -0700 (PDT)
+X-Received: by 10.140.93.113 with SMTP id c104mr28822qge.21.1410371421530;
+        Wed, 10 Sep 2014 10:50:21 -0700 (PDT)
+Date: Wed, 10 Sep 2014 10:50:21 -0700 (PDT)
+From: Anna D <aanmeldingen49@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <66e2f9f9-5934-4678-8abd-c396618c97f4@googlegroups.com>
+In-Reply-To: <20140910064919.GA14781@xps>
+References: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com>
+ <7001473d-ec5f-4164-b15c-817d4c328199@googlegroups.com>
+ <34df663c-0922-4263-9d2e-616c3b67321d@googlegroups.com>
+ <540AD403.7030000@michielbdejong.com>
+ <20140907204523.GA7036@xps>
+ <540DB80E.9010000@michielbdejong.com>
+ <d25bf93c-f11f-4648-be80-a4562321932b@googlegroups.com>
+ <20140910064919.GA14781@xps>
+Subject: Re: [tosdr:3228] Re: Twitter [bad] Right to access
+MIME-Version: 1.0
+X-Original-Sender: aanmeldingen49@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_321_1186165262.1410371421179"
+
+------=_Part_321_1186165262.1410371421179
+Content-Type: text/plain; charset=UTF-8
+
+No, I can't find anything about it in the ToS, privacy policy or "Twitter 
+rules" (which is part of the ToS), unfortunately.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_321_1186165262.1410371421179
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">No, I can't find anything about it in the ToS, privacy policy or "Twitter rules" (which is part of the ToS), unfortunately.<br></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an email to <a href="mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href="mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr">http://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href="https://groups.google.com/d/optout">https://groups.google.com/d/optout</a>.<br />
+
+------=_Part_321_1186165262.1410371421179--

@@ -1,0 +1,186 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBZ7AWSGAKGQEVOCRWYQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 047B3161735
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 19:37:47 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id F1C801162D3
+	for <anything@michielbdejong.com>; Fri, 10 May 2013 19:37:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id wkP2DVdaJ4PY for <anything@michielbdejong.com>;
+	Fri, 10 May 2013 19:37:45 +0200 (CEST)
+Received: from mail-qc0-x238.google.com (mail-qc0-x238.google.com [IPv6:2607:f8b0:400d:c01::238])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 03D8C116247
+	for <michiel@michielbdejong.com>; Fri, 10 May 2013 19:37:44 +0200 (CEST)
+Received: by mail-qc0-f184.google.com with SMTP id c10sf1075898qcz.21
+        for <michiel@michielbdejong.com>; Fri, 10 May 2013 10:37:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=QqUq9O+zMgGOoF52hduiXLUe6Aa1JfOoSPnwez9Xi/w=;
+        b=D6Vsug2Ve7KJrHcumwBOeNudQOQ9x1M957ZcCShmncKGOmNcnwpc5Jzz+o96Gp47m6
+         k/wtZDpF13aNBYwhljvRi5q7DYzUd59G4tcH3bin5ZCK/Zn154P/Nd7NviEh4TGLHlvT
+         6eYD2kPnnD23Pno395XaQ+ez1MfVxxz5U6FG6MtHBm6ngPtmsUbK1yYuncQlAxWcmx0x
+         tQyLMudgzkFh3gNT6SEAez9niAYHBX3zYNoNhnwKjwhnx+DpRg2Z1q1uAsCrQ696ottd
+         2Qdi6dlkvOrqJYCoqoTjRD/3dmzYL3Tm9dHaCPo8zf1BjyhqSNFDl0Y851GtHE/1PZxC
+         dmtg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:cc:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=QqUq9O+zMgGOoF52hduiXLUe6Aa1JfOoSPnwez9Xi/w=;
+        b=dQSWkodKwl34xKPCQi7DJaPUj+8Lq4zD+Hp4EcCCfAlkBtfnw0cKHMRQc5Okmvf7Pw
+         L+zS4WgguTO3DWaSt3i1abo1BLz7QqF2wreCeN4sHriGBbK6LsiK0wKIjmVYjTiXC5vE
+         Q25sF3Mz+XCbUxE9e4fkArW9bSKcNBli4ROtga4obG18bb6qeRb13IeirpGeDbDITNCL
+         ATimYx+c0wCrkouQngegMkDu3euhTgJIvCuP0DgoHl/7wfZISer7381xmGrHZcd/DX24
+         ASDrIjiAM36GqiV4rsdQJ9lW5TDxVwEZjNnQG+9VFq1+1OpaA0z3F1JungIG92W9O0zG
+         Qdpg==
+X-Received: by 10.49.61.137 with SMTP id p9mr1524283qer.40.1368207463778;
+        Fri, 10 May 2013 10:37:43 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.1.81 with SMTP id 17ls1874386qek.79.gmail; Fri, 10 May 2013
+ 10:37:43 -0700 (PDT)
+X-Received: by 10.49.35.179 with SMTP id i19mr1558988qej.3.1368207463150;
+        Fri, 10 May 2013 10:37:43 -0700 (PDT)
+Date: Fri, 10 May 2013 10:37:42 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Cc: mcharlesr@gmail.com
+Message-Id: <7ddc2f7b-20ff-4483-93a6-37a49d8abcbe@googlegroups.com>
+In-Reply-To: <9bff6d99-9498-4113-95d7-e8bbca2a7185@googlegroups.com>
+References: <1349291817.21837.5.camel@synclavier.lan>
+ <9bff6d99-9498-4113-95d7-e8bbca2a7185@googlegroups.com>
+Subject: [tosdr:2019] Re: Terms may be changed any time at their discretion,
+ without notice to the user
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1314_19881333.1368207462979"
+
+------=_Part_1314_19881333.1368207462979
+Content-Type: text/plain; charset=ISO-8859-1
+
+Microsoft.com as well:
+
+The services that Microsoft provides to you are subject to the following 
+Terms of Use ("TOU"). Microsoft reserves the right to update the TOU at any 
+time without notice to you. The most current version of the TOU can be 
+reviewed by clicking on the "Terms of Use" hypertext link located at the 
+bottom of our Web pages.
+
+ 
+
+From <
+http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx
+> 
+
+On Thursday, January 24, 2013 2:22:12 PM UTC-4, mcha...@gmail.com wrote:
+>
+> On Wednesday, October 3, 2012 3:17:07 PM UTC-4, Hugo Roy wrote:
+> > This is a unified point for common terms about how services apply
+> > changes to their terms.
+> > 
+> > 
+> > 
+> >         They can change the terms of service any time they see fit, even
+> >         without notification to the user. Your use of the service
+> >         supposedly constitutes acceptance of the changes in the terms.
+>
+> netflix may have recently changed this.
+> I got a request on my wii last night to accept some terms of service.
+> Very hard to read, research/etc. on my wii, and netflix offered to email 
+> me the link.  It was just:  
+>    http://www.netflix.com/TermsOfUse
+> plus some query parameters, and I'm not sure what they did.
+> The date on that ToS is Sept. 2012, so I'm guessing that they didn't 
+> change.
+>
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_1314_19881333.1368207462979
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Microsoft.com as well:<div><br></div><div><p style=3D"margin:0in;font-famil=
+y:Calibri;font-size:11.0pt">The services that
+Microsoft provides to you are subject to the following Terms of Use
+("TOU"). Microsoft reserves the right to update the TOU at any time
+without notice to you. The most current version of the TOU can be reviewed =
+by
+clicking on the "Terms of Use" hypertext link located at the bottom
+of our Web pages.</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:11.0pt" lang=3D"en-CA"=
+>&nbsp;</p>
+
+<p style=3D"margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">F=
+rom
+&lt;<a href=3D"http://www.microsoft.com/en-us/legal/intellectualproperty/co=
+pyright/default.aspx">http://www.microsoft.com/en-us/legal/intellectualprop=
+erty/copyright/default.aspx</a>&gt;&nbsp;</p><br>On Thursday, January 24, 2=
+013 2:22:12 PM UTC-4, mcha...@gmail.com wrote:<blockquote class=3D"gmail_qu=
+ote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padd=
+ing-left: 1ex;">On Wednesday, October 3, 2012 3:17:07 PM UTC-4, Hugo Roy wr=
+ote:<br>&gt; This is a unified point for common terms about how services ap=
+ply<br>&gt; changes to their terms.<br>&gt; <br>&gt; <br>&gt; <br>&gt; &nbs=
+p; &nbsp; &nbsp; &nbsp; They can change the terms of service any time they =
+see fit, even<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; without notification to t=
+he user. Your use of the service<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; suppos=
+edly constitutes acceptance of the changes in the terms.<p>netflix may have=
+ recently changed this.<br>I got a request on my wii last night to accept s=
+ome terms of service.<br>Very hard to read, research/etc. on my wii, and ne=
+tflix offered to email me the link. &nbsp;It was just: &nbsp;<br>&nbsp; &nb=
+sp;<a href=3D"http://www.netflix.com/TermsOfUse" target=3D"_blank">http://w=
+ww.netflix.com/<wbr>TermsOfUse</a><br>plus some query parameters, and I'm n=
+ot sure what they did.<br>The date on that ToS is Sept. 2012, so I'm guessi=
+ng that they didn't change.</p><p></p><p></p></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_1314_19881333.1368207462979--

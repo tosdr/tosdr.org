@@ -1,0 +1,181 @@
+Return-Path: <tosdr+bncBC6L3T5T2QERBHHWSCIAKGQEPDYTEHQ@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id A7570161747
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 02:43:15 +0200 (CEST)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A487914333E
+	for <anything@michielbdejong.com>; Fri,  9 Aug 2013 02:43:15 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id yyqYfelV1fT2 for <anything@michielbdejong.com>;
+	Fri,  9 Aug 2013 02:43:14 +0200 (CEST)
+Received: from mail-gh0-x23f.google.com (mail-gh0-x23f.google.com [IPv6:2607:f8b0:4002:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id A907514393F
+	for <michiel@michielbdejong.com>; Fri,  9 Aug 2013 02:43:10 +0200 (CEST)
+Received: by mail-gh0-f191.google.com with SMTP id f13sf1019052ghb.28
+        for <michiel@michielbdejong.com>; Thu, 08 Aug 2013 17:43:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=SmDpa2ZIqcQhqjwGFdxxL+V6nNH6XMkxDY65l2gHL5w=;
+        b=ETF48jjCmVnOtYCD6v8u/7u6iTgVOZUItRAvLlzNJCjlVaJdncmhlijV5IWLryZMEj
+         59yP0C9rUxLl7jwoxIZLvyU11UpX0BN+x0ozCfRZjcZ1MMlF39jD1iGJ1qWQcEhl5cgT
+         c826N1uRoY+jmoImp5416yMZxrtU1ew0His6GySD1lW33NFXGj8T81+7s/gwu9AbROd8
+         PY9mpKlTgznEMLJq6jiMP2RcusMqbERjT3+jumvFoPe4N5rpLTyKmGI3kjjIoQbypBFw
+         H9Mi4qL4SOMLZjaBckrE4QSkDVEyCBfnfDfDdwGYDk1Vwo+NNCDNEEP3NxvJk/XUtZHt
+         lQZg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=SmDpa2ZIqcQhqjwGFdxxL+V6nNH6XMkxDY65l2gHL5w=;
+        b=HZJcXgxS8txZ4UiHQsbmI1W62OyIZldGKsSvrTD6BH9ALvalEH1EXWy34+EqkMiheG
+         YiMpFKnEImVTXs3ouP8r2l2fu50stAZIxTyQhDkGA02q5w/XtHVkeori0l5yOaG9GNij
+         c1jhHMbfJkxWHwZAp0jQF53z2FaYZqWk6NOhGVnr5IdbkEgtZ5lKciUu0Ms+SKghB8w6
+         H4ibtgtUMOTke7bwCp7S/rNS2EGVnDLzhisA4wj8z1jWd+k9sjA3indhQijh5enqvboM
+         urIqKjMM8QQ7fQBsywkzBS7cgPg6HM7gHtTCDIkDJuxW9EvdGxHdWamO4PNpA8VHdRcl
+         IKHw==
+X-Received: by 10.50.120.8 with SMTP id ky8mr88885igb.11.1376008989277;
+        Thu, 08 Aug 2013 17:43:09 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.119.67 with SMTP id ks3ls691743igb.13.gmail; Thu, 08 Aug
+ 2013 17:43:08 -0700 (PDT)
+X-Received: by 10.50.3.70 with SMTP id a6mr86656iga.16.1376008988681;
+        Thu, 08 Aug 2013 17:43:08 -0700 (PDT)
+Date: Thu, 8 Aug 2013 17:43:07 -0700 (PDT)
+From: wreckedcarzz@gmail.com
+To: tosdr@googlegroups.com
+Message-Id: <ab944e42-59c1-44c9-9a77-8ff97a84d15d@googlegroups.com>
+In-Reply-To: <1f489655-4e17-43c3-a73f-475691f86852@googlegroups.com>
+References: <1340817019.4510.18.camel@synclavier.lan>
+ <CA+aD3u2R0fCRjbv-__wrnKmbOs5Ywbw8vSF=Tf6R=x13vhjusA@mail.gmail.com>
+ <1340835642.5654.1.camel@synclavier.lan>
+ <5cae30f5-c74d-4fb3-bbb7-15b80befd4c2@googlegroups.com>
+ <1f489655-4e17-43c3-a73f-475691f86852@googlegroups.com>
+Subject: [tosdr:2621] Re: Gravatar: no right to leave the service?
+MIME-Version: 1.0
+X-Original-Sender: wreckedcarzz@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+On Friday, July 26, 2013 7:39:25 AM UTC-7, Ian McGowan wrote:
+> Because of this, we're removing the point from the website.
+>=20
+> On Friday, July 26, 2013 9:38:43 AM UTC-5, Ian McGowan wrote:This has act=
+ually been updated on the Account Killer blacklist:=A0http://www.accountkil=
+ler.com/en/delete-minecraft-account
+>=20
+>=20
+> If you have the old version of Minecraft, you have to move it to the new =
+log in system before you can delete your account, but you are able to do so=
+.
+>=20
+> On Wednesday, June 27, 2012 5:20:42 PM UTC-5, Hugo Roy wrote:Le mercredi =
+27 juin 2012 =E0 23:31 +0300, Michiel de Jong a =E9crit :
+>=20
+> > wow, that's shocking! their interface indeed doesn't seem to have a
+>=20
+> > 'delete my account' button, and their help site is broken today
+>=20
+>=20
+>=20
+> This is what I get for searching "delete account":
+>=20
+> =A0 =A0 =A0 =A0 How do I close my account?
+>=20
+> =A0 =A0 =A0 =A0=20
+>=20
+> =A0 =A0 =A0 =A0 Because of how our system works, we cannot delete account=
+s
+>=20
+> =A0 =A0 =A0 =A0 completely. If you remove all images from your email addr=
+esses
+>=20
+> =A0 =A0 =A0 =A0 (click the "Don't use this image" link) and then hide you=
+r
+>=20
+> =A0 =A0 =A0 =A0 profile (see below), your account will no longer be acces=
+sible
+>=20
+> =A0 =A0 =A0 =A0 by other folks.
+>=20
+> =A0 =A0 =A0 =A0=20
+>=20
+> =A0 =A0 =A0 =A0 Can I delete my uploaded images?
+>=20
+> =A0 =A0 =A0 =A0=20
+>=20
+> =A0 =A0 =A0 =A0 Yes, simply hover your mouse over them in the list at the=
+ bottom
+>=20
+> =A0 =A0 =A0 =A0 of your manage page, and click the red =93X=94.
+>=20
+> =A0 =A0 =A0 =A0=20
+>=20
+> =A0 =A0 =A0 =A0 How do I hide my profile?
+>=20
+> =A0 =A0 =A0 =A0=20
+>=20
+> =A0 =A0 =A0 =A0 While you cannot completely delete your profile, you can =
+remove
+>=20
+> =A0 =A0 =A0 =A0 all of your profile information easily through the =93Edi=
+t My
+>=20
+> =A0 =A0 =A0 =A0 Profile=94 page, and you can also hide your profile from =
+external
+>=20
+> =A0 =A0 =A0 =A0 access. Visit your profile page (click your name in the t=
+op
+>=20
+> =A0 =A0 =A0 =A0 navigation of the website), then click the =93Hide My Pro=
+file=94
+>=20
+> =A0 =A0 =A0 =A0 link in the bottom, right-hand corner.
+>=20
+> --=20
+>=20
+> Hugo Roy=20
+>=20
+> =A0 French Coordinator, FSFE =A0 =A0 =A0 chat: hu...@jabber.fsfe.org
+>=20
+> =A0 www.fsfe.org/about/roy =A0 =A0 =A0 =A0 mobile: +336 08 74 13 41
+>=20
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0mobile=
+ DE: +49 151 143 56 563
+
+Bump to this, noticed it while perusing ToS;DR and it is in fact now possib=
+le (after migration) to delete an account (as stated previously).
+
+Just bumping so the change can take place =3D)
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

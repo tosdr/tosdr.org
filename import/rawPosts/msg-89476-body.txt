@@ -1,0 +1,132 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp176535qek;
+        Tue, 28 Aug 2012 10:14:01 -0700 (PDT)
+Received: by 10.220.152.134 with SMTP id g6mr15204280vcw.10.1346174040497;
+        Tue, 28 Aug 2012 10:14:00 -0700 (PDT)
+Return-Path: <tosdr+bncCMW1zdL2DRDX-POBBRoEs1tr7A@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id a2si1564259vdi.50.2012.08.28.10.13.59
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 10:14:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCMW1zdL2DRDX-POBBRoEs1tr7A@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCMW1zdL2DRDX-POBBRoEs1tr7A@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCMW1zdL2DRDX-POBBRoEs1tr7A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbgb30 with SMTP id gb30sf5083472vcb.29
+        for <multiple recipients>; Tue, 28 Aug 2012 10:13:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=s0X4JBO9n+Gtr0lqIobAxzWaIPeE+r9uc5V16a/IPxY=;
+        b=DtS8RHzDRs6EXcebv6obFC9CTmBD+pbtwNFqnEjH6gsmlFWznjNu9MR2Uu5C1WUSLE
+         YbOCHMs1M6McWk4NWSi3NTa7L4kd8WfcwAmbUBqqXAnw2nSF6uRFuEp8ZKjKua1zbbUa
+         lt0lblRoBt5SgJfA/t7hDPjaPZ22JUc7WVoEDNPdLXrmjgKkEGWJebQBRyn+9CGSMHQS
+         /3dTk4ICh2TYOxRWe2jKtXnqg6tJLn7HIJtgu1jTEPrcTUDoTIVqiHs00LT6N0l3uvC4
+         cMIGqnukX6OONTUu6g2ULEIY0CkNhDeX+LpvXN6PMlQQEMBTDO+CHvNOeZ1ujhrVXV/U
+         LgNA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=s0X4JBO9n+Gtr0lqIobAxzWaIPeE+r9uc5V16a/IPxY=;
+        b=OIwG20Ax/bv1Buzie1HjggYDd52ljZfJIwIY51gFvKR1eFVNZoLQBrv0jpOxpdZbsv
+         KLJWN5iSxEybVTs+V4XtPGyxkRXiausVTzDojxxdA+27pEjRa+Tey5z42se0a0e9mKGI
+         zFaGwzqxGCStEpt7zvMivp0B///1eZVRbx4/k2j+ExQUA/NADYsXimd+7yL8C0632z1k
+         rFMSs+y6cKIXqgs1yzWByTETdFEaPub9KCYdglYYSjw4E4bn92/oj/NoRwKomcOny54W
+         1mrKmMZXr9Ma6rSDLco8g7D9Gj8xaviMkAIXLXni3wx8cL0zCxI+acDiti7OsZb4kos5
+         13Ug==
+Received: by 10.229.135.213 with SMTP id o21mr675672qct.5.1346174039581;
+        Tue, 28 Aug 2012 10:13:59 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.229.175.169 with SMTP id ba41ls732941qcb.5.gmail; Tue, 28 Aug
+ 2012 10:13:58 -0700 (PDT)
+Received: by 10.224.182.74 with SMTP id cb10mr3448517qab.0.1346174038316;
+        Tue, 28 Aug 2012 10:13:58 -0700 (PDT)
+Received: by 10.224.182.74 with SMTP id cb10mr3448514qab.0.1346174038303;
+        Tue, 28 Aug 2012 10:13:58 -0700 (PDT)
+Received: from mail-qc0-f171.google.com (mail-qc0-f171.google.com [209.85.216.171])
+        by gmr-mx.google.com with ESMTPS id k34si4164083qcz.1.2012.08.28.10.13.57
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 28 Aug 2012 10:13:57 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.216.171 is neither permitted nor denied by best guess record for domain of indrora@earfolds.com) client-ip=209.85.216.171;
+Received: by qcad1 with SMTP id d1so3321180qca.30
+        for <tosdr@googlegroups.com>; Tue, 28 Aug 2012 10:13:57 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.229.137.16 with SMTP id u16mr3159833qct.70.1346174037637; Tue,
+ 28 Aug 2012 10:13:57 -0700 (PDT)
+Received: by 10.224.67.130 with HTTP; Tue, 28 Aug 2012 10:13:57 -0700 (PDT)
+X-Originating-IP: [71.213.171.132]
+In-Reply-To: <1346169402.19155.166.camel@synclavier.lan>
+References: <C90178C52E244BA4B03669B7366450D3@emotionent.com>
+	<1346169402.19155.166.camel@synclavier.lan>
+Date: Tue, 28 Aug 2012 11:13:57 -0600
+Message-ID: <CACjy-ZHcVoh6=yJ6ecGJ-QwsxmBHwQ1E313gct1nC8G5Mqtm_A@mail.gmail.com>
+Subject: Re: [tosdr:714] BitBucket TOS
+From: Morgan Gangwere <indrora@earfolds.com>
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQkUPHFuIMnNmdGdF3Vm9GYaggUkQ5UY2qs3vAVxH1AMqE8u3OBwDupaYv6+CuFzyiAWR3Eh
+X-Original-Sender: indrora@earfolds.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.216.171 is neither permitted nor denied by best guess record for
+ domain of indrora@earfolds.com) smtp.mail=indrora@earfolds.com; dkim=neutral
+ (bad format) header.i=@earfolds.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+On Tue, Aug 28, 2012 at 9:56 AM, Hugo Roy <hugo@fsfe.org> wrote:
+> Le vendredi 10 ao=FBt 2012 =E0 09:33 -0600, Kray Mitchell a =E9crit :
+>> Hey Guys,
+>> Didn't see BitBucket on there, but I was unsure of this from 3.4 End
+>> User Data.
+>>
+>>
+>> End User hereby grants Atlassian a non-exclusive license to copy,
+>> distribute, perform, display, store, modify, and otherwise use End
+>> User Data in connection with operating the Hosted Services.
+>>
+>> http://www.atlassian.com/hosted/terms.jsp
+>
+> Which "data" are we talking about? It looks like a copyright license,
+> but that's usually not for "user data". We need more context to
+> understand.
+>
+> Thank you
+
+I'm going to subtly assume its data people put on the site; bitbucket
+is a Git and Mercurial hosting system (like GitHub).
+
+--=20
+my .sigfile is on vacation.
+I filter everything with an application/ms-* mimetype.
+I write code: https://github.com/indrora/ https://bitbucket.org/indrora/
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

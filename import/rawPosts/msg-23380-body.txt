@@ -1,0 +1,725 @@
+Return-Path: <tosdr+bncBCP3TN64QYFBBR733GRQKGQEQRD4YOI@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 815B940F87
+	for <anything@michielbdejong.com>; Thu, 27 Nov 2014 02:26:39 +0100 (CET)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 751CC1780A4
+	for <anything@michielbdejong.com>; Thu, 27 Nov 2014 02:26:39 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 75G7z5LakOYH for <anything@michielbdejong.com>;
+	Thu, 27 Nov 2014 02:26:36 +0100 (CET)
+Received: from mail-ie0-x240.google.com (mail-ie0-x240.google.com [IPv6:2607:f8b0:4001:c03::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1FB0F17809D
+	for <michiel@michielbdejong.com>; Thu, 27 Nov 2014 02:26:33 +0100 (CET)
+Received: by mail-ie0-f192.google.com with SMTP id rp18sf509049iec.9
+        for <michiel@michielbdejong.com>; Wed, 26 Nov 2014 17:26:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:message-id:subject:from:to:content-type
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=bPzSGyjDjIhukKqPY23PoSSGi25jag+UyiSRrcNAWrI=;
+        b=gEPN5u2UO0VP/nkV7NHK/n5FSqSkHQrzj6zidTvcjq5Tw00a9ygQdtwuRCYZB6av0g
+         7+6n5vrsD6YDhLoK0yTjX1MYz+s4N8Tw4LgkfcMRLFQLu79MhlSgdQH4bRY9mzcjHwui
+         cdtDT7kdNYVp4wXpSKjM61J7ISNpOYUrF6wR1woF3J/CgZVQ+QGxguaRbO7vcIGdukhh
+         wE5nDs+6hzX+nIQD7oX9xZv7nKsHVUq23Z2SmHaf+okFeZkP3s3qi5pK0pK+Cp0GmMn1
+         CWiqFto6tK0ra6RDaxc7ZkAPxgGFJn3C+kvohsww+lJoZkKJXq1d7u8EuOYs4zBtVNun
+         a3Fw==
+X-Received: by 10.50.107.3 with SMTP id gy3mr400191igb.10.1417051592225;
+        Wed, 26 Nov 2014 17:26:32 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.131.170 with SMTP id on10ls1144610igb.7.gmail; Wed, 26 Nov
+ 2014 17:26:31 -0800 (PST)
+X-Received: by 10.42.52.208 with SMTP id k16mr44994941icg.23.1417051591196;
+        Wed, 26 Nov 2014 17:26:31 -0800 (PST)
+Received: from mail-ig0-x234.google.com (mail-ig0-x234.google.com. [2607:f8b0:4001:c05::234])
+        by gmr-mx.google.com with ESMTPS id d4si571874igm.2.2014.11.26.17.26.31
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 26 Nov 2014 17:26:31 -0800 (PST)
+Received-SPF: pass (google.com: domain of odottore@gmail.com designates 2607:f8b0:4001:c05::234 as permitted sender) client-ip=2607:f8b0:4001:c05::234;
+Received: by mail-ig0-f180.google.com with SMTP id h15so3573151igd.13
+        for <tosdr@googlegroups.com>; Wed, 26 Nov 2014 17:26:31 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.43.79.7 with SMTP id zo7mr36246717icb.5.1417051591049; Wed,
+ 26 Nov 2014 17:26:31 -0800 (PST)
+Received: by 10.107.28.84 with HTTP; Wed, 26 Nov 2014 17:26:31 -0800 (PST)
+Date: Wed, 26 Nov 2014 17:26:31 -0800
+Message-ID: <CAEwvs7j9x58cGMZfaytgnim1EFhQ7Ko2baqgSf=+FAYdpWmQhg@mail.gmail.com>
+Subject: [tosdr:3336] CenturyLink Online Account TOS
+From: Alexi M <odottore@gmail.com>
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a1133588eb6ac5d0508cd083c
+X-Original-Sender: odottore@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of odottore@gmail.com designates 2607:f8b0:4001:c05::234
+ as permitted sender) smtp.mail=odottore@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--001a1133588eb6ac5d0508cd083c
+Content-Type: text/plain; charset=UTF-8
+
+https://q.myaccount.centurylink.com/MasterWebPortal/freeRange/acctMgmt/RegisterForMyAccount
+
+Terms: Effective June 10, 2009
+The following terms and conditions ("Agreement") apply to your use of and
+access to any website owned or operated by CenturyLink or its subsidiaries,
+affiliates, agents, and licensors (each, a "Website"). In this Agreement,
+CenturyLink and its subsidiaries and affiliates are collectively referred
+to as "Company." By using or accessing a Website, you agree with the terms
+of this Agreement. Certain products or services offered through the Website
+may have additional terms and conditions, which govern in the event of any
+inconsistency with this Agreement.
+In addition to any other agreements between you and Company (also referred
+to herein as "we," "us," and in the possessive, "our"), this Agreement
+explains the policies that govern your access to and use of the Website,
+including the actions that we may take, within our sole discretion, for any
+use that we deem unacceptable.
+If you do not wish to be bound by this Agreement, you should not access,
+subscribe to, or otherwise use a Website. Company may modify this Agreement
+at any time without notice to you. Modifications will be deemed effective
+immediately upon posting of the modified terms at www.centuryLink.com
+<http://www.centurylink.com>
+A. Website Terms and Conditions
+1. Lawful Use. You agree not to use any Website for any unlawful or abusive
+purpose, or in any way which interferes with the ability of Company to
+provide access to a Website or to provide any other service to our
+customers, or in any way which damages our property or the property of
+others. You are solely responsible for all content you transmit through a
+Website and assume and accept all liability and risk associated with
+accessing or using a Website and the Internet. You agree to provide
+information which is: (a) accurate and not misleading, and (b) free of
+damaging content, including, without limitation, viruses, worms, trojan
+horses, or other programs that are capable of disabling, damaging,
+interfering, altering, intercepting, or otherwise impacting or affecting a
+Website or any Company systems, network, or services, or any Website users.
+Company will make reasonable attempts to provide uninterrupted service, but
+there may be instances where a Website is delayed, impaired or impossible
+(collectively, "Technical Issues"). Should you experience any Technical
+Issues, you are to promptly contact Company. Company will not be liable to
+you for any loss of information, blockages or delays affecting data,
+information, notifications, purchases, deliveries or any other aspect of a
+Website due to Technical Issues.
+2. Fraudulent Use. You must safeguard any password or other Website-entry
+materials to prevent unauthorized persons from accessing your account
+information, as you acknowledge that Company cannot verify the identity of
+persons using a Website under your password. Company is not responsible for
+the use of lost or stolen password information. Should you allow others
+access to your online account information, you will be responsible for all
+actions that such persons might take with respect to your account. If you
+suspect that your account has been fraudulently used or otherwise
+compromised, you must immediately notify us.
+3. Copyrights. The content, names, images, text, programs, graphics, and
+other materials found on a Website are protected by the United States
+copyright and trademark laws and are the sole property of the Company or
+its affiliates. Company reserves all rights related to these materials. Any
+use of the materials found on a Website is strictly prohibited without the
+express written consent of Company. Any unauthorized use of these materials
+which violate copyright or trademark laws may result in criminal or civil
+penalties.
+4. Your Feedback. Company values any feedback you may have about a Website.
+However, if you send us any type of communication concerning the Website or
+any of our products, the content of your communication will be treated as
+nonproprietary and non-confidential (even if marked confidential or similar
+denotation) and will become Company property to use, reproduce, disclose,
+and distribute for any purpose whatsoever, without limitation to the extent
+permitted by applicable law and without compensation to you.
+5. Indemnification. You agree to indemnify, defend and hold harmless
+Company, its officers, directors, employees, agents, shareholders,
+licensors, suppliers and any third party information providers for a
+Website from and against all claims, demands, actions, losses, expenses,
+damages and costs, including reasonable attorneys' fees, that arise from:
+(1) any violation of this Agreement by you; (2) any violation of any rights
+of a third party by you; (3) any violation of applicable law; (4)
+information or content that you submit, post, transmit or make available
+through a Website; or (5) your use of a Website.
+6. Website Information. Except for Company-provided information or
+services, all information and services offered through a Website or on the
+Internet generally are offered by third parties that may not be affiliated
+with Company. Company may not review and may have no control over content
+or services provided by third parties, and does not endorse or assume
+responsibility for third-party content. Any links to third party
+information and services are provided for convenience only and your
+accessing or using such third party information and services is entirely at
+your own risk. Company makes no representations or warranties concerning
+any website or the information or services offered or appearing on or
+through these websites. Company does not review, sponsor, or endorse the
+operators of these websites or the information or services they provide,
+and Company is not responsible or liable for the conduct of these websites'
+operators or the information and services they may provide. You also
+understand that Company cannot and does not guarantee or warrant that any
+files available for downloading through a Website will be free of infection
+or viruses, worms, Trojan horses or other code that manifest contaminating
+or destructive properties. You are responsible for implementing sufficient
+procedures and checkpoints to satisfy your particular requirements for
+accuracy of data input and output, and for maintaining a means external to
+a Website for the reconstruction of any lost data.
+7. Disclaimer of Warranties and Limitation of Liability. YOU UNDERSTAND
+THAT YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR
+LOSS OF DATA THAT RESULTS FROM ANY MATERIAL DOWNLOADED OR ACCESSED FROM OR
+OTHERWISE PROVIDED THROUGH WEBSITES. ANY CONTENT OR INFORMATION ACCESSED BY
+OR PROVIDED TO YOU THROUGH WEBSITES IS PROVIDED "AS IS," "WITH ALL FAULTS,"
+AND "AS AVAILABLE." COMPANY, ITS AGENTS, AND ITS LICENSORS DO NOT WARRANT
+IN ANY WAY THE AVAILABILITY, ACCURACY, COMPLETENESS, CURRENTNESS,
+SUITABILITY, RELIABILITY, TITLE, USEFULNESS, NONINFRINGEMENT,
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OF THE WEBSITES OR ANY
+CONTENT OR INFORMATION AVAILABLE THROUGH THE WEBSITES. YOU ACCESS SUCH
+CONTENT OR INFORMATION AT YOUR OWN RISK. COMPANY DOES NOT GUARANTEE THAT
+THE WEBSITES WILL BE ERROR-FREE, OR CONTINUOUSLY AVAILABLE, OR THAT IT WILL
+BE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. UNDER NO CIRCUMSTANCES WILL
+COMPANY, ITS AFFILIATES, ITS AGENTS OR ITS LICENSORS BE LIABLE TO YOU OR
+ANYONE ELSE FOR ANY DAMAGES FROM THE WEBSITES THAT ARISE UNDER ANY CAUSE OF
+ACTION, INCLUDING THOSE THAT RESULT FROM YOUR USE OF THE WEBSITES, ANY
+SERVICES OFFERED THROUGH THE WEBSITES, OR ANY TRANSACTION PERFORMED THROUGH
+THE WEBSITES. THIS IS A COMPREHENSIVE LIMITATION OF LIABILITY THAT APPLIES
+TO ALL DAMAGES OF ANY KIND, INCLUDING COMPENSATORY, SPECIAL, DIRECT,
+INDIRECT, CONSEQUENTIAL, OR PUNITIVE DAMAGES, LOSS OF DATA, INCOME OR
+PROFIT, LOSS OF BUSINESS OPPORTUNITY, LOSS OF OR DAMAGE TO PROPERTY, AND
+CLAIMS OF THIRD PARTIES-EVEN KNOWN BEFOREHAND OF THE POSSIBILITY OF SUCH
+DAMAGES. YOU AGREE THAT THE AGGREGATE LIABILITY OF COMPANY, ITS AGENTS, AND
+ITS LICENSORS, IF ANY, ARISING OUT OF ANY KIND OF LEGAL CLAIM IN ANY WAY
+CONNECTED TO ANY WEBSITE WILL NOT EXCEED $100.00. BECAUSE SOME STATES DO
+NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN CATEGORIES OF DAMAGES OR
+IMPLIED WARRANTIES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IN SUCH
+STATES, THE LIABILITY OF COMPANY, AND ITS AFFILIATES, AGENTS AND LICENSORS
+IS LIMITED TO THE FULLEST EXTENT PERMITTED BY SUCH STATE LAW.
+8. Governing Law. This Agreement is governed by and construed under the
+laws of the State of Louisiana, without regard to its conflict of laws
+principles. The federal courts within the state of Louisiana and state
+courts of Ouachita Parish, Louisiana, have exclusive jurisdiction over and
+venue of any suit that relates to this Agreement. You are responsible for
+ensuring that your conduct is at all times in compliance with all
+applicable laws, rules and regulations.
+9. Dispute Resolution. INSTEAD OF SUING IN COURT, YOU AND COMPANY AGREE TO
+ARBITRATE ANY AND ALL CLAIMS, CONTROVERSIES OR DISPUTES OF ANY KIND
+("CLAIMS") AGAINST EACH OTHER. THIS INCLUDES BUT IS NOT LIMITED TO CLAIMS
+ARISING OUT OF OR RELATING TO THIS AGREEMENT, A WEBSITE, OR ANY SERVICES,
+AS WELL AS CLAIMS ARISING OUT OF OR RELATING TO COMPANY'S SERVICES, BILLING
+OR ADVERTISING, OR ARISING OUT OF OR RELATING TO EQUIPMENT YOU OR COMPANY
+MAY USE IN CONNECTION WITH A WEBSITE. THE REQUIREMENT TO ARBITRATE APPLIES
+EVEN IF A CLAIM ARISES AFTER WEBSITES ARE TERMINATED; APPLIES TO ALL CLAIMS
+YOU MAY BRING AGAINST COMPANY EMPLOYEES, AGENTS, AFFILIATES OR OTHER
+REPRESENTATIVES; AND APPLIES TO ALL CLAIMS THAT COMPANY MAY BRING AGAINST
+YOU. THE FEDERAL ARBITRATION ACT, NOT STATE LAW, APPLIES TO THIS AGREEMENT
+AND ITS PROVISIONS AND, GOVERNS ALL QUESTIONS OF WHETHER A CLAIM IS SUBJECT
+TO ARBITRATION.
+A single arbitrator engaged in the practice of law will conduct the
+arbitration. The arbitration will be filed with and the arbitrator will be
+selected according to the rules of the CPR Institute for Dispute Resolution
+("CPR") and 9 U.S.C. Sec. 1, et. seq. We agree to act in good faith in
+selecting an arbitrator. Except as expressly provided in the preceding
+paragraph, the arbitration will be conducted by and under the
+then-applicable rules of CPR and United States Code, wherever the
+arbitration is filed or, if the arbitrator is chosen by mutual agreement of
+the parties, the then-applicable rules of CPR will apply unless the parties
+agree otherwise. All expedited procedures prescribed by the applicable
+rules will apply. We agree to pay our respective arbitration costs, except
+as otherwise required by rules of CPR, as applicable, but the arbitrator
+can apportion these costs as appropriate. The arbitrator's decision and
+award is final and binding, and judgment on the award may be entered in any
+court with jurisdiction. IF FOR ANY REASON, THE ABOVE PROVISIONS ON
+ARBITRATION ARE HELD UNENFORCEABLE OR ARE FOUND NOT TO APPLY TO A CLAIM,
+YOU AND COMPANY AGREE TO WAIVE TRIAL BY JURY. If any party files a judicial
+or administrative action asserting a claim that is subject to arbitration
+and another party successfully stays such action or compels arbitration,
+the party filing that action must pay the other party's costs and expenses
+incurred in seeking such stay or compelling arbitration, including
+attorneys' fees. Except as expressly provided above, if any portion of this
+section is determined to be invalid or unenforceable, the remainder of the
+section remains in full force and effect.
+10. Waiver and Severability; Assignment. Failure by Company to insist upon
+or enforce strict performance of any provision of this Agreement will not
+be construed as a waiver of any provision or right. Neither the course of
+conduct between the parties nor trade practice will act to modify any
+provision of this Agreement. Company may assign its rights and duties under
+these terms to any party at any time without notice to you. If any
+provision of this Agreement is found to be unenforceable or invalid, this
+Agreement's unaffected provisions will remain in effect.
+11. Privacy Policy. Company respects the privacy of visitors to our
+Websites. Please review our Privacy Policy at www.centuryLink.com.
+B. Bill Presentation and Payment Terms and Conditions
+Company electronic bill presentment and payment services are an online
+billing information and bill payment service that may be provided by
+Company for certain products (the "Services"). The Services may not be
+available in certain areas or for certain products and services. The
+Services are subject to both the Website Terms and Conditions above and the
+following Service-specific terms and conditions. Company may modify these
+Service-specific terms and conditions at any time without notice to you.
+Modifications will be deemed effective immediately upon posting of the
+modified terms at www.centuryLink.com.
+1. Presentation of Payment. The electronic bill is due and payable upon
+presentation and is past due if unpaid after the date shown on page one of
+the invoice, consistent with the overall terms and conditions or tariffs
+governing your Company-provided products or services. Electronic payments
+made at www.centuryLink.com are processed within 24 hours to the extent
+possible. If your payment is not made within the time allowed by your
+state's Public Utility Commission, to the extent applicable to your Company
+service, Company may begin procedures to cancel all services. You will be
+informed of such action if required by law.
+2. Partial Payment. Partial payments are acceptable, however they are not
+to be construed as acceptable payment arrangements that automatically
+extend service beyond the normal disconnect date. But our acceptance of
+late or partial payments (even those marked, "Paid in Full") and late
+payment charges is not a waiver of our right to collect the full amount
+due. If you are unable to pay a bill in full prior to the due date, please
+call customer service at the number located on page 1 of your Company bill.
+3. Limitation of Liability. In addition to the limitations of liability
+described in the Agreement, Company has no liability if: (a) your financial
+institution shows that your designated account has insufficient funds or
+credit availability; (b) Company is prohibited by law or court order from
+withdrawing payment from your account; (c) your account is closed or
+frozen; (d) any part of the electronic funds transfer system is not working
+properly; or (e) there are any delays or failures in performance or any
+interruptions arising from any cause or circumstance beyond Company's
+reasonable control. Accounts credited with a payment that is subsequently
+returned for any reason by your financial institution, including but not
+limited to insufficient funds, account closed or invalid account number,
+are debited for the amount of the original payment and all applicable
+returned check charges. Your account may also be temporarily suspended
+immediately upon our receipt of the denial of payment or returned check and
+until payment is made in a cash transaction, e.g., cash, cashier's check,
+money order or with a valid credit card. Please call customer service at
+the number located on page 1 of your Company bill as soon as you are aware
+that this could be a problem.
+4. Questions about Bill. If you have any questions about your bill, call
+Company customer service center at the telephone number printed on your
+Company bill. While the item(s) in question about your charges are being
+investigated, you do not have to pay them. But the amount not in question
+is still due and payable upon receipt of your bill. If you have a dispute
+about a charge on your bill, contact customer service at the number located
+on page 1 of your Company bill immediately upon receipt of your bill to
+ensure your dispute is recorded prior to collection action that could occur
+as a result of an unpaid balance.
+5. Payment Methods. If you are eligible to receive the Services for your
+products and services, you may pay your bill either by (a) paying online at
+www.centuryLink.com using eChecking or your credit card, (b) enrolling in
+automatic bill payment available online, (c) using the automated voice
+response system by calling customer service, (d) arranging to
+electronically pay your bill through a bill payment service provider such
+as your bank or financial institution, (e) or by mailing Company a check.
+If you do arrange for electronic payment through another company or
+financial institution you will be subject to those companies' terms and
+conditions and you agree that Company will not be responsible or liable for
+any loss or damage caused or created by those companies. In the event that
+any amount on a third party site does not match the same amount on
+www.centuryLink.com or your printed bill, the www.centuryLink.com and the
+paper bill amount (the two being the same) will be deemed to be the
+accurate amount. In the event the paper bill and the amount listed on your
+online bill at www.centuryLink.com do not agree, the paper bill should be
+considered the correct bill and should be used to determine the amount to
+be paid. You may elect to have Company retain your payment information,
+including but not limited to your billing name, address, telephone number,
+credit card/debit card/account numbers, expiration dates, for you
+convenience and use in future transactions authorized by you. You are
+responsible for adding, updating, maintaining, deleting and verifying the
+accuracy of any payment information that you ask Company to store for you.
+You agree that Company will not be responsible for any transactions
+rejected due to erroneous or outdated payment information. You also agree
+that Company will not be liable for any use, misuse, lost, stolen or
+incorrect payment information.
+6. Bill Messages. Company may include messages developed by Company or as
+required by state and federal authorities in the body of the bill. It is
+your responsibility to view the entire bill.
+7. Options to Receive Your Bill. Company may offer the option to receive
+your bill either via US postal service or via email. If you elect the
+option to receive your bill via email, you authorize Company to stop
+sending you paper bills via mail and understand that you may receive one
+more paper bill depending on your billing cycle. Please note that you will
+have the option to print a paper copy on your home computer or save it to a
+file. Each month, you will receive an email notification when your new bill
+is available and understand that if, for any reason, you are unable to view
+your bill online, you are still required to make your payment on time.
+Also, under these circumstances, you are responsible for obtaining a bill
+copy and/or account balance by calling the Company customer service at
+1-877-290-5458. You also agree to provide Company with your email address
+for the receipt of eBill notices and agree to keep your email address
+updated and understand that it is your responsibility to log in and view
+your bill each month, even if you do not receive an eBill notice for any
+reason. Company will notify you via postal mail that your address needs to
+be updated if it receives a message that your email bill notification is
+undeliverable. However, if your email bill notification is undeliverable
+for three consecutive months, then Company will re-activate your paper
+bill. You understand that any late payment notices will still be sent
+through the U.S. postal mail and you agree to pay your bill using one of
+these approved methods (since sending paper checks without the remittance
+stub may delay payment posting): Automatic Payments, Company online
+payments or online payments from your financial institution or bill payment
+service provider.
+8. Fees. There are no additional fees charged by Company for using the
+Services. But if you pay your bill electronically through a financial
+institution, you are responsible for any charges you may incur from the
+financial institution in order to make online payments.
+9. Security. 128-bit encryption versions of Netscape or Internet Explorer
+are required to use the Services. Please visit the Microsoft or Netscape
+websites to get more details on 128-bit encryption. There are other
+computer requirements necessary to view and pay your bill online, which are
+listed on the Website. You are responsible for obtaining the necessary
+encryption software. Company is not liable to you for any failure or
+inability to obtain necessary encryption software.
+10. Password. You agree that the password you use to access an account
+through a Website will be kept confidential. If you forget your password,
+you may reset your password online. You understand that you have sole
+responsibility for the security of your password. You are solely
+responsible for notifying us of the loss or theft of a password. We will
+not be liable for any actions, claims, costs, damages, or expenses arising
+from a lost or stolen password.
+11. Termination of Services by Company. Company reserves the right to
+terminate the Service or access to any account(s) enrolled in the Services
+at any time.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a1133588eb6ac5d0508cd083c
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><a href="https://q.myaccount.centurylink.com/MasterWebPortal/freeRange/acctMgmt/RegisterForMyAccount">https://q.myaccount.centurylink.com/MasterWebPortal/freeRange/acctMgmt/RegisterForMyAccount</a><br><br>Terms: Effective June 10, 2009<br>
+The following terms and conditions (&quot;Agreement&quot;) apply to your use of 
+and access to any website owned or operated by CenturyLink or its 
+subsidiaries, affiliates, agents, and licensors (each, a &quot;Website&quot;). In 
+this Agreement, CenturyLink and its subsidiaries and affiliates are 
+collectively referred to as &quot;Company.&quot; By using or accessing a Website, 
+you agree with the terms of this Agreement. Certain products or services
+ offered through the Website may have additional terms and conditions, 
+which govern in the event of any inconsistency with this Agreement. <br>
+In addition to any other agreements between you and Company (also 
+referred to herein as &quot;we,&quot; &quot;us,&quot; and in the possessive, &quot;our&quot;), this 
+Agreement explains the policies that govern your access to and use of 
+the Website, including the actions that we may take, within our sole 
+discretion, for any use that we deem unacceptable.<br> 
+If you do not wish to be bound by this Agreement, you should not access,
+ subscribe to, or otherwise use a Website. Company may modify this 
+Agreement at any time without notice to you. Modifications will be 
+deemed effective immediately upon posting of the modified terms at <a href="http://www.centurylink.com">www.centuryLink.com</a><br>
+A. Website Terms and Conditions<br>
+1. Lawful Use. You agree not to use any Website for any unlawful or 
+abusive purpose, or in any way which interferes with the ability of 
+Company to provide access to a Website or to provide any other service 
+to our customers, or in any way which damages our property or the 
+property of others. You are solely responsible for all content you 
+transmit through a Website and assume and accept all liability and risk 
+associated with accessing or using a Website and the Internet. You agree
+ to provide information which is: (a) accurate and not misleading, and 
+(b) free of damaging content, including, without limitation, viruses, 
+worms, trojan horses, or other programs that are capable of disabling, 
+damaging, interfering, altering, intercepting, or otherwise impacting or
+ affecting a Website or any Company systems, network, or services, or 
+any Website users. Company will make reasonable attempts to provide 
+uninterrupted service, but there may be instances where a Website is 
+delayed, impaired or impossible (collectively, &quot;Technical Issues&quot;). 
+Should you experience any Technical Issues, you are to promptly contact 
+Company. Company will not be liable to you for any loss of information, 
+blockages or delays affecting data, information, notifications, 
+purchases, deliveries or any other aspect of a Website due to Technical 
+Issues.<br>
+2. Fraudulent Use. You must safeguard any password or other 
+Website-entry materials to prevent unauthorized persons from accessing 
+your account information, as you acknowledge that Company cannot verify 
+the identity of persons using a Website under your password. Company is 
+not responsible for the use of lost or stolen password information. 
+Should you allow others access to your online account information, you 
+will be responsible for all actions that such persons might take with 
+respect to your account. If you suspect that your account has been 
+fraudulently used or otherwise compromised, you must immediately notify 
+us.<br>
+3. Copyrights. The content, names, images, text, programs, graphics, and
+ other materials found on a Website are protected by the United States 
+copyright and trademark laws and are the sole property of the Company or
+ its affiliates. Company reserves all rights related to these materials.
+ Any use of the materials found on a Website is strictly prohibited 
+without the express written consent of Company. Any unauthorized use of 
+these materials which violate copyright or trademark laws may result in 
+criminal or civil penalties.<br>
+4. Your Feedback. Company values any feedback you may have about a 
+Website. However, if you send us any type of communication concerning 
+the Website or any of our products, the content of your communication 
+will be treated as nonproprietary and non-confidential (even if marked 
+confidential or similar denotation) and will become Company property to 
+use, reproduce, disclose, and distribute for any purpose whatsoever, 
+without limitation to the extent permitted by applicable law and without
+ compensation to you.<br>
+5. Indemnification. You agree to indemnify, defend and hold harmless 
+Company, its officers, directors, employees, agents, shareholders, 
+licensors, suppliers and any third party information providers for a 
+Website from and against all claims, demands, actions, losses, expenses,
+ damages and costs, including reasonable attorneys&#39; fees, that arise 
+from: (1) any violation of this Agreement by you; (2) any violation of 
+any rights of a third party by you; (3) any violation of applicable law;
+ (4) information or content that you submit, post, transmit or make 
+available through a Website; or (5) your use of a Website.<br>
+6. Website Information. Except for Company-provided information or 
+services, all information and services offered through a Website or on 
+the Internet generally are offered by third parties that may not be 
+affiliated with Company. Company may not review and may have no control 
+over content or services provided by third parties, and does not endorse
+ or assume responsibility for third-party content. Any links to third 
+party information and services are provided for convenience only and 
+your accessing or using such third party information and services is 
+entirely at your own risk. Company makes no representations or 
+warranties concerning any website or the information or services offered
+ or appearing on or through these websites. Company does not review, 
+sponsor, or endorse the operators of these websites or the information 
+or services they provide, and Company is not responsible or liable for 
+the conduct of these websites&#39; operators or the information and services
+ they may provide. You also understand that Company cannot and does not 
+guarantee or warrant that any files available for downloading through a 
+Website will be free of infection or viruses, worms, Trojan horses or 
+other code that manifest contaminating or destructive properties. You 
+are responsible for implementing sufficient procedures and checkpoints 
+to satisfy your particular requirements for accuracy of data input and 
+output, and for maintaining a means external to a Website for the 
+reconstruction of any lost data.<br>
+7. Disclaimer of Warranties and Limitation of Liability. YOU UNDERSTAND 
+THAT YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM 
+OR LOSS OF DATA THAT RESULTS FROM ANY MATERIAL DOWNLOADED OR ACCESSED 
+FROM OR OTHERWISE PROVIDED THROUGH WEBSITES. ANY CONTENT OR INFORMATION 
+ACCESSED BY OR PROVIDED TO YOU THROUGH WEBSITES IS PROVIDED &quot;AS IS,&quot; 
+&quot;WITH ALL FAULTS,&quot; AND &quot;AS AVAILABLE.&quot; COMPANY, ITS AGENTS, AND ITS 
+LICENSORS DO NOT WARRANT IN ANY WAY THE AVAILABILITY, ACCURACY, 
+COMPLETENESS, CURRENTNESS, SUITABILITY, RELIABILITY, TITLE, USEFULNESS, 
+NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OF 
+THE WEBSITES OR ANY CONTENT OR INFORMATION AVAILABLE THROUGH THE 
+WEBSITES. YOU ACCESS SUCH CONTENT OR INFORMATION AT YOUR OWN RISK. 
+COMPANY DOES NOT GUARANTEE THAT THE WEBSITES WILL BE ERROR-FREE, OR 
+CONTINUOUSLY AVAILABLE, OR THAT IT WILL BE FREE OF VIRUSES OR OTHER 
+HARMFUL COMPONENTS. UNDER NO CIRCUMSTANCES WILL COMPANY, ITS AFFILIATES,
+ ITS AGENTS OR ITS LICENSORS BE LIABLE TO YOU OR ANYONE ELSE FOR ANY 
+DAMAGES FROM THE WEBSITES THAT ARISE UNDER ANY CAUSE OF ACTION, 
+INCLUDING THOSE THAT RESULT FROM YOUR USE OF THE WEBSITES, ANY SERVICES 
+OFFERED THROUGH THE WEBSITES, OR ANY TRANSACTION PERFORMED THROUGH THE 
+WEBSITES. THIS IS A COMPREHENSIVE LIMITATION OF LIABILITY THAT APPLIES 
+TO ALL DAMAGES OF ANY KIND, INCLUDING COMPENSATORY, SPECIAL, DIRECT, 
+INDIRECT, CONSEQUENTIAL, OR PUNITIVE DAMAGES, LOSS OF DATA, INCOME OR 
+PROFIT, LOSS OF BUSINESS OPPORTUNITY, LOSS OF OR DAMAGE TO PROPERTY, AND
+ CLAIMS OF THIRD PARTIES-EVEN KNOWN BEFOREHAND OF THE POSSIBILITY OF 
+SUCH DAMAGES. YOU AGREE THAT THE AGGREGATE LIABILITY OF COMPANY, ITS 
+AGENTS, AND ITS LICENSORS, IF ANY, ARISING OUT OF ANY KIND OF LEGAL 
+CLAIM IN ANY WAY CONNECTED TO ANY WEBSITE WILL NOT EXCEED $100.00. 
+BECAUSE SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN 
+CATEGORIES OF DAMAGES OR IMPLIED WARRANTIES, THE ABOVE LIMITATION MAY 
+NOT APPLY TO YOU. IN SUCH STATES, THE LIABILITY OF COMPANY, AND ITS 
+AFFILIATES, AGENTS AND LICENSORS IS LIMITED TO THE FULLEST EXTENT 
+PERMITTED BY SUCH STATE LAW.<br>
+8. Governing Law. This Agreement is governed by and construed under the 
+laws of the State of Louisiana, without regard to its conflict of laws 
+principles. The federal courts within the state of Louisiana and state 
+courts of Ouachita Parish, Louisiana, have exclusive jurisdiction over 
+and venue of any suit that relates to this Agreement. You are 
+responsible for ensuring that your conduct is at all times in compliance
+ with all applicable laws, rules and regulations.<br>
+9. Dispute Resolution. INSTEAD OF SUING IN COURT, YOU AND COMPANY AGREE 
+TO ARBITRATE ANY AND ALL CLAIMS, CONTROVERSIES OR DISPUTES OF ANY KIND 
+(&quot;CLAIMS&quot;) AGAINST EACH OTHER. THIS INCLUDES BUT IS NOT LIMITED TO 
+CLAIMS ARISING OUT OF OR RELATING TO THIS AGREEMENT, A WEBSITE, OR ANY 
+SERVICES, AS WELL AS CLAIMS ARISING OUT OF OR RELATING TO COMPANY&#39;S 
+SERVICES, BILLING OR ADVERTISING, OR ARISING OUT OF OR RELATING TO 
+EQUIPMENT YOU OR COMPANY MAY USE IN CONNECTION WITH A WEBSITE. THE 
+REQUIREMENT TO ARBITRATE APPLIES EVEN IF A CLAIM ARISES AFTER WEBSITES 
+ARE TERMINATED; APPLIES TO ALL CLAIMS YOU MAY BRING AGAINST COMPANY 
+EMPLOYEES, AGENTS, AFFILIATES OR OTHER REPRESENTATIVES; AND APPLIES TO 
+ALL CLAIMS THAT COMPANY MAY BRING AGAINST YOU. THE FEDERAL ARBITRATION 
+ACT, NOT STATE LAW, APPLIES TO THIS AGREEMENT AND ITS PROVISIONS AND, 
+GOVERNS ALL QUESTIONS OF WHETHER A CLAIM IS SUBJECT TO ARBITRATION.<br>
+A single arbitrator engaged in the practice of law will conduct the 
+arbitration. The arbitration will be filed with and the arbitrator will 
+be selected according to the rules of the CPR Institute for Dispute 
+Resolution (&quot;CPR&quot;) and 9 U.S.C. Sec. 1, et. seq. We agree to act in good
+ faith in selecting an arbitrator. Except as expressly provided in the 
+preceding paragraph, the arbitration will be conducted by and under the 
+then-applicable rules of CPR and United States Code, wherever the 
+arbitration is filed or, if the arbitrator is chosen by mutual agreement
+ of the parties, the then-applicable rules of CPR will apply unless the 
+parties agree otherwise. All expedited procedures prescribed by the 
+applicable rules will apply. We agree to pay our respective arbitration 
+costs, except as otherwise required by rules of CPR, as applicable, but 
+the arbitrator can apportion these costs as appropriate. The 
+arbitrator&#39;s decision and award is final and binding, and judgment on 
+the award may be entered in any court with jurisdiction. IF FOR ANY 
+REASON, THE ABOVE PROVISIONS ON ARBITRATION ARE HELD UNENFORCEABLE OR 
+ARE FOUND NOT TO APPLY TO A CLAIM, YOU AND COMPANY AGREE TO WAIVE TRIAL 
+BY JURY. If any party files a judicial or administrative action 
+asserting a claim that is subject to arbitration and another party 
+successfully stays such action or compels arbitration, the party filing 
+that action must pay the other party&#39;s costs and expenses incurred in 
+seeking such stay or compelling arbitration, including attorneys&#39; fees. 
+Except as expressly provided above, if any portion of this section is 
+determined to be invalid or unenforceable, the remainder of the section 
+remains in full force and effect.<br>
+10. Waiver and Severability; Assignment. Failure by Company to insist 
+upon or enforce strict performance of any provision of this Agreement 
+will not be construed as a waiver of any provision or right. Neither the
+ course of conduct between the parties nor trade practice will act to 
+modify any provision of this Agreement. Company may assign its rights 
+and duties under these terms to any party at any time without notice to 
+you. If any provision of this Agreement is found to be unenforceable or 
+invalid, this Agreement&#39;s unaffected provisions will remain in effect.<br>
+11. Privacy Policy. Company respects the privacy of visitors to our 
+Websites. Please review our Privacy Policy at <a href="http://www.centuryLink.com">www.centuryLink.com</a>.<br>
+B. Bill Presentation and Payment Terms and Conditions<br>
+Company electronic bill presentment and payment services are an online 
+billing information and bill payment service that may be provided by 
+Company for certain products (the &quot;Services&quot;). The Services may not be 
+available in certain areas or for certain products and services. The 
+Services are subject to both the Website Terms and Conditions above and 
+the following Service-specific terms and conditions. Company may modify 
+these Service-specific terms and conditions at any time without notice 
+to you. Modifications will be deemed effective immediately upon posting 
+of the modified terms at <a href="http://www.centuryLink.com">www.centuryLink.com</a>.<br>
+1. Presentation of Payment. The electronic bill is due and payable upon 
+presentation and is past due if unpaid after the date shown on page one 
+of the invoice, consistent with the overall terms and conditions or 
+tariffs governing your Company-provided products or services. Electronic
+ payments made at <a href="http://www.centuryLink.com">www.centuryLink.com</a> are processed within 24 hours to 
+the extent possible. If your payment is not made within the time allowed
+ by your state&#39;s Public Utility Commission, to the extent applicable to 
+your Company service, Company may begin procedures to cancel all 
+services. You will be informed of such action if required by law.<br>
+2. Partial Payment. Partial payments are acceptable, however they are 
+not to be construed as acceptable payment arrangements that 
+automatically extend service beyond the normal disconnect date. But our 
+acceptance of late or partial payments (even those marked, &quot;Paid in 
+Full&quot;) and late payment charges is not a waiver of our right to collect 
+the full amount due. If you are unable to pay a bill in full prior to 
+the due date, please call customer service at the number located on page
+ 1 of your Company bill.<br>
+3. Limitation of Liability. In addition to the limitations of liability 
+described in the Agreement, Company has no liability if: (a) your 
+financial institution shows that your designated account has 
+insufficient funds or credit availability; (b) Company is prohibited by 
+law or court order from withdrawing payment from your account; (c) your 
+account is closed or frozen; (d) any part of the electronic funds 
+transfer system is not working properly; or (e) there are any delays or 
+failures in performance or any interruptions arising from any cause or 
+circumstance beyond Company&#39;s reasonable control. Accounts credited with
+ a payment that is subsequently returned for any reason by your 
+financial institution, including but not limited to insufficient funds, 
+account closed or invalid account number, are debited for the amount of 
+the original payment and all applicable returned check charges. Your 
+account may also be temporarily suspended immediately upon our receipt 
+of the denial of payment or returned check and until payment is made in a
+ cash transaction, e.g., cash, cashier&#39;s check, money order or with a 
+valid credit card. Please call customer service at the number located on
+ page 1 of your Company bill as soon as you are aware that this could be
+ a problem.<br>
+4. Questions about Bill. If you have any questions about your bill, call
+ Company customer service center at the telephone number printed on your
+ Company bill. While the item(s) in question about your charges are 
+being investigated, you do not have to pay them. But the amount not in 
+question is still due and payable upon receipt of your bill. If you have
+ a dispute about a charge on your bill, contact customer service at the 
+number located on page 1 of your Company bill immediately upon receipt 
+of your bill to ensure your dispute is recorded prior to collection 
+action that could occur as a result of an unpaid balance.<br>
+5. Payment Methods. If you are eligible to receive the Services for your
+ products and services, you may pay your bill either by (a) paying 
+online at <a href="http://www.centuryLink.com">www.centuryLink.com</a> using eChecking or your credit card, (b) 
+enrolling in automatic bill payment available online, (c) using the 
+automated voice response system by calling customer service, (d) 
+arranging to electronically pay your bill through a bill payment service
+ provider such as your bank or financial institution, (e) or by mailing 
+Company a check. If you do arrange for electronic payment through 
+another company or financial institution you will be subject to those 
+companies&#39; terms and conditions and you agree that Company will not be 
+responsible or liable for any loss or damage caused or created by those 
+companies. In the event that any amount on a third party site does not 
+match the same amount on <a href="http://www.centuryLink.com">www.centuryLink.com</a> or your printed bill, the 
+<a href="http://www.centuryLink.com">www.centuryLink.com</a> and the paper bill amount (the two being the same) 
+will be deemed to be the accurate amount. In the event the paper bill 
+and the amount listed on your online bill at <a href="http://www.centuryLink.com">www.centuryLink.com</a> do not 
+agree, the paper bill should be considered the correct bill and should 
+be used to determine the amount to be paid. You may elect to have 
+Company retain your payment information, including but not limited to 
+your billing name, address, telephone number, credit card/debit 
+card/account numbers, expiration dates, for you convenience and use in 
+future transactions authorized by you. You are responsible for adding, 
+updating, maintaining, deleting and verifying the accuracy of any 
+payment information that you ask Company to store for you. You agree 
+that Company will not be responsible for any transactions rejected due 
+to erroneous or outdated payment information. You also agree that 
+Company will not be liable for any use, misuse, lost, stolen or 
+incorrect payment information.<br>
+6. Bill Messages. Company may include messages developed by Company or 
+as required by state and federal authorities in the body of the bill. It
+ is your responsibility to view the entire bill.<br>
+7. Options to Receive Your Bill. Company may offer the option to receive
+ your bill either via US postal service or via email. If you elect the 
+option to receive your bill via email, you authorize Company to stop 
+sending you paper bills via mail and understand that you may receive one
+ more paper bill depending on your billing cycle. Please note that you 
+will have the option to print a paper copy on your home computer or save
+ it to a file. Each month, you will receive an email notification when 
+your new bill is available and understand that if, for any reason, you 
+are unable to view your bill online, you are still required to make your
+ payment on time. Also, under these circumstances, you are responsible 
+for obtaining a bill copy and/or account balance by calling the Company 
+customer service at 1-877-290-5458. You also agree to provide Company 
+with your email address for the receipt of eBill notices and agree to 
+keep your email address updated and understand that it is your 
+responsibility to log in and view your bill each month, even if you do 
+not receive an eBill notice for any reason. Company will notify you via 
+postal mail that your address needs to be updated if it receives a 
+message that your email bill notification is undeliverable. However, if 
+your email bill notification is undeliverable for three consecutive 
+months, then Company will re-activate your paper bill. You understand 
+that any late payment notices will still be sent through the U.S. postal
+ mail and you agree to pay your bill using one of these approved methods
+ (since sending paper checks without the remittance stub may delay 
+payment posting): Automatic Payments, Company online payments or online 
+payments from your financial institution or bill payment service 
+provider.<br>
+8. Fees. There are no additional fees charged by Company for using the 
+Services. But if you pay your bill electronically through a financial 
+institution, you are responsible for any charges you may incur from the 
+financial institution in order to make online payments.<br>
+9. Security. 128-bit encryption versions of Netscape or Internet 
+Explorer are required to use the Services. Please visit the Microsoft or
+ Netscape websites to get more details on 128-bit encryption. There are 
+other computer requirements necessary to view and pay your bill online, 
+which are listed on the Website. You are responsible for obtaining the 
+necessary encryption software. Company is not liable to you for any 
+failure or inability to obtain necessary encryption software.<br>
+10. Password. You agree that the password you use to access an account 
+through a Website will be kept confidential. If you forget your 
+password, you may reset your password online. You understand that you 
+have sole responsibility for the security of your password. You are 
+solely responsible for notifying us of the loss or theft of a password. 
+We will not be liable for any actions, claims, costs, damages, or 
+expenses arising from a lost or stolen password.<br>
+11. Termination of Services by Company. Company reserves the right to 
+terminate the Service or access to any account(s) enrolled in the 
+Services at any time.</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an email to <a href="mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href="mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr">http://groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href="https://groups.google.com/d/optout">https://groups.google.com/d/optout</a>.<br />
+
+--001a1133588eb6ac5d0508cd083c--

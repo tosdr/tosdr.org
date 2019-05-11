@@ -1,0 +1,220 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.5.16 with SMTP id 16csp153206iof;
+        Fri, 16 Oct 2015 14:31:40 -0700 (PDT)
+X-Received: by 10.194.240.39 with SMTP id vx7mr18742164wjc.50.1445031099966;
+        Fri, 16 Oct 2015 14:31:39 -0700 (PDT)
+Return-Path: <tosdr+bncBCKP5C4PRMERBNWZQWYQKGQED3ZOIIQ@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id fp4si7417311wib.28.2015.10.16.14.31.39
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 16 Oct 2015 14:31:39 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBNWZQWYQKGQED3ZOIIQ@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBNWZQWYQKGQED3ZOIIQ@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBCKP5C4PRMERBNWZQWYQKGQED3ZOIIQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id B0550172074
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 23:31:39 +0200 (CEST)
+Received: from mfilter36-d.gandi.net (mfilter36-d.gandi.net [217.70.178.167])
+	by spool.mail.gandi.net (Postfix) with ESMTP id A2CBA178086
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 23:31:39 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter36-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter36-d.gandi.net (mfilter36-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id b-3y9LPvFpSl for <michiel@unhosted.org>;
+	Fri, 16 Oct 2015 23:31:37 +0200 (CEST)
+Received: from mail-ig0-x23f.google.com (mail-ig0-x23f.google.com [IPv6:2607:f8b0:4001:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id E08F017809B
+	for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 23:31:36 +0200 (CEST)
+Received: by igcxw12 with SMTP id xw12sf6411829igc.0
+        for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 14:31:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=54yiFu3/hRendwxlLDmpiqS3BwpNoMRJHd2JGeLxllQ=;
+        b=OWhJDSxUSUtYii0Iy2XDvOIvCE9kHity0l6inGvQdNc9idl2PWcO/jynxKSWxOZAJG
+         XLc+Nu6OCahKmk0prU8dU7HwXc9dI9CPTVnEHTe+xBltl9WJF+A6sjtJ4Cl2JDQHEvmL
+         ZS/306p0ZSU3INmtCjWmMhDg2RLEs6ZV4oFKdigMreoQBogJhMKoG87wb8hEflw3KWuG
+         TYOI/8VsFof/0Fd16ogzk+Mpi5O47npFWKkE2qa4e7q3PKVUjdjd79EUWqhwUZ2dcztT
+         OpKj3c87UYZBdqbFqyaf1HkRns6smlyKGCuGAKBK0EBJRCd+iPoXP01+j4wcPWBsigMJ
+         r84g==
+X-Received: by 10.140.27.135 with SMTP id 7mr328242qgx.20.1445031095431;
+        Fri, 16 Oct 2015 14:31:35 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.86.6 with SMTP id o6ls1779818qgd.95.gmail; Fri, 16 Oct
+ 2015 14:31:34 -0700 (PDT)
+X-Received: by 10.129.155.83 with SMTP id s80mr9119073ywg.55.1445031094492;
+        Fri, 16 Oct 2015 14:31:34 -0700 (PDT)
+Received: from mail-yk0-x244.google.com (mail-yk0-x244.google.com. [2607:f8b0:4002:c07::244])
+        by gmr-mx.google.com with ESMTPS id o73si1537638ywd.6.2015.10.16.14.31.34
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Oct 2015 14:31:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of natalcastilio8@gmail.com designates 2607:f8b0:4002:c07::244 as permitted sender) client-ip=2607:f8b0:4002:c07::244;
+Received: by ykcl6 with SMTP id l6so10388927ykc.3
+        for <tosdr@googlegroups.com>; Fri, 16 Oct 2015 14:31:34 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.129.91.68 with SMTP id p65mr11656364ywb.252.1445031094301;
+ Fri, 16 Oct 2015 14:31:34 -0700 (PDT)
+Received: by 10.37.106.193 with HTTP; Fri, 16 Oct 2015 14:31:34 -0700 (PDT)
+In-Reply-To: <6bde3128-3137-4729-ad3b-fa012a534fea@googlegroups.com>
+References: <cff4678a-5008-4bb0-a996-963334f78cf4@googlegroups.com>
+	<6bde3128-3137-4729-ad3b-fa012a534fea@googlegroups.com>
+Date: Fri, 16 Oct 2015 18:31:34 -0300
+Message-ID: <CABxBLQpT-EYNA=d6YfHpWOceHHw7chj4VLpQ5yXcrQNfZgRZvQ@mail.gmail.com>
+Subject: Re: [tosdr:3662] Re: [Good] TBC. LinkedIn announces changes to its
+ privacy policy regarding the "add connection" feature
+From: Natal Castilio <natalcastilio8@gmail.com>
+To: "Terms of Service, Didn't Read" <tosdr@googlegroups.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Original-Sender: natalcastilio8@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of natalcastilio8@gmail.com designates
+ 2607:f8b0:4002:c07::244 as permitted sender) smtp.mailfrom=natalcastilio8@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+n=C3=A3o entendi nada .
+
+2015-10-16 16:04 GMT-03:00, natalcastilio8@gmail.com <natalcastilio8@gmail.=
+com>:
+> On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com
+> wrote:
+>> After agreeing to a $13M settlement over the "add connection" feature,
+>> LinkedIn announces imminent changes to its privacy policy.
+>>
+>>
+>> BEFORE: The issue: the reminder emails (LinkedIn users were not aware th=
+at
+>> they consented to reminder emails being sent)
+>> When you used the "add connection" feature to invite people who do not
+>> have a LinkedIn account, it sent a first "I'd like to add you to my
+>> professional network on LinkedIn" email and when the invitation was not
+>> accepted it sent two "reminder emails".
+>>
+>>
+>>
+>>
+>>
+>> NOW: The policy change: This message now appears when you are about to
+>> invite people who do not have a LinkedIn accountInvite friends,
+>> colleagues, and acquaintances who might like to connect, and would benef=
+it
+>> from joining LinkedIn. If someone you invite doesn't respond right away,
+>> we'll send up to two reminders.
+>>
+>>
+>>
+>>
+>> PS: By the end 2015, LinkedIn plans to allow its users to disable the
+>> reminders function.
+>
+>
+>
+> On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com
+> wrote:
+>> After agreeing to a $13M settlement over the "add connection" feature,
+>> LinkedIn announces imminent changes to its privacy policy.
+>>
+>>
+>> BEFORE: The issue: the reminder emails (LinkedIn users were not aware th=
+at
+>> they consented to reminder emails being sent)
+>> When you used the "add connection" feature to invite people who do not
+>> have a LinkedIn account, it sent a first "I'd like to add you to my
+>> professional network on LinkedIn" email and when the invitation was not
+>> accepted it sent two "reminder emails".
+>>
+>>
+>>
+>>
+>>
+>> NOW: The policy change: This message now appears when you are about to
+>> invite people who do not have a LinkedIn accountInvite friends,
+>> colleagues, and acquaintances who might like to connect, and would benef=
+it
+>> from joining LinkedIn. If someone you invite doesn't respond right away,
+>> we'll send up to two reminders.
+>>
+>>
+>>
+>>
+>> PS: By the end 2015, LinkedIn plans to allow its users to disable the
+>> reminders function.
+>
+>
+>
+> On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com
+> wrote:
+>> After agreeing to a $13M settlement over the "add connection" feature,
+>> LinkedIn announces imminent changes to its privacy policy.
+>>
+>>
+>> BEFORE: The issue: the reminder emails (LinkedIn users were not aware th=
+at
+>> they consented to reminder emails being sent)
+>> When you used the "add connection" feature to invite people who do not
+>> have a LinkedIn account, it sent a first "I'd like to add you to my
+>> professional network on LinkedIn" email and when the invitation was not
+>> accepted it sent two "reminder emails".
+>>
+>>
+>>
+>>
+>>
+>> NOW: The policy change: This message now appears when you are about to
+>> invite people who do not have a LinkedIn accountInvite friends,
+>> colleagues, and acquaintances who might like to connect, and would benef=
+it
+>> from joining LinkedIn. If someone you invite doesn't respond right away,
+>> we'll send up to two reminders.
+>>
+>>
+>>
+>>
+>> PS: By the end 2015, LinkedIn plans to allow its users to disable the
+>> reminders function.
+>
+> --
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---
+> You received this message because you are subscribed to a topic in the
+> Google Groups "Terms of Service; Didn't Read" group.
+> To unsubscribe from this topic, visit
+> https://groups.google.com/d/topic/tosdr/mTN4U0wjIpY/unsubscribe.
+> To unsubscribe from this group and all its topics, send an email to
+> tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/d/optout.
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

@@ -1,0 +1,394 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp163142vec;
+        Fri, 7 Dec 2012 08:28:36 -0800 (PST)
+Received: by 10.50.1.170 with SMTP id 10mr5468988ign.2.1354897715456;
+        Fri, 07 Dec 2012 08:28:35 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBMVSRCDAKGQENU4TEEQ@googlegroups.com>
+Received: from mail-pb0-f64.google.com (mail-pb0-f64.google.com [209.85.160.64])
+        by mx.google.com with ESMTPS id f9si15481678paz.87.2012.12.07.08.28.35
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:28:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBMVSRCDAKGQENU4TEEQ@googlegroups.com designates 209.85.216.45 as permitted sender) client-ip=209.85.216.45;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBMVSRCDAKGQENU4TEEQ@googlegroups.com designates 209.85.216.45 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBMVSRCDAKGQENU4TEEQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-pb0-f64.google.com with SMTP id mc8sf334304pbc.29
+        for <michiel@unhosted.org>; Fri, 07 Dec 2012 08:28:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:sender:in-reply-to:references
+         :date:message-id:subject:from:to:cc:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=aLnMb6j69ecXNlrDkgowES5C/ccilTPqUFAq70jQn8Q=;
+        b=gYjPte0EDQKxlkxagPkpCZsLYXWmF16RbAc0RS1RWLoL+dNPqxcw1IFm88E+Ovzv4V
+         HO0AMMI0MT+OujNRgctvm0zk90O8V2kijUbpfALUaLezsnEoCSj+Ri4LQkzYVHy9PjTB
+         IU4eVJhGa7Q/TBYIu1kNPQtf3sV/q3VEflvCqd37UgAlv2K/xTUHOlsoW8X4UtH2nVAC
+         s+2alLsWCzT1MA/FHh15aC3O/BINgpItdAOb8m/dvrZuCJ8kmtEGmiSJpb+FBHzAg9eH
+         i6idxZhIM7Cax6VUPP0Re3Z9Nx5gxgbansAA1yi/UY5Cs6AVOFGroZE+mVpoVREDX0m6
+         m6pQ==
+Received: by 10.49.58.238 with SMTP id u14mr1218405qeq.13.1354897714830;
+        Fri, 07 Dec 2012 08:28:34 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.71.177 with SMTP id w17ls2243785qeu.70.gmail; Fri, 07 Dec
+ 2012 08:28:34 -0800 (PST)
+Received: by 10.224.207.66 with SMTP id fx2mr4640202qab.7.1354897713972;
+        Fri, 07 Dec 2012 08:28:33 -0800 (PST)
+Received: by 10.224.207.66 with SMTP id fx2mr4640201qab.7.1354897713940;
+        Fri, 07 Dec 2012 08:28:33 -0800 (PST)
+Received: from mail-qa0-f45.google.com (mail-qa0-f45.google.com [209.85.216.45])
+        by gmr-mx.google.com with ESMTPS id r17si2695715qcp.1.2012.12.07.08.28.33
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 07 Dec 2012 08:28:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of devlinks@gmail.com designates 209.85.216.45 as permitted sender) client-ip=209.85.216.45;
+Received: by mail-qa0-f45.google.com with SMTP id j15so2175684qaq.11
+        for <tosdr@googlegroups.com>; Fri, 07 Dec 2012 08:28:33 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.49.104.136 with SMTP id ge8mr11132657qeb.8.1354897713741; Fri,
+ 07 Dec 2012 08:28:33 -0800 (PST)
+Sender: tosdr@googlegroups.com
+Received: by 10.49.25.5 with HTTP; Fri, 7 Dec 2012 08:28:33 -0800 (PST)
+In-Reply-To: <1354897399.4621.79.camel@synclavier.lan>
+References: <1354871875.967591277816096@mf57.sendgrid.net>
+	<b8fd992a-d97e-4766-9194-814da8b115a7@googlegroups.com>
+	<1354897399.4621.79.camel@synclavier.lan>
+Date: Fri, 7 Dec 2012 12:28:33 -0400
+Message-ID: <CAB8Z3EdkaJCH+CiPsn4AL+hpX5O1WhXO55wDmTZaE3spasVnBg@mail.gmail.com>
+Subject: Re: [tosdr:1260] Re: Change in https://tos-dr.info/legal.html
+From: Robin Monks <robin@robinmonks.com>
+To: tosdr@googlegroups.com
+Cc: michiel@michielbdejong.com
+X-Original-Sender: devlinks@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of devlinks@gmail.com designates 209.85.216.45 as permitted sender)
+ smtp.mail=devlinks@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b6d88b0ef409804d045b49a
+
+--047d7b6d88b0ef409804d045b49a
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+My thought is simply to plan out long-term scenarios to account for things
+like: "what if the website goes down?", "what if GitHub becomes
+inaccessible?", "How can the community survive if most current
+team members leave, vanish, etc". I'm fine with leaving out (c) from the
+Team member definition for the time being. Not everything has to plan for
+every scenario at once.
+
+/Robin
+
+
+
+On Fri, Dec 7, 2012 at 12:23 PM, Hugo Roy <hugo@fsfe.org> wrote:
+
+> Le vendredi 07 d=C3=A9cembre 2012 =C3=A0 04:43 -0800, Robin Monks a =C3=
+=A9crit :
+> > How about...
+> >
+> > Votes
+> > >             All polls shall be organised by Unhosted e.V.
+> > >         (http://www.unhosted.org) and announced on www.tos-dr.info;
+> and
+> > >         announced at least 10 days in advance by email to the public
+> > >         group.
+> > >
+> >
+> > to
+> >
+> >
+> > > Votes
+> > >             All polls shall be organized by a Contributor announcing
+> the
+> > > intention to create a poll to the public email group. The poll shall
+> occur
+> > > if not less than three people agree to a vote using the final text of
+> the
+> > > given poll within a seven day period of the final text being posted.
+> The
+> > > poll shall take place and be officiated by a Team member no less than
+> 10
+> > > days from a poll being organized, and no more than 25 days. Team
+> members
+> > > maintain special privilege to call a poll at any time as long as said
+> poll
+> > > is announced 10 days prior. No poll shall be valid if less than three
+> > > Contributors cast votes.
+> >
+> >
+> > Keeping Hugo's re-definition of contributor (repeated for sanity)
+> >
+> >         Definition of contributor
+> > >             A "contributor" is any person, excluding legal persons
+> (e.g.
+> > >         corporations), who wrote at least one email to the group at
+> > >         least 30 days before the start of the poll.
+> > >
+> > > and move that section after the "vote" to
+> > >         Definition of Contributor
+> > >             A Contributor is any person, excluding legal persons (e.g=
+.
+> > >         corporations), who wrote at least one email to the group at
+> > >         least 90 days before the start of the poll.
+> >
+> >
+> > Finally an addition,
+> >
+> > Definition of Team member
+> > A Team member is any person, excluding legal persons:
+> > a) who is listed on the team page of the project website
+> > (http://tos-dr.info/about.html#team)
+>
+> or
+>
+> > b) who has been granted write access to the project's source code
+> > repository (https://github.com/didnotread?tab=3Dmembers)
+>
+> This next paragraph is a bit strange to me.
+>
+> > In a special circumstance, where no team member posts a poll within 26
+> > days of its valid creation, a Team member can be created by a 70% votin=
+g
+> in
+> > an announcement to the public email group. Such a Team member shall hav=
+e
+> > the roll of Team member for a period of 180 days.
+>
+>
+> I would just leave that out. We will sort out later when we have a good
+> structure how to handle changes. For now, we just make a small fix
+> because the Unhosted e.v. is going to stop its legal existence.
+>
+> Anyway we have to delay this to a new vote, as the vote was supposed to
+> be today but there was no clear proposal.
+>
+> Best regards,
+> Hugo
+>
+>
+> --
+> Hugo Roy
+>   French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+>                                  mobile DE: +49 151 143 56 563
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+
+--=20
+*R=E2=99=82bin Monks <http://robinmonks.com>*
+President, Podhurl Inc. <http://podhurl.us>
+Drupal Association Individual Member
+603.236.7357
+
+Live in such a way that those who know you but don't know God, will come to
+know God because they know you.
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b6d88b0ef409804d045b49a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+My thought is simply to plan out long-term scenarios to account for things =
+like: &quot;what if the website goes down?&quot;, &quot;what if GitHub beco=
+mes inaccessible?&quot;, &quot;How can the community survive if most curren=
+t team=C2=A0members=C2=A0leave, vanish, etc&quot;.=C2=A0I&#39;m fine with l=
+eaving out (c) from the Team member=C2=A0definition for the time being. Not=
+ everything has to plan for every scenario at once.<div>
+<br></div><div>/Robin<br><div><br></div></div><div class=3D"gmail_extra"><b=
+r><br><div class=3D"gmail_quote">On Fri, Dec 7, 2012 at 12:23 PM, Hugo Roy =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:hugo@fsfe.org" target=3D"_blank">hu=
+go@fsfe.org</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Le vendredi 07 d=C3=A9cembre 2012 =C3=A0 04:=
+43 -0800, Robin Monks a =C3=A9crit :<br>
+<div><div class=3D"h5">&gt; How about...<br>
+&gt;<br>
+&gt; Votes<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 All polls shall be orga=
+nised by Unhosted e.V.<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 (<a href=3D"http://www.unhosted.org" =
+target=3D"_blank">http://www.unhosted.org</a>) and announced on <a href=3D"=
+http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a>; and<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 announced at least 10 days in advance=
+ by email to the public<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 group.<br>
+&gt; &gt;<br>
+&gt;<br>
+&gt; to<br>
+&gt;<br>
+&gt;<br>
+&gt; &gt; Votes<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 All polls shall be orga=
+nized by a Contributor announcing the<br>
+&gt; &gt; intention to create a poll to the public email group. The poll sh=
+all occur<br>
+&gt; &gt; if not less than three people agree to a vote using the final tex=
+t of the<br>
+&gt; &gt; given poll within a seven day period of the final text being post=
+ed. The<br>
+&gt; &gt; poll shall take place and be officiated by a Team member no less =
+than 10<br>
+&gt; &gt; days from a poll being organized, and no more than 25 days. Team =
+members<br>
+&gt; &gt; maintain special privilege to call a poll at any time as long as =
+said poll<br>
+&gt; &gt; is announced 10 days prior. No poll shall be valid if less than t=
+hree<br>
+&gt; &gt; Contributors cast votes.<br>
+&gt;<br>
+&gt;<br>
+&gt; Keeping Hugo&#39;s re-definition of contributor (repeated for sanity)<=
+br>
+&gt;<br>
+&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 Definition of contributor<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 A &quot;contributor&quo=
+t; is any person, excluding legal persons (e.g.<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 corporations), who wrote at least one=
+ email to the group at<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 least 30 days before the start of the=
+ poll.<br>
+&gt; &gt;<br>
+&gt; &gt; and move that section after the &quot;vote&quot; to<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 Definition of Contributor<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 A Contributor is any pe=
+rson, excluding legal persons (e.g.<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 corporations), who wrote at least one=
+ email to the group at<br>
+&gt; &gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 least 90 days before the start of the=
+ poll.<br>
+&gt;<br>
+&gt;<br>
+&gt; Finally an addition,<br>
+&gt;<br>
+&gt; Definition of Team member<br>
+&gt; A Team member is any person, excluding legal persons:<br>
+&gt; a) who is listed on the team page of the project website<br>
+&gt; (<a href=3D"http://tos-dr.info/about.html#team" target=3D"_blank">http=
+://tos-dr.info/about.html#team</a>)<br>
+<br>
+</div></div>or<br>
+<div class=3D"im"><br>
+&gt; b) who has been granted write access to the project&#39;s source code<=
+br>
+&gt; repository (<a href=3D"https://github.com/didnotread?tab=3Dmembers" ta=
+rget=3D"_blank">https://github.com/didnotread?tab=3Dmembers</a>)<br>
+<br>
+</div>This next paragraph is a bit strange to me.<br>
+<div class=3D"im"><br>
+&gt; In a special circumstance, where no team member posts a poll within 26=
+<br>
+&gt; days of its valid creation, a Team member can be created by a 70% voti=
+ng in<br>
+&gt; an announcement to the public email group. Such a Team member shall ha=
+ve<br>
+&gt; the roll of Team member for a period of 180 days.<br>
+<br>
+<br>
+</div>I would just leave that out. We will sort out later when we have a go=
+od<br>
+structure how to handle changes. For now, we just make a small fix<br>
+because the Unhosted e.v. is going to stop its legal existence.<br>
+<br>
+Anyway we have to delay this to a new vote, as the vote was supposed to<br>
+be today but there was no clear proposal.<br>
+<br>
+Best regards,<br>
+Hugo<br>
+<div class=3D"im HOEnZb"><br>
+<br>
+--<br>
+Hugo Roy<br>
+=C2=A0 French Coordinator, FSFE =C2=A0 =C2=A0 =C2=A0 chat: <a href=3D"mailt=
+o:hugo@jabber.fsfe.org">hugo@jabber.fsfe.org</a><br>
+=C2=A0 <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.fsfe=
+.org/about/roy</a> =C2=A0 =C2=A0 =C2=A0 =C2=A0 mobile: <a href=3D"tel:%2B33=
+6%2008%2074%2013%2041" value=3D"+33608741341">+336 08 74 13 41</a><br>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0mobile DE: <a href=3D"tel:%2B4=
+9%20151%20143%2056%20563" value=3D"+4915114356563">+49 151 143 56 563</a><b=
+r>
+<br>
+</div><div class=3D"HOEnZb"><div class=3D"h5">--<br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/didnotread" target=3D"_blank=
+">www.github.com/didnotread</a><br>
+
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+<br>
+<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div style=3D"text-align:center"><b><a href=3D"http://robinmonks.com" targe=
+t=3D"_blank">R=E2=99=82bin Monks</a></b></div><div style=3D"text-align:cent=
+er">President, <a href=3D"http://podhurl.us" target=3D"_blank">Podhurl Inc.=
+</a></div>
+<span style=3D"font-size:x-small"><div style=3D"text-align:center">Drupal A=
+ssociation Individual Member</div></span><div><div style=3D"text-align:cent=
+er">603.236.7357</div><div><span style=3D"font-size:x-small"></span><br><di=
+v style=3D"text-align:center">
+<span style=3D"font-size:x-small">Live in such a way that those who know yo=
+u but don&#39;t know God, will come to know God because they know you.</spa=
+n></div></div></div><br>
+</div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b6d88b0ef409804d045b49a--

@@ -1,0 +1,182 @@
+Return-Path: <tosdr+bncBDL2H2PDTEDBB44DXWQAKGQE6DSFU5Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 083C240910
+	for <anything@michielbdejong.com>; Tue,  9 Sep 2014 20:07:54 +0200 (CEST)
+Received: from mfilter15-d.gandi.net (mfilter15-d.gandi.net [217.70.178.143])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 04786142245
+	for <anything@michielbdejong.com>; Tue,  9 Sep 2014 20:07:54 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter15-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter15-d.gandi.net (mfilter15-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 9iRAmXH1oX7R for <anything@michielbdejong.com>;
+	Tue,  9 Sep 2014 20:07:52 +0200 (CEST)
+Received: from mail-ob0-x239.google.com (mail-ob0-x239.google.com [IPv6:2607:f8b0:4003:c01::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 564D6142286
+	for <michiel@michielbdejong.com>; Tue,  9 Sep 2014 20:07:49 +0200 (CEST)
+Received: by mail-ob0-f185.google.com with SMTP id wp18sf3440781obc.22
+        for <michiel@michielbdejong.com>; Tue, 09 Sep 2014 11:07:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=z4NtxwBgu0r/RviJIXgpJN5FK1TW4fOL7zF2VdMCstU=;
+        b=H2Z7z8DseoUT77hZkxdOfep+cjlYkcXMPJHTYhk2/w4FygD5zNmvQh7tN+CrNUykxt
+         0kWmL6Eo92izTlVgj2mlV0S/fWBH+aKuGLsKGeIyX62emaOAqWMqswBXvakZGcL41YLK
+         sjnZ6EHKHuQfgsxi0mdthh8rfx9XU8tp/xjpgZtqLu7tUOczgfwle1vXPgGprN6c6KQd
+         +lxAG0ZWtAQobMtMCQnyseJ7X8Wyjye85L5ZGi4TuocYYmhNaL31j2MIU+F3QlSc9o9v
+         j2+HwOxfa3qfAl6sRmHxcBKO6WOWFSDw2wJI2bJAShaQhQr/92SwBnVqsBQTXxu6PkVq
+         XSig==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type:content-transfer-encoding;
+        bh=z4NtxwBgu0r/RviJIXgpJN5FK1TW4fOL7zF2VdMCstU=;
+        b=ytFock3dRRFIN6Xq+HEO86DTHbEtSkfGlh9MHK1/Tw/+K5Ma6ObI8UzXDUgahBpZeN
+         ZL7Kz5NDxC65Bb1ZXRYebpJq5Lix7vyJLwjVHe0mAmQUCmomIdTp7sCEgNktDVszglw4
+         vmANJOSEQlwoMApiHf4kmPpDxTKxl2lBc9ZVO/qeZIrgWOvgLnD5LKp1k0HyQDPff30O
+         s2WSI0ikojEuAZz8ebt4R8KzsDDYSUiJNrChPujIEkIbui+fiUfOSslhXpim6vmMoZMI
+         Isshu2WVubYKtubxI3kiePlc0cQcNfXDWDRbUV/grEOhc6uW/tnH+JXbY/sLMDEWURel
+         ifkg==
+X-Received: by 10.140.20.83 with SMTP id 77mr464953qgi.0.1410286068081;
+        Tue, 09 Sep 2014 11:07:48 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.140.98.99 with SMTP id n90ls2303568qge.66.gmail; Tue, 09 Sep
+ 2014 11:07:47 -0700 (PDT)
+X-Received: by 10.140.94.34 with SMTP id f31mr52482qge.11.1410286067734;
+        Tue, 09 Sep 2014 11:07:47 -0700 (PDT)
+Date: Tue, 9 Sep 2014 11:07:47 -0700 (PDT)
+From: annamaj.drenth@gmail.com
+To: tosdr@googlegroups.com
+Cc: anything@michielbdejong.com
+Message-Id: <2ca5bf96-e337-46eb-9cdc-fb056f35ceb4@googlegroups.com>
+In-Reply-To: <540DB80E.9010000@michielbdejong.com>
+References: <8cc2aa05-6830-4a80-b91a-85a3862fb81b@googlegroups.com> <7001473d-ec5f-4164-b15c-817d4c328199@googlegroups.com> <34df663c-0922-4263-9d2e-616c3b67321d@googlegroups.com> <540AD403.7030000@michielbdejong.com> <20140907204523.GA7036@xps>
+ <540DB80E.9010000@michielbdejong.com>
+Subject: Re: [tosdr:3226] Re: Twitter [bad] Right to access
+MIME-Version: 1.0
+X-Original-Sender: annamaj.drenth@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Op maandag 8 september 2014 16:07:46 UTC+2 schreef Michiel de Jong:
+> -----BEGIN PGP SIGNED MESSAGE-----
+>=20
+> Hash: SHA1
+>=20
+>=20
+>=20
+> Yeah, that's what I meant. We review the terms, while being aware that
+>=20
+> alongside with:
+>=20
+>=20
+>=20
+> 1) what the law says about it, and
+>=20
+> 2) what employees will do about it in practice,
+>=20
+>=20
+>=20
+> it's only one of three factors.
+>=20
+>=20
+>=20
+> On 07.09.2014 22:45, Hugo Roy wrote:
+>=20
+> > =E2=86=AA 2014-09-06 Sat 11:29, Michiel de Jong
+>=20
+> > <anything@michielbdejong.com>:
+>=20
+> >> I think a good way to think about it is that practice is
+>=20
+> >> influenced in one third by law, in one third by the terms of
+>=20
+> >> service, and in one third by employee decisions.
+>=20
+> >=20
+>=20
+> > I don=E2=80=99t think it=E2=80=99s the way we should do here.
+>=20
+> >=20
+>=20
+> > We focus on the terms, and we don=E2=80=99t forget the legal context in=
+=20
+>=20
+> > which the terms are.
+>=20
+> >=20
+>=20
+> > We can=E2=80=99t also go and check =E2=80=9Cemployee decisions=E2=80=9D
+>=20
+> >=20
+>=20
+> -----BEGIN PGP SIGNATURE-----
+>=20
+> Version: GnuPG v1
+>=20
+>=20
+>=20
+> iQIcBAEBAgAGBQJUDbgOAAoJECmDVpL5muhKvSQQAJf6kEWwff77UgBtLNY9xOFh
+>=20
+> G8eyMYjbK5hNhotvEaAgmdJxFTNu8P8GLgSwOMGq+lQHFrwVkA4Y/daU9FoXbsLy
+>=20
+> 8qsfHKp/vnevYXdOpK7nDsoW31oZKCobhO8KHWqVrd1Mo1v59fzWWSBy7MwcdOzU
+>=20
+> Zf1Ud8bw2OAWw6g2Ffvj1Xb2eF8w4xYTu33OL4sr5CJ34AImZlgQ6yc+QQD+P7GZ
+>=20
+> mTQlDNLWmvA22YR9He5kXDj0zM7w4f9Z0RclB3R5nGodwkdI+wlDSnmvlW5tYFmp
+>=20
+> bJo0KDnDqjAXl2ra42oqVCLtVzw0q/r/+PNqubiWxRDi9KS+ZNrlgSfJEhbmiL8N
+>=20
+> k/kiUrhLMEEXj4OHrZX9iPjX+I8jwBXBMehlGxqPx11prrvI00WMErR9H6sBXWRo
+>=20
+> h0jYdsLpt81r8af5EhO4/FSoptu8Ju4LDJ0YLiHM1cSTvVyDt5E/CHVeChOXafda
+>=20
+> JzR1KB7WTeKl1CiZ/atOubGg2fCOdZ+ohNPYTKja/qYLVUjGst06xTGiLW+Z/KSc
+>=20
+> KPBIK+53IoLhLeKmD8wOdFnzsKPlE3q2WikJvXhEFGz6LAWaCeHlyDeJiUaBa8lG
+>=20
+> WjEZClVyANyK88BaqDoaV06sKQrBm4nZS5ckkocV/W2bErfZelPr5jV8awz9n78/
+>=20
+> 9NBiLc5wCPFOL2iQXhwz
+>=20
+> =3DofJR
+>=20
+> -----END PGP SIGNATURE-----
+
+Okay, sure there may also be more influences like employees and their decis=
+ions, but the law is the law. Again: they HAVE to comply to the right to ac=
+cess and therefore I believe giving them so much credit for this is not rig=
+ht.
+
+What I do think Twitter should get credit for is the fact that you can down=
+load all your Tweets ('Twitter archive') in a .csv or HTML-file. https://bl=
+og.twitter.com/2012/your-twitter-archive
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

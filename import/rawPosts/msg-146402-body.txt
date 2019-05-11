@@ -1,0 +1,182 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.31.137.199 with SMTP id l190csp763950vkd;
+        Sat, 13 Aug 2016 18:58:13 -0700 (PDT)
+X-Received: by 10.194.77.142 with SMTP id s14mr21835258wjw.77.1471139893149;
+        Sat, 13 Aug 2016 18:58:13 -0700 (PDT)
+Return-Path: <tosdr+bncBCFLTI7RVAHRBMNAX66QKGQETNZA7EY@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [217.70.183.194])
+        by mx.google.com with ESMTPS id nb9si13657122wjb.113.2016.08.13.18.58.12
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 13 Aug 2016 18:58:13 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncbcflti7rvahrbmnax66qkgqetnza7ey@googlegroups.com does not designate 217.70.183.194 as permitted sender) client-ip=217.70.183.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncbcflti7rvahrbmnax66qkgqetnza7ey@googlegroups.com does not designate 217.70.183.194 as permitted sender) smtp.mailfrom=tosdr+bncBCFLTI7RVAHRBMNAX66QKGQETNZA7EY@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=mac.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id C0F7AC5A43
+	for <michiel@unhosted.org>; Sun, 14 Aug 2016 03:58:12 +0200 (CEST)
+Received: from mfilter19-d.gandi.net (mfilter19-d.gandi.net [217.70.178.147])
+	by spool.mail.gandi.net (Postfix) with ESMTP id AA06F17804D
+	for <michiel@unhosted.org>; Sun, 14 Aug 2016 03:58:12 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter19-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter19-d.gandi.net (mfilter19-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id hSYiH2TnB1oj for <michiel@unhosted.org>;
+	Sun, 14 Aug 2016 03:58:10 +0200 (CEST)
+Received: from mail-qk0-x237.google.com (mail-qk0-x237.google.com [IPv6:2607:f8b0:400d:c09::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 950C717803D
+	for <michiel@michielbdejong.com>; Sun, 14 Aug 2016 03:58:10 +0200 (CEST)
+Received: by mail-qk0-x237.google.com with SMTP id e123sf6072630qkd.1
+        for <michiel@michielbdejong.com>; Sat, 13 Aug 2016 18:58:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:from:content-transfer-encoding:mime-version:subject
+         :message-id:date:references:in-reply-to:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=AiANSW7clYX+iIMAwoJPZvNpbTkWVse154KptR/hlc4=;
+        b=U/gWu2fPC9Pa6x47UXqjXmt4V6c6OqUpibx9xqh8JTO2i7O5AZilAddq/sqYJ9t721
+         a2lvSuPmB04H9n3Mm6DbCx3UV3RcdogqAUOGs0qxPjVwC03OuHcuYkcliRY58cWHQ2uM
+         frTjmwXIZeaNbcpmpHxnl48qObGx/MJo4q/mFHRPn9wUZgUhAjb3H6MufXGNj2hWU5o3
+         ohEGWLihRt+nOWbmyURJgV9KkfSTQmLmuE6ZDDdiiHvkVLJXTop7wu1u9GM/ICLXlXwg
+         +2fdPcJwmpwZkWL/bgWuNQq/QprDBM9X3gMdAxpfFqyp+6gz1iGrjXLAMCqQtZLYAm9/
+         DYhQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:from:content-transfer-encoding
+         :mime-version:subject:message-id:date:references:in-reply-to:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=AiANSW7clYX+iIMAwoJPZvNpbTkWVse154KptR/hlc4=;
+        b=B4VF5c6hAlKHFfQkO1WeG7qfUlQnM/W6KVDSMG8zV5AQPhRr1WrT2bPZFgZdUbrktV
+         BqjpayMVQLsjcmovSm8dqQnduQIiFuceQY9Nu7Sfc7WIpOYoVTdDH/XtPRdIxCiJCQdd
+         fXmjr1PRoilM5lfUFDoQdxmloXSwAtxcrKdsuPeZZ4uIXtAPYhZU0BJC/by5GAloUm/W
+         2Mql0Qqu3IIsiIcmmmh22MH7Qlc9LBRTwlz+7QrALCPy+kL8UEUVdzImJ65uG04impx+
+         xYw+BGRjeTJIoLFJght+a/TK2ECKyzaog/sZFJS8DMSG2z+7zB263U+hayV6ZLrw8F8/
+         HI/Q==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AEkoouvD+v1CjTAp/vaGzJNYgnEPmdK65bS804nRGHEXt/CaWT6HOeRKtfRs4CuKpTZr8Q==
+X-Received: by 10.36.6.148 with SMTP id 142mr217201itv.10.1471139889710;
+        Sat, 13 Aug 2016 18:58:09 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.164.143 with SMTP id d15ls2272813ioj.0.gmail; Sat, 13 Aug
+ 2016 18:58:09 -0700 (PDT)
+X-Received: by 10.107.131.233 with SMTP id n102mr16827286ioi.16.1471139889042;
+        Sat, 13 Aug 2016 18:58:09 -0700 (PDT)
+Received: from mr26p44im-ztdg08093301.me.com (mr26p44im-ztdg08093301.me.com. [17.111.247.48])
+        by gmr-mx.google.com with ESMTPS id z4si1802235pam.0.2016.08.13.18.58.08
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 13 Aug 2016 18:58:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of reneelloyd@mac.com designates 17.111.247.48 as permitted sender) client-ip=17.111.247.48;
+Received: from process-dkim-sign-daemon.mr26p44im-ztdg08093301.me.com by
+ mr26p44im-ztdg08093301.me.com
+ (Oracle Communications Messaging Server 7.0.5.38.0 64bit (built Feb 26 2016))
+ id <0OBV00N00MRYDT00@mr26p44im-ztdg08093301.me.com> for
+ tosdr@googlegroups.com; Sun, 14 Aug 2016 01:58:08 +0000 (GMT)
+Received: from [10.7.246.50]
+ (mobile-166-177-057-233.mycingular.net [166.177.57.233])
+ by mr26p44im-ztdg08093301.me.com
+ (Oracle Communications Messaging Server 7.0.5.38.0 64bit (built Feb 26 2016))
+ with ESMTPSA id <0OBV00DKIMSUMD30@mr26p44im-ztdg08093301.me.com> for
+ tosdr@googlegroups.com; Sun, 14 Aug 2016 01:58:08 +0000 (GMT)
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2016-08-13_11:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ clxscore=1011 suspectscore=4 malwarescore=0 phishscore=0 adultscore=0
+ bulkscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1603290000 definitions=main-1608140025
+From: Renee Lloyd <reneelloyd@mac.com>
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+MIME-version: 1.0 (1.0)
+Subject: Re: [tosdr:3943] Re: ownership on youtube
+Message-id: <334EFAB8-82E5-44CD-96F5-BB63D07FF3CF@mac.com>
+Date: Sat, 13 Aug 2016 21:58:06 -0400
+References: <CADNfgReNnQ+_uNn+8piYVUcac6kzHpnF+wjn+sTGqPvEzRTing@mail.gmail.com>
+ <58efa373-1527-4d61-93ad-a3825ffa2554@googlegroups.com>
+In-reply-to: <58efa373-1527-4d61-93ad-a3825ffa2554@googlegroups.com>
+To: tosdr@googlegroups.com
+X-Mailer: iPhone Mail (13G34)
+X-Original-Sender: reneelloyd@mac.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@mac.com;       spf=pass (google.com: domain of reneelloyd@mac.com
+ designates 17.111.247.48 as permitted sender) smtp.mailfrom=reneelloyd@mac.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=mac.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+This is excessive.  Drafting an unclear license grant creates opportunities=
+ to overreach.  I think that this should be drafted more narrowly. =20
+
+Sent from my iPhone
+
+> On Aug 13, 2016, at 7:49 PM, matthewlane027@gmail.com wrote:
+>=20
+>> On Wednesday, May 8, 2013 at 3:14:37 AM UTC+12, Suzanne Azmayesh wrote:
+>> Even when the user has left the service, Youtube can keep copies of the =
+content that have been removed or deleted :
+>>=20
+>>=20
+>>=20
+>>=20
+>> =C2=AB For clarity, you retain all of your ownership rights in your Cont=
+ent.=20
+>>=20
+>> You understand and agree, however, that YouTube may retain, but not disp=
+lay, distribute, or perform, server copies of your videos that have been re=
+moved or deleted.=20
+>>=20
+>>=20
+>> =C2=AB The above licenses granted by you in user comments you submit are=
+ perpetual and irrevocable. =C2=BB
+>=20
+> This is good however so that means that if the copies are kept indefinite=
+ly - does youtube gain full access to the ownership when you die or does th=
+at ownership go towards your next of kin?
+>=20
+> --=20
+> [!!] Please see https://edit.tosdr.org -- this is where new contributions=
+ should be submitted and discussed
+>=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at https://groups.google.com/group/tosdr.
+> To view this discussion on the web visit https://groups.google.com/d/msgi=
+d/tosdr/58efa373-1527-4d61-93ad-a3825ffa2554%40googlegroups.com.
+> For more options, visit https://groups.google.com/d/optout.
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/334EFAB8-82E5-44CD-96F5-BB63D07FF3CF%40mac.com.
+For more options, visit https://groups.google.com/d/optout.

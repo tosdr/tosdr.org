@@ -1,0 +1,200 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.5.16 with SMTP id 16csp83531iof;
+        Fri, 16 Oct 2015 12:04:30 -0700 (PDT)
+X-Received: by 10.180.86.129 with SMTP id p1mr6724826wiz.83.1445022269893;
+        Fri, 16 Oct 2015 12:04:29 -0700 (PDT)
+Return-Path: <tosdr+bncBCKP5C4PRMERBM4UQWYQKGQEWIF3HIA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id a2si301489wjz.1.2015.10.16.12.04.29
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 16 Oct 2015 12:04:29 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBM4UQWYQKGQEWIF3HIA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCKP5C4PRMERBM4UQWYQKGQEWIF3HIA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBCKP5C4PRMERBM4UQWYQKGQEWIF3HIA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 9A0A7172095
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 21:04:29 +0200 (CEST)
+Received: from mfilter21-d.gandi.net (mfilter21-d.gandi.net [217.70.178.149])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 7C87317809F
+	for <michiel@unhosted.org>; Fri, 16 Oct 2015 21:04:29 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter21-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter21-d.gandi.net (mfilter21-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id LhkQ4db2sDL8 for <michiel@unhosted.org>;
+	Fri, 16 Oct 2015 21:04:24 +0200 (CEST)
+Received: from mail-ig0-x23f.google.com (mail-ig0-x23f.google.com [IPv6:2607:f8b0:4001:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id C4A4D17809D
+	for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 21:04:20 +0200 (CEST)
+Received: by igbzj1 with SMTP id zj1sf5731820igb.1
+        for <michiel@michielbdejong.com>; Fri, 16 Oct 2015 12:04:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=uOcdWmdWsv1HiFtvPARSEljIu4yc1d9Eqx/X4o8gEb4=;
+        b=XBgPYHILOLe0azbsqyJtb4wTthbOW8LFhyeGMdu9aqb8ZcVKzK6P9wqr2aLm06mfac
+         o3KdqEAXwIwpotiKVLGnkQgNLMZlhaYV8+Dx2vsKK37BgtvObttInSU870RXgtHIavpm
+         Y1IDSU5k7N+J3R3ykcYZEzGXswq/D2BwpRgs+XxxJOhxO5m84OUU9poMIc53oX4gz4dG
+         bCkSLVKJm1jaDdQf7l/YlUryU8ejzr0+c3B8iWKhWRUSLuF/xB8RPm2pebgAtvNYU6YS
+         iZUanYV3tegGKM2Y0xQhJS/u0Sa7HSMQKk8SO7WWAD8iOi7LU/GaSYkA65n7ruFsUxOL
+         V04Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=uOcdWmdWsv1HiFtvPARSEljIu4yc1d9Eqx/X4o8gEb4=;
+        b=fBNRJcMBp4YfiilrI5uO4voeh843ejN1vXBHGeUW6VZmk4ML9iHmynQ/bi11uC7U8J
+         QtgomUUoOK5hi6xvN3Y8sDlLhsmpXjhLpgfAAxfe56kHtHs9dV039OLsOf0NsiOCNcS5
+         V0SHeR5uz7SBEAMg1ciTsQGBi3lzgaxXOLY0PCu9r4xfnEaIpLxdUdpAdcJX5yotGioP
+         bRLFFTEJq040/6UGpkcYoQCelYhp4WycEBkAAJTniwKUiHDiMKLIKo/zkAP86EeyKohn
+         9PtDiaculvDR4xnB16gzkbfGjGacp9/Nw3zhNw6NQ6o6Sxd5EhBEwFGLYbpxcNFhrW5Q
+         VWzg==
+X-Received: by 10.50.122.103 with SMTP id lr7mr161686igb.10.1445022259798;
+        Fri, 16 Oct 2015 12:04:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.165.5 with SMTP id o5ls825606ioe.67.gmail; Fri, 16 Oct
+ 2015 12:04:19 -0700 (PDT)
+X-Received: by 10.50.30.102 with SMTP id r6mr161021igh.3.1445022259442;
+        Fri, 16 Oct 2015 12:04:19 -0700 (PDT)
+Date: Fri, 16 Oct 2015 12:04:18 -0700 (PDT)
+From: natalcastilio8@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: "Google+ (Kboing)" <replyto+CkdDZ3huY0d4MWMxOXpkSEpsWVcwYUpYb3hNMmRtWm1WcWJIa3pZMnBvWVdsaE1EUmpabkJtWVhCMWNXZDBibnB4Y25Cbk1HcxCU_ouPiwkqJXoxM2dmZmVqbHkzY2poYWlhMDRjZnBmYXB1cWd0bnpxcnBnMGs+AI3v7_UAAAAAVeMsoH8SuOn4hJLWvpN8VBsG-8hRrbbi@plus.google.com>
+Message-Id: <6bde3128-3137-4729-ad3b-fa012a534fea@googlegroups.com>
+In-Reply-To: <cff4678a-5008-4bb0-a996-963334f78cf4@googlegroups.com>
+References: <cff4678a-5008-4bb0-a996-963334f78cf4@googlegroups.com>
+Subject: [tosdr:3662] Re: [Good] TBC. LinkedIn announces changes to its
+ privacy policy regarding the "add connection" feature
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1054_1435828370.1445022258713"
+X-Original-Sender: natalcastilio8@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_1054_1435828370.1445022258713
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com wr=
+ote:
+> After agreeing to a $13M settlement over the "add connection" feature, Li=
+nkedIn announces imminent changes to its privacy policy.
+>=20
+>=20
+> BEFORE: The issue: the reminder emails (LinkedIn users were not aware tha=
+t they consented to reminder emails being sent)
+> When you used the "add connection" feature to invite people who do not ha=
+ve a LinkedIn account, it sent a first "I'd like to add you to my professio=
+nal network on LinkedIn" email and when the invitation was not accepted it =
+sent two "reminder emails".
+>=20
+>=20
+>=20
+>=20
+>=20
+> NOW: The policy change: This message now appears when you are about to in=
+vite people who do not have a LinkedIn accountInvite friends, colleagues, a=
+nd acquaintances who might like to connect, and would benefit from joining =
+LinkedIn. If someone you invite doesn't respond right away, we'll send up t=
+o two reminders.
+>=20
+>=20
+>=20
+>=20
+> PS: By the end 2015, LinkedIn plans to allow its users to disable the rem=
+inders function.=C2=A0
+
+
+
+On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com wr=
+ote:
+> After agreeing to a $13M settlement over the "add connection" feature, Li=
+nkedIn announces imminent changes to its privacy policy.
+>=20
+>=20
+> BEFORE: The issue: the reminder emails (LinkedIn users were not aware tha=
+t they consented to reminder emails being sent)
+> When you used the "add connection" feature to invite people who do not ha=
+ve a LinkedIn account, it sent a first "I'd like to add you to my professio=
+nal network on LinkedIn" email and when the invitation was not accepted it =
+sent two "reminder emails".
+>=20
+>=20
+>=20
+>=20
+>=20
+> NOW: The policy change: This message now appears when you are about to in=
+vite people who do not have a LinkedIn accountInvite friends, colleagues, a=
+nd acquaintances who might like to connect, and would benefit from joining =
+LinkedIn. If someone you invite doesn't respond right away, we'll send up t=
+o two reminders.
+>=20
+>=20
+>=20
+>=20
+> PS: By the end 2015, LinkedIn plans to allow its users to disable the rem=
+inders function.=C2=A0
+
+
+
+On Wednesday, October 7, 2015 at 10:56:27 AM UTC-3, diane.g...@gmail.com wr=
+ote:
+> After agreeing to a $13M settlement over the "add connection" feature, Li=
+nkedIn announces imminent changes to its privacy policy.
+>=20
+>=20
+> BEFORE: The issue: the reminder emails (LinkedIn users were not aware tha=
+t they consented to reminder emails being sent)
+> When you used the "add connection" feature to invite people who do not ha=
+ve a LinkedIn account, it sent a first "I'd like to add you to my professio=
+nal network on LinkedIn" email and when the invitation was not accepted it =
+sent two "reminder emails".
+>=20
+>=20
+>=20
+>=20
+>=20
+> NOW: The policy change: This message now appears when you are about to in=
+vite people who do not have a LinkedIn accountInvite friends, colleagues, a=
+nd acquaintances who might like to connect, and would benefit from joining =
+LinkedIn. If someone you invite doesn't respond right away, we'll send up t=
+o two reminders.
+>=20
+>=20
+>=20
+>=20
+> PS: By the end 2015, LinkedIn plans to allow its users to disable the rem=
+inders function.=C2=A0
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_1054_1435828370.1445022258713--

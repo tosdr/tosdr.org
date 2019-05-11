@@ -1,0 +1,125 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBFNRX2GAKGQECVU7W3Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 34952161735
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:26:48 +0200 (CEST)
+Received: from mfilter1-d.gandi.net (mfilter1-d.gandi.net [217.70.178.130])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 318DB22607B
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:26:48 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter1-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter1-d.gandi.net (mfilter1-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id fxf7tvzv1U0V for <anything@michielbdejong.com>;
+	Sun, 12 May 2013 15:26:46 +0200 (CEST)
+Received: from mail-qa0-x23e.google.com (mail-qa0-x23e.google.com [IPv6:2607:f8b0:400d:c00::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 79C18226091
+	for <michiel@michielbdejong.com>; Sun, 12 May 2013 15:26:46 +0200 (CEST)
+Received: by mail-qa0-f62.google.com with SMTP id ih17sf621702qab.7
+        for <michiel@michielbdejong.com>; Sun, 12 May 2013 06:26:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yPZ5+Mc8SSOc5041qW6JWQ91XgTsbabWFbpnBVJ8NLE=;
+        b=AF5BMvoHI2I6TluzkJ0SJUkYb3Lbse+781p4QjB9TIFnn2bhgCbnazn6qOIZrJEKRy
+         jdglYYdYY3j7Achv/Nu8XTP3M00p3juwXHwYCvOqhjP9F7+woIGmqJzuaL4IUDouW+Qp
+         ki4LAFq5XuAOJJPQynez3jm0aE5SG2krSW+lCTrxoPk9f+Efo3yuuW+R9SatVbP3oR0b
+         e+/b85Em22LrqGUKEqbazb8qMy7HZ7tT5oJA875aNtlILPv71Wm3rJ3OgWNbw4zaYyry
+         OvPA2cRpVdcRWs8TpOkfIqE8MMAEonoVHoXoQf6ZBhzmd3gmE1kuyiZGY14KOSzPv/qN
+         Z9+A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=yPZ5+Mc8SSOc5041qW6JWQ91XgTsbabWFbpnBVJ8NLE=;
+        b=V3fsOX0wwouWk5O7fZW/BKnw7ueYnSsMZ/42z1WsJjx8jpn12UKK/bYL1AfEZvnmvF
+         Y1ttmVvfT75GeP91sXW0NY/afCXKN4Upo351+ptT2E+NHbIpGBVlqaOnR1R3JFcbEGNb
+         RbyCsvpp+GWd3h3CYdPj71RKafh2RjFbuBVbDpvJAgbsG/ITg4YCUeTrh3Xsez1NJk/c
+         A8ksWlrqgymNHkxylnPWij6DVioBXDJ9zgji8orbztRLqNVEyjxkfiFniJQo/iwrfhRn
+         IToLFEef0JudbhOQ4idC80YshS2/+03vwIeie8MPiF7tHxpVVjbRrDERQWYafk92v2m7
+         2UCw==
+X-Received: by 10.49.52.36 with SMTP id q4mr1061129qeo.26.1368365205420;
+        Sun, 12 May 2013 06:26:45 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.70.164 with SMTP id n4ls2235658qeu.64.gmail; Sun, 12 May
+ 2013 06:26:45 -0700 (PDT)
+X-Received: by 10.49.71.135 with SMTP id v7mr1787912qeu.22.1368365205081;
+        Sun, 12 May 2013 06:26:45 -0700 (PDT)
+Date: Sun, 12 May 2013 06:26:44 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <61327d0d-5206-4e76-8c11-10ab7606cac1@googlegroups.com>
+Subject: [tosdr:2090] [neutral] Online and Retail Stores may have different pricing
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_267_20496579.1368365204886"
+
+------=_Part_267_20496579.1368365204886
+Content-Type: text/plain; charset=ISO-8859-1
+
+
+>
+> Microsoft does not guarantee that a price, product or promotion offered 
+> online will also be available or honoured at a Microsoft Retail Store or 
+> vice versa.
+>
+>  
+>
+> From <
+> http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/
+> >
+>
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_267_20496579.1368365204886
+Content-Type: text/html; charset=ISO-8859-1
+
+<blockquote class="gmail_quote" style="margin: 0px 0px 0px 0.8ex; border-left-width: 1px; border-left-color: rgb(204, 204, 204); border-left-style: solid; padding-left: 1ex;"><p style="margin:0in;font-family:Calibri;font-size:11.0pt">Microsoft does not
+guarantee that a price, product or promotion offered online will also be
+available or honoured at a Microsoft Retail Store or vice versa.</p>
+
+<p style="margin:0in;font-family:Calibri;font-size:11.0pt" lang="en-CA">&nbsp;</p>
+
+<p style="margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959">From
+&lt;<a href="http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/">http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/</a>&gt;</p></blockquote>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href="http://groups.google.com/group/tosdr?hl=en">http://groups.google.com/group/tosdr?hl=en</a>.<br />
+For more options, visit <a href="https://groups.google.com/groups/opt_out">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_267_20496579.1368365204886--

@@ -1,0 +1,161 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp136946qed;
+        Wed, 15 Aug 2012 15:23:24 -0700 (PDT)
+Received: by 10.180.92.194 with SMTP id co2mr314634wib.16.1345069404485;
+        Wed, 15 Aug 2012 15:23:24 -0700 (PDT)
+Return-Path: <tosdr+bncCIqqu6foDhDbwrCBBRoERxgCUQ@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id p10si294983wic.44.2012.08.15.15.23.23
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 15 Aug 2012 15:23:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCIqqu6foDhDbwrCBBRoERxgCUQ@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCIqqu6foDhDbwrCBBRoERxgCUQ@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCIqqu6foDhDbwrCBBRoERxgCUQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fakk10 with SMTP id k10sf623422fak.29
+        for <multiple recipients>; Wed, 15 Aug 2012 15:23:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:date:from
+         :organization:user-agent:mime-version:to:subject:x-enigmail-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=krKNSHKW/Zt5HdHGAYh8bJeaxKt6oKSY/HY4qPw5iRI=;
+        b=GH2R8D5BhZiuDrKsYOkJRMPqad7Go7V+QkgmrO38/J77NVeToJAS69HQi5Lg1M9b20
+         k9tWMETBIR4HeznPb/PuxU3DjqAxhdqdL3zznOE+aGZhpjXQWzjp31T5yhIDVmjX1zqe
+         iq/lX/hGq+GdijIX74+euauStb+eBkXYWCeE4=
+Received: by 10.180.105.163 with SMTP id gn3mr26651wib.0.1345069403442;
+        Wed, 15 Aug 2012 15:23:23 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.216.206.198 with SMTP id l48ls2336812weo.3.gmail; Wed, 15 Aug
+ 2012 15:23:22 -0700 (PDT)
+Received: by 10.180.105.2 with SMTP id gi2mr33135wib.4.1345069402519;
+        Wed, 15 Aug 2012 15:23:22 -0700 (PDT)
+Received: by 10.180.105.2 with SMTP id gi2mr33134wib.4.1345069402509;
+        Wed, 15 Aug 2012 15:23:22 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id fb20si33862wid.3.2012.08.15.15.23.22
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 15 Aug 2012 15:23:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of eal@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id ECFC663A651
+	for <tosdr@googlegroups.com>; Thu, 16 Aug 2012 00:23:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id z0egKaYr373k for <tosdr@googlegroups.com>;
+	Thu, 16 Aug 2012 00:23:19 +0200 (CEST)
+Received: from [192.168.1.152] (g225160097.adsl.alicedsl.de [92.225.160.97])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: eal)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id EDB3A63A40D
+	for <tosdr@googlegroups.com>; Thu, 16 Aug 2012 00:23:18 +0200 (CEST)
+Message-ID: <502C2156.80204@fsfe.org>
+Date: Thu, 16 Aug 2012 00:23:18 +0200
+From: Erik Albers <eal@fsfe.org>
+Organization: Free Software Foundation Europe
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:14.0) Gecko/20120714 Thunderbird/14.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: [tosdr:479] [good] WhatsApp has no personalized advertisement
+X-Enigmail-Version: 1.4.3
+X-Original-Sender: eal@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of eal@fsfe.org) smtp.mail=eal@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+WhatsApp has no personalize advertisement, that means that they do not
+sell users data to advertising companies:
+ToS of WhatsApp @ http://www.whatsapp.com/legal/ reads:
+
+"We do not use your mobile phone number or other Personally
+Identifiable Information to send commercial or marketing messages
+without your consent or except as part of a specific program or
+feature for which you will have the ability to opt-in or opt-out."
+
+and
+
+"We do not sell or share your Personally Identifiable Information
+(such as mobile phone number) with other third-party companies for
+their commercial or marketing use without your consent or except as
+part of a specific program or feature for which you will have the
+ability to opt-in or opt-out."
+
+to have an opt-out option should be normal but unfortunately, these
+days you can see it as a good feature.
+
+they do use unpersonalized information:
+"We may share non-personally-identifiable information (such as
+anonymous User usage data, referring / exit pages and URLs, platform
+types, asset views, number of clicks, etc.) with interested
+third-parties to assist them in understanding the usage patterns for
+certain content, services, advertisements, promotions, and/or
+functionality on the WhatsApp Site."
+
+but:
+"We may use both your Personally Identifiable Information and certain
+non-personally-identifiable information (such as anonymous user usage
+data, cookies, IP addresses, browser type, clickstream data, etc.) to
+improve the quality and design of the WhatsApp Site and WhatsApp
+Service and to create new features, promotions, functionality, and
+services by storing, tracking, and analyzing user preferences and
+trends. Hopefully we improve the WhatsApp Site and Service and don't
+make it suck worse."
+
+So they keep their doors open to change it in future. Finally, as it
+is written now (the above quote) it reads good.
+
+Erik
+
+- -- 
+Erik Albers | Free Software Foundation Europe (FSFE)
+Campaigning & Community
+info/contact: http://fsfe.org/about/albers/albers.en.html
+
+		Free as in Freedom!
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org/
+
+iQIcBAEBAgAGBQJQLCFWAAoJEBho/C6GOdyBzFAQAKRGcnFeo6+ndRGuoKLrA/Vv
+uL6FUQ+vkKMC955VZtpxXLwvfnXYmd0g37ZE6k7FEHMAQRIxYxydvy0BqtkYNkpW
+lBD9puRNi3+hnRi0A3hd0HlDvKO3JwDWWU3dvgvtz/iNPUFiUlIYYRNEtoPu1pBL
+phFjUCzpShNPc/raocpy43U0gJjPiDm9XksMay3rBfNUVRutMdjKX0ol4ErXzUzZ
+INpNWJcYyOSmGtBTjwbrQ42MvjXL9iZ9nPDjXpTFbH16FWsx0MZ+RRre+uW4vCIk
+FvwXhItlVnudtcW75vOAmtYgOHTL/iFbYG/E3Z29woCRDdIbVPhssz1uPwsBX6yo
++3CT0kcpTHl91a6c1IQSiEDdbb8p8JI/8pj8lucQA63U19B5lK4P5rRVH1HWuG9d
+A8QUOapUJcKGi/YUz2GTNgknlo6mzNVHsJzaGd/kFUeksBju/ggVqOX5wjS1Tx1Z
+dSSTxUAml9jp2n8TKkdXwqVBw1F+Si06z4pV12IHi6IaxfPBqLulO+RjQEGIJpWv
+uo5IsJruQqKXzUZ319GDo7jGQg+B1AGgWKBwI5eH6MW+gF/wamlEkKI66P+2Gnt3
+8DNoiQbHmtofIQluzKDIWZfz2P9df9hhDqEjH7rIk6wE1GKo0GqN0KcSphtZsIHo
+8lRDaN7cxiNfD+IDACoM
+=BmmC
+-----END PGP SIGNATURE-----
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,455 @@
+Return-Path: <tosdr+bncBDN6VPFO2IJBBIFZX2GAKGQESVNM5LY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id 4797E161736
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:44:05 +0200 (CEST)
+Received: from mfilter17-d.gandi.net (mfilter17-d.gandi.net [217.70.178.145])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 4413B17808A
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:44:05 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter17-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.133])
+	by mfilter17-d.gandi.net (mfilter17-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id GqdnX4eI1saV for <anything@michielbdejong.com>;
+	Sun, 12 May 2013 15:44:03 +0200 (CEST)
+Received: from mail-ie0-x23e.google.com (mail-ie0-x23e.google.com [IPv6:2607:f8b0:4001:c03::23e])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 8BAB0178083
+	for <anything@michielbdejong.com>; Sun, 12 May 2013 15:44:02 +0200 (CEST)
+Received: by mail-ie0-f190.google.com with SMTP id k5sf1487392iea.27
+        for <anything@michielbdejong.com>; Sun, 12 May 2013 06:44:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=bb6SKprEanoCNSD4UuYUNL5jAM8KR0Ytbp9XiXydETQ=;
+        b=YPya2ILNy/cxodNZTM1YQZxoTTTYGVXfuF6M79v0I23WpKO64NHSw76AIa+Ne43Cu0
+         xRP+IJkOZpyeoDiN4Au9S4swzENnrBSCRgMU5mauUjRI4S/gyJC9b6o8obFD99ddYcqN
+         6KqMrYEtsvvk9T2mbE7/7c69wn31ZFFZs8iTawZWxCzSvXSSZmaUeVY5tvUuhZ0NarJf
+         y0+b5yMUDP8o9ogOFxqmsxgTlserOcFaAzyNLqQ7J5olS/A8/0cuXnEFxVgKnpJKPjDL
+         oOCSBTM5QJp0e+qwyRx8PzPQNwQ3lum66VPnw09jm1eYFqmvsYvoffxQo79c9Ca6XpNv
+         8uvA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-received:x-beenthere:x-received:date:from:to:message-id
+         :in-reply-to:references:subject:mime-version:x-original-sender
+         :reply-to:precedence:mailing-list:list-id:x-google-group-id
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe:content-type;
+        bh=bb6SKprEanoCNSD4UuYUNL5jAM8KR0Ytbp9XiXydETQ=;
+        b=St+k70JmGoaWDrmrF/ilxpAQNUIJqdRIDLHuIsocFlPjzgjEYuVqZvgMUWELy2Wkv/
+         5hQrSZXQLU+p8gcfzmj4tPHzDb6xDTfTt4zA34+Ni8iRYSFxNVn/mSHdzTk6xlu+4y5F
+         3aamuuX8tQZ9eXZzUGb07rbzDidkVA6RJ0vPNIIaI87RJna9mkmK4N/CdAY1JREyHwnO
+         Gs3NdfaVoOxhAIQxj5LXUWwTLueF8yUN7rI9TEbaPZ7dIaVobYgRP3WpvCQM9+tXQ+PL
+         A0pfnPeegCird8COA7bKGtq1LHDHEyURZvQA2FOiu6WamId8NaO31sL0mIYnMRSZguSm
+         7djQ==
+X-Received: by 10.49.109.200 with SMTP id hu8mr1773683qeb.31.1368366240902;
+        Sun, 12 May 2013 06:44:00 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.107.105 with SMTP id hb9ls81043qeb.5.gmail; Sun, 12 May
+ 2013 06:44:00 -0700 (PDT)
+X-Received: by 10.49.40.168 with SMTP id y8mr1830775qek.9.1368366240656;
+        Sun, 12 May 2013 06:44:00 -0700 (PDT)
+Date: Sun, 12 May 2013 06:44:00 -0700 (PDT)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Message-Id: <3e32618b-bf86-4b07-8c23-22696ba6d8f1@googlegroups.com>
+In-Reply-To: <2f2003e1-d60c-4bf3-85c7-2c52b7adbdc0@googlegroups.com>
+References: <2f2003e1-d60c-4bf3-85c7-2c52b7adbdc0@googlegroups.com>
+Subject: [tosdr:2096] Re: Binding arbitration and class action waiver
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_285_19823624.1368366240437"
+
+------=_Part_285_19823624.1368366240437
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This is a [bad] topic.
+
+On Sunday, May 12, 2013 10:43:50 AM UTC-3, Robin Monks wrote:
+>
+> ARBITRATION AND CLASS ACTION WAIVER IF YOU LIVE IN THE UNITED STATES. Thi=
+s=20
+>> Section 26.1 applies to any dispute EXCEPT THAT IT DOES NOT INCLUDE A=20
+>> DISPUTE RELATING TO THE ENFORCEMENT OR VALIDITY OF YOUR, MICROSOFT=92S, =
+OR=20
+>> EITHER OF OUR LICENSOR=92S INTELLECTUAL PROPERTY RIGHTS. =93Dispute=94 m=
+eans=20
+>> any dispute, action, or other controversy between you and Microsoft=20
+>> concerning the Microsoft Store, the Services, this Contract, or any prod=
+uct=20
+>> or service offered, whether in contract, warranty, tort, statute,=20
+>> regulation, ordinance, or any other legal or equitable basis. "Dispute"=
+=20
+>> will be given the broadest possible meaning allowable under law.
+>>
+>>    1. Notice of Dispute. In the event of a dispute, you or Microsoft=20
+>>    must give the other a Notice of Dispute, which is a written statement=
+ that=20
+>>    sets forth the name, address and contact information of the party giv=
+ing=20
+>>    it, the facts giving rise to the dispute, and the relief requested. Y=
+ou=20
+>>    must send any Notice of Dispute by U.S. Mail to Microsoft=20
+>>    Corporation, ATTN: LCA ARBITRATION, One Microsoft Way, Redmond, WA=20
+>>    98052-6399. A form is available at=20
+>>    go.microsoft.com/fwlink/?linkid=3D245499. Microsoft will send any=20
+>>    Notice of Dispute to you by U.S. Mail to your address if we have it, =
+or=20
+>>    otherwise to your e-mail address. You and Microsoft will attempt to r=
+esolve=20
+>>    any dispute through informal negotiation within 60 days from the date=
+ the=20
+>>    Notice of Dispute is sent. After 60 days, you or Microsoft may commen=
+ce=20
+>>    arbitration.=20
+>>    2. Small Claims Court. You may also litigate any dispute in small=20
+>>    claims court in your county of residence or King County, Washington, =
+if the=20
+>>    dispute meets all requirements to be heard in the small claims court.=
+ You=20
+>>    may litigate in small claims court whether or not you negotiated info=
+rmally=20
+>>    first.=20
+>>    3. Binding Arbitration. IF YOU AND MICROSOFT DO NOT RESOLVE ANY=20
+>>    DISPUTE BY INFORMAL NEGOTIATION OR IN SMALL CLAIMS COURT, ANY OTHER E=
+FFORT=20
+>>    TO RESOLVE THE DISPUTE WILL BE CONDUCTED EXCLUSIVELY BY BINDING=20
+>>    ARBITRATION. You are giving up the right to litigate (or participate =
+in as=20
+>>    a party or class member) all disputes in court before a judge or jury=
+.=20
+>>    Instead, all disputes will be resolved before a neutral arbitrator, w=
+hose=20
+>>    decision will be final except for a limited right of appeal under the=
+=20
+>>    Federal Arbitration Act. Any court with jurisdiction over the parties=
+ may=20
+>>    enforce the arbitrator=92s award.=20
+>>    4. Class Action Waiver. ANY PROCEEDINGS TO RESOLVE OR LITIGATE ANY=20
+>>    DISPUTE IN ANY FORUM WILL BE CONDUCTED SOLELY ON AN INDIVIDUAL BASIS.=
+=20
+>>    NEITHER YOU NOR MICROSOFT WILL SEEK TO HAVE ANY DISPUTE HEARD AS A CL=
+ASS=20
+>>    ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR IN ANY OTHER PROCEEDING I=
+N=20
+>>    WHICH EITHER PARTY ACTS OR PROPOSES TO ACT IN A REPRESENTATIVE CAPACI=
+TY. NO=20
+>>    ARBITRATION OR PROCEEDING WILL BE COMBINED WITH ANOTHER WITHOUT THE P=
+RIOR=20
+>>    WRITTEN CONSENT OF ALL PARTIES TO ALL AFFECTED ARBITRATIONS OR PROCEE=
+DINGS.=20
+>>    5. Arbitration Procedure, Costs and Fees. Any arbitration will be=20
+>>    conducted by the American Arbitration Association (the =93AAA=94) und=
+er its=20
+>>    Commercial Arbitration Rules and in many cases its Supplementary Proc=
+edures=20
+>>    for Consumer-Related Disputes. For more information, see www.adr.orgo=
+r call 1-800-778-7879. In a dispute involving $75,000 or less, Microsoft=20
+>>    will promptly reimburse your filing fees and pay the AAA=92s and arbi=
+trator=92s=20
+>>    fees. You and Microsoft agree to the terms governing procedures, fees=
+, and=20
+>>    incentives at http://go.microsoft.com/fwlink/?LinkId=3D279535. To=20
+>>    commence arbitration, submit the form available at=20
+>>    go.microsoft.com/fwlink/?linkid=3D245497 to the AAA. You agree to=20
+>>    commence arbitration only in your county of residence or in King Coun=
+ty,=20
+>>    Washington. Microsoft agrees to commence arbitration only in your cou=
+nty of=20
+>>    residence.=20
+>>    6. Claims or Disputes Must Be Filed Within One Year. To the extent=20
+>>    permitted by law, any claim or dispute relating to the Microsoft Stor=
+e, the=20
+>>    Services, this Contract, or any product or service offered must be fi=
+led=20
+>>    within one year in small claims court (Section 26.1.2), an arbitratio=
+n=20
+>>    proceeding (Section 26.1.3), or in court, if Section 26.1 permits the=
+=20
+>>    dispute to be filed in court instead of arbitration. The one-year per=
+iod=20
+>>    begins when the claim or Notice of Dispute first could be filed. If a=
+ claim=20
+>>    or dispute is not filed within one year, it is permanently barred.=20
+>>    7. Rejecting Future Arbitration Changes. You may reject any change=20
+>>    Microsoft makes to Section 26.1 (other than address changes) by sendi=
+ng us=20
+>>    notice within 30 days of the change by U.S. Mail to the address in Se=
+ction=20
+>>    26.1.1. If you do, the most recent version of Section 26.1 before the=
+=20
+>>    change you rejected will apply.=20
+>>    8. Severability. If the class action waiver in Section 26.1.4 is=20
+>>    found to be illegal or unenforceable as to all or some parts of a dis=
+pute,=20
+>>    then Section 26.1 will not apply to those parts. Instead, those parts=
+ will=20
+>>    be severed and proceed in a court of law, with the remaining parts=20
+>>    proceeding in arbitration. If any other provision of Section 26.1 is =
+found=20
+>>    to be illegal or unenforceable, that provision will be severed with t=
+he=20
+>>    remainder of Section 26.1 remaining in full force and effect.=20
+>>
+>> =20
+>>
+>> From <
+>> http://www.microsoftstore.com/store/msca/en_CA/DisplayTermsOfUseAndSaleP=
+age/ThemeID.27659600/
+>> >=20
+>>
+>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_285_19823624.1368366240437
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+This is a [bad] topic.<br><br>On Sunday, May 12, 2013 10:43:50 AM UTC-3, Ro=
+bin Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margin=
+-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><blockquote cl=
+ass=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px=
+;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1e=
+x"><p style=3D"margin:0in;margin-left:.375in"><span style=3D"font-weight:bo=
+ld;font-family:'Segoe UI';font-size:9pt;color:black;background-repeat:initi=
+al initial" lang=3D"en-US">ARBITRATION AND CLASS ACTION WAIVER IF YOU LIVE =
+IN THE UNITED
+STATES. This Section 26.1 applies to any dispute EXCEPT THAT IT DOES NOT
+INCLUDE A DISPUTE RELATING TO THE ENFORCEMENT OR VALIDITY OF YOUR, MICROSOF=
+T=92S,
+OR EITHER OF OUR LICENSOR=92S INTELLECTUAL PROPERTY RIGHTS.</span><span sty=
+le=3D"font-family:Calibri;font-size:11.0pt" lang=3D"en-CA">&nbsp;=93Dispute=
+=94 means
+any dispute, action, or other controversy between you and Microsoft concern=
+ing
+the Microsoft Store, the Services, this Contract, or any product or service
+offered, whether in contract, warranty, tort, statute, regulation, ordinanc=
+e,
+or any other legal or equitable basis. "Dispute" will be given the
+broadest possible meaning allowable under law.</span></p>
+
+<ol type=3D"1" style=3D"margin-left:0.375in;direction:ltr;margin-top:0in;ma=
+rgin-bottom:0in;font-family:'Segoe UI';font-size:9pt;font-weight:bold">
+ <li value=3D"1" style=3D"margin-top:0px;margin-bottom:0px;vertical-align:m=
+iddle;line-height:12pt;color:black"><span style=3D"font-size:9pt;background=
+-repeat:initial initial" lang=3D"en-US">Notice of Dispute.</span><span styl=
+e=3D"font-weight:normal;font-size:9pt;background-repeat:initial initial" la=
+ng=3D"en-CA">&nbsp;</span><span style=3D"font-weight:normal;font-size:9pt;b=
+ackground-repeat:initial initial" lang=3D"en-US">In the
+     event of a dispute, you or Microsoft must give the other a Notice of
+     Dispute, which is a written statement that sets forth the name, addres=
+s
+     and contact information of the party giving it, the facts giving rise =
+to
+     the dispute, and the relief requested. You must send any Notice of Dis=
+pute
+     by U.S. Mail to</span><span style=3D"font-weight:normal;font-size:9pt;=
+background-repeat:initial initial" lang=3D"en-CA">&nbsp;</span><span style=
+=3D"font-size:9pt;background-repeat:initial initial" lang=3D"en-CA">Microso=
+ft Corporation, ATTN: LCA ARBITRATION,
+     One Microsoft Way, Redmond, WA 98052-6399.</span><span style=3D"font-w=
+eight:normal;font-size:9pt;background-repeat:initial initial" lang=3D"en-CA=
+">&nbsp;</span><span style=3D"font-weight:normal;font-size:9pt;background-r=
+epeat:initial initial" lang=3D"en-US">A form is available at</span><span st=
+yle=3D"font-weight:normal;font-size:9pt;background-repeat:initial initial" =
+lang=3D"en-CA">&nbsp;</span><a href=3D"http://go.microsoft.com/fwlink/?link=
+id=3D245499" target=3D"_blank"><span style=3D"font-size:9pt;background-repe=
+at:initial initial" lang=3D"en-CA">go.microsoft.com/fwlink/?<wbr>linkid=3D2=
+45499</span></a><span style=3D"font-weight:normal;font-size:9pt;background-=
+repeat:initial initial" lang=3D"en-US">. Microsoft will send any
+     Notice of Dispute to you by U.S. Mail to your address if we have it, o=
+r
+     otherwise to your e-mail address. You and Microsoft will attempt to
+     resolve any dispute through informal negotiation within 60 days from t=
+he
+     date the Notice of Dispute is sent. After 60 days, you or Microsoft ma=
+y
+     commence arbitration.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial" lang=3D"en-US">Small
+     Claims Court.</span><span style=3D"font-weight:normal;font-size:9pt;ba=
+ckground-repeat:initial initial" lang=3D"en-CA">&nbsp;</span><span style=3D=
+"font-weight:normal;font-size:9pt;background-repeat:initial initial" lang=
+=3D"en-US">You may also litigate any dispute in small
+     claims court in your county of residence or King County, Washington, i=
+f
+     the dispute meets all requirements to be heard in the small claims cou=
+rt.
+     You may litigate in small claims court whether or not you negotiated
+     informally first.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial">Binding
+     Arbitration. IF YOU AND MICROSOFT DO NOT RESOLVE ANY DISPUTE BY INFORM=
+AL
+     NEGOTIATION OR IN SMALL CLAIMS COURT, ANY OTHER EFFORT TO RESOLVE THE
+     DISPUTE WILL BE CONDUCTED EXCLUSIVELY BY BINDING ARBITRATION. You are
+     giving up the right to litigate (or participate in as a party or class
+     member) all disputes in court before a judge or jury. Instead, all
+     disputes will be resolved before a neutral arbitrator, whose decision =
+will
+     be final except for a limited right of appeal under the Federal Arbitr=
+ation
+     Act. Any court with jurisdiction over the parties may enforce the
+     arbitrator=92s award.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial">Class Action
+     Waiver. ANY PROCEEDINGS TO RESOLVE OR LITIGATE ANY DISPUTE IN ANY FORU=
+M
+     WILL BE CONDUCTED SOLELY ON AN INDIVIDUAL BASIS. NEITHER YOU NOR MICRO=
+SOFT
+     WILL SEEK TO HAVE ANY DISPUTE HEARD AS A CLASS ACTION, PRIVATE ATTORNE=
+Y
+     GENERAL ACTION, OR IN ANY OTHER PROCEEDING IN WHICH EITHER PARTY ACTS =
+OR
+     PROPOSES TO ACT IN A REPRESENTATIVE CAPACITY. NO ARBITRATION OR PROCEE=
+DING
+     WILL BE COMBINED WITH ANOTHER WITHOUT THE PRIOR WRITTEN CONSENT OF ALL
+     PARTIES TO ALL AFFECTED ARBITRATIONS OR PROCEEDINGS.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial" lang=3D"en-US">Arbitration Procedure, Costs and Fees.</span><s=
+pan style=3D"font-weight:normal;font-size:9pt;background-repeat:initial ini=
+tial" lang=3D"en-CA">&nbsp;</span><span style=3D"font-weight:normal;font-si=
+ze:9pt;background-repeat:initial initial" lang=3D"en-US">Any arbitration wi=
+ll be conducted
+     by the American Arbitration Association (the =93AAA=94) under its Comm=
+ercial
+     Arbitration Rules and in many cases its Supplementary Procedures for
+     Consumer-Related Disputes. For more information, see </span><a href=3D=
+"http://www.adr.org" target=3D"_blank"><span style=3D"font-size:9pt;color:b=
+lack;background-repeat:initial initial" lang=3D"en-US">www.adr.org</span></=
+a><span style=3D"font-weight:normal;font-size:9pt;background-repeat:initial=
+ initial" lang=3D"en-US"> or call 1-800-778-7879. In a
+     dispute involving $75,000 or less, Microsoft will promptly reimburse y=
+our
+     filing fees and pay the AAA=92s and arbitrator=92s fees. You and Micro=
+soft
+     agree to the terms governing procedures, fees, and incentives at</span=
+><span style=3D"font-weight:normal;font-size:9pt;background-repeat:initial =
+initial" lang=3D"en-CA">&nbsp;</span><a href=3D"http://go.microsoft.com/fwl=
+ink/?LinkId=3D279535" target=3D"_blank"><span style=3D"font-size:9pt;backgr=
+ound-repeat:initial initial" lang=3D"en-CA">http://go.microsoft.com/<wbr>fw=
+link/?LinkId=3D279535</span></a><span style=3D"font-weight:normal;font-size=
+:9pt;background-repeat:initial initial" lang=3D"en-US">. To commence arbitr=
+ation, submit
+     the form available at</span><span style=3D"font-weight:normal;font-siz=
+e:9pt;background-repeat:initial initial" lang=3D"en-CA">&nbsp;</span><a hre=
+f=3D"http://go.microsoft.com/fwlink/?linkid=3D245497" target=3D"_blank"><sp=
+an style=3D"font-size:9pt;background-repeat:initial initial" lang=3D"en-CA"=
+>go.microsoft.com/fwlink/?<wbr>linkid=3D245497</span></a><span style=3D"fon=
+t-weight:normal;font-size:9pt;background-repeat:initial initial" lang=3D"en=
+-CA">&nbsp;</span><span style=3D"font-weight:normal;font-size:9pt;backgroun=
+d-repeat:initial initial" lang=3D"en-US">to the AAA. You agree to commence
+     arbitration only in your county of residence or in King County,
+     Washington. Microsoft agrees to commence arbitration only in your coun=
+ty
+     of residence.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial" lang=3D"en-US">Claims
+     or Disputes Must Be Filed Within One Year.</span><span style=3D"font-w=
+eight:normal;font-size:9pt;background-repeat:initial initial" lang=3D"en-CA=
+">&nbsp;</span><span style=3D"font-weight:normal;font-size:9pt;background-r=
+epeat:initial initial" lang=3D"en-US">To the extent permitted by
+     law, any claim or dispute relating to the Microsoft Store, the Service=
+s,
+     this Contract, or any product or service offered must be filed within =
+one
+     year in small claims court (Section 26.1.2), an arbitration proceeding
+     (Section 26.1.3), or in court, if Section 26.1 permits the dispute to =
+be
+     filed in court instead of arbitration. The one-year period begins when=
+ the
+     claim or Notice of Dispute first could be filed. If a claim or dispute=
+ is
+     not filed within one year, it is permanently barred.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial" lang=3D"en-US">Rejecting
+     Future Arbitration Changes.</span><span style=3D"font-weight:normal;fo=
+nt-size:9pt;background-repeat:initial initial" lang=3D"en-CA">&nbsp;</span>=
+<span style=3D"font-weight:normal;font-size:9pt;background-repeat:initial i=
+nitial" lang=3D"en-US">You may reject any change Microsoft makes to
+     Section 26.1 (other than address changes) by sending us notice within =
+30
+     days of the change by U.S. Mail to the address in Section 26.1.1. If y=
+ou
+     do, the most recent version of Section 26.1 before the change you reje=
+cted
+     will apply.</span></li>
+ <li style=3D"margin-top:0px;margin-bottom:0px;vertical-align:middle;line-h=
+eight:12pt;color:black"><span style=3D"font-size:9pt;background-repeat:init=
+ial initial" lang=3D"en-US">Severability.</span><span style=3D"font-weight:=
+normal;font-size:9pt;background-repeat:initial initial" lang=3D"en-CA">&nbs=
+p;</span><span style=3D"font-weight:normal;font-size:9pt;background-repeat:=
+initial initial" lang=3D"en-US">If the
+     class action waiver in Section 26.1.4 is found to be illegal or
+     unenforceable as to all or some parts of a dispute, then Section 26.1 =
+will
+     not apply to those parts. Instead, those parts will be severed and pro=
+ceed
+     in a court of law, with the remaining parts proceeding in arbitration.=
+ If
+     any other provision of Section 26.1 is found to be illegal or
+     unenforceable, that provision will be severed with the remainder of
+     Section 26.1 remaining in full force and effect.</span></li>
+</ol>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.=
+0pt" lang=3D"en-CA">&nbsp;</p>
+
+<p style=3D"margin:0in;margin-left:.375in;font-family:Calibri;font-size:9.0=
+pt;color:#595959">From &lt;<a href=3D"http://www.microsoftstore.com/store/m=
+sca/en_CA/DisplayTermsOfUseAndSalePage/ThemeID.27659600/" target=3D"_blank"=
+>http://www.microsoftstore.<wbr>com/store/msca/en_CA/<wbr>DisplayTermsOfUse=
+AndSalePage/<wbr>ThemeID.27659600/</a>&gt;&nbsp;</p></blockquote></blockquo=
+te>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_285_19823624.1368366240437--

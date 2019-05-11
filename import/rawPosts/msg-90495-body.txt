@@ -1,0 +1,206 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp118440qek;
+        Sat, 1 Sep 2012 08:32:16 -0700 (PDT)
+Received: by 10.52.68.110 with SMTP id v14mr6426880vdt.14.1346513535910;
+        Sat, 01 Sep 2012 08:32:15 -0700 (PDT)
+Return-Path: <tosdr+bncCLyXpMz1HBD61IiCBRoE0dn9Bg@googlegroups.com>
+Received: from mail-vc0-f192.google.com (mail-vc0-f192.google.com [209.85.220.192])
+        by mx.google.com with ESMTPS id de5si5086729vdc.100.2012.09.01.08.32.10
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 01 Sep 2012 08:32:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLyXpMz1HBD61IiCBRoE0dn9Bg@googlegroups.com designates 209.85.220.192 as permitted sender) client-ip=209.85.220.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLyXpMz1HBD61IiCBRoE0dn9Bg@googlegroups.com designates 209.85.220.192 as permitted sender) smtp.mail=tosdr+bncCLyXpMz1HBD61IiCBRoE0dn9Bg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vcbgb30 with SMTP id gb30sf3177653vcb.29
+        for <multiple recipients>; Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=cZj0XwUJ11I/7GRXTbVb1XXussaYC3VEeoMTq50wCl4=;
+        b=bg4VR/xw/uFpc2LOYPogMVYZfZ9wygbOzjQ1114WQZjWA1wDAvebY0JxDHduFTz+zO
+         0K7iBsf3UWL2U5pdBG7/mRxv0l5yfMjepa5HSWOniRVJDVg5NMhpF+ltbdyA9+XUCQlp
+         cV4bpdsrZf4tn2XrnvIMrtPKKtq1NvSO4Fkza9yhoiWHdlqYKbaqoxhCCnpqzVij/lKv
+         e43UFC5VQvnjmJ3b6m32E1Z6G79xNypzZLpQOFhOUdngF4fwX8pxog85a40dGLa0wXQ/
+         j8gh6RIMp+pwpHn64bDD0JVs5ewL2ySLCt3DSPIwaq0JHUoWyvA7+DCGokgRwx34yvtb
+         a2wA==
+Received: by 10.52.75.36 with SMTP id z4mr1839316vdv.14.1346513530714;
+        Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.220.154.17 with SMTP id m17ls3733940vcw.1.gmail; Sat, 01 Sep
+ 2012 08:32:10 -0700 (PDT)
+Received: by 10.58.33.234 with SMTP id u10mr3271779vei.28.1346513530126;
+        Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+Received: by 10.58.33.234 with SMTP id u10mr3271778vei.28.1346513530113;
+        Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+Received: from mail-vb0-f53.google.com (mail-vb0-f53.google.com [209.85.212.53])
+        by gmr-mx.google.com with ESMTPS id cf2si709233vdb.0.2012.09.01.08.32.10
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tobi.lehman@gmail.com designates 209.85.212.53 as permitted sender) client-ip=209.85.212.53;
+Received: by vbbfc26 with SMTP id fc26so4218188vbb.40
+        for <tosdr@googlegroups.com>; Sat, 01 Sep 2012 08:32:10 -0700 (PDT)
+Received: by 10.58.94.44 with SMTP id cz12mr8430407veb.34.1346513529960; Sat,
+ 01 Sep 2012 08:32:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.58.240.82 with HTTP; Sat, 1 Sep 2012 08:31:49 -0700 (PDT)
+In-Reply-To: <CA+aD3u12qbnJZBJrpTu+GSQLhoUMd1pR-Sbvy1vOXNM-j0cBPw@mail.gmail.com>
+References: <09bb5d65-6bb9-4c59-8771-7b091e77cdcf@googlegroups.com>
+ <CA+aD3u0iB1ad4P4Ru=20Y-U81Qw-mHoCMrmSCryUebsQo1ZZbg@mail.gmail.com>
+ <e1fde682-d100-4453-9412-ea565fb6d120@googlegroups.com> <CA+aD3u12qbnJZBJrpTu+GSQLhoUMd1pR-Sbvy1vOXNM-j0cBPw@mail.gmail.com>
+From: Tobi Lehman <tobi.lehman@gmail.com>
+Date: Sat, 1 Sep 2012 08:31:49 -0700
+Message-ID: <CAFvYCvcvaC9zJ9Amr5Y3UFyjBEoFD5OsVN4k0EX-vvwnU4oUsQ@mail.gmail.com>
+Subject: Re: [tosdr:757] [Neutral] Mint.com may use your financial information
+ to advertise to you
+To: tosdr@googlegroups.com
+X-Original-Sender: tobi.lehman@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of tobi.lehman@gmail.com designates 209.85.212.53 as permitted sender)
+ smtp.mail=tobi.lehman@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=047d7b6dcaf0a37a6904c8a59c79
+
+--047d7b6dcaf0a37a6904c8a59c79
+Content-Type: text/plain; charset=ISO-8859-1
+
+I see, thank you for clarfiying.
+
+On Fri, Aug 31, 2012 at 11:20 PM, Michiel de Jong <michiel@unhosted.org>wrote:
+
+> On Fri, Aug 31, 2012 at 10:43 PM, Tobi Lehman <tobi.lehman@gmail.com>
+> wrote:
+> >> > and allow the service to be free of charge.
+> >>
+> >> that's not the point though, that's a separate consideration. if i
+> >> choose between a class A service that costs money and a class C
+> >> service that's free, then i might still choose the class C service, to
+> >> save money. But that doesn't suddenly make it a class A service. just
+> >> a cheap class C service.
+> >
+> > I'm not sure I get your argument. Are you referring to the ToS;DR grading
+> > system?
+>
+> Yes. Pricing, usability, performance, features etc. should not
+> influence the ToS;DR rating. They are separate considerations when
+> choosing a service to use. The ToS;DR rating of a service can be one
+> more consideration, but it cannot overlap with the other
+> considerations a consumer takes into account when shopping around for
+> a service.
+>
+> --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=en.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--047d7b6dcaf0a37a6904c8a59c79
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I see, thank you for clarfiying.<br><br><div class=3D"gmail_quote">On Fri, =
+Aug 31, 2012 at 11:20 PM, Michiel de Jong <span dir=3D"ltr">&lt;<a href=3D"=
+mailto:michiel@unhosted.org" target=3D"_blank">michiel@unhosted.org</a>&gt;=
+</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div class=3D"im">On Fri, Aug 31, 2012 at 10=
+:43 PM, Tobi Lehman &lt;<a href=3D"mailto:tobi.lehman@gmail.com">tobi.lehma=
+n@gmail.com</a>&gt; wrote:<br>
+
+
+&gt;&gt; &gt; and allow the service to be free of charge.<br>
+&gt;&gt;<br>
+&gt;&gt; that&#39;s not the point though, that&#39;s a separate considerati=
+on. if i<br>
+&gt;&gt; choose between a class A service that costs money and a class C<br=
+>
+&gt;&gt; service that&#39;s free, then i might still choose the class C ser=
+vice, to<br>
+&gt;&gt; save money. But that doesn&#39;t suddenly make it a class A servic=
+e. just<br>
+&gt;&gt; a cheap class C service.<br>
+&gt;<br>
+&gt; I&#39;m not sure I get your argument. Are you referring to the ToS;DR =
+grading<br>
+&gt; system?<br>
+<br>
+</div>Yes. Pricing, usability, performance, features etc. should not<br>
+influence the ToS;DR rating. They are separate considerations when<br>
+choosing a service to use. The ToS;DR rating of a service can be one<br>
+more consideration, but it cannot overlap with the other<br>
+considerations a consumer takes into account when shopping around for<br>
+a service.<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+--<br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=3D"_=
+blank">www.github.com/Unhosted/ToS-DR</a><br>
+
+
+---<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+<br>
+<br>
+</div></div></blockquote></div><br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--047d7b6dcaf0a37a6904c8a59c79--

@@ -1,0 +1,114 @@
+Return-Path: <tosdr+bncBC7OJ5M2QMPBB7PJXSSAKGQEAQMLQVA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id E9EC740F85
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 20:22:42 +0100 (CET)
+Received: from mfilter34-d.gandi.net (mfilter34-d.gandi.net [217.70.178.165])
+	by spool.mail.gandi.net (Postfix) with ESMTP id E7D20226063
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 20:22:42 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter34-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter34-d.gandi.net (mfilter34-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id VxxCiegmL1hJ for <anything@michielbdejong.com>;
+	Mon, 15 Dec 2014 20:22:41 +0100 (CET)
+Received: from mail-qc0-x240.google.com (mail-qc0-x240.google.com [IPv6:2607:f8b0:400d:c01::240])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 6739222606F
+	for <anything@michielbdejong.com>; Mon, 15 Dec 2014 20:22:38 +0100 (CET)
+Received: by mail-qc0-f192.google.com with SMTP id i17sf1738889qcy.29
+        for <anything@michielbdejong.com>; Mon, 15 Dec 2014 11:22:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=D10nZLBYEDKtjqiCe4AsG2OzSf/UAADzrgHPVTmd2Pc=;
+        b=Xm1vNnxfWW/DOP56zVJnnvrR1BXLf464lCgyn52nMozSRK6JdupgNcW64cKGDGt6H2
+         SAWjagFrKfDSvYkw4/EEhSiikmayOafjEOY2j6OKkpCgMmHEvj+Bwb/7xbDXlkwZnpkf
+         6up5pCfvDVlQ3PqtZhos0NsPnEE2K/eRqJnWNhO80E8JN0dKcqE9pAlQoiN7b06JCHRC
+         evRmGtT09bhUUZx2Q4Zdutm78MV1nR6wyl6i+Z/IvC2Y3nP/AjcF3PvgYJhg6rYGwn9/
+         aJW25j0EPjR7sA4/A6HsM8G2z1eM8pRnka40qnFf66+i0++hEnClKDXk7LyAWZGA+YsQ
+         h2hg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=D10nZLBYEDKtjqiCe4AsG2OzSf/UAADzrgHPVTmd2Pc=;
+        b=C0VqwHkG6o3vZhKZC3Rk6nIsRBhG062sQ7mqmOOPZZmTNHJhz4/rPE+BLaNdGePKbL
+         wkY28ReTEbbEKmA+1UK64k0MJLepfi6IICMsx7qX4uDFy8PWWEc6YMTT2szO1HMTZEy5
+         3YYqmRPH4Xla2HzZL4W4/JplZ1XHrBQ+lhoWF1InkZy4OL8cAQWWKtzhu4MMx3egKgK9
+         kiCB9YivsfnrggM7GwZl+neh7LuVLwjq1/c6UisobkALwZZTThvgZs8F/ZFxMbJmEt0I
+         4yqszv1UIR02es53dvnOmtgxMR5F/ZkB6Oc6kv3a1vv1C7yHkzf/JOdM87ZLkbUK20aF
+         cRqQ==
+X-Received: by 10.50.79.197 with SMTP id l5mr314048igx.17.1418671357576;
+        Mon, 15 Dec 2014 11:22:37 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.67.70 with SMTP id l6ls1285igt.17.canary; Mon, 15 Dec 2014
+ 11:22:37 -0800 (PST)
+X-Received: by 10.50.79.197 with SMTP id l5mr314047igx.17.1418671357353;
+        Mon, 15 Dec 2014 11:22:37 -0800 (PST)
+Date: Mon, 15 Dec 2014 11:22:36 -0800 (PST)
+From: wourghk@gmail.com
+To: tosdr@googlegroups.com
+Cc: zackperham@gmail.com
+Message-Id: <d35dde1e-403a-4838-9a55-56f520e6dce3@googlegroups.com>
+In-Reply-To: <67713320-8880-4984-a914-ae896e51761b@googlegroups.com>
+References: <77e79b83-92d7-4263-abd2-d6cd9c469376@googlegroups.com>
+ <67713320-8880-4984-a914-ae896e51761b@googlegroups.com>
+Subject: [tosdr:3357] Re: Steam Subscriber Agreement & Privacy Policy
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_148_1528266692.1418671356382"
+X-Original-Sender: wourghk@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_148_1528266692.1418671356382
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Sunday, December 14, 2014 10:59:18 AM UTC-7, zackp...@gmail.com wrote:
+> The conditions themselves are fairly restrictive but in practice Valve se=
+ems to be willing to bend them themselves. For instance the "No refunds" cl=
+ause, in general they follow this, but they have been willing to review ins=
+tances even on a case-by-case basis.
+>=20
+> I know the terms themselves are the purpose of this site and that Valve's=
+ own willingness to waive their claimed rights in different cases does not =
+change the fact that it is claimed. It probably shouldn't itself have a pos=
+itive effect on the rating but I wonder if documented instances of it shoul=
+dn't be mentioned in some capacity.
+
+Those experiences are exceptions to their rules. It would be disingenuous t=
+o include documented instances of altruism by the company, both to the comp=
+any and to consumers reading about it, as it spreads the dangerous belief t=
+hat consumers should expect that behavior from them.
+
+The TOS stated are the rules the company follows in all typical operating c=
+onditions. The odd occasions that some internal entities bend them, for wha=
+tever reason, should have nothing to do with TOSDR.
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_148_1528266692.1418671356382--

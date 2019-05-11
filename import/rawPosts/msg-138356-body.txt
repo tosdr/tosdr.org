@@ -1,0 +1,229 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.68 with SMTP id j65csp135135ioj;
+        Wed, 25 Nov 2015 14:48:34 -0800 (PST)
+X-Received: by 10.194.142.203 with SMTP id ry11mr35366810wjb.132.1448491714642;
+        Wed, 25 Nov 2015 14:48:34 -0800 (PST)
+Return-Path: <tosdr+bncBAABBO7V3CZAKGQELCY3SZI@googlegroups.com>
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [217.70.183.195])
+        by mx.google.com with ESMTPS id n3si8680772wmb.94.2015.11.25.14.48.34
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Nov 2015 14:48:34 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBAABBO7V3CZAKGQELCY3SZI@googlegroups.com does not designate 217.70.183.195 as permitted sender) client-ip=217.70.183.195;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBAABBO7V3CZAKGQELCY3SZI@googlegroups.com does not designate 217.70.183.195 as permitted sender) smtp.mailfrom=tosdr+bncBAABBO7V3CZAKGQELCY3SZI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com
+Received: from spool.mail.gandi.net (unknown [10.0.21.134])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id 52B60A80CE
+	for <michiel@unhosted.org>; Wed, 25 Nov 2015 23:48:34 +0100 (CET)
+Received: from mfilter36-d.gandi.net (mfilter36-d.gandi.net [217.70.178.167])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 44308116438
+	for <michiel@unhosted.org>; Wed, 25 Nov 2015 23:48:34 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter36-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter36-d.gandi.net (mfilter36-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id qaZcVTJvNEYB for <michiel@unhosted.org>;
+	Wed, 25 Nov 2015 23:48:30 +0100 (CET)
+Received: from mail-wm0-x237.google.com (mail-wm0-x237.google.com [IPv6:2a00:1450:400c:c09::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id BADCA11641B
+	for <michiel@michielbdejong.com>; Wed, 25 Nov 2015 23:48:27 +0100 (CET)
+Received: by wmec201 with SMTP id c201sf263704wme.1
+        for <michiel@michielbdejong.com>; Wed, 25 Nov 2015 14:48:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=from:to:subject:message-id:date:user-agent:mime-version
+         :content-type:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:x-spam-checked-in-group
+         :list-post:list-help:list-archive:sender:list-subscribe
+         :list-unsubscribe;
+        bh=xlnXSI4jHsFhIAwlmOHfactpcguxLtbQiVDTwj4ld6s=;
+        b=BwvkQkQbsOU/OtfEDZC3GfpQB+ThWIUY2MLqng0/mkvwM3oWAJsalRj12waOn2IKKf
+         T3EVgiY0gjaYnhqQ8BH8YHevJYL4GJRKeJPaKYxekPsmhml0l48ZDkoc3IfdYLXr+0v7
+         k+EHixkXmNOavf1fyl7xQzTSOa9VOwA+IQw9EuUXgVsQbxNrI5IBLVMEC2GWQGgw5VWM
+         ajeZOl2bKKkDYb3mogCXhVh7aus6nFbB4Mn11wG3NwEvkiPfhzoM93mFWaS+E0hjTOtd
+         PzGV3EUKF/v5znkTMjFnJ9kSTCBRLL2E3EpepXqhcbbGqQLIsMRM3w+rX7M/26k3rySi
+         qWOw==
+X-Received: by 10.25.152.66 with SMTP id a63mr552018lfe.8.1448491707586;
+        Wed, 25 Nov 2015 14:48:27 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.25.16.153 with SMTP id 25ls5168lfq.12.gmail; Wed, 25 Nov 2015
+ 14:48:26 -0800 (PST)
+X-Received: by 10.25.20.149 with SMTP id 21mr7716730lfu.4.1448491706689;
+        Wed, 25 Nov 2015 14:48:26 -0800 (PST)
+Received: from mout01.posteo.de (mout01.posteo.de. [185.67.36.65])
+        by gmr-mx.google.com with ESMTPS id k189si240927wmg.2.2015.11.25.14.48.26
+        for <tosdr@googlegroups.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Nov 2015 14:48:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of chr.ax@posteo.de designates 185.67.36.65 as permitted sender) client-ip=185.67.36.65;
+Received: from dovecot03.posteo.de (dovecot03.posteo.de [172.16.0.13])
+	by mout01.posteo.de (Postfix) with ESMTPS id 47A7020A27
+	for <tosdr@googlegroups.com>; Wed, 25 Nov 2015 23:48:26 +0100 (CET)
+Received: from mail.posteo.de (localhost [127.0.0.1])
+	by dovecot03.posteo.de (Postfix) with ESMTPSA id 3p5cnj5tt2z5vML
+	for <tosdr@googlegroups.com>; Wed, 25 Nov 2015 23:48:25 +0100 (CET)
+From: chr.ax@posteo.de
+To: tosdr@googlegroups.com
+Subject: [tosdr:3692] accounts.firefox.com
+Message-ID: <56563A8E.4010801@posteo.de>
+Date: Wed, 25 Nov 2015 23:47:42 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:38.0) Gecko/20100101
+ Thunderbird/38.3.0
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="------------030102030004040100010209"
+X-Original-Sender: chr.ax@posteo.de
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of chr.ax@posteo.de designates 185.67.36.65 as permitted
+ sender) smtp.mailfrom=chr.ax@posteo.de
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+This is a multi-part message in MIME format.
+--------------030102030004040100010209
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+as told by the firefox plugin Terms of service, I will write down all=20
+points of the terms of service of accounts.firefox.com.
+
+Link to the terms:
+localiced version: https://accounts.firefox.com/legal/terms
+english version:=20
+https://www.mozilla.org/en-US/about/legal/terms/firefox-hello/
+
+negative points:
+
+  * point 5 does contain a different meaning in the german translation.
+    That is a bad thing, as the user relies on the translation. Also
+    some other places have different content. E.g. point 7: At a glance
+    at the german translation you can see, that it has one paragraph
+    less than the english version!
+  * point 5 is only bad in the german translation. There is told, that
+    the users contents can be used for free by Mozilla
+      o english original text: "You hereby grant Mozilla and our
+        licensors all rights necessary*to provide the Service*"
+      o german text in my translation: By uploading of content you grant
+        us a not exclusive, free of charge and worldwide licence for
+        using your contents *in* *conjunction with* the provition of the
+        services.
+      o (german original text: "Durch das Hochladen von Inhalten
+        erteilen Sie uns eine nicht ausschlie=C3=9Fliche, geb=C3=BChrenfrei=
+e und
+        weltweite Lizenz zur Nutzung Ihrer Inhalte in Verbindung mit der
+        Bereitstellung der Services.")
+  * point 10: the modifications are posted (in not further specified)
+    blogs and forums. not a place, where users normally see it. instead
+    the user could be asked directly in firefox, or when using the
+    service the next time.
+  * at point 11 is written that in case differences between the
+    translated terms of service and the english version, the english
+    version is valuable. This is ok, but they don't provide a link to
+    the english version.
+
+Best wishes
+Chris
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--------------030102030004040100010209
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8=
+">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    Hello,<br>
+    as told by the firefox plugin Terms of service, I will write down
+    all points of the terms of service of accounts.firefox.com.<br>
+    <br>
+    Link to the terms:<br>
+    localiced version: <a class=3D"moz-txt-link-freetext"
+      href=3D"https://accounts.firefox.com/legal/terms">https://accounts.fi=
+refox.com/legal/terms</a><br>
+    english version: <a class=3D"moz-txt-link-freetext"
+      href=3D"https://www.mozilla.org/en-US/about/legal/terms/firefox-hello=
+/">https://www.mozilla.org/en-US/about/legal/terms/firefox-hello/</a><br>
+    <br>
+    negative points:<br>
+    <ul>
+      <li>point 5 does contain a different meaning in the german
+        translation. That is a bad thing, as the user relies on the
+        translation. Also some other places have different content. E.g.
+        point 7: At a glance at the german translation you can see, that
+        it has one paragraph less than the english version!<br>
+      </li>
+      <li>point 5 is only bad in the german translation. There is told,
+        that the users contents can be used for free by Mozilla<br>
+      </li>
+      <ul>
+        <li>english original text: "You hereby grant Mozilla and our
+          licensors all rights necessary<b> to provide the Service</b>"</li=
+>
+        <li>german text in my translation: By uploading of content you
+          grant us a not exclusive, free of charge and worldwide licence
+          for using your contents <b>in</b> <b>conjunction with</b>
+          the provition of the services.</li>
+        <li>(german original text: "Durch das Hochladen von Inhalten
+          erteilen Sie uns eine nicht ausschlie=C3=9Fliche, geb=C3=BChrenfr=
+eie und
+          weltweite Lizenz zur Nutzung Ihrer Inhalte in Verbindung mit
+          der Bereitstellung der Services.")</li>
+      </ul>
+      <li>point 10: the modifications are posted (in not further
+        specified) blogs and forums. not a place, where users normally
+        see it. instead the user could be asked directly in firefox, or
+        when using the service the next time.</li>
+      <li>at point 11 is written that in case differences between the
+        translated terms of service and the english version, the english
+        version is valuable. This is ok, but they don't provide a link
+        to the english version.</li>
+    </ul>
+    <p>Best wishes<br>
+      Chris<br>
+    </p>
+  </body>
+</html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--------------030102030004040100010209--

@@ -1,0 +1,224 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.35.68 with SMTP id j65csp2326893ioj;
+        Mon, 7 Dec 2015 06:56:32 -0800 (PST)
+X-Received: by 10.194.88.130 with SMTP id bg2mr22554868wjb.162.1449500192307;
+        Mon, 07 Dec 2015 06:56:32 -0800 (PST)
+Return-Path: <tosdr+bncBDMP5DMYRYDBBHF4S2ZQKGQEFNJWVRI@googlegroups.com>
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net. [217.70.183.198])
+        by mx.google.com with ESMTPS id t132si24226897wmt.17.2015.12.07.06.56.32
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Dec 2015 06:56:32 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDMP5DMYRYDBBHF4S2ZQKGQEFNJWVRI@googlegroups.com does not designate 217.70.183.198 as permitted sender) client-ip=217.70.183.198;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDMP5DMYRYDBBHF4S2ZQKGQEFNJWVRI@googlegroups.com does not designate 217.70.183.198 as permitted sender) smtp.mailfrom=tosdr+bncBDMP5DMYRYDBBHF4S2ZQKGQEFNJWVRI@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id 07AE8FB89E
+	for <michiel@unhosted.org>; Mon,  7 Dec 2015 15:56:31 +0100 (CET)
+Received: from mfilter30-d.gandi.net (mfilter30-d.gandi.net [217.70.178.161])
+	by spool.mail.gandi.net (Postfix) with ESMTP id AD401178078
+	for <michiel@unhosted.org>; Mon,  7 Dec 2015 15:56:31 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter30-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter30-d.gandi.net (mfilter30-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id haQQR8s0zWdG for <michiel@unhosted.org>;
+	Mon,  7 Dec 2015 15:56:30 +0100 (CET)
+Received: from mail-qk0-x23c.google.com (mail-qk0-x23c.google.com [IPv6:2607:f8b0:400d:c09::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id EDFE1178085
+	for <michiel@michielbdejong.com>; Mon,  7 Dec 2015 15:56:29 +0100 (CET)
+Received: by qkdb5 with SMTP id b5sf12452042qkd.1
+        for <michiel@michielbdejong.com>; Mon, 07 Dec 2015 06:56:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=EnmNbTnFDShqMHRQSzA4diSV1SolxdZ9aUKqWtDy8Nw=;
+        b=gwqLEB5TK379jc+xcLSxXHKk/IS2ydU9+FlPETPC9KudZe6IeOTikURUbESbAbbGl7
+         F2EhI2woC4uTDd5ZkYRSXU1g0r36GXsO3ea+LtapcowsG4HgivQhcirVfc/ZECPSFrpC
+         S4Qs0v5AXtp52ax43EoJpGFfoIrSrccYvmKYuGV+LDtzEtIs5WCVMiE1O1FkLl4nlqmU
+         TxfbCqBElhpl7Jk3bUTtVv+G/fLYsCy2efG/mj1IMvAAoxd0AgBehvkbKUgR4LIpeINH
+         TJuxIUajDjlNQWuW30/z8lGJ13r8Kmge2z8Ffowwi+XbyHfHSHQdcilH6X5GIDjZHT7+
+         Nu/w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=EnmNbTnFDShqMHRQSzA4diSV1SolxdZ9aUKqWtDy8Nw=;
+        b=TlaSBoFYff3w1eUaI5fWBKf86crImgzfbq6P54Ca4sB5S6MGiqF2UwH5XUrp04q+Su
+         pAD4jqXxZGS56L9u4wfq0xIJdR4GynHAtorY/uZTsohx9hWb9AfhPsqfR1tFff2/S4g1
+         yvbMqQdtFInOvnm0wlollMaiSKnBf3M0aYhqk4ZnRmhsDk5JJcPUlC0lmr48m2Ip3S/t
+         C4hG85zxTJoGEUu3uXhLxegJD2TeqiC8ZO+QVW/+cAXNy2TG6IEcfo235Bu8hGTo8xAJ
+         9LD1Tc3E2f6F7djDlZ9ZksAvlN+MdWDTkI3aWQusfbJF4I+TLCh6a1r3fTxb5RIYTaiw
+         +hBw==
+X-Received: by 10.50.155.101 with SMTP id vv5mr360165igb.8.1449500189110;
+        Mon, 07 Dec 2015 06:56:29 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.154.142 with SMTP id c136ls1863751ioe.64.gmail; Mon, 07
+ Dec 2015 06:56:28 -0800 (PST)
+X-Received: by 10.50.9.39 with SMTP id w7mr359430iga.3.1449500188392;
+        Mon, 07 Dec 2015 06:56:28 -0800 (PST)
+X-Google-Group-Id: 966240515290
+Date: Mon, 7 Dec 2015 06:56:27 -0800 (PST)
+From: knock <thurst306@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: matija@suklje.name
+Message-Id: <53cd33e1-527b-4894-b7b4-78a028531cba@googlegroups.com>
+In-Reply-To: <dbec9b61-a0c2-4ea3-bfc7-a5e1fde93690@googlegroups.com>
+References: <56799206-1caf-470d-9400-8105bc372daf@googlegroups.com> <3134558.ZymbZFzJM1@faunus> <4D14F4A0-EDEF-4963-9F21-FD1AE4BD95A0@gmail.com>
+ <2991027.zVyApzTJ1d@faunus>
+ <7acb53e7-189c-49f1-8ff5-059fb8bdcb03@googlegroups.com>
+ <dbec9b61-a0c2-4ea3-bfc7-a5e1fde93690@googlegroups.com>
+Subject: Re: [tosdr:3700] Re: [Bad] Dropbox will not be liable for any loss or
+ corruption of your stuff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_44_1245444895.1449500187691"
+X-Original-Sender: thurst306@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_44_1245444895.1449500187691
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_45_787292840.1449500187691"
+
+------=_Part_45_787292840.1449500187691
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+How come this hasn't been added to the site as yet?
+
+On Friday, June 7, 2013 at 2:48:16 PM UTC-4, Ian McGowan wrote:
+>
+> Title: Dropbox isn't liable for loss or corruption of your data
+>
+> Topic: User information
+>
+> Summary: Dropbox will have no responsibility for any harm to your=20
+> computer system, loss or corruption of data, or other harm that results=
+=20
+> from your access to or use of the Services or Software.
+>
+> Score: 0 (mediocre)
+>
+> On Tuesday, November 27, 2012 5:55:26 AM UTC-6, Ian McGowan wrote:
+>>
+>> This point has been curated and will be appearing on the website in a fe=
+w=20
+>> days.
+>>
+>> On Wednesday, October 10, 2012 12:17:48 PM UTC+2, Matija =C5=A0uklje wro=
+te:
+>>>
+>>> On Sreda 10. of October 2012 01.33.45 Aaron Kelly wrote:=20
+>>> > Maybe just the info tag would be better then.  You have to strike a=
+=20
+>>> balance=20
+>>> > between what is good for a user abs what risks a company can take.=20
+>>> > Otherwise we wouldn't have 80% of the Internet as we know it=20
+>>>
+>>> I=E2=80=99d also go for the info tag.=20
+>>>
+>>>
+>>> cheers,=20
+>>> Matija=20
+>>> --=20
+>>> gsm:    +386 41 849 552=20
+>>> www:    http://matija.suklje.name=20
+>>> xmpp:   matija...@gabbler.org=20
+>>> sip:    matija...@ippi.fr
+>>
+>>
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_45_787292840.1449500187691
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">How come this hasn&#39;t been added to the site as yet?<br=
+><br>On Friday, June 7, 2013 at 2:48:16 PM UTC-4, Ian McGowan wrote:<blockq=
+uote class=3D"gmail_quote" style=3D"margin: 0;margin-left: 0.8ex;border-lef=
+t: 1px #ccc solid;padding-left: 1ex;">Title: Dropbox isn&#39;t liable for l=
+oss or corruption of your data<br><br>Topic: User information<br><br>Summar=
+y:=C2=A0<span style=3D"color:rgb(68,68,68);font-family:&#39;Open Sans&#39;,=
+&#39;lucida grande&#39;,&#39;Segoe UI&#39;,arial,verdana,&#39;lucida sans u=
+nicode&#39;,tahoma,sans-serif;line-height:20.796875px">Dropbox will have no=
+ responsibility for any harm to your computer system, loss or corruption of=
+ data, or other harm that results from your access to or use of the Service=
+s or Software.</span><div><br></div><div>Score: 0 (mediocre)<br><br>On Tues=
+day, November 27, 2012 5:55:26 AM UTC-6, Ian McGowan wrote:<blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc =
+solid;padding-left:1ex">This point has been curated and will be appearing o=
+n the website in a few days.<br><br>On Wednesday, October 10, 2012 12:17:48=
+ PM UTC+2, Matija =C5=A0uklje wrote:<blockquote class=3D"gmail_quote" style=
+=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"=
+>On Sreda 10. of October 2012 01.33.45 Aaron Kelly wrote:
+<br>&gt; Maybe just the info tag would be better then. =C2=A0You have to st=
+rike a balance
+<br>&gt; between what is good for a user abs what risks a company can take.=
+=20
+<br>&gt; Otherwise we wouldn&#39;t have 80% of the Internet as we know it
+<br>
+<br>I=E2=80=99d also go for the info tag.
+<br>
+<br>
+<br>cheers,
+<br>Matija
+<br>--=20
+<br>gsm: =C2=A0 =C2=A0+386 41 849 552
+<br>www: =C2=A0 =C2=A0<a href=3D"http://matija.suklje.name" target=3D"_blan=
+k" rel=3D"nofollow" onmousedown=3D"this.href=3D&#39;http://www.google.com/u=
+rl?q\75http%3A%2F%2Fmatija.suklje.name\46sa\75D\46sntz\0751\46usg\75AFQjCNE=
+eEOtVbYDWBF9yVl0fZmTcYVckDQ&#39;;return true;" onclick=3D"this.href=3D&#39;=
+http://www.google.com/url?q\75http%3A%2F%2Fmatija.suklje.name\46sa\75D\46sn=
+tz\0751\46usg\75AFQjCNEeEOtVbYDWBF9yVl0fZmTcYVckDQ&#39;;return true;">http:=
+//matija.suklje.name</a>
+<br>xmpp: =C2=A0 <a>matija...@gabbler.org</a>
+<br>sip: =C2=A0 =C2=A0<a>matija...@ippi.fr</a></blockquote></blockquote></d=
+iv></blockquote></div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_45_787292840.1449500187691--
+------=_Part_44_1245444895.1449500187691--

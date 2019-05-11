@@ -1,0 +1,139 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORBVGSU2QAKGQEZN2I4XA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 2392640F80
+	for <anything@michielbdejong.com>; Fri,  5 Sep 2014 14:15:21 +0200 (CEST)
+Received: from mfilter3-d.gandi.net (mfilter3-d.gandi.net [217.70.178.133])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 20E12226062
+	for <anything@michielbdejong.com>; Fri,  5 Sep 2014 14:15:21 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter3-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter3-d.gandi.net (mfilter3-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id tALwMZWAiGEk for <anything@michielbdejong.com>;
+	Fri,  5 Sep 2014 14:15:19 +0200 (CEST)
+Received: from mail-wg0-x237.google.com (mail-wg0-x237.google.com [IPv6:2a00:1450:400c:c00::237])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id D8349226067
+	for <michiel@michielbdejong.com>; Fri,  5 Sep 2014 14:15:16 +0200 (CEST)
+Received: by mail-wg0-f55.google.com with SMTP id x12sf14306wgg.20
+        for <michiel@michielbdejong.com>; Fri, 05 Sep 2014 05:15:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=zdx8jL39E5OHDa8EJ9Of8pC7S/GwnCpRFAujk22fqL8=;
+        b=Xtjms3r+FYyx8XAkiyr8fy2+aUFcAmKaf24sHIANVw7WF7ipP5AZwTPpwXbi3K7BQO
+         fzEWlv50yRqkVa4asyTK8xtEqvUSrk13GaV2TzH7rIfruurHBkfhdOs3KL1nR92zy8m9
+         1bf1b7yBgQ7AHjrs4eWTa4NSxLvQv73Ar1NKLXdUc8c+rraWlYehHLTO5g4eKIXiP4O8
+         5jUeqgj1bTbZ1IEIaP3K9A0BVhJoJvPLgPAMIy4TXzALOh81OVqwWYwjvL4zHR5oW7nH
+         JaU1JRtOmd+U+eNqTkpu5CZ5BFJB4EtPclsIwsPnjbzj6wiM+kcCQQzMMGgjKqQwhPjt
+         mToQ==
+X-Received: by 10.180.14.101 with SMTP id o5mr13616wic.2.1409919316769;
+        Fri, 05 Sep 2014 05:15:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.39.172 with SMTP id q12ls69855wik.7.gmail; Fri, 05 Sep
+ 2014 05:15:16 -0700 (PDT)
+X-Received: by 10.194.201.198 with SMTP id kc6mr1076059wjc.0.1409919316097;
+        Fri, 05 Sep 2014 05:15:16 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id j12si101382wie.2.2014.09.05.05.15.15
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 05 Sep 2014 05:15:15 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4B9D063ABB1
+	for <tosdr@googlegroups.com>; Fri,  5 Sep 2014 14:15:15 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id aXTiuoHgQsbR for <tosdr@googlegroups.com>;
+	Fri,  5 Sep 2014 14:15:09 +0200 (CEST)
+Received: from localhost (p5DCA3C01.dip0.t-ipconnect.de [93.202.60.1])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 51C5163A615
+	for <tosdr@googlegroups.com>; Fri,  5 Sep 2014 14:15:09 +0200 (CEST)
+Date: Fri, 5 Sep 2014 14:15:05 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: Disqus DMCA [good] ? [Fwd] [tosdr:3204] Re: Terms may be changed
+ any time at their discretion, without notice to the user
+Message-ID: <20140905121505.GD2390@xps.fritz.box>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <20130522171744.GD14423@synclavier.ampoliros.net>
+ <55f0b321-c7fe-4d72-a4f2-0ac7720ca88f@googlegroups.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="DiL7RhKs8rK9YGuF"
+Content-Disposition: inline
+In-Reply-To: <55f0b321-c7fe-4d72-a4f2-0ac7720ca88f@googlegroups.com>
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--DiL7RhKs8rK9YGuF
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-09-05 Fri 13:12, Michiel de Jong <michiel@unhosted.org>:
+> Please provide a link to the text where they explain this.
+
+https://help.disqus.com/customer/portal/articles/466260-terms-of-service
+
+I don=E2=80=99t know if my email is still current though.
+
+> On Wednesday, May 22, 2013 7:17:44 PM UTC+2, Hugo Roy wrote:
+> >
+> > Just looking at the Disqus ToS, they don't mention DMCA counter-notices=
+,=20
+> > although they do explain the DMCA notice-and-takedown process. Service=
+=20
+> > providers aren't obligated to inform users of the counter-notification=
+=20
+> > procedure; I think it's better for their ToS;DR rating if they do.
+
+
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--DiL7RhKs8rK9YGuF
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUCalJAAoJEI0CLJmz17eV9wgIAIG+Z1Ufvr7NinF4iVbHU0Hz
+AggiEBpuBUS6K2Iqi/VWX6RWXBKaj8+d1KDzG7XaHwiQy4vp1guST87Z5CkRwhIO
+eJa2pkrzF6IOpGA3FWnBQ/cRI16i/f+OtfN8rmBEJRfEsGxn67rBMkgxILVZsjAL
+UZK9yeJqLpQ8vCUq6aW0GcC4y69AX1q3Z9n7oKqY0zrS5LvAHH+F4YjrzKNE2aiR
+k3QNP1ikXIg2ugXptfN+6n4D9VVdV/DEiJ3mLn1VCsssb/m6vfe3LByETraYwzKi
+lMbfiRNDzF/GLuKKT2MBIHIm8ddms1vTSLqKLn7l8v2wNPy6A1k0ckfxrl44em4=
+=gUuF
+-----END PGP SIGNATURE-----
+
+--DiL7RhKs8rK9YGuF--

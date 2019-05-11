@@ -1,0 +1,193 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.130.223 with SMTP id m92csp798315ioi;
+        Sun, 6 Mar 2016 04:50:33 -0800 (PST)
+X-Received: by 10.194.21.197 with SMTP id x5mr16221475wje.90.1457268633500;
+        Sun, 06 Mar 2016 04:50:33 -0800 (PST)
+Return-Path: <tosdr+bncBDPMPHECVENRBFWP6C3AKGQEOZPARCQ@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [217.70.183.194])
+        by mx.google.com with ESMTPS id c1si8626808wmh.112.2016.03.06.04.50.33
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 06 Mar 2016 04:50:33 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBDPMPHECVENRBFWP6C3AKGQEOZPARCQ@googlegroups.com does not designate 217.70.183.194 as permitted sender) client-ip=217.70.183.194;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBDPMPHECVENRBFWP6C3AKGQEOZPARCQ@googlegroups.com does not designate 217.70.183.194 as permitted sender) smtp.mailfrom=tosdr+bncBDPMPHECVENRBFWP6C3AKGQEOZPARCQ@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id 36789C5A4E
+	for <michiel@unhosted.org>; Sun,  6 Mar 2016 13:50:33 +0100 (CET)
+Received: from mfilter43-d.gandi.net (mfilter43-d.gandi.net [217.70.178.174])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 22B7217805F
+	for <michiel@unhosted.org>; Sun,  6 Mar 2016 13:50:33 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter43-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.133])
+	by mfilter43-d.gandi.net (mfilter43-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id w3xU_6lzageN for <michiel@unhosted.org>;
+	Sun,  6 Mar 2016 13:50:31 +0100 (CET)
+Received: from mail-ig0-x23f.google.com (mail-ig0-x23f.google.com [IPv6:2607:f8b0:4001:c05::23f])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 31B65178059
+	for <michiel@michielbdejong.com>; Sun,  6 Mar 2016 13:50:31 +0100 (CET)
+Received: by mail-ig0-x23f.google.com with SMTP id hb3sf4982560igb.1
+        for <michiel@michielbdejong.com>; Sun, 06 Mar 2016 04:50:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=fkFYCm/D9vWu5T6KFU1Yaq+CKWH7c73qlVL06w7nTKk=;
+        b=XB3YA7EqO7Cuw4OwaRPKhd2AzCN6HfGkcrrPQ2w0a2cYtfVr36nceMaHpTpZc0VDsE
+         FP7Vc5tTaA/uCq44+TgfZVzf0O7qqcx3Ds4FC3OVseG0MlC0IIiJ3PnwxAMLutVDVbcL
+         n5oDsRo4BLj79nGCfpEiVpyUqO6c0ewQnnSjjzlOpzNIBWI+UhtWkGqB+WL24vVQ0VJt
+         RjPoBel4HCejlN9m7cIwEJQDdTJEd4/FkIkSGEre/2ImKnapM0nG4gsE0NohbI0Q/xBQ
+         iYk3grpJOmkI6kzWC0B/kDgfj9AZZEPDDNYgBomFLVVxEBRmdAlJ5SZmL+TmsjYXIDye
+         Ro6A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe;
+        bh=fkFYCm/D9vWu5T6KFU1Yaq+CKWH7c73qlVL06w7nTKk=;
+        b=ds/ejLGy4PzuKEr2++mIC/LUa8KkEh15pwAgZSCS4O2xLyduvkin3Kl5NTvhKaTS1C
+         G2e4gMsEJvnqp4YCJcGeAXFCQt3BKFp7ToNwonEzKpMFBAqCCs0AOvuSMvVjrrFN0wey
+         W17cbW/R3MnWM0Yeq6lz3vRdsgSNWzo5tm8SaN7BN6We/txssntKmmRpupcSD2xmAtXK
+         5S5F1c9Fc348F4We62NLg778deKnigUWCN5XY9E1lu+9K5wxrjhvPlCDXevLpGojSovx
+         J0q0Z8TWJz3bfbKxxgI2B/6SuHFR9GbqEUlhSzVSJeWOMRHIH/gJCQAVxeF6PS+/IUlB
+         CY1g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=fkFYCm/D9vWu5T6KFU1Yaq+CKWH7c73qlVL06w7nTKk=;
+        b=P7JoqMpzESUqbAYNp7ZI4eClfxT3thsaYuqTE49jnIjyP7T0v4kFDxyJ65h5lQxcOC
+         4DlkF7f+MwcwLLoC4ZNY31RfqyOACLq57BiN7KIzHHnQuuO6nrE0NuP4S9ySGT/kM4i6
+         JSoun4Rkkmmf6mR0/0QEtYbIBuZ67xC7fkjT4XdbuCrZk8JJS9Fz/GwMmVqXYTuIvDIr
+         8R2rdQNXa1yr2yj6yg/Vf6hjGl7AFfTp914eoXXnr4xhHhhTy+0pSx8Y0XGY+f8P3Ozy
+         9bQHkm+J4RfflxIC2HGRxRlTVxu2OrnCXN6CowUXqhQzy2+zJjAHkvnlMqJ0tYsEmtob
+         E6Dg==
+X-Gm-Message-State: AD7BkJITDIG9Xr16PSQCkMi2YR3b6MxYWzDnp1c09kmkiAGt9EUwR/0sThfUMs6TPgCGWw==
+X-Received: by 10.50.61.200 with SMTP id s8mr132895igr.3.1457268630429;
+        Sun, 06 Mar 2016 04:50:30 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.107.157.136 with SMTP id g130ls650529ioe.56.gmail; Sun, 06 Mar
+ 2016 04:50:29 -0800 (PST)
+X-Received: by 10.50.25.196 with SMTP id e4mr132778igg.8.1457268629782;
+        Sun, 06 Mar 2016 04:50:29 -0800 (PST)
+Date: Sun, 6 Mar 2016 04:50:28 -0800 (PST)
+From: Pierre Ozoux <pierre.ozoux@gmail.com>
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Message-Id: <13ae5c6d-cb3a-465b-9711-bf946c2905f6@googlegroups.com>
+In-Reply-To: <0e0ebb46-be31-4246-bf38-1bcb8551befb@googlegroups.com>
+References: <34fa70df-f2bb-4142-a641-6a09ba7210c6@googlegroups.com>
+ <0e0ebb46-be31-4246-bf38-1bcb8551befb@googlegroups.com>
+Subject: [tosdr:3795] Re: [Bad] Wikia
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_2324_1579219289.1457268628666"
+X-Original-Sender: pierre.ozoux@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_2324_1579219289.1457268628666
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2325_1644868577.1457268628667"
+
+------=_Part_2325_1644868577.1457268628667
+Content-Type: text/plain; charset=UTF-8
+
+Ok, I fixed the issue, could you try again please?
+
+Thanks!
+
+On Thursday, March 3, 2016 at 6:47:02 AM UTC, imagination...@gmail.com 
+wrote:
+>
+> @Pierre Ozoux: Sorry for the late reply.
+>
+> The Bad Disabled button appears to be not greyed out because it seems to 
+> be the only thing I can alter on the page. And for the record, it's the 
+> exact same with chrome.
+>
+>
+> <https://lh3.googleusercontent.com/-YnU3bDBvxfk/Vtfd29jAEtI/AAAAAAAAABk/OclWOFHhMzw/s1600/ToS%253BDR.png>
+>
+>
+
+-- 
+[!!] Please see https://edit.tosdr.org -- this is where new contributions should be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/tosdr/13ae5c6d-cb3a-465b-9711-bf946c2905f6%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_2325_1644868577.1457268628667
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Ok, I fixed the issue, could you try again please?<br><br>=
+Thanks!<br><br>On Thursday, March 3, 2016 at 6:47:02 AM UTC, imagination...=
+@gmail.com wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;margi=
+n-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;"><div dir=3D"l=
+tr">@Pierre Ozoux: Sorry for the late reply.<div><br></div><div>The Bad Dis=
+abled button appears to be not greyed out because it seems to be the only t=
+hing I can alter on the page. And for the record, it&#39;s the exact same w=
+ith chrome.</div><div><br></div><p style=3D"text-align:center;clear:both"><=
+a href=3D"https://lh3.googleusercontent.com/-YnU3bDBvxfk/Vtfd29jAEtI/AAAAAA=
+AAABk/OclWOFHhMzw/s1600/ToS%253BDR.png" style=3D"margin-left:1em;margin-rig=
+ht:1em" target=3D"_blank" rel=3D"nofollow" onmousedown=3D"this.href=3D&#39;=
+https://lh3.googleusercontent.com/-YnU3bDBvxfk/Vtfd29jAEtI/AAAAAAAAABk/OclW=
+OFHhMzw/s1600/ToS%253BDR.png&#39;;return true;" onclick=3D"this.href=3D&#39=
+;https://lh3.googleusercontent.com/-YnU3bDBvxfk/Vtfd29jAEtI/AAAAAAAAABk/Ocl=
+WOFHhMzw/s1600/ToS%253BDR.png&#39;;return true;"><img src=3D"https://lh3.go=
+ogleusercontent.com/-YnU3bDBvxfk/Vtfd29jAEtI/AAAAAAAAABk/OclWOFHhMzw/s320/T=
+oS%253BDR.png" border=3D"0" height=3D"179" width=3D"320"></a></p><div><br><=
+/div></div></blockquote></div>
+
+<p></p>
+
+-- <br />
+[!!] Please see <a href=3D"https://edit.tosdr.org">https://edit.tosdr.org</=
+a> -- this is where new contributions should be submitted and discussed<br =
+/>
+&nbsp;<br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"https://groups.google.com/group/tosdr">https=
+://groups.google.com/group/tosdr</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/tosdr/13ae5c6d-cb3a-465b-9711-bf946c2905f6%40googlegroups.com?ut=
+m_medium=3Demail&utm_source=3Dfooter">https://groups.google.com/d/msgid/tos=
+dr/13ae5c6d-cb3a-465b-9711-bf946c2905f6%40googlegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_2325_1644868577.1457268628667--
+------=_Part_2324_1579219289.1457268628666--

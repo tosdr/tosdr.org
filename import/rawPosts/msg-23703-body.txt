@@ -1,0 +1,131 @@
+Return-Path: <tosdr+bncBCN23IMP34ARB44E2GSAKGQEAVTMFSY@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool1-d.mgt.gandi.net [10.0.21.131])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id 56F5440910
+	for <anything@michielbdejong.com>; Fri, 19 Dec 2014 16:21:59 +0100 (CET)
+Received: from mfilter2-d.gandi.net (mfilter2-d.gandi.net [217.70.178.140])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 540F8226092
+	for <anything@michielbdejong.com>; Fri, 19 Dec 2014 16:21:59 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter2-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.131])
+	by mfilter2-d.gandi.net (mfilter2-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id R+JEC787qmYO for <anything@michielbdejong.com>;
+	Fri, 19 Dec 2014 16:21:27 +0100 (CET)
+Received: from mail-qc0-x239.google.com (mail-qc0-x239.google.com [IPv6:2607:f8b0:400d:c01::239])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 5F49222608C
+	for <michiel@michielbdejong.com>; Fri, 19 Dec 2014 16:21:24 +0100 (CET)
+Received: by mail-qc0-f185.google.com with SMTP id x3sf115140qcv.12
+        for <michiel@michielbdejong.com>; Fri, 19 Dec 2014 07:21:23 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :sender:list-subscribe:list-unsubscribe;
+        bh=oz3XZrUNZwex19Z9dduLVSPM+/x7WeCftC8EiFjI3x4=;
+        b=r3TfYFXWJk/PVO9cYVFLuQjneEYNyHGtPw8C1X5TDm8Gcv1d5tLx8ymTi0eqKGmvzW
+         F5/0Rrxz/PyF/u6jzcPA/6Au8gg9oXAGNTYjRtSKhsEwYfDta6g4X7t5+Hu+k4mbjASm
+         o2euciRhA31l3wxWZrz7Sy2ZsxK4Zmc0JQL35uLqD4OqfaynfKT35w9m6xXA0Umg7qwB
+         h2OSOYg/MXjv3xQSa9mYqH1n9tqvdjrydS2eMWOJr4/vfO/RNbDFsHwEja9cE6TnW8lO
+         eu5aUVea7HGwMs9zg30RTkC+bD0JAapfnKFPjMoKIpp8si/k3Jl48/Dbi/IGX+d5T8H+
+         4OeQ==
+X-Received: by 10.50.23.48 with SMTP id j16mr57484igf.5.1419002483598;
+        Fri, 19 Dec 2014 07:21:23 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.110.5 with SMTP id hw5ls250406igb.12.canary; Fri, 19 Dec
+ 2014 07:21:23 -0800 (PST)
+X-Received: by 10.66.180.196 with SMTP id dq4mr6386862pac.47.1419002483169;
+        Fri, 19 Dec 2014 07:21:23 -0800 (PST)
+Received: from relay3-d.mail.gandi.net (relay3-d.mail.gandi.net. [2001:4b98:c:538::195])
+        by gmr-mx.google.com with ESMTPS id du10si1337821pdb.2.2014.12.19.07.21.22
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Fri, 19 Dec 2014 07:21:23 -0800 (PST)
+Received-SPF: none (google.com: anything@michielbdejong.com does not designate permitted sender hosts) client-ip=2001:4b98:c:538::195;
+Received: from mfilter8-d.gandi.net (mfilter8-d.gandi.net [217.70.178.137])
+	by relay3-d.mail.gandi.net (Postfix) with ESMTP id AD4A6A80D9
+	for <tosdr@googlegroups.com>; Fri, 19 Dec 2014 16:21:21 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mfilter8-d.gandi.net
+Received: from relay3-d.mail.gandi.net ([217.70.183.195])
+	by mfilter8-d.gandi.net (mfilter8-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id 3UROYl1Jx3EV for <tosdr@googlegroups.com>;
+	Fri, 19 Dec 2014 16:20:50 +0100 (CET)
+X-Originating-IP: 91.64.210.128
+Received: from [192.168.178.195] (ip5b40d280.dynamic.kabel-deutschland.de [91.64.210.128])
+	(Authenticated sender: anything@michielbdejong.com)
+	by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id E32B2A80D2
+	for <tosdr@googlegroups.com>; Fri, 19 Dec 2014 16:20:49 +0100 (CET)
+Message-ID: <54944250.1030407@michielbdejong.com>
+Date: Fri, 19 Dec 2014 16:20:48 +0100
+From: Michiel de Jong <anything@michielbdejong.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Thunderbird/31.3.0
+MIME-Version: 1.0
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3365] Re: Please help us improve the submission process to
+ ToS;DR :-)
+References: <20140927173742.GA26590@xps.fritz.box> <947e5230-e5de-4f00-ab87-789639bfbbb8@googlegroups.com> <20141219111735.GA1127@xps>
+In-Reply-To: <20141219111735.GA1127@xps>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Original-Sender: anything@michielbdejong.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=none
+ (google.com: anything@michielbdejong.com does not designate permitted sender
+ hosts) smtp.mail=anything@michielbdejong.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Yes, since we are redesigning the system, it's better to use the
+mailing list for now, sorry.
+
+On 19.12.2014 12:17, Hugo Roy wrote:
+> =E2=86=AA 2014-12-18 Thu 18:27, alessandro.carelli.design
+> <alessandro.carelli.design@gmail.com>:
+>> I am experiencing some troubles with the data point form...
+>> basically after signing in with Persona I'm being redirected to
+>> the sign in page again...
+>=20
+> I experience the problem too now. Michiel, maybe a server side=20
+> issue?
+>=20
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJUlEJPAAoJECmDVpL5muhK2HQQAKhiLgkdzNQsJtvK7lQnXSdG
+lxRXGGNoDxC1p79ey2FMGVsRclm7oIggrttzxBk5dJfEwJE5dmXsVTPQR+grmHpX
+c3jg1rHqVhEEd/Zx1PUCWHrWI4l6eSDaL5nNLjEihvWBX4hedTGSsskxU5AKcGl6
+VQOauuAy6mV8U5KqVEVgUzJtnpqot1NYbMJNT1//ICqOhrkGHTO0bh1X0zpWyggd
+EAA7MxUREpUUb+Vr60PCWnamj1jKNex9yCTFTRtRUAPgo6eq0O9xDoA4pRYczVWz
+WVJVHAJ00TjKP1XG9UK8BSPpAr3VUOsiaRZ97NZkfFP5i5hh3j9V+ET7is+7NhQT
+9keVZXqd99Ld3hygZrNpskzSHnZJswIEkWein/5oHVjbGCAehKPS0x+ekeIlGmDf
+D8uyEm6xzfeigszpXVnZF0uPVf4ykRJFY20F/2wzcB9fqNo1BFXMn4HwLOA48TfT
+B/hvTP+zrt2udR1DWuxdKufust8efJk6MRNnvUXKi8S4/5J5FlR280Wo2+g6WLq9
+Ytyia6DbW6CzyTRXvMqPuRVj/W9B4uRqi5vPDIl+h17E0WJ/9PFj5dptYbQ3NoNs
+0pP+UClr0mTV2BzWZYtHJwBCS/Y/nVUbR4KIfhcQ4ZA9yIBZmaP7ivvXQUNxOuEb
+Lle2qhXxRQsQJZHhI8kw
+=3DA+km
+-----END PGP SIGNATURE-----
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.

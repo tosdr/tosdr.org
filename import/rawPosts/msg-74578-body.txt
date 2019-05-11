@@ -1,0 +1,134 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.68.57.102 with SMTP id h6csp25025pbq;
+        Fri, 8 Jun 2012 06:07:52 -0700 (PDT)
+Received: by 10.112.36.132 with SMTP id q4mr3893407lbj.63.1339160871386;
+        Fri, 08 Jun 2012 06:07:51 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCm8sf-BBoEghBBZg@googlegroups.com>
+Received: from mail-lpp01m010-f64.google.com (mail-lpp01m010-f64.google.com [209.85.215.64])
+        by mx.google.com with ESMTPS id t10si6753841lat.32.2012.06.08.06.07.50
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 08 Jun 2012 06:07:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCm8sf-BBoEghBBZg@googlegroups.com designates 209.85.215.64 as permitted sender) client-ip=209.85.215.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCm8sf-BBoEghBBZg@googlegroups.com designates 209.85.215.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCm8sf-BBoEghBBZg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by lagy4 with SMTP id y4sf866367lag.29
+        for <michiel@unhosted.org>; Fri, 08 Jun 2012 06:07:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=tFZIq8nR8vIyL5Kl7XiMu0nmrroPFXfQT/5LxjQunG4=;
+        b=tYpkvLW1VHBR7FbMaofvvg3yHyAwkvlQKivnxp+S7P18KZX0sxdZpV6lls8Fv9WylI
+         GqHSN3T/lhs1pQhCPq6kz7znASuIdWiosw842BtAcbpa3x9zMmD3nm6xIxodL8CyOTJl
+         BjrsnmZpnU2acHT3FybdQEykXSkmDGRpaICwk=
+Received: by 10.204.143.154 with SMTP id v26mr395797bku.34.1339160870386;
+        Fri, 08 Jun 2012 06:07:50 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.27.200 with SMTP id e48ls1077737eea.8.gmail; Fri, 08 Jun
+ 2012 06:07:50 -0700 (PDT)
+Received: by 10.14.187.134 with SMTP id y6mr2299800eem.10.1339160446672;
+        Fri, 08 Jun 2012 06:00:46 -0700 (PDT)
+Received: by 10.14.187.134 with SMTP id y6mr2299798eem.10.1339160446606;
+        Fri, 08 Jun 2012 06:00:46 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id b16si6131500eeg.3.2012.06.08.06.00.46
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 08 Jun 2012 06:00:46 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 4328863B445
+	for <tosdr@googlegroups.com>; Fri,  8 Jun 2012 15:00:46 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id T48n+Ta-XfHs for <tosdr@googlegroups.com>;
+	Fri,  8 Jun 2012 15:00:40 +0200 (CEST)
+Received: from [192.168.141.188] (p54BD1FE9.dip.t-dialin.net [84.189.31.233])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id EFA6B63AF7A
+	for <tosdr@googlegroups.com>; Fri,  8 Jun 2012 15:00:39 +0200 (CEST)
+Message-ID: <1339160439.15509.1.camel@synclavier.lan>
+Subject: Re: [Bad] Facebook UI induces oversharing
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Fri, 08 Jun 2012 15:00:39 +0200
+In-Reply-To: <CA+aD3u3Z-4h7UuHZRqpjn80hUjD6ysi=+DhJZ-sMo27P99HizA@mail.gmail.com>
+References: <CA+aD3u1ocuuEhEp2yAE=zxeAp01ZEFwBRVtRzf=B7WyiA-kneQ@mail.gmail.com>
+	 <CA+aD3u3Z-4h7UuHZRqpjn80hUjD6ysi=+DhJZ-sMo27P99HizA@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le vendredi 08 juin 2012 =E0 14:31 +0200, Michiel de Jong a =E9crit :
+> we also talked about this last night, and Jan agrued that inducing
+> oversharing on purpose, against the interests of the user, is not evil
+> because (if i understood correctly) the user should understand that
+> facebook is not to be trusted, and the only way to be safe is not to
+> use facebook at all.=20
+
+That is a weird way to synthesise our discussion :)
+
+Let me synthesise my position:
+      * rating the UI is too subjective and it is going to far: you rate
+        facebook's UI because it's under scrutiny. Why don't you do it
+        evenly for other services?=20
+      * there's nothing wrong for the developers to try to push their
+        users to do something, they still have a right to develop the
+        product they want. In other words: if Facebook wants to be more
+        of a public sharing platform than of a private/very-limited
+        sharing platform they have the right to do it. To impose _your_
+        personal vision of what facebook should be to both faceboook
+        developers and to users who enjoy to publish everything they do
+        is wrong. In that case, Twitter also encourages 'oversharing'
+        because the default and the UI makes it public. Is that wrong?
+        No, if the user understands from the beginning that they give
+        the license to Twitter to do it.
+      * it is looking at the wrong problem. What we're doing is giving
+        the user the keys to understand what rights he's agreeing on
+        about with the service.  The ToS give us quite a clear picture
+        already that the license is _so broad for everything_ that
+        Facebook does not fit for private sharing, regardless of what
+        the UI looks like!
+
+TL;DR: too difficult and subjective to rate; the UI practices are going
+to be reflected in the ToS anyway; it's better to focus on ToS because
+they give a clearer picture of what's the service going to do (or able
+to do).
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

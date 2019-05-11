@@ -1,0 +1,148 @@
+Return-Path: <tosdr+bncBC3IF2OJ4QORB47CXKQAKGQEKJK326Q@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by nmboxes77-d.mgt.gandi.net (Postfix) with ESMTP id F413440910
+	for <anything@michielbdejong.com>; Tue,  9 Sep 2014 09:51:20 +0200 (CEST)
+Received: from mfilter18-d.gandi.net (mfilter18-d.gandi.net [217.70.178.146])
+	by spool.mail.gandi.net (Postfix) with ESMTP id EF593142267
+	for <anything@michielbdejong.com>; Tue,  9 Sep 2014 09:51:20 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter18-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.135])
+	by mfilter18-d.gandi.net (mfilter18-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id TNGnqn2OCa3X for <anything@michielbdejong.com>;
+	Tue,  9 Sep 2014 09:51:19 +0200 (CEST)
+Received: from mail-we0-x23d.google.com (mail-we0-x23d.google.com [IPv6:2a00:1450:400c:c03::23d])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 7384414228F
+	for <michiel@michielbdejong.com>; Tue,  9 Sep 2014 09:51:16 +0200 (CEST)
+Received: by mail-we0-f189.google.com with SMTP id u57sf395192wes.6
+        for <michiel@michielbdejong.com>; Tue, 09 Sep 2014 00:51:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:subject:message-id:mail-followup-to:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=v/BdmS+D4IapHK7IFO+IYsEB1nJuZQd8OYIq8OrDm70=;
+        b=f/dRq1bm2cb/T7sO1z1b0lp3dL2m1xyWTPIT1RlRi9Uh53TCMIlq0VDUtxFjfbhJq3
+         ccDroVU+G+RfdiXbSFly1a7F3feLUp6Grk8j11IQFYq1E1S4N/HUgzazbUWYa0w+jjc6
+         3PdEJCgC9vmJRKgynHpjFgvQVHOA10xX/x2kKzDj7s9e1V2BCVy8QHeMHLf85bOd6us2
+         ysHA/Rc8FIpxik+47JnjHvo1ISKx5eB+zkZQNQkuMceIz+NjrZbw22w6o5AVV0qfYJuX
+         aSB1bXu3Bwk3wOrt8QsaU+UTiQOc1fRe7m6PnMEgosvFNgPCudJr+Rl1tu0mxVO57aeE
+         jnow==
+X-Received: by 10.152.7.226 with SMTP id m2mr478731laa.0.1410249076337;
+        Tue, 09 Sep 2014 00:51:16 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.152.29.100 with SMTP id j4ls449578lah.52.gmail; Tue, 09 Sep
+ 2014 00:51:14 -0700 (PDT)
+X-Received: by 10.152.18.199 with SMTP id y7mr97511lad.9.1410249074984;
+        Tue, 09 Sep 2014 00:51:14 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id v3si765468wib.1.2014.09.09.00.51.14
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 09 Sep 2014 00:51:14 -0700 (PDT)
+Received-SPF: none (google.com: hugo@tosdr.org does not designate permitted sender hosts) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 5BC0B63A61A
+	for <tosdr@googlegroups.com>; Tue,  9 Sep 2014 09:51:14 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id eX2eWVoXc9SH for <tosdr@googlegroups.com>;
+	Tue,  9 Sep 2014 09:51:11 +0200 (CEST)
+Received: from localhost (unknown [IPv6:2a01:e35:242d:1bb0:3e77:e6ff:fe18:ed03])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 4085263A613
+	for <tosdr@googlegroups.com>; Tue,  9 Sep 2014 09:51:09 +0200 (CEST)
+Date: Tue, 9 Sep 2014 09:51:06 +0200
+From: Hugo Roy <hugo@tosdr.org>
+To: tosdr@googlegroups.com
+Subject: Re: [tosdr:3223] ToSBack: Policy Changes
+Message-ID: <20140909075106.GB14290@xps>
+Mail-Followup-To: tosdr@googlegroups.com
+References: <540e828db8769_7c674e0f02a39781@dragon.mail>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="uQr8t48UFsdbeI+V"
+Content-Disposition: inline
+In-Reply-To: <540e828db8769_7c674e0f02a39781@dragon.mail>
+User-Agent: Mutt/1.5.22.1 (2013-10-16)
+X-Original-Sender: hugo@tosdr.org
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=neutral
+ (google.com: hugo@tosdr.org does not designate permitted sender hosts) smtp.mail=hugo@tosdr.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+
+--uQr8t48UFsdbeI+V
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=E2=86=AA 2014-09-09 Tue 06:31, ToSBack <tosback@tosdr.org>:
+> comcast.com: Acceptable Use Policy for Xfinity Internet
+> twitter.com: Privacy Policy
+> twitter.com: Terms of Service
+> lastpass.com: Terms of Service
+>  These were changed in last night's crawl. Please have a look at the comm=
+it at https://github.com/tosdr/tosback2/commit/e5f7fbdaacf79c858c92e0f50492=
+9254df10cf80 to see the differences!
+
+I encourage you to have a look at Twitter's changes:
+
+https://github.com/tosdr/tosback2/commit/e5f7fbdaacf79c85?diff=3Dsplit#diff=
+-ebd907b6f577eab2c6311e42848d715dR37
+and
+https://github.com/tosdr/tosback2/commit/e5f7fbdaacf79c85?diff=3Dsplit#diff=
+-ebd907b6f577eab2c6311e42848d715dR75
+
+
+The main addition is =E2=80=9Ccommerce services=E2=80=9D whatever that mean=
+s --
+that includes that they will get your public information, maybe
+for other kinds of services (Now, if you connect that to the very
+broad Twitter's license on all CONTENT, it makes a lot of sense,
+right?).
+
+If you're wondering what public information is:
+
+https://github.com/tosdr/tosback2/commit/e5f7fbdaacf79c85?diff=3Dsplit#diff=
+-ebd907b6f577eab2c6311e42848d715dL32
+
+--=20
+Hugo Roy =20
+Project Lead, Terms of Service; Didn't Read <www.tosdr.org> =20
+=20
+Please use cryptography for email: see https://emailselfdefense.fsf.org/en/
+Merci d=E2=80=99utiliser la cryptographie pour l=E2=80=99email=C2=A0: voir =
+https://emailselfdefense.fsf.org/fr/
+
+--uQr8t48UFsdbeI+V
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUDrFqAAoJEI0CLJmz17eVL3QH/jKhzXqfXszoGqGIezAV9SRy
+LQ9EBqqfyznCgSi5HklpOueAW24Bz5M68v7GuJtvqTsLEElRJVCg6nVXdv6txJbT
+uYU56QffEK10jk+kS5MLUdWTg9lN2bY1xNFODU9UUVVzIBMJ+ZehJ3AZ9NpfhNvR
+rXddHw6CkTniCocR64Ld0t8J4oqdl/90kJvsd5uqNoTOErgxw9S5qghkdwEJdNqi
+t4qGEaYrG1sNoMBcqgCIj70jVxiqHqu5YFPLIaSwv6Sf1dslV6ojmY8kjvLCJyIn
+fu/rG1SjIXjluaRAy/5AM+bt9M1zBzWUAd4l5NiE54W2U3+ZARDhN7wgw0fGpKI=
+=/RWI
+-----END PGP SIGNATURE-----
+
+--uQr8t48UFsdbeI+V--

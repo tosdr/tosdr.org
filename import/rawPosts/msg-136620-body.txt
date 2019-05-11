@@ -1,0 +1,176 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.5.16 with SMTP id 16csp321615iof;
+        Sat, 10 Oct 2015 13:27:50 -0700 (PDT)
+X-Received: by 10.180.10.197 with SMTP id k5mr5764897wib.22.1444508870704;
+        Sat, 10 Oct 2015 13:27:50 -0700 (PDT)
+Return-Path: <tosdr+bncBCS4BZNHXMLRBPXJ4WYAKGQETCFYKLA@googlegroups.com>
+Received: from relay4-d.mail.gandi.net (relay4-d.mail.gandi.net. [2001:4b98:c:538::196])
+        by mx.google.com with ESMTPS id ft6si9857211wjb.92.2015.10.10.13.27.50
+        for <michiel@unhosted.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 10 Oct 2015 13:27:50 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCS4BZNHXMLRBPXJ4WYAKGQETCFYKLA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) client-ip=2001:4b98:c:538::196;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCS4BZNHXMLRBPXJ4WYAKGQETCFYKLA@googlegroups.com does not designate 2001:4b98:c:538::196 as permitted sender) smtp.mailfrom=tosdr+bncBCS4BZNHXMLRBPXJ4WYAKGQETCFYKLA@googlegroups.com;
+       dkim=pass header.i=@googlegroups.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool4-d.mgt.gandi.net [10.0.21.135])
+	by relay4-d.mail.gandi.net (Postfix) with ESMTP id 1B06617207C
+	for <michiel@unhosted.org>; Sat, 10 Oct 2015 22:27:50 +0200 (CEST)
+Received: from mfilter28-d.gandi.net (mfilter28-d.gandi.net [217.70.178.159])
+	by spool.mail.gandi.net (Postfix) with ESMTP id 0FD091422A0
+	for <michiel@unhosted.org>; Sat, 10 Oct 2015 22:27:50 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter28-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.135])
+	by mfilter28-d.gandi.net (mfilter28-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id tEOM6P5rrR1q for <michiel@unhosted.org>;
+	Sat, 10 Oct 2015 22:27:46 +0200 (CEST)
+Received: from mail-yk0-x23a.google.com (mail-yk0-x23a.google.com [IPv6:2607:f8b0:4002:c07::23a])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 59BEA14220B
+	for <michiel@michielbdejong.com>; Sat, 10 Oct 2015 22:27:43 +0200 (CEST)
+Received: by ykaf83 with SMTP id f83sf20305317yka.0
+        for <michiel@michielbdejong.com>; Sat, 10 Oct 2015 13:27:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:date:message-id:subject:from:to:content-type
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe;
+        bh=F/7NhCWXZhKVQJwPSQKCuHiJltlfrtNfm9vf0Fek4mE=;
+        b=j1QFPi4NXN6u3mrlfe7jhYP+n9Ip7ZF+6Vbhu5XYG34wpR1azWaD1srfjmp6ks1RiS
+         t2F4Pq6vmSOOiaIqvamK+Gqx0Uc/MvfwH8hoNXUpTk3tyH+3sV34egFfSGZHHu5PYjoD
+         FVsb5sVDhc8Bm7n64+8JpnJ9DDzsdO5aRIjUmoXePRbSPTy4tKfIkbDpDyfMvJ8xs9jk
+         QH+Hf3SYSvsTfuYCWXg6ilY2tssPlJrAbkuzcadfcoumxVQ1Bh7ShkYl0yrjvCU5HykQ
+         URMFY0Kvvu6GX00B2guFGK4CEo1VJ0SC+GZkdOjb6zXrmT0snf9zIo4qeG3qEWEgBPIN
+         SxNQ==
+X-Received: by 10.50.66.144 with SMTP id f16mr68867igt.14.1444508862422;
+        Sat, 10 Oct 2015 13:27:42 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.50.30.35 with SMTP id p3ls829182igh.8.canary; Sat, 10 Oct 2015
+ 13:27:41 -0700 (PDT)
+X-Received: by 10.50.114.2 with SMTP id jc2mr5502327igb.5.1444508861905;
+        Sat, 10 Oct 2015 13:27:41 -0700 (PDT)
+Received: from mail-vk0-x22f.google.com (mail-vk0-x22f.google.com. [2607:f8b0:400c:c05::22f])
+        by gmr-mx.google.com with ESMTPS id d15si288390vkf.0.2015.10.10.13.27.41
+        for <tosdr@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 10 Oct 2015 13:27:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of isilelilavea@gmail.com designates 2607:f8b0:400c:c05::22f as permitted sender) client-ip=2607:f8b0:400c:c05::22f;
+Received: by vkgc187 with SMTP id c187so5500337vkg.3
+        for <tosdr@googlegroups.com>; Sat, 10 Oct 2015 13:27:41 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.31.151.80 with SMTP id z77mr13141940vkd.18.1444508861732;
+ Sat, 10 Oct 2015 13:27:41 -0700 (PDT)
+Received: by 10.103.87.139 with HTTP; Sat, 10 Oct 2015 13:27:41 -0700 (PDT)
+Date: Sat, 10 Oct 2015 13:27:41 -0700
+Message-ID: <CAHdvzRyPBsUjS2s0WyUUW-OaUmg-7y=hKyRxruKKyZL+7fR0XQ@mail.gmail.com>
+Subject: [tosdr:3652] Please Review This site...
+From: Isileli Lavea <isilelilavea@gmail.com>
+To: tosdr@googlegroups.com
+Content-Type: multipart/alternative; boundary=001a1140f36e941e9a0521c5ed3b
+X-Original-Sender: isilelilavea@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of isilelilavea@gmail.com designates 2607:f8b0:400c:c05::22f
+ as permitted sender) smtp.mailfrom=isilelilavea@gmail.com;       dmarc=pass
+ (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/tosdr/subscribe>
+
+--001a1140f36e941e9a0521c5ed3b
+Content-Type: text/plain; charset=UTF-8
+
+I always here the guy telling everybody Im watching you like he is the
+NSA... https://indabamusic.com/legal I have nothing against they're music
+service but I hate the idea of this guy looking thru me like I'm glass or
+something. Please let me know what I can do on my part.
+*Israel Music*
+
+*SoundCloud <http://soundcloud.com/IAmIsraelMusic>*
+Facebook <https://www.facebook.com/IsraelMusicEntertainment>
+Twitter <http://twitter.com/IamIsraelMusic>
+
+This e-mail transmission may contain information that is proprietary,
+privileged and/or confidential and is intended exclusively for the
+person(s) to whom it is addressed. Any use, copying, retention or
+disclosure by any person other than the intended recipient or the intended
+recipient designees is strictly prohibited. If you have received this
+message in error, please notify the sender immediately by return e-mail and
+delete all copies. E-mails (including attachments) may be retained,
+monitored, and/or reviewed by the Company without further notice. E-mail
+may be produced at the request of regulators. The Company accepts no
+liability for any errors or omissions arising as a result of transmission.
+
+-- 
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/d/optout.
+
+--001a1140f36e941e9a0521c5ed3b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I always here the guy telling everybody Im watching you li=
+ke he is the NSA...=C2=A0<a href=3D"https://indabamusic.com/legal">https://=
+indabamusic.com/legal</a> I have nothing against they&#39;re music service =
+but I hate the idea of this guy looking thru me like I&#39;m glass or somet=
+hing. Please let me know what I can do on my part.<br clear=3D"all"><div><d=
+iv class=3D"gmail_signature"><div dir=3D"ltr"><font face=3D"&#39;arial blac=
+k&#39;, sans-serif" style=3D"font-size:small"><b>Israel Music</b></font><di=
+v style=3D"font-family:arial;font-size:small"><b><font face=3D"&#39;arial b=
+lack&#39;, sans-serif"><a href=3D"http://soundcloud.com/IAmIsraelMusic" sty=
+le=3D"color:rgb(17,85,204)" target=3D"_blank">SoundCloud</a><br></font></b>=
+</div><div style=3D"font-family:arial;font-size:small"><font face=3D"&#39;a=
+rial black&#39;, sans-serif"><a href=3D"https://www.facebook.com/IsraelMusi=
+cEntertainment" style=3D"color:rgb(17,85,204)" target=3D"_blank">Facebook</=
+a><br></font></div><div style=3D"font-family:arial;font-size:small"><font f=
+ace=3D"&#39;arial black&#39;, sans-serif"><a href=3D"http://twitter.com/Iam=
+IsraelMusic" style=3D"color:rgb(17,85,204)" target=3D"_blank">Twitter</a></=
+font><br></div><div style=3D"font-family:arial;font-size:small"><br></div><=
+div style=3D"font-family:arial;font-size:small"><span style=3D"border-colla=
+pse:collapse;color:rgb(0,0,128);font-family:&#39;Palatino Linotype&#39;;fon=
+t-size:x-small">This e-mail transmission may contain information that is pr=
+oprietary, privileged and/or confidential and is intended exclusively for t=
+he person(s) to whom it is addressed. Any use, copying, retention or disclo=
+sure by any person other than the intended recipient or the intended recipi=
+ent designees is strictly prohibited. If you have received this message in =
+error, please notify the sender immediately by return e-mail and delete all=
+ copies. E-mails (including attachments) may be retained, monitored, and/or=
+ reviewed by the Company without further notice. E-mail may be produced at =
+the request of regulators. The Company accepts no liability for any errors =
+or omissions arising as a result of transmission.</span></div></div></div><=
+/div>
+</div>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--001a1140f36e941e9a0521c5ed3b--

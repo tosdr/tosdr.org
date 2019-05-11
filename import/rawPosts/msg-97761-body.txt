@@ -1,0 +1,360 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.1.78 with SMTP id 14csp17802qek;
+        Sun, 30 Sep 2012 10:16:39 -0700 (PDT)
+Received: by 10.68.129.131 with SMTP id nw3mr35353557pbb.43.1349025398434;
+        Sun, 30 Sep 2012 10:16:38 -0700 (PDT)
+Return-Path: <tosdr+bncBC6JPJGM6UOBB5P4UGBQKGQEPQKYB4I@googlegroups.com>
+Received: from mail-pb0-f64.google.com (mail-pb0-f64.google.com [209.85.160.64])
+        by mx.google.com with ESMTPS id d8si4674998pay.91.2012.09.30.10.16.38
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 30 Sep 2012 10:16:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncBC6JPJGM6UOBB5P4UGBQKGQEPQKYB4I@googlegroups.com designates 209.85.160.64 as permitted sender) client-ip=209.85.160.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC6JPJGM6UOBB5P4UGBQKGQEPQKYB4I@googlegroups.com designates 209.85.160.64 as permitted sender) smtp.mail=tosdr+bncBC6JPJGM6UOBB5P4UGBQKGQEPQKYB4I@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by pbbrr13 with SMTP id rr13sf4745197pbb.29
+        for <michiel@unhosted.org>; Sun, 30 Sep 2012 10:16:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=EFedkKC0wAh+Lxzp1UKHe3fHOM8bRaaCqDI4LN2Tf5w=;
+        b=VWbqUCKN6AyRYEA9dtS415byn00GA60T2qnmytIc04K4cPk6Mar8+y8jX18Y6NmsOB
+         hNzCna+roHjUEtPKmtiqCDksyEqKoAOk8+qp3H82uexzY4YW4sJ9Ql2sNpAA+O4fzR8S
+         1AcGd4JNpZ9IN23KxGCpeZjcmU08Vf0KcvG33Xztoj0d1ZRHfgDEgV6x5M0t5SSLEYay
+         wyt68hPTWC0LuHlkYTc0gJfzcpy3s5NvraJjLsBg2KjTGHiuQdbS3730EfdTcEPcNNb0
+         XUYwNGx+KuC3YmWdF+ZXwedJsy9sTRLwrKp4blYbGfXeyfFCJlp6+OCgYHlSv/WSeIQ4
+         nlbg==
+Received: by 10.52.28.83 with SMTP id z19mr2507641vdg.20.1349025397708;
+        Sun, 30 Sep 2012 10:16:37 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.52.21.40 with SMTP id s8ls4487057vde.8.gmail; Sun, 30 Sep 2012
+ 10:16:37 -0700 (PDT)
+Received: by 10.58.254.39 with SMTP id af7mr3787696ved.41.1349025397246;
+        Sun, 30 Sep 2012 10:16:37 -0700 (PDT)
+Received: by 10.58.254.39 with SMTP id af7mr3787695ved.41.1349025397229;
+        Sun, 30 Sep 2012 10:16:37 -0700 (PDT)
+Received: from mail-vc0-f170.google.com (mail-vc0-f170.google.com [209.85.220.170])
+        by gmr-mx.google.com with ESMTPS id r14si770308vdu.1.2012.09.30.10.16.37
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sun, 30 Sep 2012 10:16:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tobi.lehman@gmail.com designates 209.85.220.170 as permitted sender) client-ip=209.85.220.170;
+Received: by vcbfo14 with SMTP id fo14so4726908vcb.29
+        for <tosdr@googlegroups.com>; Sun, 30 Sep 2012 10:16:37 -0700 (PDT)
+Received: by 10.220.210.193 with SMTP id gl1mr7024610vcb.58.1349025396915;
+ Sun, 30 Sep 2012 10:16:36 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.58.240.82 with HTTP; Sun, 30 Sep 2012 10:16:16 -0700 (PDT)
+In-Reply-To: <90ab20b0-4997-4d43-9ae2-d5b3f58cef16@googlegroups.com>
+References: <1aa39309-8c4f-423f-983a-5ee6997021c1@googlegroups.com>
+ <1346150606.19155.50.camel@synclavier.lan> <1346157270.19155.107.camel@synclavier.lan>
+ <cc6b8311-2342-490c-ab4b-468679424825@googlegroups.com> <afe9d12a-5191-45f8-8ae8-66f0f9e419ac@googlegroups.com>
+ <9263A72E-888A-41A8-9497-DB05BA268891@gmail.com> <90ab20b0-4997-4d43-9ae2-d5b3f58cef16@googlegroups.com>
+From: Tobi Lehman <tobi.lehman@gmail.com>
+Date: Sun, 30 Sep 2012 10:16:16 -0700
+Message-ID: <CAFvYCvfPuzv63qONiMSfK3u=qzLgZOyB6oYqYN=_hAJbeOt5MA@mail.gmail.com>
+Subject: Re: [tosdr:946] [Bad] App.net may change it's Terms of Service at any time
+To: tosdr@googlegroups.com
+X-Original-Sender: tobi.lehman@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of tobi.lehman@gmail.com designates 209.85.220.170 as permitted
+ sender) smtp.mail=tobi.lehman@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=bcaec54ee94a937f5104caee7385
+
+--bcaec54ee94a937f5104caee7385
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+That is true, without the notification and grace period, it's a bit like a
+bait and switch.
+
+On Sun, Sep 30, 2012 at 3:33 AM, Michiel de Jong <michiel@unhosted.org>wrot=
+e:
+
+> this point is also reviewed in Andrew Clout's blogpost about App.Net by
+> the way. The blogpost states 'if you use the service, you agree to the
+> terms [...] To be a safe, vigilant user, you need to pay attention to
+> changes to the terms of service =97 because if you keep using the service
+> after they change, then you have agreed to the new terms by default.' and
+> seems to conclude that this is acceptable. i think it would be nice if a
+> service  commits to pro-actively notifying their users. If it's impossibl=
+e
+> for a user to read all the terms of services they sign up for, then it's
+> definitely impossible to re-read them every 5 days. EFF's tosback2, of
+> which we now also run an instance, partially fixes that, but 5 days is ve=
+ry
+> little time for us to detect the changes, get someone on the case, review
+> the changes, post them discuss them, and rate them.
+>
+> So i would still say that to get full points, a service (any service, in
+> general) should pro-actively inform users of a change, and give them, say=
+,
+> two weeks to review the changes at leisure and to make an informed
+> decision about whether to accept the changes or leave the service (which =
+in
+> itself will presumably take some time to do) before being held to the
+> changed terms.
+>
+> On Friday, September 28, 2012 7:41:02 PM UTC+2, Tobi Lehman wrote:
+>
+>> That is fair.
+>>
+>> On Sep 28, 2012, at 10:39 AM, Michiel de Jong <mic...@unhosted.org>
+>> wrote:
+>>
+>> this was since updated, see https://groups.google.com/**
+>> d/topic/tosdr/I7i-2EM0GVY/**discussion<https://groups.google.com/d/topic=
+/tosdr/I7i-2EM0GVY/discussion>and
+>> https://alpha.app.net/**legal/terms/ <https://alpha.app.net/legal/terms/=
+>
+>>
+>> they will publish changes 5 days before they become effective, although
+>> they will not necessarily notify you.
+>>
+>> For now i'll change this from 'bad' to 'info'; once we have more data fo=
+r
+>> comparison we can define a better scale of how we rate ToS changes
+>> according to both the lead time and the method of notification.
+>>
+>> On Tuesday, August 28, 2012 7:08:50 PM UTC+2, Tobi Lehman wrote:
+>>>
+>>> Thank you Hugo, when does this data become available to the front-facin=
+g
+>>> site? (tos-dr.info)
+>>>
+>>> On Tuesday, August 28, 2012 5:34:55 AM UTC-7, Hugo Roy wrote:
+>>>>
+>>>> The data is online and available here:
+>>>> https://github.com/unhosted/**ToS-DR/blob/gh-pages/points/**
+>>>> MCGx3DtQHM8.json<https://github.com/unhosted/ToS-DR/blob/gh-pages/poin=
+ts/MCGx3DtQHM8.json>
+>>>>
+>>>> You can see how it compares to other services here:
+>>>> http://unhosted.github.com/**ToS-DR/topics.html#changes-**MCGx3DtQHM8<=
+http://unhosted.github.com/ToS-DR/topics.html#changes-MCGx3DtQHM8>
+>>>>
+>>>>
+>>>> --
+>>>> Hugo Roy
+>>>>   French Coordinator, FSFE       chat: hu...@jabber.fsfe.org
+>>>>   www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+>>>>                                  mobile DE: +49 151 143 56 563
+>>>>
+>>>>
+>> --
+>> www.tos-dr.info // www.twitter.com/tosdr //
+>> www.github.com/Unhosted/ToS-DR
+>> ---
+>> You received this message because you are subscribed to the Google Group=
+s
+>> "Terms of Service; Didn't Read" group.
+>> To post to this group, send email to to...@googlegroups.com.
+>> To unsubscribe from this group, send email to tosdr+un...@**
+>> googlegroups.com.
+>>
+>> Visit this group at http://groups.google.com/**group/tosdr?hl=3Den<http:=
+//groups.google.com/group/tosdr?hl=3Den>
+>> .
+>> For more options, visit https://groups.google.com/**groups/opt_out<https=
+://groups.google.com/groups/opt_out>
+>> .
+>>
+>>
+>>
+>>
+>>  --
+> www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-D=
+R
+> ---
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+>
+>
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--bcaec54ee94a937f5104caee7385
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+That is true, without the notification and grace period, it&#39;s a bit lik=
+e a bait and switch.<br><br><div class=3D"gmail_quote">On Sun, Sep 30, 2012=
+ at 3:33 AM, Michiel de Jong <span dir=3D"ltr">&lt;<a href=3D"mailto:michie=
+l@unhosted.org" target=3D"_blank">michiel@unhosted.org</a>&gt;</span> wrote=
+:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">this point is also reviewed in Andrew Clout&=
+#39;s blogpost about App.Net by the way.=A0The blogpost states &#39;<span s=
+tyle=3D"line-height:15px">if you use the service, you agree to the terms [.=
+..]=A0</span><span style=3D"line-height:15px">To be a safe, vigilant user, =
+you need to pay attention to changes to the terms of service =97 because if=
+ you keep using the service after they change, then you have agreed to the =
+new terms by default.&#39; and seems to conclude that this is acceptable. i=
+ think it would be nice if a service =A0commits to pro-actively notifying t=
+heir users. If it&#39;s impossible for a user to read all the terms of serv=
+ices they sign up for, then it&#39;s definitely impossible to re-read them =
+every 5 days. EFF&#39;s tosback2, of which we now also run an instance, par=
+tially fixes that, but 5 days is very little time for us to detect the chan=
+ges, get someone on the case, review the changes, post them discuss them, a=
+nd rate them.</span><div>
+
+<font color=3D"#000000"><span style=3D"line-height:15px"><br></span></font>=
+</div><div><font color=3D"#000000"><span style=3D"line-height:15px">So i wo=
+uld still say that to get full points, a service (any service, in general) =
+should pro-actively inform users of a change, and give them, say, two weeks=
+ to review the changes</span></font><span style=3D"line-height:15px">=A0</s=
+pan><span style=3D"line-height:15px">at leisure</span><span style=3D"line-h=
+eight:15px">=A0and to make an informed decision about whether to accept the=
+ changes or leave the service (which in itself will presumably take some ti=
+me to do) before being held to the changed terms.</span></div>
+
+<div><div class=3D"im"><br>On Friday, September 28, 2012 7:41:02 PM UTC+2, =
+Tobi Lehman wrote:</div><blockquote class=3D"gmail_quote" style=3D"margin:0=
+;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"><div style=
+=3D"word-wrap:break-word">
+
+That is fair.<div><br><div><div class=3D"im"><div>On Sep 28, 2012, at 10:39=
+ AM, Michiel de Jong &lt;<a>mic...@unhosted.org</a>&gt; wrote:</div><br></d=
+iv><blockquote type=3D"cite"><div class=3D"im">this was since updated, see=
+=A0<a href=3D"https://groups.google.com/d/topic/tosdr/I7i-2EM0GVY/discussio=
+n" target=3D"_blank">https://groups.google.com/<u></u>d/topic/tosdr/I7i-2EM=
+0GVY/<u></u>discussion</a> and=A0<a href=3D"https://alpha.app.net/legal/ter=
+ms/" target=3D"_blank">https://alpha.app.net/<u></u>legal/terms/</a><div>
+
+<br></div><div>they will publish changes 5 days before they become effectiv=
+e, although they will not necessarily notify you.</div><div><br></div><div>=
+For now i&#39;ll change this from &#39;bad&#39; to &#39;info&#39;; once we =
+have more data for comparison we can define a better scale of how we rate T=
+oS changes according to both the lead time and the method of notification.=
+=A0</div>
+
+<div><br>On Tuesday, August 28, 2012 7:08:50 PM UTC+2, Tobi Lehman wrote:<b=
+lockquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-=
+left:1px #ccc solid;padding-left:1ex">Thank you Hugo, when does this data b=
+ecome available to the front-facing site? (<a href=3D"http://tos-dr.info/" =
+target=3D"_blank">tos-dr.info</a>)<br>
+
+<br>On Tuesday, August 28, 2012 5:34:55 AM UTC-7, Hugo Roy wrote:<blockquot=
+e class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px=
+ #ccc solid;padding-left:1ex">The data is online and available here:
+<br><a href=3D"https://github.com/unhosted/ToS-DR/blob/gh-pages/points/MCGx=
+3DtQHM8.json" target=3D"_blank">https://github.com/unhosted/<u></u>ToS-DR/b=
+lob/gh-pages/points/<u></u>MCGx3DtQHM8.json</a>
+<br>
+<br>You can see how it compares to other services here:
+<br><a href=3D"http://unhosted.github.com/ToS-DR/topics.html#changes-MCGx3D=
+tQHM8" target=3D"_blank">http://unhosted.github.com/<u></u>ToS-DR/topics.ht=
+ml#changes-<u></u>MCGx3DtQHM8</a>
+<br>
+<br>
+<br>--=20
+<br>Hugo Roy=20
+<br>=A0 French Coordinator, FSFE =A0 =A0 =A0 chat: <a>hu...@jabber.fsfe.org=
+</a>
+<br>=A0 <a href=3D"http://www.fsfe.org/about/roy" target=3D"_blank">www.fsf=
+e.org/about/roy</a> =A0 =A0 =A0 =A0 mobile: <a href=3D"tel:%2B336%2008%2074=
+%2013%2041" value=3D"+33608741341" target=3D"_blank">+336 08 74 13 41</a>
+<br>=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0mobi=
+le DE: <a href=3D"tel:%2B49%20151%20143%2056%20563" value=3D"+4915114356563=
+" target=3D"_blank">+49 151 143 56 563</a>
+<br>
+<br></blockquote></blockquote></div><div><br></div>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=3D"_=
+blank">www.github.com/Unhosted/ToS-DR</a><br>
+
+
+--- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br></div>
+To post to this group, send email to <a>to...@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a>tosdr+un...@<u></u>googleg=
+roups.com</a>.<div class=3D"im"><br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/<u></u>group/tosdr?hl=3Den</a>=
+.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/<u></u>groups/opt_out</a>.<br=
+>
+=A0<br>
+=A0<br>
+</div></blockquote></div><br></div></div></blockquote></div><div class=3D"H=
+OEnZb"><div class=3D"h5">
+
+<p></p>
+
+-- <br>
+<a href=3D"http://www.tos-dr.info" target=3D"_blank">www.tos-dr.info</a> //=
+ <a href=3D"http://www.twitter.com/tosdr" target=3D"_blank">www.twitter.com=
+/tosdr</a> // <a href=3D"http://www.github.com/Unhosted/ToS-DR" target=3D"_=
+blank">www.github.com/Unhosted/ToS-DR</a><br>
+
+
+--- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om" target=3D"_blank">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com" target=3D"_blank">tosdr+unsubscribe@googlegroups=
+.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+" target=3D"_blank">http://groups.google.com/group/tosdr?hl=3Den</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+" target=3D"_blank">https://groups.google.com/groups/opt_out</a>.<br>
+=A0<br>
+=A0<br>
+</div></div></blockquote></div><br>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR<=
+br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--bcaec54ee94a937f5104caee7385--

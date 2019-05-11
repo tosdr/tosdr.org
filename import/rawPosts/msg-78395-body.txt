@@ -1,0 +1,202 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.125.4 with SMTP id x4csp88324wfc;
+        Fri, 29 Jun 2012 03:49:13 -0700 (PDT)
+Received: by 10.180.100.2 with SMTP id eu2mr3572517wib.10.1340966952787;
+        Fri, 29 Jun 2012 03:49:12 -0700 (PDT)
+Return-Path: <tosdr+bncCLH2hqjDHxCnkLb_BBoE5V-1rg@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id p3si4186918wia.6.2012.06.29.03.49.11
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 29 Jun 2012 03:49:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLH2hqjDHxCnkLb_BBoE5V-1rg@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLH2hqjDHxCnkLb_BBoE5V-1rg@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLH2hqjDHxCnkLb_BBoE5V-1rg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fanl9 with SMTP id l9sf2275256fan.29
+        for <multiple recipients>; Fri, 29 Jun 2012 03:49:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=uwBAA5vny11OSsux8FCgTDcAO6E/y/3VFAA3/Ja+PeI=;
+        b=Sc+7/HyEebgwdnhPX3Yu6+VxXnj9LnO/HxQNfTu6VLsL/6p/jJApqhtQwWQGtOaPup
+         rHEWE+NdwG2DctwXWSjtp8XEiteLrXjwjnQ9CA7nIK1IWtkoz7fzEy74GBL5HqOb37uV
+         +dcnyEksNOBrY7EwQMltv9syasbPqw/SgMT0o=
+Received: by 10.205.141.75 with SMTP id jd11mr34031bkc.29.1340966951062;
+        Fri, 29 Jun 2012 03:49:11 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.204.8.149 with SMTP id h21ls3589597bkh.3.gmail; Fri, 29 Jun
+ 2012 03:49:09 -0700 (PDT)
+Received: by 10.204.143.145 with SMTP id v17mr167143bku.7.1340966949531;
+        Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+Received: by 10.204.143.145 with SMTP id v17mr167141bku.7.1340966949501;
+        Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+Received: from mail-bk0-f51.google.com (mail-bk0-f51.google.com [209.85.214.51])
+        by gmr-mx.google.com with ESMTPS id k7si1804096bks.2.2012.06.29.03.49.09
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of markus.sabadello@gmail.com designates 209.85.214.51 as permitted sender) client-ip=209.85.214.51;
+Received: by bkcjg15 with SMTP id jg15so2558376bkc.38
+        for <tosdr@googlegroups.com>; Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.204.128.213 with SMTP id l21mr517250bks.128.1340966949276;
+ Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+Received: by 10.204.76.20 with HTTP; Fri, 29 Jun 2012 03:49:09 -0700 (PDT)
+In-Reply-To: <CA+aD3u38njseAKCOae5tEVxGPgc03zT+zO0pjWtjh5YkLALKTw@mail.gmail.com>
+References: <CA+aD3u38njseAKCOae5tEVxGPgc03zT+zO0pjWtjh5YkLALKTw@mail.gmail.com>
+Date: Fri, 29 Jun 2012 12:49:09 +0200
+Message-ID: <CAJF45PRF1A3PMZ2MirHzv5bbSUU+DsV2-Us=mRCyL4Jtgxchsg@mail.gmail.com>
+Subject: Re: is using webserver logs ok?
+From: Markus Sabadello <markus.sabadello@gmail.com>
+To: tosdr@googlegroups.com
+X-Original-Sender: markus.sabadello@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=pass (google.com:
+ domain of markus.sabadello@gmail.com designates 209.85.214.51 as permitted
+ sender) smtp.mail=markus.sabadello@gmail.com; dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=0015173ff30eaacae204c39a32b9
+
+--0015173ff30eaacae204c39a32b9
+Content-Type: text/plain; charset=ISO-8859-1
+
+Tarik of Personal has a great presentation about how personal data can end
+up in all kinds of places.
+See Slides 12 and 13 of this:
+http://www.slideshare.net/Personal_Inc/how-to-build-privacy-by-design-into-web-and-mobile
+
+
+Personal has written some special filtering code to make sure personal
+information doesn't end up in their server logs.
+
+Markus
+
+On Fri, Jun 29, 2012 at 12:39 PM, Michiel de Jong <michiel@unhosted.org>wrote:
+
+> There's a campaign called WirSpeichernNicht.de, which aims to convince
+> websites to not keep identifiable data in webserver logs. i think
+> logging should be switched off by default (that's better for
+> performance anyway), and only be used to mitigate DoS attacks and
+> such.
+>
+> The use of webserver logs to determine demographics of a website's
+> visitors is, i guess, *only* acceptable if data is anonymized before
+> it is stored. And anonymizing is not very easy technically, so should
+> be done with some care, and by people who know what they're doing,
+> before any logs are published to marketing departments or third
+> parties etcetera.
+>
+> right now, the default is that you're being tracked all the time, and
+> this creates a slippery slope. if we promote privacy by default, then
+> users can still opt-in to be counted in tracking experiments. this
+> also relates to the DoNotTrack header, i guess?
+>
+> just had a discussion with Hugo and Erkan about this, Hugo in
+> particular doesn't at all agree with me that this is a consumer's
+> right we should be defending... curious how important other people
+> find this topic!
+>
+> Cheers,
+> Michiel
+>
+> --
+> You received this message because you are subscribed to the Google Groups
+> "Terms of Service; Didn't Read" group.
+> To post to this group, send email to tosdr@googlegroups.com.
+> To unsubscribe from this group, send email to
+> tosdr+unsubscribe@googlegroups.com.
+> For more options, visit this group at
+> http://groups.google.com/group/tosdr?hl=en.
+>
+>
+
+-- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+
+
+--0015173ff30eaacae204c39a32b9
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Tarik of Personal has a great presentation about how personal data can end =
+up in all kinds of places.<div>See Slides 12 and 13 of this:=A0
+<a href=3D"http://www.slideshare.net/Personal_Inc/how-to-build-privacy-by-d=
+esign-into-web-and-mobile">http://www.slideshare.net/Personal_Inc/how-to-bu=
+ild-privacy-by-design-into-web-and-mobile</a>=A0</div><div><br></div><div>
+Personal has written some special filtering code to make sure personal info=
+rmation doesn&#39;t end up in their server logs.</div><div><br></div><div>M=
+arkus<br><br><div class=3D"gmail_quote">On Fri, Jun 29, 2012 at 12:39 PM, M=
+ichiel de Jong <span dir=3D"ltr">&lt;<a href=3D"mailto:michiel@unhosted.org=
+" target=3D"_blank">michiel@unhosted.org</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">There&#39;s a campaign called WirSpeichernNi=
+cht.de, which aims to convince<br>
+websites to not keep identifiable data in webserver logs. i think<br>
+logging should be switched off by default (that&#39;s better for<br>
+performance anyway), and only be used to mitigate DoS attacks and<br>
+such.<br>
+<br>
+The use of webserver logs to determine demographics of a website&#39;s<br>
+visitors is, i guess, *only* acceptable if data is anonymized before<br>
+it is stored. And anonymizing is not very easy technically, so should<br>
+be done with some care, and by people who know what they&#39;re doing,<br>
+before any logs are published to marketing departments or third<br>
+parties etcetera.<br>
+<br>
+right now, the default is that you&#39;re being tracked all the time, and<b=
+r>
+this creates a slippery slope. if we promote privacy by default, then<br>
+users can still opt-in to be counted in tracking experiments. this<br>
+also relates to the DoNotTrack header, i guess?<br>
+<br>
+just had a discussion with Hugo and Erkan about this, Hugo in<br>
+particular doesn&#39;t at all agree with me that this is a consumer&#39;s<b=
+r>
+right we should be defending... curious how important other people<br>
+find this topic!<br>
+<br>
+Cheers,<br>
+Michiel<br>
+<span class=3D"HOEnZb"><font color=3D"#888888"><br>
+--<br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+To unsubscribe from this group, send email to <a href=3D"mailto:tosdr%2Buns=
+ubscribe@googlegroups.com">tosdr+unsubscribe@googlegroups.com</a>.<br>
+For more options, visit this group at <a href=3D"http://groups.google.com/g=
+roup/tosdr?hl=3Den" target=3D"_blank">http://groups.google.com/group/tosdr?=
+hl=3Den</a>.<br>
+<br>
+</font></span></blockquote></div><br><br clear=3D"all"><div><br></div><br>
+</div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.<br />
+
+
+
+--0015173ff30eaacae204c39a32b9--

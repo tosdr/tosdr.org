@@ -1,0 +1,126 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.49.17.196 with SMTP id q4csp96419qed;
+        Sat, 18 Aug 2012 17:12:01 -0700 (PDT)
+Received: by 10.236.177.70 with SMTP id c46mr15160727yhm.33.1345335121680;
+        Sat, 18 Aug 2012 17:12:01 -0700 (PDT)
+Return-Path: <tosdr+bncCMW1zdL2DRDR3sCBBRoEOAVZ-A@googlegroups.com>
+Received: from mail-gg0-f192.google.com (mail-gg0-f192.google.com [209.85.161.192])
+        by mx.google.com with ESMTPS id z10si4812681ank.166.2012.08.18.17.12.01
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 18 Aug 2012 17:12:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCMW1zdL2DRDR3sCBBRoEOAVZ-A@googlegroups.com designates 209.85.161.192 as permitted sender) client-ip=209.85.161.192;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCMW1zdL2DRDR3sCBBRoEOAVZ-A@googlegroups.com designates 209.85.161.192 as permitted sender) smtp.mail=tosdr+bncCMW1zdL2DRDR3sCBBRoEOAVZ-A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by ggnh1 with SMTP id h1sf4621648ggn.29
+        for <multiple recipients>; Sat, 18 Aug 2012 17:12:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=huhbQ5rIFsTIyEaiQqaKPrmR88BFyrf0c8w/kUHkYz0=;
+        b=Xu/FhhAtLfoRWMW+hcFlxdJZt2sC9eTGqqARi0dV+EQJc5lByMYHGj+kapz/nS8lgo
+         4n+TnQsCyvPloG/c69LPFLlL5Hysi7VXgJQz5Vehm6q0gvel3yL8En6wS3qNuT0dQunE
+         Sm7wjTeREsZNXRI+ntsrBanhNBZgkPnu0KPXM=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:x-originating-ip:in-reply-to
+         :references:date:message-id:subject:from:to:x-gm-message-state
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type;
+        bh=huhbQ5rIFsTIyEaiQqaKPrmR88BFyrf0c8w/kUHkYz0=;
+        b=KczvJVE+BSfX/nzzPHW+N1rYT51p7YqdrluNauGpxU3at0mx40JNXAJjOQ3ovBCF3g
+         KGaA1jU+TE3V4daLPmj61BMqTo4XL+U20shGmsCs/NJATM5LLXM58hJW+vO7KdGy1qFs
+         2voO2WBx1YzkXcJqMzH7scYMkFxMvmHriu7wvePxhwbxxejEwbVc9MBNYDyjhNzRiyOb
+         rNEzSX2g0xUzC5M1m6egm0s8RUBpRgR0/PBwplXe3KcgWUgxki/Ek1E+UBFQcIqruB8u
+         Fmy9XN1CmIiK7asNazfleDXBxCrkg5MeekaeDbDoHI59T6h5ihzxD37VK/v0ewwRSmr4
+         8l3g==
+Received: by 10.236.87.71 with SMTP id x47mr2806587yhe.6.1345335121333;
+        Sat, 18 Aug 2012 17:12:01 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.236.44.174 with SMTP id n34ls12199790yhb.4.gmail; Sat, 18 Aug
+ 2012 17:12:00 -0700 (PDT)
+Received: by 10.236.185.226 with SMTP id u62mr6185218yhm.3.1345335120821;
+        Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+Received: by 10.236.185.226 with SMTP id u62mr6185217yhm.3.1345335120809;
+        Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+Received: from mail-qc0-f177.google.com (mail-qc0-f177.google.com [209.85.216.177])
+        by gmr-mx.google.com with ESMTPS id ft6si3043526qcb.0.2012.08.18.17.12.00
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.216.177 is neither permitted nor denied by best guess record for domain of indrora@earfolds.com) client-ip=209.85.216.177;
+Received: by qcsu28 with SMTP id u28so3929052qcs.36
+        for <tosdr@googlegroups.com>; Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.229.136.142 with SMTP id r14mr8284349qct.70.1345335120556;
+ Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+Received: by 10.224.211.196 with HTTP; Sat, 18 Aug 2012 17:12:00 -0700 (PDT)
+X-Originating-IP: [71.213.186.146]
+In-Reply-To: <1345196024.21269.YahooMailNeo@web110003.mail.gq1.yahoo.com>
+References: <1345196024.21269.YahooMailNeo@web110003.mail.gq1.yahoo.com>
+Date: Sat, 18 Aug 2012 18:12:00 -0600
+Message-ID: <CACjy-ZGUdLZEEKPr_29biojWN7cmmrPMzbOezoRep3dm3Eo+Wg@mail.gmail.com>
+Subject: Re: [tosdr:529] Steam - Multiple software licenses are bundled
+From: Morgan Gangwere <indrora@earfolds.com>
+To: tosdr@googlegroups.com
+X-Gm-Message-State: ALoCoQmwS4Ot33yuYTAi/W6EIxHy7gIvr/l/n2lmoBlQppYmzqhGbfJ3lRrJtCQexQm87mjJrfMh
+X-Original-Sender: indrora@earfolds.com
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.216.177 is neither permitted nor denied by best guess record for
+ domain of indrora@earfolds.com) smtp.mail=indrora@earfolds.com; dkim=neutral
+ (bad format) header.i=@earfolds.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Fri, Aug 17, 2012 at 3:33 AM, Drummer <thedrumr12@yahoo.com> wrote:
+> Loose all rights of ownership to software on cancelation.  Similar to the
+> no-refund clause, but affects everything that is bundled.  This just makes
+> "Valve can cancel your account at any time." even worse.
+>
+
+[snip!]
+
+I'll chime in here: The services which require an external
+authentication are rarely dependent on steam for any of their
+authentication other than "Oh, its Steam."
+
+This means that you're more than free to (e.g.) go find a (semi) legit
+copy of the game, install, use your authentication, etc. A good
+example is DEFCON, which requires a CD key. I wrote down my CD key,
+installed from an installer off TPB, used my key, and it worked. No
+problem.
+
+> World of Warcraft
+>
+> Must use real name on the required battle.net service.
+
+Which doesn't magically go away when you don't use Steam anymore.
+
+-- 
+my .sigfile is on vacation.
+I filter everything with an application/ms-* mimetype.
+I write code: https://github.com/indrora/ https://bitbucket.org/indrora/
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/Unhosted/ToS-DR
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

@@ -1,0 +1,147 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.107.17.193 with SMTP id 62csp1566374ior;
+        Mon, 18 Apr 2016 13:19:15 -0700 (PDT)
+X-Received: by 10.31.162.3 with SMTP id l3mr19597301vke.68.1461010755103;
+        Mon, 18 Apr 2016 13:19:15 -0700 (PDT)
+Return-Path: <tosdr+bncBCM7F4MB2ALRBPMC2W4AKGQEFBHQBAI@googlegroups.com>
+Received: from relay2-d.mail.gandi.net (relay2-d.mail.gandi.net. [217.70.183.194])
+        by mx.google.com with ESMTPS id r79si14321203vkf.21.2016.04.18.13.19.14
+        for <michiel@unhosted.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 18 Apr 2016 13:19:15 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning tosdr+bncBCM7F4MB2ALRBPMC2W4AKGQEFBHQBAI@googlegroups.com does not designate 217.70.183.194 as permitted sender) client-ip=217.70.183.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com;
+       dkim=pass header.i=@gmail.com;
+       spf=softfail (google.com: domain of transitioning tosdr+bncBCM7F4MB2ALRBPMC2W4AKGQEFBHQBAI@googlegroups.com does not designate 217.70.183.194 as permitted sender) smtp.mailfrom=tosdr+bncBCM7F4MB2ALRBPMC2W4AKGQEFBHQBAI@googlegroups.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by relay2-d.mail.gandi.net (Postfix) with ESMTP id 0EA4EC5A54
+	for <michiel@unhosted.org>; Mon, 18 Apr 2016 22:19:13 +0200 (CEST)
+Received: from mfilter43-d.gandi.net (mfilter43-d.gandi.net [217.70.178.174])
+	by spool.mail.gandi.net (Postfix) with ESMTP id ED710116154
+	for <michiel@unhosted.org>; Mon, 18 Apr 2016 22:19:13 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter43-d.gandi.net
+Received: from spool.mail.gandi.net ([IPv6:::ffff:10.0.21.134])
+	by mfilter43-d.gandi.net (mfilter43-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id Mck7ZFb4NIJ3 for <michiel@unhosted.org>;
+	Mon, 18 Apr 2016 22:19:12 +0200 (CEST)
+Received: from mail-qg0-x23c.google.com (mail-qg0-x23c.google.com [IPv6:2607:f8b0:400d:c04::23c])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 1A0BF116151
+	for <michiel@michielbdejong.com>; Mon, 18 Apr 2016 22:19:11 +0200 (CEST)
+Received: by mail-qg0-x23c.google.com with SMTP id c6sf32815737qga.0
+        for <michiel@michielbdejong.com>; Mon, 18 Apr 2016 13:19:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=sender:date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=duXTjG8Bs0WZvRmb/dtq5LNSTm4ToCrEPjOun5gxY/M=;
+        b=F3zkd4tIOiaDSfVQUDvvcPLN4DX8yD+Uv5Mk+CVG2Nmzl1BFb8jBV51VT6ritXmq0C
+         kD0yD5GVB5XuhQdgyh8UfmcjYVuh4Kl1DYku7XaLiGQCSlcSyr0cjqxqc0JbuNFrMObD
+         VQLwjFJavmuQYAnHAmVZ3lU/DOmVB62hDuQPzoxAdYQpPe7W8EGkH+V2PYVsaGawjnAy
+         ohh+z9BfnVs0QZ1nRahg+6ObKyrPOsmYRotCaQbhY1XmABVb38ncCMk9tO6/tknnNikg
+         tAFTvb9z06SFHqnRnNul6/8aqaU0iq9bPSrHr7mPP/FyM5baU7YLk7aVWkgpFtCBpGa+
+         st1Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=duXTjG8Bs0WZvRmb/dtq5LNSTm4ToCrEPjOun5gxY/M=;
+        b=M+2Go9M6GiNcq0GXdhDUOfyOfgPQ4V7J2HU0H9qJWUwc02Jmtz0a6vD9e8Ue0lOL9I
+         DCuZGqX84C3L3iVtQ6At7lWHSpFzjw/4Tuz0RblmkGCn7fWi1HYCwgGPtppO1SZSnrYn
+         Rd0Sa+PSD5B28WOmkkro1oDLMxyo96ArD75k15zzlaOPXrqCXnB5ITtb60xFATlQ8e4Y
+         667obLj8h8phILV+e+K7fOCFK0NMNMPteNXO8/yvGakeePQXIR3QSyNqv4IXdGo6tTFQ
+         LVe2/2/5XskkmbNgc/O8IT2QyM+7662xuDWOV8xlKURxiC8rtyCX416TV68PlfIwGT+0
+         yvig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=sender:x-gm-message-state:date:from:to:cc:message-id:in-reply-to
+         :references:subject:mime-version:x-original-sender:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-subscribe:list-unsubscribe;
+        bh=duXTjG8Bs0WZvRmb/dtq5LNSTm4ToCrEPjOun5gxY/M=;
+        b=jDJ3xnVscGOuVHijc8gdm8NeBLm2WAqm3Cl6jeBqYZYpzmrbAikh5o4G+odDTqpEsU
+         Q5FEIICvC5X6Ge+vsr+h4CIBGMTnmxLRDto2tQRvAzv9Dq0EgzcsZz8eD9p/Vp7N+1gA
+         RoVxNrxALn8gHyq3Rj4oWE0O+q/az9DWAkxFK3KpJaoQg1yy1XYBmvFww+tooS0Yzdkl
+         /3wQp805mHVUA37+B0wH98SNLm776NzkSmRD0p76WOF+us1BnnK4lOphBYfxZnVbufYS
+         gHSCJbU1JBzvul0cnHoz30urtaSCBmramWTBHHAEh5QdDcGBBjypOb2nL44LvtGkePPn
+         N0zw==
+Sender: tosdr@googlegroups.com
+X-Gm-Message-State: AOPr4FVJfFHgilzLCcC+sptRApH8Vraio0ypvc7x2kZq0c0CdKNPMy7L5U06JTvoCVFmjg==
+X-Received: by 10.157.9.104 with SMTP id 95mr348184otp.0.1461010750440;
+        Mon, 18 Apr 2016 13:19:10 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.182.250.168 with SMTP id zd8ls312484obc.57.gmail; Mon, 18 Apr
+ 2016 13:19:09 -0700 (PDT)
+X-Received: by 10.157.26.120 with SMTP id u53mr53780otu.18.1461010749783;
+        Mon, 18 Apr 2016 13:19:09 -0700 (PDT)
+Date: Mon, 18 Apr 2016 13:19:09 -0700 (PDT)
+From: dmland@gmail.com
+To: "Terms of Service; Didn't Read" <tosdr@googlegroups.com>
+Cc: froyoshark@gmail.com
+Message-Id: <7b6a1e99-4210-4a77-a2a4-15350037f561@googlegroups.com>
+In-Reply-To: <8f182d19-b7e7-4c27-ae54-804d93fedc52@googlegroups.com>
+References: <1343227762.3786.18.camel@synclavier.lan>
+ <8f182d19-b7e7-4c27-ae54-804d93fedc52@googlegroups.com>
+Subject: [tosdr:3829] Re: GitHub wants you to defend and indemnify them
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_464_1246489253.1461010749201"
+X-Original-Sender: dmland@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Spam-Checked-In-Group: tosdr@googlegroups.com
+X-Google-Group-Id: 966240515290
+List-Post: <https://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/tosdr
+List-Subscribe: <https://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/tosdr/subscribe>
+
+------=_Part_464_1246489253.1461010749201
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Monday, June 8, 2015 at 1:58:06 AM UTC-7, froyo...@gmail.com wrote:
+=20
+> Is there a problem with this? If they get in trouble for something you di=
+d, it's on you, not them.
+
+I would imagine that a good number of people could be uncomfortable with "Y=
+ou =E2=80=A6=C2=A0shall indemnify GitHub for =E2=80=A6 reasonable attorney=
+=E2=80=99s fees incurred by GitHub in connection with any such claim, deman=
+d, suit or proceeding;"
+
+I have no idea how much GitHub's lawyers are paid or how quickly they work,=
+ so I'm not too sanguine about my fiscal prospects should someone with big =
+lawyers and deep pockets go after GitHub because of something I may have do=
+ne, perhaps inadvertently.
+
+Even if GitHub "promptly gives You written notice of the claim, demand, sui=
+t or proceeding;", their lawyers' time is not going to be zero, and expense=
+s could mount.
+
+--=20
+[!!] Please see https://edit.tosdr.org -- this is where new contributions s=
+hould be submitted and discussed
+
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at https://groups.google.com/group/tosdr.
+To view this discussion on the web visit https://groups.google.com/d/msgid/=
+tosdr/7b6a1e99-4210-4a77-a2a4-15350037f561%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_464_1246489253.1461010749201--

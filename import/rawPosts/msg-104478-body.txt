@@ -1,0 +1,167 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.244.74 with SMTP id xe10csp102351vec;
+        Thu, 6 Dec 2012 10:50:17 -0800 (PST)
+Received: by 10.52.69.39 with SMTP id b7mr1698626vdu.124.1354819816747;
+        Thu, 06 Dec 2012 10:50:16 -0800 (PST)
+Return-Path: <tosdr+bncBDN6VPFO2IJBBZWRQODAKGQEYD3UKTQ@googlegroups.com>
+Received: from mail-vc0-f191.google.com (mail-vc0-f191.google.com [209.85.220.191])
+        by mx.google.com with ESMTPS id a4si7778722vdi.55.2012.12.06.10.50.16
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Thu, 06 Dec 2012 10:50:16 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBZWRQODAKGQEYD3UKTQ@googlegroups.com designates 209.85.220.191 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBDN6VPFO2IJBBZWRQODAKGQEYD3UKTQ@googlegroups.com designates 209.85.220.191 as permitted sender) smtp.mail=tosdr+bncBDN6VPFO2IJBBZWRQODAKGQEYD3UKTQ@googlegroups.com; dkim=pass header.i=@gmail.com
+Received: by mail-vc0-f191.google.com with SMTP id fo13sf3548998vcb.28
+        for <michiel@unhosted.org>; Thu, 06 Dec 2012 10:50:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=v+v7f+SavyTlnvUCMIBCsiuWhX2RVoBYCirPPoNluEA=;
+        b=L+NMjW1IZONIkb7Shen+v4B3voHA8BRMS/qlqE1+EcRDPLpnZx+f07A0eU4PMx/joW
+         2FoE/x0t1pdkcjshbU8wIcgR7bVXynxLUmKxvDTTflAdbQw4o1NiC0PTMZAV6Qpjy/46
+         chStzUwy8AB4I7xfNv4iqVVV+zdC/939tS5gZaS3h5SGtGz04Y2vAJAv1o2AsCNKQXEK
+         wCD8WCvfJslyczl73O2V2DvtUyoNOSNGCxzZzAcBeYuCuJzOUfb7JGdhqRD1rQYQap8E
+         wLEFAIr5zOYh44FHzoKL6hJdZjQgLJV2PYbkR8H/NAFRtH8zjgAGBT1+oy76xpvl+PQF
+         B+zw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:date:from:to:cc:message-id:in-reply-to:references
+         :subject:mime-version:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-google-group-id:list-post:list-help
+         :list-archive:sender:list-subscribe:list-unsubscribe:content-type;
+        bh=v+v7f+SavyTlnvUCMIBCsiuWhX2RVoBYCirPPoNluEA=;
+        b=y2Taalrusuge5b3Qdnhh5IBKfhYmnr7BfLSOBJ5GVfPVsacDPSLk6rHf1OCi8OC5Nq
+         y8LuoUbQng075PnpwP1reUqTvGdc4dlFpqAc7OHmtEtVB2yG9cKsGwbhaEtldvgS1uVL
+         ZhzKR4vkb0IOnT/oQB9a6Z115GSTDHMhmsEbegdpqHxgVOzarD78GR9QtFmdAvTPZ7Se
+         musziYPohWpqJ0tGe0U/aaazN2HLMN2KVpewLRa7RyE+5KvB9zFJSTqcZ4NfWSH9o6GH
+         EIuM4Wg8H59l02FiRCIbfqiuhAt8vhaiM8evcunrnqfn6vtKaOEKUFQKSW7HAZh62Bmh
+         HZHA==
+Received: by 10.49.63.164 with SMTP id h4mr551729qes.39.1354819816036;
+        Thu, 06 Dec 2012 10:50:16 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.41.3 with SMTP id b3ls1778299qel.81.gmail; Thu, 06 Dec 2012
+ 10:50:14 -0800 (PST)
+Received: by 10.49.96.196 with SMTP id du4mr568144qeb.37.1354819814345;
+        Thu, 06 Dec 2012 10:50:14 -0800 (PST)
+Date: Thu, 6 Dec 2012 10:50:12 -0800 (PST)
+From: Robin Monks <devlinks@gmail.com>
+To: tosdr@googlegroups.com
+Cc: michiel@michielbdejong.com
+Message-Id: <606d4488-e7b8-4dbc-bc38-c6a083bef137@googlegroups.com>
+In-Reply-To: <63617c24-55b4-4d99-be01-de34fe71dc76@googlegroups.com>
+References: <1354788559.2777733403709482@mf14.sendgrid.net>
+ <63617c24-55b4-4d99-be01-de34fe71dc76@googlegroups.com>
+Subject: [tosdr:1235] Re: [Bad] Yahoo! fails to implement https
+MIME-Version: 1.0
+X-Original-Sender: devlinks@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_807_21796273.1354819812940"
+
+------=_Part_807_21796273.1354819812940
+Content-Type: text/plain; charset=ISO-8859-1
+
+Also a few screenshots:
+1) SSL setting in Yahoo Mail options:
+http://cdn.podhurl.com/image/30340E3k2c3Z
+2) Login form is https:
+http://cdn.podhurl.com/image/342n15013L2m
+3) Registration form is https:
+http://cdn.podhurl.com/image/1q1h0I010l13
+
+It would seem all sensitive areas so use SSL, at least here in Canada. Can 
+someone verify this for Yahoo in the US?
+
+/Robin
+
+On Thursday, December 6, 2012 11:25:17 AM UTC-4, Robin Monks wrote:
+>
+> It doesn't mean all accounts are vulnerable at once; just that you are 
+> incredibly open to man-in-the-middle attacks, correct?
+>
+> On Thursday, December 6, 2012 6:09:19 AM UTC-4, mic...@michielbdejong.comwrote:
+>>
+>> Yahoo! has repeatedly been urged by consumer rights organizations to 
+>> adopt HTTPS, but has taken no visible steps to do so. 
+>> This means criminals can access your user data, without a warrant, for 
+>> all Yahoo! accounts. That is pretty bad. 
+>>
+>> https://www.accessnow.org/blog/2012/11/15/access-civil-society-sign-open-letter-to-yahoo-ceo-urging-implementation-of 
+>>
+>> Ciao, 
+>> Michiel 
+>>
+>
+
+-- 
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+--- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=en.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+------=_Part_807_21796273.1354819812940
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Also a few screenshots:<div>1) SSL setting in Yahoo Mail options:</div><div=
+>http://cdn.podhurl.com/image/30340E3k2c3Z<br></div><div>2) Login form is h=
+ttps:</div><div>http://cdn.podhurl.com/image/342n15013L2m<br></div><div>3) =
+Registration form is https:</div><div>http://cdn.podhurl.com/image/1q1h0I01=
+0l13<br></div><div><br>It would seem all sensitive areas so use SSL, at lea=
+st here in Canada. Can someone verify this for Yahoo in the US?</div><div><=
+br></div><div>/Robin<br><br>On Thursday, December 6, 2012 11:25:17 AM UTC-4=
+, Robin Monks wrote:<blockquote class=3D"gmail_quote" style=3D"margin: 0;ma=
+rgin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: 1ex;">It doesn't=
+ mean all accounts are&nbsp;vulnerable&nbsp;at once; just that you are incr=
+edibly open to man-in-the-middle attacks, correct?<br><br>On Thursday, Dece=
+mber 6, 2012 6:09:19 AM UTC-4, <a>mic...@michielbdejong.com</a> wrote:<bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0;margin-left:0.8ex;border-lef=
+t:1px #ccc solid;padding-left:1ex">Yahoo! has repeatedly been urged by cons=
+umer rights organizations to adopt HTTPS, but has taken no visible steps to=
+ do so.
+<br>This means criminals can access your user data, without a warrant, for =
+all Yahoo! accounts. That is pretty bad.
+<br><a href=3D"https://www.accessnow.org/blog/2012/11/15/access-civil-socie=
+ty-sign-open-letter-to-yahoo-ceo-urging-implementation-of" target=3D"_blank=
+">https://www.accessnow.org/<wbr>blog/2012/11/15/access-civil-<wbr>society-=
+sign-open-letter-to-<wbr>yahoo-ceo-urging-<wbr>implementation-of</a>
+<br>
+<br>Ciao,
+<br>Michiel
+<br></blockquote></blockquote></div>
+
+<p></p>
+
+-- <br />
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr?hl=3Den=
+">http://groups.google.com/group/tosdr?hl=3Den</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+------=_Part_807_21796273.1354819812940--

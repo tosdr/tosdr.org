@@ -1,0 +1,104 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp560wfj;
+        Wed, 20 Jun 2012 17:32:08 -0700 (PDT)
+Received: by 10.229.134.212 with SMTP id k20mr13349298qct.43.1340238728076;
+        Wed, 20 Jun 2012 17:32:08 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxCH14n_BBoEpWN0RQ@googlegroups.com>
+Received: from mail-qa0-f64.google.com (mail-qa0-f64.google.com [209.85.216.64])
+        by mx.google.com with ESMTPS id s1si437744qct.123.2012.06.20.17.32.07
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 17:32:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxCH14n_BBoEpWN0RQ@googlegroups.com designates 209.85.216.64 as permitted sender) client-ip=209.85.216.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxCH14n_BBoEpWN0RQ@googlegroups.com designates 209.85.216.64 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxCH14n_BBoEpWN0RQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by qady1 with SMTP id y1sf230549qad.29
+        for <multiple recipients>; Wed, 20 Jun 2012 17:32:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=3h6Q1HKCClYueNEwS1F5kUL2n1qNzIt/b1ko8Dvv/40=;
+        b=ojAXWOlUmgPF+TjPPF/quQ7Cr0WiQeA6puHP9fGSOoDN1oTOwxhz0T7XL2s3Mi6M2e
+         8KdtFrMUXXr+cGqg+RbySlI1qXqYSIIu3hL/j8r1ypzZx07BHu/eJEwi7yyIk8gB5tP7
+         TH+P+7mRaUVR4ESvCG3b/PuXumVC5jbvmK2l0=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type
+         :content-transfer-encoding;
+        bh=3h6Q1HKCClYueNEwS1F5kUL2n1qNzIt/b1ko8Dvv/40=;
+        b=I6Clwqzfr+Z9HMJHudqOIzrIJKpFGmWU4AMjmRKxG0yPX1AQdf19liXvpEnQA0MTxy
+         /DfcGrA4DtzdazhE8ctFtaE3eSa6yiQoKuX8rkLCjxwv7fxjJdVGkf5iWyLr9DoEPxWP
+         4yKXVUwwbjeMRULEA2rP3pxOrShU6wP8HJ81mGBPKHcQNznWrmliKBbyrYISsc3p/p1S
+         bvgOBDtVFK+3+edaeUcvIMQBmA05x/b3wSGOgmNX71yG2plO+rkNcN5d37d1PYk5ld85
+         +EVuqVZR0la2osyOPgZjunk8jemgBP1rVCpNTQUDWbCh9W2Oxf3u0453uamNWPUfTFaE
+         e49Q==
+Received: by 10.68.135.99 with SMTP id pr3mr417470pbb.5.1340238727074;
+        Wed, 20 Jun 2012 17:32:07 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.211.194 with SMTP id ne2ls608040pbc.9.gmail; Wed, 20 Jun
+ 2012 17:32:06 -0700 (PDT)
+Received: by 10.68.193.129 with SMTP id ho1mr24407157pbc.8.1340238726776;
+        Wed, 20 Jun 2012 17:32:06 -0700 (PDT)
+Received: by 10.68.193.129 with SMTP id ho1mr24407156pbc.8.1340238726767;
+        Wed, 20 Jun 2012 17:32:06 -0700 (PDT)
+Received: from mail-pz0-f47.google.com (mail-pz0-f47.google.com [209.85.210.47])
+        by gmr-mx.google.com with ESMTPS id tf10si2903028pbc.0.2012.06.20.17.32.06
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 20 Jun 2012 17:32:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.210.47 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.210.47;
+Received: by dalh21 with SMTP id h21so74298dal.34
+        for <tosdr@googlegroups.com>; Wed, 20 Jun 2012 17:32:06 -0700 (PDT)
+Received: by 10.68.227.198 with SMTP id sc6mr82013786pbc.138.1340238726429;
+ Wed, 20 Jun 2012 17:32:06 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Wed, 20 Jun 2012 17:31:46 -0700 (PDT)
+X-Originating-IP: [76.126.240.28]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Wed, 20 Jun 2012 17:31:46 -0700
+Message-ID: <CABQMFTTOtEyjMzmWtYiXCJBo3MqPoyu2YRZf5Wr0QDbDfmnCWA@mail.gmail.com>
+Subject: [Good] Newsblur allows import & export, is open source
+To: =?windows-1252?Q?Terms_of_Service=2C_Didn=92t_Read?= <tosdr@googlegroups.com>
+X-Gm-Message-State: ALoCoQmgj1bMSlra/1lXuNa6iOiYdRAhQ3mBmQmLVTpIel2C3T6rMGurVjTmviOjdvSCZUYdeD4U
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.210.47 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Newsblur is a feed reader which allows for easy OPML import & export,
+also Google reader import: http://newsblur.com
+
+On top of that, it=92s free software (MIT) https://github.com/samuelclay/Ne=
+wsBlur
+
+Also, you only need a username to use the service. Password and email
+are completely optional, which is good for anonymity.
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn&#39;t Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

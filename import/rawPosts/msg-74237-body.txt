@@ -1,0 +1,156 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.68.57.102 with SMTP id h6csp166351pbq;
+        Wed, 6 Jun 2012 10:38:21 -0700 (PDT)
+Received: by 10.216.80.212 with SMTP id k62mr5802560wee.18.1339004300472;
+        Wed, 06 Jun 2012 10:38:20 -0700 (PDT)
+Return-Path: <tosdr+bncCLaC6cnkHRCKq77-BBoE2j4k6A@googlegroups.com>
+Received: from mail-fa0-f64.google.com (mail-fa0-f64.google.com [209.85.161.64])
+        by mx.google.com with ESMTPS id w51si821817wew.109.2012.06.06.10.38.19
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 06 Jun 2012 10:38:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCLaC6cnkHRCKq77-BBoE2j4k6A@googlegroups.com designates 209.85.161.64 as permitted sender) client-ip=209.85.161.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCLaC6cnkHRCKq77-BBoE2j4k6A@googlegroups.com designates 209.85.161.64 as permitted sender) smtp.mail=tosdr+bncCLaC6cnkHRCKq77-BBoE2j4k6A@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by fanl9 with SMTP id l9sf4247311fan.29
+        for <michiel@unhosted.org>; Wed, 06 Jun 2012 10:38:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Mmp5VhhcgCx77F4yNpqq9eiSMYIp+NNEFj3qgHOEUFg=;
+        b=7MCIwXHhpIYz5sc6JjoUb8ByLjIzERxJ9Eikvwp0nq5U0hD2kYejBhMtKwgxnnAt8r
+         e6NP45wcKPNvOUx2/G+HA5CRLQeBY6Rk2hwG2q4MoSlr46clIrq9gQ45gC2Ufp44ECNP
+         XfG9XjI8i3g94uzyLbagszw4AzoBlEaml7EdY=
+Received: by 10.216.88.79 with SMTP id z57mr576381wee.43.1339004299395;
+        Wed, 06 Jun 2012 10:38:19 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.14.27.200 with SMTP id e48ls127812eea.8.gmail; Wed, 06 Jun
+ 2012 10:38:18 -0700 (PDT)
+Received: by 10.14.27.203 with SMTP id e51mr6514035eea.12.1339004298101;
+        Wed, 06 Jun 2012 10:38:18 -0700 (PDT)
+Received: by 10.14.27.203 with SMTP id e51mr6514033eea.12.1339004298060;
+        Wed, 06 Jun 2012 10:38:18 -0700 (PDT)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [217.69.89.162])
+        by gmr-mx.google.com with ESMTPS id v14si417507eef.2.2012.06.06.10.38.17
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 06 Jun 2012 10:38:18 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.89.162 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=217.69.89.162;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 7B60C63A60A
+	for <tosdr@googlegroups.com>; Wed,  6 Jun 2012 19:38:17 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7TeRFGZotfRC for <tosdr@googlegroups.com>;
+	Wed,  6 Jun 2012 19:38:11 +0200 (CEST)
+Received: from [192.168.2.196] (p5795B0D8.dip.t-dialin.net [87.149.176.216])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 4186F63B431
+	for <tosdr@googlegroups.com>; Wed,  6 Jun 2012 19:38:06 +0200 (CEST)
+Message-ID: <1339004285.4265.49.camel@synclavier.lan>
+Subject: Re: What's the right balance in a copyright license for publishing
+ over "social networks"?
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Date: Wed, 06 Jun 2012 19:38:05 +0200
+In-Reply-To: <CA+aD3u2f+vRaQ9aw---Uh4WFtRYKWoTBBLXeF6aR4UCtbOcMBw@mail.gmail.com>
+References: <1339001575.4265.32.camel@synclavier.lan>
+	 <CA+aD3u2f+vRaQ9aw---Uh4WFtRYKWoTBBLXeF6aR4UCtbOcMBw@mail.gmail.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.2.2-1+b1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 217.69.89.162 is neither permitted nor denied by best guess record for domain
+ of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Le mercredi 06 juin 2012 =E0 19:12 +0200, Michiel de Jong a =E9crit :
+> this is 'Ownership' on http://tos-dr.info/
+
+Right, it also touches upon the relationship w/ 3rd parties.
+
+> i would distinguish three user stories: publishing publicly,
+> publishing to a limited audience, uploading for private use.
+>=20
+> in the first case, obviously you need to grant a license, and i think
+> it doesn't matter if this is transferrable or creative commons
+
+So what about a case where for instance on SeenThis you can publish
+under a CC-non commercial license, or a non-derivative? Compare that to
+Twitter which gets granted more rights, including to display on /all/
+media (so typically outside twitter.com, even on paper).
+
+I personally like the CC approach better, especially when it's
+advertised clearly. That way the user is aware quite clearly of the
+copyright license that's applying to uploaded content. Also, the
+operator and other people are treated equally.
+
+I'm not sure that all users of Facebook realise that uploading a picture
+equals granting a very, very broad copyright license (provided that the
+ToS copyright license clause is valid and enforceable). IMHO that's not
+particularly required for a "social network" or even for publication.
+Then what about ToS that govern several of the use-cases you describe.
+
+Wordpress.com in contrast to Facebook, is limited to the first case you
+describe. In that case, they precise that the copyright license is
+limited to Automattic (nothing about transfert AFAIK) and operates
+"solely for the purpose of displaying, distributing and promoting your
+blog." That makes a big difference IMO.
+
+>  - it is understood that what you publish will be public. i would give
+> points to websites that make it clear that something will be public.
+> some have a warning saying "watch out: public means public!"
+
+I agree but that's typically not reflected in most ToS. Hard to keep
+track of this equally for all services.
+
+> in the second case, the site should only get a license to publish the
+> content to the intended audience, plus sysadmin access. any secondary
+> data that is generated should only be used for product improvement and
+> not for advertising, and definitely not for profiling.
+>=20
+> additionally, the site will disclose your data to the police whenever
+> required to do so by law, but i don't think they need to put that
+> explicitly in the ToS, do they?
+
+Yes, I don't think the government asks for a copyright license to access
+content :)
+
+>  i think they should get points if they
+> point this out to you, and also if they warn you whenever this happens
+> (this is point 'law enforcement').
+
+Yes, I agree. That's for another topic though.
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?=
+hl=3Den.
+

@@ -1,0 +1,136 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.58.240.2 with SMTP id vw2csp265028vec;
+        Mon, 3 Dec 2012 23:08:14 -0800 (PST)
+Received: by 10.14.223.135 with SMTP id v7mr45417778eep.41.1354604893291;
+        Mon, 03 Dec 2012 23:08:13 -0800 (PST)
+Return-Path: <tosdr+bncBC3IF2OJ4QORBW6C62CQKGQECRP32BQ@googlegroups.com>
+Received: from mail-ee0-f59.google.com (mail-ee0-f59.google.com [74.125.83.59])
+        by mx.google.com with ESMTPS id m3si675763een.32.2012.12.03.23.08.12
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 03 Dec 2012 23:08:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBW6C62CQKGQECRP32BQ@googlegroups.com designates 74.125.83.59 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncBC3IF2OJ4QORBW6C62CQKGQECRP32BQ@googlegroups.com designates 74.125.83.59 as permitted sender) smtp.mail=tosdr+bncBC3IF2OJ4QORBW6C62CQKGQECRP32BQ@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-ee0-f59.google.com with SMTP id c13sf1396482eek.24
+        for <michiel@unhosted.org>; Mon, 03 Dec 2012 23:08:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:received-spf:x-virus-scanned:message-id:subject:from:to
+         :cc:date:in-reply-to:references:organization:x-mailer:mime-version
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-google-group-id:list-post
+         :list-help:list-archive:sender:list-subscribe:list-unsubscribe
+         :content-type:content-transfer-encoding;
+        bh=Fz7oY3OwZYuUSkXPFd/Nt17zz+x/xklNvDnSSdTUyhY=;
+        b=mfO/6Nctt9BzpXvMFXXrHjU6dG2gMrYZFwVOME9qSKw85/SRWvclo+lXZXlkE5l+iO
+         tF9E1PAMVjYwU7RWFlvf/qd8qUBU9EClwJttjoCl9lj6z3HCwHssppqsuLbherXSock4
+         QTKjedp1FxaS2qx4zaeh/Xz2MHc7g0K9UcERhSr31v+Sb5MQy+oXq2F7ITURjbaO3w/o
+         Xr6BzxLI1jOb6Guh0d5sOHnPfqpteBtmdZf6f/X4hD4RHVzdu3wSgoZ037Seuibi4uoj
+         zAdSqKgqb2I9ileaRd8dlv3XXfeMGX9fH079JC2Ufarm5bPrvCfu1AOXh8CPrz3e4vWB
+         Rfzg==
+Received: by 10.180.8.39 with SMTP id o7mr308945wia.4.1354604892289;
+        Mon, 03 Dec 2012 23:08:12 -0800 (PST)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.180.93.232 with SMTP id cx8ls1071857wib.4.canary; Mon, 03 Dec
+ 2012 23:08:11 -0800 (PST)
+Received: by 10.14.173.136 with SMTP id v8mr13236202eel.2.1354604891296;
+        Mon, 03 Dec 2012 23:08:11 -0800 (PST)
+Received: by 10.14.173.136 with SMTP id v8mr13236199eel.2.1354604891116;
+        Mon, 03 Dec 2012 23:08:11 -0800 (PST)
+Received: from cavendish.fsfeurope.org (cavendish.fsfeurope.org. [2001:aa8:ffed::3:102])
+        by gmr-mx.google.com with ESMTPS id u8si104413een.1.2012.12.03.23.08.10
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 03 Dec 2012 23:08:11 -0800 (PST)
+Received-SPF: neutral (google.com: 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for domain of hugo@fsfe.org) client-ip=2001:aa8:ffed::3:102;
+Received: from localhost (localhost [127.0.0.1])
+	by cavendish.fsfeurope.org (Postfix) with ESMTP id 7356F63A629;
+	Tue,  4 Dec 2012 08:08:10 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at cavendish
+Received: from cavendish.fsfeurope.org ([127.0.0.1])
+	by localhost (cavendish.fsfeurope.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id k2eNDTCZv0aM; Tue,  4 Dec 2012 08:08:05 +0100 (CET)
+Received: from [IPv6:2a01:e35:2427:7dd0:c1af:a569:21dc:946] (unknown [IPv6:2a01:e35:2427:7dd0:c1af:a569:21dc:946])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: hugo@fsfe.org)
+	by cavendish.fsfeurope.org (Postfix) with ESMTPSA id 8425B63A636;
+	Tue,  4 Dec 2012 08:08:03 +0100 (CET)
+Message-ID: <1354604880.18791.23.camel@synclavier.lan>
+Subject: Re: [tosdr:1164] Re: Terms may be changed any time at their
+ discretion, without notice to the user
+From: Hugo Roy <hugo@fsfe.org>
+To: tosdr@googlegroups.com
+Cc: Robin Monks <devlinks@gmail.com>
+Date: Tue, 04 Dec 2012 08:08:00 +0100
+In-Reply-To: <d04a441a-2515-4da0-a233-0df58efab4e3@googlegroups.com>
+References: <1349291817.21837.5.camel@synclavier.lan>
+	 <ec2de4d8-e138-4579-9103-164bed7d13f9@googlegroups.com>
+	 <d04a441a-2515-4da0-a233-0df58efab4e3@googlegroups.com>
+Organization: Free Software Foundation Europe
+X-Mailer: Evolution 3.4.4-1
+Mime-Version: 1.0
+X-Original-Sender: hugo@fsfe.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 2001:aa8:ffed::3:102 is neither permitted nor denied by best guess record for
+ domain of hugo@fsfe.org) smtp.mail=hugo@fsfe.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Le lundi 03 d=E9cembre 2012 =E0 18:27 -0800, Robin Monks a =E9crit :
+> Here's another:
+> http://allrecipes.com/help/aboutus/legal.aspx
+>=20
+> We reserve the right in our sole discretion to change, modify, add, or=20
+> > delete portions of this Notice at any time. We will provide notice of s=
+uch=20
+> > changes only by posting the updated Notice on our Web site and changing=
+ the=20
+> > =93last updated=94 date listed above. This Notice applies exclusively t=
+o your=20
+> > access to, interaction with, and use of, this Web site and does not alt=
+er=20
+> > in any way the terms or conditions of any other agreement you might hav=
+e=20
+> > with Allrecipes.com, Inc. (=93Allrecipes=94) for products, services, or=
+=20
+> > otherwise. We encourage you to review our Notice each time you visit ou=
+r=20
+> > site to see if it has been updated since your last visit.=20
+>=20
+>=20
+> It's an annoying trend.
+>=20
+> /Robin=20
+
+Yes indeed.
+
+BTW, thank you very much Robin for the awesome contributions!=20
+
+--=20
+Hugo Roy=20
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: +336 08 74 13 41
+                                 mobile DE: +49 151 143 56 563
+
+--=20
+www.tos-dr.info // www.twitter.com/tosdr // www.github.com/didnotread
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroup=
+s.com.
+Visit this group at http://groups.google.com/group/tosdr?hl=3Den.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+

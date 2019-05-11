@@ -1,0 +1,394 @@
+Return-Path: <tosdr+bncBDLZX5PJWMBBBSHOWGHAKGQEEJYRXRA@googlegroups.com>
+Delivered-To: anything@michielbdejong.com
+Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
+	by nmboxes31-d.mgt.gandi.net (Postfix) with ESMTP id CE12D161743
+	for <anything@michielbdejong.com>; Thu, 27 Jun 2013 19:33:01 +0200 (CEST)
+Received: from mfilter6-d.gandi.net (mfilter6-d.gandi.net [217.70.178.135])
+	by spool.mail.gandi.net (Postfix) with ESMTP id CAE491164F4
+	for <anything@michielbdejong.com>; Thu, 27 Jun 2013 19:33:01 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter6-d.gandi.net
+Received: from spool.mail.gandi.net ([10.0.21.134])
+	by mfilter6-d.gandi.net (mfilter6-d.gandi.net [10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id DzhA25fsnWCC for <anything@michielbdejong.com>;
+	Thu, 27 Jun 2013 19:32:59 +0200 (CEST)
+Received: from mail-pa0-x23b.google.com (mail-pa0-x23b.google.com [IPv6:2607:f8b0:400e:c03::23b])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 484271164F0
+	for <anything@michielbdejong.com>; Thu, 27 Jun 2013 19:32:59 +0200 (CEST)
+Received: by mail-pa0-f59.google.com with SMTP id fa11sf372464pad.4
+        for <anything@michielbdejong.com>; Thu, 27 Jun 2013 10:32:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:from:mime-version:subject:date:in-reply-to:to
+         :references:message-id:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=9k3yi0ZUTTP9HPPrjRIyM/4xH3ULZ1NNXSu2XIx64+g=;
+        b=wV4YUBAtb1zHwT2aV0fn1GOnTn7ZEKUXmyHXHOTYRtgnluvujKLLQ/VHrDrRT4HfsY
+         2j8NEBiVCpSgBEKE6pBMVaatJDXT7CCkb/o2yY42NMdTudAaJtltKuDedkRPVjzsWCLq
+         RtJXG3NG9KHkfx2CXMGK6oTGxwhEt99ys+F4RJvAq5RV4qRxz9jpSxFBjQh5HymLLoh4
+         9AAlhnEZYpNfVa/IsHZ3H8yoGt27qCXYqqe5g5dFCzyJQaiHCMqjmmDQ4bnLz7iIPaJg
+         7CMnNfJotFnWMHV49e0KCjL9Hfyln48R3LHAQfkFWdd5XCPabFadDwexH3n9em4bXkNN
+         evCg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=x-beenthere:from:mime-version:subject:date:in-reply-to:to
+         :references:message-id:x-mailer:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=9k3yi0ZUTTP9HPPrjRIyM/4xH3ULZ1NNXSu2XIx64+g=;
+        b=Y8XF+n3SdwUR9eLIDrJ65GdZtixdlZu0w/u8zciwr/rTR43+JAD3DLvoDFD9unMYF0
+         1X8KDCAQVLUf2lhzc7EuGTIQJMQ7hUV3lJGtyfcnPNbSVDT4OCzEpAYjBGdxULkAR/jl
+         fR5xRErZHENRK4hwaLFbKwkA1A1De/XFDp5BZA8G7GDdRWbpyzXtAPye8+mzzmK65JHM
+         CPWF7GWNu33F2Yrm2CfI/u/SZbsPU3dA6ELq1ilF1J6E8y7LVvCBj89HggEiCaEvqhUk
+         VJhqPFLkR3GQN5FdFq0AkZajQdOJPhLYQYjODafFptxfo9skwJ3AyCPP8vWBYjZ/rX54
+         GokA==
+X-Received: by 10.49.36.199 with SMTP id s7mr256710qej.17.1372354376980;
+        Thu, 27 Jun 2013 10:32:56 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.49.72.233 with SMTP id g9ls900177qev.84.gmail; Thu, 27 Jun
+ 2013 10:32:56 -0700 (PDT)
+X-Received: by 10.224.205.138 with SMTP id fq10mr9610967qab.1.1372354376500;
+        Thu, 27 Jun 2013 10:32:56 -0700 (PDT)
+Received: from mail-qa0-x22b.google.com (mail-qa0-x22b.google.com [2607:f8b0:400d:c00::22b])
+        by gmr-mx.google.com with ESMTPS id s6si461081qcy.0.2013.06.27.10.32.56
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 27 Jun 2013 10:32:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c00::22b as permitted sender) client-ip=2607:f8b0:400d:c00::22b;
+Received: by mail-qa0-f43.google.com with SMTP id d13so2679832qak.9
+        for <tosdr@googlegroups.com>; Thu, 27 Jun 2013 10:32:56 -0700 (PDT)
+X-Received: by 10.224.25.140 with SMTP id z12mr12903993qab.46.1372354376356;
+        Thu, 27 Jun 2013 10:32:56 -0700 (PDT)
+Received: from [192.168.1.104] ([99.191.178.184])
+        by mx.google.com with ESMTPSA id ds7sm5837321qab.13.2013.06.27.10.32.54
+        for <tosdr@googlegroups.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 27 Jun 2013 10:32:55 -0700 (PDT)
+From: Ian McGowan <irmcgowan@gmail.com>
+Mime-Version: 1.0 (Apple Message framework v1085)
+Subject: Re: [tosdr:2403] Re: [Info] Amazon requires claims to be resolved by
+ binding arbitration rather than in court
+Date: Thu, 27 Jun 2013 12:32:56 -0500
+In-Reply-To: <0c60233e-c8cd-4f66-abde-d56551842a1c@googlegroups.com>
+To: tosdr@googlegroups.com
+References: <f8a24294-8ce1-4183-8970-b696bd83ede8@googlegroups.com> <1098570e-32c8-43f8-8a92-99fd68f915bb@googlegroups.com> <593739ce-041b-45d1-805e-6cf6716f9e72@googlegroups.com> <da62aacc-95c2-4d27-906c-b5405a38610f@googlegroups.com> <1aa2fcba-16ae-4c18-8036-091e597a3aff@googlegroups.com> <20130522171525.GC14423@synclavier.ampoliros.net> <825ab44f-de6d-4591-947c-941bd7bac63d@googlegroups.com> <a5012c18-8104-424d-aaf6-7bc86ef8451f@googlegroups.com> <61b0371b-850e-4bbe-8eef-d76404ac86db@googlegroups.com> <0c60233e-c8cd-4f66-abde-d56551842a1c@googlegroups.com>
+Message-Id: <B9160552-D9BF-4A5C-9248-ED33F360237D@gmail.com>
+X-Mailer: Apple Mail (2.1085)
+X-Original-Sender: irmcgowan@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of irmcgowan@gmail.com designates 2607:f8b0:400d:c00::22b
+ as permitted sender) smtp.mail=irmcgowan@gmail.com;       dkim=pass header.i=@gmail.com
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr>
+Sender: tosdr@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=Apple-Mail-18-1057668603
+
+--Apple-Mail-18-1057668603
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=ISO-8859-1
+
+The Classes are a result of the sum of the scores of individual data points=
+ from a service's ToS and privacy policy, so we couldn't just say "X clause=
+ goes into Class C". What we can, and strive to do, is give the same score =
+for the same clause. So, ideally all arbitration clauses are 50 (or whateve=
+r), etc.=20
+
+At this point, we don't have baseline scores for certain clauses, but by cu=
+rating multiple, similar clauses we arrive at one. Does that make sense? Fo=
+r example, when I'm considering a score for a clause, I compare that clause=
+ with clauses from other services we've already given scores to and use tha=
+t information to determine the score I should award. I think having a basel=
+ine score would be a good idea, though.
+
+Hugo, do you care to weigh in on this?
+
+Ian
+
+
+On Jun 27, 2013, at 12:17 PM, Hannah Poteat wrote:
+
+> I'd say 80 is fine, but the value is meaningless to me out of context: I =
+don't know where the numerical line between "Class C" and "Class D" is, for=
+ instance. I'd put a class action waiver in our Class D, while the arbitrat=
+ion clause is maybe Class C, maybe Class B, depending on how it's written. =
+A class action waiver isn't a showstopper, but it's a point of concern that=
+ should draw a consumer's attention.
+>=20
+> Ian, I know you work really hard to keep everything well-curated and cons=
+istent, and I don't want to put more work on you, but would it make sense t=
+o have baseline scores for certain clauses? For instance, an arbitration ag=
+reement is a baseline of ...40 (is that Class B?), and can go up or down de=
+pending on how it's written. A class action waiver is a baseline of 80. Is =
+that how things are already done? It would keep things consistent from agre=
+ement to agreement, with the understanding that clauses are worded differen=
+tly, and some are worded to be more consumer-friendly than others, so score=
+s will fluctuate a little.
+>=20
+> I'd be happy to work on that with you, if you need someone to take a clos=
+er look at legal language in some of these.
+>=20
+> Hannah=20
+>=20
+> On Thursday, June 27, 2013 9:53:19 AM UTC-7, Ian McGowan wrote:
+> So maybe a higher (and thus worse) score of 80? The issue is that the oth=
+er services I listed have similar scores for similar clauses. Or maybe a sc=
+ore of "50 (alert)" instead of mediocre?  Any feedback is welcome.
+>=20
+> Ian
+>=20
+> On Wednesday, June 26, 2013 3:22:04 PM UTC-5, Hannah Poteat wrote:
+> Personally, I'd call it worse than mediocre, because I really dislike cla=
+ss action waivers unless they're really necessary. I'm sure Amazon has many=
+ grounds to believe that class action waivers are really necessary, and tha=
+t's understandable...but because of the presence of a class action waiver, =
+I'd put an alert on it and invite consumers to make up their minds.
+>=20
+> The arbitration provision is mediocre (and pretty mild).
+>=20
+>=20
+> On Wednesday, June 26, 2013 10:29:49 AM UTC-7, Ian McGowan wrote:
+> So, maybe this point could be summarized as follows:
+>=20
+> Title: Amazon requires claims be resolved via binding arbitration
+>=20
+> Topic: Waiver
+>=20
+> Summary: When you sign up for Amazon, you agree that any claim that might=
+ be brought by Amazon against you, or by you against Amazon, be resolved in=
+ binding arbitration rather than in court. Arbitrators can award, on an ind=
+ividual basis, the same damages and relief as a court. Amazon also states t=
+hat no claims can be brought against them as part of a class, consolidated,=
+ or representative action. This means you waive your right to a class actio=
+n suit. If the claim proceeds to court, you also waive your right to a jury=
+ trial.
+>=20
+> Score: 50 (mediocre)
+>=20
+> ***for this particular score, I'm not sure sure what to write. On the web=
+site we have a range of 20 (mediocre) - 150 (alert), between the services o=
+f Netflix, Valve, Microsoft, and 500px. This seems more in line with Netfli=
+x and 500px to me.
+>=20
+> On Wednesday, May 22, 2013 12:15:25 PM UTC-5, Hugo Roy wrote:
+> Le mer. 22/05/13, 08:00, Hannah Poteat <hpot...@gmail.com>:=20
+> > In general, they do reduce consumers' rights. On the plus side, arbitra=
+tion=20
+> > is usually much faster, more convenient, and less expensive than going =
+to=20
+> > court, so it can be a better option for both parties in smaller dispute=
+s=20
+> > (which most consumer disputes are). In fact, they can actually be more=
+=20
+> > beneficial to the consumer than to the corporation: it may be too expen=
+sive=20
+> > for a consumer to bring a smaller dispute (less than around $10,000) to=
+=20
+> > court, and an unscrupulous large entity can drive up court costs to for=
+ce a=20
+> > weaker party to drop a legitimate suit. However, if both parties are bo=
+und=20
+> > to arbitration, it may be easier for a consumer to bring a small disput=
+e=20
+> > against a large entity. Arbitration agreements *can* be written to be=
+=20
+> > consumer-friendly.=20
+>=20
+> I think the legal culture in the US in relation to money is so=20
+> different than Europe that it would be difficult to assess this=20
+> kind of things.=20
+>=20
+> OTOH it's true that most terms set jurisdiction clauses in the US=20
+> anyway.=20
+>=20
+> But still, it seems to me that binding arbitration isn't=20
+> appropriate for consumers in most cases; it's fine as an option.=20
+>=20
+> --=20
+> Hugo Roy, Project Lead=20
+> Terms of Service; Didn't Read | www.tosdr.org=20
+>=20
+> --=20
+> tosdr.org | twitter.com/tosdr | github.com/tosdr
+> ---=20
+> You received this message because you are subscribed to the Google Groups=
+ "Terms of Service; Didn't Read" group.
+> To unsubscribe from this group and stop receiving emails from it, send an=
+ email to tosdr+unsubscribe@googlegroups.com.
+> To post to this group, send email to tosdr@googlegroups.com.
+> Visit this group at http://groups.google.com/group/tosdr.
+> For more options, visit https://groups.google.com/groups/opt_out.
+> =20
+> =20
+
+--=20
+tosdr.org | twitter.com/tosdr | github.com/tosdr
+---=20
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.
+To post to this group, send email to tosdr@googlegroups.com.
+Visit this group at http://groups.google.com/group/tosdr.
+For more options, visit https://groups.google.com/groups/opt_out.
+
+
+
+--Apple-Mail-18-1057668603
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=ISO-8859-1
+
+<html><head></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode:=
+ space; -webkit-line-break: after-white-space; ">The Classes are a result o=
+f the sum of the scores of individual data points from a service's ToS and =
+privacy policy, so we couldn't just say "X clause goes into Class C". What =
+we can, and strive to do, is give the same score for the same clause. So, i=
+deally all arbitration clauses are 50 (or whatever), etc.&nbsp;<div><br></d=
+iv><div>At this point, we don't have baseline scores for certain clauses, b=
+ut by curating multiple, similar clauses we arrive at one. Does that make s=
+ense? For example, when I'm considering a score for a clause, I compare tha=
+t clause with clauses from other services we've already given scores to and=
+ use that information to determine the score I should award. I think having=
+ a baseline score would be a good idea, though.</div><div><br></div><div>Hu=
+go, do you care to weigh in on this?</div><div><br></div><div>Ian<br><div><=
+div><br></div><div><br><div><div>On Jun 27, 2013, at 12:17 PM, Hannah Potea=
+t wrote:</div><br class=3D"Apple-interchange-newline"><blockquote type=3D"c=
+ite">I'd say 80 is fine, but the value is meaningless to me out of context:=
+ I don't know where the numerical line between "Class C" and "Class D" is, =
+for instance. I'd put a class action waiver in our Class D, while the arbit=
+ration clause is maybe Class C, maybe Class B, depending on how it's writte=
+n. A class action waiver isn't a showstopper, but it's a point of concern t=
+hat should draw a consumer's attention.<div><br></div><div>Ian, I know you =
+work really hard to keep everything well-curated and consistent, and I don'=
+t want to put more work on you, but would it make sense to have baseline sc=
+ores for certain clauses? For instance, an arbitration agreement is a basel=
+ine of ...40 (is that Class B?), and can go up or down depending on how it'=
+s written. A class action waiver is a baseline of 80. Is that how things ar=
+e already done? It would keep things consistent from agreement to agreement=
+, with the understanding that clauses are worded differently, and some are =
+worded to be more consumer-friendly than others, so scores will fluctuate a=
+ little.</div><div><br></div><div>I'd be happy to work on that with you, if=
+ you need someone to take a closer look at legal language in some of these.=
+</div><div><br></div><div>Hannah&nbsp;<br><br>On Thursday, June 27, 2013 9:=
+53:19 AM UTC-7, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=
+=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: =
+1ex;">So maybe a higher (and thus worse) score of 80? The issue is that the=
+ other services I listed have similar scores for similar clauses. Or maybe =
+a score of "50 (alert)" instead of mediocre? &nbsp;Any feedback is welcome.=
+<div><br></div><div>Ian<br><br>On Wednesday, June 26, 2013 3:22:04 PM UTC-5=
+, Hannah Poteat wrote:<blockquote class=3D"gmail_quote" style=3D"margin:0;m=
+argin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex"><span style=
+=3D"font-family:arial;font-size:small">Personally, I'd call it worse than m=
+ediocre, because I really dislike class action waivers unless they're reall=
+y necessary. I'm sure Amazon has many grounds to believe that class action =
+waivers are really necessary, and that's understandable...but <i>because</i=
+>&nbsp;of the presence of a class action waiver, I'd put an alert on it and=
+ invite consumers to make up their minds.</span><div><font face=3D"arial" s=
+ize=3D"2"><br></font></div><div><font face=3D"arial" size=3D"2">The arbitra=
+tion provision is mediocre (and pretty mild).</font></div><div><font face=
+=3D"arial" size=3D"2"><br></font><br>On Wednesday, June 26, 2013 10:29:49 A=
+M UTC-7, Ian McGowan wrote:<blockquote class=3D"gmail_quote" style=3D"margi=
+n:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1ex">So, mayb=
+e this point could be summarized as follows:<div><br></div><div>Title: Amaz=
+on requires claims be resolved via binding arbitration</div><div><br></div>=
+<div>Topic: Waiver</div><div><br></div><div>Summary: When you sign up for A=
+mazon, you agree that any claim that might be brought by Amazon against you=
+, or by you against Amazon, be resolved in binding arbitration rather than =
+in court. Arbitrators can award, on an individual basis, the same damages a=
+nd relief as a court. Amazon also states that no claims can be brought agai=
+nst them as part of a class, consolidated, or representative action. This m=
+eans you waive your right to a class action suit. If the claim proceeds to =
+court, you also waive your right to a jury trial.</div><div><br></div><div>=
+Score: 50 (mediocre)<br><br>***for this particular score, I'm not sure sure=
+ what to write. On the website we have a range of 20 (mediocre) - 150 (aler=
+t), between the services of Netflix, Valve, Microsoft, and 500px. This seem=
+s more in line with Netflix and 500px to me.<br><br>On Wednesday, May 22, 2=
+013 12:15:25 PM UTC-5, Hugo Roy wrote:<blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;padding-left:1e=
+x">Le mer. 22/05/13, 08:00, Hannah Poteat &lt;<a>hpot...@gmail.com</a>&gt;:
+<br>&gt; In general, they do reduce consumers' rights. On the plus side, ar=
+bitration=20
+<br>&gt; is usually much faster, more convenient, and less expensive than g=
+oing to=20
+<br>&gt; court, so it can be a better option for both parties in smaller di=
+sputes=20
+<br>&gt; (which most consumer disputes are). In fact, they can actually be =
+more=20
+<br>&gt; beneficial to the consumer than to the corporation: it may be too =
+expensive=20
+<br>&gt; for a consumer to bring a smaller dispute (less than around $10,00=
+0) to=20
+<br>&gt; court, and an unscrupulous large entity can drive up court costs t=
+o force a=20
+<br>&gt; weaker party to drop a legitimate suit. However, if both parties a=
+re bound=20
+<br>&gt; to arbitration, it may be easier for a consumer to bring a small d=
+ispute=20
+<br>&gt; against a large entity. Arbitration agreements *can* be written to=
+ be=20
+<br>&gt; consumer-friendly.
+<br>
+<br>I think the legal culture in the US in relation to money is so
+<br>different than Europe that it would be difficult to assess this
+<br>kind of things.
+<br>
+<br>OTOH it's true that most terms set jurisdiction clauses in the US
+<br>anyway.
+<br>
+<br>But still, it seems to me that binding arbitration isn't
+<br>appropriate for consumers in most cases; it's fine as an option.
+<br>
+<br>--=20
+<br>Hugo Roy, Project Lead
+<br>Terms of Service; Didn't Read | <a href=3D"http://www.tosdr.org/" targe=
+t=3D"_blank">www.tosdr.org</a>
+<br></blockquote></div></blockquote></div></blockquote></div></blockquote><=
+/div><div><br class=3D"webkit-block-placeholder"></div>
+
+-- <br>
+<a href=3D"http://tosdr.org">tosdr.org</a> | <a href=3D"http://twitter.com/=
+tosdr">twitter.com/tosdr</a> | <a href=3D"http://github.com/tosdr">github.c=
+om/tosdr</a><br>
+--- <br>
+You received this message because you are subscribed to the Google Groups "=
+Terms of Service; Didn't Read" group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:tosdr+unsubscribe@googlegroups.com">tosdr+unsubsc=
+ribe@googlegroups.com</a>.<br>
+To post to this group, send email to <a href=3D"mailto:tosdr@googlegroups.c=
+om">tosdr@googlegroups.com</a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br>
+&nbsp;<br>
+&nbsp;<br>
+</blockquote></div><br></div></div></div></body></html>
+
+<p></p>
+
+-- <br />
+tosdr.org | twitter.com/tosdr | github.com/tosdr<br />
+--- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;Terms of Service; Didn&#39;t Read&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to tosdr+unsubscribe@googlegroups.com.<br />
+To post to this group, send email to tosdr@googlegroups.com.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/tosdr">http:/=
+/groups.google.com/group/tosdr</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/groups/opt_out=
+">https://groups.google.com/groups/opt_out</a>.<br />
+&nbsp;<br />
+&nbsp;<br />
+
+--Apple-Mail-18-1057668603--

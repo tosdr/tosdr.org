@@ -1,0 +1,93 @@
+Delivered-To: michiel@unhosted.org
+Received: by 10.142.10.4 with SMTP id 4csp117441wfj;
+        Tue, 19 Jun 2012 01:43:56 -0700 (PDT)
+Received: by 10.52.99.167 with SMTP id er7mr7494183vdb.57.1340095434767;
+        Tue, 19 Jun 2012 01:43:54 -0700 (PDT)
+Return-Path: <tosdr+bncCNaS9MLBDxDJ94D_BBoEE-kVFg@googlegroups.com>
+Received: from mail-vb0-f64.google.com (mail-vb0-f64.google.com [209.85.212.64])
+        by mx.google.com with ESMTPS id du6si6202983vdb.59.2012.06.19.01.43.53
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 19 Jun 2012 01:43:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tosdr+bncCNaS9MLBDxDJ94D_BBoEE-kVFg@googlegroups.com designates 209.85.212.64 as permitted sender) client-ip=209.85.212.64;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of tosdr+bncCNaS9MLBDxDJ94D_BBoEE-kVFg@googlegroups.com designates 209.85.212.64 as permitted sender) smtp.mail=tosdr+bncCNaS9MLBDxDJ94D_BBoEE-kVFg@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by vbnl22 with SMTP id l22sf5347255vbn.29
+        for <multiple recipients>; Tue, 19 Jun 2012 01:43:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=beta;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=2d9wPI+pgWLM4qjaCeXVa7pqtb2FtcGPhQhHxUPqru0=;
+        b=5i4A6VpwMbS2RXUbZzXwBK68gpfMfjvj0MfBqOKb+xaKOcqwDCt28oODUJMBurlRKN
+         hH9O2cdzWY640oIOh6WovxbXGwSKAYRziVVgY0iziepCfQK+lMtMALMAYYIK5n5/HgBp
+         asZ0Cnliajbn+EJ0tZhFv0RRrhGp1m4hxeqzg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-beenthere:received-spf:mime-version:sender:x-originating-ip:from
+         :date:message-id:subject:to:x-gm-message-state:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-google-group-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=2d9wPI+pgWLM4qjaCeXVa7pqtb2FtcGPhQhHxUPqru0=;
+        b=VCQ2ZBSHxLrKCjpyG/a9oiSfdSW9Pp3XrHABV5YcCBoitVtjKrO/hGscKGH8riiNRK
+         6arMKK4HrXlK83+pm4uIBBBeM4F0ZKgURGXKt2BCM6PzjeMT851ErWN8crMAgRCy9hn0
+         noao5VKmqjrYJ+fAGhW5MMXupbaCe/dn+lSFK/HiqvN4StIEysvgl8U6j4CURCGCddUP
+         lTAahXpLhDFp+XG+qPUNryHqbmhkBX7t3fBHd4mox2E+dPauWzZCepXI0wYn77c5JpHh
+         oZ2295Pg+juFIGJh+8C/PspxkLWHNrgl1WpxVJkaabB4ZIMmEfExwLDT2VwpAd+2PUTD
+         P4/Q==
+Received: by 10.68.233.5 with SMTP id ts5mr1873999pbc.20.1340095433249;
+        Tue, 19 Jun 2012 01:43:53 -0700 (PDT)
+X-BeenThere: tosdr@googlegroups.com
+Received: by 10.68.129.226 with SMTP id nz2ls4469732pbb.5.gmail; Tue, 19 Jun
+ 2012 01:43:53 -0700 (PDT)
+Received: by 10.68.193.129 with SMTP id ho1mr18377974pbc.8.1340095433046;
+        Tue, 19 Jun 2012 01:43:53 -0700 (PDT)
+Received: by 10.68.193.129 with SMTP id ho1mr18377973pbc.8.1340095433035;
+        Tue, 19 Jun 2012 01:43:53 -0700 (PDT)
+Received: from mail-pz0-f41.google.com (mail-pz0-f41.google.com [209.85.210.41])
+        by gmr-mx.google.com with ESMTPS id iq5si4407505pbc.1.2012.06.19.01.43.51
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 19 Jun 2012 01:43:51 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.210.41 is neither permitted nor denied by best guess record for domain of jan@unhosted.org) client-ip=209.85.210.41;
+Received: by dakp5 with SMTP id p5so7752102dak.28
+        for <tosdr@googlegroups.com>; Tue, 19 Jun 2012 01:43:51 -0700 (PDT)
+Received: by 10.68.125.228 with SMTP id mt4mr25214216pbb.21.1340095431476;
+ Tue, 19 Jun 2012 01:43:51 -0700 (PDT)
+MIME-Version: 1.0
+Sender: tosdr@googlegroups.com
+Received: by 10.68.12.38 with HTTP; Tue, 19 Jun 2012 01:43:30 -0700 (PDT)
+X-Originating-IP: [67.164.74.119]
+From: Jan-Christoph Borchardt <hey@jancborchardt.net>
+Date: Tue, 19 Jun 2012 01:43:30 -0700
+Message-ID: <CABQMFTRA6bxhBJYNPdLG0G=KBEQP2va4PH4EqJoWpy=-sAk=6w@mail.gmail.com>
+Subject: [Bad] Facebook tracks non-users, creates shadow-profiles
+To: =?windows-1252?Q?Terms_of_Service=2C_Didn=92t_Read?= <tosdr@googlegroups.com>
+X-Gm-Message-State: ALoCoQnojMLOreL3Lm8jUZEN+agNBq37AmmKA2z1h6MKoYro6elC8buo7DoFe8y3VmBOb49yF1Z3
+X-Original-Sender: jan@unhosted.org
+X-Original-Authentication-Results: gmr-mx.google.com; spf=neutral (google.com:
+ 209.85.210.41 is neither permitted nor denied by best guess record for domain
+ of jan@unhosted.org) smtp.mail=jan@unhosted.org
+Reply-To: tosdr@googlegroups.com
+Precedence: list
+Mailing-list: list tosdr@googlegroups.com; contact tosdr+owners@googlegroups.com
+List-ID: <tosdr.googlegroups.com>
+X-Google-Group-Id: 966240515290
+List-Post: <http://groups.google.com/group/tosdr/post?hl=en>, <mailto:tosdr@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en>, <mailto:tosdr+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/tosdr?hl=en>
+List-Subscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:tosdr+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/tosdr/subscribe?hl=en>, <mailto:googlegroups-manage+966240515290+unsubscribe@googlegroups.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+Not sure how this relates to the ToS, but gathering data even without
+consent is pretty bad:
+http://yro.slashdot.org/story/11/10/18/1429223/facebook-is-building-shadow-profiles-of-non-users
+
+-- 
+You received this message because you are subscribed to the Google Groups "Terms of Service; Didn't Read" group.
+To post to this group, send email to tosdr@googlegroups.com.
+To unsubscribe from this group, send email to tosdr+unsubscribe@googlegroups.com.
+For more options, visit this group at http://groups.google.com/group/tosdr?hl=en.
+
