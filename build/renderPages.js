@@ -14,6 +14,7 @@ function renderDataPoint(grunt, service, dataPoint, forPopup) {
     if (caseObj[caseFileNameBase]) {
       obj.tosdr.point = caseObj[caseFileNameBase].point
       obj.tosdr.score = caseObj[caseFileNameBase].score
+      obj.title = caseObj[caseFileNameBase].name
       if (typeof obj.tosdr.point === 'undefined') {
         console.log('CASE HAS NO POINT!', caseFileNameBase)
         return
@@ -61,7 +62,7 @@ function renderDataPoint(grunt, service, dataPoint, forPopup) {
       score:obj.tosdr.score,
       text:'<div class="' + obj.tosdr.point + '"><h5><span class="badge ' + badge +
 				'" title="' + obj.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' + sign + '</i></span> ' + obj.title + ' <a href="https://edit.tosdr.org/points/' + obj.id + '" target="_blank" class="label context">Discussion</a></h5><p>' +
-				obj.tosdr.tldr + '</p></div>\n'
+				obj.quoteText + '</p></div>\n'
     };
   } else {
     return {

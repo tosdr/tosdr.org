@@ -66,6 +66,9 @@ function parsePointFile(id, grunt) {
   //repo to get a better feeling for what this function does
 
   var obj = grunt.file.readJSON(grunt.config.get('conf').src + '/points/'+id+'.json');
+  if (!obj.quoteText || !obj.quoteText.length) {
+    return
+  }
   if(obj.tosdr.disputed) {
     // console.log(`disputed ${id} ${obj.reason}`)
     return;
@@ -81,10 +84,12 @@ function parsePointFile(id, grunt) {
     return;
   }
   if (obj.tosdr['case']) {
-    const caseFileNameBase = obj.tosdr['case'].toLowerCase().replace(/[^a-z0-9]/g, '_')
+    const caseFileNameBase = obj.tosdr['case'].replace(/[^a-z0-9]/gi, '_').toLowerCase()
+    console.log(caseFileNameBase)
     if (caseObj[caseFileNameBase]) {
       obj.tosdr.point = caseObj[caseFileNameBase].point
       obj.tosdr.score = caseObj[caseFileNameBase].score
+      obj.title = caseObj[caseFileNameBase].name
       if (typeof obj.tosdr.point === 'undefined') {
         console.log('CASE HAS NO POINT!', caseFileNameBase)
         console.log(`pending ${id} ${obj.reason}`)
