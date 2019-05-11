@@ -33,16 +33,13 @@ Most of the website's source files are located in the `src/` directory (although
 
 To build:
 
-1. Make sure you have the git [submodule](http://www.git-scm.com/book/en/Git-Tools-Submodules) in the `dist/` folder and that it is up-to-date (see above).
-
-    The source files are used to generate the content of the [tosdr.org repository](https://github.com/tosdr/tosdr.org), generated in the `dist/` folder. 
-
-2. Run `npm install` in the root of this repository to make sure you have the required packages.
-3. Make the changes you wish to make to the source files in this repository.
-4. Run `grunt` or `./node_modules/.bin/grunt` in the root of this repository.
-5. Check whether the output in the dist/ directory is looking as intended.
-6. Commit and push both repositories.
-7. To publish the new version of the website, assuming you have 5apps set up as a remote in the `dist/` folder, run `git push 5apps master`. But be careful: this updates the live site! Ask [@hugoroy] or [@michielbdejong] if you don't have permission
+1. Run `npm install` in the root of this repository to make sure you have the required packages.
+2. Make the changes you wish to make to the source files in this repository.
+3. Run `grunt` or `./node_modules/.bin/grunt` in the root of this repository.
+4. Check whether the output in the dist/ directory is looking as intended.
+5. cp -r dist/api . (needed for https://github.com/duckduckgo/duckduckgo-privacy-extension)
+5. Commit and push to github.
+7. To publish the new version of the website, assuming you have 5apps set up as a remote, run `git subtree push --prefix dist 5apps master`. But be careful: this updates the live site! Ask [@hugoroy] or [@michielbdejong] if you don't have permission
 
 [@hugoroy]: https://github.com/hugoroy
 [@michielbdejong]: https://github.com/michielbdejong
