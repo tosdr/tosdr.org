@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>An update on tools - Blog - Terms of Service; Didn&apos;t Read</title>
+		<meta name="description" content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of websites.">
+		<meta name="author" content="Terms of Service; Didn't Read">
+
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="../css/custom.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="../img/tosdr-icon-16.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/tosdr-icon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/tosdr-icon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/tosdr-icon-72.png">
+		<link rel="apple-touch-icon-precomposed" href="../img/tosdr-icon-57.png">
+
+		<script src="../js/jquery-1.7.1.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">    <!--http://j.mp/mobileviewport-->
+	</head>
+	<body id="blog-update-tools-html" class="blog email" data-spy="scroll">
+
+		<div class="navbar navbar-fixed-top" id="menu-options">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="../index.html"><img src="../img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class=""><a href="index.html">Blog</a></li>
+						</ul>
+						<p class="pull-right follow-us">
+							Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp; 
+							Donate: <a href="https://flattr.com/thing/3628260" target="_blank"><img src="/img/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!--		<div class="hero-unit">-->
+<!--			<section class="container">-->
+<!--				-->
+<!--			</section>-->
+<!--		</div>-->
+		<!--hero-unit-->
+
+		<div  class="container" id="tosdr-content" role="main">
+			<h1 class="page-header">An update on tools</h1>
+			<pre>
+Subject: An update on tools
+From: Hugo Roy [email hidden]
+To: Michiel de Jong [email hidden], Jan-Christoph Borchardt
+ [email hidden], Jimm Stout [email hidden]
+Cc: Martin Stadler [email hidden], "abdullah.diaa"
+ [email hidden],  Alexander Kahl [email hidden]
+Date: Sun, 21 Oct 2012 13:45:40 +0200
+
+
+Hi everyone, [can somebody include Shybyte in the discussion?]
+
+On Tuesday, Michiel and I sat for a moment to talk about how to improve
+contributions to our projects. Right now, there's a scaling problem
+between the mailing list and the json points. Something in between is
+missing and we thought the situation could be improved with some tools.
+
+The other incidental problem is how to deal with the backlog, but IMO
+this would be fixed by resolving #1
+
+Right now, here's a quick overview of what we have:
+      * Json data in services/ and points/
+      * Google Group
+      * Github
+      * Tosback
+      * Co-ment (I just fixed the issue: log-in is no longer needed)
+
+We thought that by comining the browser extensions, a few forms on
+tos-dr and our own augmented version of tosback, we could fix the
+situation.
+
+In short, our plan is:
+     1. Include ways of contributing in the browser extensions
+     2. Link this with the service form on ToS;DR
+     3. Give users an easy way to review the terms by improving tosback
+        and linking it with Co-ment's API
+     4. Link this with the point form on ToS;DR and the google group
+     5. Create a list to deal with the backlog from the mailing-list
+
+The discussions would still happen in Github for development, and in
+Google Group (or maybe in the future a forum, based on free software
+like vanillaforums?) which would be the substantial parts.
+
+I'm going to present the plan here so that we can have a general
+overview to discuss. Then I will create a github issue for each aspect
+of the plan.
+
+
+Include ways of contributing to the browser extensions
+======================================================
+https://github.com/tosdr/browser-extensions/issues/7
+
+      * We need the browser extensions to engage users in contributing
+        where a website has no data, outdated data, or needs additional
+        data. 
+      * We need the browser extensions to pass on information to the
+        ToS;DR forms where the users are going to fill in data about the
+        services.
+
+Some design questions have to be addressed, like which icon to show in
+the browser depending on the situation (for instance, not all services
+have a class rating yet; some services have no data at all and thus,
+some people have complained they didn't understand what the extension
+did, probably because they didn't visit the right website… although this
+is odd because we already data for some of the most important.)
+
+The Service form
+================
+https://github.com/tosdr/tosdr.org/issues/45
+
+Basically the form would try to take on information passed on by the
+browser extensions to already suggest or fill in some of the input.
+
+I envision something like ( [] are input, {} are buttons )
+
+Name of the service: [ ]
+URLs: [www.facebook.com] {+Add another URL}
+Identifier: [facebook] (automatically suggested from the url).
+Keywords: [social network] please use commas to separate keywords
+
+Where are the terms?
+--------------------
+[Terms of Service] http://www.facebook.com/legal/terms ~link to archived
+version on co-ment / tosback
+[Data Use Policy] http://www.facebook.com/legal/full-data-use ~link to
+archived version on co-ment / tosback
+{+Add another document}
+
+When this is filled-in, we should display a thank-you page and suggest
+people to add their email address so that we can contact them again (may
+be linked with some kind of "account" that we will also have for the
+Backlog list). I also need to create a privacy policy for ToS;DR itself
+since we're going to deal with some people's personal data now. It will
+be a good exercise for us to make them easy to read directly from the
+page itself :))
+
+ToSBack interface + Co-ment
+===========================
+https://github.com/tosdr/tos-tracker/issues/1
+
+Once we have the right data on where a service's terms are located (that
+means we need to give feedback to people who just suggested to update
+the rules file so that they can see if their added rule works) we need
+to offer an interface for people to be able to read the versions over
+time. This can be done directly ourselves, but I think it's better to
+just link with the API from co-ment (Michiel disagrees and wants to
+re-invent the wheel by writing again software that a whole company has
+written over the last 4 years and that has been used successfully for
+writing GPLv3, MPL2.0 and various books to which I contributed reviews;)
+
+This interface would also give the ability to make links to paragraphs
+and to sentences (Co-ment already does it… with highlighting and stuff).
+This way, it can be easily referenced as "source" in the points data.
+
+
+Points form
+===========
+https://github.com/tosdr/tosdr.org/issues/46
+
+I guess this would just be a nice and editable way to see all the data
+in a JSON in the points/ directory.
+
+What's very important is how to deal with moderation, since the data
+would not go directly to the website, but someone needs to review, edit,
+etc. This would need a whole system to think about, including how to
+deal with versioning in the file, etc. I guess we need to start
+versioning the format as well, which will also be cool for APIs.
+
+What's also important is that we suggest people to give TosBack or
+Co-ment as the source, rather than the website directly itself.
+
+One last thing: each new point should, after review, create a thread on
+the mailing list, if the thread about that precise subject does not
+exist yet.
+
+Backlog list
+============
+https://github.com/tosdr/tosdr.org/issues/47 
+
+A list of all the threads on the mailing list which do not have a
+corresponding JSON file (compare google group threads' id with points'
+id)
+
+And an upvote/downvote system (after people login using something like
+Persona)
+
+-- 
+Hugo Roy 
+  French Coordinator, FSFE       chat: hugo@jabber.fsfe.org
+  www.fsfe.org/about/roy         mobile: ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+                                 mobile DE: ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+
+			</pre>
+			<footer class="meta">
+				<a href="index.html#2012-10-21" title="Blog index">&#8635;</a>
+				<span class="tags">tools tosback</span>
+        </div>
+			</footer>
+		</div> <!-- /container -->
+
+		<footer id="bottom">
+			<div class="container">
+				<nav id="sitemap">
+					<ul class="row">
+						<li class="span3"><a href="../index.html">Home</a>
+							<ul>
+								<li><a href="../index.html#services">Rated Services</a></li>
+								<li><a href="../topics.html#topics">Rated Topics</a></li><li><a href="downloads.html">Download browser extensions</a></li><li><a href="../downloads.html">Download browser extensions</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="../about.html">About</a>
+							<ul>
+								<li><a href="../about.html#contact">Contact us</a></li>
+								<li><a href="../classification.html">Classification</a></li>
+								<li><a href="../legal.html">Legal</a></li>
+								<li><a href="../blog/index.html">Blog</a></li>
+							</ul>
+						</li>
+						<li class="span3"><a href="../contribute.html">Contribute</a>
+							<ul>
+								<li><a href="../contribute.html#join">Join us</a></li>
+								<li><a href="../get-involved.html">Get involved</a></li>
+								<li><a href="../api.html">API</a></li>
+							</ul>
+						</li>
+						<li class="span3">Spread
+							<ul>
+								<li><a href="http://twitter.com/tosdr">Follow us on twitter</a></li>
+								<li><a href="https://plus.google.com/b/117929815628330307285/117929815628330307285/about">Add on Google+</a></li><li><a href="https://www.facebook.com/TermsOfServiceDidntRead">Like us on Facebook</a></li>
+								<li><a href="http://github.com/tosdr/">Fork us on Github</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			
+				<p id="credits"><strong><a href="https://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a project inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="//tosback.org">TOSBack</a>. Also related: <a href="http://www.opennotice.org/">OpenNotice</a>.</p>
+				
+				<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms to which you are bound.</strong> Disclosure: a list of donors and supporters <a href="../thanks.html">is published</a>. <a href="../legal.html">All legal information and Imprint</a>.</p>
+		
+				
+				<p id="licensing"><a href="https://tosdr.org">ToS;DR</a> is Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). Offer for <a href="https://github.com/tosdr/tosdr.org/zipball/master">Source (zip)</a>. The <code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"><code>services/</code></a> and <a href="https://github.com/tosdr/tosdr.org/tree/master/points"><code>points/</code></a> directories are  also licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. Thumbs Up and Thumbs Down icons modified by Jan.</p>
+				
+				<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a href="https://5apps.com/apps/512cb93cbc73cb2f84000002"><img src="../img/unhostedby5apps.png" alt="5apps" /></a>
+			</div>
+		</footer>
+		
+		
+<!--		<script src="../bootstrap/js/bootstrap-twipsy.js"></script>-->
+		<script src="../bootstrap/js/bootstrap-collapse.js"></script>
+<!--		<script src="../bootstrap/js/bootstrap-modal.js"></script>-->
+<!--		<script src="../bootstrap/js/bootstrap-transition.js"></script>-->
+<!--		<script src="../bootstrap/js/bootstrap-typeahead.js"></script>-->
+<!--		<script src="../bootstrap/js/bootstrap-alert.js"></script>-->
+	</body>
+</html>
+
+

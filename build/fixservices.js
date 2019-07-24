@@ -178,11 +178,12 @@ function doFile(filepath, filename, grunt) {
     changed = true;
   }
 
-  if (obj.urls.length === 0) {
+  if (!Array.isArray(obj.urls) || obj.urls.length === 0) {
     obj.urls = [ obj.name + '.com' ]
     changed = true
   }
-  if (obj.urls[0].startsWith('http')) {
+  console.log(obj.urls, 'obj.urls')
+  if (obj.urls[0].startsWith('http://') || obj.urls[0].startsWith('https://')) {
     obj.urls[0] = obj.urls[0].split('/')[2]
     changed = true
   }
