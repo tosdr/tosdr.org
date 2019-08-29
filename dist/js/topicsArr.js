@@ -29,7 +29,6 @@ var topics = [
   "third%22%2C+%22personal-data",
   "track",
   "track%22%2C+%22third",
-  "tracking",
   "user-choice",
   "user-info",
   "waiver"
