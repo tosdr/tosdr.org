@@ -5,9 +5,7 @@
   ],
   "slug": "1172",
   "title": "HTTP connections are upgraded to HTTPS.  However, weak ciphers are supported.",
-  "topics": [
-
-  ],
+  "topics": [],
   "tosdr": {
     "binding": true,
     "tldr": "Firefox.com is on the HTTP Strict Transport Security preload list, so all connections to this server will use HTTPS;  clear HTTP will be upgraded.  They also use HTTP Public Key Pinning for extra protection against man-in-the-middle attacks.\r\n\r\nHowever, as of January 2018, their Web server supports weak key exchanges (1024-bit DH parameters), making downgrade attacks possible."
