@@ -16,8 +16,6 @@ var topics = [
   "leave",
   "logs-length",
   "ownership",
-  "payment%22%2C+%22changes",
-  "personal data",
   "personal information",
   "personal-data",
   "readability",
