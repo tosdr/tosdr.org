@@ -283,6 +283,7 @@ var services = [
   "protonmail",
   "pure",
   "pythonanywhere",
+  "pythontutor",
   "quake",
   "quizlet",
   "quora",
