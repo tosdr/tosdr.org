@@ -104,7 +104,11 @@ function renderDetails(grunt, name, points, toslinks, obj) {
   grunt.log.writeln(toslinks);
   grunt.log.writeln(obj);
   //this renders one service (for instance 'Facebook' or 'Google') on our main index.html page:
-  var header = '<h3><img src="logo/' + name + '.png" class="favlogo"><a class="modal-link" data-service-name="' + name + '" href="#' + name + '">' + obj.name + '</a>\n';
+  var logo = '';
+  if (grunt.file.exists(grunt.config.get('conf').src, 'logo', `${name}.png`)) {
+    logo = `<img src="logo/${name}.png" class="favlogo">`;
+  }
+  var header = '<h3>' + logo + '<a class="modal-link" data-service-name="' + name + '" href="#' + name + '">' + obj.name + '</a>\n';
   var rating;
   if (!obj.tosdr) {
     obj.tosdr = {rated:false};
@@ -203,9 +207,13 @@ function renderPopup(grunt, name, obj, points, links) {
   var longName = obj.name,
     domain = obj.url,
     verdict = obj.tosdr.rated,
-    ratingText = getRatingText(obj.tosdr.rated);
+    ratingText = getRatingText(obj.tosdr.rated),
+    logo = '';
+  if (grunt.file.exists(grunt.config.get('conf').src, 'logo', `${name}.png`)) {
+    logo = `<img src="logo/${name}.png" alt="" class="pull-left favlogo" heigh="36">`;
+  }
   var headerHtml = '<div class="modal-header"><button data-dismiss="modal" class="close" type="button">×</button>' +
-			'<img src="logo/' + name + '.png" alt="" class="pull-left favlogo" height="36" >' +
+      logo +
 			'<h3>' + longName +
 			'<small class="service-url">Share review <input class="share-link" type="text" value="https://tosdr.org/#' + name + '" readonly /></small>' +
 			'</h3></div>\n';
