@@ -47,6 +47,11 @@ module.exports = function (grunt) {
           cwd: '<%= conf.src %>/img',
           src: '{,*/}*.svg',
           dest: '<%= conf.dist %>/img'
+        },{
+          expand: true,
+          cwd: '<%= conf.src %>/img/browser-extensions/icons',
+          src: '{,*/}*.svg',
+          dest: '<%= conf.dist %>/img/browser-extensions/icons'
         }]
       }
     },
