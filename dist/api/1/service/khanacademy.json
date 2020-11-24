@@ -11,7 +11,9 @@
     "10000",
     "10001",
     "10002",
+    "10045",
     "10046",
+    "10047",
     "10048",
     "10049",
     "7827",
@@ -372,7 +374,7 @@
       "topics": [],
       "tosdr": {
         "binding": true,
-        "case": "This service is only available to users of a certain age",
+        "case": "This service is only available to users over a certain age",
         "point": "neutral",
         "score": 15,
         "tldr": "Generated through the annotate view"
@@ -448,7 +450,7 @@
       "topics": [],
       "tosdr": {
         "binding": true,
-        "case": "The service can delete specific content without prior notice and without a reason",
+        "case": "The service can delete specific content without reason and may do it without prior notice",
         "point": "blocker",
         "score": 50,
         "tldr": "Generated through the annotate view"
@@ -627,6 +629,27 @@
         "tldr": "Generated through the annotate view"
       }
     },
+    "10045": {
+      "id": "10045",
+      "needModeration": false,
+      "quoteDoc": "Privacy Policy",
+      "quoteEnd": 5200,
+      "quoteStart": 5042,
+      "quoteText": "<p>We collect information, including personal information, in a variety of ways which may vary according to your use of the Service and your account settings.",
+      "services": [
+        "khanacademy"
+      ],
+      "title": "The service collects many different types of personal data",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "The service collects many different types of personal data",
+        "point": "bad",
+        "privacyRelated": true,
+        "score": 70,
+        "tldr": "Generated through the annotate view"
+      }
+    },
     "10046": {
       "id": "10046",
       "needModeration": false,
@@ -645,6 +668,27 @@
         "point": "good",
         "privacyRelated": true,
         "score": 25,
+        "tldr": "Generated through the annotate view"
+      }
+    },
+    "10047": {
+      "id": "10047",
+      "needModeration": false,
+      "quoteDoc": "Privacy Policy",
+      "quoteEnd": 9379,
+      "quoteStart": 9095,
+      "quoteText": "We may collect and use information about your location (such as your country) or infer your approximate location based on your IP address in order to provide you with tailored educational experiences for your region, but we don't collect the precise geolocation of you or your device.",
+      "services": [
+        "khanacademy"
+      ],
+      "title": "This service may collect, use, and share location data",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "This service may collect, use, and share location data",
+        "point": "bad",
+        "privacyRelated": true,
+        "score": 75,
         "tldr": "Generated through the annotate view"
       }
     },

@@ -23,7 +23,6 @@ var topics = [
   "scope of the copyright license",
   "suspension",
   "third",
-  "third parties",
   "third%22%2C+%22personal-data",
   "track",
   "track%22%2C+%22third",
