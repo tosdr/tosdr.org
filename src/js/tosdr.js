@@ -1,5 +1,9 @@
 $(function () {
 
+  if(Math.random() < 0.05){
+    window.location.href = "https://beta.tosdr.org";
+  }
+
   function search(searchTerm) {
     var serviceDivs = document.getElementsByClassName('service-nutshell');
     var tophit;
