@@ -3,6 +3,8 @@
   "class": false,
   "links": {},
   "points": [
+    "11978",
+    "11979",
     "5492",
     "6688",
     "6689",
@@ -263,7 +265,7 @@
       "topics": [],
       "tosdr": {
         "binding": true,
-        "case": "This service is only available to users of a certain age",
+        "case": "This service is only available to users over a certain age",
         "point": "neutral",
         "score": 15,
         "tldr": "From Terms of Service, \"Bitwarden does not target our Service to children under 13, and we do not permit any Users under 13 on our Service. If we learn of any User under the age of 13, we will terminate that User's account immediately. If you are a resident of a country outside the United States, your country's minimum age may be older; in such a case, you are responsible for complying with your country's laws.\""
@@ -585,6 +587,45 @@
         "case": "This service throttles your use",
         "point": "bad",
         "score": 30,
+        "tldr": "Generated through the annotate view"
+      }
+    },
+    "11978": {
+      "id": "11978",
+      "quoteDoc": "Terms of service",
+      "quoteEnd": 9033,
+      "quoteStart": 8965,
+      "quoteText": "to access Bitwarden's Service in ways that exceed your authorization",
+      "services": [
+        "bitwarden"
+      ],
+      "title": "This service prohibits users from attempting to gain unauthorized access to other computer systems",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "This service prohibits users from attempting to gain unauthorized access to other computer systems",
+        "point": "neutral",
+        "score": 20,
+        "tldr": "Generated through the annotate view"
+      }
+    },
+    "11979": {
+      "id": "11979",
+      "quoteDoc": "Privacy Policy",
+      "quoteEnd": 8323,
+      "quoteStart": 8078,
+      "quoteText": "We <strong>do</strong> share User Personal Information with a limited number of third party vendors who process it on our behalf to provide or improve our service, and who have agreed to privacy restrictions similar to our own Privacy Statement.",
+      "services": [
+        "bitwarden"
+      ],
+      "title": "Your personal data is given to third parties",
+      "topics": [],
+      "tosdr": {
+        "binding": true,
+        "case": "Your personal data is given to third parties",
+        "point": "bad",
+        "privacyRelated": true,
+        "score": 10,
         "tldr": "Generated through the annotate view"
       }
     }
