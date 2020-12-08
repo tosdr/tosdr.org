@@ -400,7 +400,7 @@ var services = [
   "rightsstatements",
   "ripencc",
   "riseup-net",
-  "roblox",
+  "roblox-com",
   "roboform",
   "roll20",
   "royalsocietyofchemistry",
