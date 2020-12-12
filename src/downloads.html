@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Downloads - Terms of Service; Didn&apos;t Read</title>
-		<meta name="description" content="Download browser extension and other tools to get information about terms of service and privacy policies">
-		<meta name="author" content="Terms of Service; Didn't Read">
+<head>
+	<meta charset="utf-8">
+	<title>Downloads - Terms of Service; Didn&apos;t Read</title>
+	<meta name="description" content="Download any of our browser extensions to get information about the Terms of Service and Privacy Policies of the websites you visit!">
+	<meta name="author" content="Terms of Service; Didn't Read">
 
-		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
-		<link href="css/custom.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
 
-		<link rel="shortcut icon" href="img/tosdr-icon-16.png">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/tosdr-icon-144.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/tosdr-icon-114.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/tosdr-icon-72.png">
-		<link rel="apple-touch-icon-precomposed" href="img/tosdr-icon-57.png">
+	<link rel="shortcut icon" href="img/tosdr-icon-16.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/tosdr-icon-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/tosdr-icon-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/tosdr-icon-72.png">
+	<link rel="apple-touch-icon-precomposed" href="img/tosdr-icon-57.png">
 
-    <!-- Browser Donations: Flattr -->
-    <meta name="flattr:id" content="qjjrw5">
+	<!-- Browser Donations: Flattr -->
+	<meta name="flattr:id" content="qjjrw5">
 
-    <!-- Browser Donations: LedgerLoops -->
-    <link rel="ledger" href="wss://monetization-hubbie.herokuapp.com">
+	<!-- Browser Donations: LedgerLoops -->
+	<link rel="ledger" href="wss://monetization-hubbie.herokuapp.com">
 
-    <!-- Browser Donations: Coil -->
-    <meta name="monetization" content="$twitter.xrptipbot.com/michielbdejong" />
+	<!-- Browser Donations: Coil -->
+	<meta name="monetization" content="$twitter.xrptipbot.com/michielbdejong">
 
-		<script src="js/jquery-1.7.1.min.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">    <!--http://j.mp/mobileviewport-->
-	</head>
-	<body id="downloads-html" data-spy="scroll">
+	<!--BOOTSTRAP JQUERY-->
+	<script src="js/jquery-1.7.1.min.js"></script>
 
+	<!--VIEWPORT META-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!--
+		Dr. Jeff: Is this still used?
+		http://j.mp/mobileviewport
+	-->
+</head>
+<body id="downloads" data-spy="scroll">
+
+	<nav id="navbar">
 		<div class="navbar navbar-fixed-top" id="menu-options">
 			<div class="navbar-inner">
 				<div class="container">
@@ -40,18 +49,24 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="index.html"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service; Didn't&nbsp;Read</a>
+					<a class="brand" href="index.html"><img src="img/tosdr-icon-16.png" alt="" style="vertical-align:baseline;margin-right:.5em;" class="logo">Terms of Service; Didn't&nbsp;Read</a>
 					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li class=""><a href="index.html#services">Ratings</a></li>
-<!--							<li class=""><a href="#classification">Classification</a></li>-->
-<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
-							<li class=""><a href="about.html">About</a></li>
-<!--							<li class=""><a href="#categories">Categories</a></li>-->
+						<ul class="nav" id="nav-list">
+							<li class="">
+								<a href="index.html#services">Ratings</a>
+							</li>
+							<!--							<li class=""><a href="#classification">Classification</a></li>-->
+							<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
+							<li class="">
+								<a href="about.html">About</a>
+							</li>
+							<!--							<li class=""><a href="#categories">Categories</a></li>-->
 						</ul>
-<!--						<p class="pull-right">-->
-<!--							<a href="#funding" class="btn btn-success btn-mini" style="position:absolute;">Donate</a>-->
-<!--						</p>-->
+						<!--
+							<p class="pull-right">
+								<a href="#funding" class="btn btn-success btn-mini" style="position:absolute;">Donate	</a>
+							</p>
+						-->
 						<p class="pull-right follow-us">
 							Follow us <a href="http://twitter.com/tosdr">@tosdr</a> &nbsp;
 							Donate: <a href="https://opencollective.com/tosdr" target="_blank">On OpenCollective</a>
@@ -60,171 +75,233 @@
 				</div>
 			</div>
 		</div>
+	</nav>
 
+	<header id="preambles">
 		<div class="hero-unit">
-                    <section class="container">
-                        <h1 class="page-header">Downloads</h1>
-                        <p>
-                                Install the browser extensions to get instant information about the terms and privacy policies of websites you browse!
-                        </p>
-
-                    <p>Please select your web browser: <a href="#tosdr-firefox">Mozilla Firefox</a> - <a href="#tosdr-chrome">Google Chrome</a> - <a href="#tosdr-opera">Opera</a> - <a href="#tosdr-safari">Safari</a> - <a href="#tosdr-ie">Internet Explorer</a> - <a href="#tosdr-edge">Microsoft Edge</a>.</p>
-                    </section>
+			<section class="container" id="browser-list">
+				<h1 class="page-header">Downloads</h1>
+				<p>
+					Install our browser extensions to get instant information about the <em>Terms of Service</em> and <em>Privacy Policies</em> of your favourite websites!
+				</p>
+				<p>
+					Please select your web browser: <a href="#tosdr-firefox">Mozilla Firefox</a> - <a href="#tosdr-chrome">Google Chrome</a> - <a href="#tosdr-opera">Opera</a> - <a href="#tosdr-safari">Safari</a> - <a href="#tosdr-ie">Internet Explorer</a> - <a href="#tosdr-edge">Microsoft Edge</a>.
+				</p>
+			</section>
 		</div>
-<!--hero-unit-->
+	</header>
+	<!--hero-unit-->
 
-		<div  class="container" id="tosdr-content" role="main">
+	<main id="main-content">
+		<article>
+			<div class="container" id="tosdr-content" role="main">
+
+				<!--START | tosdr-firefox-->
+				<section id="tosdr-firefox" class="browser-extension row">
+					<h2 class="page-header">Mozilla Firefox add-on</h2>
+					<img src="img/browser-extensions/icons/firefox.svg" alt="Mozilla Firefox." class="logo span1" />
+					<div class="description span7">
+						<p>
+							This add-on will add a small icon on the right side of your address bar. Click on the icon to get the summary of the terms, provided by our contributors on ToS;DR. When you land on a website with a low rating, a small notification will pop up in the bottom right hand corner to warn you.<hr><strong>If you are browsing a website that is not yet in our database, the icon will not appear</strong>.
+						</p>
+						<a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/" class="btn btn-primary addto">Add to Firefox</a>
+					</div>
+					<!--Info for developers.-->
+					<div class="developers-info span4">
+						<h3>Developers</h3>
+						<p>
+							To install the latest version from GitHub, you can find the repository <a href="https://github.com/tosdr/browser-extensions">here</a>, which includes instructions.
+						</p>
+						<!--Dr. Jeff: DEPRECATED?
+							<ol>
+								<li>
+									Clone <a href="https://github.com/tosdr/browser-extensions">this repository</a> or <a href="https://github.com/tosdr/tosdr-firefox/raw/master/tosdr.xpi">download the xpi file</a>.
+								</li>
+								<li>
+									In your Firefox's menu, select <a href="about:addons">Tools/Addons</a>.
+								</li>
+								<li>
+									In the <em>Tools</em> section, click the <strong>Install extension from file</strong> button, then select the <strong>.xpi</strong> file you've just installed.
+								</li>
+							</ol>
+						-->
+					</div>
+				</section>
+				<!--END | tosdr-firefox-->
+
+				<!--START | tosdr-chrome-->
+				<section id="tosdr-chrome" class="browser-extension row">
+					<h2 class="page-header">Google Chrome extension</h2>
+					<img src="img/browser-extensions/icons/chrome.svg" alt="Google Chrome." class="logo span1">
+					<div class="description span7">
+						<p>
+							This extension will add a small icon on the right side of your address bar. Click on the icon to get the summary of the terms, provided by our contributors on ToS;DR. When you land on a website with a low rating, a small notification will pop up in the bottom right hand corner to warn you.<hr><strong>If you are browsing a website that is not yet in our database, the icon will not appear</strong>.
+						</p>
+						<a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg" class="btn btn-primary addto">Add to Chrome</a>
+					</div>
+					<div class="developers-info span4">
+						<h3>Developers</h3>
+						<p>
+							To install the latest version from GitHub, you can find the repository <a href="https://github.com/tosdr/browser-extensions">here</a>, which includes instructions.
+						</p>
+						<!--Dr. Jeff: DEPRECATED?
+							<ol>
+								<li>
+									<a href="https://github.com/tosdr/tosdr-chrome">Clone the repository</a> or <a href="https://github.com/tosdr/tosdr-chrome/zipball/master">Download the zip file.</a>
+								</li>
+								<li>
+									In your Chrome Browser's menu, select "<a href="chrome://chrome/extensions/">Tools/Extensions</a>"
+								</li>
+								<li>
+									Enable Developer mode (checkbox in the top right hand corner)
+								</li>
+								<li>
+									Press “<em>Load unpacked extension</em>” and select the app directory
+								</li>
+							</ol>
+					-->
+					</div>
+				</section>
+				<!--END | tosdr-chrome-->
+
+				<!--START | tosdr-safari-->
+				<section id="tosdr-safari" class="browser-extension row">
+					<h2 class="page-header">Safari extension</h2>
+					<img src="img/browser-extensions/icons/safari.svg" alt="Safari Browser." class="logo span1">
+					<div class="description span7">
+						<p>
+							This extension will add a small icon next to your address bar. Click on the icon to get the summary of the terms, provided by our contributors on ToS;DR.<hr><strong>If you are browsing a website that is not yet in our database, the icon will not appear</strong>.
+						</p>
+						<!--Dr. Jeff: Re-Check this link...?-->
+						<a href="https://safariextension.tosdr.org/" class="btn btn-primary addto">Add to Safari</a>
+					</div>
+					<!--TODO: Update the link and instructions information.
+					|Dr. Jeff: I can't touch this section particularly since I'm not informed about it.|
+					-->
+					<div class="developers-info span4">
+						<h3>Developers</h3>
+						<p>
+							You can find the source code on  <a href="https://github.com/tosdr/tosdr-safari">this GitHub repository</a>.
+						</p>
+					</div>
+				</section>
+				<!--END | tosdr-safari-->
+
+				<!--START | tosdr-edge-->
+				<section id="tosdr-edge" class="browser-extension row">
+					<h2 class="page-header">Microsoft Edge extension</h2>
+					<img src="img/browser-extensions/icons/edge.svg" alt="Microsoft Edge." class="logo span1">
+					<div class="description span7">
+						<p>
+							This extension will add a small icon next to your address bar. Click on the icon to get the summary of the terms, provided by our contributors on ToS;DR.<hr><strong>If you are browsing a website that is not yet in our database, the icon will not appear</strong>.
+						</p>
+						<a href="https://microsoftedge.microsoft.com/addons/detail/oaaecoiolcpocebdnakfpfjegbmmpkjn" class="btn btn-primary addto">Add to Edge</a>
+					</div>
+					<!--TODO: Update the link and instructions information.
+					|Dr. Jeff: I can't touch this section particularly since I'm not informed about it.|
+					-->
+					<div class="developers-info span4">
+						<h3>Developers</h3>
+						<p>
+							Unfortunately, we do not have a repository for the Edge extension yet.
+						</p>
+					</div>
+				</section>
+				<!--END | tosdr-edge-->
+
+				<!--START | tosdr-opera-->
+				<section id="tosdr-opera" class="browser-extension row">
+					<h2 class="page-header">Opera add-on</h2>
+					<img src="img/browser-extensions/icons/opera.svg" alt="" class="logo span1"  />
+					<div class="description span7">
+						<p>
+							This extension will add a small icon next to your address bar. Click on the icon to get the summary of the terms, provided by our contributors on ToS;DR.<hr><strong>If you are browsing a website that is not yet in our database, the icon will not appear</strong>.
+						</p>
+						<a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/" class="btn btn-primary addto">Add to Opera</a>
+					</div>
+					<!--TODO: Update the link and instructions information.
+					|Dr. Jeff: I can't touch this section particularly since I'm not informed about it.|
+					-->
+					<div class="developers-info span4">
+						<h3>Developers</h3>
+						<p>
+							You can find the source code on GitHub <a href="https://github.com/tosdr/tosdr-opera">here</a>.
+						</p>
+					</div>
+				</section>
+				<!--END | tosdr-opera-->
+
+				<!--START | tosdr-ie-->
+				<section id="tosdr-ie" class="browser-extension row">
+					<h2 class="page-header">Internet Explorer: <ins>coming soon</ins></h2>
+					<img src="img/browser-extensions/icons/iexplorer.svg" alt="Internet Explorer." class="logo span1">
+					<div class="description span11">
+						<p>
+							We do not have an extension for internet explorer yet. Please help us by contributing code to it!
+						</p>
+						<a href="https://github.com/tosdr/tosdr-ie" class="btn btn-primary addto">Contribute</a>
+					</div>
+				</section>
+				<!--END | tosdr-ie-->
+
+			</div>
+		</article>
+	</main>
+
+	<footer id="bottom">
+		<div class="container">
+			<nav id="sitemap">
+				<ul class="row">
+					<li class="span3"><a href="index.html">Home</a>
+						<ul>
+							<li><a href="index.html#services">Rated Services</a></li>
+							<li><a href="topics.html#topics">Rated Topics</a></li>
+						</ul>
+					</li>
+					<li class="span3"><a href="about.html">About</a>
+						<ul>
+							<li><a href="about.html#contact">Contact us</a></li>
+							<li><a href="classification.html">Classification</a></li>
+							<li><a href="legal.html">Legal</a></li>
+							<li><a href="blog/index.html">Blog</a></li>
+						</ul>
+					</li>
+					<li class="span3"><a href="contribute.html">Contribute</a>
+						<ul>
+							<li><a href="contribute.html#donate">Donate</a></li><li><a href="contribute.html#join">Join us</a></li>
+							<li><a href="get-involved.html">Get involved</a></li>
+							<li><a href="api.html">API</a></li>
+						</ul>
+					</li>
+					<li class="span3">Spread
+						<ul>
+							<li><a href="http://twitter.com/tosdr">Follow us on twitter</a></li>
+							<li><a href="https://www.facebook.com/TermsOfServiceDidntRead">Like us on Facebook</a></li>
+							<li><a href="http://github.com/tosdr/">Fork us on Github</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<p id="credits"><strong><a href="https://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a project inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>. Also related: <a href="http://www.opennotice.org/">OpenNotice</a>.</p>
+
+			<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms to which you are bound.</strong> Disclosure: a list of donors and supporters <a href="thanks.html">is published</a>. <a href="legal.html">All legal information and Imprint</a>.</p>
 
 
-                    <section id="tosdr-firefox" class="browser-extension row">
-                        <h2 class="page-header">Mozilla Firefox add-on</h2>
-                        <img src="img/browser-extensions/icons/firefox.svg" alt="" class="logo span1" />
-                        <div class="description span7">
-                            <p>This add-on will add a small icon in the right side of your address bar. If you are browsing a website that is not in our database, nothing will appear. Click on the icon to get the summary of the terms, provided by ToS;DR.</p>
-                            <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/" class="btn btn-primary addto">Add to Firefox</a>
-                        </div>
-                        <div class="developers-info span4">
-                            <h3>Developers</h3>
-                            <p>
-                                Install the latest version from github:
-                            </p>
-                            <ul>
-                                <li><a href="https://github.com/tosdr/tosdr-firefox">Clone the repository</a> or <a href="https://github.com/tosdr/tosdr-firefox/raw/master/tosdr.xpi">Download the xpi</a></li>
-                                <li>In Firefox's menu: <a href="about:addons">Tools/Addons</a></li>
-                                <li>In Tools, Install extension from file and select the .xpi</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!--tosdr-firefox-->
-                    <section id="tosdr-chrome" class="browser-extension row">
-                        <h2 class="page-header">Google Chrome extension</h2>
-                        <img src="img/browser-extensions/icons/chrome.svg" alt="" class="logo span1"  />
-                        <div class="description span7">
-                            <p>This extension will add a small icon in the right side of your address bar. If you are browsing a website that is not in our database, nothing will appear. Click on the icon to get the summary of the terms, provided by ToS;DR. When you land on a website with very bad terms, a small notification will pop up in the bottom right hand corner to warn you.</p>
-                            <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg" class="btn btn-primary addto">Add to Chrome</a>
-                        </div>
-                        <div class="developers-info span4">
-                            <h3>Developers</h3>
-                            <p>
-                                Install the latest version from github:
-                            </p>
-                            <ul>
-                                <li><a href="https://github.com/tosdr/tosdr-chrome">Clone the repository</a> or <a href="https://github.com/tosdr/tosdr-chrome/zipball/master">Download the zip</a></li>
-                                <li>In Chrome's menu: <a href="chrome://chrome/extensions/">Tools/Extensions</a></li>
-                                <li>Enable Developer mode (checkbox in the top right hand corner)</li>
-                                <li>Press “Load unpacked extension” and select the app directory</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!--tosdr-chrome-->
+			<p id="licensing"><a href="https://tosdr.org">ToS;DR</a> is Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). Offer for <a href="https://github.com/tosdr/tosdr.org/zipball/master">Source (zip)</a>. The <code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"><code>services/</code></a> and <a href="https://github.com/tosdr/tosdr.org/tree/master/points"><code>points/</code></a> directories are  also licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. Thumbs Up and Thumbs Down icons modified by Jan.</p>
 
-                    <section id="tosdr-safari" class="browser-extension row">
-                        <h2 class="page-header">Safari extension</h2>
-                        <img src="img/browser-extensions/icons/safari.svg" alt="" class="logo span1"  />
-                        <div class="description span7">
-                            <p>This extension will add a small icon just next to the address bar, on the left. If you are browsing a website that is not in our database, nothing will appear. Click on the icon to get the summary of the terms, provided by ToS;DR.</p>
-                            <a href="http://safariextension.tosdr.org/" class="btn btn-primary addto">Add to Safari</a>
-                        </div>
-                        <div class="developers-info span4">
-                            <h3>Developers</h3>
-                            <p>You can find the <a href="https://github.com/tosdr/tosdr-safari">source code on github</a></p>
-                        </div>
-                    </section>
-                    <!--tosdr-safari-->
-
-                    <section id="tosdr-edge" class="browser-extension row">
-                        <h2 class="page-header">Microsoft Edge extension</h2>
-                        <img src="img/browser-extensions/icons/edge.svg" alt="" class="logo span1"  />
-                        <div class="description span7">
-                            <p>This extension will add a small icon just next to the address bar, on the left. If you are browsing a website that is not in our database, nothing will appear. Click on the icon to get the summary of the terms, provided by ToS;DR.</p>
-                            <a href="https://microsoftedge.microsoft.com/addons/detail/oaaecoiolcpocebdnakfpfjegbmmpkjn" class="btn btn-primary addto">Add to Edge</a>
-                        </div>
-                        <div class="developers-info span4">
-                            <h3>Developers</h3>
-                            <p>We do not have a repository for the edge extension yet</p>
-                        </div>
-                    </section>
-                    <!--tosdr-edge-->
-
-                    <section id="tosdr-opera" class="browser-extension row">
-                        <h2 class="page-header">Opera add-on</h2>
-                        <img src="img/browser-extensions/icons/opera.svg" alt="" class="logo span1"  />
-                        <div class="description span7">
-                            <p>This extension will add a small icon  on the top right-hand corner. If you are browsing a website that is not in our database, nothing will appear. Click on the icon to get the summary of the terms, provided by ToS;DR.</p>
-                            <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/" class="btn btn-primary addto">Add to Opera</a>
-                        </div>
-                        <div class="developers-info span4">
-                            <h3>Developers</h3>
-                            <p>You can find the <a href="https://github.com/tosdr/tosdr-opera">source code on github</a></p>
-                        </div>
-                    </section>
-                    <!--tosdr-opera-->
-
-                    <section id="tosdr-ie" class="browser-extension row">
-                        <h2 class="page-header">Internet Explorer: coming soon</h2>
-                        <img src="img/browser-extensions/icons/iexplorer.svg" alt="" class="logo span1" />
-                        <div class="description span11">
-                            <p>We do not have an extension for internet explorer yet. Please help contribute code to it!</p>
-                            <a href="https://github.com/tosdr/tosdr-ie" class="btn btn-primary addto">Contribute</a>
-                        </div>
-                    </section>
-                    <!--tosdr-ie-->
-
-                </div> <!-- /container -->
-
-		<footer id="bottom">
-			<div class="container">
-				<nav id="sitemap">
-					<ul class="row">
-						<li class="span3"><a href="index.html">Home</a>
-							<ul>
-								<li><a href="index.html#services">Rated Services</a></li>
-								<li><a href="topics.html#topics">Rated Topics</a></li>
-							</ul>
-						</li>
-						<li class="span3"><a href="about.html">About</a>
-							<ul>
-								<li><a href="about.html#contact">Contact us</a></li>
-								<li><a href="classification.html">Classification</a></li>
-								<li><a href="legal.html">Legal</a></li>
-								<li><a href="blog/index.html">Blog</a></li>
-							</ul>
-						</li>
-						<li class="span3"><a href="contribute.html">Contribute</a>
-							<ul>
-								<li><a href="contribute.html#donate">Donate</a></li><li><a href="contribute.html#join">Join us</a></li>
-								<li><a href="get-involved.html">Get involved</a></li>
-								<li><a href="api.html">API</a></li>
-							</ul>
-						</li>
-						<li class="span3">Spread
-							<ul>
-								<li><a href="http://twitter.com/tosdr">Follow us on twitter</a></li>
-								<li><a href="https://www.facebook.com/TermsOfServiceDidntRead">Like us on Facebook</a></li>
-								<li><a href="http://github.com/tosdr/">Fork us on Github</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-
-				<p id="credits"><strong><a href="https://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a project inspired by Aza Raskin&apos;s <a href="http://azarask.in/blog/post/privacy-icons/">Privacy Icons</a> and EFF&apos;s <a href="http://tosback.org">TOSBack</a>. Also related: <a href="http://www.opennotice.org/">OpenNotice</a>.</p>
-
-				<p id="legalinfo"><strong>Nothing here should be considered legal advice</strong>. We express our opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms to which you are bound.</strong> Disclosure: a list of donors and supporters <a href="thanks.html">is published</a>. <a href="legal.html">All legal information and Imprint</a>.</p>
-
-
-				<p id="licensing"><a href="https://tosdr.org">ToS;DR</a> is Free Software, licensed under the GNU Affero General Public License (<a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html" rel="license">AGPL-3.0</a>). Offer for <a href="https://github.com/tosdr/tosdr.org/zipball/master">Source (zip)</a>. The <code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"><code>services/</code></a> and <a href="https://github.com/tosdr/tosdr.org/tree/master/points"><code>points/</code></a> directories are  also licensed under the Attribution - Share Alike (<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>). Icons by <a href="http://glyphicons.com/glyphicons-licenses/">Glyphicons</a> used under a CC BY <a href="http://creativecommons.org/licenses/by/3.0/deed.en">3.0  Unported license</a>. Thumbs Up and Thumbs Down icons modified by Jan.</p>
-
-				<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a href="https://5apps.com/apps/512cb93cbc73cb2f84000002"><img src="img/unhostedby5apps.png" alt="5apps" /></a>
+			<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a href="https://5apps.com/apps/512cb93cbc73cb2f84000002"><img src="img/unhostedby5apps.png" alt="5apps" /></a>
 			</div>
 		</footer>
 
-
-<!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
 		<script src="bootstrap/js/bootstrap-collapse.js"></script>
-                <script src="bootstrap/js/bootstrap-carousel.js"></script>
-<!--		<script src="bootstrap/js/bootstrap-modal.js"></script>-->
-<!--		<script src="bootstrap/js/bootstrap-transition.js"></script>-->
-<!--		<script src="bootstrap/js/bootstrap-typeahead.js"></script>-->
-<!--		<script src="bootstrap/js/bootstrap-alert.js"></script>-->
+		<script src="bootstrap/js/bootstrap-carousel.js"></script>
+		<!--
+		<script src="bootstrap/js/bootstrap-twipsy.js"></script>
+		<script src="bootstrap/js/bootstrap-modal.js"></script>
+		<script src="bootstrap/js/bootstrap-transition.js"></script>
+		<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+		<script src="bootstrap/js/bootstrap-alert.js"></script>
+		-->
 	</body>
-</html>
+	</html>
