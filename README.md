@@ -41,6 +41,21 @@ To build:
 5. Commit and push to github.
 7. To publish the new version of the website, assuming you have 5apps set up as a remote, run `git subtree push --prefix dist 5apps master`. But be careful: this updates the live site! Ask [@hugoroy] or [@michielbdejong] if you don't have permission
 
+Using npm to build:
+
+1. Run `npm install` in the root of this repository to make sure you have the required packages.
+2. Make the changes you wish to make to the source files in this repository.
+3. Run `npm run compile` in the root of this repository
+4. Check whether the output in the dist/ directory is looking as intended.
+5. Commit and push to github using `npm run publish`
+
+Using npm to build and publish in one command:
+
+1. Run `npm install` in the root of this repository to make sure you have the required packages.
+2. Make the changes you wish to make to the source files in this repository.
+3. Run `npm run compileandpublish` in the root of this repository
+
+
 [@hugoroy]: https://github.com/hugoroy
 [@michielbdejong]: https://github.com/michielbdejong
 

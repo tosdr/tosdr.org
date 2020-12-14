@@ -6,7 +6,11 @@
     "www.tosdr.org"
   ],
   "scripts": {
-    "start": "server.js"
+    "start": "server.js",
+    "compile": "./node_modules/.bin/grunt && cp -r api/ dist/",
+    "deploy": "npm run compile",
+    "publish": "git add . && git commit -m \"built\" && git push && git subtree push --prefix dist 5apps master",
+    "compileandpublish": "npm run compile && npm run publish"
   },
   "version": "0.0.0-18",
   "repository": "git@github.com:tosdr/tosdr.org.git",
