@@ -37,7 +37,7 @@ To build:
 2. Make the changes you wish to make to the source files in this repository.
 3. Run `grunt` or `./node_modules/.bin/grunt` in the root of this repository.
 4. Check whether the output in the dist/ directory is looking as intended.
-5. cp -r api/ dist/api . (needed for https://github.com/duckduckgo/duckduckgo-privacy-extension)
+5. cp -r api/ dist/ . (needed for https://github.com/duckduckgo/duckduckgo-privacy-extension)
 5. Commit and push to github.
 7. To publish the new version of the website, assuming you have 5apps set up as a remote, run `git subtree push --prefix dist 5apps master`. But be careful: this updates the live site! Ask [@hugoroy] or [@michielbdejong] if you don't have permission
 

@@ -121,7 +121,8 @@ module.exports = function (grunt) {
                               '!bootstrap/docs',
                               '1901/*',
                               'js/*',
-                              'img/*.gif'
+                              'img/*.gif',
+                              'swagger/*'
                              ],
                         dest: '<%= conf.dist %>'
 					},
