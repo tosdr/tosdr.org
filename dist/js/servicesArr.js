@@ -450,6 +450,7 @@ var services = [
   "spinonline",
   "spotify",
   "sprint",
+  "square",
   "stackoverflow",
   "standardnotes",
   "startpage",
