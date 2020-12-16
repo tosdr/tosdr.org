@@ -1,0 +1,188 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "We encourage people to develop applications and other services integrating our ratings into their work. This page should help you use our data for your own app. Our source code is on Github.",
+    "version": "1.0.0",
+    "title": "Terms of Service; Didn't Read",
+    "termsOfService": "https://tosdr.org/legal.html",
+    "contact": {
+      "email": "team@tosdr.org"
+    },
+    "license": {
+      "name": "Creative commons",
+      "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  },
+  "host": "tosdr.org",
+  "basePath": "/api/",
+  "tags": [
+    {
+      "name": "Service",
+      "description": "Get the points, documents, links and ratings of a service",
+      "externalDocs": {
+        "description": "GitHub",
+        "url": "https://github.com/tosdr/tosdr.org"
+      }
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/1/service/{serviceSlug}.json": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Get a service by its Slug",
+        "description": "Returns a service",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "serviceSlug",
+            "in": "path",
+            "description": "Slug of service to return",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Service"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Service": {
+      "properties": {
+        "alexa": {
+          "type": "integer",
+          "format": "nullable"
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "F",
+            "N/A"
+          ]
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "Document Title": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "pointsData": {
+          "type": "object",
+          "properties": {
+            "point_id": {
+              "type": "object",
+              "properties": {
+                "discussion": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "needsModeration": {
+                  "type": "boolean"
+                },
+                "quoteDoc": {
+                  "type": "string"
+                },
+                "quoteText": {
+                  "type": "string"
+                },
+                "quoteStart": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "quoteEnd": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "services": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "set": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "tosdr": {
+                  "type": "object",
+                  "properties": {
+                    "binding": {
+                      "type": "boolean"
+                    },
+                    "case": {
+                      "type": "string"
+                    },
+                    "point": {
+                      "type": "string"
+                    },
+                    "score": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "tldr": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

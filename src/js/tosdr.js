@@ -1,6 +1,6 @@
 $(function () {
 
-  if(Math.random() < 0.05){
+  if(Math.random() < 0.10){
     window.location.href = "https://beta.tosdr.org";
   }
 
