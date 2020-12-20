@@ -1,8 +1,10 @@
 $(function () {
-
+  /*
+  Disable for now until Heroku is fixed
   if(Math.random() < 0.10){
     window.location.href = "https://beta.tosdr.org";
   }
+  */
 
   function search(searchTerm) {
     var serviceDivs = document.getElementsByClassName('service-nutshell');
