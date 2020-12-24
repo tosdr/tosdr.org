@@ -1,7 +1,7 @@
 $(function () {
   
   if(Math.random() < 0.25){
-    window.location.href = "https://beta.tosdr.org";
+    window.location.href = "https://beta.tosdr.org/"+ window.location.hash;
   }
 
 
