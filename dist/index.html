@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<title>Terms of Service; Didn&apos;t Read</title>
 	<meta name="author" content="Terms of Service; Didn't Read">
+
 	<!--Descpription. Should appear on the Search Engines like this.-->
-	<meta name="description"
-		content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of the websites, services and apps you use.">
+	<meta name="description" content="Terms of Service; Didn't Read (ToS;DR) is an active project to fix the biggest lie on the web. We help you understand the Terms and Conditions and Privacy Policies of the websites, services and apps you use.">
+
 	<!--Keywords for Search Engines to rank this page higher.-->
-	<meta name="keywords"
-		content="Terms of Service, Open Source, Free Software, Community, ToSDR, Terms, Privacy, Data, Privacy Policy, Policy, Internet, Project,">
+	<meta name="keywords" content="Terms of Service, Open Source, Free Software, Community, ToSDR, Terms, Privacy, Data, Privacy Policy, Policy, Internet, Project,">
 	<!--OpenGraph Tag, in case it's shared through Social Networks.-->
 	<meta name="og:title" property="og:title" content="Terms of Service; Didn't Read">
 	<!--Summary for Twitter links-->
@@ -18,191 +18,197 @@
 	<!--Canonical Website | Specifies our main url to search engines.-->
 	<link rel="canonical" href="https://tosdr.org/">
 	<!--ONLY IN THE index-template.html file!!!!!!-->
-	<!-- Browser Donations: Flattr -->
+
+	<!--BROWSER DONATIONS-->
+	<!--Flattr-->
 	<meta name="flattr:id" content="qjjrw5">
-	<!-- Browser Donations: LedgerLoops -->
+	<!--LedgerLoops-->
 	<link rel="ledger" href="wss://monetization-hubbie.herokuapp.com">
-	<!-- Browser Donations: Coil -->
+	<!--Coil-->
 	<meta name="monetization" content="$twitter.xrptipbot.com/michielbdejong" />
+
 	<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<!--Stylesheets.-->
+
+	<!--STYLESHEETS-->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
+
+	<!--FAVICONS(?)-->
 	<link rel="shortcut icon" href="img/tosdr-icon-57.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/tosdr-icon-144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/tosdr-icon-114.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/tosdr-icon-72.png">
 	<link rel="apple-touch-icon-precomposed" href="img/tosdr-icon-57.png">
-	<!--Don't know what to do about this.-->
-	<!---<link rel="alternate" type="application/atom+xml" href="https://blog.tosdr.org/rss/" title="ToS;DR Feed">-->
-	<script src="js/jquery-1.7.1.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<!--https://j.mp/mobileviewport-->
+
+	<!--Don't know what to do about this...
+	<link rel="alternate" type="application/atom+xml" href="https://blog.tosdr.org/rss/" title="ToS;DR Feed">
+-->
+
+<!--BOOTSTRAP SCRIPT-->
+<script src="js/jquery-1.7.1.min.js"></script>
+
+<!--VIEWPORT META-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!--Dr. Jeff: IS THIS STILL USEFUL?
+https://j.mp/mobileviewport
+-->
 </head>
 
-<body id="index-html" data-spy="scroll">
-	<div class="navbar navbar-fixed-top" id="menu-options">
-		<div class="navbar-inner">
-			<div class="container">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="brand" href="#"><img src="img/tosdr-icon-16.png" alt=""
-						style="vertical-align:baseline;margin-right:.5em;" class="logo" />Terms of Service;
-					Didn't&nbsp;Read</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class=""><a href="#services">Ratings</a></li>
-						<!--							<li class=""><a href="#classification">Classification</a></li>-->
-						<!--							<li class=""><a href="#workinprogress">Progress</a></li>-->
-						<li class=""><a href="about.html">About</a></li>
-						<li class=""><a target="_blank" href="https://discord.gg/QaCJUfwsKS">Discord Server</a></li>
-						<!--							<li class=""><a href="#categories">Categories</a></li>-->
+<body id="index-html" data-spy="scroll" id="body">
+	<nav id="navbar">
+		<div class="navbar navbar-fixed-top" id="menu-options">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#"><img src="img/tosdr-icon-16.png" alt="ToS;DR icon."
+						style="vertical-align:baseline;margin-right:.5em;" class="logo" >Terms of Service;
+						Didn't&nbsp;Read</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li class="">
+									<a href="#services">Ratings</a>
+								</li>
+								<!--
+								<li class="">
+								<a href="#classification">Classification</a></li>
+								<li class="">
+								<a href="#workinprogress">Progress</a></li>
+								<li class="">
+								<a href="#categories">Categories</a>
+							</li>
+						-->
+						<li class="">
+							<a href="about.html">About</a>
+						</li>
+						<li class="">
+							<a target="_blank" href="https://discord.gg/QaCJUfwsKS">Discord Server</a>
+						</li>
 					</ul>
-					<!--						<p class="pull-right">-->
-					<!--							<a href="#funding" class="btn btn-success btn-mini" style="position:absolute;">Donate</a>-->
-					<!--						</p>-->
-					<p class="pull-right follow-us">
-						Follow us <a href="https://twitter.com/tosdr" target="_blank" rel="nofollow">@tosdr</a> &nbsp;
-						Donate: <a href="https://opencollective.com/tosdr" target="_blank">On OpenCollective</a>
-					</p>
-				</div>
-			</div>
+					<!--
+					<p class="pull-right">
+					<a href="#funding" class="btn btn-success btn-mini" style="position:absolute;">Donate</a>
+				</p>
+			-->
+			<p class="pull-right follow-us">
+				Follow us <a href="https://twitter.com/tosdr" target="_blank" rel="nofollow">@tosdr</a> &nbsp;
+				Donate: <a href="https://opencollective.com/tosdr" target="_blank">On OpenCollective</a>
+			</p>
 		</div>
 	</div>
+</div>
+</div>
+<header id="header">
 	<div class="hero-unit">
 		<section class="container">
 			<div class="page-header">
-				<h1><img src="img/tosdr-logo.png" alt="Terms of Service; Didn&apos;t&nbsp;Read" width="960"
-						height="328" /></h1>
+				<h1>
+					<img src="img/tosdr-logo.png" alt="Terms of Service; Didn&apos;t&nbsp;Read" width="960"
+					height="328">
+				</h1>
 			</div>
-
 			<h2>“<strong>I have read and agree to the Terms</strong>” is the biggest lie on the web.&nbsp;We&nbsp;aim
 				to&nbsp;fix&nbsp;that.</h2>
-		</section>
-	</div>
-	<!--hero-unit-->
+			</section>
+		</div>
+		<!--hero-unit-->
+	</header>
 
-	<div class="container" id="tosdr-content" role="main">
-		<section id="intro">
-			<p>We are a user rights <a href="about.html" title="Learn more about us.">initiative</a> to <a
-					href="classification.html" title="What's our classification?">rate and label</a> website terms &amp;
-				privacy policies, from very good <span class="label A">Class A</span> to&nbsp;very&nbsp;bad&nbsp;<span
-					class="label E">Class E</span>.<br>
-				<br>Terms of service are often <strong>too long to read</strong>, but it's important to understand
-				what's in them. <strong><ins>Your rights online depend on them!</ins></strong>
-				<!--Get informed about your rights: install the browser extension for <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg">Chrome</a>, <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/">Opera</a> or <a href="https://safariextension.tosdr.org/">Safari</a>.</p-->
-				<br><br>We hope that our ratings can help you get informed about your rights. Do not hesitate to click
+	<main id="main">
+		<div class="container" id="tosdr-content" role="main">
+			<article>
+				<section id="intro">
+					<p>
+						We are a user rights <a href="about.html" title="Learn more about us.">initiative</a> to <a
+						href="classification.html" title="What's our classification?">rate and label</a> Terms of Service &amp; Privacy Policies, from <em>very good</em> <span class="label A">Class A</span> to&nbsp;<em>very&nbsp;bad&nbsp;</em> <span
+						class="label E">Class E</span>.
+						<br>
+						<br>
+						Terms of Service are often <strong>too long to read</strong>, but it's important to understand what's in them. <strong><ins>Your rights online depend on them!</ins></strong>
+						<!--
+						Get informed about your rights: install the browser extension for <a href="https://addons.mozilla.org/en-US/firefox/addon/terms-of-service-didnt-read/">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg">Chrome</a>, <a href="https://addons.opera.com/extensions/details/terms-of-service-didnt-read/">Opera</a> or <a href="https://safariextension.tosdr.org/">Safari</a>.
+					</p>
+				-->
+				<br>
+				<br>
+				We hope that our ratings can help you get informed about your rights. Do not hesitate to click
 				<a href="#services">on a service below</a> to learn more details! You can also get the ratings directly
-				in your browser by installing our web browser add-on:</p>
+				in your browser by installing our web browser add-on:
+			</p>
 		</section>
 		<section id="further">
-			<p><a href="downloads.html" class="btn btn-large btn-success">Download browser add-on</a>
-				<!--TODO alternative download link and alternative browser name addon/extension depending on browser used; otherwise just use canonical downloads.html link-->
+			<p>
+				<a href="downloads.html" class="btn btn-large btn-success">Download browser add-on</a>
 			</p>
 			<br>
-			<a href="https://edit.tosdr.org" class="btn btn-large btn-info" target="_blank">Contribute</a>
-			<!--TODO alternative download link and alternative browser name addon/extension depending on browser used; otherwise just use canonical downloads.html link-->
+			<p>
+				<a href="https://edit.tosdr.org" class="btn btn-large btn-info" target="_blank">Contribute</a>
 			</p>
 			<ul class="masthead-links">
-				<li><a href="contribute.html">Contribute</a></li>
-				<li><a href="api.html">API</a></li>
+				<li>
+					<a href="contribute.html">Contribute</a>
+				</li>
+				<li>
+					<a href="api.html">API</a>
+				</li>
 			</ul>
 		</section>
 		<section>
 			<div id="inthenews">
 				<a href="https://moneyland.time.com/2012/08/10/new-site-grades-those-pesky-terms-of-service-agreements-you-never-read/"
-					target="_blank"><img src="img/time.png" alt="Time"></a>
+				target="_blank"><img src="img/time.png" alt="Time"></a>
 				<a href="https://gigaom.com/2012/08/14/i-agree-why-terms-of-service-report-cards-are-a-good-idea/"
-					target="_blank"><img src="img/gigaom.gif" alt="GigaOM"></a>
+				target="_blank"><img src="img/gigaom.gif" alt="GigaOM"></a>
 				<a href="https://www.theverge.com/2012/8/14/3241572/tos-dr-terms-of-service" target="_blank"><img
-						src="img/verge.png" alt="The Verge"></a>
-				<a href="https://www.lemonde.fr/technologies/article/2012/08/14/un-site-veut-mettre-fin-au-mensonge-des-conditions-d-utilisation-sur-internet_1745942_651865.html"
+					src="img/verge.png" alt="The Verge"></a>
+					<a href="https://www.lemonde.fr/technologies/article/2012/08/14/un-site-veut-mettre-fin-au-mensonge-des-conditions-d-utilisation-sur-internet_1745942_651865.html"
 					target="_blank"><img src="img/lemondefr.png" alt="Le Monde"></a>
-				<a href="https://www.zeit.de/digital/internet/2012-08/terms-of-service-did-not-read"
+					<a href="https://www.zeit.de/digital/internet/2012-08/terms-of-service-did-not-read"
 					target="_blank"><img src="img/zeit.png" alt="Die Zeit"></a>
-				<a href="https://www.wired.com/story/terms-of-service-didnt-read/" target="_blank"><img
+					<a href="https://www.wired.com/story/terms-of-service-didnt-read/" target="_blank"><img
 						src="img/wired.gif" alt="Wired"></a>
-				<a href="https://www.strategy-business.com/blog/Artificial-Intelligence-Ratings-and-the-Small-Print"
-					style="color:grey;padding:8px" target="_blank">S+B</a>
-				<a href="https://www.datingnews.com/daters-pulse/tosdr-brings-transparency-to-dating-industry-by-assessing-terms-of-service/"
-					style="color:grey;padding:8px" target="_blank">DN</a>
-			</div>
-			<hr />
-
-			<div>
-				<a href="https://forum.tosdr.org" target="_blank" style="font-weight:700">Visit our forum</a>!
-				<!-- hide  blog in favour of forum:
-					<a href="https://blog.tosdr.org"
-					style="font-weight:700">Go to our blog</a>
-					(<a href="https://blog.tosdr.org/rss/">Feed</a>)
-				-->
-			</div>
-			<!-- <ul id="blog-index"> -->
-			<!--     <li id="2014-06-10"> -->
-			<!--         <time datetime="Tue 10 Jun 2014 10:00:00 +0100">10 Jun 2014</time> -->
-			<!--         <a href="https://blog.tosdr.org/posts/google-groups-import/">Importing all posts from the Google Groups forum</a> -->
-			<!--         by -->
-			<!--         <span class="authors"> -->
-			<!--             <img src="img/michiel.jpg" alt="" class="avatar" /> -->
-			<!--             Michiel de Jong -->
-			<!--         </span> -->
-			<!--     </li> -->
-			<!--     <li id="2013-06-17"> -->
-			<!--         <time datetime="Mon Jun 17 11:20:00 +0200 2013">17 Jun 2013</time> -->
-			<!--         <a href="https://blog.tosdr.org/posts/tosdr-in-action-owned/">ToS;DR in Action: “What is yours stays yours”: Oh, really?</a> -->
-			<!--         by -->
-			<!--         <span class="authors"> -->
-			<!--             <img src="img/hugo.png" alt="" class="avatar" /> -->
-			<!--             Hugo Roy -->
-			<!--         </span> -->
-			<!--     </li> -->
-			<!--     <li id="2013-06-10"> -->
-			<!--         <time datetime="Mon Jun 10 16:53:00 +0200 2013">10 Jun 2013</time> -->
-			<!--         <a href="https://blog.tosdr.org/posts/tosdr-in-action-i-have-read-and-agree/">ToS;DR in Action: “I have read and agree to the terms”</a> -->
-			<!--         by -->
-			<!--         <span class="authors"> -->
-			<!--             <img src="img/hugo.png" alt="" class="avatar" /> -->
-			<!--             Hugo Roy -->
-			<!--         </span> -->
-			<!--     </li> -->
-			<!--     <li id="2013-06-09"> -->
-			<!--         <time datetime="Sat Jun 9 23:37:00 +0200 2013">9 Jun 2013</time> -->
-			<!--         <a href="https://blog.tosdr.org/posts/suzanne-youtube/">YouTube's Terms of Service</a> -->
-			<!--         by -->
-			<!--         <span class="authors"> -->
-			<!--             <img src="img/suzanne.png" alt="" class="avatar" /> -->
-			<!--             Suzanne Azmayesh -->
-			<!--         </span> -->
-			<!--     </li> -->
-			<!-- </ul> -->
-		</section>
-		<section id="services">
-			<h2 class="page-header">Ratings</h2>
-			<div class="row">
-				<div id="filter-by" class="span3">
-					<ul class="nav nav-pills">
-						<li class="active"><a href="#services">Services</a></li>
-						<li><a href="https://tosdr.org/topics.html#topics">Topics</a></li>
-					</ul>
-				</div>
-				<div id="filter-services" class="span9">
-					<div id="searchDiv" style="display:none">
-						<form class="form-search">
-							<div class="input-prepend">
-								<a href="#services" class="btn">Search</a>
-								<input class="input-xlarge search-query" id="searchBox" size="16" type="text"
-									placeholder="e.g. facebook, twitter, search…">
-							</div>
-						</form>
+						<a href="https://www.strategy-business.com/blog/Artificial-Intelligence-Ratings-and-the-Small-Print"
+						style="color:grey;padding:8px" target="_blank">S+B</a>
+						<a href="https://www.datingnews.com/daters-pulse/tosdr-brings-transparency-to-dating-industry-by-assessing-terms-of-service/"
+						style="color:grey;padding:8px" target="_blank">DN</a>
 					</div>
-				</div>
-			</div>
-			<div id="services-list" class="row">
+					<hr>
+					<div>
+						<a href="https://forum.tosdr.org" target="_blank" style="font-weight:700">Visit our forum</a>!
+					</div>
+				</section>
+				<section id="services">
+					<h2 class="page-header">Ratings</h2>
+					<div class="row">
+						<div id="filter-by" class="span3">
+							<ul class="nav nav-pills">
+								<li class="active">
+									<a href="#services">Services</a>
+								</li>
+								<li>
+									<a href="https://tosdr.org/topics.html#topics">Topics</a>
+								</li>
+							</ul>
+						</div>
+						<div id="filter-services" class="span9">
+							<div id="searchDiv" style="display:none">
+								<form class="form-search">
+									<div class="input-prepend">
+										<a href="#services" class="btn">Search</a>
+										<input class="input-xlarge search-query" id="searchBox" size="16" type="text"
+										placeholder="e.g. Facebook, Twitter, Google…">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="services-list" class="row">
 	<div data-search="google,search,groups,yahoo,duckduckgo,google.com" id="google-tosdr" class="span6 service-nutshell"><h3><img src="logo/google.png" class="favlogo"><a class="modal-link" data-service-name="google" href="#google">Google</a>
 <div id="google-rating" class="service-rating"><a title="Learn more about our classification" href="classification.html"><span class="label C">Class C</span></a></div></h3>
 <section class="specificissues"><ul class="tosdr-points"><li id="point-google-12831"><span class="badge badge-important" title="90"><i class="icon-remove icon-white">×</i></span>&nbsp;Your identity is used in ads that are shown to other users</li>
@@ -3877,18 +3883,22 @@
 </ul><a class="modal-link" data-service-name="московскийинформационныйкластер:проверкадостоверностиданныхцифровогопропускадляпередвиженияпогородумоскве" href="#"><i class="icon  icon-th-list"></i> More details</a></section></div>
 </div>
 
-		</section>
-
-	</div> <!-- /container -->
-
+				</section>
+			</article>
+		</div> <!-- /container -->
+	</main>
 	<footer id="bottom">
 		<div class="container">
 			<nav id="sitemap">
 				<ul class="row">
 					<li class="span3"><a href="index.html">Home</a>
 						<ul>
-							<li><a href="https://tosdr.org/index.html#services">Rated Services</a></li>
-							<li><a href="https://tosdr.org/topics.html#topics">Rated Topics</a></li>
+							<li>
+								<a href="https://tosdr.org/index.html#services">Rated Services</a>
+							</li>
+							<li>
+								<a href="https://tosdr.org/topics.html#topics">Rated Topics</a>
+							</li>
 							<li><a href="downloads.html">Download our browser extensions</a></li>
 						</ul>
 					</li>
@@ -3911,59 +3921,59 @@
 					<li class="span3">Spread
 						<ul>
 							<li><a href="https://twitter.com/tosdr" ref="nofollow" target="_blank">Follow us on
-									twitter</a></li>
-							<li><a href="https://plus.google.com/b/117929815628330307285/117929815628330307285/about"
+								twitter</a></li>
+								<li><a href="https://plus.google.com/b/117929815628330307285/117929815628330307285/about"
 									target="_blank" rel="nofollow">Add on Google+</a></li>
-							<li><a href="https://www.facebook.com/TermsOfServiceDidntRead" rel="nofollow"
-									target="_blank">Like us on Facebook</a></li>
-							<li><a href="https://github.com/tosdr" target="_blank">Fork us on GitHub</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
+									<li><a href="https://www.facebook.com/TermsOfServiceDidntRead" rel="nofollow"
+										target="_blank">Like us on Facebook</a></li>
+										<li><a href="https://github.com/tosdr" target="_blank">Fork us on GitHub</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
 
-			<p id="credits"><strong><a href="https://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a
-				project inspired by Aza Raskin&apos;s <a href="https://azarask.in/blog/post/privacy-icons/"
-					rel="nofollow" target="_blank">Privacy Icons</a> and EFF&apos;s <a href="https://tosback.org/"
-					target="_blank">TOSBack</a> (which we now collaborate on). Also related: <a
-					href="https://www.opennotice.org/" rel="nofollow" target="blank">OpenNotice</a>.</p>
+						<p id="credits"><strong><a href="https://tosdr.org">Terms of Service; Didn&apos;t Read</a></strong> is a
+							project inspired by Aza Raskin&apos;s <a href="https://azarask.in/blog/post/privacy-icons/"
+							rel="nofollow" target="_blank">Privacy Icons</a> and EFF&apos;s <a href="https://tosback.org/"
+							target="_blank">TOSBack</a> (which we now collaborate on). Also related: <a
+							href="https://www.opennotice.org/" rel="nofollow" target="blank">OpenNotice</a>.</p>
 
-			<p id="legalinfo"><strong><ins>Nothing here should be considered legal advice</ins></strong>. We express our
-				opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified
-				attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms
-					to which you are bound.</strong> Disclosure: a list of donors and supporters <a
-					href="thanks.html">is published</a>. <a href="legal.html">All legal information and Imprint</a>.</p>
+							<p id="legalinfo"><strong><ins>Nothing here should be considered legal advice</ins></strong>. We express our
+								opinion with no guarantee and we do not endorse any service in any way. Please refer to a qualified
+								attorney for legal advice. <strong>Reading ToS;DR is in no way a replacement for reading the full terms
+									to which you are bound.</strong> Disclosure: a list of donors and supporters <a
+									href="thanks.html">is published</a>. <a href="legal.html">All legal information and Imprint</a>.</p>
 
 
-			<p id="licensing"><a href="https://tosdr.org" target="_blank">ToS;DR</a> is Free Software, licensed under
-				the GNU Affero General Public License (<a href="https://www.gnu.org/licenses/agpl-3.0-standalone.html"
-					rel="license" target="_blank">AGPL-3.0</a>). Offer for <a
-					href="https://github.com/tosdr/tosdr.org/zipball/master" target="_blank">Source (zip)</a>. The
-				<code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"
-					target="_blank">
-					<code>services/</code></a> and
-				<a href="https://github.com/tosdr/tosdr.org/tree/master/points" target="_blank"><code>points/</code></a>
-				directories are also licensed under the Attribution - Share Alike (<a rel="license"
-					href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>). Icons by
-				<a href="https://glyphicons.com/glyphicons-licenses/" rel="nofollow" target="_blank">Glyphicons</a> used
-				under a CC BY
-				<a href="https://creativecommons.org/licenses/by/3.0/deed.en" target="_blank">3.0 Unported license</a>.
-				Thumbs Up and Thumbs Down icons modified by Jan.</p>
+									<p id="licensing"><a href="https://tosdr.org" target="_blank">ToS;DR</a> is Free Software, licensed under
+										the GNU Affero General Public License (<a href="https://www.gnu.org/licenses/agpl-3.0-standalone.html"
+										rel="license" target="_blank">AGPL-3.0</a>). Offer for <a
+										href="https://github.com/tosdr/tosdr.org/zipball/master" target="_blank">Source (zip)</a>. The
+										<code>.json</code> data inside the <a href="https://github.com/tosdr/tosdr.org/tree/master/services"
+										target="_blank">
+										<code>services/</code></a> and
+										<a href="https://github.com/tosdr/tosdr.org/tree/master/points" target="_blank"><code>points/</code></a>
+										directories are also licensed under the Attribution - Share Alike (<a rel="license"
+										href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>). Icons by
+										<a href="https://glyphicons.com/glyphicons-licenses/" rel="nofollow" target="_blank">Glyphicons</a> used
+										under a CC BY
+										<a href="https://creativecommons.org/licenses/by/3.0/deed.en" target="_blank">3.0 Unported license</a>.
+										Thumbs Up and Thumbs Down icons modified by Jan.</p>
 
-			<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a
-					href="https://5apps.com/apps/512cb93cbc73cb2f84000002" rel="nofollow" target="_blank"><img
-						src="img/unhostedby5apps.png" alt="5apps" /></a>
-		</div>
-	</footer>
+										<p id="technical" class="center"><span style="color:#999">Un</span>hosted by <a
+											href="https://5apps.com/apps/512cb93cbc73cb2f84000002" rel="nofollow" target="_blank"><img
+											src="img/unhostedby5apps.png" alt="5apps" /></a>
+										</div>
+									</footer>
 
-	<!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
-	<script src="bootstrap/js/bootstrap-collapse.js"></script>
-	<script src="bootstrap/js/bootstrap-modal.js"></script>
-	<script src="bootstrap/js/bootstrap-transition.js"></script>
-	<!--		<script src="bootstrap/js/bootstrap-typeahead.js"></script>-->
-	<script src="bootstrap/js/bootstrap-alert.js"></script>
-	<script src="js/tosdr.js"></script>
-	<script src="js/services.js"></script>
-</body>
+									<!--		<script src="bootstrap/js/bootstrap-twipsy.js"></script>-->
+									<script src="bootstrap/js/bootstrap-collapse.js"></script>
+									<script src="bootstrap/js/bootstrap-modal.js"></script>
+									<script src="bootstrap/js/bootstrap-transition.js"></script>
+									<!--		<script src="bootstrap/js/bootstrap-typeahead.js"></script>-->
+									<script src="bootstrap/js/bootstrap-alert.js"></script>
+									<script src="js/tosdr.js"></script>
+									<script src="js/services.js"></script>
+								</body>
 
-</html>
+								</html>
