@@ -1,7 +1,8 @@
 This is the source code for www.tosdr.org. You should
 find more information about the project itself on the website.
 
-![](https://beta.tosdr.org/api/badge/service/tos;dr)
+
+[![](https://beta.tosdr.org/api/badge/tos;dr?l=en)](https://beta.tosdr.org/en/service/596)
 
 <!--Overview
 ========
