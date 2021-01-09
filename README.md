@@ -1,3 +1,6 @@
+# This Repository is archived in favor of https://github.com/tosdr/CrispCMS
+## Everything has been moved there!
+
 This is the source code for www.tosdr.org. You should
 find more information about the project itself on the website.
 
